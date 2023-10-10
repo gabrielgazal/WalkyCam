@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		5637A8162AD5DD72000586DF /* WalkyCamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5637A8152AD5DD72000586DF /* WalkyCamApp.swift */; };
-		5637A8182AD5DD72000586DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5637A8172AD5DD72000586DF /* ContentView.swift */; };
 		5637A81A2AD5DD73000586DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5637A8192AD5DD73000586DF /* Assets.xcassets */; };
-		5637A81D2AD5DD73000586DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5637A81C2AD5DD73000586DF /* Preview Assets.xcassets */; };
 		5637A8272AD5DD74000586DF /* WalkyCamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5637A8262AD5DD74000586DF /* WalkyCamTests.swift */; };
 		5637A8312AD5DD74000586DF /* WalkyCamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5637A8302AD5DD74000586DF /* WalkyCamUITests.swift */; };
 		5637A8332AD5DD74000586DF /* WalkyCamUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5637A8322AD5DD74000586DF /* WalkyCamUITestsLaunchTests.swift */; };
+		56DADB202AD5EA7200710618 /* AppNavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB1F2AD5EA7200710618 /* AppNavigatorProtocol.swift */; };
+		56DADB222AD5EAA400710618 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB212AD5EAA400710618 /* AppNavigator.swift */; };
+		56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB232AD5EB3800710618 /* AppDelegate.swift */; };
+		56DADB272AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB262AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +38,16 @@
 /* Begin PBXFileReference section */
 		5637A8122AD5DD72000586DF /* WalkyCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkyCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5637A8152AD5DD72000586DF /* WalkyCamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkyCamApp.swift; sourceTree = "<group>"; };
-		5637A8172AD5DD72000586DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5637A8192AD5DD73000586DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5637A81C2AD5DD73000586DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5637A8222AD5DD74000586DF /* WalkyCamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalkyCamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5637A8262AD5DD74000586DF /* WalkyCamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkyCamTests.swift; sourceTree = "<group>"; };
 		5637A82C2AD5DD74000586DF /* WalkyCamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalkyCamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5637A8302AD5DD74000586DF /* WalkyCamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkyCamUITests.swift; sourceTree = "<group>"; };
 		5637A8322AD5DD74000586DF /* WalkyCamUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkyCamUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		56DADB1F2AD5EA7200710618 /* AppNavigatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigatorProtocol.swift; sourceTree = "<group>"; };
+		56DADB212AD5EAA400710618 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
+		56DADB232AD5EB3800710618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		56DADB262AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+DependencyRegistration.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +78,8 @@
 		5637A8092AD5DD71000586DF = {
 			isa = PBXGroup;
 			children = (
-				5637A8142AD5DD72000586DF /* WalkyCam */,
+				56DADB1D2AD5EA3400710618 /* Main */,
+				5637A8142AD5DD72000586DF /* Resources */,
 				5637A8252AD5DD74000586DF /* WalkyCamTests */,
 				5637A82F2AD5DD74000586DF /* WalkyCamUITests */,
 				5637A8132AD5DD72000586DF /* Products */,
@@ -91,23 +96,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5637A8142AD5DD72000586DF /* WalkyCam */ = {
+		5637A8142AD5DD72000586DF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5637A8152AD5DD72000586DF /* WalkyCamApp.swift */,
-				5637A8172AD5DD72000586DF /* ContentView.swift */,
 				5637A8192AD5DD73000586DF /* Assets.xcassets */,
-				5637A81B2AD5DD73000586DF /* Preview Content */,
 			);
-			path = WalkyCam;
-			sourceTree = "<group>";
-		};
-		5637A81B2AD5DD73000586DF /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				5637A81C2AD5DD73000586DF /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		5637A8252AD5DD74000586DF /* WalkyCamTests */ = {
@@ -125,6 +119,34 @@
 				5637A8322AD5DD74000586DF /* WalkyCamUITestsLaunchTests.swift */,
 			);
 			path = WalkyCamUITests;
+			sourceTree = "<group>";
+		};
+		56DADB1D2AD5EA3400710618 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5637A8152AD5DD72000586DF /* WalkyCamApp.swift */,
+				56DADB252AD5ECB900710618 /* Extension */,
+				56DADB1E2AD5EA6000710618 /* AppNavigator */,
+				56DADB232AD5EB3800710618 /* AppDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		56DADB1E2AD5EA6000710618 /* AppNavigator */ = {
+			isa = PBXGroup;
+			children = (
+				56DADB1F2AD5EA7200710618 /* AppNavigatorProtocol.swift */,
+				56DADB212AD5EAA400710618 /* AppNavigator.swift */,
+			);
+			path = AppNavigator;
+			sourceTree = "<group>";
+		};
+		56DADB252AD5ECB900710618 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				56DADB262AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +253,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5637A81D2AD5DD73000586DF /* Preview Assets.xcassets in Resources */,
 				5637A81A2AD5DD73000586DF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,7 +278,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5637A8182AD5DD72000586DF /* ContentView.swift in Sources */,
+				56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */,
+				56DADB222AD5EAA400710618 /* AppNavigator.swift in Sources */,
+				56DADB202AD5EA7200710618 /* AppNavigatorProtocol.swift in Sources */,
+				56DADB272AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift in Sources */,
 				5637A8162AD5DD72000586DF /* WalkyCamApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
