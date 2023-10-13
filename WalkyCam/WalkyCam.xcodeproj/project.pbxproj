@@ -62,18 +62,26 @@
 		EA910F5A2AD9B01300584B98 /* OnboardingRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F462AD9B01300584B98 /* OnboardingRoute.swift */; };
 		EA910F5B2AD9B01300584B98 /* OnboardingAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F482AD9B01300584B98 /* OnboardingAssembler.swift */; };
 		EA910F5C2AD9B01300584B98 /* OnboardingAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F492AD9B01300584B98 /* OnboardingAssemblerProtocol.swift */; };
-		EA910F5D2AD9B01300584B98 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F4C2AD9B01300584B98 /* OnboardingModel.swift */; };
 		EA910F5E2AD9B01300584B98 /* OnboardingViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F4F2AD9B01300584B98 /* OnboardingViewModelProtocol.swift */; };
 		EA910F602AD9B01300584B98 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F512AD9B01300584B98 /* OnboardingViewModel.swift */; };
 		EA910F612AD9B01300584B98 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F532AD9B01300584B98 /* OnboardingView.swift */; };
-		EA910F622AD9B01300584B98 /* OnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F552AD9B01300584B98 /* OnboardingInteractor.swift */; };
-		EA910F632AD9B01300584B98 /* OnboardingInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F562AD9B01300584B98 /* OnboardingInteractorProtocol.swift */; };
 		EA910F642AD9B01300584B98 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F582AD9B01300584B98 /* OnboardingRouter.swift */; };
 		EA910F652AD9B01300584B98 /* OnboardingRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F592AD9B01300584B98 /* OnboardingRouterProtocol.swift */; };
 		EA910F672AD9B20600584B98 /* NavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F662AD9B20600584B98 /* NavigationController+Extension.swift */; };
 		EA910F692AD9B57400584B98 /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F682AD9B57400584B98 /* OnboardingPageView.swift */; };
 		EA910F6B2AD9CCF500584B98 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F6A2AD9CCF500584B98 /* PageControl.swift */; };
 		EA910F6D2ADA03D600584B98 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F6C2ADA03D600584B98 /* String+Extension.swift */; };
+		EA910F8B2ADA06F500584B98 /* RegistrationRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F772ADA06F500584B98 /* RegistrationRoute.swift */; };
+		EA910F8C2ADA06F500584B98 /* RegistrationAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F792ADA06F500584B98 /* RegistrationAssemblerProtocol.swift */; };
+		EA910F8D2ADA06F500584B98 /* RegistrationAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F7A2ADA06F500584B98 /* RegistrationAssembler.swift */; };
+		EA910F8E2ADA06F500584B98 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F7D2ADA06F500584B98 /* RegistrationViewModel.swift */; };
+		EA910F8F2ADA06F500584B98 /* RegistrationViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F7E2ADA06F500584B98 /* RegistrationViewModelProtocol.swift */; };
+		EA910F912ADA06F500584B98 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F812ADA06F500584B98 /* RegistrationView.swift */; };
+		EA910F922ADA06F500584B98 /* RegistrationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F832ADA06F500584B98 /* RegistrationInteractor.swift */; };
+		EA910F932ADA06F500584B98 /* RegistrationInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F842ADA06F500584B98 /* RegistrationInteractorProtocol.swift */; };
+		EA910F942ADA06F500584B98 /* RegistrationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F862ADA06F500584B98 /* RegistrationRouter.swift */; };
+		EA910F952ADA06F500584B98 /* RegistrationRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F872ADA06F500584B98 /* RegistrationRouterProtocol.swift */; };
+		EA910F962ADA06F500584B98 /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F8A2ADA06F500584B98 /* RegistrationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,18 +161,26 @@
 		EA910F462AD9B01300584B98 /* OnboardingRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingRoute.swift; sourceTree = "<group>"; };
 		EA910F482AD9B01300584B98 /* OnboardingAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingAssembler.swift; sourceTree = "<group>"; };
 		EA910F492AD9B01300584B98 /* OnboardingAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingAssemblerProtocol.swift; sourceTree = "<group>"; };
-		EA910F4C2AD9B01300584B98 /* OnboardingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		EA910F4F2AD9B01300584B98 /* OnboardingViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModelProtocol.swift; sourceTree = "<group>"; };
 		EA910F512AD9B01300584B98 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		EA910F532AD9B01300584B98 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		EA910F552AD9B01300584B98 /* OnboardingInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingInteractor.swift; sourceTree = "<group>"; };
-		EA910F562AD9B01300584B98 /* OnboardingInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingInteractorProtocol.swift; sourceTree = "<group>"; };
 		EA910F582AD9B01300584B98 /* OnboardingRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
 		EA910F592AD9B01300584B98 /* OnboardingRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingRouterProtocol.swift; sourceTree = "<group>"; };
 		EA910F662AD9B20600584B98 /* NavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationController+Extension.swift"; sourceTree = "<group>"; };
 		EA910F682AD9B57400584B98 /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
 		EA910F6A2AD9CCF500584B98 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 		EA910F6C2ADA03D600584B98 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		EA910F772ADA06F500584B98 /* RegistrationRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationRoute.swift; sourceTree = "<group>"; };
+		EA910F792ADA06F500584B98 /* RegistrationAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA910F7A2ADA06F500584B98 /* RegistrationAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationAssembler.swift; sourceTree = "<group>"; };
+		EA910F7D2ADA06F500584B98 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		EA910F7E2ADA06F500584B98 /* RegistrationViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA910F812ADA06F500584B98 /* RegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		EA910F832ADA06F500584B98 /* RegistrationInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationInteractor.swift; sourceTree = "<group>"; };
+		EA910F842ADA06F500584B98 /* RegistrationInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationInteractorProtocol.swift; sourceTree = "<group>"; };
+		EA910F862ADA06F500584B98 /* RegistrationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationRouter.swift; sourceTree = "<group>"; };
+		EA910F872ADA06F500584B98 /* RegistrationRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationRouterProtocol.swift; sourceTree = "<group>"; };
+		EA910F8A2ADA06F500584B98 /* RegistrationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +281,7 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				EA910F6E2ADA06CF00584B98 /* Registration */,
 				EA910F3D2AD9AEFC00584B98 /* Onboarding */,
 				EA15B57B2AD6E42800C03407 /* Login */,
 			);
@@ -550,7 +567,6 @@
 			isa = PBXGroup;
 			children = (
 				EA910F442AD9B01300584B98 /* Configuration */,
-				EA910F4A2AD9B01300584B98 /* Domain */,
 				EA910F4D2AD9B01300584B98 /* Module */,
 			);
 			path = Onboarding;
@@ -582,28 +598,11 @@
 			path = Assembler;
 			sourceTree = "<group>";
 		};
-		EA910F4A2AD9B01300584B98 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				EA910F4B2AD9B01300584B98 /* Model */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		EA910F4B2AD9B01300584B98 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				EA910F4C2AD9B01300584B98 /* OnboardingModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		EA910F4D2AD9B01300584B98 /* Module */ = {
 			isa = PBXGroup;
 			children = (
 				EA910F4E2AD9B01300584B98 /* ViewModel */,
 				EA910F522AD9B01300584B98 /* View */,
-				EA910F542AD9B01300584B98 /* Interactor */,
 				EA910F572AD9B01300584B98 /* Router */,
 			);
 			path = Module;
@@ -627,15 +626,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		EA910F542AD9B01300584B98 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				EA910F552AD9B01300584B98 /* OnboardingInteractor.swift */,
-				EA910F562AD9B01300584B98 /* OnboardingInteractorProtocol.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
 		EA910F572AD9B01300584B98 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -643,6 +633,104 @@
 				EA910F592AD9B01300584B98 /* OnboardingRouterProtocol.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		EA910F6E2ADA06CF00584B98 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				EA910F752ADA06F500584B98 /* Configuration */,
+				EA910F882ADA06F500584B98 /* Domain */,
+				EA910F7B2ADA06F500584B98 /* Module */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		EA910F752ADA06F500584B98 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA910F762ADA06F500584B98 /* Route */,
+				EA910F782ADA06F500584B98 /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA910F762ADA06F500584B98 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA910F772ADA06F500584B98 /* RegistrationRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA910F782ADA06F500584B98 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA910F792ADA06F500584B98 /* RegistrationAssemblerProtocol.swift */,
+				EA910F7A2ADA06F500584B98 /* RegistrationAssembler.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EA910F7B2ADA06F500584B98 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA910F7C2ADA06F500584B98 /* ViewModel */,
+				EA910F802ADA06F500584B98 /* View */,
+				EA910F822ADA06F500584B98 /* Interactor */,
+				EA910F852ADA06F500584B98 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA910F7C2ADA06F500584B98 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA910F7D2ADA06F500584B98 /* RegistrationViewModel.swift */,
+				EA910F7E2ADA06F500584B98 /* RegistrationViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA910F802ADA06F500584B98 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA910F812ADA06F500584B98 /* RegistrationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA910F822ADA06F500584B98 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA910F832ADA06F500584B98 /* RegistrationInteractor.swift */,
+				EA910F842ADA06F500584B98 /* RegistrationInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EA910F852ADA06F500584B98 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA910F862ADA06F500584B98 /* RegistrationRouter.swift */,
+				EA910F872ADA06F500584B98 /* RegistrationRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EA910F882ADA06F500584B98 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA910F892ADA06F500584B98 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA910F892ADA06F500584B98 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA910F8A2ADA06F500584B98 /* RegistrationModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -807,9 +895,13 @@
 				56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */,
 				EA15B5B22AD7072400C03407 /* SnackBarModifier.swift in Sources */,
 				EA5E1D962AD725DF00738A8F /* ProjectColors.swift in Sources */,
+				EA910F942ADA06F500584B98 /* RegistrationRouter.swift in Sources */,
 				EA15B5AC2AD706DB00C03407 /* BottomSheetModifier.swift in Sources */,
 				EA5E1D712AD7167300738A8F /* LinkButtonStyle.swift in Sources */,
+				EA910F952ADA06F500584B98 /* RegistrationRouterProtocol.swift in Sources */,
 				EA910F602AD9B01300584B98 /* OnboardingViewModel.swift in Sources */,
+				EA910F8B2ADA06F500584B98 /* RegistrationRoute.swift in Sources */,
+				EA910F912ADA06F500584B98 /* RegistrationView.swift in Sources */,
 				EA15B59E2AD6E44D00C03407 /* LoginRouter.swift in Sources */,
 				56DADB222AD5EAA400710618 /* AppNavigator.swift in Sources */,
 				EA15B5A92AD706AF00C03407 /* Route.swift in Sources */,
@@ -818,19 +910,19 @@
 				EA15B5B92AD7077C00C03407 /* GenericUseCase.swift in Sources */,
 				EA15B5BE2AD707B900C03407 /* ViewModelProtocol.swift in Sources */,
 				EA5E1D742AD716A500738A8F /* ProjectFont.swift in Sources */,
-				EA910F5D2AD9B01300584B98 /* OnboardingModel.swift in Sources */,
 				EA5E1D7B2AD7174700738A8F /* Button+Extension.swift in Sources */,
 				EA910F642AD9B01300584B98 /* OnboardingRouter.swift in Sources */,
 				EA15B59B2AD6E44D00C03407 /* LoginView.swift in Sources */,
 				EA910F5E2AD9B01300584B98 /* OnboardingViewModelProtocol.swift in Sources */,
-				EA910F632AD9B01300584B98 /* OnboardingInteractorProtocol.swift in Sources */,
 				EA15B59A2AD6E44D00C03407 /* LoginViewModel.swift in Sources */,
+				EA910F8E2ADA06F500584B98 /* RegistrationViewModel.swift in Sources */,
 				EA910F312AD8B55200584B98 /* Divider.swift in Sources */,
 				EA910F6D2ADA03D600584B98 /* String+Extension.swift in Sources */,
 				EA910F692AD9B57400584B98 /* OnboardingPageView.swift in Sources */,
 				EA910F652AD9B01300584B98 /* OnboardingRouterProtocol.swift in Sources */,
 				EA5E1D782AD7170400738A8F /* LinkButton.swift in Sources */,
 				EA15B5B02AD7071300C03407 /* SheetModifier.swift in Sources */,
+				EA910F962ADA06F500584B98 /* RegistrationModel.swift in Sources */,
 				EA5E1D9A2AD883D800738A8F /* Text+Extension.swift in Sources */,
 				EA910F5A2AD9B01300584B98 /* OnboardingRoute.swift in Sources */,
 				EA5E1D762AD716D200738A8F /* ButtonStyleDescriptor.swift in Sources */,
@@ -841,10 +933,13 @@
 				EA910F362AD976F600584B98 /* CheckboxToggle.swift in Sources */,
 				EA5E1D6F2AD7164E00738A8F /* MainButtonStyle.swift in Sources */,
 				EA5E1D9E2AD8A3DA00738A8F /* Strings.swift in Sources */,
+				EA910F932ADA06F500584B98 /* RegistrationInteractorProtocol.swift in Sources */,
 				EA5E1D842AD7183700738A8F /* RoundedCornerShape.swift in Sources */,
 				EA910F5B2AD9B01300584B98 /* OnboardingAssembler.swift in Sources */,
 				EA910F5C2AD9B01300584B98 /* OnboardingAssemblerProtocol.swift in Sources */,
+				EA910F8C2ADA06F500584B98 /* RegistrationAssemblerProtocol.swift in Sources */,
 				56DADB272AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift in Sources */,
+				EA910F8D2ADA06F500584B98 /* RegistrationAssembler.swift in Sources */,
 				5637A8162AD5DD72000586DF /* WalkyCamApp.swift in Sources */,
 				EA15B5B42AD7074200C03407 /* RouterState.swift in Sources */,
 				EA910F2E2AD8B14C00584B98 /* WCUIButton.swift in Sources */,
@@ -854,13 +949,14 @@
 				EA910F3A2AD9782000584B98 /* SelectorModel.swift in Sources */,
 				EA910F612AD9B01300584B98 /* OnboardingView.swift in Sources */,
 				EA15B5982AD6E44D00C03407 /* LoginViewModelProtocol.swift in Sources */,
+				EA910F922ADA06F500584B98 /* RegistrationInteractor.swift in Sources */,
 				EA15B5A12AD6E44D00C03407 /* LoginAssembler.swift in Sources */,
 				EA910F6B2AD9CCF500584B98 /* PageControl.swift in Sources */,
 				EA15B5A22AD6E44D00C03407 /* LoginAssemblerProtocol.swift in Sources */,
 				EA910F3C2AD982F300584B98 /* SecureTextInputView.swift in Sources */,
 				EA15B5BC2AD707A300C03407 /* NestedObservableObject.swift in Sources */,
 				EA5E1D932AD71ABB00738A8F /* Tokens.swift in Sources */,
-				EA910F622AD9B01300584B98 /* OnboardingInteractor.swift in Sources */,
+				EA910F8F2ADA06F500584B98 /* RegistrationViewModelProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

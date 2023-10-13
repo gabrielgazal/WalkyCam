@@ -42,9 +42,7 @@ public struct SecureTextInputView: View {
     public init(
         text: Binding<String>,
         placeholder: String,
-        leftIcon: Image? = nil,
         topDescriptionText: String? = nil,
-        bottomDescriptionText: String? = nil,
         actions: Actions = .init()
     ) {
         self._text = text

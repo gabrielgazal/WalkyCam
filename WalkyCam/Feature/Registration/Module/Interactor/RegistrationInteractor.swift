@@ -1,6 +1,6 @@
 import Combine
 
-final class OnboardingInteractor: OnboardingInteractorProtocol {
+final class RegistrationInteractor: RegistrationInteractorProtocol {
 
     // MARK: - Inner Types
 

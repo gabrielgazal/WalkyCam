@@ -11,9 +11,9 @@ import SwiftUI
 extension UINavigationController {
     open override func viewWillLayoutSubviews() {
         let appearence = UINavigationBarAppearance()
-        appearence.configureWithOpaqueBackground()
+        appearence.configureWithTransparentBackground()
         appearence.shadowColor = .clear
-        navigationBar.backgroundColor = UIColor(Color.blanco)
+        navigationBar.backgroundColor = UIColor(Color.clear)
         navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationBar.tintColor = UIColor(Color.naranja)
         navigationBar.standardAppearance = appearence

@@ -41,7 +41,7 @@ public struct CheckBoxToggle: View {
             .frame(width: 24,
                    height: 24)
             Text(model.value)
-                .font(.projectFont(size: Tokens.Size.Font.regular))
+                .font(.projectFont(size: Tokens.Size.Font.small, weight: .bold))
                 .foregroundColor(Color.blanco)
             Spacer()
         }

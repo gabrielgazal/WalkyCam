@@ -39,6 +39,7 @@ struct OnboardingView<ViewModel: OnboardingViewModelProtocol, Router: Onboarding
             }
             .accentColor(.naranja)
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+            .disabled(true)
             HStack(spacing: Tokens.Size.Spacing.big) {
                 LinkButton(title: L10n.OnboardingView.Button.skip,
                            color: .naranja,
@@ -61,7 +62,7 @@ struct OnboardingView<ViewModel: OnboardingViewModelProtocol, Router: Onboarding
                     title: L10n.OnboardingView.Button.start,
                     style: .standard,
                     descriptor: OrangeButtonStyleDescriptor(),
-                    action: {})
+                    action: handleSkipOnboarding)
                 .frame(maxWidth: .infinity)
                 .isHidden(viewModel.currentPage != 2)
             }
@@ -72,6 +73,7 @@ struct OnboardingView<ViewModel: OnboardingViewModelProtocol, Router: Onboarding
                .onAppear {
                    setupAppearence()
                }
+               .navigation(router)
     }
 
     private func setupAppearence() {
@@ -79,7 +81,9 @@ struct OnboardingView<ViewModel: OnboardingViewModelProtocol, Router: Onboarding
         UIPageControl.appearance().pageIndicatorTintColor = UIColor(Color.blancoGris)
     }
 
-    private func handleSkipOnboarding() {}
+    private func handleSkipOnboarding() {
+        router.routeToRegistration()
+    }
 }
 
 struct OnboardingView_Previews: PreviewProvider {
