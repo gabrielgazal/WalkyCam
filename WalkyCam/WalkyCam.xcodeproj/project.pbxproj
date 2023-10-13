@@ -1,0 +1,1048 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5637A8162AD5DD72000586DF /* WalkyCamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5637A8152AD5DD72000586DF /* WalkyCamApp.swift */; };
+		5637A81A2AD5DD73000586DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5637A8192AD5DD73000586DF /* Assets.xcassets */; };
+		56DADB202AD5EA7200710618 /* AppNavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB1F2AD5EA7200710618 /* AppNavigatorProtocol.swift */; };
+		56DADB222AD5EAA400710618 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB212AD5EAA400710618 /* AppNavigator.swift */; };
+		56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB232AD5EB3800710618 /* AppDelegate.swift */; };
+		56DADB272AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB262AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift */; };
+		EA15B5762AD6DF2C00C03407 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA15B5742AD6DF2C00C03407 /* Localizable.strings */; };
+		EA15B5982AD6E44D00C03407 /* LoginViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B5842AD6E44D00C03407 /* LoginViewModelProtocol.swift */; };
+		EA15B59A2AD6E44D00C03407 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B5862AD6E44D00C03407 /* LoginViewModel.swift */; };
+		EA15B59B2AD6E44D00C03407 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B5882AD6E44D00C03407 /* LoginView.swift */; };
+		EA15B59E2AD6E44D00C03407 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B58D2AD6E44D00C03407 /* LoginRouter.swift */; };
+		EA15B59F2AD6E44D00C03407 /* LoginRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B58E2AD6E44D00C03407 /* LoginRouterProtocol.swift */; };
+		EA15B5A02AD6E44D00C03407 /* LoginRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B5912AD6E44D00C03407 /* LoginRoute.swift */; };
+		EA15B5A12AD6E44D00C03407 /* LoginAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B5932AD6E44D00C03407 /* LoginAssembler.swift */; };
+		EA15B5A22AD6E44D00C03407 /* LoginAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B5942AD6E44D00C03407 /* LoginAssemblerProtocol.swift */; };
+		EA15B5A92AD706AF00C03407 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B5A82AD706AF00C03407 /* Route.swift */; };
+		EA15B5AC2AD706DB00C03407 /* BottomSheetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B5AB2AD706DB00C03407 /* BottomSheetModifier.swift */; };
+		EA15B5AE2AD7070400C03407 /* NavigationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B5AD2AD7070400C03407 /* NavigationModifier.swift */; };
+		EA15B5B02AD7071300C03407 /* SheetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B5AF2AD7071300C03407 /* SheetModifier.swift */; };
+		EA15B5B22AD7072400C03407 /* SnackBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B5B12AD7072400C03407 /* SnackBarModifier.swift */; };
+		EA15B5B42AD7074200C03407 /* RouterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B5B32AD7074200C03407 /* RouterState.swift */; };
+		EA15B5B62AD7075600C03407 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B5B52AD7075600C03407 /* Router.swift */; };
+		EA15B5B92AD7077C00C03407 /* GenericUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B5B82AD7077C00C03407 /* GenericUseCase.swift */; };
+		EA15B5BC2AD707A300C03407 /* NestedObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B5BB2AD707A300C03407 /* NestedObservableObject.swift */; };
+		EA15B5BE2AD707B900C03407 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B5BD2AD707B900C03407 /* ViewModelProtocol.swift */; };
+		EA5E1D682AD70BC800738A8F /* ProjectColors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA5E1D672AD70BC800738A8F /* ProjectColors.xcassets */; };
+		EA5E1D6F2AD7164E00738A8F /* MainButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E1D6E2AD7164E00738A8F /* MainButtonStyle.swift */; };
+		EA5E1D712AD7167300738A8F /* LinkButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E1D702AD7167300738A8F /* LinkButtonStyle.swift */; };
+		EA5E1D742AD716A500738A8F /* ProjectFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E1D732AD716A500738A8F /* ProjectFont.swift */; };
+		EA5E1D762AD716D200738A8F /* ButtonStyleDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E1D752AD716D200738A8F /* ButtonStyleDescriptor.swift */; };
+		EA5E1D782AD7170400738A8F /* LinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E1D772AD7170400738A8F /* LinkButton.swift */; };
+		EA5E1D7B2AD7174700738A8F /* Button+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E1D7A2AD7174700738A8F /* Button+Extension.swift */; };
+		EA5E1D7D2AD7178F00738A8F /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E1D7C2AD7178F00738A8F /* View+Extension.swift */; };
+		EA5E1D842AD7183700738A8F /* RoundedCornerShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E1D832AD7183700738A8F /* RoundedCornerShape.swift */; };
+		EA5E1D8C2AD719C400738A8F /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E1D8B2AD719C400738A8F /* TextInputView.swift */; };
+		EA5E1D932AD71ABB00738A8F /* Tokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E1D922AD71ABB00738A8F /* Tokens.swift */; };
+		EA5E1D962AD725DF00738A8F /* ProjectColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E1D952AD725DF00738A8F /* ProjectColors.swift */; };
+		EA5E1D9A2AD883D800738A8F /* Text+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E1D992AD883D800738A8F /* Text+Extension.swift */; };
+		EA5E1D9D2AD8A3DA00738A8F /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E1D9B2AD8A3DA00738A8F /* Assets.swift */; };
+		EA5E1D9E2AD8A3DA00738A8F /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E1D9C2AD8A3DA00738A8F /* Strings.swift */; };
+		EA910F1C2AD8AA6400584B98 /* Mulish-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA910F1B2AD8AA6400584B98 /* Mulish-Black.ttf */; };
+		EA910F232AD8AA8500584B98 /* Mulish-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA910F1D2AD8AA8400584B98 /* Mulish-Light.ttf */; };
+		EA910F242AD8AA8500584B98 /* Mulish-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA910F1E2AD8AA8400584B98 /* Mulish-ExtraLight.ttf */; };
+		EA910F252AD8AA8500584B98 /* Mulish-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA910F1F2AD8AA8400584B98 /* Mulish-SemiBold.ttf */; };
+		EA910F262AD8AA8500584B98 /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA910F202AD8AA8400584B98 /* Mulish-Regular.ttf */; };
+		EA910F272AD8AA8500584B98 /* Mulish-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA910F212AD8AA8500584B98 /* Mulish-Medium.ttf */; };
+		EA910F282AD8AA8500584B98 /* Mulish-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA910F222AD8AA8500584B98 /* Mulish-Bold.ttf */; };
+		EA910F2E2AD8B14C00584B98 /* WCUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F2D2AD8B14C00584B98 /* WCUIButton.swift */; };
+		EA910F312AD8B55200584B98 /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F302AD8B55200584B98 /* Divider.swift */; };
+		EA910F362AD976F600584B98 /* CheckboxToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F352AD976F600584B98 /* CheckboxToggle.swift */; };
+		EA910F3A2AD9782000584B98 /* SelectorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F392AD9782000584B98 /* SelectorModel.swift */; };
+		EA910F3C2AD982F300584B98 /* SecureTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F3B2AD982F300584B98 /* SecureTextInputView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5637A8232AD5DD74000586DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5637A80A2AD5DD72000586DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5637A8112AD5DD72000586DF;
+			remoteInfo = WalkyCam;
+		};
+		5637A82D2AD5DD74000586DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5637A80A2AD5DD72000586DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5637A8112AD5DD72000586DF;
+			remoteInfo = WalkyCam;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5637A8122AD5DD72000586DF /* WalkyCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkyCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5637A8152AD5DD72000586DF /* WalkyCamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkyCamApp.swift; sourceTree = "<group>"; };
+		5637A8192AD5DD73000586DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5637A8222AD5DD74000586DF /* WalkyCamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalkyCamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5637A82C2AD5DD74000586DF /* WalkyCamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalkyCamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		56DADB1F2AD5EA7200710618 /* AppNavigatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigatorProtocol.swift; sourceTree = "<group>"; };
+		56DADB212AD5EAA400710618 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
+		56DADB232AD5EB3800710618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		56DADB262AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+DependencyRegistration.swift"; sourceTree = "<group>"; };
+		EA15B5752AD6DF2C00C03407 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EA15B5842AD6E44D00C03407 /* LoginViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA15B5862AD6E44D00C03407 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		EA15B5882AD6E44D00C03407 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		EA15B58D2AD6E44D00C03407 /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		EA15B58E2AD6E44D00C03407 /* LoginRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouterProtocol.swift; sourceTree = "<group>"; };
+		EA15B5912AD6E44D00C03407 /* LoginRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRoute.swift; sourceTree = "<group>"; };
+		EA15B5932AD6E44D00C03407 /* LoginAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAssembler.swift; sourceTree = "<group>"; };
+		EA15B5942AD6E44D00C03407 /* LoginAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA15B5A82AD706AF00C03407 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		EA15B5AB2AD706DB00C03407 /* BottomSheetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetModifier.swift; sourceTree = "<group>"; };
+		EA15B5AD2AD7070400C03407 /* NavigationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModifier.swift; sourceTree = "<group>"; };
+		EA15B5AF2AD7071300C03407 /* SheetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetModifier.swift; sourceTree = "<group>"; };
+		EA15B5B12AD7072400C03407 /* SnackBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBarModifier.swift; sourceTree = "<group>"; };
+		EA15B5B32AD7074200C03407 /* RouterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterState.swift; sourceTree = "<group>"; };
+		EA15B5B52AD7075600C03407 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		EA15B5B82AD7077C00C03407 /* GenericUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericUseCase.swift; sourceTree = "<group>"; };
+		EA15B5BB2AD707A300C03407 /* NestedObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedObservableObject.swift; sourceTree = "<group>"; };
+		EA15B5BD2AD707B900C03407 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA15B5BF2AD709B000C03407 /* WalkyCam-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WalkyCam-Info.plist"; sourceTree = "<group>"; };
+		EA5E1D672AD70BC800738A8F /* ProjectColors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ProjectColors.xcassets; sourceTree = "<group>"; };
+		EA5E1D6E2AD7164E00738A8F /* MainButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButtonStyle.swift; sourceTree = "<group>"; };
+		EA5E1D702AD7167300738A8F /* LinkButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButtonStyle.swift; sourceTree = "<group>"; };
+		EA5E1D732AD716A500738A8F /* ProjectFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFont.swift; sourceTree = "<group>"; };
+		EA5E1D752AD716D200738A8F /* ButtonStyleDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleDescriptor.swift; sourceTree = "<group>"; };
+		EA5E1D772AD7170400738A8F /* LinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButton.swift; sourceTree = "<group>"; };
+		EA5E1D7A2AD7174700738A8F /* Button+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Extension.swift"; sourceTree = "<group>"; };
+		EA5E1D7C2AD7178F00738A8F /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		EA5E1D832AD7183700738A8F /* RoundedCornerShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerShape.swift; sourceTree = "<group>"; };
+		EA5E1D8B2AD719C400738A8F /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
+		EA5E1D922AD71ABB00738A8F /* Tokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tokens.swift; sourceTree = "<group>"; };
+		EA5E1D952AD725DF00738A8F /* ProjectColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectColors.swift; sourceTree = "<group>"; };
+		EA5E1D992AD883D800738A8F /* Text+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Extension.swift"; sourceTree = "<group>"; };
+		EA5E1D9B2AD8A3DA00738A8F /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		EA5E1D9C2AD8A3DA00738A8F /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		EA910F1B2AD8AA6400584B98 /* Mulish-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Black.ttf"; sourceTree = "<group>"; };
+		EA910F1D2AD8AA8400584B98 /* Mulish-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Light.ttf"; sourceTree = "<group>"; };
+		EA910F1E2AD8AA8400584B98 /* Mulish-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-ExtraLight.ttf"; sourceTree = "<group>"; };
+		EA910F1F2AD8AA8400584B98 /* Mulish-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-SemiBold.ttf"; sourceTree = "<group>"; };
+		EA910F202AD8AA8400584B98 /* Mulish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Regular.ttf"; sourceTree = "<group>"; };
+		EA910F212AD8AA8500584B98 /* Mulish-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Medium.ttf"; sourceTree = "<group>"; };
+		EA910F222AD8AA8500584B98 /* Mulish-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Bold.ttf"; sourceTree = "<group>"; };
+		EA910F2D2AD8B14C00584B98 /* WCUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCUIButton.swift; sourceTree = "<group>"; };
+		EA910F302AD8B55200584B98 /* Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
+		EA910F352AD976F600584B98 /* CheckboxToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggle.swift; sourceTree = "<group>"; };
+		EA910F392AD9782000584B98 /* SelectorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorModel.swift; sourceTree = "<group>"; };
+		EA910F3B2AD982F300584B98 /* SecureTextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureTextInputView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5637A80F2AD5DD72000586DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5637A81F2AD5DD74000586DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5637A8292AD5DD74000586DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5637A8092AD5DD71000586DF = {
+			isa = PBXGroup;
+			children = (
+				EA15B5BF2AD709B000C03407 /* WalkyCam-Info.plist */,
+				EA15B5A52AD7067400C03407 /* Infrastructure */,
+				EA15B57A2AD6E41400C03407 /* Feature */,
+				56DADB1D2AD5EA3400710618 /* Main */,
+				5637A8142AD5DD72000586DF /* Resources */,
+				5637A8132AD5DD72000586DF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5637A8132AD5DD72000586DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5637A8122AD5DD72000586DF /* WalkyCam.app */,
+				5637A8222AD5DD74000586DF /* WalkyCamTests.xctest */,
+				5637A82C2AD5DD74000586DF /* WalkyCamUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5637A8142AD5DD72000586DF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EA15B5772AD6DFAB00C03407 /* Generated */,
+				EA15B5742AD6DF2C00C03407 /* Localizable.strings */,
+				5637A8192AD5DD73000586DF /* Assets.xcassets */,
+				EA5E1D672AD70BC800738A8F /* ProjectColors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		56DADB1D2AD5EA3400710618 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5637A8152AD5DD72000586DF /* WalkyCamApp.swift */,
+				56DADB252AD5ECB900710618 /* Extension */,
+				56DADB1E2AD5EA6000710618 /* AppNavigator */,
+				56DADB232AD5EB3800710618 /* AppDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		56DADB1E2AD5EA6000710618 /* AppNavigator */ = {
+			isa = PBXGroup;
+			children = (
+				56DADB1F2AD5EA7200710618 /* AppNavigatorProtocol.swift */,
+				56DADB212AD5EAA400710618 /* AppNavigator.swift */,
+			);
+			path = AppNavigator;
+			sourceTree = "<group>";
+		};
+		56DADB252AD5ECB900710618 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				56DADB262AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		EA15B5772AD6DFAB00C03407 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				EA5E1D9B2AD8A3DA00738A8F /* Assets.swift */,
+				EA5E1D9C2AD8A3DA00738A8F /* Strings.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		EA15B57A2AD6E41400C03407 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				EA15B57B2AD6E42800C03407 /* Login */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		EA15B57B2AD6E42800C03407 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EA15B58F2AD6E44D00C03407 /* Configuration */,
+				EA15B5822AD6E44D00C03407 /* Module */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EA15B5822AD6E44D00C03407 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA15B5832AD6E44D00C03407 /* ViewModel */,
+				EA15B5872AD6E44D00C03407 /* View */,
+				EA15B58C2AD6E44D00C03407 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA15B5832AD6E44D00C03407 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA15B5842AD6E44D00C03407 /* LoginViewModelProtocol.swift */,
+				EA15B5862AD6E44D00C03407 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA15B5872AD6E44D00C03407 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA15B5882AD6E44D00C03407 /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA15B58C2AD6E44D00C03407 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA15B58D2AD6E44D00C03407 /* LoginRouter.swift */,
+				EA15B58E2AD6E44D00C03407 /* LoginRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EA15B58F2AD6E44D00C03407 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA15B5902AD6E44D00C03407 /* Route */,
+				EA15B5922AD6E44D00C03407 /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA15B5902AD6E44D00C03407 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA15B5912AD6E44D00C03407 /* LoginRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA15B5922AD6E44D00C03407 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA15B5932AD6E44D00C03407 /* LoginAssembler.swift */,
+				EA15B5942AD6E44D00C03407 /* LoginAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EA15B5A52AD7067400C03407 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				EA5E1D652AD70B8100738A8F /* DesignSystem */,
+				EA15B5BA2AD7079600C03407 /* ViewModel */,
+				EA15B5B72AD7077100C03407 /*  UseCase */,
+				EA15B5A62AD7069100C03407 /* Router */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		EA15B5A62AD7069100C03407 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA15B5AA2AD706CD00C03407 /* Modifier */,
+				EA15B5A72AD7069F00C03407 /* Route */,
+				EA15B5B32AD7074200C03407 /* RouterState.swift */,
+				EA15B5B52AD7075600C03407 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EA15B5A72AD7069F00C03407 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA15B5A82AD706AF00C03407 /* Route.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA15B5AA2AD706CD00C03407 /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				EA15B5AB2AD706DB00C03407 /* BottomSheetModifier.swift */,
+				EA15B5AD2AD7070400C03407 /* NavigationModifier.swift */,
+				EA15B5AF2AD7071300C03407 /* SheetModifier.swift */,
+				EA15B5B12AD7072400C03407 /* SnackBarModifier.swift */,
+			);
+			path = Modifier;
+			sourceTree = "<group>";
+		};
+		EA15B5B72AD7077100C03407 /*  UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				EA15B5B82AD7077C00C03407 /* GenericUseCase.swift */,
+			);
+			path = " UseCase";
+			sourceTree = "<group>";
+		};
+		EA15B5BA2AD7079600C03407 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA15B5BB2AD707A300C03407 /* NestedObservableObject.swift */,
+				EA15B5BD2AD707B900C03407 /* ViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA5E1D652AD70B8100738A8F /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				EA5E1D942AD725D000738A8F /* Color */,
+				EA5E1D8D2AD719F000738A8F /* Tokens */,
+				EA5E1D812AD7182800738A8F /* View */,
+				EA5E1D792AD7173D00738A8F /* Extension */,
+				EA5E1D722AD7169800738A8F /* Font */,
+				EA5E1D662AD70B9100738A8F /* UIComponents */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		EA5E1D662AD70B9100738A8F /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				EA910F2F2AD8B53000584B98 /* Helpers */,
+				EA5E1D8A2AD719B400738A8F /* Texts */,
+				EA5E1D692AD713AF00738A8F /* Buttons */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		EA5E1D692AD713AF00738A8F /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				EA910F372AD977CC00584B98 /* WCUIButton */,
+				EA910F382AD977D600584B98 /* CheckboxToggle */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		EA5E1D6D2AD7163E00738A8F /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				EA5E1D6E2AD7164E00738A8F /* MainButtonStyle.swift */,
+				EA5E1D702AD7167300738A8F /* LinkButtonStyle.swift */,
+				EA5E1D752AD716D200738A8F /* ButtonStyleDescriptor.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		EA5E1D722AD7169800738A8F /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				EA5E1D892AD7195100738A8F /* Mulish */,
+				EA5E1D732AD716A500738A8F /* ProjectFont.swift */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		EA5E1D792AD7173D00738A8F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EA5E1D7A2AD7174700738A8F /* Button+Extension.swift */,
+				EA5E1D7C2AD7178F00738A8F /* View+Extension.swift */,
+				EA5E1D992AD883D800738A8F /* Text+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		EA5E1D812AD7182800738A8F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA5E1D822AD7182C00738A8F /* Helpers */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA5E1D822AD7182C00738A8F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EA5E1D832AD7183700738A8F /* RoundedCornerShape.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EA5E1D892AD7195100738A8F /* Mulish */ = {
+			isa = PBXGroup;
+			children = (
+				EA910F222AD8AA8500584B98 /* Mulish-Bold.ttf */,
+				EA910F1E2AD8AA8400584B98 /* Mulish-ExtraLight.ttf */,
+				EA910F1D2AD8AA8400584B98 /* Mulish-Light.ttf */,
+				EA910F212AD8AA8500584B98 /* Mulish-Medium.ttf */,
+				EA910F202AD8AA8400584B98 /* Mulish-Regular.ttf */,
+				EA910F1F2AD8AA8400584B98 /* Mulish-SemiBold.ttf */,
+				EA910F1B2AD8AA6400584B98 /* Mulish-Black.ttf */,
+			);
+			path = Mulish;
+			sourceTree = "<group>";
+		};
+		EA5E1D8A2AD719B400738A8F /* Texts */ = {
+			isa = PBXGroup;
+			children = (
+				EA5E1D8B2AD719C400738A8F /* TextInputView.swift */,
+				EA910F3B2AD982F300584B98 /* SecureTextInputView.swift */,
+			);
+			path = Texts;
+			sourceTree = "<group>";
+		};
+		EA5E1D8D2AD719F000738A8F /* Tokens */ = {
+			isa = PBXGroup;
+			children = (
+				EA5E1D922AD71ABB00738A8F /* Tokens.swift */,
+			);
+			path = Tokens;
+			sourceTree = "<group>";
+		};
+		EA5E1D942AD725D000738A8F /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				EA5E1D952AD725DF00738A8F /* ProjectColors.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		EA910F2F2AD8B53000584B98 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EA910F302AD8B55200584B98 /* Divider.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EA910F372AD977CC00584B98 /* WCUIButton */ = {
+			isa = PBXGroup;
+			children = (
+				EA5E1D6D2AD7163E00738A8F /* Styles */,
+				EA5E1D772AD7170400738A8F /* LinkButton.swift */,
+				EA910F2D2AD8B14C00584B98 /* WCUIButton.swift */,
+			);
+			path = WCUIButton;
+			sourceTree = "<group>";
+		};
+		EA910F382AD977D600584B98 /* CheckboxToggle */ = {
+			isa = PBXGroup;
+			children = (
+				EA910F352AD976F600584B98 /* CheckboxToggle.swift */,
+				EA910F392AD9782000584B98 /* SelectorModel.swift */,
+			);
+			path = CheckboxToggle;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5637A8112AD5DD72000586DF /* WalkyCam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5637A8362AD5DD74000586DF /* Build configuration list for PBXNativeTarget "WalkyCam" */;
+			buildPhases = (
+				5637A80E2AD5DD72000586DF /* Sources */,
+				5637A80F2AD5DD72000586DF /* Frameworks */,
+				5637A8102AD5DD72000586DF /* Resources */,
+				EA15B5792AD6E2ED00C03407 /* Swiftlint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WalkyCam;
+			productName = WalkyCam;
+			productReference = 5637A8122AD5DD72000586DF /* WalkyCam.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5637A8212AD5DD74000586DF /* WalkyCamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5637A8392AD5DD74000586DF /* Build configuration list for PBXNativeTarget "WalkyCamTests" */;
+			buildPhases = (
+				5637A81E2AD5DD74000586DF /* Sources */,
+				5637A81F2AD5DD74000586DF /* Frameworks */,
+				5637A8202AD5DD74000586DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5637A8242AD5DD74000586DF /* PBXTargetDependency */,
+			);
+			name = WalkyCamTests;
+			productName = WalkyCamTests;
+			productReference = 5637A8222AD5DD74000586DF /* WalkyCamTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5637A82B2AD5DD74000586DF /* WalkyCamUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5637A83C2AD5DD74000586DF /* Build configuration list for PBXNativeTarget "WalkyCamUITests" */;
+			buildPhases = (
+				5637A8282AD5DD74000586DF /* Sources */,
+				5637A8292AD5DD74000586DF /* Frameworks */,
+				5637A82A2AD5DD74000586DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5637A82E2AD5DD74000586DF /* PBXTargetDependency */,
+			);
+			name = WalkyCamUITests;
+			productName = WalkyCamUITests;
+			productReference = 5637A82C2AD5DD74000586DF /* WalkyCamUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5637A80A2AD5DD72000586DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					5637A8112AD5DD72000586DF = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					5637A8212AD5DD74000586DF = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 5637A8112AD5DD72000586DF;
+					};
+					5637A82B2AD5DD74000586DF = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 5637A8112AD5DD72000586DF;
+					};
+				};
+			};
+			buildConfigurationList = 5637A80D2AD5DD72000586DF /* Build configuration list for PBXProject "WalkyCam" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5637A8092AD5DD71000586DF;
+			productRefGroup = 5637A8132AD5DD72000586DF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5637A8112AD5DD72000586DF /* WalkyCam */,
+				5637A8212AD5DD74000586DF /* WalkyCamTests */,
+				5637A82B2AD5DD74000586DF /* WalkyCamUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5637A8102AD5DD72000586DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA910F242AD8AA8500584B98 /* Mulish-ExtraLight.ttf in Resources */,
+				EA910F1C2AD8AA6400584B98 /* Mulish-Black.ttf in Resources */,
+				5637A81A2AD5DD73000586DF /* Assets.xcassets in Resources */,
+				EA910F282AD8AA8500584B98 /* Mulish-Bold.ttf in Resources */,
+				EA910F252AD8AA8500584B98 /* Mulish-SemiBold.ttf in Resources */,
+				EA910F232AD8AA8500584B98 /* Mulish-Light.ttf in Resources */,
+				EA15B5762AD6DF2C00C03407 /* Localizable.strings in Resources */,
+				EA5E1D682AD70BC800738A8F /* ProjectColors.xcassets in Resources */,
+				EA910F272AD8AA8500584B98 /* Mulish-Medium.ttf in Resources */,
+				EA910F262AD8AA8500584B98 /* Mulish-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5637A8202AD5DD74000586DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5637A82A2AD5DD74000586DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EA15B5792AD6E2ED00C03407 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint>/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwifLint not installed. Download it first\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5637A80E2AD5DD72000586DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */,
+				EA15B5B22AD7072400C03407 /* SnackBarModifier.swift in Sources */,
+				EA5E1D962AD725DF00738A8F /* ProjectColors.swift in Sources */,
+				EA15B5AC2AD706DB00C03407 /* BottomSheetModifier.swift in Sources */,
+				EA5E1D712AD7167300738A8F /* LinkButtonStyle.swift in Sources */,
+				EA15B59E2AD6E44D00C03407 /* LoginRouter.swift in Sources */,
+				56DADB222AD5EAA400710618 /* AppNavigator.swift in Sources */,
+				EA15B5A92AD706AF00C03407 /* Route.swift in Sources */,
+				56DADB202AD5EA7200710618 /* AppNavigatorProtocol.swift in Sources */,
+				EA15B5B92AD7077C00C03407 /* GenericUseCase.swift in Sources */,
+				EA15B5BE2AD707B900C03407 /* ViewModelProtocol.swift in Sources */,
+				EA5E1D742AD716A500738A8F /* ProjectFont.swift in Sources */,
+				EA5E1D7B2AD7174700738A8F /* Button+Extension.swift in Sources */,
+				EA15B59B2AD6E44D00C03407 /* LoginView.swift in Sources */,
+				EA15B59A2AD6E44D00C03407 /* LoginViewModel.swift in Sources */,
+				EA910F312AD8B55200584B98 /* Divider.swift in Sources */,
+				EA5E1D782AD7170400738A8F /* LinkButton.swift in Sources */,
+				EA15B5B02AD7071300C03407 /* SheetModifier.swift in Sources */,
+				EA5E1D9A2AD883D800738A8F /* Text+Extension.swift in Sources */,
+				EA5E1D762AD716D200738A8F /* ButtonStyleDescriptor.swift in Sources */,
+				EA15B5B62AD7075600C03407 /* Router.swift in Sources */,
+				EA15B5AE2AD7070400C03407 /* NavigationModifier.swift in Sources */,
+				EA15B5A02AD6E44D00C03407 /* LoginRoute.swift in Sources */,
+				EA5E1D7D2AD7178F00738A8F /* View+Extension.swift in Sources */,
+				EA910F362AD976F600584B98 /* CheckboxToggle.swift in Sources */,
+				EA5E1D6F2AD7164E00738A8F /* MainButtonStyle.swift in Sources */,
+				EA5E1D9E2AD8A3DA00738A8F /* Strings.swift in Sources */,
+				EA5E1D842AD7183700738A8F /* RoundedCornerShape.swift in Sources */,
+				56DADB272AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift in Sources */,
+				5637A8162AD5DD72000586DF /* WalkyCamApp.swift in Sources */,
+				EA15B5B42AD7074200C03407 /* RouterState.swift in Sources */,
+				EA910F2E2AD8B14C00584B98 /* WCUIButton.swift in Sources */,
+				EA15B59F2AD6E44D00C03407 /* LoginRouterProtocol.swift in Sources */,
+				EA5E1D9D2AD8A3DA00738A8F /* Assets.swift in Sources */,
+				EA5E1D8C2AD719C400738A8F /* TextInputView.swift in Sources */,
+				EA910F3A2AD9782000584B98 /* SelectorModel.swift in Sources */,
+				EA15B5982AD6E44D00C03407 /* LoginViewModelProtocol.swift in Sources */,
+				EA15B5A12AD6E44D00C03407 /* LoginAssembler.swift in Sources */,
+				EA15B5A22AD6E44D00C03407 /* LoginAssemblerProtocol.swift in Sources */,
+				EA910F3C2AD982F300584B98 /* SecureTextInputView.swift in Sources */,
+				EA15B5BC2AD707A300C03407 /* NestedObservableObject.swift in Sources */,
+				EA5E1D932AD71ABB00738A8F /* Tokens.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5637A81E2AD5DD74000586DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5637A8282AD5DD74000586DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5637A8242AD5DD74000586DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5637A8112AD5DD72000586DF /* WalkyCam */;
+			targetProxy = 5637A8232AD5DD74000586DF /* PBXContainerItemProxy */;
+		};
+		5637A82E2AD5DD74000586DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5637A8112AD5DD72000586DF /* WalkyCam */;
+			targetProxy = 5637A82D2AD5DD74000586DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA15B5742AD6DF2C00C03407 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA15B5752AD6DF2C00C03407 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5637A8342AD5DD74000586DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5637A8352AD5DD74000586DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5637A8372AD5DD74000586DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7994PXZY59;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WalkyCam-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.walkycam.WalkyCam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5637A8382AD5DD74000586DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7994PXZY59;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WalkyCam-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.walkycam.WalkyCam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5637A83A2AD5DD74000586DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7994PXZY59;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.walkycam.WalkyCamTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WalkyCam.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WalkyCam";
+			};
+			name = Debug;
+		};
+		5637A83B2AD5DD74000586DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7994PXZY59;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.walkycam.WalkyCamTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WalkyCam.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WalkyCam";
+			};
+			name = Release;
+		};
+		5637A83D2AD5DD74000586DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7994PXZY59;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.walkycam.WalkyCamUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WalkyCam;
+			};
+			name = Debug;
+		};
+		5637A83E2AD5DD74000586DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7994PXZY59;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.walkycam.WalkyCamUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WalkyCam;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5637A80D2AD5DD72000586DF /* Build configuration list for PBXProject "WalkyCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5637A8342AD5DD74000586DF /* Debug */,
+				5637A8352AD5DD74000586DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5637A8362AD5DD74000586DF /* Build configuration list for PBXNativeTarget "WalkyCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5637A8372AD5DD74000586DF /* Debug */,
+				5637A8382AD5DD74000586DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5637A8392AD5DD74000586DF /* Build configuration list for PBXNativeTarget "WalkyCamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5637A83A2AD5DD74000586DF /* Debug */,
+				5637A83B2AD5DD74000586DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5637A83C2AD5DD74000586DF /* Build configuration list for PBXNativeTarget "WalkyCamUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5637A83D2AD5DD74000586DF /* Debug */,
+				5637A83E2AD5DD74000586DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5637A80A2AD5DD72000586DF /* Project object */;
+}

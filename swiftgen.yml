@@ -1,0 +1,15 @@
+ strings:
+   inputs:
+     - WalkyCam/Resources/en.lproj
+   outputs:
+     - templateName: structured-swift5
+       output: WalkyCam/Resources/Generated/Strings.swift
+
+ xcassets:
+   inputs:
+     - WalkyCam/Resources/Assets.xcassets
+   outputs:
+     - templateName: swift5
+       params:
+         forceProvidesNamespaces: true
+       output: WalkyCam/Resources/Generated/Assets.swift

@@ -1,0 +1,14 @@
+// MARK: - General
+"copyright.text"= "@WalkyCam 2021 - All reserved copyright";
+
+// MARK: - LoginView
+
+"LoginView.title.text" = "Login";
+"LoginView.input.user.text" = "Usuario";
+"LoginView.input.user.placeholder" = "Usuario";
+"LoginView.input.password.text" = "Contraseña";
+"LoginView.input.password.placeholder" = "Contraseña";
+"LoginView.button.forgotPassword" = "He olvidado la contraseña";
+"LoginView.button.login" = "Login";
+"LoginView.button.signup" = "Registrame";
+"LoginView.divider.text" = "Or Sign up with";
