@@ -42,6 +42,38 @@ internal enum L10n {
       internal static let text = L10n.tr("Localizable", "LoginView.title.text", fallback: "Login")
     }
   }
+  internal enum OnboardingView {
+    internal enum Button {
+      /// Continuar
+      internal static let next = L10n.tr("Localizable", "OnboardingView.Button.next", fallback: "Continuar")
+      /// Omitir
+      internal static let skip = L10n.tr("Localizable", "OnboardingView.Button.skip", fallback: "Omitir")
+      /// Comenzar
+      internal static let start = L10n.tr("Localizable", "OnboardingView.Button.start", fallback: "Comenzar")
+    }
+    internal enum Page1 {
+      /// Tu STREETcam 24/7 
+      /// Streaming en vivo donde quieras, cuando quieras. Ubica a tu WalkCamer y empieza a grabar. 
+      /// WalkyCam tiene mas de 20 servicios. Descúbrelos!
+      internal static let subtitle = L10n.tr("Localizable", "OnboardingView.Page1.subtitle", fallback: "Tu STREETcam 24/7 \nStreaming en vivo donde quieras, cuando quieras. Ubica a tu WalkCamer y empieza a grabar. \nWalkyCam tiene mas de 20 servicios. Descúbrelos!")
+      /// Qué es?
+      internal static let title = L10n.tr("Localizable", "OnboardingView.Page1.title", fallback: "Qué es?")
+    }
+    internal enum Page2 {
+      /// Manos AR, PIXELADO de Caras, Escaneo 3D, DRONES Aéreos y R.O.V., IA especializada, IOT Service, 
+      /// **y mucho más!**
+      internal static let subtitle = L10n.tr("Localizable", "OnboardingView.Page2.subtitle", fallback: "Manos AR, PIXELADO de Caras, Escaneo 3D, DRONES Aéreos y R.O.V., IA especializada, IOT Service, \n**y mucho más!**")
+      /// Universo WalkyCam
+      internal static let title = L10n.tr("Localizable", "OnboardingView.Page2.title", fallback: "Universo WalkyCam")
+    }
+    internal enum Page3 {
+      /// Manos AR, PIXELADO de Caras, Escaneo 3D, DRONES Aéreos y R.O.V., IA especializada, IOT Service, 
+      /// **y mucho más!**
+      internal static let subtitle = L10n.tr("Localizable", "OnboardingView.Page3.subtitle", fallback: "Manos AR, PIXELADO de Caras, Escaneo 3D, DRONES Aéreos y R.O.V., IA especializada, IOT Service, \n**y mucho más!**")
+      /// Universo WalkyCam
+      internal static let title = L10n.tr("Localizable", "OnboardingView.Page3.title", fallback: "Universo WalkyCam")
+    }
+  }
   internal enum Copyright {
     /// @WalkyCam 2021 - All reserved copyright
     internal static let text = L10n.tr("Localizable", "copyright.text", fallback: "@WalkyCam 2021 - All reserved copyright")

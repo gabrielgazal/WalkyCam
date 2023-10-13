@@ -42,3 +42,11 @@ struct WhiteButtonStyleDescriptor: ButtonStyleDescriptorProtocol {
         return .blanco
     }
 }
+struct ClearButtonStyleDescriptor: ButtonStyleDescriptorProtocol {
+    var mainColor: Color {
+        return .clear
+    }
+    var pressedColor: Color {
+        return .clear
+    }
+}

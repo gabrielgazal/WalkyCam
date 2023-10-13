@@ -36,7 +36,7 @@ struct MainButtonStyle: ButtonStyle {
 
     private struct StandardButton: View {
         enum Metrics {
-            static let minHeight: CGFloat = 40
+            static let minHeight: CGFloat = 48
             static let maxHeight: CGFloat = 48
             static let cornerRadius: CGFloat = 24
         }
@@ -70,7 +70,7 @@ struct MainButtonStyle: ButtonStyle {
 
         private var backgroundColor: Color {
             guard isEnabled else {
-                return Color.blancoGris
+                return Color.plateado
             }
             return configuration.isPressed ? descriptor.pressedColor : descriptor.mainColor
         }
@@ -78,9 +78,9 @@ struct MainButtonStyle: ButtonStyle {
 
     private struct OutlineButton: View {
         enum Metrics {
-            static let minHeight: CGFloat = 40
-            static let maxHeight: CGFloat = 50
-            static let cornerRadius: CGFloat = 12
+            static let minHeight: CGFloat = 48
+            static let maxHeight: CGFloat = 48
+            static let cornerRadius: CGFloat = 24
         }
 
         private let configuration: ButtonStyle.Configuration
@@ -104,7 +104,7 @@ struct MainButtonStyle: ButtonStyle {
                 .frame(maxWidth: .infinity, minHeight: Metrics.minHeight, maxHeight: Metrics.maxHeight)
                 .overlay(
                     RoundedRectangle(cornerRadius: Metrics.cornerRadius)
-                        .stroke(isEnabled ? descriptor.mainColor : .blancoGris, lineWidth: 1)
+                        .stroke(isEnabled ? descriptor.mainColor : .blancoGris, lineWidth: 2)
                 )
                 .background(backgroundColor)
                 .cornerRadius(Metrics.cornerRadius)
@@ -113,7 +113,7 @@ struct MainButtonStyle: ButtonStyle {
 
         private var backgroundColor: Color {
             guard isEnabled else {
-                return Color.blancoGris
+                return Color.plateado
             }
             return configuration.isPressed ? descriptor.pressedColor : .clear
         }

@@ -30,6 +30,11 @@ internal enum Asset {
     internal static let eyeDisabledIcon = ImageAsset(name: "eyeDisabledIcon")
     internal static let eyeIcon = ImageAsset(name: "eyeIcon")
   }
+  internal enum Illustrations {
+    internal static let onboarding1 = ImageAsset(name: "onboarding1")
+    internal static let onboarding2 = ImageAsset(name: "onboarding2")
+    internal static let onboarding3 = ImageAsset(name: "onboarding3")
+  }
   internal static let launchScreen = ImageAsset(name: "LaunchScreen")
   internal enum SocialMedia {
     internal static let apple = ImageAsset(name: "apple")

@@ -1,6 +1,5 @@
 import SwiftUI
 
 protocol LoginRouterProtocol: Router {
-    func routeToSomething()
+    func routeToOnboarding()
 }
-

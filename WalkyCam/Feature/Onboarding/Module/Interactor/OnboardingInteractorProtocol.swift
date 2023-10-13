@@ -1,0 +1,3 @@
+protocol OnboardingInteractorProtocol {
+    func someFunction()
+}

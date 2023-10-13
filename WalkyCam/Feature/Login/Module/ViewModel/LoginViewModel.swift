@@ -13,15 +13,7 @@ final class LoginViewModel: LoginViewModelProtocol {
 
     // MARK: - Public API
 
-#warning("Example function. Rename or remove it")
-    func someAction() {
-
-    }
-
-    // MARK: - Private Methods
-
-#warning("Example function. Rename or remove it")
-    private func somePrivateMethod() {
-
+    func validateFields() -> Bool {
+        return !userName.isEmpty && !password.isEmpty
     }
 }

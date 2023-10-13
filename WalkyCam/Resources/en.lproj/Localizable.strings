@@ -12,3 +12,14 @@
 "LoginView.button.login" = "Login";
 "LoginView.button.signup" = "Registrame";
 "LoginView.divider.text" = "Or Sign up with";
+
+// MARK: - OnboardingView
+"OnboardingView.Page1.title" = "Qué es?";
+"OnboardingView.Page1.subtitle" = "Tu STREETcam 24/7 \nStreaming en vivo donde quieras, cuando quieras. Ubica a tu WalkCamer y empieza a grabar. \nWalkyCam tiene mas de 20 servicios. Descúbrelos!";
+"OnboardingView.Page2.title" = "Universo WalkyCam";
+"OnboardingView.Page2.subtitle" = "Manos AR, PIXELADO de Caras, Escaneo 3D, DRONES Aéreos y R.O.V., IA especializada, IOT Service, \n**y mucho más!**";
+"OnboardingView.Page3.title" = "Universo WalkyCam";
+"OnboardingView.Page3.subtitle" = "Manos AR, PIXELADO de Caras, Escaneo 3D, DRONES Aéreos y R.O.V., IA especializada, IOT Service, \n**y mucho más!**";
+"OnboardingView.Button.skip" = "Omitir";
+"OnboardingView.Button.next" = "Continuar";
+"OnboardingView.Button.start" = "Comenzar";

@@ -47,9 +47,10 @@ struct LoginView<ViewModel: LoginViewModelProtocol, Router: LoginRouterProtocol>
                 WCUIButton(title: L10n.LoginView.Button.login,
                            descriptor: OrangeButtonStyleDescriptor(),
                            action: {})
+                .disabled(!viewModel.validateFields())
                 WCUIButton(title: L10n.LoginView.Button.signup,
                            descriptor: BlackButtonStyleDescriptor(),
-                           action: {})
+                           action: handleSignUp)
                 Spacer()
                     .frame(height: 30)
                 HStack(spacing: Tokens.Size.Spacing.small) {
@@ -81,6 +82,15 @@ struct LoginView<ViewModel: LoginViewModelProtocol, Router: LoginRouterProtocol>
         }
         .padding(.horizontal, Tokens.Size.Spacing.regular)
         .background(Color.black)
+        .navigation(router)
+    }
+
+    private func handleForgotPassword() {}
+
+    private func handleLogin() {}
+
+    private func handleSignUp() {
+        router.routeToOnboarding()
     }
 }
 
