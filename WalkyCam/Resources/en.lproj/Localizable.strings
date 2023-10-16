@@ -37,3 +37,7 @@
 "MenuViewModel.item.settings" = "Configuración";
 "MenuViewModel.item.help" = "Ayuda";
 "MenuViewModel.item.bot" = "Walky";
+
+// MARK: - WalkyBotView
+
+"WalkyBotView.text" = "¿Qué hacemos hoy?";

@@ -36,7 +36,7 @@ final class TabBarBuilder: TabBarBuilderProtocol {
         return WCTabBarItem(
             iconName: Asset.TabBar.home.name,
             title: L10n.TabBarBuilder.Tab.home,
-            destination: Color.blue.eraseToAnyView()
+            destination: HomeRoute(isPresented: .constant(false)).build()
         )
     }
 

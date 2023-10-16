@@ -98,6 +98,10 @@ internal enum L10n {
       internal static let menu = L10n.tr("Localizable", "TabBarBuilder.tab.menu", fallback: "Menú")
     }
   }
+  internal enum WalkyBotView {
+    /// ¿Qué hacemos hoy?
+    internal static let text = L10n.tr("Localizable", "WalkyBotView.text", fallback: "¿Qué hacemos hoy?")
+  }
   internal enum Copyright {
     /// @WalkyCam 2021 - All reserved copyright
     internal static let text = L10n.tr("Localizable", "copyright.text", fallback: "@WalkyCam 2021 - All reserved copyright")

@@ -90,7 +90,7 @@ public struct TextInputView: View {
             .background(
                 RoundedRectangle(cornerRadius: 28)
                     .frame(height: 56)
-                    .foregroundColor(Color.blancoGris)
+                    .foregroundColor(Color.blanco)
             )
         }
     }
@@ -127,11 +127,11 @@ public struct TextInputView: View {
     }
 
     private func configureAccessoryButton() -> AnyView? {
-        guard let accessoryAction = actions.accessoryAction,
-              let accessory = accessory
+        guard let accessory = accessory
         else { return nil }
         return AnyView(
-            Button(action: accessoryAction, label: {
+            Button(action: { actions.accessoryAction?() },
+                   label: {
                 accessory
                     .foregroundColor(Color.negro)
             })

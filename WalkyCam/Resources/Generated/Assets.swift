@@ -29,6 +29,7 @@ internal enum Asset {
     internal static let check = ImageAsset(name: "check")
     internal static let eyeDisabledIcon = ImageAsset(name: "eyeDisabledIcon")
     internal static let eyeIcon = ImageAsset(name: "eyeIcon")
+    internal static let mail = ImageAsset(name: "mail")
   }
   internal enum Illustrations {
     internal static let onboarding1 = ImageAsset(name: "onboarding1")

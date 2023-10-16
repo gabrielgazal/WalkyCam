@@ -1,0 +1,3 @@
+protocol HomeInteractorProtocol {
+    func someFunction()
+}
