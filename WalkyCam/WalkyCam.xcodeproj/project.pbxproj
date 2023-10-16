@@ -82,6 +82,22 @@
 		EA910F942ADA06F500584B98 /* RegistrationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F862ADA06F500584B98 /* RegistrationRouter.swift */; };
 		EA910F952ADA06F500584B98 /* RegistrationRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F872ADA06F500584B98 /* RegistrationRouterProtocol.swift */; };
 		EA910F962ADA06F500584B98 /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F8A2ADA06F500584B98 /* RegistrationModel.swift */; };
+		EA910F992ADC40DB00584B98 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F982ADC40DB00584B98 /* AlertView.swift */; };
+		EA910F9C2ADC437300584B98 /* AlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F9B2ADC437300584B98 /* AlertModifier.swift */; };
+		EA910F9E2ADC43B200584B98 /* FullScreenWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910F9D2ADC43B200584B98 /* FullScreenWrapper.swift */; };
+		EA910FA22ADC466400584B98 /* WCTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910FA12ADC466400584B98 /* WCTabBarItem.swift */; };
+		EA910FA42ADC470A00584B98 /* WCTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910FA32ADC470A00584B98 /* WCTabBarView.swift */; };
+		EA910FA62ADC48DE00584B98 /* WCTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910FA52ADC48DE00584B98 /* WCTabBarContainerView.swift */; };
+		EA910FC42ADC495700584B98 /* TabBarRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910FB02ADC495700584B98 /* TabBarRoute.swift */; };
+		EA910FC52ADC495700584B98 /* TabBarAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910FB22ADC495700584B98 /* TabBarAssembler.swift */; };
+		EA910FC62ADC495700584B98 /* TabBarAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910FB32ADC495700584B98 /* TabBarAssemblerProtocol.swift */; };
+		EA910FC82ADC495700584B98 /* TabBarViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910FB72ADC495700584B98 /* TabBarViewModelProtocol.swift */; };
+		EA910FC92ADC495700584B98 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910FB82ADC495700584B98 /* TabBarViewModel.swift */; };
+		EA910FCA2ADC495700584B98 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910FBA2ADC495700584B98 /* TabBarView.swift */; };
+		EA910FCD2ADC495700584B98 /* TabBarRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910FBF2ADC495700584B98 /* TabBarRouterProtocol.swift */; };
+		EA910FCE2ADC495700584B98 /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910FC02ADC495700584B98 /* TabBarRouter.swift */; };
+		EA910FCF2ADC495700584B98 /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910FC32ADC495700584B98 /* TabBarModel.swift */; };
+		EA910FD22ADC499500584B98 /* TabBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910FD12ADC499500584B98 /* TabBarBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +197,22 @@
 		EA910F862ADA06F500584B98 /* RegistrationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationRouter.swift; sourceTree = "<group>"; };
 		EA910F872ADA06F500584B98 /* RegistrationRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationRouterProtocol.swift; sourceTree = "<group>"; };
 		EA910F8A2ADA06F500584B98 /* RegistrationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
+		EA910F982ADC40DB00584B98 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		EA910F9B2ADC437300584B98 /* AlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModifier.swift; sourceTree = "<group>"; };
+		EA910F9D2ADC43B200584B98 /* FullScreenWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenWrapper.swift; sourceTree = "<group>"; };
+		EA910FA12ADC466400584B98 /* WCTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTabBarItem.swift; sourceTree = "<group>"; };
+		EA910FA32ADC470A00584B98 /* WCTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTabBarView.swift; sourceTree = "<group>"; };
+		EA910FA52ADC48DE00584B98 /* WCTabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTabBarContainerView.swift; sourceTree = "<group>"; };
+		EA910FB02ADC495700584B98 /* TabBarRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarRoute.swift; sourceTree = "<group>"; };
+		EA910FB22ADC495700584B98 /* TabBarAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarAssembler.swift; sourceTree = "<group>"; };
+		EA910FB32ADC495700584B98 /* TabBarAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA910FB72ADC495700584B98 /* TabBarViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA910FB82ADC495700584B98 /* TabBarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
+		EA910FBA2ADC495700584B98 /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		EA910FBF2ADC495700584B98 /* TabBarRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarRouterProtocol.swift; sourceTree = "<group>"; };
+		EA910FC02ADC495700584B98 /* TabBarRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
+		EA910FC32ADC495700584B98 /* TabBarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
+		EA910FD12ADC499500584B98 /* TabBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +313,7 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				EA910FA72ADC493A00584B98 /* TabBar */,
 				EA910F6E2ADA06CF00584B98 /* Registration */,
 				EA910F3D2AD9AEFC00584B98 /* Onboarding */,
 				EA15B57B2AD6E42800C03407 /* Login */,
@@ -420,6 +453,7 @@
 		EA5E1D652AD70B8100738A8F /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				EA910F9A2ADC436300584B98 /* Modifier */,
 				EA5E1D942AD725D000738A8F /* Color */,
 				EA5E1D8D2AD719F000738A8F /* Tokens */,
 				EA5E1D812AD7182800738A8F /* View */,
@@ -433,6 +467,7 @@
 		EA5E1D662AD70B9100738A8F /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				EA910F9F2ADC464400584B98 /* View */,
 				EA910F2F2AD8B53000584B98 /* Helpers */,
 				EA5E1D8A2AD719B400738A8F /* Texts */,
 				EA5E1D692AD713AF00738A8F /* Buttons */,
@@ -733,6 +768,139 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		EA910F972ADC40CD00584B98 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				EA910F982ADC40DB00584B98 /* AlertView.swift */,
+			);
+			path = AlertView;
+			sourceTree = "<group>";
+		};
+		EA910F9A2ADC436300584B98 /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				EA910F9B2ADC437300584B98 /* AlertModifier.swift */,
+				EA910F9D2ADC43B200584B98 /* FullScreenWrapper.swift */,
+			);
+			path = Modifier;
+			sourceTree = "<group>";
+		};
+		EA910F9F2ADC464400584B98 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA910FA02ADC464B00584B98 /* TabBar */,
+				EA910F972ADC40CD00584B98 /* AlertView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA910FA02ADC464B00584B98 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				EA910FA12ADC466400584B98 /* WCTabBarItem.swift */,
+				EA910FA32ADC470A00584B98 /* WCTabBarView.swift */,
+				EA910FA52ADC48DE00584B98 /* WCTabBarContainerView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		EA910FA72ADC493A00584B98 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				EA910FAE2ADC495700584B98 /* Configuration */,
+				EA910FC12ADC495700584B98 /* Domain */,
+				EA910FB42ADC495700584B98 /* Module */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		EA910FAE2ADC495700584B98 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA910FAF2ADC495700584B98 /* Route */,
+				EA910FB12ADC495700584B98 /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA910FAF2ADC495700584B98 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA910FB02ADC495700584B98 /* TabBarRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA910FB12ADC495700584B98 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA910FB22ADC495700584B98 /* TabBarAssembler.swift */,
+				EA910FB32ADC495700584B98 /* TabBarAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EA910FB42ADC495700584B98 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA910FB52ADC495700584B98 /* ViewModel */,
+				EA910FB92ADC495700584B98 /* View */,
+				EA910FBE2ADC495700584B98 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA910FB52ADC495700584B98 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA910FB72ADC495700584B98 /* TabBarViewModelProtocol.swift */,
+				EA910FB82ADC495700584B98 /* TabBarViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA910FB92ADC495700584B98 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA910FBA2ADC495700584B98 /* TabBarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA910FBE2ADC495700584B98 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA910FBF2ADC495700584B98 /* TabBarRouterProtocol.swift */,
+				EA910FC02ADC495700584B98 /* TabBarRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EA910FC12ADC495700584B98 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA910FD02ADC497D00584B98 /* Builder */,
+				EA910FC22ADC495700584B98 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA910FC22ADC495700584B98 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA910FC32ADC495700584B98 /* TabBarModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA910FD02ADC497D00584B98 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				EA910FD12ADC499500584B98 /* TabBarBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -892,7 +1060,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA910FCD2ADC495700584B98 /* TabBarRouterProtocol.swift in Sources */,
+				EA910FC62ADC495700584B98 /* TabBarAssemblerProtocol.swift in Sources */,
 				56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */,
+				EA910FA22ADC466400584B98 /* WCTabBarItem.swift in Sources */,
+				EA910FCE2ADC495700584B98 /* TabBarRouter.swift in Sources */,
 				EA15B5B22AD7072400C03407 /* SnackBarModifier.swift in Sources */,
 				EA5E1D962AD725DF00738A8F /* ProjectColors.swift in Sources */,
 				EA910F942ADA06F500584B98 /* RegistrationRouter.swift in Sources */,
@@ -900,11 +1072,13 @@
 				EA5E1D712AD7167300738A8F /* LinkButtonStyle.swift in Sources */,
 				EA910F952ADA06F500584B98 /* RegistrationRouterProtocol.swift in Sources */,
 				EA910F602AD9B01300584B98 /* OnboardingViewModel.swift in Sources */,
+				EA910FCF2ADC495700584B98 /* TabBarModel.swift in Sources */,
 				EA910F8B2ADA06F500584B98 /* RegistrationRoute.swift in Sources */,
 				EA910F912ADA06F500584B98 /* RegistrationView.swift in Sources */,
 				EA15B59E2AD6E44D00C03407 /* LoginRouter.swift in Sources */,
 				56DADB222AD5EAA400710618 /* AppNavigator.swift in Sources */,
 				EA15B5A92AD706AF00C03407 /* Route.swift in Sources */,
+				EA910FA62ADC48DE00584B98 /* WCTabBarContainerView.swift in Sources */,
 				EA910F672AD9B20600584B98 /* NavigationController+Extension.swift in Sources */,
 				56DADB202AD5EA7200710618 /* AppNavigatorProtocol.swift in Sources */,
 				EA15B5B92AD7077C00C03407 /* GenericUseCase.swift in Sources */,
@@ -915,7 +1089,9 @@
 				EA15B59B2AD6E44D00C03407 /* LoginView.swift in Sources */,
 				EA910F5E2AD9B01300584B98 /* OnboardingViewModelProtocol.swift in Sources */,
 				EA15B59A2AD6E44D00C03407 /* LoginViewModel.swift in Sources */,
+				EA910FC82ADC495700584B98 /* TabBarViewModelProtocol.swift in Sources */,
 				EA910F8E2ADA06F500584B98 /* RegistrationViewModel.swift in Sources */,
+				EA910FCA2ADC495700584B98 /* TabBarView.swift in Sources */,
 				EA910F312AD8B55200584B98 /* Divider.swift in Sources */,
 				EA910F6D2ADA03D600584B98 /* String+Extension.swift in Sources */,
 				EA910F692AD9B57400584B98 /* OnboardingPageView.swift in Sources */,
@@ -925,6 +1101,7 @@
 				EA910F962ADA06F500584B98 /* RegistrationModel.swift in Sources */,
 				EA5E1D9A2AD883D800738A8F /* Text+Extension.swift in Sources */,
 				EA910F5A2AD9B01300584B98 /* OnboardingRoute.swift in Sources */,
+				EA910FD22ADC499500584B98 /* TabBarBuilder.swift in Sources */,
 				EA5E1D762AD716D200738A8F /* ButtonStyleDescriptor.swift in Sources */,
 				EA15B5B62AD7075600C03407 /* Router.swift in Sources */,
 				EA15B5AE2AD7070400C03407 /* NavigationModifier.swift in Sources */,
@@ -937,8 +1114,11 @@
 				EA5E1D842AD7183700738A8F /* RoundedCornerShape.swift in Sources */,
 				EA910F5B2AD9B01300584B98 /* OnboardingAssembler.swift in Sources */,
 				EA910F5C2AD9B01300584B98 /* OnboardingAssemblerProtocol.swift in Sources */,
+				EA910FC42ADC495700584B98 /* TabBarRoute.swift in Sources */,
 				EA910F8C2ADA06F500584B98 /* RegistrationAssemblerProtocol.swift in Sources */,
+				EA910F9E2ADC43B200584B98 /* FullScreenWrapper.swift in Sources */,
 				56DADB272AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift in Sources */,
+				EA910F992ADC40DB00584B98 /* AlertView.swift in Sources */,
 				EA910F8D2ADA06F500584B98 /* RegistrationAssembler.swift in Sources */,
 				5637A8162AD5DD72000586DF /* WalkyCamApp.swift in Sources */,
 				EA15B5B42AD7074200C03407 /* RouterState.swift in Sources */,
@@ -947,15 +1127,19 @@
 				EA5E1D9D2AD8A3DA00738A8F /* Assets.swift in Sources */,
 				EA5E1D8C2AD719C400738A8F /* TextInputView.swift in Sources */,
 				EA910F3A2AD9782000584B98 /* SelectorModel.swift in Sources */,
+				EA910F9C2ADC437300584B98 /* AlertModifier.swift in Sources */,
 				EA910F612AD9B01300584B98 /* OnboardingView.swift in Sources */,
 				EA15B5982AD6E44D00C03407 /* LoginViewModelProtocol.swift in Sources */,
 				EA910F922ADA06F500584B98 /* RegistrationInteractor.swift in Sources */,
+				EA910FC52ADC495700584B98 /* TabBarAssembler.swift in Sources */,
 				EA15B5A12AD6E44D00C03407 /* LoginAssembler.swift in Sources */,
 				EA910F6B2AD9CCF500584B98 /* PageControl.swift in Sources */,
 				EA15B5A22AD6E44D00C03407 /* LoginAssemblerProtocol.swift in Sources */,
 				EA910F3C2AD982F300584B98 /* SecureTextInputView.swift in Sources */,
+				EA910FA42ADC470A00584B98 /* WCTabBarView.swift in Sources */,
 				EA15B5BC2AD707A300C03407 /* NestedObservableObject.swift in Sources */,
 				EA5E1D932AD71ABB00738A8F /* Tokens.swift in Sources */,
+				EA910FC92ADC495700584B98 /* TabBarViewModel.swift in Sources */,
 				EA910F8F2ADA06F500584B98 /* RegistrationViewModelProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -41,6 +41,11 @@ internal enum Asset {
     internal static let facebook = ImageAsset(name: "facebook")
     internal static let google = ImageAsset(name: "google")
   }
+  internal enum TabBar {
+    internal static let grid = ImageAsset(name: "grid")
+    internal static let home = ImageAsset(name: "home")
+    internal static let menu = ImageAsset(name: "menu")
+  }
   internal static let logo = ImageAsset(name: "logo")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

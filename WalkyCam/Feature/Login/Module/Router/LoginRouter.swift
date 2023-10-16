@@ -9,4 +9,10 @@ final class LoginRouter: Router, LoginRouterProtocol {
             OnboardingRoute(isPresented: isNavigating)
         )
     }
+
+    func routeToHome() {
+        navigateTo(
+            TabBarRoute(isPresented: isNavigating)
+        )
+    }
 }

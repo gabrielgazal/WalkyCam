@@ -9,4 +9,3 @@ final class RegistrationRouter: Router, RegistrationRouterProtocol {
 
     }
 }
-

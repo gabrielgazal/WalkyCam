@@ -38,4 +38,22 @@ extension View {
                  weight: ProjectFontWeight = .regular) -> some View {
         font(.projectFont(size: size, weight: weight))
     }
+
+    func alert<Content: View>(isPresented: Binding<Bool>, @ViewBuilder content: @escaping () -> Content) -> some View {
+        return modifier(
+            AlertModifier(
+                isPresented: isPresented,
+                alertBody: content
+            )
+        )
+    }
+
+    func fullScreen<Content: View>(isPresented: Binding<Bool>, @ViewBuilder content: @escaping () -> Content) -> some View {
+        return modifier(
+            FullScreenModifier(
+                isPresented: isPresented,
+                contentBody: content
+            )
+        )
+    }
 }

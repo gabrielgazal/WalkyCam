@@ -46,8 +46,7 @@ struct LoginView<ViewModel: LoginViewModelProtocol, Router: LoginRouterProtocol>
                 }
                 WCUIButton(title: L10n.LoginView.Button.login,
                            descriptor: OrangeButtonStyleDescriptor(),
-                           action: {})
-                .disabled(!viewModel.validateFields())
+                           action: handleLogin)
                 WCUIButton(title: L10n.LoginView.Button.signup,
                            descriptor: BlackButtonStyleDescriptor(),
                            action: handleSignUp)
@@ -87,7 +86,9 @@ struct LoginView<ViewModel: LoginViewModelProtocol, Router: LoginRouterProtocol>
 
     private func handleForgotPassword() {}
 
-    private func handleLogin() {}
+    private func handleLogin() {
+        router.routeToHome()
+    }
 
     private func handleSignUp() {
         router.routeToOnboarding()
