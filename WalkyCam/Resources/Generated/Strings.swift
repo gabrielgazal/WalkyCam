@@ -42,6 +42,20 @@ internal enum L10n {
       internal static let text = L10n.tr("Localizable", "LoginView.title.text", fallback: "Login")
     }
   }
+  internal enum MenuViewModel {
+    internal enum Item {
+      /// Walky
+      internal static let bot = L10n.tr("Localizable", "MenuViewModel.item.bot", fallback: "Walky")
+      /// Galería
+      internal static let galery = L10n.tr("Localizable", "MenuViewModel.item.galery", fallback: "Galería")
+      /// Ayuda
+      internal static let help = L10n.tr("Localizable", "MenuViewModel.item.help", fallback: "Ayuda")
+      /// Configuración
+      internal static let settings = L10n.tr("Localizable", "MenuViewModel.item.settings", fallback: "Configuración")
+      /// Cash Wallet
+      internal static let wallet = L10n.tr("Localizable", "MenuViewModel.item.wallet", fallback: "Cash Wallet")
+    }
+  }
   internal enum OnboardingView {
     internal enum Button {
       /// Continuar
@@ -72,6 +86,16 @@ internal enum L10n {
       internal static let subtitle = L10n.tr("Localizable", "OnboardingView.Page3.subtitle", fallback: "Manos AR, PIXELADO de Caras, Escaneo 3D, DRONES Aéreos y R.O.V., IA especializada, IOT Service, \n**y mucho más!**")
       /// Universo WalkyCam
       internal static let title = L10n.tr("Localizable", "OnboardingView.Page3.title", fallback: "Universo WalkyCam")
+    }
+  }
+  internal enum TabBarBuilder {
+    internal enum Tab {
+      /// Funciones
+      internal static let functions = L10n.tr("Localizable", "TabBarBuilder.tab.functions", fallback: "Funciones")
+      /// Home
+      internal static let home = L10n.tr("Localizable", "TabBarBuilder.tab.home", fallback: "Home")
+      /// Menú
+      internal static let menu = L10n.tr("Localizable", "TabBarBuilder.tab.menu", fallback: "Menú")
     }
   }
   internal enum Copyright {

@@ -36,6 +36,13 @@ internal enum Asset {
     internal static let onboarding3 = ImageAsset(name: "onboarding3")
   }
   internal static let launchScreen = ImageAsset(name: "LaunchScreen")
+  internal enum Menu {
+    internal static let bot = ImageAsset(name: "bot")
+    internal static let galery = ImageAsset(name: "galery")
+    internal static let help = ImageAsset(name: "help")
+    internal static let settings = ImageAsset(name: "settings")
+    internal static let wallet = ImageAsset(name: "wallet")
+  }
   internal enum SocialMedia {
     internal static let apple = ImageAsset(name: "apple")
     internal static let facebook = ImageAsset(name: "facebook")

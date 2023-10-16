@@ -23,3 +23,17 @@
 "OnboardingView.Button.skip" = "Omitir";
 "OnboardingView.Button.next" = "Continuar";
 "OnboardingView.Button.start" = "Comenzar";
+
+// MARK: - TabBarBuilder
+
+"TabBarBuilder.tab.home" = "Home";
+"TabBarBuilder.tab.functions" = "Funciones";
+"TabBarBuilder.tab.menu" = "Menú";
+
+// MARK: - MenuViewModel
+
+"MenuViewModel.item.wallet" = "Cash Wallet";
+"MenuViewModel.item.galery" = "Galería";
+"MenuViewModel.item.settings" = "Configuración";
+"MenuViewModel.item.help" = "Ayuda";
+"MenuViewModel.item.bot" = "Walky";

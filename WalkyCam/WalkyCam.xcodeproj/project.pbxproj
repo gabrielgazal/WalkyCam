@@ -98,6 +98,15 @@
 		EA910FCE2ADC495700584B98 /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910FC02ADC495700584B98 /* TabBarRouter.swift */; };
 		EA910FCF2ADC495700584B98 /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910FC32ADC495700584B98 /* TabBarModel.swift */; };
 		EA910FD22ADC499500584B98 /* TabBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910FD12ADC499500584B98 /* TabBarBuilder.swift */; };
+		EA910FF02ADCBCC000584B98 /* MenuRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910FDC2ADCBCC000584B98 /* MenuRoute.swift */; };
+		EA910FF12ADCBCC000584B98 /* MenuAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910FDE2ADCBCC000584B98 /* MenuAssemblerProtocol.swift */; };
+		EA910FF22ADCBCC000584B98 /* MenuAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910FDF2ADCBCC000584B98 /* MenuAssembler.swift */; };
+		EA910FF32ADCBCC000584B98 /* MenuItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910FE22ADCBCC000584B98 /* MenuItemModel.swift */; };
+		EA910FF52ADCBCC000584B98 /* MenuViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910FE62ADCBCC000584B98 /* MenuViewModelProtocol.swift */; };
+		EA910FF62ADCBCC000584B98 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910FE72ADCBCC000584B98 /* MenuViewModel.swift */; };
+		EA910FF72ADCBCC000584B98 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910FE92ADCBCC000584B98 /* MenuView.swift */; };
+		EA910FFA2ADCBCC000584B98 /* MenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910FEE2ADCBCC000584B98 /* MenuRouter.swift */; };
+		EA910FFB2ADCBCC000584B98 /* MenuRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA910FEF2ADCBCC000584B98 /* MenuRouterProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -213,6 +222,15 @@
 		EA910FC02ADC495700584B98 /* TabBarRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
 		EA910FC32ADC495700584B98 /* TabBarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
 		EA910FD12ADC499500584B98 /* TabBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarBuilder.swift; sourceTree = "<group>"; };
+		EA910FDC2ADCBCC000584B98 /* MenuRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuRoute.swift; sourceTree = "<group>"; };
+		EA910FDE2ADCBCC000584B98 /* MenuAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA910FDF2ADCBCC000584B98 /* MenuAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuAssembler.swift; sourceTree = "<group>"; };
+		EA910FE22ADCBCC000584B98 /* MenuItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemModel.swift; sourceTree = "<group>"; };
+		EA910FE62ADCBCC000584B98 /* MenuViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA910FE72ADCBCC000584B98 /* MenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		EA910FE92ADCBCC000584B98 /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		EA910FEE2ADCBCC000584B98 /* MenuRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuRouter.swift; sourceTree = "<group>"; };
+		EA910FEF2ADCBCC000584B98 /* MenuRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuRouterProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +331,7 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				EA910FD32ADCBCA200584B98 /* Menu */,
 				EA910FA72ADC493A00584B98 /* TabBar */,
 				EA910F6E2ADA06CF00584B98 /* Registration */,
 				EA910F3D2AD9AEFC00584B98 /* Onboarding */,
@@ -901,6 +920,94 @@
 			path = Builder;
 			sourceTree = "<group>";
 		};
+		EA910FD32ADCBCA200584B98 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				EA910FDA2ADCBCC000584B98 /* Configuration */,
+				EA910FE02ADCBCC000584B98 /* Domain */,
+				EA910FE32ADCBCC000584B98 /* Module */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		EA910FDA2ADCBCC000584B98 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA910FDB2ADCBCC000584B98 /* Route */,
+				EA910FDD2ADCBCC000584B98 /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA910FDB2ADCBCC000584B98 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA910FDC2ADCBCC000584B98 /* MenuRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA910FDD2ADCBCC000584B98 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA910FDE2ADCBCC000584B98 /* MenuAssemblerProtocol.swift */,
+				EA910FDF2ADCBCC000584B98 /* MenuAssembler.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EA910FE02ADCBCC000584B98 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA910FE12ADCBCC000584B98 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA910FE12ADCBCC000584B98 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA910FE22ADCBCC000584B98 /* MenuItemModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA910FE32ADCBCC000584B98 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA910FE42ADCBCC000584B98 /* ViewModel */,
+				EA910FE82ADCBCC000584B98 /* View */,
+				EA910FED2ADCBCC000584B98 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA910FE42ADCBCC000584B98 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA910FE62ADCBCC000584B98 /* MenuViewModelProtocol.swift */,
+				EA910FE72ADCBCC000584B98 /* MenuViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA910FE82ADCBCC000584B98 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA910FE92ADCBCC000584B98 /* MenuView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA910FED2ADCBCC000584B98 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA910FEE2ADCBCC000584B98 /* MenuRouter.swift */,
+				EA910FEF2ADCBCC000584B98 /* MenuRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1060,6 +1167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA910FF72ADCBCC000584B98 /* MenuView.swift in Sources */,
 				EA910FCD2ADC495700584B98 /* TabBarRouterProtocol.swift in Sources */,
 				EA910FC62ADC495700584B98 /* TabBarAssemblerProtocol.swift in Sources */,
 				56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */,
@@ -1076,11 +1184,13 @@
 				EA910F8B2ADA06F500584B98 /* RegistrationRoute.swift in Sources */,
 				EA910F912ADA06F500584B98 /* RegistrationView.swift in Sources */,
 				EA15B59E2AD6E44D00C03407 /* LoginRouter.swift in Sources */,
+				EA910FF02ADCBCC000584B98 /* MenuRoute.swift in Sources */,
 				56DADB222AD5EAA400710618 /* AppNavigator.swift in Sources */,
 				EA15B5A92AD706AF00C03407 /* Route.swift in Sources */,
 				EA910FA62ADC48DE00584B98 /* WCTabBarContainerView.swift in Sources */,
 				EA910F672AD9B20600584B98 /* NavigationController+Extension.swift in Sources */,
 				56DADB202AD5EA7200710618 /* AppNavigatorProtocol.swift in Sources */,
+				EA910FF32ADCBCC000584B98 /* MenuItemModel.swift in Sources */,
 				EA15B5B92AD7077C00C03407 /* GenericUseCase.swift in Sources */,
 				EA15B5BE2AD707B900C03407 /* ViewModelProtocol.swift in Sources */,
 				EA5E1D742AD716A500738A8F /* ProjectFont.swift in Sources */,
@@ -1088,6 +1198,7 @@
 				EA910F642AD9B01300584B98 /* OnboardingRouter.swift in Sources */,
 				EA15B59B2AD6E44D00C03407 /* LoginView.swift in Sources */,
 				EA910F5E2AD9B01300584B98 /* OnboardingViewModelProtocol.swift in Sources */,
+				EA910FF12ADCBCC000584B98 /* MenuAssemblerProtocol.swift in Sources */,
 				EA15B59A2AD6E44D00C03407 /* LoginViewModel.swift in Sources */,
 				EA910FC82ADC495700584B98 /* TabBarViewModelProtocol.swift in Sources */,
 				EA910F8E2ADA06F500584B98 /* RegistrationViewModel.swift in Sources */,
@@ -1096,6 +1207,7 @@
 				EA910F6D2ADA03D600584B98 /* String+Extension.swift in Sources */,
 				EA910F692AD9B57400584B98 /* OnboardingPageView.swift in Sources */,
 				EA910F652AD9B01300584B98 /* OnboardingRouterProtocol.swift in Sources */,
+				EA910FFA2ADCBCC000584B98 /* MenuRouter.swift in Sources */,
 				EA5E1D782AD7170400738A8F /* LinkButton.swift in Sources */,
 				EA15B5B02AD7071300C03407 /* SheetModifier.swift in Sources */,
 				EA910F962ADA06F500584B98 /* RegistrationModel.swift in Sources */,
@@ -1103,6 +1215,7 @@
 				EA910F5A2AD9B01300584B98 /* OnboardingRoute.swift in Sources */,
 				EA910FD22ADC499500584B98 /* TabBarBuilder.swift in Sources */,
 				EA5E1D762AD716D200738A8F /* ButtonStyleDescriptor.swift in Sources */,
+				EA910FF22ADCBCC000584B98 /* MenuAssembler.swift in Sources */,
 				EA15B5B62AD7075600C03407 /* Router.swift in Sources */,
 				EA15B5AE2AD7070400C03407 /* NavigationModifier.swift in Sources */,
 				EA15B5A02AD6E44D00C03407 /* LoginRoute.swift in Sources */,
@@ -1115,6 +1228,7 @@
 				EA910F5B2AD9B01300584B98 /* OnboardingAssembler.swift in Sources */,
 				EA910F5C2AD9B01300584B98 /* OnboardingAssemblerProtocol.swift in Sources */,
 				EA910FC42ADC495700584B98 /* TabBarRoute.swift in Sources */,
+				EA910FF52ADCBCC000584B98 /* MenuViewModelProtocol.swift in Sources */,
 				EA910F8C2ADA06F500584B98 /* RegistrationAssemblerProtocol.swift in Sources */,
 				EA910F9E2ADC43B200584B98 /* FullScreenWrapper.swift in Sources */,
 				56DADB272AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift in Sources */,
@@ -1125,9 +1239,11 @@
 				EA910F2E2AD8B14C00584B98 /* WCUIButton.swift in Sources */,
 				EA15B59F2AD6E44D00C03407 /* LoginRouterProtocol.swift in Sources */,
 				EA5E1D9D2AD8A3DA00738A8F /* Assets.swift in Sources */,
+				EA910FF62ADCBCC000584B98 /* MenuViewModel.swift in Sources */,
 				EA5E1D8C2AD719C400738A8F /* TextInputView.swift in Sources */,
 				EA910F3A2AD9782000584B98 /* SelectorModel.swift in Sources */,
 				EA910F9C2ADC437300584B98 /* AlertModifier.swift in Sources */,
+				EA910FFB2ADCBCC000584B98 /* MenuRouterProtocol.swift in Sources */,
 				EA910F612AD9B01300584B98 /* OnboardingView.swift in Sources */,
 				EA15B5982AD6E44D00C03407 /* LoginViewModelProtocol.swift in Sources */,
 				EA910F922ADA06F500584B98 /* RegistrationInteractor.swift in Sources */,
