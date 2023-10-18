@@ -30,7 +30,7 @@ public struct CheckBoxToggle: View {
         ) {
             ZStack {
                 RoundedRectangle(cornerRadius: Tokens.Size.Border.Radius.small)
-                    .fill(Color.blanco.opacity(0.1))
+                    .fill(Color.negro.opacity(0.25))
                 RoundedRectangle(cornerRadius: Tokens.Size.Border.Radius.small)
                     .stroke(Color.naranja)
                 Image(uiImage: Asset.Icons.check.image)

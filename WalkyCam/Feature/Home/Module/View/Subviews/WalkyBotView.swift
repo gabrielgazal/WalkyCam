@@ -9,8 +9,7 @@ import Foundation
 import SwiftUI
 
 struct WalkyBotView: View {
-    @State var isCompact: Bool = true
-    @Binding var search: String
+    @State var isCompact: Bool = false
 
     var body: some View {
         Group {
@@ -39,9 +38,10 @@ struct WalkyBotView: View {
                         .frame(width: Tokens.Size.Spacing.huge,
                                height: Tokens.Size.Spacing.huge)
                     ZStack(alignment: .topTrailing) {
-                        TextInputView(text: $search,
+                        TextInputView(text: .constant(""),
                                       accessory: Image(systemName: "mic"),
                                       placeholder: L10n.WalkyBotView.text)
+                        .disabled(true)
                         Image(systemName: "multiply.circle.fill")
                             .resizable()
                             .frame(width: 20,
@@ -63,6 +63,6 @@ struct WalkyBotView: View {
 
 struct WalkyBotView_Previews: PreviewProvider {
     static var previews: some View {
-        WalkyBotView(search: .constant(""))
+        WalkyBotView()
     }
 }

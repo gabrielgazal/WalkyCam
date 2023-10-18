@@ -80,7 +80,8 @@ struct LoginView<ViewModel: LoginViewModelProtocol, Router: LoginRouterProtocol>
                 .foregroundColor(Color.blanco)
         }
         .padding(.horizontal, Tokens.Size.Spacing.regular)
-        .background(Color.black)
+        .background(Asset.Fondos.loginFondo.swiftUIImage
+            .ignoresSafeArea())
         .navigation(router)
     }
 

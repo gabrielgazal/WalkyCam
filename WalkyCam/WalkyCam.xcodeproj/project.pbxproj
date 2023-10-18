@@ -47,6 +47,9 @@
 		EA5E1D9A2AD883D800738A8F /* Text+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E1D992AD883D800738A8F /* Text+Extension.swift */; };
 		EA5E1D9D2AD8A3DA00738A8F /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E1D9B2AD8A3DA00738A8F /* Assets.swift */; };
 		EA5E1D9E2AD8A3DA00738A8F /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E1D9C2AD8A3DA00738A8F /* Strings.swift */; };
+		EA82DB4E2ADF4A0200E6B39A /* RecentFunctionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82DB4D2ADF4A0200E6B39A /* RecentFunctionsCell.swift */; };
+		EA82DB502ADF4DBB00E6B39A /* HomeSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82DB4F2ADF4DBB00E6B39A /* HomeSectionView.swift */; };
+		EA82DB532ADF605500E6B39A /* ReminderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82DB522ADF605500E6B39A /* ReminderCardView.swift */; };
 		EA910F1C2AD8AA6400584B98 /* Mulish-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA910F1B2AD8AA6400584B98 /* Mulish-Black.ttf */; };
 		EA910F232AD8AA8500584B98 /* Mulish-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA910F1D2AD8AA8400584B98 /* Mulish-Light.ttf */; };
 		EA910F242AD8AA8500584B98 /* Mulish-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA910F1E2AD8AA8400584B98 /* Mulish-ExtraLight.ttf */; };
@@ -189,6 +192,9 @@
 		EA5E1D992AD883D800738A8F /* Text+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Extension.swift"; sourceTree = "<group>"; };
 		EA5E1D9B2AD8A3DA00738A8F /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		EA5E1D9C2AD8A3DA00738A8F /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		EA82DB4D2ADF4A0200E6B39A /* RecentFunctionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentFunctionsCell.swift; sourceTree = "<group>"; };
+		EA82DB4F2ADF4DBB00E6B39A /* HomeSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionView.swift; sourceTree = "<group>"; };
+		EA82DB522ADF605500E6B39A /* ReminderCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCardView.swift; sourceTree = "<group>"; };
 		EA910F1B2AD8AA6400584B98 /* Mulish-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Black.ttf"; sourceTree = "<group>"; };
 		EA910F1D2AD8AA8400584B98 /* Mulish-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Light.ttf"; sourceTree = "<group>"; };
 		EA910F1E2AD8AA8400584B98 /* Mulish-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-ExtraLight.ttf"; sourceTree = "<group>"; };
@@ -625,6 +631,34 @@
 				EA5E1D952AD725DF00738A8F /* ProjectColors.swift */,
 			);
 			path = Color;
+			sourceTree = "<group>";
+		};
+		EA82DB4B2ADF49D600E6B39A /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				EA82DB512ADF5F5200E6B39A /* Reminder */,
+				EA82DB4C2ADF49EC00E6B39A /* RecentFunctions */,
+				EA9110252ADDAE6400584B98 /* ProfileHeaderView.swift */,
+				EA9110322ADDBF7400584B98 /* WalkyBotView.swift */,
+				EA82DB4F2ADF4DBB00E6B39A /* HomeSectionView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		EA82DB4C2ADF49EC00E6B39A /* RecentFunctions */ = {
+			isa = PBXGroup;
+			children = (
+				EA82DB4D2ADF4A0200E6B39A /* RecentFunctionsCell.swift */,
+			);
+			path = RecentFunctions;
+			sourceTree = "<group>";
+		};
+		EA82DB512ADF5F5200E6B39A /* Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				EA82DB522ADF605500E6B39A /* ReminderCardView.swift */,
+			);
+			path = Reminder;
 			sourceTree = "<group>";
 		};
 		EA910F2F2AD8B53000584B98 /* Helpers */ = {
@@ -1081,8 +1115,7 @@
 			isa = PBXGroup;
 			children = (
 				EA9110092ADDADE100584B98 /* HomeView.swift */,
-				EA9110252ADDAE6400584B98 /* ProfileHeaderView.swift */,
-				EA9110322ADDBF7400584B98 /* WalkyBotView.swift */,
+				EA82DB4B2ADF49D600E6B39A /* Subviews */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1375,6 +1408,7 @@
 				EA910F5A2AD9B01300584B98 /* OnboardingRoute.swift in Sources */,
 				EA910FD22ADC499500584B98 /* TabBarBuilder.swift in Sources */,
 				EA5E1D762AD716D200738A8F /* ButtonStyleDescriptor.swift in Sources */,
+				EA82DB532ADF605500E6B39A /* ReminderCardView.swift in Sources */,
 				EA9110262ADDAE6400584B98 /* ProfileHeaderView.swift in Sources */,
 				EA910FF22ADCBCC000584B98 /* MenuAssembler.swift in Sources */,
 				EA15B5B62AD7075600C03407 /* Router.swift in Sources */,
@@ -1414,6 +1448,8 @@
 				EA15B5982AD6E44D00C03407 /* LoginViewModelProtocol.swift in Sources */,
 				EA910F922ADA06F500584B98 /* RegistrationInteractor.swift in Sources */,
 				EA910FC52ADC495700584B98 /* TabBarAssembler.swift in Sources */,
+				EA82DB502ADF4DBB00E6B39A /* HomeSectionView.swift in Sources */,
+				EA82DB4E2ADF4A0200E6B39A /* RecentFunctionsCell.swift in Sources */,
 				EA9110222ADDADE100584B98 /* HomeRoute.swift in Sources */,
 				EA15B5A12AD6E44D00C03407 /* LoginAssembler.swift in Sources */,
 				EA910F6B2AD9CCF500584B98 /* PageControl.swift in Sources */,

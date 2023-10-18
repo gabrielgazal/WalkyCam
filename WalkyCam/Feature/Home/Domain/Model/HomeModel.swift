@@ -2,14 +2,17 @@ import SwiftUI
 
 struct HomeModel {
     var profileInfo: ProfileData
-    var searchText: String
+    var recentFunctions: [RecentFunctionsData]
+    var reminders: [RemindersData]
 
     public init(
         profileInfo: ProfileData = .init(),
-        searchText: String = ""
+        recentFunctions: [RecentFunctionsData] = [],
+        reminders: [RemindersData] = []
     ) {
         self.profileInfo = profileInfo
-        self.searchText = searchText
+        self.recentFunctions = recentFunctions
+        self.reminders = reminders
     }
 }
 
@@ -22,4 +25,16 @@ struct ProfileData {
         self.name = name
         self.imageURL = imageURL
     }
+}
+
+struct RecentFunctionsData: Hashable {
+    let id: Int
+    let title: String
+    let icon: String
+}
+
+struct RemindersData: Hashable {
+    let id: Int
+    let date: String
+    let camerName: String
 }

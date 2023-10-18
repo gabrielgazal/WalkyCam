@@ -55,7 +55,8 @@ struct RegistrationView<ViewModel:RegistrationViewModelProtocol, Router: Registr
             }
         }
         .padding(.horizontal, Tokens.Size.Spacing.regular)
-        .background(Color.black)
+        .background(Asset.Fondos.loginFondo.swiftUIImage
+            .ignoresSafeArea())
         .navigation(router)
     }
 }
