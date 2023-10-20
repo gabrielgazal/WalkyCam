@@ -10,20 +10,23 @@ import SwiftUI
 public struct WCUIButton: View {
 
     private let title: String?
-    private let icon: String?
+    private let leftIcon: String?
+    private let rightIcon: String?
     private let style: ButtonStyles
     private let descriptor: ButtonStyleDescriptorProtocol
     private let action: () -> Void
 
     init(
         title: String? = nil,
-        icon: String? = nil,
+        leftIcon: String? = nil,
+        rightIcon: String? = nil,
         style: ButtonStyles = .standard,
         descriptor: ButtonStyleDescriptorProtocol,
         action: @escaping () -> Void
     ) {
         self.title = title
-        self.icon = icon
+        self.leftIcon = leftIcon
+        self.rightIcon = rightIcon
         self.style = style
         self.descriptor = descriptor
         self.action = action
@@ -34,11 +37,14 @@ public struct WCUIButton: View {
             action: action,
             label: {
                 HStack(spacing: 8) {
-                    if let icon = icon {
-                        Image(icon)
+                    if let leftIcon = leftIcon {
+                        Image(leftIcon)
                     }
                     if let title = title {
                         Text(title)
+                    }
+                    if let rightIcon = rightIcon {
+                        Image(rightIcon)
                     }
                 }
         }).style(buttonType)

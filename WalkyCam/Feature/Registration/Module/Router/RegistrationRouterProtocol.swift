@@ -1,6 +1,6 @@
 import SwiftUI
 
 protocol RegistrationRouterProtocol: Router {
-    func routeToSomething()
+    func routeToOnboarding()
+    func routeToRegistrationPlans()
 }
-

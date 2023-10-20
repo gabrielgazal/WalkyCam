@@ -27,10 +27,13 @@ internal enum Asset {
   internal static let accentColor = ColorAsset(name: "AccentColor")
   internal enum Fondos {
     internal static let loginFondo = ImageAsset(name: "login_fondo")
+    internal static let planFondo = ImageAsset(name: "plan_fondo")
   }
   internal enum Icons {
     internal static let ar = ImageAsset(name: "AR")
+    internal static let compare = ImageAsset(name: "Compare")
     internal static let drone = ImageAsset(name: "Drone")
+    internal static let notes = ImageAsset(name: "Notes")
     internal static let recent = ImageAsset(name: "Recent")
     internal static let scan3D = ImageAsset(name: "Scan3D")
     internal static let streetCam = ImageAsset(name: "Street Cam")

@@ -5,7 +5,7 @@ final class RegistrationAssembler: RegistrationAssemblerProtocol {
         route: RegistrationRoute
     ) -> RegistrationView<RegistrationViewModel, RegistrationRouter> {
 
-        let router = RegistrationRouter(isPresented: route.isPresented)
+        let router = RegistrationRouter(state: RouterState(isPresented: route.isPresented))
 
         let interactor = RegistrationInteractor(
             useCases: .init()

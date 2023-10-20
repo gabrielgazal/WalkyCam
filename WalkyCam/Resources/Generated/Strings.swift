@@ -67,25 +67,49 @@ internal enum L10n {
     }
     internal enum Page1 {
       /// Tu STREETcam 24/7 
+      /// 
       /// Streaming en vivo donde quieras, cuando quieras. Ubica a tu WalkCamer y empieza a grabar. 
+      /// 
       /// WalkyCam tiene mas de 20 servicios. Descúbrelos!
-      internal static let subtitle = L10n.tr("Localizable", "OnboardingView.Page1.subtitle", fallback: "Tu STREETcam 24/7 \nStreaming en vivo donde quieras, cuando quieras. Ubica a tu WalkCamer y empieza a grabar. \nWalkyCam tiene mas de 20 servicios. Descúbrelos!")
+      internal static let subtitle = L10n.tr("Localizable", "OnboardingView.Page1.subtitle", fallback: "Tu STREETcam 24/7 \n\nStreaming en vivo donde quieras, cuando quieras. Ubica a tu WalkCamer y empieza a grabar. \n\nWalkyCam tiene mas de 20 servicios. Descúbrelos!")
       /// Qué es?
       internal static let title = L10n.tr("Localizable", "OnboardingView.Page1.title", fallback: "Qué es?")
     }
     internal enum Page2 {
       /// Manos AR, PIXELADO de Caras, Escaneo 3D, DRONES Aéreos y R.O.V., IA especializada, IOT Service, 
+      /// 
       /// **y mucho más!**
-      internal static let subtitle = L10n.tr("Localizable", "OnboardingView.Page2.subtitle", fallback: "Manos AR, PIXELADO de Caras, Escaneo 3D, DRONES Aéreos y R.O.V., IA especializada, IOT Service, \n**y mucho más!**")
+      internal static let subtitle = L10n.tr("Localizable", "OnboardingView.Page2.subtitle", fallback: "Manos AR, PIXELADO de Caras, Escaneo 3D, DRONES Aéreos y R.O.V., IA especializada, IOT Service, \n\n**y mucho más!**")
       /// Universo WalkyCam
       internal static let title = L10n.tr("Localizable", "OnboardingView.Page2.title", fallback: "Universo WalkyCam")
     }
     internal enum Page3 {
-      /// Manos AR, PIXELADO de Caras, Escaneo 3D, DRONES Aéreos y R.O.V., IA especializada, IOT Service, 
-      /// **y mucho más!**
-      internal static let subtitle = L10n.tr("Localizable", "OnboardingView.Page3.subtitle", fallback: "Manos AR, PIXELADO de Caras, Escaneo 3D, DRONES Aéreos y R.O.V., IA especializada, IOT Service, \n**y mucho más!**")
-      /// Universo WalkyCam
-      internal static let title = L10n.tr("Localizable", "OnboardingView.Page3.title", fallback: "Universo WalkyCam")
+      /// Sumergete en otros lugares sin salir de casa.
+      /// 
+      /// Explora nuevos entornos y viaja virtualmente.
+      internal static let subtitle = L10n.tr("Localizable", "OnboardingView.Page3.subtitle", fallback: "Sumergete en otros lugares sin salir de casa.\n\nExplora nuevos entornos y viaja virtualmente.")
+      /// Experiencia Inmersiva
+      internal static let title = L10n.tr("Localizable", "OnboardingView.Page3.title", fallback: "Experiencia Inmersiva")
+    }
+  }
+  internal enum RegistrationPlans {
+    /// Para comenzar elige un plan, luego puedes cambiarlo.
+    internal static let description = L10n.tr("Localizable", "RegistrationPlans.description", fallback: "Para comenzar elige un plan, luego puedes cambiarlo.")
+    /// Elige tu plan
+    internal static let title = L10n.tr("Localizable", "RegistrationPlans.title", fallback: "Elige tu plan")
+    /// %@ € / mo
+    internal static func value(_ p1: Any) -> String {
+      return L10n.tr("Localizable", "RegistrationPlans.value", String(describing: p1), fallback: "%@ € / mo")
+    }
+    internal enum Button {
+      /// Comparar Planes
+      internal static let title = L10n.tr("Localizable", "RegistrationPlans.button.title", fallback: "Comparar Planes")
+    }
+    internal enum Plan {
+      internal enum Button {
+        /// Ver Plan
+        internal static let title = L10n.tr("Localizable", "RegistrationPlans.plan.button.title", fallback: "Ver Plan")
+      }
     }
   }
   internal enum TabBarBuilder {

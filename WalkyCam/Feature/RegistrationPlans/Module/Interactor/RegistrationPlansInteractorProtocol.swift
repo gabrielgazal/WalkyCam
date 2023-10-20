@@ -1,0 +1,3 @@
+protocol RegistrationPlansInteractorProtocol {
+    func someFunction()
+}

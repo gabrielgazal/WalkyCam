@@ -128,6 +128,17 @@
 		EA91102F2ADDB93D00584B98 /* EnvironmentValues+ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA91102E2ADDB93D00584B98 /* EnvironmentValues+ImageCache.swift */; };
 		EA9110312ADDB95C00584B98 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9110302ADDB95C00584B98 /* ImageCache.swift */; };
 		EA9110332ADDBF7400584B98 /* WalkyBotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9110322ADDBF7400584B98 /* WalkyBotView.swift */; };
+		EAD048682AE22C530096E6AB /* RegistrationPlansModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD048542AE22C530096E6AB /* RegistrationPlansModel.swift */; };
+		EAD048692AE22C530096E6AB /* RegistrationPlansViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD048572AE22C530096E6AB /* RegistrationPlansViewModelProtocol.swift */; };
+		EAD0486B2AE22C530096E6AB /* RegistrationPlansViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD048592AE22C530096E6AB /* RegistrationPlansViewModel.swift */; };
+		EAD0486C2AE22C530096E6AB /* RegistrationPlansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD0485B2AE22C530096E6AB /* RegistrationPlansView.swift */; };
+		EAD0486D2AE22C530096E6AB /* RegistrationPlansInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD0485D2AE22C530096E6AB /* RegistrationPlansInteractor.swift */; };
+		EAD0486E2AE22C530096E6AB /* RegistrationPlansInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD0485E2AE22C530096E6AB /* RegistrationPlansInteractorProtocol.swift */; };
+		EAD0486F2AE22C530096E6AB /* RegistrationPlansRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD048602AE22C530096E6AB /* RegistrationPlansRouterProtocol.swift */; };
+		EAD048702AE22C530096E6AB /* RegistrationPlansRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD048612AE22C530096E6AB /* RegistrationPlansRouter.swift */; };
+		EAD048712AE22C530096E6AB /* RegistrationPlansRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD048642AE22C530096E6AB /* RegistrationPlansRoute.swift */; };
+		EAD048722AE22C530096E6AB /* RegistrationPlansAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD048662AE22C530096E6AB /* RegistrationPlansAssembler.swift */; };
+		EAD048732AE22C530096E6AB /* RegistrationPlansAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD048672AE22C530096E6AB /* RegistrationPlansAssemblerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -273,6 +284,17 @@
 		EA91102E2ADDB93D00584B98 /* EnvironmentValues+ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+ImageCache.swift"; sourceTree = "<group>"; };
 		EA9110302ADDB95C00584B98 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		EA9110322ADDBF7400584B98 /* WalkyBotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkyBotView.swift; sourceTree = "<group>"; };
+		EAD048542AE22C530096E6AB /* RegistrationPlansModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPlansModel.swift; sourceTree = "<group>"; };
+		EAD048572AE22C530096E6AB /* RegistrationPlansViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPlansViewModelProtocol.swift; sourceTree = "<group>"; };
+		EAD048592AE22C530096E6AB /* RegistrationPlansViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPlansViewModel.swift; sourceTree = "<group>"; };
+		EAD0485B2AE22C530096E6AB /* RegistrationPlansView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPlansView.swift; sourceTree = "<group>"; };
+		EAD0485D2AE22C530096E6AB /* RegistrationPlansInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPlansInteractor.swift; sourceTree = "<group>"; };
+		EAD0485E2AE22C530096E6AB /* RegistrationPlansInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPlansInteractorProtocol.swift; sourceTree = "<group>"; };
+		EAD048602AE22C530096E6AB /* RegistrationPlansRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPlansRouterProtocol.swift; sourceTree = "<group>"; };
+		EAD048612AE22C530096E6AB /* RegistrationPlansRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPlansRouter.swift; sourceTree = "<group>"; };
+		EAD048642AE22C530096E6AB /* RegistrationPlansRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPlansRoute.swift; sourceTree = "<group>"; };
+		EAD048662AE22C530096E6AB /* RegistrationPlansAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPlansAssembler.swift; sourceTree = "<group>"; };
+		EAD048672AE22C530096E6AB /* RegistrationPlansAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPlansAssemblerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,6 +395,7 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				EAD0484B2AE22C0F0096E6AB /* RegistrationPlans */,
 				EA910FFC2ADDADBE00584B98 /* Home */,
 				EA910FD32ADCBCA200584B98 /* Menu */,
 				EA910FA72ADC493A00584B98 /* TabBar */,
@@ -1191,6 +1214,104 @@
 			path = AsyncImageView;
 			sourceTree = "<group>";
 		};
+		EAD0484B2AE22C0F0096E6AB /* RegistrationPlans */ = {
+			isa = PBXGroup;
+			children = (
+				EAD048622AE22C530096E6AB /* Configuration */,
+				EAD048522AE22C530096E6AB /* Domain */,
+				EAD048552AE22C530096E6AB /* Module */,
+			);
+			path = RegistrationPlans;
+			sourceTree = "<group>";
+		};
+		EAD048522AE22C530096E6AB /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EAD048532AE22C530096E6AB /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EAD048532AE22C530096E6AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EAD048542AE22C530096E6AB /* RegistrationPlansModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EAD048552AE22C530096E6AB /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EAD048562AE22C530096E6AB /* ViewModel */,
+				EAD0485A2AE22C530096E6AB /* View */,
+				EAD0485C2AE22C530096E6AB /* Interactor */,
+				EAD0485F2AE22C530096E6AB /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EAD048562AE22C530096E6AB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EAD048572AE22C530096E6AB /* RegistrationPlansViewModelProtocol.swift */,
+				EAD048592AE22C530096E6AB /* RegistrationPlansViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EAD0485A2AE22C530096E6AB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EAD0485B2AE22C530096E6AB /* RegistrationPlansView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EAD0485C2AE22C530096E6AB /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EAD0485D2AE22C530096E6AB /* RegistrationPlansInteractor.swift */,
+				EAD0485E2AE22C530096E6AB /* RegistrationPlansInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EAD0485F2AE22C530096E6AB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EAD048602AE22C530096E6AB /* RegistrationPlansRouterProtocol.swift */,
+				EAD048612AE22C530096E6AB /* RegistrationPlansRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EAD048622AE22C530096E6AB /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EAD048632AE22C530096E6AB /* Route */,
+				EAD048652AE22C530096E6AB /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EAD048632AE22C530096E6AB /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EAD048642AE22C530096E6AB /* RegistrationPlansRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EAD048652AE22C530096E6AB /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EAD048662AE22C530096E6AB /* RegistrationPlansAssembler.swift */,
+				EAD048672AE22C530096E6AB /* RegistrationPlansAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1351,7 +1472,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA910FF72ADCBCC000584B98 /* MenuView.swift in Sources */,
+				EAD048682AE22C530096E6AB /* RegistrationPlansModel.swift in Sources */,
 				EA910FCD2ADC495700584B98 /* TabBarRouterProtocol.swift in Sources */,
+				EAD048732AE22C530096E6AB /* RegistrationPlansAssemblerProtocol.swift in Sources */,
 				EA9110212ADDADE100584B98 /* HomeModel.swift in Sources */,
 				EA910FC62ADC495700584B98 /* TabBarAssemblerProtocol.swift in Sources */,
 				56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */,
@@ -1359,6 +1482,7 @@
 				EA910FCE2ADC495700584B98 /* TabBarRouter.swift in Sources */,
 				EA15B5B22AD7072400C03407 /* SnackBarModifier.swift in Sources */,
 				EA5E1D962AD725DF00738A8F /* ProjectColors.swift in Sources */,
+				EAD0486C2AE22C530096E6AB /* RegistrationPlansView.swift in Sources */,
 				EA91102D2ADDB91100584B98 /* URL+ImageLoadable.swift in Sources */,
 				EA9110202ADDADE100584B98 /* HomeRouterProtocol.swift in Sources */,
 				EA910F942ADA06F500584B98 /* RegistrationRouter.swift in Sources */,
@@ -1372,12 +1496,14 @@
 				EA910F8B2ADA06F500584B98 /* RegistrationRoute.swift in Sources */,
 				EA910F912ADA06F500584B98 /* RegistrationView.swift in Sources */,
 				EA15B59E2AD6E44D00C03407 /* LoginRouter.swift in Sources */,
+				EAD048692AE22C530096E6AB /* RegistrationPlansViewModelProtocol.swift in Sources */,
 				EA910FF02ADCBCC000584B98 /* MenuRoute.swift in Sources */,
 				56DADB222AD5EAA400710618 /* AppNavigator.swift in Sources */,
 				EA15B5A92AD706AF00C03407 /* Route.swift in Sources */,
 				EA910FA62ADC48DE00584B98 /* WCTabBarContainerView.swift in Sources */,
 				EA910F672AD9B20600584B98 /* NavigationController+Extension.swift in Sources */,
 				56DADB202AD5EA7200710618 /* AppNavigatorProtocol.swift in Sources */,
+				EAD0486B2AE22C530096E6AB /* RegistrationPlansViewModel.swift in Sources */,
 				EA910FF32ADCBCC000584B98 /* MenuItemModel.swift in Sources */,
 				EA15B5B92AD7077C00C03407 /* GenericUseCase.swift in Sources */,
 				EA15B5BE2AD707B900C03407 /* ViewModelProtocol.swift in Sources */,
@@ -1395,10 +1521,12 @@
 				EA910F8E2ADA06F500584B98 /* RegistrationViewModel.swift in Sources */,
 				EA910FCA2ADC495700584B98 /* TabBarView.swift in Sources */,
 				EA910F312AD8B55200584B98 /* Divider.swift in Sources */,
+				EAD048722AE22C530096E6AB /* RegistrationPlansAssembler.swift in Sources */,
 				EA910F6D2ADA03D600584B98 /* String+Extension.swift in Sources */,
 				EA910F692AD9B57400584B98 /* OnboardingPageView.swift in Sources */,
 				EA910F652AD9B01300584B98 /* OnboardingRouterProtocol.swift in Sources */,
 				EA910FFA2ADCBCC000584B98 /* MenuRouter.swift in Sources */,
+				EAD0486D2AE22C530096E6AB /* RegistrationPlansInteractor.swift in Sources */,
 				EA5E1D782AD7170400738A8F /* LinkButton.swift in Sources */,
 				EA15B5B02AD7071300C03407 /* SheetModifier.swift in Sources */,
 				EA9110242ADDADE100584B98 /* HomeAssembler.swift in Sources */,
@@ -1432,6 +1560,7 @@
 				EA910F9E2ADC43B200584B98 /* FullScreenWrapper.swift in Sources */,
 				56DADB272AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift in Sources */,
 				EA910F992ADC40DB00584B98 /* AlertView.swift in Sources */,
+				EAD048712AE22C530096E6AB /* RegistrationPlansRoute.swift in Sources */,
 				EA910F8D2ADA06F500584B98 /* RegistrationAssembler.swift in Sources */,
 				5637A8162AD5DD72000586DF /* WalkyCamApp.swift in Sources */,
 				EA15B5B42AD7074200C03407 /* RouterState.swift in Sources */,
@@ -1441,9 +1570,12 @@
 				EA910FF62ADCBCC000584B98 /* MenuViewModel.swift in Sources */,
 				EA5E1D8C2AD719C400738A8F /* TextInputView.swift in Sources */,
 				EA910F3A2AD9782000584B98 /* SelectorModel.swift in Sources */,
+				EAD0486F2AE22C530096E6AB /* RegistrationPlansRouterProtocol.swift in Sources */,
+				EAD048702AE22C530096E6AB /* RegistrationPlansRouter.swift in Sources */,
 				EA91102F2ADDB93D00584B98 /* EnvironmentValues+ImageCache.swift in Sources */,
 				EA910F9C2ADC437300584B98 /* AlertModifier.swift in Sources */,
 				EA910FFB2ADCBCC000584B98 /* MenuRouterProtocol.swift in Sources */,
+				EAD0486E2AE22C530096E6AB /* RegistrationPlansInteractorProtocol.swift in Sources */,
 				EA910F612AD9B01300584B98 /* OnboardingView.swift in Sources */,
 				EA15B5982AD6E44D00C03407 /* LoginViewModelProtocol.swift in Sources */,
 				EA910F922ADA06F500584B98 /* RegistrationInteractor.swift in Sources */,

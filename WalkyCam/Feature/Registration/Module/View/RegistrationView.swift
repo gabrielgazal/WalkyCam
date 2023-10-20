@@ -45,10 +45,10 @@ struct RegistrationView<ViewModel:RegistrationViewModelProtocol, Router: Registr
                 WCUIButton(title: "Registrame",
                            style: .standard,
                            descriptor: OrangeButtonStyleDescriptor(),
-                           action: {})
+                           action: routeToRegistrationPlans)
                 LinkButton(title: "Ya tengo una cuenta",
                            color: .naranja,
-                           action: {})
+                           action: handleAlreadyRegistered)
                 Text(L10n.Copyright.text)
                     .font(.projectFont(size: Tokens.Size.Font.xsmall))
                     .foregroundColor(Color.blanco)
@@ -59,13 +59,21 @@ struct RegistrationView<ViewModel:RegistrationViewModelProtocol, Router: Registr
             .ignoresSafeArea())
         .navigation(router)
     }
+
+    private func handleAlreadyRegistered() {
+        router.routeToOnboarding()
+    }
+
+    private func routeToRegistrationPlans() {
+        router.routeToRegistrationPlans()
+    }
 }
 
 struct RegistrationView_Previews: PreviewProvider {
     static var previews: some View {
         RegistrationView(
             viewModel: RegistrationViewModel(),
-            router: RegistrationRouter(isPresented: .constant(false))
+            router: RegistrationRouter(state: RouterState(isPresented: .constant(false)))
         )
     }
 }

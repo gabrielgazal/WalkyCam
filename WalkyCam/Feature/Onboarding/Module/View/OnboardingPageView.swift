@@ -26,7 +26,7 @@ struct OnboardingPageView: View {
 
     var body: some View {
         VStack(alignment: .center,
-               spacing: Tokens.Size.Spacing.regular) {
+               spacing: Tokens.Size.Spacing.small) {
             Image(uiImage: Asset.logo.image)
                 .resizable()
                 .renderingMode(.template)
@@ -51,5 +51,15 @@ struct OnboardingPageView: View {
             Spacer()
         }
                .padding(Tokens.Size.Spacing.large)
+    }
+}
+
+struct OnboardingPageView_Previews: PreviewProvider {
+    static var previews: some View {
+        OnboardingPageView(
+            illustration: Asset.Illustrations.onboarding1.swiftUIImage,
+            title: L10n.OnboardingView.Page1.title,
+            description: L10n.OnboardingView.Page1.subtitle
+        )
     }
 }

@@ -15,11 +15,11 @@
 
 // MARK: - OnboardingView
 "OnboardingView.Page1.title" = "Qué es?";
-"OnboardingView.Page1.subtitle" = "Tu STREETcam 24/7 \nStreaming en vivo donde quieras, cuando quieras. Ubica a tu WalkCamer y empieza a grabar. \nWalkyCam tiene mas de 20 servicios. Descúbrelos!";
+"OnboardingView.Page1.subtitle" = "Tu STREETcam 24/7 \n\nStreaming en vivo donde quieras, cuando quieras. Ubica a tu WalkCamer y empieza a grabar. \n\nWalkyCam tiene mas de 20 servicios. Descúbrelos!";
 "OnboardingView.Page2.title" = "Universo WalkyCam";
-"OnboardingView.Page2.subtitle" = "Manos AR, PIXELADO de Caras, Escaneo 3D, DRONES Aéreos y R.O.V., IA especializada, IOT Service, \n**y mucho más!**";
-"OnboardingView.Page3.title" = "Universo WalkyCam";
-"OnboardingView.Page3.subtitle" = "Manos AR, PIXELADO de Caras, Escaneo 3D, DRONES Aéreos y R.O.V., IA especializada, IOT Service, \n**y mucho más!**";
+"OnboardingView.Page2.subtitle" = "Manos AR, PIXELADO de Caras, Escaneo 3D, DRONES Aéreos y R.O.V., IA especializada, IOT Service, \n\n**y mucho más!**";
+"OnboardingView.Page3.title" = "Experiencia Inmersiva";
+"OnboardingView.Page3.subtitle" = "Sumergete en otros lugares sin salir de casa.\n\nExplora nuevos entornos y viaja virtualmente.";
 "OnboardingView.Button.skip" = "Omitir";
 "OnboardingView.Button.next" = "Continuar";
 "OnboardingView.Button.start" = "Comenzar";
@@ -41,3 +41,12 @@
 // MARK: - WalkyBotView
 
 "WalkyBotView.text" = "¿Qué hacemos hoy?";
+
+
+// MARK: - RegistrationPlans
+
+"RegistrationPlans.title" = "Elige tu plan";
+"RegistrationPlans.description" = "Para comenzar elige un plan, luego puedes cambiarlo.";
+"RegistrationPlans.button.title" = "Comparar Planes";
+"RegistrationPlans.plan.button.title" = "Ver Plan";
+"RegistrationPlans.value" = "%@ € / mo";

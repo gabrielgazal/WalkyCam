@@ -60,15 +60,15 @@ struct LoginView<ViewModel: LoginViewModelProtocol, Router: LoginRouterProtocol>
                     Divider()
                 }
                 HStack {
-                    WCUIButton(icon: Asset.SocialMedia.facebook.name,
+                    WCUIButton(leftIcon: Asset.SocialMedia.facebook.name,
                                style: .outline,
                                descriptor: WhiteButtonStyleDescriptor(),
                                action: {})
-                    WCUIButton(icon: Asset.SocialMedia.google.name,
+                    WCUIButton(leftIcon: Asset.SocialMedia.google.name,
                                style: .outline,
                                descriptor: WhiteButtonStyleDescriptor(),
                                action: {})
-                    WCUIButton(icon: Asset.SocialMedia.apple.name,
+                    WCUIButton(leftIcon: Asset.SocialMedia.apple.name,
                                style: .outline,
                                descriptor: WhiteButtonStyleDescriptor(),
                                action: {})

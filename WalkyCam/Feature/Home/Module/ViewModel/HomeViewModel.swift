@@ -20,6 +20,7 @@ final class HomeViewModel: HomeViewModelProtocol {
     private func updateData() {
         fetchProfileData()
         fetchRecentFunctions()
+        fetchReminders()
     }
 
     private func fetchProfileData() {
@@ -35,6 +36,13 @@ final class HomeViewModel: HomeViewModelProtocol {
             .init(id: 3, title: "AR Hands", icon: Asset.Icons.ar.name),
             .init(id: 4, title: "Drone Fly", icon: Asset.Icons.drone.name),
             .init(id: 5, title: "Más", icon: Asset.TabBar.grid.name)
+        ]
+    }
+
+    private func fetchReminders() {
+        homeData.reminders = [
+            .init(id: 0, date: "Hoy - 13:00 h.", camerName: "Diego Salas"),
+            .init(id: 0, date: "30 Oct 2023 - 10:00 h.", camerName: "Camila Cabello")
         ]
     }
 }

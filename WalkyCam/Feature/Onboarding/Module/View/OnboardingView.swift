@@ -19,7 +19,7 @@ struct OnboardingView<ViewModel: OnboardingViewModelProtocol, Router: Onboarding
 
     var body: some View {
         VStack(alignment: .center,
-               spacing: Tokens.Size.Spacing.large) {
+               spacing: Tokens.Size.Spacing.regular) {
             TabView(selection: $viewModel.currentPage) {
                 OnboardingPageView(
                     illustration: Asset.Illustrations.onboarding1.swiftUIImage,
