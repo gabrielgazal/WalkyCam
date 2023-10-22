@@ -11,7 +11,7 @@ public extension Color {
     /// #001765
     static let acento = Color("Acento")
     /// #FFD1B8
-    static let acentoFontoDark = Color("AcentoFontoDark")
+    static let acentoFondoDark = Color("AcentoFondoDark")
     /// #5C2000
     static let blanco = Color("Blanco")
     /// #D64B00

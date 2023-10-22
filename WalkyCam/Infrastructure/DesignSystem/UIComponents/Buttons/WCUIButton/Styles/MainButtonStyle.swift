@@ -58,7 +58,7 @@ struct MainButtonStyle: ButtonStyle {
             configuration.label
                 .font(.projectFont(size: 16, weight: .bold))
                 .foregroundColor(isEnabled ? .white : .negro)
-                .padding(8)
+                .padding(-10)
                 .frame(
                     maxWidth: .infinity,
                     minHeight: Metrics.minHeight,
@@ -100,7 +100,7 @@ struct MainButtonStyle: ButtonStyle {
             configuration.label
                 .font(.projectFont(size: 16, weight: .bold))
                 .foregroundColor(foregroundColor)
-                .padding(8)
+                .padding(-10)
                 .frame(maxWidth: .infinity, minHeight: Metrics.minHeight, maxHeight: Metrics.maxHeight)
                 .overlay(
                     RoundedRectangle(cornerRadius: Metrics.cornerRadius)

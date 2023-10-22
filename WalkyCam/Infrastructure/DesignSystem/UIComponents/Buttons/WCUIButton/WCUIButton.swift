@@ -59,3 +59,22 @@ public struct WCUIButton: View {
         }
     }
 }
+
+struct WCUIButton_Previews: PreviewProvider {
+    static var previews: some View {
+        VStack {
+            WCUIButton(title: "Teste",
+                       leftIcon: nil,
+                       rightIcon: nil,
+                       style: .standard,
+                       descriptor: OrangeButtonStyleDescriptor(),
+                       action: {})
+            WCUIButton(title: "Teste",
+                       leftIcon: nil,
+                       rightIcon: nil,
+                       style: .outline,
+                       descriptor: OrangeButtonStyleDescriptor(),
+                       action: {})
+        }
+    }
+}

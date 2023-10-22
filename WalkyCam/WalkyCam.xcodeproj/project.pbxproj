@@ -32,6 +32,18 @@
 		EA15B5B92AD7077C00C03407 /* GenericUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B5B82AD7077C00C03407 /* GenericUseCase.swift */; };
 		EA15B5BC2AD707A300C03407 /* NestedObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B5BB2AD707A300C03407 /* NestedObservableObject.swift */; };
 		EA15B5BE2AD707B900C03407 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B5BD2AD707B900C03407 /* ViewModelProtocol.swift */; };
+		EA4164EE2AE4B6F7008CE66A /* ComparePlansRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164DA2AE4B6F6008CE66A /* ComparePlansRoute.swift */; };
+		EA4164EF2AE4B6F7008CE66A /* ComparePlansAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164DC2AE4B6F6008CE66A /* ComparePlansAssembler.swift */; };
+		EA4164F02AE4B6F7008CE66A /* ComparePlansAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164DD2AE4B6F6008CE66A /* ComparePlansAssemblerProtocol.swift */; };
+		EA4164F12AE4B6F7008CE66A /* ComparePlansViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164E02AE4B6F7008CE66A /* ComparePlansViewModel.swift */; };
+		EA4164F32AE4B6F7008CE66A /* ComparePlansViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164E22AE4B6F7008CE66A /* ComparePlansViewModelProtocol.swift */; };
+		EA4164F42AE4B6F7008CE66A /* ComparePlansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164E42AE4B6F7008CE66A /* ComparePlansView.swift */; };
+		EA4164F52AE4B6F7008CE66A /* ComparePlansInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164E62AE4B6F7008CE66A /* ComparePlansInteractor.swift */; };
+		EA4164F62AE4B6F7008CE66A /* ComparePlansInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164E72AE4B6F7008CE66A /* ComparePlansInteractorProtocol.swift */; };
+		EA4164F72AE4B6F7008CE66A /* ComparePlansRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164E92AE4B6F7008CE66A /* ComparePlansRouter.swift */; };
+		EA4164F82AE4B6F7008CE66A /* ComparePlansRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164EA2AE4B6F7008CE66A /* ComparePlansRouterProtocol.swift */; };
+		EA4164F92AE4B6F7008CE66A /* ComparePlansModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164ED2AE4B6F7008CE66A /* ComparePlansModel.swift */; };
+		EA4164FB2AE4B805008CE66A /* ComparePlansPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164FA2AE4B805008CE66A /* ComparePlansPageView.swift */; };
 		EA5E1D682AD70BC800738A8F /* ProjectColors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA5E1D672AD70BC800738A8F /* ProjectColors.xcassets */; };
 		EA5E1D6F2AD7164E00738A8F /* MainButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E1D6E2AD7164E00738A8F /* MainButtonStyle.swift */; };
 		EA5E1D712AD7167300738A8F /* LinkButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E1D702AD7167300738A8F /* LinkButtonStyle.swift */; };
@@ -188,6 +200,18 @@
 		EA15B5BB2AD707A300C03407 /* NestedObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedObservableObject.swift; sourceTree = "<group>"; };
 		EA15B5BD2AD707B900C03407 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		EA15B5BF2AD709B000C03407 /* WalkyCam-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WalkyCam-Info.plist"; sourceTree = "<group>"; };
+		EA4164DA2AE4B6F6008CE66A /* ComparePlansRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansRoute.swift; sourceTree = "<group>"; };
+		EA4164DC2AE4B6F6008CE66A /* ComparePlansAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansAssembler.swift; sourceTree = "<group>"; };
+		EA4164DD2AE4B6F6008CE66A /* ComparePlansAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA4164E02AE4B6F7008CE66A /* ComparePlansViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansViewModel.swift; sourceTree = "<group>"; };
+		EA4164E22AE4B6F7008CE66A /* ComparePlansViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA4164E42AE4B6F7008CE66A /* ComparePlansView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansView.swift; sourceTree = "<group>"; };
+		EA4164E62AE4B6F7008CE66A /* ComparePlansInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansInteractor.swift; sourceTree = "<group>"; };
+		EA4164E72AE4B6F7008CE66A /* ComparePlansInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansInteractorProtocol.swift; sourceTree = "<group>"; };
+		EA4164E92AE4B6F7008CE66A /* ComparePlansRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansRouter.swift; sourceTree = "<group>"; };
+		EA4164EA2AE4B6F7008CE66A /* ComparePlansRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansRouterProtocol.swift; sourceTree = "<group>"; };
+		EA4164ED2AE4B6F7008CE66A /* ComparePlansModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansModel.swift; sourceTree = "<group>"; };
+		EA4164FA2AE4B805008CE66A /* ComparePlansPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparePlansPageView.swift; sourceTree = "<group>"; };
 		EA5E1D672AD70BC800738A8F /* ProjectColors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ProjectColors.xcassets; sourceTree = "<group>"; };
 		EA5E1D6E2AD7164E00738A8F /* MainButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButtonStyle.swift; sourceTree = "<group>"; };
 		EA5E1D702AD7167300738A8F /* LinkButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButtonStyle.swift; sourceTree = "<group>"; };
@@ -395,6 +419,7 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				EA4164D12AE4B6D3008CE66A /* ComparePlans */,
 				EAD0484B2AE22C0F0096E6AB /* RegistrationPlans */,
 				EA910FFC2ADDADBE00584B98 /* Home */,
 				EA910FD32ADCBCA200584B98 /* Menu */,
@@ -533,6 +558,105 @@
 				EA15B5BD2AD707B900C03407 /* ViewModelProtocol.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA4164D12AE4B6D3008CE66A /* ComparePlans */ = {
+			isa = PBXGroup;
+			children = (
+				EA4164D82AE4B6F6008CE66A /* Configuration */,
+				EA4164EB2AE4B6F7008CE66A /* Domain */,
+				EA4164DE2AE4B6F7008CE66A /* Module */,
+			);
+			path = ComparePlans;
+			sourceTree = "<group>";
+		};
+		EA4164D82AE4B6F6008CE66A /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA4164D92AE4B6F6008CE66A /* Route */,
+				EA4164DB2AE4B6F6008CE66A /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA4164D92AE4B6F6008CE66A /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA4164DA2AE4B6F6008CE66A /* ComparePlansRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA4164DB2AE4B6F6008CE66A /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA4164DC2AE4B6F6008CE66A /* ComparePlansAssembler.swift */,
+				EA4164DD2AE4B6F6008CE66A /* ComparePlansAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EA4164DE2AE4B6F7008CE66A /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA4164DF2AE4B6F7008CE66A /* ViewModel */,
+				EA4164E32AE4B6F7008CE66A /* View */,
+				EA4164E52AE4B6F7008CE66A /* Interactor */,
+				EA4164E82AE4B6F7008CE66A /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA4164DF2AE4B6F7008CE66A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA4164E02AE4B6F7008CE66A /* ComparePlansViewModel.swift */,
+				EA4164E22AE4B6F7008CE66A /* ComparePlansViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA4164E32AE4B6F7008CE66A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA4164E42AE4B6F7008CE66A /* ComparePlansView.swift */,
+				EA4164FA2AE4B805008CE66A /* ComparePlansPageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA4164E52AE4B6F7008CE66A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA4164E62AE4B6F7008CE66A /* ComparePlansInteractor.swift */,
+				EA4164E72AE4B6F7008CE66A /* ComparePlansInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EA4164E82AE4B6F7008CE66A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA4164E92AE4B6F7008CE66A /* ComparePlansRouter.swift */,
+				EA4164EA2AE4B6F7008CE66A /* ComparePlansRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EA4164EB2AE4B6F7008CE66A /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA4164EC2AE4B6F7008CE66A /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA4164EC2AE4B6F7008CE66A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA4164ED2AE4B6F7008CE66A /* ComparePlansModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		EA5E1D652AD70B8100738A8F /* DesignSystem */ = {
@@ -1488,14 +1612,18 @@
 				EA910F942ADA06F500584B98 /* RegistrationRouter.swift in Sources */,
 				EA15B5AC2AD706DB00C03407 /* BottomSheetModifier.swift in Sources */,
 				EA91101F2ADDADE100584B98 /* HomeRouter.swift in Sources */,
+				EA4164F72AE4B6F7008CE66A /* ComparePlansRouter.swift in Sources */,
 				EA5E1D712AD7167300738A8F /* LinkButtonStyle.swift in Sources */,
 				EA910F952ADA06F500584B98 /* RegistrationRouterProtocol.swift in Sources */,
 				EA91101E2ADDADE100584B98 /* HomeInteractorProtocol.swift in Sources */,
 				EA910F602AD9B01300584B98 /* OnboardingViewModel.swift in Sources */,
+				EA4164EF2AE4B6F7008CE66A /* ComparePlansAssembler.swift in Sources */,
 				EA910FCF2ADC495700584B98 /* TabBarModel.swift in Sources */,
 				EA910F8B2ADA06F500584B98 /* RegistrationRoute.swift in Sources */,
+				EA4164EE2AE4B6F7008CE66A /* ComparePlansRoute.swift in Sources */,
 				EA910F912ADA06F500584B98 /* RegistrationView.swift in Sources */,
 				EA15B59E2AD6E44D00C03407 /* LoginRouter.swift in Sources */,
+				EA4164F12AE4B6F7008CE66A /* ComparePlansViewModel.swift in Sources */,
 				EAD048692AE22C530096E6AB /* RegistrationPlansViewModelProtocol.swift in Sources */,
 				EA910FF02ADCBCC000584B98 /* MenuRoute.swift in Sources */,
 				56DADB222AD5EAA400710618 /* AppNavigator.swift in Sources */,
@@ -1509,6 +1637,8 @@
 				EA15B5BE2AD707B900C03407 /* ViewModelProtocol.swift in Sources */,
 				EA91101C2ADDADE100584B98 /* HomeView.swift in Sources */,
 				EA5E1D742AD716A500738A8F /* ProjectFont.swift in Sources */,
+				EA4164F32AE4B6F7008CE66A /* ComparePlansViewModelProtocol.swift in Sources */,
+				EA4164FB2AE4B805008CE66A /* ComparePlansPageView.swift in Sources */,
 				EA5E1D7B2AD7174700738A8F /* Button+Extension.swift in Sources */,
 				EA910F642AD9B01300584B98 /* OnboardingRouter.swift in Sources */,
 				EA15B59B2AD6E44D00C03407 /* LoginView.swift in Sources */,
@@ -1530,6 +1660,7 @@
 				EA5E1D782AD7170400738A8F /* LinkButton.swift in Sources */,
 				EA15B5B02AD7071300C03407 /* SheetModifier.swift in Sources */,
 				EA9110242ADDADE100584B98 /* HomeAssembler.swift in Sources */,
+				EA4164F02AE4B6F7008CE66A /* ComparePlansAssemblerProtocol.swift in Sources */,
 				EA910F962ADA06F500584B98 /* RegistrationModel.swift in Sources */,
 				EA5E1D9A2AD883D800738A8F /* Text+Extension.swift in Sources */,
 				EA9110192ADDADE100584B98 /* HomeViewModelProtocol.swift in Sources */,
@@ -1550,8 +1681,10 @@
 				EA5E1D6F2AD7164E00738A8F /* MainButtonStyle.swift in Sources */,
 				EA5E1D9E2AD8A3DA00738A8F /* Strings.swift in Sources */,
 				EA9110292ADDB03300584B98 /* AsyncImageView.swift in Sources */,
+				EA4164F42AE4B6F7008CE66A /* ComparePlansView.swift in Sources */,
 				EA910F932ADA06F500584B98 /* RegistrationInteractorProtocol.swift in Sources */,
 				EA5E1D842AD7183700738A8F /* RoundedCornerShape.swift in Sources */,
+				EA4164F92AE4B6F7008CE66A /* ComparePlansModel.swift in Sources */,
 				EA910F5B2AD9B01300584B98 /* OnboardingAssembler.swift in Sources */,
 				EA910F5C2AD9B01300584B98 /* OnboardingAssemblerProtocol.swift in Sources */,
 				EA910FC42ADC495700584B98 /* TabBarRoute.swift in Sources */,
@@ -1559,6 +1692,7 @@
 				EA910F8C2ADA06F500584B98 /* RegistrationAssemblerProtocol.swift in Sources */,
 				EA910F9E2ADC43B200584B98 /* FullScreenWrapper.swift in Sources */,
 				56DADB272AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift in Sources */,
+				EA4164F62AE4B6F7008CE66A /* ComparePlansInteractorProtocol.swift in Sources */,
 				EA910F992ADC40DB00584B98 /* AlertView.swift in Sources */,
 				EAD048712AE22C530096E6AB /* RegistrationPlansRoute.swift in Sources */,
 				EA910F8D2ADA06F500584B98 /* RegistrationAssembler.swift in Sources */,
@@ -1575,6 +1709,7 @@
 				EA91102F2ADDB93D00584B98 /* EnvironmentValues+ImageCache.swift in Sources */,
 				EA910F9C2ADC437300584B98 /* AlertModifier.swift in Sources */,
 				EA910FFB2ADCBCC000584B98 /* MenuRouterProtocol.swift in Sources */,
+				EA4164F82AE4B6F7008CE66A /* ComparePlansRouterProtocol.swift in Sources */,
 				EAD0486E2AE22C530096E6AB /* RegistrationPlansInteractorProtocol.swift in Sources */,
 				EA910F612AD9B01300584B98 /* OnboardingView.swift in Sources */,
 				EA15B5982AD6E44D00C03407 /* LoginViewModelProtocol.swift in Sources */,
@@ -1585,6 +1720,7 @@
 				EA9110222ADDADE100584B98 /* HomeRoute.swift in Sources */,
 				EA15B5A12AD6E44D00C03407 /* LoginAssembler.swift in Sources */,
 				EA910F6B2AD9CCF500584B98 /* PageControl.swift in Sources */,
+				EA4164F52AE4B6F7008CE66A /* ComparePlansInteractor.swift in Sources */,
 				EA9110232ADDADE100584B98 /* HomeAssemblerProtocol.swift in Sources */,
 				EA15B5A22AD6E44D00C03407 /* LoginAssemblerProtocol.swift in Sources */,
 				EA910F3C2AD982F300584B98 /* SecureTextInputView.swift in Sources */,
