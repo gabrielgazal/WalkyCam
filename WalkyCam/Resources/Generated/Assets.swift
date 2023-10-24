@@ -33,6 +33,7 @@ internal enum Asset {
     internal static let ar = ImageAsset(name: "AR")
     internal static let compare = ImageAsset(name: "Compare")
     internal static let drone = ImageAsset(name: "Drone")
+    internal static let filter = ImageAsset(name: "Filter")
     internal static let notes = ImageAsset(name: "Notes")
     internal static let recent = ImageAsset(name: "Recent")
     internal static let scan3D = ImageAsset(name: "Scan3D")

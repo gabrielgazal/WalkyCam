@@ -1,0 +1,96 @@
+import SwiftUI
+
+struct NotificationsView<ViewModel: NotificationsViewModelProtocol, Router: NotificationsRouterProtocol>: View {
+
+    // MARK: - Dependencies
+
+    @ObservedObject private var viewModel: ViewModel
+    @ObservedObject private var router: Router
+
+    var notificationsGroupedByDate: [Date: [NotificationModel]] {
+        Dictionary(grouping: viewModel.notifications, by: { $0.date })
+    }
+
+    var headers: [Date] {
+        notificationsGroupedByDate.map { $0.key }.sorted()
+    }
+
+    // MARK: - Initialization
+
+    init(viewModel: ViewModel,
+         router: Router) {
+        self.viewModel = viewModel
+        self.router = router
+    }
+
+    // MARK: - View Body
+
+    var body: some View {
+        VStack(alignment: .leading) {
+            headerView
+            ScrollView {
+                ForEach(headers, id: \.self) { header in
+                    Section {
+                        ForEach(notificationsGroupedByDate[header]!, id: \.self) { item in
+                            NotificationItemView(title: item.title,
+                                                 description: item.description,
+                                                 image: item.image,
+                                                 date: item.date,
+                                                 backgroundColor: item.backgroundColor)
+                        }
+                    } header: {
+                        HStack {
+                            Text(formatDateInRelationToToday(header))
+                                .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                                .listRowInsets(EdgeInsets())
+                            Spacer()
+                        }
+                        .padding(.horizontal, Tokens.Size.Spacing.regular)
+                    }
+                }
+            }
+        }
+    }
+
+    private var headerView: some View {
+        HStack(alignment: .center,
+               spacing: Tokens.Size.Spacing.regular) {
+            Text("Notificaciones")
+                .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
+            Spacer()
+            Image(Asset.Icons.filter.name)
+                .resizable()
+                .renderingMode(.template)
+                .aspectRatio(contentMode: .fit)
+                .frame(width: Tokens.Size.Spacing.xlarge, height: Tokens.Size.Spacing.xlarge)
+            Image(systemName: "magnifyingglass")
+                .resizable()
+                .renderingMode(.template)
+                .aspectRatio(contentMode: .fit)
+                .frame(width: Tokens.Size.Spacing.large, height: Tokens.Size.Spacing.large)
+        }
+               .padding(Tokens.Size.Spacing.large)
+    }
+
+    private func formatDateInRelationToToday(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "es_ES")
+        dateFormatter.dateStyle = .full
+        dateFormatter.dateFormat = "d 'de' MMMM"
+
+        if Calendar.current.isDateInToday(date) {
+            return "Hoy"
+        } else {
+            return dateFormatter.string(from: date).capitalized
+        }
+    }
+}
+
+struct NotificationsView_Previews: PreviewProvider {
+    static var previews: some View {
+        NotificationsView(
+            viewModel: NotificationsViewModel(),
+            router: NotificationsRouter(isPresented: .constant(false))
+        )
+    }
+}

@@ -1,6 +1,6 @@
 import SwiftUI
 
 protocol HomeRouterProtocol: Router {
-    func routeToSomething()
+    func routeToNotifications()
+    func routeToProfile()
 }
-

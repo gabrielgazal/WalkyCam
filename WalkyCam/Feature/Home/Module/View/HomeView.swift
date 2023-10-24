@@ -30,7 +30,8 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                 VStack(alignment: .center,
                        spacing: Tokens.Size.Spacing.large) {
                     ProfileHeaderView(name: viewModel.homeData.profileInfo.name,
-                                      imageURL: URL(string: viewModel.homeData.profileInfo.imageURL))
+                                      imageURL: URL(string: viewModel.homeData.profileInfo.imageURL),
+                                      actions: .init(notificationsAction: handleNotificationsAction))
                     .padding(.horizontal, Tokens.Size.Spacing.large)
                     WalkyBotView()
                     recentFunctionsView(proxy)
@@ -41,6 +42,7 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                        .padding([.top], Tokens.Size.Spacing.huge)
             }
         }
+        .navigation(router)
     }
 
     private func recentFunctionsView(_ proxy: GeometryProxy) -> some View {
@@ -77,6 +79,10 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
 
     private func isLastRecentsItem(itemId: Int) -> Bool {
         return itemId == (viewModel.homeData.recentFunctions.count - 1)
+    }
+
+    private func handleNotificationsAction() {
+        router.routeToNotifications()
     }
 }
 

@@ -11,13 +11,27 @@ struct ProfileHeaderView: View {
 
     private var name: String
     private var imageURL: URL?
+    private var actions: Actions
+
+    // MARK: - Inner Types
+
+    public struct Actions {
+        let notificationsAction: (() -> Void)?
+        public init(
+            notificationsAction: (() -> Void)? = nil
+        ) {
+            self.notificationsAction = notificationsAction
+        }
+    }
 
     // MARK: - Initialization
 
     public init(name: String,
-                imageURL: URL?) {
+                imageURL: URL?,
+                actions: ProfileHeaderView.Actions = .init()) {
         self.name = name
         self.imageURL = imageURL
+        self.actions = actions
     }
 
     // MARK: - Dependencies
@@ -32,6 +46,9 @@ struct ProfileHeaderView: View {
             Image(Asset.Icons.mail.name)
                 .resizable()
                 .frame(width: Tokens.Size.Font.xlarge, height: Tokens.Size.Font.xlarge)
+                .onTapGesture {
+                    actions.notificationsAction?()
+                }
             Image(systemName: "bell.fill")
                 .resizable()
                 .frame(width: Tokens.Size.Font.xlarge, height: Tokens.Size.Font.xlarge)
