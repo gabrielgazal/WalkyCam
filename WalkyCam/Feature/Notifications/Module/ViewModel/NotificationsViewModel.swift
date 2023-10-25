@@ -31,7 +31,7 @@ final class NotificationsViewModel: NotificationsViewModelProtocol {
             .init(image: Asset.Icons.drone.name,
                   title: "Teste de notif",
                   description: "Esse aqui é um teste de *notificação*",
-                  date: .distantFuture,
+                  date: .init(timeIntervalSinceNow: -30000000),
                   backgroundColor: Color.blancoGris),
             .init(image: Asset.Icons.drone.name,
                   title: "Teste de notif",

@@ -8,11 +8,14 @@ struct NotificationsView<ViewModel: NotificationsViewModelProtocol, Router: Noti
     @ObservedObject private var router: Router
 
     var notificationsGroupedByDate: [Date: [NotificationModel]] {
-        Dictionary(grouping: viewModel.notifications, by: { $0.date })
+        Dictionary(grouping: viewModel.notifications) { item in
+            let convertedDate = Calendar.current.startOfDay(for: item.date)
+            return convertedDate
+        }
     }
 
     var headers: [Date] {
-        notificationsGroupedByDate.map { $0.key }.sorted()
+        notificationsGroupedByDate.map { $0.key }.sorted(by: { $0 > $1 })
     }
 
     // MARK: - Initialization
@@ -76,7 +79,7 @@ struct NotificationsView<ViewModel: NotificationsViewModelProtocol, Router: Noti
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "es_ES")
         dateFormatter.dateStyle = .full
-        dateFormatter.dateFormat = "d 'de' MMMM"
+        dateFormatter.dateFormat = "d 'de' MMMM 'de' yyyy"
 
         if Calendar.current.isDateInToday(date) {
             return "Hoy"
