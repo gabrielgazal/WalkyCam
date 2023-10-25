@@ -45,6 +45,7 @@ public struct TextInputView: View {
     private var topDescriptionText: String?
     private var actions: Actions
     private var keyboardType: UIKeyboardType
+    private var backgroundColor: Color
 
     // MARK: - Initialization
 
@@ -54,6 +55,7 @@ public struct TextInputView: View {
         topDescriptionText: String? = nil,
         placeholder: String,
         keyboardType: UIKeyboardType = .default,
+        backgroundColor: Color = .blancoGris,
         actions: Actions = .init()
     ) {
         self._text = text
@@ -61,6 +63,7 @@ public struct TextInputView: View {
         self.placeholder = placeholder
         self.topDescriptionText = topDescriptionText
         self.keyboardType = keyboardType
+        self.backgroundColor = backgroundColor
         self.actions = actions
     }
 
@@ -90,7 +93,7 @@ public struct TextInputView: View {
             .background(
                 RoundedRectangle(cornerRadius: 28)
                     .frame(height: 56)
-                    .foregroundColor(Color.blancoGris)
+                    .foregroundColor(backgroundColor)
             )
         }
     }

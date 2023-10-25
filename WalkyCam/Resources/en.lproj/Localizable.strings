@@ -50,3 +50,15 @@
 "RegistrationPlans.button.title" = "Comparar Planes";
 "RegistrationPlans.plan.button.title" = "Ver Plan";
 "RegistrationPlans.value" = "%@ € / mo";
+
+// MARK: - ProfileView
+"ProfileView.navigation.default.title" = "Perfil";
+"ProfileView.navigation.edit.title" = "Editar Perfil";
+"ProfileView.toggle.walkycamer" = "Soy WalkCamer";
+"ProfileView.field.name" = "Nombre";
+"ProfileView.field.lastname" = "Apellido";
+"ProfileView.field.birthDate" = "Fecha de nacimiento";
+"ProfileView.convert.walkycamer" = "Convertime en WalkCamer";
+"ProfileView.section.logout" = "Cerrar Sesión";
+"ProfileView.button.save" = "Guardar cambios";
+"ProfileView.button.cancel" = "Cancelar";

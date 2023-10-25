@@ -45,6 +45,7 @@
 		EA282E592AE952F700B90920 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282E4D2AE952F700B90920 /* ProfileInteractor.swift */; };
 		EA282E5A2AE952F700B90920 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282E4F2AE952F700B90920 /* ProfileRouter.swift */; };
 		EA282E5B2AE952F700B90920 /* ProfileRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282E502AE952F700B90920 /* ProfileRouterProtocol.swift */; };
+		EA282E602AE9A10600B90920 /* ImageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282E5F2AE9A10600B90920 /* ImageMock.swift */; };
 		EA4164EE2AE4B6F7008CE66A /* ComparePlansRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164DA2AE4B6F6008CE66A /* ComparePlansRoute.swift */; };
 		EA4164EF2AE4B6F7008CE66A /* ComparePlansAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164DC2AE4B6F6008CE66A /* ComparePlansAssembler.swift */; };
 		EA4164F02AE4B6F7008CE66A /* ComparePlansAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164DD2AE4B6F6008CE66A /* ComparePlansAssemblerProtocol.swift */; };
@@ -238,6 +239,7 @@
 		EA282E4D2AE952F700B90920 /* ProfileInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		EA282E4F2AE952F700B90920 /* ProfileRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		EA282E502AE952F700B90920 /* ProfileRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileRouterProtocol.swift; sourceTree = "<group>"; };
+		EA282E5F2AE9A10600B90920 /* ImageMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMock.swift; sourceTree = "<group>"; };
 		EA4164DA2AE4B6F6008CE66A /* ComparePlansRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansRoute.swift; sourceTree = "<group>"; };
 		EA4164DC2AE4B6F6008CE66A /* ComparePlansAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansAssembler.swift; sourceTree = "<group>"; };
 		EA4164DD2AE4B6F6008CE66A /* ComparePlansAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansAssemblerProtocol.swift; sourceTree = "<group>"; };
@@ -710,6 +712,14 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		EA282E5E2AE9A0FA00B90920 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				EA282E5F2AE9A10600B90920 /* ImageMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		EA4164D12AE4B6D3008CE66A /* ComparePlans */ = {
 			isa = PBXGroup;
 			children = (
@@ -911,6 +921,7 @@
 		EA5E1D652AD70B8100738A8F /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				EA282E5E2AE9A0FA00B90920 /* Mock */,
 				EA910F9A2ADC436300584B98 /* Modifier */,
 				EA5E1D942AD725D000738A8F /* Color */,
 				EA5E1D8D2AD719F000738A8F /* Tokens */,
@@ -1933,6 +1944,7 @@
 				EA5E1D762AD716D200738A8F /* ButtonStyleDescriptor.swift in Sources */,
 				EA82DB532ADF605500E6B39A /* ReminderCardView.swift in Sources */,
 				EA9110262ADDAE6400584B98 /* ProfileHeaderView.swift in Sources */,
+				EA282E602AE9A10600B90920 /* ImageMock.swift in Sources */,
 				EA910FF22ADCBCC000584B98 /* MenuAssembler.swift in Sources */,
 				EA15B5B62AD7075600C03407 /* Router.swift in Sources */,
 				EA91101A2ADDADE100584B98 /* HomeViewModel.swift in Sources */,

@@ -92,6 +92,44 @@ internal enum L10n {
       internal static let title = L10n.tr("Localizable", "OnboardingView.Page3.title", fallback: "Experiencia Inmersiva")
     }
   }
+  internal enum ProfileView {
+    internal enum Button {
+      /// Cancelar
+      internal static let cancel = L10n.tr("Localizable", "ProfileView.button.cancel", fallback: "Cancelar")
+      /// Guardar cambios
+      internal static let save = L10n.tr("Localizable", "ProfileView.button.save", fallback: "Guardar cambios")
+    }
+    internal enum Convert {
+      /// Convertime en WalkCamer
+      internal static let walkycamer = L10n.tr("Localizable", "ProfileView.convert.walkycamer", fallback: "Convertime en WalkCamer")
+    }
+    internal enum Field {
+      /// Fecha de nacimiento
+      internal static let birthDate = L10n.tr("Localizable", "ProfileView.field.birthDate", fallback: "Fecha de nacimiento")
+      /// Apellido
+      internal static let lastname = L10n.tr("Localizable", "ProfileView.field.lastname", fallback: "Apellido")
+      /// Nombre
+      internal static let name = L10n.tr("Localizable", "ProfileView.field.name", fallback: "Nombre")
+    }
+    internal enum Navigation {
+      internal enum Default {
+        /// Perfil
+        internal static let title = L10n.tr("Localizable", "ProfileView.navigation.default.title", fallback: "Perfil")
+      }
+      internal enum Edit {
+        /// Editar Perfil
+        internal static let title = L10n.tr("Localizable", "ProfileView.navigation.edit.title", fallback: "Editar Perfil")
+      }
+    }
+    internal enum Section {
+      /// Cerrar Sesión
+      internal static let logout = L10n.tr("Localizable", "ProfileView.section.logout", fallback: "Cerrar Sesión")
+    }
+    internal enum Toggle {
+      /// Soy WalkCamer
+      internal static let walkycamer = L10n.tr("Localizable", "ProfileView.toggle.walkycamer", fallback: "Soy WalkCamer")
+    }
+  }
   internal enum RegistrationPlans {
     /// Para comenzar elige un plan, luego puedes cambiarlo.
     internal static let description = L10n.tr("Localizable", "RegistrationPlans.description", fallback: "Para comenzar elige un plan, luego puedes cambiarlo.")

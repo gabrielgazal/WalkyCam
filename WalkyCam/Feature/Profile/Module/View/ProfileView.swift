@@ -47,22 +47,22 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
                     Divider()
                     Group {
                         HStack {
-                            Text("Soy WalkCamer")
+                            Text(L10n.ProfileView.Toggle.walkycamer)
                                 .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
                             Spacer()
                         }
                         Divider()
                     }
                     .isHidden(viewModel.isEditingModeEnabled)
-                    assembleItemView(title: "Nombre",
+                    assembleItemView(title: L10n.ProfileView.Field.name,
                                      text: viewModel.userData.name,
                                      editableText: $viewModel.temporaryName)
                     Divider()
-                    assembleItemView(title: "Apellido",
+                    assembleItemView(title: L10n.ProfileView.Field.lastname,
                                      text: viewModel.userData.lastName,
                                      editableText: $viewModel.temporaryLastname)
                     Divider()
-                    assembleItemView(title: "Fecha de nacimiento",
+                    assembleItemView(title: L10n.ProfileView.Field.birthDate,
                                      text: viewModel.userData.birthDate,
                                      editableText: $viewModel.temporaryBirthDate)
                     Divider()
@@ -73,7 +73,7 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: Tokens.Size.Spacing.large, height: Tokens.Size.Spacing.large)
-                                Text("Convertime en WalkCamer")
+                                Text(L10n.ProfileView.Convert.walkycamer)
                                     .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
                                 Spacer()
                             }
@@ -83,7 +83,7 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: Tokens.Size.Spacing.large, height: Tokens.Size.Spacing.large)
-                                Text("Cerrar Sesión")
+                                Text(L10n.ProfileView.Section.logout)
                                     .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
                                 Spacer()
                             }
@@ -91,11 +91,11 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
                         }
                         .isHidden(viewModel.isEditingModeEnabled)
                         Group {
-                            WCUIButton(title: "Guardar cambios",
+                            WCUIButton(title: L10n.ProfileView.Button.save,
                                        style: .standard,
                                        descriptor: OrangeButtonStyleDescriptor(),
                                        action: {})
-                            WCUIButton(title: "Cancelar",
+                            WCUIButton(title: L10n.ProfileView.Button.cancel,
                                        style: .standard,
                                        descriptor: BlackButtonStyleDescriptor(),
                                        action: { viewModel.isEditingModeEnabled.toggle() })
@@ -112,7 +112,7 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
     private var headerView: some View {
         HStack(alignment: .center,
                spacing: Tokens.Size.Spacing.regular) {
-            Text(viewModel.isEditingModeEnabled ? "Editar Perfil": "Perfil")
+            Text(viewModel.isEditingModeEnabled ? L10n.ProfileView.Navigation.Edit.title: L10n.ProfileView.Navigation.Default.title)
                 .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
             Spacer()
             Image(Asset.Icons.edit.name)

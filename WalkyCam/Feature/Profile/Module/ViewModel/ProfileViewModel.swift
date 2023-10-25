@@ -24,7 +24,7 @@ final class ProfileViewModel: ProfileViewModelProtocol {
         var name = "Teste"
         var lastName = "Teste"
         var birthDate = "20/04/1999"
-        userData = .init(profileImage: "https://imagens.brasil.elpais.com/resizer/m_SQSURoHDBKhE8wvUIlQBpuvdc=/1200x0/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/6TE7TL7D4YWZFV2TFRSGNGN6JE.jpg",
+        userData = .init(profileImage: .imageMock,
                          name: name,
                          lastName: lastName,
                          birthDate: birthDate,

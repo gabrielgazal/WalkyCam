@@ -40,7 +40,8 @@ struct WalkyBotView: View {
                     ZStack(alignment: .topTrailing) {
                         TextInputView(text: .constant(""),
                                       accessory: Image(systemName: "mic"),
-                                      placeholder: L10n.WalkyBotView.text)
+                                      placeholder: L10n.WalkyBotView.text,
+                                      backgroundColor: .blanco)
                         .disabled(true)
                         Image(systemName: "multiply.circle.fill")
                             .resizable()

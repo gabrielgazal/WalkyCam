@@ -76,6 +76,9 @@ struct ProfileHeaderView: View {
             .onTapGesture {
                 actions.profileAction?()
             }
+            .frame(width: 48, height: 48)
+            .clipped()
+            .cornerRadius(24, corners: .allCorners)
         }
     }
 
