@@ -1,0 +1,3 @@
+protocol ProfileInteractorProtocol {
+    func someFunction()
+}

@@ -10,5 +10,9 @@ final class HomeRouter: Router, HomeRouterProtocol {
         )
     }
 
-    func routeToProfile() {}
+    func routeToProfile() {
+        navigateTo(
+            ProfileRoute(isPresented: isNavigating)
+        )
+    }
 }

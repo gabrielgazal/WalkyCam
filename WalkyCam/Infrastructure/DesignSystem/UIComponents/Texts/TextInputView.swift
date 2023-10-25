@@ -90,7 +90,7 @@ public struct TextInputView: View {
             .background(
                 RoundedRectangle(cornerRadius: 28)
                     .frame(height: 56)
-                    .foregroundColor(Color.blanco)
+                    .foregroundColor(Color.blancoGris)
             )
         }
     }

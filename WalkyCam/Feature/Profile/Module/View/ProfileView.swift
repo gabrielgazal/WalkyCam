@@ -1,0 +1,184 @@
+import SwiftUI
+
+struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterProtocol>: View {
+
+    // MARK: - Dependencies
+
+    @ObservedObject private var viewModel: ViewModel
+    @ObservedObject private var router: Router
+
+    // MARK: - Initialization
+
+    init(viewModel: ViewModel,
+         router: Router) {
+        self.viewModel = viewModel
+        self.router = router
+    }
+
+    // MARK: - View Body
+
+    var body: some View {
+        VStack(alignment: .center,
+               spacing: Tokens.Size.Spacing.regular) {
+            headerView
+            ScrollView {
+                profileImageView
+                    .frame(width: 120, height: 120)
+                    .scaledToFit()
+                    .clipped()
+                    .cornerRadius(60, corners: .allCorners)
+                    .padding(Tokens.Size.Spacing.regular)
+                    .overlay {
+                        ZStack(alignment: .center) {
+                            Color.negro.opacity(0.4)
+                                .clipped()
+                                .cornerRadius(60, corners: .allCorners)
+                                .padding(Tokens.Size.Spacing.regular)
+                            Image(Asset.Icons.edit.name)
+                                .resizable()
+                                .renderingMode(.template)
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: Tokens.Size.Spacing.large, height: Tokens.Size.Spacing.large)
+                                .foregroundColor(.naranja)
+                        }
+                        .isHidden(!viewModel.isEditingModeEnabled)
+                    }
+                VStack(spacing: Tokens.Size.Spacing.large) {
+                    Divider()
+                    Group {
+                        HStack {
+                            Text("Soy WalkCamer")
+                                .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                            Spacer()
+                        }
+                        Divider()
+                    }
+                    .isHidden(viewModel.isEditingModeEnabled)
+                    assembleItemView(title: "Nombre",
+                                     text: viewModel.userData.name,
+                                     editableText: $viewModel.temporaryName)
+                    Divider()
+                    assembleItemView(title: "Apellido",
+                                     text: viewModel.userData.lastName,
+                                     editableText: $viewModel.temporaryLastname)
+                    Divider()
+                    assembleItemView(title: "Fecha de nacimiento",
+                                     text: viewModel.userData.birthDate,
+                                     editableText: $viewModel.temporaryBirthDate)
+                    Divider()
+                    Group {
+                        Group {
+                            HStack(spacing: Tokens.Size.Spacing.regular) {
+                                Image(Asset.Icons.wIcon.name)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: Tokens.Size.Spacing.large, height: Tokens.Size.Spacing.large)
+                                Text("Convertime en WalkCamer")
+                                    .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                                Spacer()
+                            }
+                            Divider()
+                            HStack(spacing: Tokens.Size.Spacing.regular) {
+                                Image(systemName: "rectangle.portrait.and.arrow.right")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: Tokens.Size.Spacing.large, height: Tokens.Size.Spacing.large)
+                                Text("Cerrar Sesión")
+                                    .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                                Spacer()
+                            }
+                            Divider()
+                        }
+                        .isHidden(viewModel.isEditingModeEnabled)
+                        Group {
+                            WCUIButton(title: "Guardar cambios",
+                                       style: .standard,
+                                       descriptor: OrangeButtonStyleDescriptor(),
+                                       action: {})
+                            WCUIButton(title: "Cancelar",
+                                       style: .standard,
+                                       descriptor: BlackButtonStyleDescriptor(),
+                                       action: { viewModel.isEditingModeEnabled.toggle() })
+                        }
+                        .isHidden(!viewModel.isEditingModeEnabled)
+                    }
+                }
+            }
+            .padding(Tokens.Size.Spacing.regular)
+        }
+               .background(Color.blanco)
+    }
+
+    private var headerView: some View {
+        HStack(alignment: .center,
+               spacing: Tokens.Size.Spacing.regular) {
+            Text(viewModel.isEditingModeEnabled ? "Editar Perfil": "Perfil")
+                .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
+            Spacer()
+            Image(Asset.Icons.edit.name)
+                .resizable()
+                .renderingMode(.template)
+                .aspectRatio(contentMode: .fit)
+                .frame(width: Tokens.Size.Spacing.large, height: Tokens.Size.Spacing.large)
+                .foregroundColor(.naranja)
+                .isHidden(viewModel.isEditingModeEnabled)
+                .onTapGesture {
+                    viewModel.isEditingModeEnabled.toggle()
+                }
+        }
+               .padding(.horizontal, Tokens.Size.Spacing.large)
+    }
+
+    private var profileImageView: some View {
+        Group {
+            if let url = URL(string: viewModel.userData.profileImage) {
+                AsyncImageView(imageLoadable: url) { status in
+                    Group {
+                        switch status {
+                        case .failured:
+                            placeholder
+                        case .loading:
+                            ProgressView()
+                        default:
+                            placeholder
+                        }
+                    }
+                }
+            } else {
+                placeholder
+            }
+        }
+    }
+
+    private var placeholder: some View {
+        Image(systemName: "person.circle")
+            .resizable()
+            .frame(width: 120, height: 120)
+            .scaledToFit()
+    }
+
+    private func assembleItemView(title: String, text: String, editableText: Binding<String>) -> some View {
+        VStack(alignment: .leading,
+               spacing: Tokens.Size.Spacing.small) {
+            HStack(spacing: Tokens.Size.Spacing.regular) {
+                Text(title)
+                    .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                Text(text)
+                    .font(.projectFont(size: Tokens.Size.Font.regular))
+                    .isHidden(viewModel.isEditingModeEnabled)
+                Spacer()
+            }
+            TextInputView(text: editableText, placeholder: "")
+                .isHidden(!viewModel.isEditingModeEnabled)
+        }
+    }
+}
+
+struct ProfileView_Previews: PreviewProvider {
+    static var previews: some View {
+        ProfileView(
+            viewModel: ProfileViewModel(),
+            router: ProfileRouter(isPresented: .constant(false))
+        )
+    }
+}

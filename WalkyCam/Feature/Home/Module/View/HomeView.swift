@@ -31,7 +31,8 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                        spacing: Tokens.Size.Spacing.large) {
                     ProfileHeaderView(name: viewModel.homeData.profileInfo.name,
                                       imageURL: URL(string: viewModel.homeData.profileInfo.imageURL),
-                                      actions: .init(notificationsAction: handleNotificationsAction))
+                                      actions: .init(notificationsAction: handleNotificationsAction,
+                                                     profileAction: handleProfileAction))
                     .padding(.horizontal, Tokens.Size.Spacing.large)
                     WalkyBotView()
                     recentFunctionsView(proxy)
@@ -83,6 +84,10 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
 
     private func handleNotificationsAction() {
         router.routeToNotifications()
+    }
+
+    private func handleProfileAction() {
+        router.routeToProfile()
     }
 }
 

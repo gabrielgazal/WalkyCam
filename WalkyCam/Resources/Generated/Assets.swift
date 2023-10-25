@@ -40,9 +40,11 @@ internal enum Asset {
     internal static let streetCam = ImageAsset(name: "Street Cam")
     internal static let videoCall = ImageAsset(name: "VideoCall")
     internal static let check = ImageAsset(name: "check")
+    internal static let edit = ImageAsset(name: "edit")
     internal static let eyeDisabledIcon = ImageAsset(name: "eyeDisabledIcon")
     internal static let eyeIcon = ImageAsset(name: "eyeIcon")
     internal static let mail = ImageAsset(name: "mail")
+    internal static let wIcon = ImageAsset(name: "wIcon")
   }
   internal enum Illustrations {
     internal static let cammy = ImageAsset(name: "cammy")

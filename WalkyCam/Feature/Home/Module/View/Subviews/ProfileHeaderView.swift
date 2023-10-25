@@ -17,10 +17,13 @@ struct ProfileHeaderView: View {
 
     public struct Actions {
         let notificationsAction: (() -> Void)?
+        let profileAction: (() -> Void)?
         public init(
-            notificationsAction: (() -> Void)? = nil
+            notificationsAction: (() -> Void)? = nil,
+            profileAction: (() -> Void)? = nil
         ) {
             self.notificationsAction = notificationsAction
+            self.profileAction = profileAction
         }
     }
 
@@ -46,27 +49,32 @@ struct ProfileHeaderView: View {
             Image(Asset.Icons.mail.name)
                 .resizable()
                 .frame(width: Tokens.Size.Font.xlarge, height: Tokens.Size.Font.xlarge)
-                .onTapGesture {
-                    actions.notificationsAction?()
-                }
             Image(systemName: "bell.fill")
                 .resizable()
                 .frame(width: Tokens.Size.Font.xlarge, height: Tokens.Size.Font.xlarge)
-            if let url = imageURL {
-                AsyncImageView(imageLoadable: url) { status in
-                    Group {
-                        switch status {
-                        case .failured:
-                            placeholder
-                        case .loading:
-                            ProgressView()
-                        default:
-                            placeholder
+                .onTapGesture {
+                    actions.notificationsAction?()
+                }
+            VStack {
+                if let url = imageURL {
+                    AsyncImageView(imageLoadable: url) { status in
+                        Group {
+                            switch status {
+                            case .failured:
+                                placeholder
+                            case .loading:
+                                ProgressView()
+                            default:
+                                placeholder
+                            }
                         }
                     }
+                } else {
+                    placeholder
                 }
-            } else {
-                placeholder
+            }
+            .onTapGesture {
+                actions.profileAction?()
             }
         }
     }
