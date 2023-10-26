@@ -46,6 +46,14 @@
 		EA282E5A2AE952F700B90920 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282E4F2AE952F700B90920 /* ProfileRouter.swift */; };
 		EA282E5B2AE952F700B90920 /* ProfileRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282E502AE952F700B90920 /* ProfileRouterProtocol.swift */; };
 		EA282E602AE9A10600B90920 /* ImageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282E5F2AE9A10600B90920 /* ImageMock.swift */; };
+		EA282E632AE9EC7800B90920 /* CassandraClient in Frameworks */ = {isa = PBXBuildFile; productRef = EA282E622AE9EC7800B90920 /* CassandraClient */; };
+		EA282E692AE9ED2300B90920 /* RepositoryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282E682AE9ED2300B90920 /* RepositoryError.swift */; };
+		EA282E6E2AE9EE1400B90920 /* NetworkingConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282E6D2AE9EE1400B90920 /* NetworkingConfig.swift */; };
+		EA282E702AE9EE5B00B90920 /* NetworkDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282E6F2AE9EE5B00B90920 /* NetworkDelegateProtocol.swift */; };
+		EA282E732AE9EEEF00B90920 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282E722AE9EEEF00B90920 /* DependencyContainer.swift */; };
+		EA282E752AE9EF2300B90920 /* RepositoryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282E742AE9EF2300B90920 /* RepositoryProvider.swift */; };
+		EA282E772AE9EF4600B90920 /* RepositoryResolving.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282E762AE9EF4600B90920 /* RepositoryResolving.swift */; };
+		EA282E792AE9EF5300B90920 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282E782AE9EF5300B90920 /* ServiceProvider.swift */; };
 		EA4164EE2AE4B6F7008CE66A /* ComparePlansRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164DA2AE4B6F6008CE66A /* ComparePlansRoute.swift */; };
 		EA4164EF2AE4B6F7008CE66A /* ComparePlansAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164DC2AE4B6F6008CE66A /* ComparePlansAssembler.swift */; };
 		EA4164F02AE4B6F7008CE66A /* ComparePlansAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164DD2AE4B6F6008CE66A /* ComparePlansAssemblerProtocol.swift */; };
@@ -240,6 +248,13 @@
 		EA282E4F2AE952F700B90920 /* ProfileRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		EA282E502AE952F700B90920 /* ProfileRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileRouterProtocol.swift; sourceTree = "<group>"; };
 		EA282E5F2AE9A10600B90920 /* ImageMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMock.swift; sourceTree = "<group>"; };
+		EA282E682AE9ED2300B90920 /* RepositoryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryError.swift; sourceTree = "<group>"; };
+		EA282E6D2AE9EE1400B90920 /* NetworkingConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingConfig.swift; sourceTree = "<group>"; };
+		EA282E6F2AE9EE5B00B90920 /* NetworkDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDelegateProtocol.swift; sourceTree = "<group>"; };
+		EA282E722AE9EEEF00B90920 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		EA282E742AE9EF2300B90920 /* RepositoryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProvider.swift; sourceTree = "<group>"; };
+		EA282E762AE9EF4600B90920 /* RepositoryResolving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryResolving.swift; sourceTree = "<group>"; };
+		EA282E782AE9EF5300B90920 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		EA4164DA2AE4B6F6008CE66A /* ComparePlansRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansRoute.swift; sourceTree = "<group>"; };
 		EA4164DC2AE4B6F6008CE66A /* ComparePlansAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansAssembler.swift; sourceTree = "<group>"; };
 		EA4164DD2AE4B6F6008CE66A /* ComparePlansAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansAssemblerProtocol.swift; sourceTree = "<group>"; };
@@ -378,6 +393,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA282E632AE9EC7800B90920 /* CassandraClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +417,7 @@
 		5637A8092AD5DD71000586DF = {
 			isa = PBXGroup;
 			children = (
+				EA282E642AE9ECEC00B90920 /* Networking */,
 				EA15B5BF2AD709B000C03407 /* WalkyCam-Info.plist */,
 				EA15B5A52AD7067400C03407 /* Infrastructure */,
 				EA15B57A2AD6E41400C03407 /* Feature */,
@@ -718,6 +735,76 @@
 				EA282E5F2AE9A10600B90920 /* ImageMock.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		EA282E642AE9ECEC00B90920 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EA282E652AE9ECF800B90920 /* Interface */,
+				EA282E6A2AE9EDE600B90920 /* Networking */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		EA282E652AE9ECF800B90920 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				EA282E662AE9ED0200B90920 /* Model */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		EA282E662AE9ED0200B90920 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA282E672AE9ED0D00B90920 /* Shared */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA282E672AE9ED0D00B90920 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				EA282E682AE9ED2300B90920 /* RepositoryError.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		EA282E6A2AE9EDE600B90920 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EA282E6B2AE9EDEE00B90920 /* Infrastructure */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		EA282E6B2AE9EDEE00B90920 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				EA282E712AE9EED800B90920 /* DependencyInjection */,
+				EA282E6C2AE9EE0800B90920 /* Config */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		EA282E6C2AE9EE0800B90920 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				EA282E6D2AE9EE1400B90920 /* NetworkingConfig.swift */,
+				EA282E6F2AE9EE5B00B90920 /* NetworkDelegateProtocol.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		EA282E712AE9EED800B90920 /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				EA282E722AE9EEEF00B90920 /* DependencyContainer.swift */,
+				EA282E742AE9EF2300B90920 /* RepositoryProvider.swift */,
+				EA282E762AE9EF4600B90920 /* RepositoryResolving.swift */,
+				EA282E782AE9EF5300B90920 /* ServiceProvider.swift */,
+			);
+			path = DependencyInjection;
 			sourceTree = "<group>";
 		};
 		EA4164D12AE4B6D3008CE66A /* ComparePlans */ = {
@@ -1715,6 +1802,9 @@
 			dependencies = (
 			);
 			name = WalkyCam;
+			packageProductDependencies = (
+				EA282E622AE9EC7800B90920 /* CassandraClient */,
+			);
 			productName = WalkyCam;
 			productReference = 5637A8122AD5DD72000586DF /* WalkyCam.app */;
 			productType = "com.apple.product-type.application";
@@ -1786,6 +1876,9 @@
 				en,
 			);
 			mainGroup = 5637A8092AD5DD71000586DF;
+			packageReferences = (
+				EA282E612AE9EC7800B90920 /* XCRemoteSwiftPackageReference "swift-cassandra-client" */,
+			);
 			productRefGroup = 5637A8132AD5DD72000586DF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1923,11 +2016,13 @@
 				EA282E562AE952F700B90920 /* ProfileViewModel.swift in Sources */,
 				EA910FCA2ADC495700584B98 /* TabBarView.swift in Sources */,
 				EA4165492AE706C6008CE66A /* NotificationsAssemblerProtocol.swift in Sources */,
+				EA282E732AE9EEEF00B90920 /* DependencyContainer.swift in Sources */,
 				EA910F312AD8B55200584B98 /* Divider.swift in Sources */,
 				EAD048722AE22C530096E6AB /* RegistrationPlansAssembler.swift in Sources */,
 				EA910F6D2ADA03D600584B98 /* String+Extension.swift in Sources */,
 				EA910F692AD9B57400584B98 /* OnboardingPageView.swift in Sources */,
 				EA910F652AD9B01300584B98 /* OnboardingRouterProtocol.swift in Sources */,
+				EA282E792AE9EF5300B90920 /* ServiceProvider.swift in Sources */,
 				EA282E592AE952F700B90920 /* ProfileInteractor.swift in Sources */,
 				EA910FFA2ADCBCC000584B98 /* MenuRouter.swift in Sources */,
 				EAD0486D2AE22C530096E6AB /* RegistrationPlansInteractor.swift in Sources */,
@@ -1970,7 +2065,9 @@
 				EA910F9E2ADC43B200584B98 /* FullScreenWrapper.swift in Sources */,
 				56DADB272AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift in Sources */,
 				EA4164F62AE4B6F7008CE66A /* ComparePlansInteractorProtocol.swift in Sources */,
+				EA282E6E2AE9EE1400B90920 /* NetworkingConfig.swift in Sources */,
 				EA282E112AE8327100B90920 /* DateFormat.swift in Sources */,
+				EA282E752AE9EF2300B90920 /* RepositoryProvider.swift in Sources */,
 				EA910F992ADC40DB00584B98 /* AlertView.swift in Sources */,
 				EAD048712AE22C530096E6AB /* RegistrationPlansRoute.swift in Sources */,
 				EA910F8D2ADA06F500584B98 /* RegistrationAssembler.swift in Sources */,
@@ -1996,10 +2093,12 @@
 				EA15B5982AD6E44D00C03407 /* LoginViewModelProtocol.swift in Sources */,
 				EA910F922ADA06F500584B98 /* RegistrationInteractor.swift in Sources */,
 				EA910FC52ADC495700584B98 /* TabBarAssembler.swift in Sources */,
+				EA282E702AE9EE5B00B90920 /* NetworkDelegateProtocol.swift in Sources */,
 				EA82DB502ADF4DBB00E6B39A /* HomeSectionView.swift in Sources */,
 				EA282E132AE832F100B90920 /* Date+Extension.swift in Sources */,
 				EA82DB4E2ADF4A0200E6B39A /* RecentFunctionsCell.swift in Sources */,
 				EA9110222ADDADE100584B98 /* HomeRoute.swift in Sources */,
+				EA282E772AE9EF4600B90920 /* RepositoryResolving.swift in Sources */,
 				EA4165472AE706C6008CE66A /* NotificationsRouterProtocol.swift in Sources */,
 				EA4165462AE706C6008CE66A /* NotificationsRouter.swift in Sources */,
 				EA15B5A12AD6E44D00C03407 /* LoginAssembler.swift in Sources */,
@@ -2009,6 +2108,7 @@
 				EA9110232ADDADE100584B98 /* HomeAssemblerProtocol.swift in Sources */,
 				EA15B5A22AD6E44D00C03407 /* LoginAssemblerProtocol.swift in Sources */,
 				EA910F3C2AD982F300584B98 /* SecureTextInputView.swift in Sources */,
+				EA282E692AE9ED2300B90920 /* RepositoryError.swift in Sources */,
 				EA910FA42ADC470A00584B98 /* WCTabBarView.swift in Sources */,
 				EA4165482AE706C6008CE66A /* NotificationsRoute.swift in Sources */,
 				EA15B5BC2AD707A300C03407 /* NestedObservableObject.swift in Sources */,
@@ -2347,6 +2447,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EA282E612AE9EC7800B90920 /* XCRemoteSwiftPackageReference "swift-cassandra-client" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-cassandra-client";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EA282E622AE9EC7800B90920 /* CassandraClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA282E612AE9EC7800B90920 /* XCRemoteSwiftPackageReference "swift-cassandra-client" */;
+			productName = CassandraClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5637A80A2AD5DD72000586DF /* Project object */;
 }
