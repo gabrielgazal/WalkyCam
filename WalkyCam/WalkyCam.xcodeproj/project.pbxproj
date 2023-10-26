@@ -46,6 +46,7 @@
 		EA282E5A2AE952F700B90920 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282E4F2AE952F700B90920 /* ProfileRouter.swift */; };
 		EA282E5B2AE952F700B90920 /* ProfileRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282E502AE952F700B90920 /* ProfileRouterProtocol.swift */; };
 		EA282E602AE9A10600B90920 /* ImageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282E5F2AE9A10600B90920 /* ImageMock.swift */; };
+		EA282E7C2AE9F14B00B90920 /* WCToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282E7B2AE9F14B00B90920 /* WCToggleStyle.swift */; };
 		EA4164EE2AE4B6F7008CE66A /* ComparePlansRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164DA2AE4B6F6008CE66A /* ComparePlansRoute.swift */; };
 		EA4164EF2AE4B6F7008CE66A /* ComparePlansAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164DC2AE4B6F6008CE66A /* ComparePlansAssembler.swift */; };
 		EA4164F02AE4B6F7008CE66A /* ComparePlansAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164DD2AE4B6F6008CE66A /* ComparePlansAssemblerProtocol.swift */; };
@@ -240,6 +241,7 @@
 		EA282E4F2AE952F700B90920 /* ProfileRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		EA282E502AE952F700B90920 /* ProfileRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileRouterProtocol.swift; sourceTree = "<group>"; };
 		EA282E5F2AE9A10600B90920 /* ImageMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMock.swift; sourceTree = "<group>"; };
+		EA282E7B2AE9F14B00B90920 /* WCToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCToggleStyle.swift; sourceTree = "<group>"; };
 		EA4164DA2AE4B6F6008CE66A /* ComparePlansRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansRoute.swift; sourceTree = "<group>"; };
 		EA4164DC2AE4B6F6008CE66A /* ComparePlansAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansAssembler.swift; sourceTree = "<group>"; };
 		EA4164DD2AE4B6F6008CE66A /* ComparePlansAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansAssemblerProtocol.swift; sourceTree = "<group>"; };
@@ -718,6 +720,14 @@
 				EA282E5F2AE9A10600B90920 /* ImageMock.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		EA282E7A2AE9F13000B90920 /* WCToggle */ = {
+			isa = PBXGroup;
+			children = (
+				EA282E7B2AE9F14B00B90920 /* WCToggleStyle.swift */,
+			);
+			path = WCToggle;
 			sourceTree = "<group>";
 		};
 		EA4164D12AE4B6D3008CE66A /* ComparePlans */ = {
@@ -1288,6 +1298,7 @@
 		EA910F9F2ADC464400584B98 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EA282E7A2AE9F13000B90920 /* WCToggle */,
 				EA9110272ADDB02500584B98 /* AsyncImageView */,
 				EA910FA02ADC464B00584B98 /* TabBar */,
 				EA910F972ADC40CD00584B98 /* AlertView */,
@@ -1932,6 +1943,7 @@
 				EA910FFA2ADCBCC000584B98 /* MenuRouter.swift in Sources */,
 				EAD0486D2AE22C530096E6AB /* RegistrationPlansInteractor.swift in Sources */,
 				EA5E1D782AD7170400738A8F /* LinkButton.swift in Sources */,
+				EA282E7C2AE9F14B00B90920 /* WCToggleStyle.swift in Sources */,
 				EA15B5B02AD7071300C03407 /* SheetModifier.swift in Sources */,
 				EA282E5A2AE952F700B90920 /* ProfileRouter.swift in Sources */,
 				EA9110242ADDADE100584B98 /* HomeAssembler.swift in Sources */,

@@ -46,11 +46,10 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
                 VStack(spacing: Tokens.Size.Spacing.large) {
                     Divider()
                     Group {
-                        HStack {
+                        Toggle(isOn: $viewModel.userData.isWalkCamer) {
                             Text(L10n.ProfileView.Toggle.walkycamer)
-                                .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
-                            Spacer()
                         }
+                        .toggleStyle(WCToggleStyle())
                         Divider()
                     }
                     .isHidden(viewModel.isEditingModeEnabled)
