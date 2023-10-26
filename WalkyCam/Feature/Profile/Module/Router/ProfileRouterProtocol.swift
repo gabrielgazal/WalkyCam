@@ -1,6 +1,6 @@
 import SwiftUI
 
 protocol ProfileRouterProtocol: Router {
-    func routeToSomething()
+    func routeToLogin()
 }
 

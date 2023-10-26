@@ -86,6 +86,9 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
                                     .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
                                 Spacer()
                             }
+                            .onTapGesture {
+                                handleLogoutAction()
+                            }
                             Divider()
                         }
                         .isHidden(viewModel.isEditingModeEnabled)
@@ -106,6 +109,7 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
             .padding(Tokens.Size.Spacing.regular)
         }
                .background(Color.blanco)
+               .navigation(router)
     }
 
     private var headerView: some View {
@@ -171,13 +175,17 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
                 .isHidden(!viewModel.isEditingModeEnabled)
         }
     }
+
+    private func handleLogoutAction() {
+        router.routeToLogin()
+    }
 }
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView(
             viewModel: ProfileViewModel(),
-            router: ProfileRouter(isPresented: .constant(false))
+            router: ProfileRouter(state: RouterState(isPresented: .constant(false)))
         )
     }
 }

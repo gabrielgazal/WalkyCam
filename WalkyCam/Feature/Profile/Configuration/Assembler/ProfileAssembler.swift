@@ -5,7 +5,7 @@ final class ProfileAssembler: ProfileAssemblerProtocol {
         route: ProfileRoute
     ) -> ProfileView<ProfileViewModel, ProfileRouter> {
 
-        let router = ProfileRouter(isPresented: route.isPresented)
+        let router = ProfileRouter(state: RouterState(isPresented: route.isPresented))
 
         let interactor = ProfileInteractor(
             useCases: .init()
