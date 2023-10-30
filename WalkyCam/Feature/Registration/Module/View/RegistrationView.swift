@@ -45,7 +45,7 @@ struct RegistrationView<ViewModel:RegistrationViewModelProtocol, Router: Registr
                 WCUIButton(title: "Registrame",
                            style: .standard,
                            descriptor: OrangeButtonStyleDescriptor(),
-                           action: routeToRegistrationPlans)
+                           action: routeToConfirmMail)
                 LinkButton(title: "Ya tengo una cuenta",
                            color: .naranja,
                            action: handleAlreadyRegistered)
@@ -64,8 +64,8 @@ struct RegistrationView<ViewModel:RegistrationViewModelProtocol, Router: Registr
         router.routeToOnboarding()
     }
 
-    private func routeToRegistrationPlans() {
-        router.routeToRegistrationPlans()
+    private func routeToConfirmMail() {
+        router.routeToConfirmMail()
     }
 }
 

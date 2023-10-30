@@ -39,9 +39,9 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
                     }
                 }
                 .padding(Tokens.Size.Spacing.regular)
-                AdvertisementCardView(backgroundImage: Asset.Fondos.loginFondo.name,
-                                      text: "Con **Plan Premium** tendras: Drone Fly, Inspección con LIDAR, acceso a GeoRadar, servicios especializados legales y de ingeniería y mucho más.",
-                                      action: {})
+                Rectangle()
+                    .fill(Color.red)
+                    .frame(height: 250)
                 HomeSectionView(title: "Descubre más") {
                     LazyVGrid(columns: otherFunctionsColumns,
                               spacing: 16) {
@@ -51,9 +51,9 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
                     }
                 }
                 .padding(Tokens.Size.Spacing.regular)
-                AdvertisementCardView(backgroundImage: Asset.Fondos.loginFondo.name,
-                                      text: "Con **Plan Premium** tendras: Drone Fly, Inspección con LIDAR, acceso a GeoRadar, servicios especializados legales y de ingeniería y mucho más.",
-                                      action: {})
+                Rectangle()
+                    .fill(Color.red)
+                    .frame(height: 250)
                 LazyVGrid(columns: otherFunctionsColumns,
                           spacing: 16) {
                     ForEach(viewModel.premiumFunctions, id: \.self) { item in

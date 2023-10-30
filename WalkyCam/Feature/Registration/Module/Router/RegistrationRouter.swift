@@ -16,9 +16,9 @@ final class RegistrationRouter: Router, RegistrationRouterProtocol {
         appNavigator.view = LoginRoute(isPresented: .constant(false)).build()
     }
 
-    func routeToRegistrationPlans() {
+    func routeToConfirmMail() {
         navigateTo(
-            RegistrationPlansRoute(isPresented: isNavigating)
+            ConfirmMailRoute(isPresented: isNavigating)
         )
     }
 }

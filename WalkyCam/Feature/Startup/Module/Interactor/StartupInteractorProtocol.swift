@@ -1,0 +1,3 @@
+protocol StartupInteractorProtocol {
+    func someFunction()
+}

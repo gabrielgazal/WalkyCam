@@ -33,6 +33,28 @@
 		EA15B5BC2AD707A300C03407 /* NestedObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B5BB2AD707A300C03407 /* NestedObservableObject.swift */; };
 		EA15B5BE2AD707B900C03407 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B5BD2AD707B900C03407 /* ViewModelProtocol.swift */; };
 		EA172AD92AF0335400EB1514 /* AdvertisementCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA172AD82AF0335400EB1514 /* AdvertisementCard.swift */; };
+		EA172AF62AF06BDE00EB1514 /* ConfirmMailRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA172AE32AF06BDD00EB1514 /* ConfirmMailRoute.swift */; };
+		EA172AF72AF06BDE00EB1514 /* ConfirmMailAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA172AE52AF06BDD00EB1514 /* ConfirmMailAssemblerProtocol.swift */; };
+		EA172AF82AF06BDE00EB1514 /* ConfirmMailAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA172AE62AF06BDD00EB1514 /* ConfirmMailAssembler.swift */; };
+		EA172AF92AF06BDE00EB1514 /* ConfirmMailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA172AE92AF06BDD00EB1514 /* ConfirmMailModel.swift */; };
+		EA172AFA2AF06BDE00EB1514 /* ConfirmMailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA172AEC2AF06BDE00EB1514 /* ConfirmMailViewModel.swift */; };
+		EA172AFB2AF06BDE00EB1514 /* ConfirmMailViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA172AED2AF06BDE00EB1514 /* ConfirmMailViewModelProtocol.swift */; };
+		EA172AFC2AF06BDE00EB1514 /* ConfirmMailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA172AEF2AF06BDE00EB1514 /* ConfirmMailView.swift */; };
+		EA172AFD2AF06BDE00EB1514 /* ConfirmMailInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA172AF12AF06BDE00EB1514 /* ConfirmMailInteractorProtocol.swift */; };
+		EA172AFE2AF06BDE00EB1514 /* ConfirmMailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA172AF22AF06BDE00EB1514 /* ConfirmMailInteractor.swift */; };
+		EA172AFF2AF06BDE00EB1514 /* ConfirmMailRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA172AF42AF06BDE00EB1514 /* ConfirmMailRouterProtocol.swift */; };
+		EA172B002AF06BDE00EB1514 /* ConfirmMailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA172AF52AF06BDE00EB1514 /* ConfirmMailRouter.swift */; };
+		EA172B1D2AF06EF600EB1514 /* StartupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA172B0A2AF06EF600EB1514 /* StartupModel.swift */; };
+		EA172B1E2AF06EF600EB1514 /* StartupRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA172B0D2AF06EF600EB1514 /* StartupRoute.swift */; };
+		EA172B1F2AF06EF600EB1514 /* StartupAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA172B0F2AF06EF600EB1514 /* StartupAssembler.swift */; };
+		EA172B202AF06EF600EB1514 /* StartupAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA172B102AF06EF600EB1514 /* StartupAssemblerProtocol.swift */; };
+		EA172B212AF06EF600EB1514 /* StartupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA172B132AF06EF600EB1514 /* StartupViewModel.swift */; };
+		EA172B222AF06EF600EB1514 /* StartupViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA172B142AF06EF600EB1514 /* StartupViewModelProtocol.swift */; };
+		EA172B232AF06EF600EB1514 /* StartupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA172B162AF06EF600EB1514 /* StartupView.swift */; };
+		EA172B242AF06EF600EB1514 /* StartupInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA172B182AF06EF600EB1514 /* StartupInteractor.swift */; };
+		EA172B252AF06EF600EB1514 /* StartupInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA172B192AF06EF600EB1514 /* StartupInteractorProtocol.swift */; };
+		EA172B262AF06EF600EB1514 /* StartupRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA172B1B2AF06EF600EB1514 /* StartupRouter.swift */; };
+		EA172B272AF06EF600EB1514 /* StartupRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA172B1C2AF06EF600EB1514 /* StartupRouterProtocol.swift */; };
 		EA282E112AE8327100B90920 /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282E102AE8327100B90920 /* DateFormat.swift */; };
 		EA282E132AE832F100B90920 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282E122AE832F100B90920 /* Date+Extension.swift */; };
 		EA282E512AE952F700B90920 /* ProfileRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282E3E2AE952F600B90920 /* ProfileRoute.swift */; };
@@ -242,6 +264,28 @@
 		EA15B5BD2AD707B900C03407 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		EA15B5BF2AD709B000C03407 /* WalkyCam-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WalkyCam-Info.plist"; sourceTree = "<group>"; };
 		EA172AD82AF0335400EB1514 /* AdvertisementCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementCard.swift; sourceTree = "<group>"; };
+		EA172AE32AF06BDD00EB1514 /* ConfirmMailRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmMailRoute.swift; sourceTree = "<group>"; };
+		EA172AE52AF06BDD00EB1514 /* ConfirmMailAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmMailAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA172AE62AF06BDD00EB1514 /* ConfirmMailAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmMailAssembler.swift; sourceTree = "<group>"; };
+		EA172AE92AF06BDD00EB1514 /* ConfirmMailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmMailModel.swift; sourceTree = "<group>"; };
+		EA172AEC2AF06BDE00EB1514 /* ConfirmMailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmMailViewModel.swift; sourceTree = "<group>"; };
+		EA172AED2AF06BDE00EB1514 /* ConfirmMailViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmMailViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA172AEF2AF06BDE00EB1514 /* ConfirmMailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmMailView.swift; sourceTree = "<group>"; };
+		EA172AF12AF06BDE00EB1514 /* ConfirmMailInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmMailInteractorProtocol.swift; sourceTree = "<group>"; };
+		EA172AF22AF06BDE00EB1514 /* ConfirmMailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmMailInteractor.swift; sourceTree = "<group>"; };
+		EA172AF42AF06BDE00EB1514 /* ConfirmMailRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmMailRouterProtocol.swift; sourceTree = "<group>"; };
+		EA172AF52AF06BDE00EB1514 /* ConfirmMailRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmMailRouter.swift; sourceTree = "<group>"; };
+		EA172B0A2AF06EF600EB1514 /* StartupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupModel.swift; sourceTree = "<group>"; };
+		EA172B0D2AF06EF600EB1514 /* StartupRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupRoute.swift; sourceTree = "<group>"; };
+		EA172B0F2AF06EF600EB1514 /* StartupAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupAssembler.swift; sourceTree = "<group>"; };
+		EA172B102AF06EF600EB1514 /* StartupAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA172B132AF06EF600EB1514 /* StartupViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupViewModel.swift; sourceTree = "<group>"; };
+		EA172B142AF06EF600EB1514 /* StartupViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA172B162AF06EF600EB1514 /* StartupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupView.swift; sourceTree = "<group>"; };
+		EA172B182AF06EF600EB1514 /* StartupInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupInteractor.swift; sourceTree = "<group>"; };
+		EA172B192AF06EF600EB1514 /* StartupInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupInteractorProtocol.swift; sourceTree = "<group>"; };
+		EA172B1B2AF06EF600EB1514 /* StartupRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupRouter.swift; sourceTree = "<group>"; };
+		EA172B1C2AF06EF600EB1514 /* StartupRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupRouterProtocol.swift; sourceTree = "<group>"; };
 		EA282E102AE8327100B90920 /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
 		EA282E122AE832F100B90920 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		EA282E3E2AE952F600B90920 /* ProfileRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileRoute.swift; sourceTree = "<group>"; };
@@ -501,6 +545,8 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				EA172B012AF06ED800EB1514 /* Startup */,
+				EA172ADA2AF06BA500EB1514 /* ConfirmMail */,
 				EA282ED72AEB569D00B90920 /*  Shared */,
 				EA282EA62AEB52D800B90920 /* Functions */,
 				EA282E142AE952CF00B90920 /* Profile */,
@@ -644,6 +690,202 @@
 				EA15B5BD2AD707B900C03407 /* ViewModelProtocol.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA172ADA2AF06BA500EB1514 /* ConfirmMail */ = {
+			isa = PBXGroup;
+			children = (
+				EA172AE12AF06BDD00EB1514 /* Configuration */,
+				EA172AE72AF06BDD00EB1514 /* Domain */,
+				EA172AEA2AF06BDE00EB1514 /* Module */,
+			);
+			path = ConfirmMail;
+			sourceTree = "<group>";
+		};
+		EA172AE12AF06BDD00EB1514 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA172AE22AF06BDD00EB1514 /* Route */,
+				EA172AE42AF06BDD00EB1514 /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA172AE22AF06BDD00EB1514 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA172AE32AF06BDD00EB1514 /* ConfirmMailRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA172AE42AF06BDD00EB1514 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA172AE52AF06BDD00EB1514 /* ConfirmMailAssemblerProtocol.swift */,
+				EA172AE62AF06BDD00EB1514 /* ConfirmMailAssembler.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EA172AE72AF06BDD00EB1514 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA172AE82AF06BDD00EB1514 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA172AE82AF06BDD00EB1514 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA172AE92AF06BDD00EB1514 /* ConfirmMailModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA172AEA2AF06BDE00EB1514 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA172AEB2AF06BDE00EB1514 /* ViewModel */,
+				EA172AEE2AF06BDE00EB1514 /* View */,
+				EA172AF02AF06BDE00EB1514 /* Interactor */,
+				EA172AF32AF06BDE00EB1514 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA172AEB2AF06BDE00EB1514 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA172AEC2AF06BDE00EB1514 /* ConfirmMailViewModel.swift */,
+				EA172AED2AF06BDE00EB1514 /* ConfirmMailViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA172AEE2AF06BDE00EB1514 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA172AEF2AF06BDE00EB1514 /* ConfirmMailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA172AF02AF06BDE00EB1514 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA172AF12AF06BDE00EB1514 /* ConfirmMailInteractorProtocol.swift */,
+				EA172AF22AF06BDE00EB1514 /* ConfirmMailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EA172AF32AF06BDE00EB1514 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA172AF42AF06BDE00EB1514 /* ConfirmMailRouterProtocol.swift */,
+				EA172AF52AF06BDE00EB1514 /* ConfirmMailRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EA172B012AF06ED800EB1514 /* Startup */ = {
+			isa = PBXGroup;
+			children = (
+				EA172B0B2AF06EF600EB1514 /* Configuration */,
+				EA172B082AF06EF600EB1514 /* Domain */,
+				EA172B112AF06EF600EB1514 /* Module */,
+			);
+			path = Startup;
+			sourceTree = "<group>";
+		};
+		EA172B082AF06EF600EB1514 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA172B092AF06EF600EB1514 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA172B092AF06EF600EB1514 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA172B0A2AF06EF600EB1514 /* StartupModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA172B0B2AF06EF600EB1514 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA172B0C2AF06EF600EB1514 /* Route */,
+				EA172B0E2AF06EF600EB1514 /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA172B0C2AF06EF600EB1514 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA172B0D2AF06EF600EB1514 /* StartupRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA172B0E2AF06EF600EB1514 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA172B0F2AF06EF600EB1514 /* StartupAssembler.swift */,
+				EA172B102AF06EF600EB1514 /* StartupAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EA172B112AF06EF600EB1514 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA172B122AF06EF600EB1514 /* ViewModel */,
+				EA172B152AF06EF600EB1514 /* View */,
+				EA172B172AF06EF600EB1514 /* Interactor */,
+				EA172B1A2AF06EF600EB1514 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA172B122AF06EF600EB1514 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA172B132AF06EF600EB1514 /* StartupViewModel.swift */,
+				EA172B142AF06EF600EB1514 /* StartupViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA172B152AF06EF600EB1514 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA172B162AF06EF600EB1514 /* StartupView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA172B172AF06EF600EB1514 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA172B182AF06EF600EB1514 /* StartupInteractor.swift */,
+				EA172B192AF06EF600EB1514 /* StartupInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EA172B1A2AF06EF600EB1514 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA172B1B2AF06EF600EB1514 /* StartupRouter.swift */,
+				EA172B1C2AF06EF600EB1514 /* StartupRouterProtocol.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		EA282E142AE952CF00B90920 /* Profile */ = {
@@ -2024,7 +2266,9 @@
 			files = (
 				EA910FF72ADCBCC000584B98 /* MenuView.swift in Sources */,
 				EAD048682AE22C530096E6AB /* RegistrationPlansModel.swift in Sources */,
+				EA172AFF2AF06BDE00EB1514 /* ConfirmMailRouterProtocol.swift in Sources */,
 				EA910FCD2ADC495700584B98 /* TabBarRouterProtocol.swift in Sources */,
+				EA172B002AF06BDE00EB1514 /* ConfirmMailRouter.swift in Sources */,
 				EAD048732AE22C530096E6AB /* RegistrationPlansAssemblerProtocol.swift in Sources */,
 				EA282E582AE952F700B90920 /* ProfileInteractorProtocol.swift in Sources */,
 				EA9110212ADDADE100584B98 /* HomeModel.swift in Sources */,
@@ -2039,6 +2283,7 @@
 				EAD0486C2AE22C530096E6AB /* RegistrationPlansView.swift in Sources */,
 				EA91102D2ADDB91100584B98 /* URL+ImageLoadable.swift in Sources */,
 				EA9110202ADDADE100584B98 /* HomeRouterProtocol.swift in Sources */,
+				EA172AF62AF06BDE00EB1514 /* ConfirmMailRoute.swift in Sources */,
 				EA910F942ADA06F500584B98 /* RegistrationRouter.swift in Sources */,
 				EA4165412AE706C6008CE66A /* NotificationsViewModelProtocol.swift in Sources */,
 				EA15B5AC2AD706DB00C03407 /* BottomSheetModifier.swift in Sources */,
@@ -2049,11 +2294,13 @@
 				EA910F952ADA06F500584B98 /* RegistrationRouterProtocol.swift in Sources */,
 				EA282E542AE952F700B90920 /* ProfileModel.swift in Sources */,
 				EA91101E2ADDADE100584B98 /* HomeInteractorProtocol.swift in Sources */,
+				EA172B242AF06EF600EB1514 /* StartupInteractor.swift in Sources */,
 				EA910F602AD9B01300584B98 /* OnboardingViewModel.swift in Sources */,
 				EA282ED32AEB531100B90920 /* FunctionsAssembler.swift in Sources */,
 				EA4164EF2AE4B6F7008CE66A /* ComparePlansAssembler.swift in Sources */,
 				EA910FCF2ADC495700584B98 /* TabBarModel.swift in Sources */,
 				EA910F8B2ADA06F500584B98 /* RegistrationRoute.swift in Sources */,
+				EA172AF72AF06BDE00EB1514 /* ConfirmMailAssemblerProtocol.swift in Sources */,
 				EA282ED12AEB531100B90920 /* FunctionsModel.swift in Sources */,
 				EA4164EE2AE4B6F7008CE66A /* ComparePlansRoute.swift in Sources */,
 				EA910F912ADA06F500584B98 /* RegistrationView.swift in Sources */,
@@ -2062,6 +2309,7 @@
 				EA172AD92AF0335400EB1514 /* AdvertisementCard.swift in Sources */,
 				EA4164F12AE4B6F7008CE66A /* ComparePlansViewModel.swift in Sources */,
 				EA282ECB2AEB531100B90920 /* FunctionsViewModelProtocol.swift in Sources */,
+				EA172AF92AF06BDE00EB1514 /* ConfirmMailModel.swift in Sources */,
 				EAD048692AE22C530096E6AB /* RegistrationPlansViewModelProtocol.swift in Sources */,
 				EA910FF02ADCBCC000584B98 /* MenuRoute.swift in Sources */,
 				EA282E512AE952F700B90920 /* ProfileRoute.swift in Sources */,
@@ -2079,14 +2327,19 @@
 				EA15B5B92AD7077C00C03407 /* GenericUseCase.swift in Sources */,
 				EA15B5BE2AD707B900C03407 /* ViewModelProtocol.swift in Sources */,
 				EA91101C2ADDADE100584B98 /* HomeView.swift in Sources */,
+				EA172B252AF06EF600EB1514 /* StartupInteractorProtocol.swift in Sources */,
 				EA5E1D742AD716A500738A8F /* ProjectFont.swift in Sources */,
 				EA4164F32AE4B6F7008CE66A /* ComparePlansViewModelProtocol.swift in Sources */,
+				EA172B202AF06EF600EB1514 /* StartupAssemblerProtocol.swift in Sources */,
 				EA4164FB2AE4B805008CE66A /* ComparePlansPageView.swift in Sources */,
 				EA5E1D7B2AD7174700738A8F /* Button+Extension.swift in Sources */,
 				EA910F642AD9B01300584B98 /* OnboardingRouter.swift in Sources */,
+				EA172B262AF06EF600EB1514 /* StartupRouter.swift in Sources */,
+				EA172B1E2AF06EF600EB1514 /* StartupRoute.swift in Sources */,
 				EA15B59B2AD6E44D00C03407 /* LoginView.swift in Sources */,
 				EA910F5E2AD9B01300584B98 /* OnboardingViewModelProtocol.swift in Sources */,
 				EA910FF12ADCBCC000584B98 /* MenuAssemblerProtocol.swift in Sources */,
+				EA172B1F2AF06EF600EB1514 /* StartupAssembler.swift in Sources */,
 				EA15B59A2AD6E44D00C03407 /* LoginViewModel.swift in Sources */,
 				EA91102B2ADDB05300584B98 /* ImageLoader.swift in Sources */,
 				EA9110312ADDB95C00584B98 /* ImageCache.swift in Sources */,
@@ -2098,6 +2351,7 @@
 				EA4165492AE706C6008CE66A /* NotificationsAssemblerProtocol.swift in Sources */,
 				EA910F312AD8B55200584B98 /* Divider.swift in Sources */,
 				EAD048722AE22C530096E6AB /* RegistrationPlansAssembler.swift in Sources */,
+				EA172AFD2AF06BDE00EB1514 /* ConfirmMailInteractorProtocol.swift in Sources */,
 				EA282EDD2AEB572700B90920 /* FunctionCell.swift in Sources */,
 				EA910F6D2ADA03D600584B98 /* String+Extension.swift in Sources */,
 				EA910F692AD9B57400584B98 /* OnboardingPageView.swift in Sources */,
@@ -2118,6 +2372,7 @@
 				EA910F5A2AD9B01300584B98 /* OnboardingRoute.swift in Sources */,
 				EA910FD22ADC499500584B98 /* TabBarBuilder.swift in Sources */,
 				EA5E1D762AD716D200738A8F /* ButtonStyleDescriptor.swift in Sources */,
+				EA172AF82AF06BDE00EB1514 /* ConfirmMailAssembler.swift in Sources */,
 				EA82DB532ADF605500E6B39A /* ReminderCardView.swift in Sources */,
 				EA9110262ADDAE6400584B98 /* ProfileHeaderView.swift in Sources */,
 				EA282E602AE9A10600B90920 /* ImageMock.swift in Sources */,
@@ -2128,7 +2383,9 @@
 				EA15B5A02AD6E44D00C03407 /* LoginRoute.swift in Sources */,
 				EA5E1D7D2AD7178F00738A8F /* View+Extension.swift in Sources */,
 				EA9110332ADDBF7400584B98 /* WalkyBotView.swift in Sources */,
+				EA172AFC2AF06BDE00EB1514 /* ConfirmMailView.swift in Sources */,
 				EA910F362AD976F600584B98 /* CheckboxToggle.swift in Sources */,
+				EA172B232AF06EF600EB1514 /* StartupView.swift in Sources */,
 				EA91101D2ADDADE100584B98 /* HomeInteractor.swift in Sources */,
 				EA5E1D6F2AD7164E00738A8F /* MainButtonStyle.swift in Sources */,
 				EA5E1D9E2AD8A3DA00738A8F /* Strings.swift in Sources */,
@@ -2139,6 +2396,7 @@
 				EA5E1D842AD7183700738A8F /* RoundedCornerShape.swift in Sources */,
 				EA282EDA2AEB56B800B90920 /* FunctionData.swift in Sources */,
 				EA4164F92AE4B6F7008CE66A /* ComparePlansModel.swift in Sources */,
+				EA172B1D2AF06EF600EB1514 /* StartupModel.swift in Sources */,
 				EA910F5B2AD9B01300584B98 /* OnboardingAssembler.swift in Sources */,
 				EA910F5C2AD9B01300584B98 /* OnboardingAssemblerProtocol.swift in Sources */,
 				EA910FC42ADC495700584B98 /* TabBarRoute.swift in Sources */,
@@ -2148,12 +2406,14 @@
 				EA910F9E2ADC43B200584B98 /* FullScreenWrapper.swift in Sources */,
 				56DADB272AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift in Sources */,
 				EA282ED62AEB532800B90920 /* RecentFunctionsCell.swift in Sources */,
+				EA172B222AF06EF600EB1514 /* StartupViewModelProtocol.swift in Sources */,
 				EA4164F62AE4B6F7008CE66A /* ComparePlansInteractorProtocol.swift in Sources */,
 				EA282E112AE8327100B90920 /* DateFormat.swift in Sources */,
 				EA910F992ADC40DB00584B98 /* AlertView.swift in Sources */,
 				EAD048712AE22C530096E6AB /* RegistrationPlansRoute.swift in Sources */,
 				EA910F8D2ADA06F500584B98 /* RegistrationAssembler.swift in Sources */,
 				EA282ECF2AEB531100B90920 /* FunctionsRouterProtocol.swift in Sources */,
+				EA172B272AF06EF600EB1514 /* StartupRouterProtocol.swift in Sources */,
 				5637A8162AD5DD72000586DF /* WalkyCamApp.swift in Sources */,
 				EA15B5B42AD7074200C03407 /* RouterState.swift in Sources */,
 				EA910F2E2AD8B14C00584B98 /* WCUIButton.swift in Sources */,
@@ -2180,11 +2440,15 @@
 				EA282E132AE832F100B90920 /* Date+Extension.swift in Sources */,
 				EA9110222ADDADE100584B98 /* HomeRoute.swift in Sources */,
 				EA4165472AE706C6008CE66A /* NotificationsRouterProtocol.swift in Sources */,
+				EA172AFA2AF06BDE00EB1514 /* ConfirmMailViewModel.swift in Sources */,
 				EA4165462AE706C6008CE66A /* NotificationsRouter.swift in Sources */,
 				EA15B5A12AD6E44D00C03407 /* LoginAssembler.swift in Sources */,
 				EA910F6B2AD9CCF500584B98 /* PageControl.swift in Sources */,
+				EA172B212AF06EF600EB1514 /* StartupViewModel.swift in Sources */,
 				EA282E572AE952F700B90920 /* ProfileView.swift in Sources */,
 				EA4164F52AE4B6F7008CE66A /* ComparePlansInteractor.swift in Sources */,
+				EA172AFE2AF06BDE00EB1514 /* ConfirmMailInteractor.swift in Sources */,
+				EA172AFB2AF06BDE00EB1514 /* ConfirmMailViewModelProtocol.swift in Sources */,
 				EA9110232ADDADE100584B98 /* HomeAssemblerProtocol.swift in Sources */,
 				EA15B5A22AD6E44D00C03407 /* LoginAssemblerProtocol.swift in Sources */,
 				EA282ECE2AEB531100B90920 /* FunctionsInteractor.swift in Sources */,

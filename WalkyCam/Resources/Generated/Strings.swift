@@ -10,6 +10,13 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+  internal enum ConfirmMailView {
+    /// Ir al correo
+    internal static let button = L10n.tr("Localizable", "ConfirmMailView.button", fallback: "Ir al correo")
+    /// Tu cuenta se registró con éxito.
+    /// Te hemos enviado un correo para confirmar tu cuenta
+    internal static let title = L10n.tr("Localizable", "ConfirmMailView.title", fallback: "Tu cuenta se registró con éxito.\nTe hemos enviado un correo para confirmar tu cuenta")
+  }
   internal enum LoginView {
     internal enum Button {
       /// He olvidado la contraseña
@@ -148,6 +155,16 @@ internal enum L10n {
         /// Ver Plan
         internal static let title = L10n.tr("Localizable", "RegistrationPlans.plan.button.title", fallback: "Ver Plan")
       }
+    }
+  }
+  internal enum StartupView {
+    /// Comenzar
+    internal static let button = L10n.tr("Localizable", "StartupView.button", fallback: "Comenzar")
+    /// Tu cuenta ha sido validada.
+    internal static let subtitle = L10n.tr("Localizable", "StartupView.subtitle", fallback: "Tu cuenta ha sido validada.")
+    /// Bienvenida %@!
+    internal static func title(_ p1: Any) -> String {
+      return L10n.tr("Localizable", "StartupView.title", String(describing: p1), fallback: "Bienvenida %@!")
     }
   }
   internal enum TabBarBuilder {

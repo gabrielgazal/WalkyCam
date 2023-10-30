@@ -26,9 +26,6 @@ struct AdvertisementCardView: View {
 
     var body: some View {
         ZStack {
-            Image(backgroundImage)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.small) {
                 HStack(spacing: Tokens.Size.Spacing.small) {
@@ -55,9 +52,16 @@ struct AdvertisementCardView: View {
                 .frame(width: 150)
             }
                    .padding(Tokens.Size.Spacing.regular)
+                   .background(
+                           Image(backgroundImage)
+                               .resizable()
+                               .aspectRatio(contentMode: .fill)
+                               .clipped()
+                   )
         }
         .frame(width: .infinity, height: 250)
         .clipped()
+        .contentShape(Rectangle())
     }
 }
 

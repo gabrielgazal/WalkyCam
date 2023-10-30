@@ -62,3 +62,12 @@
 "ProfileView.section.logout" = "Cerrar Sesión";
 "ProfileView.button.save" = "Guardar cambios";
 "ProfileView.button.cancel" = "Cancelar";
+
+//MARK: - ConfirmMailView
+"ConfirmMailView.title" = "Tu cuenta se registró con éxito.\nTe hemos enviado un correo para confirmar tu cuenta";
+"ConfirmMailView.button" = "Ir al correo";
+
+//MARK: - StartupView
+"StartupView.title" = "Bienvenida %@!";
+"StartupView.subtitle" = "Tu cuenta ha sido validada.";
+"StartupView.button" = "Comenzar";

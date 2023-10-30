@@ -2,5 +2,5 @@ import SwiftUI
 
 protocol RegistrationRouterProtocol: Router {
     func routeToOnboarding()
-    func routeToRegistrationPlans()
+    func routeToConfirmMail()
 }
