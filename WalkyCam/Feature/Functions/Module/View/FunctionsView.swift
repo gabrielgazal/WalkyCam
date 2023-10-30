@@ -72,6 +72,7 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
                           .padding(Tokens.Size.Spacing.regular)
             }
         }
+        .padding([.top], Tokens.Size.Spacing.large)
     }
 }
 
