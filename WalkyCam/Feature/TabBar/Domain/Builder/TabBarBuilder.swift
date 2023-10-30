@@ -44,7 +44,7 @@ final class TabBarBuilder: TabBarBuilderProtocol {
         return WCTabBarItem(
             iconName: Asset.TabBar.grid.name,
             title: L10n.TabBarBuilder.Tab.functions,
-            destination: Color.red.eraseToAnyView()
+            destination: FunctionsRoute(isPresented: .constant(false)).build()
         )
     }
 

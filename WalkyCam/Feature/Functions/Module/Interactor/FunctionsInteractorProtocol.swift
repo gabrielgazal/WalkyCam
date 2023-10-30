@@ -1,0 +1,3 @@
+protocol FunctionsInteractorProtocol {
+    func someFunction()
+}
