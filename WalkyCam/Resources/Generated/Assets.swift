@@ -73,6 +73,8 @@ internal enum Asset {
   }
   internal enum Illustrations {
     internal static let cammy = ImageAsset(name: "cammy")
+    internal static let cryptoOnboarding1 = ImageAsset(name: "crypto-onboarding1")
+    internal static let cryptoOnboarding2 = ImageAsset(name: "crypto-onboarding2")
     internal static let onboarding1 = ImageAsset(name: "onboarding1")
     internal static let onboarding2 = ImageAsset(name: "onboarding2")
     internal static let onboarding3 = ImageAsset(name: "onboarding3")

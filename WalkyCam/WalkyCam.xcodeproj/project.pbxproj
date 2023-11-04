@@ -13,6 +13,18 @@
 		56DADB222AD5EAA400710618 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB212AD5EAA400710618 /* AppNavigator.swift */; };
 		56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB232AD5EB3800710618 /* AppDelegate.swift */; };
 		56DADB272AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB262AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift */; };
+		EA0E408B2AF69771002B7437 /* CashWalletOnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E40782AF69770002B7437 /* CashWalletOnboardingModel.swift */; };
+		EA0E408C2AF69771002B7437 /* CashWalletOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E407B2AF69770002B7437 /* CashWalletOnboardingViewModel.swift */; };
+		EA0E408D2AF69771002B7437 /* CashWalletOnboardingViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E407C2AF69770002B7437 /* CashWalletOnboardingViewModelProtocol.swift */; };
+		EA0E408E2AF69771002B7437 /* CashWalletOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E407E2AF69770002B7437 /* CashWalletOnboardingView.swift */; };
+		EA0E408F2AF69771002B7437 /* CashWalletOnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E40802AF69771002B7437 /* CashWalletOnboardingInteractor.swift */; };
+		EA0E40902AF69771002B7437 /* CashWalletOnboardingInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E40812AF69771002B7437 /* CashWalletOnboardingInteractorProtocol.swift */; };
+		EA0E40912AF69771002B7437 /* CashWalletOnboardingRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E40832AF69771002B7437 /* CashWalletOnboardingRouterProtocol.swift */; };
+		EA0E40922AF69771002B7437 /* CashWalletOnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E40842AF69771002B7437 /* CashWalletOnboardingRouter.swift */; };
+		EA0E40932AF69771002B7437 /* CashWalletOnboardingRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E40872AF69771002B7437 /* CashWalletOnboardingRoute.swift */; };
+		EA0E40942AF69771002B7437 /* CashWalletOnboardingAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E40892AF69771002B7437 /* CashWalletOnboardingAssemblerProtocol.swift */; };
+		EA0E40952AF69771002B7437 /* CashWalletOnboardingAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E408A2AF69771002B7437 /* CashWalletOnboardingAssembler.swift */; };
+		EA0E40972AF697F0002B7437 /* CashWalletOnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E40962AF697F0002B7437 /* CashWalletOnboardingPageView.swift */; };
 		EA15B5762AD6DF2C00C03407 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA15B5742AD6DF2C00C03407 /* Localizable.strings */; };
 		EA15B5982AD6E44D00C03407 /* LoginViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B5842AD6E44D00C03407 /* LoginViewModelProtocol.swift */; };
 		EA15B59A2AD6E44D00C03407 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B5862AD6E44D00C03407 /* LoginViewModel.swift */; };
@@ -243,6 +255,18 @@
 		56DADB212AD5EAA400710618 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		56DADB232AD5EB3800710618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56DADB262AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+DependencyRegistration.swift"; sourceTree = "<group>"; };
+		EA0E40782AF69770002B7437 /* CashWalletOnboardingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashWalletOnboardingModel.swift; sourceTree = "<group>"; };
+		EA0E407B2AF69770002B7437 /* CashWalletOnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashWalletOnboardingViewModel.swift; sourceTree = "<group>"; };
+		EA0E407C2AF69770002B7437 /* CashWalletOnboardingViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashWalletOnboardingViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA0E407E2AF69770002B7437 /* CashWalletOnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashWalletOnboardingView.swift; sourceTree = "<group>"; };
+		EA0E40802AF69771002B7437 /* CashWalletOnboardingInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashWalletOnboardingInteractor.swift; sourceTree = "<group>"; };
+		EA0E40812AF69771002B7437 /* CashWalletOnboardingInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashWalletOnboardingInteractorProtocol.swift; sourceTree = "<group>"; };
+		EA0E40832AF69771002B7437 /* CashWalletOnboardingRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashWalletOnboardingRouterProtocol.swift; sourceTree = "<group>"; };
+		EA0E40842AF69771002B7437 /* CashWalletOnboardingRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashWalletOnboardingRouter.swift; sourceTree = "<group>"; };
+		EA0E40872AF69771002B7437 /* CashWalletOnboardingRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashWalletOnboardingRoute.swift; sourceTree = "<group>"; };
+		EA0E40892AF69771002B7437 /* CashWalletOnboardingAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashWalletOnboardingAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA0E408A2AF69771002B7437 /* CashWalletOnboardingAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashWalletOnboardingAssembler.swift; sourceTree = "<group>"; };
+		EA0E40962AF697F0002B7437 /* CashWalletOnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashWalletOnboardingPageView.swift; sourceTree = "<group>"; };
 		EA15B5752AD6DF2C00C03407 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EA15B5842AD6E44D00C03407 /* LoginViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModelProtocol.swift; sourceTree = "<group>"; };
 		EA15B5862AD6E44D00C03407 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -533,6 +557,105 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		EA0E406F2AF6974B002B7437 /* CashWalletOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+				EA0E40852AF69771002B7437 /* Configuration */,
+				EA0E40762AF69770002B7437 /* Domain */,
+				EA0E40792AF69770002B7437 /* Module */,
+			);
+			path = CashWalletOnboarding;
+			sourceTree = "<group>";
+		};
+		EA0E40762AF69770002B7437 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA0E40772AF69770002B7437 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA0E40772AF69770002B7437 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA0E40782AF69770002B7437 /* CashWalletOnboardingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA0E40792AF69770002B7437 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA0E407A2AF69770002B7437 /* ViewModel */,
+				EA0E407D2AF69770002B7437 /* View */,
+				EA0E407F2AF69770002B7437 /* Interactor */,
+				EA0E40822AF69771002B7437 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA0E407A2AF69770002B7437 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA0E407B2AF69770002B7437 /* CashWalletOnboardingViewModel.swift */,
+				EA0E407C2AF69770002B7437 /* CashWalletOnboardingViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA0E407D2AF69770002B7437 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA0E407E2AF69770002B7437 /* CashWalletOnboardingView.swift */,
+				EA0E40962AF697F0002B7437 /* CashWalletOnboardingPageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA0E407F2AF69770002B7437 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA0E40802AF69771002B7437 /* CashWalletOnboardingInteractor.swift */,
+				EA0E40812AF69771002B7437 /* CashWalletOnboardingInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EA0E40822AF69771002B7437 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA0E40832AF69771002B7437 /* CashWalletOnboardingRouterProtocol.swift */,
+				EA0E40842AF69771002B7437 /* CashWalletOnboardingRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EA0E40852AF69771002B7437 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA0E40862AF69771002B7437 /* Route */,
+				EA0E40882AF69771002B7437 /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA0E40862AF69771002B7437 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA0E40872AF69771002B7437 /* CashWalletOnboardingRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA0E40882AF69771002B7437 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA0E40892AF69771002B7437 /* CashWalletOnboardingAssemblerProtocol.swift */,
+				EA0E408A2AF69771002B7437 /* CashWalletOnboardingAssembler.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
 		EA15B5772AD6DFAB00C03407 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
@@ -545,6 +668,7 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				EA0E406F2AF6974B002B7437 /* CashWalletOnboarding */,
 				EA172B012AF06ED800EB1514 /* Startup */,
 				EA172ADA2AF06BA500EB1514 /* ConfirmMail */,
 				EA282ED72AEB569D00B90920 /*  Shared */,
@@ -2279,6 +2403,7 @@
 				EA910FCE2ADC495700584B98 /* TabBarRouter.swift in Sources */,
 				EA4165442AE706C6008CE66A /* NotificationsInteractorProtocol.swift in Sources */,
 				EA15B5B22AD7072400C03407 /* SnackBarModifier.swift in Sources */,
+				EA0E40952AF69771002B7437 /* CashWalletOnboardingAssembler.swift in Sources */,
 				EA5E1D962AD725DF00738A8F /* ProjectColors.swift in Sources */,
 				EAD0486C2AE22C530096E6AB /* RegistrationPlansView.swift in Sources */,
 				EA91102D2ADDB91100584B98 /* URL+ImageLoadable.swift in Sources */,
@@ -2322,13 +2447,16 @@
 				EA910FA62ADC48DE00584B98 /* WCTabBarContainerView.swift in Sources */,
 				EA910F672AD9B20600584B98 /* NavigationController+Extension.swift in Sources */,
 				56DADB202AD5EA7200710618 /* AppNavigatorProtocol.swift in Sources */,
+				EA0E408B2AF69771002B7437 /* CashWalletOnboardingModel.swift in Sources */,
 				EAD0486B2AE22C530096E6AB /* RegistrationPlansViewModel.swift in Sources */,
 				EA910FF32ADCBCC000584B98 /* MenuItemModel.swift in Sources */,
 				EA15B5B92AD7077C00C03407 /* GenericUseCase.swift in Sources */,
 				EA15B5BE2AD707B900C03407 /* ViewModelProtocol.swift in Sources */,
+				EA0E408D2AF69771002B7437 /* CashWalletOnboardingViewModelProtocol.swift in Sources */,
 				EA91101C2ADDADE100584B98 /* HomeView.swift in Sources */,
 				EA172B252AF06EF600EB1514 /* StartupInteractorProtocol.swift in Sources */,
 				EA5E1D742AD716A500738A8F /* ProjectFont.swift in Sources */,
+				EA0E40972AF697F0002B7437 /* CashWalletOnboardingPageView.swift in Sources */,
 				EA4164F32AE4B6F7008CE66A /* ComparePlansViewModelProtocol.swift in Sources */,
 				EA172B202AF06EF600EB1514 /* StartupAssemblerProtocol.swift in Sources */,
 				EA4164FB2AE4B805008CE66A /* ComparePlansPageView.swift in Sources */,
@@ -2379,14 +2507,17 @@
 				EA910FF22ADCBCC000584B98 /* MenuAssembler.swift in Sources */,
 				EA15B5B62AD7075600C03407 /* Router.swift in Sources */,
 				EA91101A2ADDADE100584B98 /* HomeViewModel.swift in Sources */,
+				EA0E40902AF69771002B7437 /* CashWalletOnboardingInteractorProtocol.swift in Sources */,
 				EA15B5AE2AD7070400C03407 /* NavigationModifier.swift in Sources */,
 				EA15B5A02AD6E44D00C03407 /* LoginRoute.swift in Sources */,
 				EA5E1D7D2AD7178F00738A8F /* View+Extension.swift in Sources */,
+				EA0E40922AF69771002B7437 /* CashWalletOnboardingRouter.swift in Sources */,
 				EA9110332ADDBF7400584B98 /* WalkyBotView.swift in Sources */,
 				EA172AFC2AF06BDE00EB1514 /* ConfirmMailView.swift in Sources */,
 				EA910F362AD976F600584B98 /* CheckboxToggle.swift in Sources */,
 				EA172B232AF06EF600EB1514 /* StartupView.swift in Sources */,
 				EA91101D2ADDADE100584B98 /* HomeInteractor.swift in Sources */,
+				EA0E40942AF69771002B7437 /* CashWalletOnboardingAssemblerProtocol.swift in Sources */,
 				EA5E1D6F2AD7164E00738A8F /* MainButtonStyle.swift in Sources */,
 				EA5E1D9E2AD8A3DA00738A8F /* Strings.swift in Sources */,
 				EA9110292ADDB03300584B98 /* AsyncImageView.swift in Sources */,
@@ -2409,6 +2540,8 @@
 				EA172B222AF06EF600EB1514 /* StartupViewModelProtocol.swift in Sources */,
 				EA4164F62AE4B6F7008CE66A /* ComparePlansInteractorProtocol.swift in Sources */,
 				EA282E112AE8327100B90920 /* DateFormat.swift in Sources */,
+				EA0E408F2AF69771002B7437 /* CashWalletOnboardingInteractor.swift in Sources */,
+				EA0E40912AF69771002B7437 /* CashWalletOnboardingRouterProtocol.swift in Sources */,
 				EA910F992ADC40DB00584B98 /* AlertView.swift in Sources */,
 				EAD048712AE22C530096E6AB /* RegistrationPlansRoute.swift in Sources */,
 				EA910F8D2ADA06F500584B98 /* RegistrationAssembler.swift in Sources */,
@@ -2417,6 +2550,7 @@
 				5637A8162AD5DD72000586DF /* WalkyCamApp.swift in Sources */,
 				EA15B5B42AD7074200C03407 /* RouterState.swift in Sources */,
 				EA910F2E2AD8B14C00584B98 /* WCUIButton.swift in Sources */,
+				EA0E408E2AF69771002B7437 /* CashWalletOnboardingView.swift in Sources */,
 				EA282E5B2AE952F700B90920 /* ProfileRouterProtocol.swift in Sources */,
 				EA15B59F2AD6E44D00C03407 /* LoginRouterProtocol.swift in Sources */,
 				EA5E1D9D2AD8A3DA00738A8F /* Assets.swift in Sources */,
@@ -2426,6 +2560,7 @@
 				EA910F3A2AD9782000584B98 /* SelectorModel.swift in Sources */,
 				EAD0486F2AE22C530096E6AB /* RegistrationPlansRouterProtocol.swift in Sources */,
 				EAD048702AE22C530096E6AB /* RegistrationPlansRouter.swift in Sources */,
+				EA0E408C2AF69771002B7437 /* CashWalletOnboardingViewModel.swift in Sources */,
 				EA91102F2ADDB93D00584B98 /* EnvironmentValues+ImageCache.swift in Sources */,
 				EA910F9C2ADC437300584B98 /* AlertModifier.swift in Sources */,
 				EA910FFB2ADCBCC000584B98 /* MenuRouterProtocol.swift in Sources */,
@@ -2454,6 +2589,7 @@
 				EA282ECE2AEB531100B90920 /* FunctionsInteractor.swift in Sources */,
 				EA910F3C2AD982F300584B98 /* SecureTextInputView.swift in Sources */,
 				EA910FA42ADC470A00584B98 /* WCTabBarView.swift in Sources */,
+				EA0E40932AF69771002B7437 /* CashWalletOnboardingRoute.swift in Sources */,
 				EA4165482AE706C6008CE66A /* NotificationsRoute.swift in Sources */,
 				EA15B5BC2AD707A300C03407 /* NestedObservableObject.swift in Sources */,
 				EA5E1D932AD71ABB00738A8F /* Tokens.swift in Sources */,

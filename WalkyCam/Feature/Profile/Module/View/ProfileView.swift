@@ -21,7 +21,7 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
         VStack(alignment: .center,
                spacing: Tokens.Size.Spacing.regular) {
             headerView
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 profileImageView
                     .frame(width: 120, height: 120)
                     .scaledToFit()

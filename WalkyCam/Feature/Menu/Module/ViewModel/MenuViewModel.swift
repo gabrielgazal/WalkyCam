@@ -15,7 +15,7 @@ final class MenuViewModel: MenuViewModelProtocol {
 
     private func buildMenuItems() {
         menuItems = [
-            .init(icon: Asset.Menu.wallet.name, title: L10n.MenuViewModel.Item.wallet, routeToNavigate: MockRoute()),
+            .init(icon: Asset.Menu.wallet.name, title: L10n.MenuViewModel.Item.wallet, routeToNavigate: CashWalletOnboardingRoute(isPresented: .constant(false))),
             .init(icon: Asset.Menu.galery.name, title: L10n.MenuViewModel.Item.galery, routeToNavigate: MockRoute()),
             .init(icon: Asset.Menu.settings.name, title: L10n.MenuViewModel.Item.settings, routeToNavigate: MockRoute()),
             .init(icon: Asset.Menu.help.name, title: L10n.MenuViewModel.Item.help, routeToNavigate: MockRoute()),

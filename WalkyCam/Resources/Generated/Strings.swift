@@ -10,6 +10,28 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+  internal enum CashWalletOnboardingView {
+    internal enum Button {
+      /// Continuar
+      internal static let next = L10n.tr("Localizable", "CashWalletOnboardingView.Button.next", fallback: "Continuar")
+      /// Omitir
+      internal static let skip = L10n.tr("Localizable", "CashWalletOnboardingView.Button.skip", fallback: "Omitir")
+      /// Ingresar
+      internal static let start = L10n.tr("Localizable", "CashWalletOnboardingView.Button.start", fallback: "Ingresar")
+    }
+    internal enum Page1 {
+      /// Tu dinero de curso legal (Dinero FIAT), accede a tus cuentas bancarias y efectúa o recibe transferencias, con la máxima seguridad.
+      internal static let subtitle = L10n.tr("Localizable", "CashWalletOnboardingView.Page1.subtitle", fallback: "Tu dinero de curso legal (Dinero FIAT), accede a tus cuentas bancarias y efectúa o recibe transferencias, con la máxima seguridad.")
+      /// Cash Wallet
+      internal static let title = L10n.tr("Localizable", "CashWalletOnboardingView.Page1.title", fallback: "Cash Wallet")
+    }
+    internal enum Page2 {
+      /// Monedero de Criptomonedas: Opera sobre tus criptomonedas con total seguridad.
+      internal static let subtitle = L10n.tr("Localizable", "CashWalletOnboardingView.Page2.subtitle", fallback: "Monedero de Criptomonedas: Opera sobre tus criptomonedas con total seguridad.")
+      /// Crypto Wallet
+      internal static let title = L10n.tr("Localizable", "CashWalletOnboardingView.Page2.title", fallback: "Crypto Wallet")
+    }
+  }
   internal enum ConfirmMailView {
     /// Ir al correo
     internal static let button = L10n.tr("Localizable", "ConfirmMailView.button", fallback: "Ir al correo")

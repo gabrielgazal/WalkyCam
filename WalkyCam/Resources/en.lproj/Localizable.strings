@@ -71,3 +71,12 @@
 "StartupView.title" = "Bienvenida %@!";
 "StartupView.subtitle" = "Tu cuenta ha sido validada.";
 "StartupView.button" = "Comenzar";
+
+//MARK: - CashWalletOnboardingView
+"CashWalletOnboardingView.Page1.title" = "Cash Wallet";
+"CashWalletOnboardingView.Page1.subtitle" = "Tu dinero de curso legal (Dinero FIAT), accede a tus cuentas bancarias y efectúa o recibe transferencias, con la máxima seguridad.";
+"CashWalletOnboardingView.Page2.title" = "Crypto Wallet";
+"CashWalletOnboardingView.Page2.subtitle" = "Monedero de Criptomonedas: Opera sobre tus criptomonedas con total seguridad.";
+"CashWalletOnboardingView.Button.skip" = "Omitir";
+"CashWalletOnboardingView.Button.next" = "Continuar";
+"CashWalletOnboardingView.Button.start" = "Ingresar";
