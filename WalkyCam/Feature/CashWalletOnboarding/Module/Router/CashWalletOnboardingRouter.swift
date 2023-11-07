@@ -4,9 +4,9 @@ final class CashWalletOnboardingRouter: Router, CashWalletOnboardingRouterProtoc
 
     // MARK: - Public API
 
-    #warning("Example function. Rename or remove it")
-    func routeToSomething() { 
-
+    func routeToCashWallet() {
+        navigateTo(
+            CashWalletRoute(isPresented: isNavigating)
+        )
     }
 }
-

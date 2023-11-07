@@ -1,0 +1,3 @@
+protocol CashWalletInteractorProtocol {
+    func someFunction()
+}

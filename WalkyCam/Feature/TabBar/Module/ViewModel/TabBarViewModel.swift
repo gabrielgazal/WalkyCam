@@ -10,7 +10,6 @@ final class TabBarViewModel: TabBarViewModelProtocol {
         }
     }
     private var allTabBarItems: [WCTabBarItem]
-
     @Published var tabBarItems: [WCTabBarItem]
 
     // MARK: - Initialization
@@ -29,7 +28,6 @@ final class TabBarViewModel: TabBarViewModelProtocol {
         }
         initSelectedTabBarItem(tabSelection)
     }
-
 
     // MARK: - Private Methods
 

@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct RegistrationView<ViewModel:RegistrationViewModelProtocol, Router: RegistrationRouterProtocol>: View {
+struct RegistrationView<ViewModel: RegistrationViewModelProtocol, Router: RegistrationRouterProtocol>: View {
 
     // MARK: - Dependencies
 

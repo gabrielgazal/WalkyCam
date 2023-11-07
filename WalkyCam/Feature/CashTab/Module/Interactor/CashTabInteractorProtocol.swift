@@ -1,0 +1,3 @@
+protocol CashTabInteractorProtocol {
+    func someFunction()
+}

@@ -38,7 +38,7 @@ struct CashWalletOnboardingView<ViewModel: CashWalletOnboardingViewModelProtocol
             HStack(spacing: Tokens.Size.Spacing.big) {
                 LinkButton(title: L10n.CashWalletOnboardingView.Button.skip,
                            color: .naranja,
-                           action: {})
+                           action: handleNavigateToCashWallet)
                 .frame(maxWidth: .infinity)
                 .isHidden(viewModel.currentPage == 1)
                 WCUIButton(
@@ -57,7 +57,7 @@ struct CashWalletOnboardingView<ViewModel: CashWalletOnboardingViewModelProtocol
                     title: L10n.CashWalletOnboardingView.Button.start,
                     style: .standard,
                     descriptor: OrangeButtonStyleDescriptor(),
-                    action: {})
+                    action: handleNavigateToCashWallet)
                 .frame(maxWidth: .infinity)
                 .isHidden(viewModel.currentPage != 1)
             }
@@ -76,6 +76,9 @@ struct CashWalletOnboardingView<ViewModel: CashWalletOnboardingViewModelProtocol
         UIPageControl.appearance().pageIndicatorTintColor = UIColor(Color.blancoGris)
     }
 
+    private func handleNavigateToCashWallet() {
+        router.routeToCashWallet()
+    }
 }
 
 struct CashWalletOnboardingView_Previews: PreviewProvider {
