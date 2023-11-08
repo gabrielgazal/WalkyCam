@@ -21,7 +21,7 @@ final class CashWalletViewModel: CashWalletViewModelProtocol {
         let tabs: [WCTopBarItem] = [
             .init(iconName: Asset.Icons.cash.name,
                   title: "Cash",
-                  destination: nil),
+                  destination: CashTabRoute(isPresented: .constant(false)).build()),
             .init(iconName: Asset.Icons.cryptocurrency.name,
                   title: "Crypto",
                   destination: nil),

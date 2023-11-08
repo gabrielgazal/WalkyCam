@@ -5,24 +5,22 @@ final class CashTabViewModel: CashTabViewModelProtocol {
     // MARK: - Dependencies
 
     private let interactor: CashTabInteractorProtocol
+    @Published var activities: [WalletActivityModel] = []
 
     // MARK: - Initialization
 
     init(interactor: CashTabInteractorProtocol = CashTabInteractor()) {
         self.interactor = interactor
-    }
-
-    // MARK: - Public API
-
-    #warning("Example function. Rename or remove it")
-    func someAction() {
-
+        initializeActivities()
     }
 
     // MARK: - Private Methods
 
-    #warning("Example function. Rename or remove it")
-    private func somePrivateMethod() {
-
+    private func initializeActivities() {
+        activities = [
+            .init(date: Date(), title: "Thiago Guirao", description: "Street Cam 2h", value: 82.00, isValuePositive: true),
+            .init(date: Date(), title: "Thiago Guirao", description: "Street Cam 2h", value: 82.00, isValuePositive: true),
+            .init(date: Date(), title: "Thiago Guirao", description: "Street Cam 2h", value: 82.00, isValuePositive: true)
+        ]
     }
 }

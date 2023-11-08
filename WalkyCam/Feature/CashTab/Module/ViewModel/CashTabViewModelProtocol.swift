@@ -1,5 +1,5 @@
 import SwiftUI
 
 protocol CashTabViewModelProtocol: ViewModelProtocol {
-    func someAction()
+    var activities: [WalletActivityModel] { get set }
 }
