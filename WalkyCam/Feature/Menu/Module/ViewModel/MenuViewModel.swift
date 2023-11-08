@@ -4,6 +4,7 @@ final class MenuViewModel: MenuViewModelProtocol {
     // MARK: - Dependencies
 
     @Published var menuItems: [MenuItemModel] = []
+    @State private var isCashWalletOnboardingDisabled = UserDefaults.standard.bool(forKey: "isCashWalletOnboardingDisabled")
 
     // MARK: - Initialization
 
@@ -15,12 +16,26 @@ final class MenuViewModel: MenuViewModelProtocol {
 
     private func buildMenuItems() {
         menuItems = [
-            .init(icon: Asset.Menu.wallet.name, title: L10n.MenuViewModel.Item.wallet, routeToNavigate: CashWalletOnboardingRoute(isPresented: .constant(false))),
-            .init(icon: Asset.Menu.galery.name, title: L10n.MenuViewModel.Item.galery, routeToNavigate: MockRoute()),
-            .init(icon: Asset.Menu.settings.name, title: L10n.MenuViewModel.Item.settings, routeToNavigate: MockRoute()),
-            .init(icon: Asset.Menu.help.name, title: L10n.MenuViewModel.Item.help, routeToNavigate: MockRoute()),
-            .init(icon: Asset.Menu.bot.name, title: L10n.MenuViewModel.Item.bot, routeToNavigate: MockRoute())
+            .init(icon: Asset.Menu.wallet.name,
+                  title: L10n.MenuViewModel.Item.wallet,
+                  routeToNavigate: fetchCashWalletRoute()),
+            .init(icon: Asset.Menu.galery.name,
+                  title: L10n.MenuViewModel.Item.galery,
+                  routeToNavigate: MockRoute()),
+            .init(icon: Asset.Menu.settings.name,
+                  title: L10n.MenuViewModel.Item.settings,
+                  routeToNavigate: MockRoute()),
+            .init(icon: Asset.Menu.help.name,
+                  title: L10n.MenuViewModel.Item.help,
+                  routeToNavigate: MockRoute()),
+            .init(icon: Asset.Menu.bot.name,
+                  title: L10n.MenuViewModel.Item.bot,
+                  routeToNavigate: MockRoute())
         ]
+    }
+
+    private func fetchCashWalletRoute() -> Route {
+        return isCashWalletOnboardingDisabled ? CashWalletRoute(isPresented: .constant(false)): CashWalletOnboardingRoute(isPresented: .constant(false))
     }
 }
 

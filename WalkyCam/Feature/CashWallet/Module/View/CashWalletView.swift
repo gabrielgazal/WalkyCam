@@ -23,6 +23,9 @@ struct CashWalletView<ViewModel: CashWalletViewModelProtocol, Router: CashWallet
             selection: $viewModel.tabSelection
         )
         .environmentObject(viewModel)
+        .onAppear {
+            UserDefaults.standard.set(true, forKey: "isCashWalletOnboardingDisabled")
+        }
     }
 }
 
