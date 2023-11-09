@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct CashTabView<ViewModel: CashTabViewModelProtocol, Router: CashTabRouterProtocol>: View {
+struct CryptoTabView<ViewModel: CryptoTabViewModelProtocol, Router: CryptoTabRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -39,34 +39,13 @@ struct CashTabView<ViewModel: CashTabViewModelProtocol, Router: CashTabRouterPro
         ScrollView(showsIndicators: false) {
             VStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {
-                VStack {
-                    Text("Balance")
-                        .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .semibold))
-                    Text("200 $")
-                        .font(.projectFont(size: Tokens.Size.Font.xgiant, weight: .bold))
-                    Text("USD")
-                        .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .semibold))
-                }
-                LinkButton(title: "Ingresar dinero",
-                           color: .naranja,
-                           action: {})
-                WCUIButton(title: "Retirar dinero",
-                           style: .standard,
-                           descriptor: OrangeButtonStyleDescriptor(),
-                           action: {})
-                .frame(maxWidth: 165)
-                VStack(alignment: .leading,
-                       spacing: Tokens.Size.Spacing.small) {
-                    Text("O convetirlo en")
-                        .font(.projectFont(size: Tokens.Size.Font.large, weight: .semibold))
-                        .padding(.horizontal, 10)
-                    HStack(spacing: Tokens.Size.Spacing.regular) {
-                        convertionCell(title: "PI", icon: Asset.Icons.pi.name)
-                        convertionCell(title: "RC2", icon: Asset.Icons.rc2.name)
-                        convertionCell(title: "Funciones", icon: Asset.Icons.funciones.name)
-                        convertionCell(title: "Market", icon: Asset.Icons.market.name)
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(alignment: .center) {
+                        ForEach(viewModel.cryptoActivities, id: \.self) { item in
+                            cardView(item)
+                        }
                     }
-                    .padding(.horizontal, 10)
+                    .padding(10)
                 }
                 VStack(alignment: .leading,
                        spacing: Tokens.Size.Spacing.small) {
@@ -87,29 +66,44 @@ struct CashTabView<ViewModel: CashTabViewModelProtocol, Router: CashTabRouterPro
         .padding(Tokens.Size.Spacing.regular)
     }
 
-    private func convertionCell(title: String, icon: String) -> some View {
+    private func cardView(_ data: CryptoActivityModel) -> some View {
         VStack(alignment: .center,
-               spacing: Tokens.Size.Spacing.small) {
-            Image(icon)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 32, height: 32)
-            Text(title)
-                .font(.projectFont(size: Tokens.Size.Font.xsmall, weight: .bold))
+               spacing: Tokens.Size.Spacing.regular) {
+            Text(data.title)
+                .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                .foregroundColor(Color.grisOscuro)
+            VStack(spacing: 0) {
+                Text("$\(String(format: "%.2f", data.currentValue)) USD")
+                    .font(.projectFont(size: Tokens.Size.Font.large, weight: .black))
+                HStack(spacing: Tokens.Size.Spacing.small) {
+                    Text(formatSmallValue(data.variation))
+                        .font(.projectFont(size: Tokens.Size.Font.medium, weight: .medium))
+                        .foregroundColor(data.variation.sign == .plus ? Color.green2 : Color.rojo)
+                    Image(systemName: data.variation.sign == .plus ? "arrow.up" : "arrow.down")
+                        .foregroundColor(data.variation.sign == .plus ? Color.green2 : Color.rojo)
+                }
+            }
+            Rectangle()
+                .fill(Color.red)
+                .frame(width: 90, height: 35)
+            HStack {
+                Spacer()
+                LinkButton(title: "Ver más",
+                           color: Color.naranja,
+                           action: {})
+            }
         }
-               .padding(.vertical, 12)
+               .padding(Tokens.Size.Spacing.regular)
                .background(
-                RoundedRectangle(cornerRadius: 32)
+                RoundedRectangle(cornerRadius: 12)
                     .fill(Color.blanco)
-                    .frame(width: 78, height: 85)
                )
                .shadow(
-                   color: .black.opacity(0.11),
-                   radius: 8,
-                   x: 0,
-                   y: 0
+                color: .black.opacity(0.11),
+                radius: 8,
+                x: 0,
+                y: 0
                )
-               .frame(width: 78, height: 85)
     }
 
     private func assembleActivitiesView() -> some View {
@@ -127,7 +121,7 @@ struct CashTabView<ViewModel: CashTabViewModelProtocol, Router: CashTabRouterPro
                     .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                 Text(formatMonth(data.date))
                     .font(.projectFont(size: Tokens.Size.Font.regular))
-                   }
+            }
                    .background(
                     RoundedRectangle(cornerRadius: 12)
                         .fill(Color.blanco)
@@ -135,10 +129,10 @@ struct CashTabView<ViewModel: CashTabViewModelProtocol, Router: CashTabRouterPro
                    )
                    .frame(width: 78, height: 78)
                    .shadow(
-                       color: .black.opacity(0.11),
-                       radius: 8,
-                       x: 0,
-                       y: 0
+                    color: .black.opacity(0.11),
+                    radius: 8,
+                    x: 0,
+                    y: 0
                    )
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.small) {
@@ -146,25 +140,32 @@ struct CashTabView<ViewModel: CashTabViewModelProtocol, Router: CashTabRouterPro
                     Text(data.title)
                         .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .semibold))
                     Spacer()
-                    Text(formatValue(data.value))
-                        .font(.projectFont(size: Tokens.Size.Font.large, weight: .bold))
-                        .foregroundColor(data.value.sign == .plus ? Color.green2 : Color.negro)
+
                 }
                 HStack(spacing: Tokens.Size.Spacing.small) {
-                    Text(formatTime(data.date))
-                        .font(.projectFont(size: Tokens.Size.Font.regular))
                     Text(data.description)
                         .font(.projectFont(size: Tokens.Size.Font.regular))
+                    Text(formatValue(data.value))
+                        .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                        .foregroundColor(data.value.sign == .plus ? Color.green2 : Color.negro)
                 }
             }
         }
     }
 
+    private func formatSmallValue(_ value: Double) -> String {
+        var stringToReturn = ""
+        stringToReturn.append(value.sign == .minus ? "-" : "+")
+        stringToReturn.append("\(String(format: "%.2f", abs(value)))")
+        stringToReturn.append("%")
+        return stringToReturn
+    }
+
     private func formatValue(_ value: Double) -> String {
         var stringToReturn = ""
-        stringToReturn.append(value.sign == .plus ? "+" : "-")
+        stringToReturn.append(value.sign == .minus ? "-" : "+")
         stringToReturn.append("$")
-        stringToReturn.append("\(String(format: "%.2f", abs(value)))")
+        stringToReturn.append("\(String(format: "%.6f", abs(value)))")
         return stringToReturn
     }
 
@@ -181,11 +182,11 @@ struct CashTabView<ViewModel: CashTabViewModelProtocol, Router: CashTabRouterPro
     }
 }
 
-struct CashTabView_Previews: PreviewProvider {
+struct CryptoTabView_Previews: PreviewProvider {
     static var previews: some View {
-    CashTabView(
-            viewModel: CashTabViewModel(),
-            router: CashTabRouter(isPresented: .constant(false))
+        CryptoTabView(
+            viewModel: CryptoTabViewModel(),
+            router: CryptoTabRouter(isPresented: .constant(false))
         )
     }
 }

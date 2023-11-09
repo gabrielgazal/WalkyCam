@@ -18,9 +18,9 @@ final class CashTabViewModel: CashTabViewModelProtocol {
 
     private func initializeActivities() {
         activities = [
-            .init(date: Date(), title: "Thiago Guirao", description: "Street Cam 2h", value: 82.00, isValuePositive: true),
-            .init(date: Date(), title: "Thiago Guirao", description: "Street Cam 2h", value: 13.00, isValuePositive: false),
-            .init(date: Date(), title: "Thiago Guirao", description: "Street Cam 2h", value: 82.00, isValuePositive: true)
+            .init(date: Date(), title: "Thiago Guirao", description: "Street Cam 2h", value: 82.00),
+            .init(date: Date(), title: "Thiago Guirao", description: "Street Cam 2h", value: -13.00),
+            .init(date: Date(), title: "Thiago Guirao", description: "Street Cam 2h", value: 82.00)
         ]
     }
 }

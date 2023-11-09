@@ -145,6 +145,17 @@
 		EA5E1D9A2AD883D800738A8F /* Text+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E1D992AD883D800738A8F /* Text+Extension.swift */; };
 		EA5E1D9D2AD8A3DA00738A8F /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E1D9B2AD8A3DA00738A8F /* Assets.swift */; };
 		EA5E1D9E2AD8A3DA00738A8F /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E1D9C2AD8A3DA00738A8F /* Strings.swift */; };
+		EA60833C2AFD58A900295069 /* CryptoTabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083292AFD58A900295069 /* CryptoTabModel.swift */; };
+		EA60833D2AFD58A900295069 /* CryptoTabRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA60832C2AFD58A900295069 /* CryptoTabRoute.swift */; };
+		EA60833E2AFD58A900295069 /* CryptoTabAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA60832E2AFD58A900295069 /* CryptoTabAssembler.swift */; };
+		EA60833F2AFD58A900295069 /* CryptoTabAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA60832F2AFD58A900295069 /* CryptoTabAssemblerProtocol.swift */; };
+		EA6083402AFD58A900295069 /* CryptoTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083322AFD58A900295069 /* CryptoTabViewModel.swift */; };
+		EA6083412AFD58A900295069 /* CryptoTabViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083332AFD58A900295069 /* CryptoTabViewModelProtocol.swift */; };
+		EA6083422AFD58A900295069 /* CryptoTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083352AFD58A900295069 /* CryptoTabView.swift */; };
+		EA6083432AFD58A900295069 /* CryptoTabInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083372AFD58A900295069 /* CryptoTabInteractor.swift */; };
+		EA6083442AFD58A900295069 /* CryptoTabInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083382AFD58A900295069 /* CryptoTabInteractorProtocol.swift */; };
+		EA6083452AFD58A900295069 /* CryptoTabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA60833A2AFD58A900295069 /* CryptoTabRouter.swift */; };
+		EA6083462AFD58A900295069 /* CryptoTabRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA60833B2AFD58A900295069 /* CryptoTabRouterProtocol.swift */; };
 		EA82DB502ADF4DBB00E6B39A /* HomeSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82DB4F2ADF4DBB00E6B39A /* HomeSectionView.swift */; };
 		EA82DB532ADF605500E6B39A /* ReminderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82DB522ADF605500E6B39A /* ReminderCardView.swift */; };
 		EA910F1C2AD8AA6400584B98 /* Mulish-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA910F1B2AD8AA6400584B98 /* Mulish-Black.ttf */; };
@@ -413,6 +424,17 @@
 		EA5E1D992AD883D800738A8F /* Text+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Extension.swift"; sourceTree = "<group>"; };
 		EA5E1D9B2AD8A3DA00738A8F /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		EA5E1D9C2AD8A3DA00738A8F /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		EA6083292AFD58A900295069 /* CryptoTabModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoTabModel.swift; sourceTree = "<group>"; };
+		EA60832C2AFD58A900295069 /* CryptoTabRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoTabRoute.swift; sourceTree = "<group>"; };
+		EA60832E2AFD58A900295069 /* CryptoTabAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoTabAssembler.swift; sourceTree = "<group>"; };
+		EA60832F2AFD58A900295069 /* CryptoTabAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoTabAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA6083322AFD58A900295069 /* CryptoTabViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoTabViewModel.swift; sourceTree = "<group>"; };
+		EA6083332AFD58A900295069 /* CryptoTabViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoTabViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA6083352AFD58A900295069 /* CryptoTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoTabView.swift; sourceTree = "<group>"; };
+		EA6083372AFD58A900295069 /* CryptoTabInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoTabInteractor.swift; sourceTree = "<group>"; };
+		EA6083382AFD58A900295069 /* CryptoTabInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoTabInteractorProtocol.swift; sourceTree = "<group>"; };
+		EA60833A2AFD58A900295069 /* CryptoTabRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoTabRouter.swift; sourceTree = "<group>"; };
+		EA60833B2AFD58A900295069 /* CryptoTabRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoTabRouterProtocol.swift; sourceTree = "<group>"; };
 		EA82DB4F2ADF4DBB00E6B39A /* HomeSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionView.swift; sourceTree = "<group>"; };
 		EA82DB522ADF605500E6B39A /* ReminderCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCardView.swift; sourceTree = "<group>"; };
 		EA910F1B2AD8AA6400584B98 /* Mulish-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Black.ttf"; sourceTree = "<group>"; };
@@ -816,6 +838,7 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				EA6083202AFD588600295069 /* CryptoTab */,
 				EAA1E61F2AFB03DA00A42174 /* CashTab */,
 				EA0E409F2AF70E67002B7437 /* CashWallet */,
 				EA0E406F2AF6974B002B7437 /* CashWalletOnboarding */,
@@ -1720,6 +1743,104 @@
 				EA5E1D952AD725DF00738A8F /* ProjectColors.swift */,
 			);
 			path = Color;
+			sourceTree = "<group>";
+		};
+		EA6083202AFD588600295069 /* CryptoTab */ = {
+			isa = PBXGroup;
+			children = (
+				EA60832A2AFD58A900295069 /* Configuration */,
+				EA6083272AFD58A900295069 /* Domain */,
+				EA6083302AFD58A900295069 /* Module */,
+			);
+			path = CryptoTab;
+			sourceTree = "<group>";
+		};
+		EA6083272AFD58A900295069 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083282AFD58A900295069 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA6083282AFD58A900295069 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083292AFD58A900295069 /* CryptoTabModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA60832A2AFD58A900295069 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA60832B2AFD58A900295069 /* Route */,
+				EA60832D2AFD58A900295069 /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA60832B2AFD58A900295069 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA60832C2AFD58A900295069 /* CryptoTabRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA60832D2AFD58A900295069 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA60832E2AFD58A900295069 /* CryptoTabAssembler.swift */,
+				EA60832F2AFD58A900295069 /* CryptoTabAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EA6083302AFD58A900295069 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083312AFD58A900295069 /* ViewModel */,
+				EA6083342AFD58A900295069 /* View */,
+				EA6083362AFD58A900295069 /* Interactor */,
+				EA6083392AFD58A900295069 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA6083312AFD58A900295069 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083322AFD58A900295069 /* CryptoTabViewModel.swift */,
+				EA6083332AFD58A900295069 /* CryptoTabViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA6083342AFD58A900295069 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083352AFD58A900295069 /* CryptoTabView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA6083362AFD58A900295069 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083372AFD58A900295069 /* CryptoTabInteractor.swift */,
+				EA6083382AFD58A900295069 /* CryptoTabInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EA6083392AFD58A900295069 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA60833A2AFD58A900295069 /* CryptoTabRouter.swift */,
+				EA60833B2AFD58A900295069 /* CryptoTabRouterProtocol.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		EA82DB4B2ADF49D600E6B39A /* Subviews */ = {
@@ -2658,6 +2779,7 @@
 				EA9110212ADDADE100584B98 /* HomeModel.swift in Sources */,
 				EA910FC62ADC495700584B98 /* TabBarAssemblerProtocol.swift in Sources */,
 				56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */,
+				EA60833C2AFD58A900295069 /* CryptoTabModel.swift in Sources */,
 				EA41654B2AE706C6008CE66A /* NotificationModel.swift in Sources */,
 				EA910FA22ADC466400584B98 /* WCTabBarItem.swift in Sources */,
 				EA910FCE2ADC495700584B98 /* TabBarRouter.swift in Sources */,
@@ -2703,6 +2825,7 @@
 				EAD048692AE22C530096E6AB /* RegistrationPlansViewModelProtocol.swift in Sources */,
 				EAA1E63B2AFB03FD00A42174 /* CashTabRoute.swift in Sources */,
 				EA910FF02ADCBCC000584B98 /* MenuRoute.swift in Sources */,
+				EA6083452AFD58A900295069 /* CryptoTabRouter.swift in Sources */,
 				EA0E40BD2AF70E86002B7437 /* CashWalletView.swift in Sources */,
 				EA282E512AE952F700B90920 /* ProfileRoute.swift in Sources */,
 				EA4165452AE706C6008CE66A /* NotificationsInteractor.swift in Sources */,
@@ -2714,6 +2837,7 @@
 				EA910FA62ADC48DE00584B98 /* WCTabBarContainerView.swift in Sources */,
 				EA910F672AD9B20600584B98 /* NavigationController+Extension.swift in Sources */,
 				EA0E40BB2AF70E86002B7437 /* CashWalletViewModelProtocol.swift in Sources */,
+				EA6083402AFD58A900295069 /* CryptoTabViewModel.swift in Sources */,
 				EA0E40C22AF70E86002B7437 /* CashWalletModel.swift in Sources */,
 				56DADB202AD5EA7200710618 /* AppNavigatorProtocol.swift in Sources */,
 				EA0E408B2AF69771002B7437 /* CashWalletOnboardingModel.swift in Sources */,
@@ -2723,6 +2847,7 @@
 				EA15B5BE2AD707B900C03407 /* ViewModelProtocol.swift in Sources */,
 				EA0E408D2AF69771002B7437 /* CashWalletOnboardingViewModelProtocol.swift in Sources */,
 				EA91101C2ADDADE100584B98 /* HomeView.swift in Sources */,
+				EA6083442AFD58A900295069 /* CryptoTabInteractorProtocol.swift in Sources */,
 				EA172B252AF06EF600EB1514 /* StartupInteractorProtocol.swift in Sources */,
 				EA5E1D742AD716A500738A8F /* ProjectFont.swift in Sources */,
 				EAA1E6402AFB03FD00A42174 /* CashTabView.swift in Sources */,
@@ -2743,6 +2868,7 @@
 				EA9110312ADDB95C00584B98 /* ImageCache.swift in Sources */,
 				EA910FC82ADC495700584B98 /* TabBarViewModelProtocol.swift in Sources */,
 				EA910F8E2ADA06F500584B98 /* RegistrationViewModel.swift in Sources */,
+				EA6083462AFD58A900295069 /* CryptoTabRouterProtocol.swift in Sources */,
 				EA282ED02AEB531100B90920 /* FunctionsRouter.swift in Sources */,
 				EA282E562AE952F700B90920 /* ProfileViewModel.swift in Sources */,
 				EA910FCA2ADC495700584B98 /* TabBarView.swift in Sources */,
@@ -2759,6 +2885,7 @@
 				EA910F652AD9B01300584B98 /* OnboardingRouterProtocol.swift in Sources */,
 				EA282E592AE952F700B90920 /* ProfileInteractor.swift in Sources */,
 				EA910FFA2ADCBCC000584B98 /* MenuRouter.swift in Sources */,
+				EA6083412AFD58A900295069 /* CryptoTabViewModelProtocol.swift in Sources */,
 				EAD0486D2AE22C530096E6AB /* RegistrationPlansInteractor.swift in Sources */,
 				EA5E1D782AD7170400738A8F /* LinkButton.swift in Sources */,
 				EA282E7C2AE9F14B00B90920 /* WCToggleStyle.swift in Sources */,
@@ -2800,6 +2927,7 @@
 				EA9110292ADDB03300584B98 /* AsyncImageView.swift in Sources */,
 				EA282ED22AEB531100B90920 /* FunctionsRoute.swift in Sources */,
 				EA0E40C12AF70E86002B7437 /* CashWalletRouter.swift in Sources */,
+				EA60833D2AFD58A900295069 /* CryptoTabRoute.swift in Sources */,
 				EA4164F42AE4B6F7008CE66A /* ComparePlansView.swift in Sources */,
 				EA910F932ADA06F500584B98 /* RegistrationInteractorProtocol.swift in Sources */,
 				EA5E1D842AD7183700738A8F /* RoundedCornerShape.swift in Sources */,
@@ -2810,6 +2938,7 @@
 				EA910F5C2AD9B01300584B98 /* OnboardingAssemblerProtocol.swift in Sources */,
 				EA910FC42ADC495700584B98 /* TabBarRoute.swift in Sources */,
 				EADBE1012AE823BA00FED579 /* NotificationItemView.swift in Sources */,
+				EA6083432AFD58A900295069 /* CryptoTabInteractor.swift in Sources */,
 				EA910FF52ADCBCC000584B98 /* MenuViewModelProtocol.swift in Sources */,
 				EA910F8C2ADA06F500584B98 /* RegistrationAssemblerProtocol.swift in Sources */,
 				EA910F9E2ADC43B200584B98 /* FullScreenWrapper.swift in Sources */,
@@ -2822,6 +2951,7 @@
 				EA0E40912AF69771002B7437 /* CashWalletOnboardingRouterProtocol.swift in Sources */,
 				EA910F992ADC40DB00584B98 /* AlertView.swift in Sources */,
 				EA0E40C42AF70E86002B7437 /* CashWalletAssemblerProtocol.swift in Sources */,
+				EA60833E2AFD58A900295069 /* CryptoTabAssembler.swift in Sources */,
 				EAD048712AE22C530096E6AB /* RegistrationPlansRoute.swift in Sources */,
 				EA910F8D2ADA06F500584B98 /* RegistrationAssembler.swift in Sources */,
 				EA282ECF2AEB531100B90920 /* FunctionsRouterProtocol.swift in Sources */,
@@ -2834,12 +2964,14 @@
 				EA15B59F2AD6E44D00C03407 /* LoginRouterProtocol.swift in Sources */,
 				EA5E1D9D2AD8A3DA00738A8F /* Assets.swift in Sources */,
 				EA910FF62ADCBCC000584B98 /* MenuViewModel.swift in Sources */,
+				EA6083422AFD58A900295069 /* CryptoTabView.swift in Sources */,
 				EA5E1D8C2AD719C400738A8F /* TextInputView.swift in Sources */,
 				EA282E522AE952F700B90920 /* ProfileAssemblerProtocol.swift in Sources */,
 				EA910F3A2AD9782000584B98 /* SelectorModel.swift in Sources */,
 				EAD0486F2AE22C530096E6AB /* RegistrationPlansRouterProtocol.swift in Sources */,
 				EAD048702AE22C530096E6AB /* RegistrationPlansRouter.swift in Sources */,
 				EA0E408C2AF69771002B7437 /* CashWalletOnboardingViewModel.swift in Sources */,
+				EA60833F2AFD58A900295069 /* CryptoTabAssemblerProtocol.swift in Sources */,
 				EA91102F2ADDB93D00584B98 /* EnvironmentValues+ImageCache.swift in Sources */,
 				EA910F9C2ADC437300584B98 /* AlertModifier.swift in Sources */,
 				EA910FFB2ADCBCC000584B98 /* MenuRouterProtocol.swift in Sources */,

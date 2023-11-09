@@ -28,4 +28,8 @@ public extension Color {
     static let plateado = Color("Plateado")
     /// #FF5E00
     static let premium = Color("Premium")
+    /// #27AE60
+    static let green2 = Color("Green2")
+    /// #EB5757
+    static let rojo = Color("Rojo")
 }

@@ -5,5 +5,4 @@ struct WalletActivityModel: Hashable {
     let title: String
     let description: String
     let value: Double
-    let isValuePositive: Bool
 }

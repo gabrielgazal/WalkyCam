@@ -1,0 +1,3 @@
+protocol CryptoTabInteractorProtocol {
+    func someFunction()
+}

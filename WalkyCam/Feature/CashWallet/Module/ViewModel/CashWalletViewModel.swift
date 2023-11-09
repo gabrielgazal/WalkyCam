@@ -24,7 +24,7 @@ final class CashWalletViewModel: CashWalletViewModelProtocol {
                   destination: CashTabRoute(isPresented: .constant(false)).build()),
             .init(iconName: Asset.Icons.cryptocurrency.name,
                   title: "Crypto",
-                  destination: nil),
+                  destination: CryptoTabRoute(isPresented: .constant(false)).build()),
             .init(iconName: Asset.Icons.shop.name,
                   title: "Shop",
                   destination: nil)
