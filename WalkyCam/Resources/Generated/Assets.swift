@@ -94,6 +94,10 @@ internal enum Asset {
     internal static let settings = ImageAsset(name: "settings")
     internal static let wallet = ImageAsset(name: "wallet")
   }
+  internal enum Miscelaneous {
+    internal static let piGraph = ImageAsset(name: "piGraph")
+    internal static let recamerGraph = ImageAsset(name: "recamerGraph")
+  }
   internal enum SocialMedia {
     internal static let apple = ImageAsset(name: "apple")
     internal static let facebook = ImageAsset(name: "facebook")

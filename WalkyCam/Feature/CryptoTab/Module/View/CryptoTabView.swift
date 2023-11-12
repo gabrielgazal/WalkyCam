@@ -40,7 +40,8 @@ struct CryptoTabView<ViewModel: CryptoTabViewModelProtocol, Router: CryptoTabRou
             VStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {
                 ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(alignment: .center) {
+                    HStack(alignment: .center,
+                           spacing: Tokens.Size.Spacing.regular) {
                         ForEach(viewModel.cryptoActivities, id: \.self) { item in
                             cardView(item)
                         }
@@ -51,7 +52,7 @@ struct CryptoTabView<ViewModel: CryptoTabViewModelProtocol, Router: CryptoTabRou
                        spacing: Tokens.Size.Spacing.small) {
                     HStack {
                         Text("Actividad")
-                            .font(.projectFont(size: Tokens.Size.Font.large, weight: .semibold))
+                            .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .semibold))
                         Spacer()
                         Image(systemName: "magnifyingglass")
                             .resizable()
@@ -83,8 +84,8 @@ struct CryptoTabView<ViewModel: CryptoTabViewModelProtocol, Router: CryptoTabRou
                         .foregroundColor(data.variation.sign == .plus ? Color.green2 : Color.rojo)
                 }
             }
-            Rectangle()
-                .fill(Color.red)
+            Image(data.graph)
+                .resizable()
                 .frame(width: 90, height: 35)
             HStack {
                 Spacer()
@@ -93,7 +94,7 @@ struct CryptoTabView<ViewModel: CryptoTabViewModelProtocol, Router: CryptoTabRou
                            action: {})
             }
         }
-               .padding(Tokens.Size.Spacing.regular)
+               .padding(Tokens.Size.Spacing.large)
                .background(
                 RoundedRectangle(cornerRadius: 12)
                     .fill(Color.blanco)
