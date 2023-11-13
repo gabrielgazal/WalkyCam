@@ -44,6 +44,9 @@ struct CryptoTabView<ViewModel: CryptoTabViewModelProtocol, Router: CryptoTabRou
                            spacing: Tokens.Size.Spacing.regular) {
                         ForEach(viewModel.cryptoActivities, id: \.self) { item in
                             cardView(item)
+                                .onTapGesture {
+                                    router.routeToCryptoDetails(item)
+                                }
                         }
                     }
                     .padding(10)
@@ -65,6 +68,7 @@ struct CryptoTabView<ViewModel: CryptoTabViewModelProtocol, Router: CryptoTabRou
             }
         }
         .padding(Tokens.Size.Spacing.regular)
+        .navigation(router)
     }
 
     private func cardView(_ data: CryptoActivityModel) -> some View {

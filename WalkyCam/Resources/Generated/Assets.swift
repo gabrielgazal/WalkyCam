@@ -45,6 +45,7 @@ internal enum Asset {
     internal static let shop = ImageAsset(name: "Shop")
     internal static let streetCam = ImageAsset(name: "Street Cam")
     internal static let tShirt = ImageAsset(name: "T-Shirt")
+    internal static let usd = ImageAsset(name: "Usd")
     internal static let videoCall = ImageAsset(name: "VideoCall")
     internal static let alcohol = ImageAsset(name: "alcohol")
     internal static let backpack = ImageAsset(name: "backpack")

@@ -1,6 +1,5 @@
 import SwiftUI
 
 protocol CryptoTabRouterProtocol: Router {
-    func routeToSomething()
+    func routeToCryptoDetails(_ data: CryptoActivityModel)
 }
-

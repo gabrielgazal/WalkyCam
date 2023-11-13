@@ -1,0 +1,3 @@
+protocol CryptoDetailsInteractorProtocol {
+    func someFunction()
+}

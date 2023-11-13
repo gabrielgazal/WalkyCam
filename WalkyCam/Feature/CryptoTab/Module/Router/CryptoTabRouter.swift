@@ -4,9 +4,10 @@ final class CryptoTabRouter: Router, CryptoTabRouterProtocol {
 
     // MARK: - Public API
 
-    #warning("Example function. Rename or remove it")
-    func routeToSomething() { 
-
+    func routeToCryptoDetails(_ data: CryptoActivityModel) {
+        navigateTo(
+            CryptoDetailsRoute(isPresented: isNavigating,
+                               cryptoData: data)
+        )
     }
 }
-

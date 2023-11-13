@@ -20,8 +20,18 @@ final class CryptoTabViewModel: CryptoTabViewModelProtocol {
 
     private func initializeCryptoActivities() {
         cryptoActivities = [
-            .init(title: "PI Network", currentValue: 27.45, variation: -0.16, graph: Asset.Miscelaneous.piGraph.name),
-            .init(title: "RECAMER Coin", currentValue: 0.032, variation: 0.24, graph: Asset.Miscelaneous.recamerGraph.name)
+            .init(title: "PI network",
+                  currentValue: 27.45,
+                  variation: -0.16,
+                  graph: Asset.Miscelaneous.piGraph.name,
+                  balance: 168,
+                  type: .pi),
+            .init(title: "RECAMER Coin",
+                  currentValue: 0.032,
+                  variation: 0.24,
+                  graph: Asset.Miscelaneous.recamerGraph.name,
+                  balance: 200,
+                  type: .rc2)
         ]
     }
 
