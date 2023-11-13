@@ -1,0 +1,3 @@
+protocol ShopTabInteractorProtocol {
+    func someFunction()
+}

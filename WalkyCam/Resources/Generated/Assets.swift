@@ -25,6 +25,12 @@ internal typealias AssetImageTypeAlias = ImageAsset.Image
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
   internal static let accentColor = ColorAsset(name: "AccentColor")
+  internal enum Ads {
+    internal static let beach = ImageAsset(name: "beach")
+    internal static let iphone = ImageAsset(name: "iphone")
+    internal static let planeTravel = ImageAsset(name: "planeTravel")
+    internal static let search = ImageAsset(name: "search")
+  }
   internal enum Fondos {
     internal static let loginFondo = ImageAsset(name: "login_fondo")
     internal static let planFondo = ImageAsset(name: "plan_fondo")
@@ -33,12 +39,15 @@ internal enum Asset {
     internal static let _3dPrinting = ImageAsset(name: "3dPrinting")
     internal static let aiAnalysis = ImageAsset(name: "AIAnalysis")
     internal static let ar = ImageAsset(name: "AR")
+    internal static let art = ImageAsset(name: "Art")
+    internal static let camera = ImageAsset(name: "Camera")
     internal static let compare = ImageAsset(name: "Compare")
     internal static let cryptocurrency = ImageAsset(name: "Cryptocurrency")
     internal static let drone = ImageAsset(name: "Drone")
     internal static let filter = ImageAsset(name: "Filter")
     internal static let karaoke = ImageAsset(name: "Karaoke")
     internal static let lentes = ImageAsset(name: "LENTES")
+    internal static let music = ImageAsset(name: "Music")
     internal static let notes = ImageAsset(name: "Notes")
     internal static let recent = ImageAsset(name: "Recent")
     internal static let scan3D = ImageAsset(name: "Scan3D")
@@ -69,7 +78,9 @@ internal enum Asset {
     internal static let mail = ImageAsset(name: "mail")
     internal static let market = ImageAsset(name: "market")
     internal static let nft = ImageAsset(name: "nft")
+    internal static let nftCoin = ImageAsset(name: "nftCoin")
     internal static let pi = ImageAsset(name: "pi")
+    internal static let plane = ImageAsset(name: "plane")
     internal static let radar = ImageAsset(name: "radar")
     internal static let rc2 = ImageAsset(name: "rc2")
     internal static let rgb = ImageAsset(name: "rgb")

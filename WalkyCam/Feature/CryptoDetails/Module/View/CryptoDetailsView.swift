@@ -23,8 +23,12 @@ struct CryptoDetailsView<ViewModel: CryptoDetailsViewModelProtocol, Router: Cryp
             VStack(spacing: Tokens.Size.Spacing.small) {
                 Text("Balance")
                     .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .semibold))
-                Text("\(String(format: "%.f", viewModel.cryptoData.balance)) \(getCurrentCryptoTypeName())")
-                    .font(.projectFont(size: Tokens.Size.Font.xgiant, weight: .bold))
+                HStack {
+                    Text("\(String(format: "%.f", viewModel.cryptoData.balance))")
+                        .font(.projectFont(size: Tokens.Size.Font.xgiant, weight: .bold))
+                    Text("\(getCurrentCryptoTypeName())")
+                        .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                }
                 Text("≈ \(String(format: "%.1f", viewModel.cryptoData.balance * viewModel.cryptoData.currentValue)) USD")
                     .font(.projectFont(size: Tokens.Size.Font.regular))
             }

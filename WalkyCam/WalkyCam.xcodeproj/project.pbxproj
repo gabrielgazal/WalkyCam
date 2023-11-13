@@ -167,6 +167,17 @@
 		EA60836B2B01981800295069 /* CryptoDetailsRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA60835F2B01981800295069 /* CryptoDetailsRoute.swift */; };
 		EA60836C2B01981800295069 /* CryptoDetailsAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083612B01981800295069 /* CryptoDetailsAssemblerProtocol.swift */; };
 		EA60836D2B01981800295069 /* CryptoDetailsAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083622B01981800295069 /* CryptoDetailsAssembler.swift */; };
+		EA60838A2B01CD0A00295069 /* ShopTabRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083772B01CD0A00295069 /* ShopTabRoute.swift */; };
+		EA60838B2B01CD0A00295069 /* ShopTabAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083792B01CD0A00295069 /* ShopTabAssemblerProtocol.swift */; };
+		EA60838C2B01CD0A00295069 /* ShopTabAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA60837A2B01CD0A00295069 /* ShopTabAssembler.swift */; };
+		EA60838D2B01CD0A00295069 /* ShopTabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA60837D2B01CD0A00295069 /* ShopTabModel.swift */; };
+		EA60838E2B01CD0A00295069 /* ShopTabViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083802B01CD0A00295069 /* ShopTabViewModelProtocol.swift */; };
+		EA60838F2B01CD0A00295069 /* ShopTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083812B01CD0A00295069 /* ShopTabViewModel.swift */; };
+		EA6083902B01CD0A00295069 /* ShopTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083832B01CD0A00295069 /* ShopTabView.swift */; };
+		EA6083912B01CD0A00295069 /* ShopTabInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083852B01CD0A00295069 /* ShopTabInteractor.swift */; };
+		EA6083922B01CD0A00295069 /* ShopTabInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083862B01CD0A00295069 /* ShopTabInteractorProtocol.swift */; };
+		EA6083932B01CD0A00295069 /* ShopTabRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083882B01CD0A00295069 /* ShopTabRouterProtocol.swift */; };
+		EA6083942B01CD0A00295069 /* ShopTabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083892B01CD0A00295069 /* ShopTabRouter.swift */; };
 		EA82DB502ADF4DBB00E6B39A /* HomeSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82DB4F2ADF4DBB00E6B39A /* HomeSectionView.swift */; };
 		EA82DB532ADF605500E6B39A /* ReminderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82DB522ADF605500E6B39A /* ReminderCardView.swift */; };
 		EA910F1C2AD8AA6400584B98 /* Mulish-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA910F1B2AD8AA6400584B98 /* Mulish-Black.ttf */; };
@@ -457,6 +468,17 @@
 		EA60835F2B01981800295069 /* CryptoDetailsRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoDetailsRoute.swift; sourceTree = "<group>"; };
 		EA6083612B01981800295069 /* CryptoDetailsAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoDetailsAssemblerProtocol.swift; sourceTree = "<group>"; };
 		EA6083622B01981800295069 /* CryptoDetailsAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoDetailsAssembler.swift; sourceTree = "<group>"; };
+		EA6083772B01CD0A00295069 /* ShopTabRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTabRoute.swift; sourceTree = "<group>"; };
+		EA6083792B01CD0A00295069 /* ShopTabAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTabAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA60837A2B01CD0A00295069 /* ShopTabAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTabAssembler.swift; sourceTree = "<group>"; };
+		EA60837D2B01CD0A00295069 /* ShopTabModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTabModel.swift; sourceTree = "<group>"; };
+		EA6083802B01CD0A00295069 /* ShopTabViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTabViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA6083812B01CD0A00295069 /* ShopTabViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTabViewModel.swift; sourceTree = "<group>"; };
+		EA6083832B01CD0A00295069 /* ShopTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTabView.swift; sourceTree = "<group>"; };
+		EA6083852B01CD0A00295069 /* ShopTabInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTabInteractor.swift; sourceTree = "<group>"; };
+		EA6083862B01CD0A00295069 /* ShopTabInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTabInteractorProtocol.swift; sourceTree = "<group>"; };
+		EA6083882B01CD0A00295069 /* ShopTabRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTabRouterProtocol.swift; sourceTree = "<group>"; };
+		EA6083892B01CD0A00295069 /* ShopTabRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTabRouter.swift; sourceTree = "<group>"; };
 		EA82DB4F2ADF4DBB00E6B39A /* HomeSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionView.swift; sourceTree = "<group>"; };
 		EA82DB522ADF605500E6B39A /* ReminderCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCardView.swift; sourceTree = "<group>"; };
 		EA910F1B2AD8AA6400584B98 /* Mulish-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Black.ttf"; sourceTree = "<group>"; };
@@ -860,6 +882,7 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				EA60836E2B01CCEA00295069 /*  ShopTab */,
 				EA6083472B0197FC00295069 /* CryptoDetails */,
 				EA6083202AFD588600295069 /* CryptoTab */,
 				EAA1E61F2AFB03DA00A42174 /* CashTab */,
@@ -1964,6 +1987,104 @@
 			path = Assembler;
 			sourceTree = "<group>";
 		};
+		EA60836E2B01CCEA00295069 /*  ShopTab */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083752B01CD0A00295069 /* Configuration */,
+				EA60837B2B01CD0A00295069 /* Domain */,
+				EA60837E2B01CD0A00295069 /* Module */,
+			);
+			path = " ShopTab";
+			sourceTree = "<group>";
+		};
+		EA6083752B01CD0A00295069 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083762B01CD0A00295069 /* Route */,
+				EA6083782B01CD0A00295069 /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA6083762B01CD0A00295069 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083772B01CD0A00295069 /* ShopTabRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA6083782B01CD0A00295069 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083792B01CD0A00295069 /* ShopTabAssemblerProtocol.swift */,
+				EA60837A2B01CD0A00295069 /* ShopTabAssembler.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EA60837B2B01CD0A00295069 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA60837C2B01CD0A00295069 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA60837C2B01CD0A00295069 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA60837D2B01CD0A00295069 /* ShopTabModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA60837E2B01CD0A00295069 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA60837F2B01CD0A00295069 /* ViewModel */,
+				EA6083822B01CD0A00295069 /* View */,
+				EA6083842B01CD0A00295069 /* Interactor */,
+				EA6083872B01CD0A00295069 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA60837F2B01CD0A00295069 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083802B01CD0A00295069 /* ShopTabViewModelProtocol.swift */,
+				EA6083812B01CD0A00295069 /* ShopTabViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA6083822B01CD0A00295069 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083832B01CD0A00295069 /* ShopTabView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA6083842B01CD0A00295069 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083852B01CD0A00295069 /* ShopTabInteractor.swift */,
+				EA6083862B01CD0A00295069 /* ShopTabInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EA6083872B01CD0A00295069 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083882B01CD0A00295069 /* ShopTabRouterProtocol.swift */,
+				EA6083892B01CD0A00295069 /* ShopTabRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		EA82DB4B2ADF49D600E6B39A /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
@@ -2898,6 +3019,7 @@
 				EAD048732AE22C530096E6AB /* RegistrationPlansAssemblerProtocol.swift in Sources */,
 				EA282E582AE952F700B90920 /* ProfileInteractorProtocol.swift in Sources */,
 				EA9110212ADDADE100584B98 /* HomeModel.swift in Sources */,
+				EA6083922B01CD0A00295069 /* ShopTabInteractorProtocol.swift in Sources */,
 				EA910FC62ADC495700584B98 /* TabBarAssemblerProtocol.swift in Sources */,
 				56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */,
 				EA60833C2AFD58A900295069 /* CryptoTabModel.swift in Sources */,
@@ -2916,10 +3038,12 @@
 				EA9110202ADDADE100584B98 /* HomeRouterProtocol.swift in Sources */,
 				EA172AF62AF06BDE00EB1514 /* ConfirmMailRoute.swift in Sources */,
 				EA910F942ADA06F500584B98 /* RegistrationRouter.swift in Sources */,
+				EA60838D2B01CD0A00295069 /* ShopTabModel.swift in Sources */,
 				EA4165412AE706C6008CE66A /* NotificationsViewModelProtocol.swift in Sources */,
 				EA15B5AC2AD706DB00C03407 /* BottomSheetModifier.swift in Sources */,
 				EA282E552AE952F700B90920 /* ProfileViewModelProtocol.swift in Sources */,
 				EA91101F2ADDADE100584B98 /* HomeRouter.swift in Sources */,
+				EA60838C2B01CD0A00295069 /* ShopTabAssembler.swift in Sources */,
 				EA4164F72AE4B6F7008CE66A /* ComparePlansRouter.swift in Sources */,
 				EA5E1D712AD7167300738A8F /* LinkButtonStyle.swift in Sources */,
 				EA910F952ADA06F500584B98 /* RegistrationRouterProtocol.swift in Sources */,
@@ -2940,6 +3064,7 @@
 				EA910F912ADA06F500584B98 /* RegistrationView.swift in Sources */,
 				EA15B59E2AD6E44D00C03407 /* LoginRouter.swift in Sources */,
 				EA282ECC2AEB531100B90920 /* FunctionsView.swift in Sources */,
+				EA60838A2B01CD0A00295069 /* ShopTabRoute.swift in Sources */,
 				EA172AD92AF0335400EB1514 /* AdvertisementCard.swift in Sources */,
 				EA4164F12AE4B6F7008CE66A /* ComparePlansViewModel.swift in Sources */,
 				EA282ECB2AEB531100B90920 /* FunctionsViewModelProtocol.swift in Sources */,
@@ -2988,8 +3113,10 @@
 				EA6083692B01981800295069 /* CryptoDetailsRouterProtocol.swift in Sources */,
 				EA910F5E2AD9B01300584B98 /* OnboardingViewModelProtocol.swift in Sources */,
 				EA910FF12ADCBCC000584B98 /* MenuAssemblerProtocol.swift in Sources */,
+				EA6083912B01CD0A00295069 /* ShopTabInteractor.swift in Sources */,
 				EA172B1F2AF06EF600EB1514 /* StartupAssembler.swift in Sources */,
 				EA15B59A2AD6E44D00C03407 /* LoginViewModel.swift in Sources */,
+				EA6083902B01CD0A00295069 /* ShopTabView.swift in Sources */,
 				EA91102B2ADDB05300584B98 /* ImageLoader.swift in Sources */,
 				EA9110312ADDB95C00584B98 /* ImageCache.swift in Sources */,
 				EA910FC82ADC495700584B98 /* TabBarViewModelProtocol.swift in Sources */,
@@ -3018,6 +3145,7 @@
 				EA282E7C2AE9F14B00B90920 /* WCToggleStyle.swift in Sources */,
 				EA15B5B02AD7071300C03407 /* SheetModifier.swift in Sources */,
 				EAA1E6422AFB03FD00A42174 /* CashTabInteractor.swift in Sources */,
+				EA60838B2B01CD0A00295069 /* ShopTabAssemblerProtocol.swift in Sources */,
 				EA282E5A2AE952F700B90920 /* ProfileRouter.swift in Sources */,
 				EA282ECA2AEB531100B90920 /* FunctionsViewModel.swift in Sources */,
 				EA9110242ADDADE100584B98 /* HomeAssembler.swift in Sources */,
@@ -3044,6 +3172,7 @@
 				EA9110332ADDBF7400584B98 /* WalkyBotView.swift in Sources */,
 				EA172AFC2AF06BDE00EB1514 /* ConfirmMailView.swift in Sources */,
 				EA910F362AD976F600584B98 /* CheckboxToggle.swift in Sources */,
+				EA6083932B01CD0A00295069 /* ShopTabRouterProtocol.swift in Sources */,
 				EAA1E6412AFB03FD00A42174 /* CashTabInteractorProtocol.swift in Sources */,
 				EA172B232AF06EF600EB1514 /* StartupView.swift in Sources */,
 				EAA1E63F2AFB03FD00A42174 /* CashTabViewModel.swift in Sources */,
@@ -3082,6 +3211,7 @@
 				EA60833E2AFD58A900295069 /* CryptoTabAssembler.swift in Sources */,
 				EAD048712AE22C530096E6AB /* RegistrationPlansRoute.swift in Sources */,
 				EA910F8D2ADA06F500584B98 /* RegistrationAssembler.swift in Sources */,
+				EA6083942B01CD0A00295069 /* ShopTabRouter.swift in Sources */,
 				EA282ECF2AEB531100B90920 /* FunctionsRouterProtocol.swift in Sources */,
 				EA172B272AF06EF600EB1514 /* StartupRouterProtocol.swift in Sources */,
 				EA6083632B01981800295069 /* CryptoDetailsViewModelProtocol.swift in Sources */,
@@ -3123,6 +3253,7 @@
 				EA0E40BE2AF70E86002B7437 /* CashWalletInteractorProtocol.swift in Sources */,
 				EA15B5A12AD6E44D00C03407 /* LoginAssembler.swift in Sources */,
 				EA6083672B01981800295069 /* CryptoDetailsInteractorProtocol.swift in Sources */,
+				EA60838F2B01CD0A00295069 /* ShopTabViewModel.swift in Sources */,
 				EA0E40C52AF70E86002B7437 /* CashWalletAssembler.swift in Sources */,
 				EA910F6B2AD9CCF500584B98 /* PageControl.swift in Sources */,
 				EA172B212AF06EF600EB1514 /* StartupViewModel.swift in Sources */,
@@ -3136,6 +3267,7 @@
 				EA282ECE2AEB531100B90920 /* FunctionsInteractor.swift in Sources */,
 				EA910F3C2AD982F300584B98 /* SecureTextInputView.swift in Sources */,
 				EA910FA42ADC470A00584B98 /* WCTabBarView.swift in Sources */,
+				EA60838E2B01CD0A00295069 /* ShopTabViewModelProtocol.swift in Sources */,
 				EA0E40932AF69771002B7437 /* CashWalletOnboardingRoute.swift in Sources */,
 				EA4165482AE706C6008CE66A /* NotificationsRoute.swift in Sources */,
 				EAA1E61C2AFAFA7100A42174 /* WCTopBarView.swift in Sources */,
