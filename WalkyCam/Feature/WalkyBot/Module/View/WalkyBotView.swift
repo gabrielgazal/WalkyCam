@@ -88,7 +88,7 @@ struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouter
                 .frame(width: 75)
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.tiny) {
-                Text("Walky Bit FAQ's")
+                Text("Walky Bot FAQ's")
                     .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .bold))
                 Text("Asistente automático")
                     .font(.projectFont(size: Tokens.Size.Font.medium))
