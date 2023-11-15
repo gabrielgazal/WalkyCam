@@ -201,6 +201,17 @@
 		EA6083E12B01DBE000295069 /* GalleryPhotosAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083D62B01DBDF00295069 /* GalleryPhotosAssemblerProtocol.swift */; };
 		EA6083E22B01DBE000295069 /* GalleryPhotosAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083D72B01DBDF00295069 /* GalleryPhotosAssembler.swift */; };
 		EA7219772B0553C900BE2D93 /* GalleryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7219762B0553C900BE2D93 /* GalleryItemView.swift */; };
+		EA7219942B05612900BE2D93 /* WalkyBotRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7219812B05612900BE2D93 /* WalkyBotRoute.swift */; };
+		EA7219952B05612900BE2D93 /* WalkyBotAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7219832B05612900BE2D93 /* WalkyBotAssemblerProtocol.swift */; };
+		EA7219962B05612900BE2D93 /* WalkyBotAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7219842B05612900BE2D93 /* WalkyBotAssembler.swift */; };
+		EA7219972B05612900BE2D93 /* WalkyBotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7219872B05612900BE2D93 /* WalkyBotModel.swift */; };
+		EA7219982B05612900BE2D93 /* WalkyBotViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA72198A2B05612900BE2D93 /* WalkyBotViewModelProtocol.swift */; };
+		EA7219992B05612900BE2D93 /* WalkyBotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA72198B2B05612900BE2D93 /* WalkyBotViewModel.swift */; };
+		EA72199A2B05612900BE2D93 /* WalkyBotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA72198D2B05612900BE2D93 /* WalkyBotView.swift */; };
+		EA72199B2B05612900BE2D93 /* WalkyBotInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA72198F2B05612900BE2D93 /* WalkyBotInteractor.swift */; };
+		EA72199C2B05612900BE2D93 /* WalkyBotInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7219902B05612900BE2D93 /* WalkyBotInteractorProtocol.swift */; };
+		EA72199D2B05612900BE2D93 /* WalkyBotRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7219922B05612900BE2D93 /* WalkyBotRouterProtocol.swift */; };
+		EA72199E2B05612900BE2D93 /* WalkyBotRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7219932B05612900BE2D93 /* WalkyBotRouter.swift */; };
 		EA82DB502ADF4DBB00E6B39A /* HomeSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82DB4F2ADF4DBB00E6B39A /* HomeSectionView.swift */; };
 		EA82DB532ADF605500E6B39A /* ReminderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82DB522ADF605500E6B39A /* ReminderCardView.swift */; };
 		EA910F1C2AD8AA6400584B98 /* Mulish-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA910F1B2AD8AA6400584B98 /* Mulish-Black.ttf */; };
@@ -280,7 +291,7 @@
 		EA91102D2ADDB91100584B98 /* URL+ImageLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA91102C2ADDB91000584B98 /* URL+ImageLoadable.swift */; };
 		EA91102F2ADDB93D00584B98 /* EnvironmentValues+ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA91102E2ADDB93D00584B98 /* EnvironmentValues+ImageCache.swift */; };
 		EA9110312ADDB95C00584B98 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9110302ADDB95C00584B98 /* ImageCache.swift */; };
-		EA9110332ADDBF7400584B98 /* WalkyBotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9110322ADDBF7400584B98 /* WalkyBotView.swift */; };
+		EA9110332ADDBF7400584B98 /* WalkyBotItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9110322ADDBF7400584B98 /* WalkyBotItemView.swift */; };
 		EAA1E61C2AFAFA7100A42174 /* WCTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA1E6192AFAFA7100A42174 /* WCTopBarView.swift */; };
 		EAA1E61D2AFAFA7100A42174 /* WCTopBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA1E61A2AFAFA7100A42174 /* WCTopBarItem.swift */; };
 		EAA1E61E2AFAFA7100A42174 /* WCTopBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA1E61B2AFAFA7100A42174 /* WCTopBarContainerView.swift */; };
@@ -525,6 +536,17 @@
 		EA6083D62B01DBDF00295069 /* GalleryPhotosAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryPhotosAssemblerProtocol.swift; sourceTree = "<group>"; };
 		EA6083D72B01DBDF00295069 /* GalleryPhotosAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryPhotosAssembler.swift; sourceTree = "<group>"; };
 		EA7219762B0553C900BE2D93 /* GalleryItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryItemView.swift; sourceTree = "<group>"; };
+		EA7219812B05612900BE2D93 /* WalkyBotRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyBotRoute.swift; sourceTree = "<group>"; };
+		EA7219832B05612900BE2D93 /* WalkyBotAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyBotAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA7219842B05612900BE2D93 /* WalkyBotAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyBotAssembler.swift; sourceTree = "<group>"; };
+		EA7219872B05612900BE2D93 /* WalkyBotModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyBotModel.swift; sourceTree = "<group>"; };
+		EA72198A2B05612900BE2D93 /* WalkyBotViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyBotViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA72198B2B05612900BE2D93 /* WalkyBotViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyBotViewModel.swift; sourceTree = "<group>"; };
+		EA72198D2B05612900BE2D93 /* WalkyBotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyBotView.swift; sourceTree = "<group>"; };
+		EA72198F2B05612900BE2D93 /* WalkyBotInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyBotInteractor.swift; sourceTree = "<group>"; };
+		EA7219902B05612900BE2D93 /* WalkyBotInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyBotInteractorProtocol.swift; sourceTree = "<group>"; };
+		EA7219922B05612900BE2D93 /* WalkyBotRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyBotRouterProtocol.swift; sourceTree = "<group>"; };
+		EA7219932B05612900BE2D93 /* WalkyBotRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyBotRouter.swift; sourceTree = "<group>"; };
 		EA82DB4F2ADF4DBB00E6B39A /* HomeSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionView.swift; sourceTree = "<group>"; };
 		EA82DB522ADF605500E6B39A /* ReminderCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCardView.swift; sourceTree = "<group>"; };
 		EA910F1B2AD8AA6400584B98 /* Mulish-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Black.ttf"; sourceTree = "<group>"; };
@@ -604,7 +626,7 @@
 		EA91102C2ADDB91000584B98 /* URL+ImageLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+ImageLoadable.swift"; sourceTree = "<group>"; };
 		EA91102E2ADDB93D00584B98 /* EnvironmentValues+ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+ImageCache.swift"; sourceTree = "<group>"; };
 		EA9110302ADDB95C00584B98 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
-		EA9110322ADDBF7400584B98 /* WalkyBotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkyBotView.swift; sourceTree = "<group>"; };
+		EA9110322ADDBF7400584B98 /* WalkyBotItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkyBotItemView.swift; sourceTree = "<group>"; };
 		EAA1E6192AFAFA7100A42174 /* WCTopBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCTopBarView.swift; sourceTree = "<group>"; };
 		EAA1E61A2AFAFA7100A42174 /* WCTopBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCTopBarItem.swift; sourceTree = "<group>"; };
 		EAA1E61B2AFAFA7100A42174 /* WCTopBarContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCTopBarContainerView.swift; sourceTree = "<group>"; };
@@ -928,6 +950,7 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				EA7219782B0560FD00BE2D93 /* WalkyBot */,
 				EA6083BC2B01DBB100295069 /* GalleryPhotos */,
 				EA6083952B01D9C100295069 /* Gallery */,
 				EA60836E2B01CCEA00295069 /*  ShopTab */,
@@ -2330,13 +2353,111 @@
 			path = Assembler;
 			sourceTree = "<group>";
 		};
+		EA7219782B0560FD00BE2D93 /* WalkyBot */ = {
+			isa = PBXGroup;
+			children = (
+				EA72197F2B05612900BE2D93 /* Configuration */,
+				EA7219852B05612900BE2D93 /* Domain */,
+				EA7219882B05612900BE2D93 /* Module */,
+			);
+			path = WalkyBot;
+			sourceTree = "<group>";
+		};
+		EA72197F2B05612900BE2D93 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA7219802B05612900BE2D93 /* Route */,
+				EA7219822B05612900BE2D93 /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA7219802B05612900BE2D93 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA7219812B05612900BE2D93 /* WalkyBotRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA7219822B05612900BE2D93 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA7219832B05612900BE2D93 /* WalkyBotAssemblerProtocol.swift */,
+				EA7219842B05612900BE2D93 /* WalkyBotAssembler.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EA7219852B05612900BE2D93 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA7219862B05612900BE2D93 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA7219862B05612900BE2D93 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA7219872B05612900BE2D93 /* WalkyBotModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA7219882B05612900BE2D93 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA7219892B05612900BE2D93 /* ViewModel */,
+				EA72198C2B05612900BE2D93 /* View */,
+				EA72198E2B05612900BE2D93 /* Interactor */,
+				EA7219912B05612900BE2D93 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA7219892B05612900BE2D93 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA72198A2B05612900BE2D93 /* WalkyBotViewModelProtocol.swift */,
+				EA72198B2B05612900BE2D93 /* WalkyBotViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA72198C2B05612900BE2D93 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA72198D2B05612900BE2D93 /* WalkyBotView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA72198E2B05612900BE2D93 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA72198F2B05612900BE2D93 /* WalkyBotInteractor.swift */,
+				EA7219902B05612900BE2D93 /* WalkyBotInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EA7219912B05612900BE2D93 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA7219922B05612900BE2D93 /* WalkyBotRouterProtocol.swift */,
+				EA7219932B05612900BE2D93 /* WalkyBotRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		EA82DB4B2ADF49D600E6B39A /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
 				EA82DB512ADF5F5200E6B39A /* Reminder */,
 				EA82DB4C2ADF49EC00E6B39A /* RecentFunctions */,
 				EA9110252ADDAE6400584B98 /* ProfileHeaderView.swift */,
-				EA9110322ADDBF7400584B98 /* WalkyBotView.swift */,
+				EA9110322ADDBF7400584B98 /* WalkyBotItemView.swift */,
 				EA82DB4F2ADF4DBB00E6B39A /* HomeSectionView.swift */,
 			);
 			path = Subviews;
@@ -3266,6 +3387,8 @@
 				EA282E582AE952F700B90920 /* ProfileInteractorProtocol.swift in Sources */,
 				EA9110212ADDADE100584B98 /* HomeModel.swift in Sources */,
 				EA6083922B01CD0A00295069 /* ShopTabInteractorProtocol.swift in Sources */,
+				EA72199A2B05612900BE2D93 /* WalkyBotView.swift in Sources */,
+				EA7219992B05612900BE2D93 /* WalkyBotViewModel.swift in Sources */,
 				EA910FC62ADC495700584B98 /* TabBarAssemblerProtocol.swift in Sources */,
 				56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */,
 				EA60833C2AFD58A900295069 /* CryptoTabModel.swift in Sources */,
@@ -3337,10 +3460,12 @@
 				EA6083402AFD58A900295069 /* CryptoTabViewModel.swift in Sources */,
 				EA0E40C22AF70E86002B7437 /* CashWalletModel.swift in Sources */,
 				56DADB202AD5EA7200710618 /* AppNavigatorProtocol.swift in Sources */,
+				EA7219962B05612900BE2D93 /* WalkyBotAssembler.swift in Sources */,
 				EA0E408B2AF69771002B7437 /* CashWalletOnboardingModel.swift in Sources */,
 				EAD0486B2AE22C530096E6AB /* RegistrationPlansViewModel.swift in Sources */,
 				EA6083B32B01D9E100295069 /* GalleryAssembler.swift in Sources */,
 				EA910FF32ADCBCC000584B98 /* MenuItemModel.swift in Sources */,
+				EA7219942B05612900BE2D93 /* WalkyBotRoute.swift in Sources */,
 				EA15B5B92AD7077C00C03407 /* GenericUseCase.swift in Sources */,
 				EA15B5BE2AD707B900C03407 /* ViewModelProtocol.swift in Sources */,
 				EA0E408D2AF69771002B7437 /* CashWalletOnboardingViewModelProtocol.swift in Sources */,
@@ -3360,7 +3485,9 @@
 				EA5E1D7B2AD7174700738A8F /* Button+Extension.swift in Sources */,
 				EA910F642AD9B01300584B98 /* OnboardingRouter.swift in Sources */,
 				EA6083BA2B01D9E100295069 /* GalleryRouterProtocol.swift in Sources */,
+				EA72199B2B05612900BE2D93 /* WalkyBotInteractor.swift in Sources */,
 				EA60836D2B01981800295069 /* CryptoDetailsAssembler.swift in Sources */,
+				EA72199D2B05612900BE2D93 /* WalkyBotRouterProtocol.swift in Sources */,
 				EA172B262AF06EF600EB1514 /* StartupRouter.swift in Sources */,
 				EA172B1E2AF06EF600EB1514 /* StartupRoute.swift in Sources */,
 				EA15B59B2AD6E44D00C03407 /* LoginView.swift in Sources */,
@@ -3427,7 +3554,7 @@
 				EA15B5A02AD6E44D00C03407 /* LoginRoute.swift in Sources */,
 				EA5E1D7D2AD7178F00738A8F /* View+Extension.swift in Sources */,
 				EA0E40922AF69771002B7437 /* CashWalletOnboardingRouter.swift in Sources */,
-				EA9110332ADDBF7400584B98 /* WalkyBotView.swift in Sources */,
+				EA9110332ADDBF7400584B98 /* WalkyBotItemView.swift in Sources */,
 				EA172AFC2AF06BDE00EB1514 /* ConfirmMailView.swift in Sources */,
 				EA6083DD2B01DBDF00295069 /* GalleryPhotosInteractorProtocol.swift in Sources */,
 				EA910F362AD976F600584B98 /* CheckboxToggle.swift in Sources */,
@@ -3443,6 +3570,7 @@
 				EA282ED22AEB531100B90920 /* FunctionsRoute.swift in Sources */,
 				EA0E40C12AF70E86002B7437 /* CashWalletRouter.swift in Sources */,
 				EA60833D2AFD58A900295069 /* CryptoTabRoute.swift in Sources */,
+				EA7219972B05612900BE2D93 /* WalkyBotModel.swift in Sources */,
 				EA6083E22B01DBE000295069 /* GalleryPhotosAssembler.swift in Sources */,
 				EA4164F42AE4B6F7008CE66A /* ComparePlansView.swift in Sources */,
 				EA910F932ADA06F500584B98 /* RegistrationInteractorProtocol.swift in Sources */,
@@ -3462,6 +3590,7 @@
 				EA910F9E2ADC43B200584B98 /* FullScreenWrapper.swift in Sources */,
 				56DADB272AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift in Sources */,
 				EA282ED62AEB532800B90920 /* RecentFunctionsCell.swift in Sources */,
+				EA72199C2B05612900BE2D93 /* WalkyBotInteractorProtocol.swift in Sources */,
 				EA172B222AF06EF600EB1514 /* StartupViewModelProtocol.swift in Sources */,
 				EA6083B22B01D9E100295069 /* GalleryAssemblerProtocol.swift in Sources */,
 				EA4164F62AE4B6F7008CE66A /* ComparePlansInteractorProtocol.swift in Sources */,
@@ -3477,10 +3606,12 @@
 				EA282ECF2AEB531100B90920 /* FunctionsRouterProtocol.swift in Sources */,
 				EA172B272AF06EF600EB1514 /* StartupRouterProtocol.swift in Sources */,
 				EA6083632B01981800295069 /* CryptoDetailsViewModelProtocol.swift in Sources */,
+				EA7219952B05612900BE2D93 /* WalkyBotAssemblerProtocol.swift in Sources */,
 				EA7219772B0553C900BE2D93 /* GalleryItemView.swift in Sources */,
 				5637A8162AD5DD72000586DF /* WalkyCamApp.swift in Sources */,
 				EA15B5B42AD7074200C03407 /* RouterState.swift in Sources */,
 				EA910F2E2AD8B14C00584B98 /* WCUIButton.swift in Sources */,
+				EA7219982B05612900BE2D93 /* WalkyBotViewModelProtocol.swift in Sources */,
 				EA0E408E2AF69771002B7437 /* CashWalletOnboardingView.swift in Sources */,
 				EA282E5B2AE952F700B90920 /* ProfileRouterProtocol.swift in Sources */,
 				EA15B59F2AD6E44D00C03407 /* LoginRouterProtocol.swift in Sources */,
@@ -3543,6 +3674,7 @@
 				EA5E1D932AD71ABB00738A8F /* Tokens.swift in Sources */,
 				EA4165422AE706C6008CE66A /* NotificationsViewModel.swift in Sources */,
 				EA910FC92ADC495700584B98 /* TabBarViewModel.swift in Sources */,
+				EA72199E2B05612900BE2D93 /* WalkyBotRouter.swift in Sources */,
 				EA910F8F2ADA06F500584B98 /* RegistrationViewModelProtocol.swift in Sources */,
 				EA41654A2AE706C6008CE66A /* NotificationsAssembler.swift in Sources */,
 			);

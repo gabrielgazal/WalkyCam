@@ -8,8 +8,15 @@
 import Foundation
 import SwiftUI
 
-struct WalkyBotView: View {
+struct WalkyBotItemView: View {
     @State var isCompact: Bool = false
+    private var action: (() -> Void)?
+
+    public init(
+        action: (() -> Void)?
+    ) {
+        self.action = action
+    }
 
     var body: some View {
         Group {
@@ -43,6 +50,9 @@ struct WalkyBotView: View {
                                       placeholder: L10n.WalkyBotView.text,
                                       backgroundColor: .blanco)
                         .disabled(true)
+                        .onTapGesture {
+                            action?()
+                        }
                         Image(systemName: "multiply.circle.fill")
                             .resizable()
                             .frame(width: 20,
@@ -62,8 +72,8 @@ struct WalkyBotView: View {
     }
 }
 
-struct WalkyBotView_Previews: PreviewProvider {
+struct WalkyBotItemView_Previews: PreviewProvider {
     static var previews: some View {
-        WalkyBotView()
+        WalkyBotItemView(action: {})
     }
 }

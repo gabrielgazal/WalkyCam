@@ -30,7 +30,7 @@ final class MenuViewModel: MenuViewModelProtocol {
                   routeToNavigate: nil),
             .init(icon: Asset.Menu.bot.name,
                   title: L10n.MenuViewModel.Item.bot,
-                  routeToNavigate: MockRoute())
+                  routeToNavigate: WalkyBotRoute(isPresented: .constant(false)))
         ]
     }
 

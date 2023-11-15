@@ -36,7 +36,9 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                                       actions: .init(notificationsAction: handleNotificationsAction,
                                                      profileAction: handleProfileAction))
                     .padding(.horizontal, Tokens.Size.Spacing.large)
-                    WalkyBotView()
+                    WalkyBotItemView(action: {
+                        router.routeToWalkyBot()
+                    })
                     recentFunctionsView(proxy)
                     remindersView()
                     Spacer()

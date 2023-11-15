@@ -15,4 +15,10 @@ final class HomeRouter: Router, HomeRouterProtocol {
             ProfileRoute(isPresented: isNavigating)
         )
     }
+
+    func routeToWalkyBot() {
+        navigateTo(
+            WalkyBotRoute(isPresented: isNavigating)
+        )
+    }
 }

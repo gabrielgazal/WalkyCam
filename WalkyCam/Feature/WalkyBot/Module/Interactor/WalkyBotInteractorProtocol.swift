@@ -1,0 +1,3 @@
+protocol WalkyBotInteractorProtocol {
+    func someFunction()
+}
