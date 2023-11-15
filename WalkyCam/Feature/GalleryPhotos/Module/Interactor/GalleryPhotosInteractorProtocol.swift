@@ -1,0 +1,3 @@
+protocol GalleryPhotosInteractorProtocol {
+    func someFunction()
+}

@@ -1,7 +1,7 @@
 import Foundation
 
 enum SelectedTabItem: Int {
-    case leads = 0
-    case listings
-    case profile
+    case home = 0
+    case funcitons
+    case menu
 }

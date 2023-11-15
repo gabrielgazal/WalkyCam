@@ -44,6 +44,7 @@ internal enum Asset {
     internal static let compare = ImageAsset(name: "Compare")
     internal static let cryptocurrency = ImageAsset(name: "Cryptocurrency")
     internal static let drone = ImageAsset(name: "Drone")
+    internal static let files = ImageAsset(name: "Files")
     internal static let filter = ImageAsset(name: "Filter")
     internal static let karaoke = ImageAsset(name: "Karaoke")
     internal static let lentes = ImageAsset(name: "LENTES")
@@ -72,6 +73,7 @@ internal enum Asset {
     internal static let funciones = ImageAsset(name: "funciones")
     internal static let games = ImageAsset(name: "games")
     internal static let hair = ImageAsset(name: "hair")
+    internal static let images = ImageAsset(name: "images")
     internal static let iot = ImageAsset(name: "iot")
     internal static let lawyer = ImageAsset(name: "lawyer")
     internal static let lidar = ImageAsset(name: "lidar")
@@ -88,6 +90,7 @@ internal enum Asset {
     internal static let rov = ImageAsset(name: "rov")
     internal static let thermalCamera = ImageAsset(name: "thermalCamera")
     internal static let translate = ImageAsset(name: "translate")
+    internal static let videos = ImageAsset(name: "videos")
     internal static let wIcon = ImageAsset(name: "wIcon")
   }
   internal enum Illustrations {

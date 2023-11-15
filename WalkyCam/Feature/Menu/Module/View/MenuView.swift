@@ -31,7 +31,9 @@ struct MenuView<ViewModel: MenuViewModelProtocol, Router: MenuRouterProtocol>: V
                 }
                 .background(Color.blanco)
                 .onTapGesture {
-                    router.navigateTo(item.routeToNavigate)
+                    if let route = item.routeToNavigate {
+                        router.navigateTo(route)
+                    }
                 }
                 .padding(.vertical, Tokens.Size.Spacing.xlarge)
                 Divider()

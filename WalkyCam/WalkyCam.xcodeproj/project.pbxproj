@@ -178,6 +178,29 @@
 		EA6083922B01CD0A00295069 /* ShopTabInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083862B01CD0A00295069 /* ShopTabInteractorProtocol.swift */; };
 		EA6083932B01CD0A00295069 /* ShopTabRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083882B01CD0A00295069 /* ShopTabRouterProtocol.swift */; };
 		EA6083942B01CD0A00295069 /* ShopTabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083892B01CD0A00295069 /* ShopTabRouter.swift */; };
+		EA6083B12B01D9E100295069 /* GalleryRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA60839E2B01D9E100295069 /* GalleryRoute.swift */; };
+		EA6083B22B01D9E100295069 /* GalleryAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083A02B01D9E100295069 /* GalleryAssemblerProtocol.swift */; };
+		EA6083B32B01D9E100295069 /* GalleryAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083A12B01D9E100295069 /* GalleryAssembler.swift */; };
+		EA6083B42B01D9E100295069 /* GalleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083A42B01D9E100295069 /* GalleryModel.swift */; };
+		EA6083B52B01D9E100295069 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083A72B01D9E100295069 /* GalleryViewModel.swift */; };
+		EA6083B62B01D9E100295069 /* GalleryViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083A82B01D9E100295069 /* GalleryViewModelProtocol.swift */; };
+		EA6083B72B01D9E100295069 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083AA2B01D9E100295069 /* GalleryView.swift */; };
+		EA6083B82B01D9E100295069 /* GalleryInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083AC2B01D9E100295069 /* GalleryInteractorProtocol.swift */; };
+		EA6083B92B01D9E100295069 /* GalleryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083AD2B01D9E100295069 /* GalleryInteractor.swift */; };
+		EA6083BA2B01D9E100295069 /* GalleryRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083AF2B01D9E100295069 /* GalleryRouterProtocol.swift */; };
+		EA6083BB2B01D9E100295069 /* GalleryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083B02B01D9E100295069 /* GalleryRouter.swift */; };
+		EA6083D82B01DBDF00295069 /* GalleryPhotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083C52B01DBDF00295069 /* GalleryPhotosModel.swift */; };
+		EA6083D92B01DBDF00295069 /* GalleryPhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083C82B01DBDF00295069 /* GalleryPhotosViewModel.swift */; };
+		EA6083DA2B01DBDF00295069 /* GalleryPhotosViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083C92B01DBDF00295069 /* GalleryPhotosViewModelProtocol.swift */; };
+		EA6083DB2B01DBDF00295069 /* GalleryPhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083CB2B01DBDF00295069 /* GalleryPhotosView.swift */; };
+		EA6083DC2B01DBDF00295069 /* GalleryPhotosInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083CD2B01DBDF00295069 /* GalleryPhotosInteractor.swift */; };
+		EA6083DD2B01DBDF00295069 /* GalleryPhotosInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083CE2B01DBDF00295069 /* GalleryPhotosInteractorProtocol.swift */; };
+		EA6083DE2B01DBDF00295069 /* GalleryPhotosRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083D02B01DBDF00295069 /* GalleryPhotosRouterProtocol.swift */; };
+		EA6083DF2B01DBE000295069 /* GalleryPhotosRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083D12B01DBDF00295069 /* GalleryPhotosRouter.swift */; };
+		EA6083E02B01DBE000295069 /* GalleryPhotosRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083D42B01DBDF00295069 /* GalleryPhotosRoute.swift */; };
+		EA6083E12B01DBE000295069 /* GalleryPhotosAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083D62B01DBDF00295069 /* GalleryPhotosAssemblerProtocol.swift */; };
+		EA6083E22B01DBE000295069 /* GalleryPhotosAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083D72B01DBDF00295069 /* GalleryPhotosAssembler.swift */; };
+		EA7219772B0553C900BE2D93 /* GalleryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7219762B0553C900BE2D93 /* GalleryItemView.swift */; };
 		EA82DB502ADF4DBB00E6B39A /* HomeSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82DB4F2ADF4DBB00E6B39A /* HomeSectionView.swift */; };
 		EA82DB532ADF605500E6B39A /* ReminderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82DB522ADF605500E6B39A /* ReminderCardView.swift */; };
 		EA910F1C2AD8AA6400584B98 /* Mulish-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA910F1B2AD8AA6400584B98 /* Mulish-Black.ttf */; };
@@ -479,6 +502,29 @@
 		EA6083862B01CD0A00295069 /* ShopTabInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTabInteractorProtocol.swift; sourceTree = "<group>"; };
 		EA6083882B01CD0A00295069 /* ShopTabRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTabRouterProtocol.swift; sourceTree = "<group>"; };
 		EA6083892B01CD0A00295069 /* ShopTabRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTabRouter.swift; sourceTree = "<group>"; };
+		EA60839E2B01D9E100295069 /* GalleryRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryRoute.swift; sourceTree = "<group>"; };
+		EA6083A02B01D9E100295069 /* GalleryAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA6083A12B01D9E100295069 /* GalleryAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryAssembler.swift; sourceTree = "<group>"; };
+		EA6083A42B01D9E100295069 /* GalleryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryModel.swift; sourceTree = "<group>"; };
+		EA6083A72B01D9E100295069 /* GalleryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
+		EA6083A82B01D9E100295069 /* GalleryViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA6083AA2B01D9E100295069 /* GalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		EA6083AC2B01D9E100295069 /* GalleryInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryInteractorProtocol.swift; sourceTree = "<group>"; };
+		EA6083AD2B01D9E100295069 /* GalleryInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryInteractor.swift; sourceTree = "<group>"; };
+		EA6083AF2B01D9E100295069 /* GalleryRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryRouterProtocol.swift; sourceTree = "<group>"; };
+		EA6083B02B01D9E100295069 /* GalleryRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryRouter.swift; sourceTree = "<group>"; };
+		EA6083C52B01DBDF00295069 /* GalleryPhotosModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryPhotosModel.swift; sourceTree = "<group>"; };
+		EA6083C82B01DBDF00295069 /* GalleryPhotosViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryPhotosViewModel.swift; sourceTree = "<group>"; };
+		EA6083C92B01DBDF00295069 /* GalleryPhotosViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryPhotosViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA6083CB2B01DBDF00295069 /* GalleryPhotosView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryPhotosView.swift; sourceTree = "<group>"; };
+		EA6083CD2B01DBDF00295069 /* GalleryPhotosInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryPhotosInteractor.swift; sourceTree = "<group>"; };
+		EA6083CE2B01DBDF00295069 /* GalleryPhotosInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryPhotosInteractorProtocol.swift; sourceTree = "<group>"; };
+		EA6083D02B01DBDF00295069 /* GalleryPhotosRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryPhotosRouterProtocol.swift; sourceTree = "<group>"; };
+		EA6083D12B01DBDF00295069 /* GalleryPhotosRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryPhotosRouter.swift; sourceTree = "<group>"; };
+		EA6083D42B01DBDF00295069 /* GalleryPhotosRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryPhotosRoute.swift; sourceTree = "<group>"; };
+		EA6083D62B01DBDF00295069 /* GalleryPhotosAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryPhotosAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA6083D72B01DBDF00295069 /* GalleryPhotosAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryPhotosAssembler.swift; sourceTree = "<group>"; };
+		EA7219762B0553C900BE2D93 /* GalleryItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryItemView.swift; sourceTree = "<group>"; };
 		EA82DB4F2ADF4DBB00E6B39A /* HomeSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionView.swift; sourceTree = "<group>"; };
 		EA82DB522ADF605500E6B39A /* ReminderCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCardView.swift; sourceTree = "<group>"; };
 		EA910F1B2AD8AA6400584B98 /* Mulish-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Black.ttf"; sourceTree = "<group>"; };
@@ -882,6 +928,8 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				EA6083BC2B01DBB100295069 /* GalleryPhotos */,
+				EA6083952B01D9C100295069 /* Gallery */,
 				EA60836E2B01CCEA00295069 /*  ShopTab */,
 				EA6083472B0197FC00295069 /* CryptoDetails */,
 				EA6083202AFD588600295069 /* CryptoTab */,
@@ -2085,6 +2133,203 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		EA6083952B01D9C100295069 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				EA60839C2B01D9E100295069 /* Configuration */,
+				EA6083A22B01D9E100295069 /* Domain */,
+				EA6083A52B01D9E100295069 /* Module */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		EA60839C2B01D9E100295069 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA60839D2B01D9E100295069 /* Route */,
+				EA60839F2B01D9E100295069 /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA60839D2B01D9E100295069 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA60839E2B01D9E100295069 /* GalleryRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA60839F2B01D9E100295069 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083A02B01D9E100295069 /* GalleryAssemblerProtocol.swift */,
+				EA6083A12B01D9E100295069 /* GalleryAssembler.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EA6083A22B01D9E100295069 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083A32B01D9E100295069 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA6083A32B01D9E100295069 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083A42B01D9E100295069 /* GalleryModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA6083A52B01D9E100295069 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083A62B01D9E100295069 /* ViewModel */,
+				EA6083A92B01D9E100295069 /* View */,
+				EA6083AB2B01D9E100295069 /* Interactor */,
+				EA6083AE2B01D9E100295069 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA6083A62B01D9E100295069 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083A72B01D9E100295069 /* GalleryViewModel.swift */,
+				EA6083A82B01D9E100295069 /* GalleryViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA6083A92B01D9E100295069 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083AA2B01D9E100295069 /* GalleryView.swift */,
+				EA7219762B0553C900BE2D93 /* GalleryItemView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA6083AB2B01D9E100295069 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083AC2B01D9E100295069 /* GalleryInteractorProtocol.swift */,
+				EA6083AD2B01D9E100295069 /* GalleryInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EA6083AE2B01D9E100295069 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083AF2B01D9E100295069 /* GalleryRouterProtocol.swift */,
+				EA6083B02B01D9E100295069 /* GalleryRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EA6083BC2B01DBB100295069 /* GalleryPhotos */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083D22B01DBDF00295069 /* Configuration */,
+				EA6083C32B01DBDF00295069 /* Domain */,
+				EA6083C62B01DBDF00295069 /* Module */,
+			);
+			path = GalleryPhotos;
+			sourceTree = "<group>";
+		};
+		EA6083C32B01DBDF00295069 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083C42B01DBDF00295069 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA6083C42B01DBDF00295069 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083C52B01DBDF00295069 /* GalleryPhotosModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA6083C62B01DBDF00295069 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083C72B01DBDF00295069 /* ViewModel */,
+				EA6083CA2B01DBDF00295069 /* View */,
+				EA6083CC2B01DBDF00295069 /* Interactor */,
+				EA6083CF2B01DBDF00295069 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA6083C72B01DBDF00295069 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083C82B01DBDF00295069 /* GalleryPhotosViewModel.swift */,
+				EA6083C92B01DBDF00295069 /* GalleryPhotosViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA6083CA2B01DBDF00295069 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083CB2B01DBDF00295069 /* GalleryPhotosView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA6083CC2B01DBDF00295069 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083CD2B01DBDF00295069 /* GalleryPhotosInteractor.swift */,
+				EA6083CE2B01DBDF00295069 /* GalleryPhotosInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EA6083CF2B01DBDF00295069 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083D02B01DBDF00295069 /* GalleryPhotosRouterProtocol.swift */,
+				EA6083D12B01DBDF00295069 /* GalleryPhotosRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EA6083D22B01DBDF00295069 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083D32B01DBDF00295069 /* Route */,
+				EA6083D52B01DBDF00295069 /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA6083D32B01DBDF00295069 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083D42B01DBDF00295069 /* GalleryPhotosRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA6083D52B01DBDF00295069 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA6083D62B01DBDF00295069 /* GalleryPhotosAssemblerProtocol.swift */,
+				EA6083D72B01DBDF00295069 /* GalleryPhotosAssembler.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
 		EA82DB4B2ADF49D600E6B39A /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
@@ -3017,6 +3262,7 @@
 				EA910FCD2ADC495700584B98 /* TabBarRouterProtocol.swift in Sources */,
 				EA172B002AF06BDE00EB1514 /* ConfirmMailRouter.swift in Sources */,
 				EAD048732AE22C530096E6AB /* RegistrationPlansAssemblerProtocol.swift in Sources */,
+				EA6083DC2B01DBDF00295069 /* GalleryPhotosInteractor.swift in Sources */,
 				EA282E582AE952F700B90920 /* ProfileInteractorProtocol.swift in Sources */,
 				EA9110212ADDADE100584B98 /* HomeModel.swift in Sources */,
 				EA6083922B01CD0A00295069 /* ShopTabInteractorProtocol.swift in Sources */,
@@ -3051,6 +3297,7 @@
 				EA91101E2ADDADE100584B98 /* HomeInteractorProtocol.swift in Sources */,
 				EAA1E6442AFB03FD00A42174 /* CashTabRouterProtocol.swift in Sources */,
 				EA172B242AF06EF600EB1514 /* StartupInteractor.swift in Sources */,
+				EA6083B92B01D9E100295069 /* GalleryInteractor.swift in Sources */,
 				EA0E40C32AF70E86002B7437 /* CashWalletRoute.swift in Sources */,
 				EA910F602AD9B01300584B98 /* OnboardingViewModel.swift in Sources */,
 				EA282ED32AEB531100B90920 /* FunctionsAssembler.swift in Sources */,
@@ -3073,6 +3320,7 @@
 				EAA1E63B2AFB03FD00A42174 /* CashTabRoute.swift in Sources */,
 				EA910FF02ADCBCC000584B98 /* MenuRoute.swift in Sources */,
 				EA6083452AFD58A900295069 /* CryptoTabRouter.swift in Sources */,
+				EA6083D92B01DBDF00295069 /* GalleryPhotosViewModel.swift in Sources */,
 				EA0E40BD2AF70E86002B7437 /* CashWalletView.swift in Sources */,
 				EA6083642B01981800295069 /* CryptoDetailsViewModel.swift in Sources */,
 				EA282E512AE952F700B90920 /* ProfileRoute.swift in Sources */,
@@ -3091,6 +3339,7 @@
 				56DADB202AD5EA7200710618 /* AppNavigatorProtocol.swift in Sources */,
 				EA0E408B2AF69771002B7437 /* CashWalletOnboardingModel.swift in Sources */,
 				EAD0486B2AE22C530096E6AB /* RegistrationPlansViewModel.swift in Sources */,
+				EA6083B32B01D9E100295069 /* GalleryAssembler.swift in Sources */,
 				EA910FF32ADCBCC000584B98 /* MenuItemModel.swift in Sources */,
 				EA15B5B92AD7077C00C03407 /* GenericUseCase.swift in Sources */,
 				EA15B5BE2AD707B900C03407 /* ViewModelProtocol.swift in Sources */,
@@ -3098,19 +3347,25 @@
 				EA91101C2ADDADE100584B98 /* HomeView.swift in Sources */,
 				EA6083442AFD58A900295069 /* CryptoTabInteractorProtocol.swift in Sources */,
 				EA172B252AF06EF600EB1514 /* StartupInteractorProtocol.swift in Sources */,
+				EA6083E12B01DBE000295069 /* GalleryPhotosAssemblerProtocol.swift in Sources */,
 				EA5E1D742AD716A500738A8F /* ProjectFont.swift in Sources */,
 				EAA1E6402AFB03FD00A42174 /* CashTabView.swift in Sources */,
 				EA0E40972AF697F0002B7437 /* CashWalletOnboardingPageView.swift in Sources */,
 				EA4164F32AE4B6F7008CE66A /* ComparePlansViewModelProtocol.swift in Sources */,
+				EA6083B52B01D9E100295069 /* GalleryViewModel.swift in Sources */,
+				EA6083DE2B01DBDF00295069 /* GalleryPhotosRouterProtocol.swift in Sources */,
+				EA6083DF2B01DBE000295069 /* GalleryPhotosRouter.swift in Sources */,
 				EA172B202AF06EF600EB1514 /* StartupAssemblerProtocol.swift in Sources */,
 				EA4164FB2AE4B805008CE66A /* ComparePlansPageView.swift in Sources */,
 				EA5E1D7B2AD7174700738A8F /* Button+Extension.swift in Sources */,
 				EA910F642AD9B01300584B98 /* OnboardingRouter.swift in Sources */,
+				EA6083BA2B01D9E100295069 /* GalleryRouterProtocol.swift in Sources */,
 				EA60836D2B01981800295069 /* CryptoDetailsAssembler.swift in Sources */,
 				EA172B262AF06EF600EB1514 /* StartupRouter.swift in Sources */,
 				EA172B1E2AF06EF600EB1514 /* StartupRoute.swift in Sources */,
 				EA15B59B2AD6E44D00C03407 /* LoginView.swift in Sources */,
 				EA6083692B01981800295069 /* CryptoDetailsRouterProtocol.swift in Sources */,
+				EA6083B82B01D9E100295069 /* GalleryInteractorProtocol.swift in Sources */,
 				EA910F5E2AD9B01300584B98 /* OnboardingViewModelProtocol.swift in Sources */,
 				EA910FF12ADCBCC000584B98 /* MenuAssemblerProtocol.swift in Sources */,
 				EA6083912B01CD0A00295069 /* ShopTabInteractor.swift in Sources */,
@@ -3137,6 +3392,7 @@
 				EAA1E63E2AFB03FD00A42174 /* CashTabViewModelProtocol.swift in Sources */,
 				EA6083662B01981800295069 /* CryptoDetailsInteractor.swift in Sources */,
 				EA910F652AD9B01300584B98 /* OnboardingRouterProtocol.swift in Sources */,
+				EA6083B72B01D9E100295069 /* GalleryView.swift in Sources */,
 				EA282E592AE952F700B90920 /* ProfileInteractor.swift in Sources */,
 				EA910FFA2ADCBCC000584B98 /* MenuRouter.swift in Sources */,
 				EA6083412AFD58A900295069 /* CryptoTabViewModelProtocol.swift in Sources */,
@@ -3154,12 +3410,14 @@
 				EA5E1D9A2AD883D800738A8F /* Text+Extension.swift in Sources */,
 				EA9110192ADDADE100584B98 /* HomeViewModelProtocol.swift in Sources */,
 				EA910F5A2AD9B01300584B98 /* OnboardingRoute.swift in Sources */,
+				EA6083DA2B01DBDF00295069 /* GalleryPhotosViewModelProtocol.swift in Sources */,
 				EA910FD22ADC499500584B98 /* TabBarBuilder.swift in Sources */,
 				EA5E1D762AD716D200738A8F /* ButtonStyleDescriptor.swift in Sources */,
 				EA172AF82AF06BDE00EB1514 /* ConfirmMailAssembler.swift in Sources */,
 				EA82DB532ADF605500E6B39A /* ReminderCardView.swift in Sources */,
 				EA9110262ADDAE6400584B98 /* ProfileHeaderView.swift in Sources */,
 				EA282E602AE9A10600B90920 /* ImageMock.swift in Sources */,
+				EA6083E02B01DBE000295069 /* GalleryPhotosRoute.swift in Sources */,
 				EA910FF22ADCBCC000584B98 /* MenuAssembler.swift in Sources */,
 				EA15B5B62AD7075600C03407 /* Router.swift in Sources */,
 				EA91101A2ADDADE100584B98 /* HomeViewModel.swift in Sources */,
@@ -3171,6 +3429,7 @@
 				EA0E40922AF69771002B7437 /* CashWalletOnboardingRouter.swift in Sources */,
 				EA9110332ADDBF7400584B98 /* WalkyBotView.swift in Sources */,
 				EA172AFC2AF06BDE00EB1514 /* ConfirmMailView.swift in Sources */,
+				EA6083DD2B01DBDF00295069 /* GalleryPhotosInteractorProtocol.swift in Sources */,
 				EA910F362AD976F600584B98 /* CheckboxToggle.swift in Sources */,
 				EA6083932B01CD0A00295069 /* ShopTabRouterProtocol.swift in Sources */,
 				EAA1E6412AFB03FD00A42174 /* CashTabInteractorProtocol.swift in Sources */,
@@ -3184,6 +3443,7 @@
 				EA282ED22AEB531100B90920 /* FunctionsRoute.swift in Sources */,
 				EA0E40C12AF70E86002B7437 /* CashWalletRouter.swift in Sources */,
 				EA60833D2AFD58A900295069 /* CryptoTabRoute.swift in Sources */,
+				EA6083E22B01DBE000295069 /* GalleryPhotosAssembler.swift in Sources */,
 				EA4164F42AE4B6F7008CE66A /* ComparePlansView.swift in Sources */,
 				EA910F932ADA06F500584B98 /* RegistrationInteractorProtocol.swift in Sources */,
 				EA5E1D842AD7183700738A8F /* RoundedCornerShape.swift in Sources */,
@@ -3194,6 +3454,7 @@
 				EA910F5C2AD9B01300584B98 /* OnboardingAssemblerProtocol.swift in Sources */,
 				EA910FC42ADC495700584B98 /* TabBarRoute.swift in Sources */,
 				EADBE1012AE823BA00FED579 /* NotificationItemView.swift in Sources */,
+				EA6083B12B01D9E100295069 /* GalleryRoute.swift in Sources */,
 				EA6083432AFD58A900295069 /* CryptoTabInteractor.swift in Sources */,
 				EA60836B2B01981800295069 /* CryptoDetailsRoute.swift in Sources */,
 				EA910FF52ADCBCC000584B98 /* MenuViewModelProtocol.swift in Sources */,
@@ -3202,6 +3463,7 @@
 				56DADB272AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift in Sources */,
 				EA282ED62AEB532800B90920 /* RecentFunctionsCell.swift in Sources */,
 				EA172B222AF06EF600EB1514 /* StartupViewModelProtocol.swift in Sources */,
+				EA6083B22B01D9E100295069 /* GalleryAssemblerProtocol.swift in Sources */,
 				EA4164F62AE4B6F7008CE66A /* ComparePlansInteractorProtocol.swift in Sources */,
 				EA282E112AE8327100B90920 /* DateFormat.swift in Sources */,
 				EA0E408F2AF69771002B7437 /* CashWalletOnboardingInteractor.swift in Sources */,
@@ -3215,6 +3477,7 @@
 				EA282ECF2AEB531100B90920 /* FunctionsRouterProtocol.swift in Sources */,
 				EA172B272AF06EF600EB1514 /* StartupRouterProtocol.swift in Sources */,
 				EA6083632B01981800295069 /* CryptoDetailsViewModelProtocol.swift in Sources */,
+				EA7219772B0553C900BE2D93 /* GalleryItemView.swift in Sources */,
 				5637A8162AD5DD72000586DF /* WalkyCamApp.swift in Sources */,
 				EA15B5B42AD7074200C03407 /* RouterState.swift in Sources */,
 				EA910F2E2AD8B14C00584B98 /* WCUIButton.swift in Sources */,
@@ -3222,6 +3485,7 @@
 				EA282E5B2AE952F700B90920 /* ProfileRouterProtocol.swift in Sources */,
 				EA15B59F2AD6E44D00C03407 /* LoginRouterProtocol.swift in Sources */,
 				EA5E1D9D2AD8A3DA00738A8F /* Assets.swift in Sources */,
+				EA6083D82B01DBDF00295069 /* GalleryPhotosModel.swift in Sources */,
 				EA910FF62ADCBCC000584B98 /* MenuViewModel.swift in Sources */,
 				EA6083422AFD58A900295069 /* CryptoTabView.swift in Sources */,
 				EA5E1D8C2AD719C400738A8F /* TextInputView.swift in Sources */,
@@ -3231,6 +3495,7 @@
 				EAD048702AE22C530096E6AB /* RegistrationPlansRouter.swift in Sources */,
 				EA6083652B01981800295069 /* CryptoDetailsView.swift in Sources */,
 				EA0E408C2AF69771002B7437 /* CashWalletOnboardingViewModel.swift in Sources */,
+				EA6083B62B01D9E100295069 /* GalleryViewModelProtocol.swift in Sources */,
 				EA60833F2AFD58A900295069 /* CryptoTabAssemblerProtocol.swift in Sources */,
 				EA91102F2ADDB93D00584B98 /* EnvironmentValues+ImageCache.swift in Sources */,
 				EA910F9C2ADC437300584B98 /* AlertModifier.swift in Sources */,
@@ -3245,6 +3510,8 @@
 				EA910FC52ADC495700584B98 /* TabBarAssembler.swift in Sources */,
 				EA82DB502ADF4DBB00E6B39A /* HomeSectionView.swift in Sources */,
 				EA282E132AE832F100B90920 /* Date+Extension.swift in Sources */,
+				EA6083B42B01D9E100295069 /* GalleryModel.swift in Sources */,
+				EA6083BB2B01D9E100295069 /* GalleryRouter.swift in Sources */,
 				EA9110222ADDADE100584B98 /* HomeRoute.swift in Sources */,
 				EA0E40C02AF70E86002B7437 /* CashWalletRouterProtocol.swift in Sources */,
 				EA4165472AE706C6008CE66A /* NotificationsRouterProtocol.swift in Sources */,
@@ -3268,6 +3535,7 @@
 				EA910F3C2AD982F300584B98 /* SecureTextInputView.swift in Sources */,
 				EA910FA42ADC470A00584B98 /* WCTabBarView.swift in Sources */,
 				EA60838E2B01CD0A00295069 /* ShopTabViewModelProtocol.swift in Sources */,
+				EA6083DB2B01DBDF00295069 /* GalleryPhotosView.swift in Sources */,
 				EA0E40932AF69771002B7437 /* CashWalletOnboardingRoute.swift in Sources */,
 				EA4165482AE706C6008CE66A /* NotificationsRoute.swift in Sources */,
 				EAA1E61C2AFAFA7100A42174 /* WCTopBarView.swift in Sources */,

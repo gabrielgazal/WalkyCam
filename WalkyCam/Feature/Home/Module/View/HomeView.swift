@@ -8,6 +8,8 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
 
+    @EnvironmentObject var tabBar: TabBarViewModel
+
     private let recentFunctionsColumns = [
         GridItem(.flexible()),
         GridItem(.flexible()),
@@ -54,7 +56,11 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                     RecentFunctionsCell(title: item.title, icon: item.icon, lastItem: isLastRecentsItem(itemId: item.id))
                         .frame(width: proxy.size.width / 3, height: proxy.size.width / 3)
                         .onTapGesture {
-                            print("Touched \(item.id)")
+                            if isLastRecentsItem(itemId: item.id) {
+                                tabBar.tabSelection = tabBar.tabBarItems[SelectedTabItem.funcitons.rawValue]
+                            } else {
+                                print("Touched \(item.id)")
+                            }
                         }
                 }
             }
@@ -71,6 +77,12 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                             .fill(Color.red)
                         ForEach(viewModel.homeData.reminders, id: \.self) { item in
                             ReminderCardView(date: item.date, camerName: item.camerName)
+                                .shadow(
+                                    color: .black.opacity(0.1),
+                                    radius: 8,
+                                    x: 0,
+                                    y: 2
+                                )
                         }
                     }
                 }

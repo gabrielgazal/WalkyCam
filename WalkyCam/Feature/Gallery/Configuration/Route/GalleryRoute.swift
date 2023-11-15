@@ -1,12 +1,12 @@
 import Foundation
 import SwiftUI
 
-struct HomeRoute: Route {
+struct GalleryRoute: Route {
     var isPresented: Binding<Bool>
-    let assembler: HomeAssemblerProtocol
+    let assembler: GalleryAssemblerProtocol
 
     init(isPresented: Binding<Bool>,
-         assembler: HomeAssemblerProtocol = HomeAssembler()) {
+         assembler: GalleryAssemblerProtocol = GalleryAssembler()) {
         self.isPresented = isPresented
         self.assembler = assembler
     }

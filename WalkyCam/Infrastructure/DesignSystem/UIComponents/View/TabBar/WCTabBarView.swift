@@ -34,6 +34,7 @@ struct WCTabBarView: View {
             x: 0,
             y: 2
         )
+
     }
 
     // MARK: - Private methods
