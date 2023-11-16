@@ -21,6 +21,9 @@ final class HomeViewModel: HomeViewModelProtocol {
         fetchProfileData()
         fetchRecentFunctions()
         fetchReminders()
+        fetchNews()
+        fetchFavorites()
+        fetchFiles()
     }
 
     private func fetchProfileData() {
@@ -43,6 +46,31 @@ final class HomeViewModel: HomeViewModelProtocol {
         homeData.reminders = [
             .init(id: 0, date: "Hoy - 13:00 h.", camerName: "Diego Salas"),
             .init(id: 0, date: "30 Oct 2023 - 10:00 h.", camerName: "Camila Cabello")
+        ]
+    }
+
+    private func fetchNews() {
+        homeData.news = [
+            .init(id: 0, title: "Falló tu conexión con SAP", description: "Tienes las credenciales caducadas.", icon: Asset.Icons.crm.name),
+            .init(id: 0, title: "WALKY te ayuda con tu IOT", description: "Debes calibrar los sensores regularmente.", icon: Asset.Icons.iot.name),
+            .init(id: 0, title: "", description: "Recuerda que tu plan de vuelo es solo para Cajamarca. Caduca hoy a   las 20:00 h.", icon: Asset.Icons.drone.name)
+        ]
+    }
+
+    private func fetchFavorites() {
+        homeData.favorites = [
+            .init(id: 0, name: "Lali Espósito", stars: 4, location: "Bogotá, Colombia", technologies: [.drone, .scan, .smartphone]),
+            .init(id: 0, name: "Diego Salas", stars: 4, location: "CDMX, México", technologies: [.drone, .smartphone]),
+            .init(id: 0, name: "Thiago Guirao", stars: 5, location: "Mar del Plata, Argentina", technologies: [.drone, .scan, .smartphone])
+        ]
+    }
+
+    private func fetchFiles() {
+        homeData.files = [
+            .init(id: 0, title: "Mis escaneos 3D", icon: Asset.Icons.scan3D.name),
+            .init(id: 0, title: "Mis videos WalkCamer", icon: Asset.Icons.streetCam.name),
+            .init(id: 0, title: "Mis servicios IOT", icon: Asset.Icons.iot.name),
+            .init(id: 0, title: "Mis videos Drone", icon: Asset.Icons.drone.name)
         ]
     }
 }

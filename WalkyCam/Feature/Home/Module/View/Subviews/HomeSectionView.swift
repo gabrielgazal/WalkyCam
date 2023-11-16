@@ -12,13 +12,16 @@ struct HomeSectionView<Content: View>: View {
 
     private let title: String
     private let icon: String?
+    private let action: (() -> Void)?
     private let content: Content
 
     public init(title: String,
                 icon: String? = nil,
+                action: (() -> Void)? = nil,
                 @ViewBuilder content: () -> Content) {
         self.title = title
         self.icon = icon
+        self.action = action
         self.content = content()
     }
 
@@ -39,6 +42,13 @@ struct HomeSectionView<Content: View>: View {
                     .font(.projectFont(size: Tokens.Size.Font.large, weight: .semibold))
                     .foregroundColor(.negro)
                 Spacer()
+                if let action = action {
+                    LinkButton(title: "Ver más",
+                               color: .naranja,
+                               action: {
+                        action()
+                    })
+                }
             }
             content
         }

@@ -212,6 +212,8 @@
 		EA72199C2B05612900BE2D93 /* WalkyBotInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7219902B05612900BE2D93 /* WalkyBotInteractorProtocol.swift */; };
 		EA72199D2B05612900BE2D93 /* WalkyBotRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7219922B05612900BE2D93 /* WalkyBotRouterProtocol.swift */; };
 		EA72199E2B05612900BE2D93 /* WalkyBotRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7219932B05612900BE2D93 /* WalkyBotRouter.swift */; };
+		EA7219A12B057D3A00BE2D93 /* NewsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7219A02B057D3A00BE2D93 /* NewsItemView.swift */; };
+		EA7219A42B05863C00BE2D93 /* FavoriteItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7219A32B05863C00BE2D93 /* FavoriteItemView.swift */; };
 		EA82DB502ADF4DBB00E6B39A /* HomeSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82DB4F2ADF4DBB00E6B39A /* HomeSectionView.swift */; };
 		EA82DB532ADF605500E6B39A /* ReminderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82DB522ADF605500E6B39A /* ReminderCardView.swift */; };
 		EA910F1C2AD8AA6400584B98 /* Mulish-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA910F1B2AD8AA6400584B98 /* Mulish-Black.ttf */; };
@@ -547,6 +549,8 @@
 		EA7219902B05612900BE2D93 /* WalkyBotInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyBotInteractorProtocol.swift; sourceTree = "<group>"; };
 		EA7219922B05612900BE2D93 /* WalkyBotRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyBotRouterProtocol.swift; sourceTree = "<group>"; };
 		EA7219932B05612900BE2D93 /* WalkyBotRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyBotRouter.swift; sourceTree = "<group>"; };
+		EA7219A02B057D3A00BE2D93 /* NewsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemView.swift; sourceTree = "<group>"; };
+		EA7219A32B05863C00BE2D93 /* FavoriteItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteItemView.swift; sourceTree = "<group>"; };
 		EA82DB4F2ADF4DBB00E6B39A /* HomeSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionView.swift; sourceTree = "<group>"; };
 		EA82DB522ADF605500E6B39A /* ReminderCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCardView.swift; sourceTree = "<group>"; };
 		EA910F1B2AD8AA6400584B98 /* Mulish-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Black.ttf"; sourceTree = "<group>"; };
@@ -2451,9 +2455,27 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		EA72199F2B057D2700BE2D93 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				EA7219A02B057D3A00BE2D93 /* NewsItemView.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		EA7219A22B05862C00BE2D93 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				EA7219A32B05863C00BE2D93 /* FavoriteItemView.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
 		EA82DB4B2ADF49D600E6B39A /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
+				EA7219A22B05862C00BE2D93 /* Favorites */,
+				EA72199F2B057D2700BE2D93 /* News */,
 				EA82DB512ADF5F5200E6B39A /* Reminder */,
 				EA82DB4C2ADF49EC00E6B39A /* RecentFunctions */,
 				EA9110252ADDAE6400584B98 /* ProfileHeaderView.swift */,
@@ -3494,6 +3516,7 @@
 				EA6083692B01981800295069 /* CryptoDetailsRouterProtocol.swift in Sources */,
 				EA6083B82B01D9E100295069 /* GalleryInteractorProtocol.swift in Sources */,
 				EA910F5E2AD9B01300584B98 /* OnboardingViewModelProtocol.swift in Sources */,
+				EA7219A12B057D3A00BE2D93 /* NewsItemView.swift in Sources */,
 				EA910FF12ADCBCC000584B98 /* MenuAssemblerProtocol.swift in Sources */,
 				EA6083912B01CD0A00295069 /* ShopTabInteractor.swift in Sources */,
 				EA172B1F2AF06EF600EB1514 /* StartupAssembler.swift in Sources */,
@@ -3569,6 +3592,7 @@
 				EA9110292ADDB03300584B98 /* AsyncImageView.swift in Sources */,
 				EA282ED22AEB531100B90920 /* FunctionsRoute.swift in Sources */,
 				EA0E40C12AF70E86002B7437 /* CashWalletRouter.swift in Sources */,
+				EA7219A42B05863C00BE2D93 /* FavoriteItemView.swift in Sources */,
 				EA60833D2AFD58A900295069 /* CryptoTabRoute.swift in Sources */,
 				EA7219972B05612900BE2D93 /* WalkyBotModel.swift in Sources */,
 				EA6083E22B01DBE000295069 /* GalleryPhotosAssembler.swift in Sources */,

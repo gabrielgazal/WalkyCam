@@ -28,7 +28,7 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
 
     var body: some View {
         GeometryReader { proxy in
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 VStack(alignment: .center,
                        spacing: Tokens.Size.Spacing.large) {
                     ProfileHeaderView(name: viewModel.homeData.profileInfo.name,
@@ -41,7 +41,9 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                     })
                     recentFunctionsView(proxy)
                     remindersView()
-                    Spacer()
+                    newsView()
+                    favoritesView()
+                    filesView()
                 }
                        .padding([.bottom], Tokens.Size.Spacing.large)
                        .padding([.top], Tokens.Size.Spacing.huge)
@@ -70,27 +72,108 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
         .padding(.horizontal, Tokens.Size.Spacing.large)
     }
 
-        private func remindersView() -> some View {
-            HomeSectionView(title: "Recordatorios", icon: Asset.Icons.notes.name) {
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(alignment: .center,
-                           spacing: Tokens.Size.Spacing.regular) {
-                        Rectangle()
-                            .fill(Color.red)
-                        ForEach(viewModel.homeData.reminders, id: \.self) { item in
-                            ReminderCardView(date: item.date, camerName: item.camerName)
-                                .shadow(
-                                    color: .black.opacity(0.1),
-                                    radius: 8,
-                                    x: 0,
-                                    y: 2
-                                )
-                        }
+    private func remindersView() -> some View {
+        HomeSectionView(title: "Recordatorios", icon: Asset.Icons.notes.name) {
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(alignment: .center,
+                       spacing: Tokens.Size.Spacing.regular) {
+                    Asset.Ads.premium1.swiftUIImage
+                        .cornerRadius(Tokens.Size.Border.Radius.large)
+                    ForEach(viewModel.homeData.reminders, id: \.self) { item in
+                        ReminderCardView(date: item.date, camerName: item.camerName)
+                            .shadow(
+                                color: .black.opacity(0.1),
+                                radius: 8,
+                                x: 0,
+                                y: 2
+                            )
                     }
                 }
+                       .padding()
             }
-            .padding(.horizontal, Tokens.Size.Spacing.large)
         }
+        .padding(.horizontal, Tokens.Size.Spacing.large)
+    }
+
+    private func newsView() -> some View {
+        HomeSectionView(title: "Novedades", icon: Asset.Icons.newspaper.name) {
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(alignment: .center,
+                       spacing: Tokens.Size.Spacing.regular) {
+                    ForEach(viewModel.homeData.news, id: \.self) { item in
+                        NewsItemView(title: item.title, description: item.description, icon: item.icon)
+                            .shadow(
+                                color: .black.opacity(0.1),
+                                radius: 8,
+                                x: 0,
+                                y: 2
+                            )
+                    }
+                    Asset.Ads.premium1.swiftUIImage
+                        .cornerRadius(Tokens.Size.Border.Radius.large)
+                }
+                       .padding()
+            }
+        }
+        .padding(.horizontal, Tokens.Size.Spacing.large)
+    }
+
+    private func favoritesView() -> some View {
+        HomeSectionView(title: "Favoritos",
+                        icon: Asset.Icons.heart.name,
+                        action: {}) {
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(alignment: .center,
+                       spacing: Tokens.Size.Spacing.regular) {
+                    ForEach(viewModel.homeData.favorites, id: \.self) { item in
+                        FavoriteItemView(name: item.name,
+                                         photo: .imageMock,
+                                         location: item.location,
+                                         stars: item.stars,
+                                         technologies: item.technologies)
+                    }
+                }
+                       .padding()
+            }
+        }
+        .padding(.horizontal, Tokens.Size.Spacing.large)
+    }
+
+    private func filesView() -> some View {
+        HomeSectionView(title: "Galeria de archivos",
+                        icon: Asset.Icons.images.name,
+                        action: {}) {
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(alignment: .center,
+                       spacing: Tokens.Size.Spacing.regular) {
+                    ForEach(viewModel.homeData.files, id: \.self) { item in
+                        VStack(alignment: .center,
+                               spacing: Tokens.Size.Spacing.regular) {
+                            Image(item.icon)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 64, height: 64)
+                            Text(item.title)
+                                .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                        }
+                               .padding(Tokens.Size.Spacing.large)
+                               .background(
+                                Color.blanco
+                               )
+                               .cornerRadius(Tokens.Size.Border.Radius.xlarge, corners: .allCorners)
+                               .shadow(
+                                color: Color.negro.opacity(0.1),
+                                radius: 10,
+                                x: 0,
+                                y: 2
+                           )
+                    }
+                }
+                       .padding()
+            }
+        }
+        .padding(.horizontal, Tokens.Size.Spacing.large)
+    }
 
     private func isLastRecentsItem(itemId: Int) -> Bool {
         return itemId == (viewModel.homeData.recentFunctions.count - 1)
