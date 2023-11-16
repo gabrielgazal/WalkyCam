@@ -69,7 +69,6 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                 }
             }
         }
-        .padding(.horizontal, Tokens.Size.Spacing.large)
     }
 
     private func remindersView() -> some View {
@@ -92,7 +91,6 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                        .padding()
             }
         }
-        .padding(.horizontal, Tokens.Size.Spacing.large)
     }
 
     private func newsView() -> some View {
@@ -136,7 +134,6 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                        .padding()
             }
         }
-        .padding(.horizontal, Tokens.Size.Spacing.large)
     }
 
     private func filesView() -> some View {
@@ -172,7 +169,6 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                        .padding()
             }
         }
-        .padding(.horizontal, Tokens.Size.Spacing.large)
     }
 
     private func isLastRecentsItem(itemId: Int) -> Bool {

@@ -9,12 +9,12 @@ import Foundation
 import SwiftUI
 
 struct HomeSectionView<Content: View>: View {
-
+    
     private let title: String
     private let icon: String?
     private let action: (() -> Void)?
     private let content: Content
-
+    
     public init(title: String,
                 icon: String? = nil,
                 action: (() -> Void)? = nil,
@@ -24,7 +24,7 @@ struct HomeSectionView<Content: View>: View {
         self.action = action
         self.content = content()
     }
-
+    
     var body: some View {
         VStack(alignment: .leading,
                spacing: Tokens.Size.Spacing.regular) {
@@ -50,6 +50,7 @@ struct HomeSectionView<Content: View>: View {
                     })
                 }
             }
+                   .padding(.horizontal, Tokens.Size.Spacing.large)
             content
         }
     }
