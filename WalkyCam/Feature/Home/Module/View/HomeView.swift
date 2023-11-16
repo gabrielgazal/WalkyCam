@@ -61,7 +61,7 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                         .frame(width: proxy.size.width / 3, height: proxy.size.width / 3)
                         .onTapGesture {
                             if isLastRecentsItem(itemId: item.id) {
-                                tabBar.tabSelection = tabBar.tabBarItems[SelectedTabItem.funcitons.rawValue]
+                                tabBar.tabSelection = tabBar.tabBarItems[SelectedTabItem.functions.rawValue]
                             } else {
                                 print("Touched \(item.id)")
                             }
@@ -142,7 +142,7 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
     private func filesView() -> some View {
         HomeSectionView(title: "Galeria de archivos",
                         icon: Asset.Icons.images.name,
-                        action: {}) {
+                        action: { tabBar.tabSelection = tabBar.tabBarItems[SelectedTabItem.menu.rawValue] }) {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .center,
                        spacing: Tokens.Size.Spacing.regular) {
