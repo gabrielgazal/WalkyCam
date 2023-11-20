@@ -3,6 +3,16 @@
     {
       "filename" : "rov.pdf",
       "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "Property 1=blanco (14).pdf",
+      "idiom" : "universal"
     }
   ],
   "info" : {

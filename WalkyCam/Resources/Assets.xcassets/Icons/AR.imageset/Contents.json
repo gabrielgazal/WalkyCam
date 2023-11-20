@@ -3,6 +3,16 @@
     {
       "filename" : "AR.pdf",
       "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "Property 1=blanco (1).pdf",
+      "idiom" : "universal"
     }
   ],
   "info" : {

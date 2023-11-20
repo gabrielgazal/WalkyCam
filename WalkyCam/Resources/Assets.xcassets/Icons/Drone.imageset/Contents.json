@@ -3,6 +3,16 @@
     {
       "filename" : "Drone.pdf",
       "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "Property 1=blanco (6).pdf",
+      "idiom" : "universal"
     }
   ],
   "info" : {

@@ -3,6 +3,16 @@
     {
       "filename" : "3dPrinting.pdf",
       "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "Group (2).pdf",
+      "idiom" : "universal"
     }
   ],
   "info" : {

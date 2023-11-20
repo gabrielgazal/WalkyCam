@@ -3,6 +3,16 @@
     {
       "filename" : "translate.pdf",
       "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "Property 1=blanco (17).pdf",
+      "idiom" : "universal"
     }
   ],
   "info" : {

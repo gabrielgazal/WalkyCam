@@ -3,6 +3,16 @@
     {
       "filename" : "crm.pdf",
       "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "Property 1=blanco (3).pdf",
+      "idiom" : "universal"
     }
   ],
   "info" : {

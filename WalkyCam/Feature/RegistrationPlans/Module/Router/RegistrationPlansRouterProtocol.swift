@@ -1,6 +1,5 @@
 import SwiftUI
 
 protocol RegistrationPlansRouterProtocol: Router {
-    func routeToSomething()
+    func routeToPlansPages(_ currentPage: Int)
 }
-

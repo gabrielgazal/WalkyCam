@@ -3,6 +3,16 @@
     {
       "filename" : "AIAnalysis.pdf",
       "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "Property 1=blanco.pdf",
+      "idiom" : "universal"
     }
   ],
   "info" : {

@@ -3,6 +3,16 @@
     {
       "filename" : "lidar.pdf",
       "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "Property 1=blanco (11).pdf",
+      "idiom" : "universal"
     }
   ],
   "info" : {

@@ -42,7 +42,9 @@ struct RegistrationPlansView<ViewModel:RegistrationPlansViewModelProtocol, Route
                            rightIcon: Asset.Icons.compare.name,
                            style: .standard,
                            descriptor: BlackButtonStyleDescriptor(),
-                           action: {})
+                           action: {
+                    handlePlanAction(4)
+                })
             }
         }
         .padding(Tokens.Size.Spacing.regular)
@@ -74,11 +76,21 @@ struct RegistrationPlansView<ViewModel:RegistrationPlansViewModelProtocol, Route
                 WCUIButton(title: L10n.RegistrationPlans.Plan.Button.title,
                            style: .outline,
                            descriptor: WhiteButtonStyleDescriptor(),
-                           action: {})
+                           action: {
+                    handlePlanAction(getCurrentIndex(item.name))
+                })
                 .frame(width: 100, height: 32)
             }
                    .padding(Tokens.Size.Spacing.regular)
         }
+    }
+
+    private func handlePlanAction(_ index: Int = 0) {
+        router.routeToPlansPages(index)
+    }
+
+    private func getCurrentIndex(_ title: String) -> Int {
+        return viewModel.availablePlans.firstIndex(where: { $0.name == title }) ?? 0
     }
 }
 

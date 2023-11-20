@@ -58,3 +58,19 @@ struct YellowButtonStyleDescriptor: ButtonStyleDescriptorProtocol {
         return .premium
     }
 }
+struct GreyButtonStyleDescriptor: ButtonStyleDescriptorProtocol {
+    var mainColor: Color {
+        return .plateado
+    }
+    var pressedColor: Color {
+        return .plateado
+    }
+}
+struct BlueButtonStyleDescriptor: ButtonStyleDescriptorProtocol {
+    var mainColor: Color {
+        return .acentoFondoDark
+    }
+    var pressedColor: Color {
+        return .acentoFondoDark
+    }
+}

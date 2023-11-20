@@ -1,6 +1,5 @@
 import SwiftUI
 
 protocol ComparePlansRouterProtocol: Router {
-    func routeToSomething()
+    func routeToPlansPages(_ currentPage: Int?)
 }
-

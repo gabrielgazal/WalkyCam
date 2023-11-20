@@ -37,6 +37,7 @@ internal enum Asset {
     internal static let planFondo = ImageAsset(name: "plan_fondo")
   }
   internal enum Icons {
+    internal static let _360Camera = ImageAsset(name: "360Camera")
     internal static let _3dPrinting = ImageAsset(name: "3dPrinting")
     internal static let aiAnalysis = ImageAsset(name: "AIAnalysis")
     internal static let ar = ImageAsset(name: "AR")

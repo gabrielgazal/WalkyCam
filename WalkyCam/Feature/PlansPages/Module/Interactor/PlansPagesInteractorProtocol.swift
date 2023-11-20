@@ -1,0 +1,3 @@
+protocol PlansPagesInteractorProtocol {
+    func someFunction()
+}
