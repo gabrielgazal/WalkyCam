@@ -30,6 +30,8 @@ internal enum Asset {
     internal static let iphone = ImageAsset(name: "iphone")
     internal static let planeTravel = ImageAsset(name: "planeTravel")
     internal static let premium1 = ImageAsset(name: "premium-1")
+    internal static let premium2 = ImageAsset(name: "premium-2")
+    internal static let premium3 = ImageAsset(name: "premium-3")
     internal static let search = ImageAsset(name: "search")
   }
   internal enum Fondos {

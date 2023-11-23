@@ -39,9 +39,7 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
                     }
                 }
                 .padding(Tokens.Size.Spacing.regular)
-                Rectangle()
-                    .fill(Color.red)
-                    .frame(height: 250)
+                Asset.Ads.premium2.swiftUIImage
                 HomeSectionView(title: "Descubre más") {
                     LazyVGrid(columns: otherFunctionsColumns,
                               spacing: 16) {
@@ -51,9 +49,7 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
                     }
                 }
                 .padding(Tokens.Size.Spacing.regular)
-                Rectangle()
-                    .fill(Color.red)
-                    .frame(height: 250)
+                Asset.Ads.premium3.swiftUIImage
                 LazyVGrid(columns: otherFunctionsColumns,
                           spacing: 16) {
                     ForEach(viewModel.premiumFunctions, id: \.self) { item in

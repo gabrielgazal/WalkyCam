@@ -113,7 +113,6 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                        .padding()
             }
         }
-        .padding(.horizontal, Tokens.Size.Spacing.large)
     }
 
     private func favoritesView() -> some View {
