@@ -43,7 +43,7 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
                         .environment(\.colorScheme, .dark)
                         .tag(index)
                 }
-                Color.green
+                PlansComparisonPageView(plansData: viewModel.plans)
                     .tag(4)
             }
             .accentColor(.naranja)

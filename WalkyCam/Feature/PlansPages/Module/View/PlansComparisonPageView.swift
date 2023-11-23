@@ -30,16 +30,17 @@ struct PlansComparisonPageView: View {
                         .frame(width: 100)
                         .foregroundColor(.naranja)
                     Text("En todos los planes se incluyen funciones como: White Board, Share to, Chat, REC, etc.")
-                        .font(.projectFont(size: Tokens.Size.Font.tiny, weight: .semibold))
-                    VStack {
+                        .font(.projectFont(size: Tokens.Size.Font.xsmall, weight: .semibold))
+                    VStack(spacing: Tokens.Size.Spacing.small) {
                         ForEach(plansData.first(where: { $0.title == "Premium"})?.features ?? []) { item in
                             featureItem(item)
+                                .frame(height: 30)
                         }
                     }
                 }
                 ScrollView(.horizontal,
                            showsIndicators: false) {
-                    HStack {
+                    HStack(spacing: Tokens.Size.Spacing.small) {
                         ForEach(plansData, id: \.self) { data in
                             planItem(data)
                         }
@@ -68,7 +69,7 @@ struct PlansComparisonPageView: View {
 
     private func planItem(_ plan: PlansPagesModel) -> some View {
         VStack(alignment: .center,
-               spacing: Tokens.Size.Spacing.regular) {
+               spacing: Tokens.Size.Spacing.xsmall) {
             Text("Plan \(plan.title)")
                 .font(.projectFont(size: Tokens.Size.Font.xsmall, weight: .bold))
                 .foregroundColor(plan.accentColor)
@@ -79,6 +80,21 @@ struct PlansComparisonPageView: View {
                        descriptor: getButtonDescriptor(plan.title),
                        action: {})
             .frame(width: 130)
+            VStack(alignment: .center,
+                   spacing: Tokens.Size.Spacing.small) {
+                ForEach(plansData.first(where: { $0.title == "Premium"})?.features ?? []) { feature in
+                    if plan.features.contains(where: { $0.title == feature.title }) {
+                        Image(Asset.Icons.check.name)
+                            .resizable()
+                            .renderingMode(.template)
+                            .aspectRatio(contentMode: .fit)
+                            .frame(height: 30)
+                            .foregroundColor(plan.accentColor)
+                    } else {
+                        EmptyView()
+                    }
+                }
+            }
             Spacer()
         }
     }
@@ -107,17 +123,53 @@ struct PlansComparisonPageView_Previews: PreviewProvider {
                       monthlyPrice: 0.0,
                       backgroundImage: Asset.Fondos.planFondo.name,
                       accentColor: .plateado,
-                      features: []),
+                      features: [
+                        .init(title: "Video Call: 100 personas, 45 min.", icon: Asset.Icons.videoCall.name),
+                        .init(title: "AR Hands", icon: Asset.Icons.ar.name),
+                        .init(title: "Scan 3D", icon: Asset.Icons.scan3D.name),
+                        .init(title: "Pixelation Faces", icon: Asset.Icons.pixelation.name),
+                        .init(title: "Juegos y otros", icon: Asset.Icons.games.name),
+                        .init(title: "Se incluye funciones como: White board, Share to, Chat, REC, etc.", icon: ""),
+                        .init(title: "Disfruta mas de 20 funciones adicionales", icon: "")
+                    ]),
                 .init(title: "Basic",
                       monthlyPrice: 30.0,
                       backgroundImage: Asset.Fondos.planFondo.name,
                       accentColor: .acentoFondoDark,
-                      features: []),
+                      features: [
+                        .init(title: "Street Cam (WalkCamer)", icon: Asset.Icons.streetCam.name),
+                        .init(title: "360º Camera", icon: Asset.Icons._360Camera.name),
+                        .init(title: "Certified Recording", icon: Asset.Icons.translate.name),
+                        .init(title: "3D Printer", icon: Asset.Icons._3dPrinting.name),
+                        .init(title: "Video Call: 200 Personas con duración ilimitada.", icon: Asset.Icons.videoCall.name),
+                        .init(title: "AR Hands", icon: Asset.Icons.ar.name),
+                        .init(title: "Scan 3D", icon: Asset.Icons.scan3D.name),
+                        .init(title: "Pixelation Faces", icon: Asset.Icons.pixelation.name),
+                        .init(title: "Juegos y otros", icon: Asset.Icons.games.name),
+                        .init(title: "Se incluye funciones como: White board, Share to, Chat, REC, etc.", icon: "")
+                    ]),
                 .init(title: "Standard",
                       monthlyPrice: 60.0,
                       backgroundImage: Asset.Fondos.planFondo.name,
                       accentColor: .naranja,
-                      features: []),
+                      features: [
+                        .init(title: "IOT applications & Data analysis", icon: Asset.Icons.iot.name),
+                        .init(title: "Digital Twin", icon: Asset.Icons.digitalTwins.name),
+                        .init(title: "Drone Fly", icon: Asset.Icons.drone.name),
+                        .init(title: "IA & Data Analysis", icon: Asset.Icons.aiAnalysis.name),
+                        .init(title: "Alcohol & Drug test", icon: Asset.Icons.alcohol.name),
+                        .init(title: "NFT (Pictures)", icon: Asset.Icons.nft.name),
+                        .init(title: "CryptoWallet", icon: Asset.Icons.crypto.name),
+                        .init(title: "Video Call: 200 Personas con duración ilimitada.", icon: Asset.Icons.videoCall.name),
+                        .init(title: "Street Cam (WalkCamer)", icon: Asset.Icons.streetCam.name),
+                        .init(title: "AR Hands", icon: Asset.Icons.ar.name),
+                        .init(title: "Scan 3D", icon: Asset.Icons.scan3D.name),
+                        .init(title: "Pixelation Faces", icon: Asset.Icons.pixelation.name),
+                        .init(title: "360º Camera", icon: Asset.Icons._360Camera.name),
+                        .init(title: "Certified Recording", icon: Asset.Icons.translate.name),
+                        .init(title: "Juegos y otros", icon: Asset.Icons.games.name),
+                        .init(title: "Se incluye funciones como: White board, Share to, Chat, REC, etc.", icon: "")
+                    ]),
                 .init(title: "Premium",
                       monthlyPrice: 180.0,
                       backgroundImage: Asset.Fondos.planFondo.name,
