@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C514EC9017EB5CE2902B79C /* Pods_WalkyCamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F44B040E9D3F5ADD523210 /* Pods_WalkyCamTests.framework */; };
 		5637A8162AD5DD72000586DF /* WalkyCamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5637A8152AD5DD72000586DF /* WalkyCamApp.swift */; };
 		5637A81A2AD5DD73000586DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5637A8192AD5DD73000586DF /* Assets.xcassets */; };
 		56DADB202AD5EA7200710618 /* AppNavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB1F2AD5EA7200710618 /* AppNavigatorProtocol.swift */; };
 		56DADB222AD5EAA400710618 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB212AD5EAA400710618 /* AppNavigator.swift */; };
 		56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB232AD5EB3800710618 /* AppDelegate.swift */; };
 		56DADB272AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB262AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift */; };
+		B7B0489C6065260A6D3E707F /* Pods_WalkyCam_WalkyCamUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87CD54CA12591842BAA9CC6C /* Pods_WalkyCam_WalkyCamUITests.framework */; };
+		DFD0945A60FA5B637D89BC1D /* Pods_WalkyCam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB52C6CE8C2F9E62CBF861A7 /* Pods_WalkyCam.framework */; };
 		EA0E408B2AF69771002B7437 /* CashWalletOnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E40782AF69770002B7437 /* CashWalletOnboardingModel.swift */; };
 		EA0E408C2AF69771002B7437 /* CashWalletOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E407B2AF69770002B7437 /* CashWalletOnboardingViewModel.swift */; };
 		EA0E408D2AF69771002B7437 /* CashWalletOnboardingViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E407C2AF69770002B7437 /* CashWalletOnboardingViewModelProtocol.swift */; };
@@ -353,6 +356,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01210015DB17D27A5A6A4908 /* Pods-WalkyCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkyCam.debug.xcconfig"; path = "Target Support Files/Pods-WalkyCam/Pods-WalkyCam.debug.xcconfig"; sourceTree = "<group>"; };
+		1657E0E09B4F0512C50B8036 /* Pods-WalkyCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkyCam.release.xcconfig"; path = "Target Support Files/Pods-WalkyCam/Pods-WalkyCam.release.xcconfig"; sourceTree = "<group>"; };
+		3892066162EC4092B81855CF /* Pods-WalkyCamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkyCamTests.debug.xcconfig"; path = "Target Support Files/Pods-WalkyCamTests/Pods-WalkyCamTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5637A8122AD5DD72000586DF /* WalkyCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkyCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5637A8152AD5DD72000586DF /* WalkyCamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkyCamApp.swift; sourceTree = "<group>"; };
 		5637A8192AD5DD73000586DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -362,6 +368,12 @@
 		56DADB212AD5EAA400710618 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		56DADB232AD5EB3800710618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56DADB262AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+DependencyRegistration.swift"; sourceTree = "<group>"; };
+		87CD54CA12591842BAA9CC6C /* Pods_WalkyCam_WalkyCamUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalkyCam_WalkyCamUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB52C6CE8C2F9E62CBF861A7 /* Pods_WalkyCam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalkyCam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2D370A53D1B1D2B617F75CA /* Pods-WalkyCam-WalkyCamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkyCam-WalkyCamUITests.debug.xcconfig"; path = "Target Support Files/Pods-WalkyCam-WalkyCamUITests/Pods-WalkyCam-WalkyCamUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CE9BD1476FF351E995D11C31 /* Pods-WalkyCam-WalkyCamUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkyCam-WalkyCamUITests.release.xcconfig"; path = "Target Support Files/Pods-WalkyCam-WalkyCamUITests/Pods-WalkyCam-WalkyCamUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E0F44B040E9D3F5ADD523210 /* Pods_WalkyCamTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalkyCamTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E54922207763AAC42EDA9C15 /* Pods-WalkyCamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkyCamTests.release.xcconfig"; path = "Target Support Files/Pods-WalkyCamTests/Pods-WalkyCamTests.release.xcconfig"; sourceTree = "<group>"; };
 		EA0E40782AF69770002B7437 /* CashWalletOnboardingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashWalletOnboardingModel.swift; sourceTree = "<group>"; };
 		EA0E407B2AF69770002B7437 /* CashWalletOnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashWalletOnboardingViewModel.swift; sourceTree = "<group>"; };
 		EA0E407C2AF69770002B7437 /* CashWalletOnboardingViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashWalletOnboardingViewModelProtocol.swift; sourceTree = "<group>"; };
@@ -690,6 +702,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFD0945A60FA5B637D89BC1D /* Pods_WalkyCam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,6 +710,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C514EC9017EB5CE2902B79C /* Pods_WalkyCamTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,12 +718,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7B0489C6065260A6D3E707F /* Pods_WalkyCam_WalkyCamUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18AFFFBF0B915044209EF546 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB52C6CE8C2F9E62CBF861A7 /* Pods_WalkyCam.framework */,
+				87CD54CA12591842BAA9CC6C /* Pods_WalkyCam_WalkyCamUITests.framework */,
+				E0F44B040E9D3F5ADD523210 /* Pods_WalkyCamTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5637A8092AD5DD71000586DF = {
 			isa = PBXGroup;
 			children = (
@@ -719,6 +744,8 @@
 				56DADB1D2AD5EA3400710618 /* Main */,
 				5637A8142AD5DD72000586DF /* Resources */,
 				5637A8132AD5DD72000586DF /* Products */,
+				807AEB6FAACDE981024C5B50 /* Pods */,
+				18AFFFBF0B915044209EF546 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -769,6 +796,20 @@
 				56DADB262AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		807AEB6FAACDE981024C5B50 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01210015DB17D27A5A6A4908 /* Pods-WalkyCam.debug.xcconfig */,
+				1657E0E09B4F0512C50B8036 /* Pods-WalkyCam.release.xcconfig */,
+				C2D370A53D1B1D2B617F75CA /* Pods-WalkyCam-WalkyCamUITests.debug.xcconfig */,
+				CE9BD1476FF351E995D11C31 /* Pods-WalkyCam-WalkyCamUITests.release.xcconfig */,
+				3892066162EC4092B81855CF /* Pods-WalkyCamTests.debug.xcconfig */,
+				E54922207763AAC42EDA9C15 /* Pods-WalkyCamTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		EA0E406F2AF6974B002B7437 /* CashWalletOnboarding */ = {
@@ -3373,10 +3414,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5637A8362AD5DD74000586DF /* Build configuration list for PBXNativeTarget "WalkyCam" */;
 			buildPhases = (
+				83DFA3DD6802E5F68C91F0CB /* [CP] Check Pods Manifest.lock */,
 				5637A80E2AD5DD72000586DF /* Sources */,
 				5637A80F2AD5DD72000586DF /* Frameworks */,
 				5637A8102AD5DD72000586DF /* Resources */,
 				EA15B5792AD6E2ED00C03407 /* Swiftlint */,
+				2AD57F133F47F00769773B17 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -3391,6 +3434,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5637A8392AD5DD74000586DF /* Build configuration list for PBXNativeTarget "WalkyCamTests" */;
 			buildPhases = (
+				B665DC98071E120FB831E057 /* [CP] Check Pods Manifest.lock */,
 				5637A81E2AD5DD74000586DF /* Sources */,
 				5637A81F2AD5DD74000586DF /* Frameworks */,
 				5637A8202AD5DD74000586DF /* Resources */,
@@ -3409,9 +3453,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5637A83C2AD5DD74000586DF /* Build configuration list for PBXNativeTarget "WalkyCamUITests" */;
 			buildPhases = (
+				1267E4C27402D9878C36BD44 /* [CP] Check Pods Manifest.lock */,
 				5637A8282AD5DD74000586DF /* Sources */,
 				5637A8292AD5DD74000586DF /* Frameworks */,
 				5637A82A2AD5DD74000586DF /* Resources */,
+				9F139B3B072C31920EA30305 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -3500,6 +3546,106 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1267E4C27402D9878C36BD44 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WalkyCam-WalkyCamUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2AD57F133F47F00769773B17 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WalkyCam/Pods-WalkyCam-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WalkyCam/Pods-WalkyCam-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WalkyCam/Pods-WalkyCam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83DFA3DD6802E5F68C91F0CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WalkyCam-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F139B3B072C31920EA30305 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WalkyCam-WalkyCamUITests/Pods-WalkyCam-WalkyCamUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WalkyCam-WalkyCamUITests/Pods-WalkyCam-WalkyCamUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WalkyCam-WalkyCamUITests/Pods-WalkyCam-WalkyCamUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B665DC98071E120FB831E057 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WalkyCamTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EA15B5792AD6E2ED00C03407 /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -4001,6 +4147,7 @@
 		};
 		5637A8372AD5DD74000586DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01210015DB17D27A5A6A4908 /* Pods-WalkyCam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -4029,6 +4176,7 @@
 		};
 		5637A8382AD5DD74000586DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1657E0E09B4F0512C50B8036 /* Pods-WalkyCam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -4057,6 +4205,7 @@
 		};
 		5637A83A2AD5DD74000586DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3892066162EC4092B81855CF /* Pods-WalkyCamTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -4077,6 +4226,7 @@
 		};
 		5637A83B2AD5DD74000586DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E54922207763AAC42EDA9C15 /* Pods-WalkyCamTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -4097,6 +4247,7 @@
 		};
 		5637A83D2AD5DD74000586DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2D370A53D1B1D2B617F75CA /* Pods-WalkyCam-WalkyCamUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -4115,6 +4266,7 @@
 		};
 		5637A83E2AD5DD74000586DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE9BD1476FF351E995D11C31 /* Pods-WalkyCam-WalkyCamUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
