@@ -130,6 +130,7 @@
 		EA4165492AE706C6008CE66A /* NotificationsAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA41653C2AE706C6008CE66A /* NotificationsAssemblerProtocol.swift */; };
 		EA41654A2AE706C6008CE66A /* NotificationsAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA41653D2AE706C6008CE66A /* NotificationsAssembler.swift */; };
 		EA41654B2AE706C6008CE66A /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4165402AE706C6008CE66A /* NotificationModel.swift */; };
+		EA47D0E02B0FAE6500E5C4FC /* PlansComparisonPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47D0DF2B0FAE6400E5C4FC /* PlansComparisonPageView.swift */; };
 		EA50A0842B0BC77F0042B238 /* PlansPagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA50A0712B0BC77F0042B238 /* PlansPagesModel.swift */; };
 		EA50A0852B0BC77F0042B238 /* PlansPagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA50A0742B0BC77F0042B238 /* PlansPagesViewModel.swift */; };
 		EA50A0862B0BC77F0042B238 /* PlansPagesViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA50A0752B0BC77F0042B238 /* PlansPagesViewModelProtocol.swift */; };
@@ -479,6 +480,7 @@
 		EA41653C2AE706C6008CE66A /* NotificationsAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsAssemblerProtocol.swift; sourceTree = "<group>"; };
 		EA41653D2AE706C6008CE66A /* NotificationsAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsAssembler.swift; sourceTree = "<group>"; };
 		EA4165402AE706C6008CE66A /* NotificationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
+		EA47D0DF2B0FAE6400E5C4FC /* PlansComparisonPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansComparisonPageView.swift; sourceTree = "<group>"; };
 		EA50A0712B0BC77F0042B238 /* PlansPagesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlansPagesModel.swift; sourceTree = "<group>"; };
 		EA50A0742B0BC77F0042B238 /* PlansPagesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlansPagesViewModel.swift; sourceTree = "<group>"; };
 		EA50A0752B0BC77F0042B238 /* PlansPagesViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlansPagesViewModelProtocol.swift; sourceTree = "<group>"; };
@@ -1818,6 +1820,7 @@
 			children = (
 				EA50A0772B0BC77F0042B238 /* PlansPagesView.swift */,
 				EA50A08F2B0BCC940042B238 /* PlanPageView.swift */,
+				EA47D0DF2B0FAE6400E5C4FC /* PlansComparisonPageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3595,6 +3598,7 @@
 				EA50A08E2B0BC77F0042B238 /* PlansPagesAssemblerProtocol.swift in Sources */,
 				EA0E40BD2AF70E86002B7437 /* CashWalletView.swift in Sources */,
 				EA6083642B01981800295069 /* CryptoDetailsViewModel.swift in Sources */,
+				EA47D0E02B0FAE6500E5C4FC /* PlansComparisonPageView.swift in Sources */,
 				EA282E512AE952F700B90920 /* ProfileRoute.swift in Sources */,
 				EA4165452AE706C6008CE66A /* NotificationsInteractor.swift in Sources */,
 				EA282ECD2AEB531100B90920 /* FunctionsInteractorProtocol.swift in Sources */,

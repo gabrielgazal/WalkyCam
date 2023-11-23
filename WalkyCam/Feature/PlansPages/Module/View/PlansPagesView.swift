@@ -27,6 +27,7 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 100)
                     .foregroundColor(.naranja)
+                    .isHidden(viewModel.currentPage == 4)
                 Spacer()
                 WCUIButton(title: "Comparar",
                            rightIcon: Asset.Icons.compare.name,
@@ -39,6 +40,7 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
             TabView(selection: $viewModel.currentPage) {
                 ForEach(0..<viewModel.plans.count) { index in
                     PlanPageView(planData: viewModel.plans[index], lastPlan: index == 0 ? nil : viewModel.plans[index - 1])
+                        .environment(\.colorScheme, .dark)
                         .tag(index)
                 }
                 Color.green

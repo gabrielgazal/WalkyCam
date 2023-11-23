@@ -54,10 +54,19 @@ struct PlanPageView: View {
 
     private func featureItem(_ item: FunctionData) -> some View {
         HStack(spacing: Tokens.Size.Spacing.small) {
-            Image(item.icon)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 70, height: 70)
+            if item.icon.isEmpty {
+                Image(Asset.Icons.check.name)
+                    .resizable()
+                    .renderingMode(.template)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 40, height: 40)
+                    .foregroundColor(planData.accentColor)
+            } else {
+                Image(item.icon)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 70, height: 70)
+            }
             Text(item.title)
                 .font(.projectFont(size: Tokens.Size.Font.large, weight: .medium))
                 .foregroundColor(Color.blanco)
@@ -79,7 +88,7 @@ struct PlanPageView_Previews: PreviewProvider {
                     .init(title: "360º Camera", icon: Asset.Icons.camera.name),
                     .init(title: "Certified Recordning", icon: Asset.Icons.translate.name),
                     .init(title: "3D Printer", icon: Asset.Icons._3dPrinting.name),
-                    .init(title: "Video Call: 200 Personas con duración ilimitada.", icon: Asset.Icons.videoCall.name),
+                    .init(title: "Video Call: 200 Personas con duración ilimitada.", icon: "")
                 ]),
             lastPlan: .init(title: "Free",
                             monthlyPrice: 0.0,

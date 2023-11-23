@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct PlansPagesModel {
+struct PlansPagesModel: Hashable {
     let title: String
     let monthlyPrice: Double
     let backgroundImage: String

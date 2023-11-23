@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FunctionData: Hashable {
+struct FunctionData: Hashable, Identifiable {
     let id: UUID = .init()
     let title: String
     let icon: String
