@@ -1,0 +1,3 @@
+protocol VideoCallInteractorProtocol {
+    func someFunction()
+}

@@ -37,6 +37,7 @@ internal enum Asset {
   internal enum Fondos {
     internal static let loginFondo = ImageAsset(name: "login_fondo")
     internal static let planFondo = ImageAsset(name: "plan_fondo")
+    internal static let videocallFondo = ImageAsset(name: "videocall_fondo")
   }
   internal enum Icons {
     internal static let _360Camera = ImageAsset(name: "360Camera")
@@ -52,6 +53,7 @@ internal enum Asset {
     internal static let filter = ImageAsset(name: "Filter")
     internal static let karaoke = ImageAsset(name: "Karaoke")
     internal static let lentes = ImageAsset(name: "LENTES")
+    internal static let link = ImageAsset(name: "Link")
     internal static let location = ImageAsset(name: "Location")
     internal static let music = ImageAsset(name: "Music")
     internal static let notes = ImageAsset(name: "Notes")
@@ -66,6 +68,7 @@ internal enum Asset {
     internal static let analisadorRedes = ImageAsset(name: "analisadorRedes")
     internal static let backpack = ImageAsset(name: "backpack")
     internal static let cables = ImageAsset(name: "cables")
+    internal static let calendar = ImageAsset(name: "calendar")
     internal static let cash = ImageAsset(name: "cash")
     internal static let check = ImageAsset(name: "check")
     internal static let crm = ImageAsset(name: "crm")
