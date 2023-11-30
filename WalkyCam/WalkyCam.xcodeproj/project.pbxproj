@@ -335,6 +335,17 @@
 		EAD048712AE22C530096E6AB /* RegistrationPlansRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD048642AE22C530096E6AB /* RegistrationPlansRoute.swift */; };
 		EAD048722AE22C530096E6AB /* RegistrationPlansAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD048662AE22C530096E6AB /* RegistrationPlansAssembler.swift */; };
 		EAD048732AE22C530096E6AB /* RegistrationPlansAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD048672AE22C530096E6AB /* RegistrationPlansAssemblerProtocol.swift */; };
+		EADB5CA42B190819005863E1 /* VideoCallRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB5C912B190818005863E1 /* VideoCallRoute.swift */; };
+		EADB5CA52B190819005863E1 /* VideoCallAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB5C932B190818005863E1 /* VideoCallAssembler.swift */; };
+		EADB5CA62B190819005863E1 /* VideoCallAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB5C942B190818005863E1 /* VideoCallAssemblerProtocol.swift */; };
+		EADB5CA72B190819005863E1 /* VideoCallViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB5C972B190819005863E1 /* VideoCallViewModelProtocol.swift */; };
+		EADB5CA82B190819005863E1 /* VideoCallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB5C982B190819005863E1 /* VideoCallViewModel.swift */; };
+		EADB5CA92B190819005863E1 /* VideoCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB5C9A2B190819005863E1 /* VideoCallView.swift */; };
+		EADB5CAA2B190819005863E1 /* VideoCallInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB5C9C2B190819005863E1 /* VideoCallInteractor.swift */; };
+		EADB5CAB2B190819005863E1 /* VideoCallInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB5C9D2B190819005863E1 /* VideoCallInteractorProtocol.swift */; };
+		EADB5CAC2B190819005863E1 /* VideoCallRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB5C9F2B190819005863E1 /* VideoCallRouterProtocol.swift */; };
+		EADB5CAD2B190819005863E1 /* VideoCallRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB5CA02B190819005863E1 /* VideoCallRouter.swift */; };
+		EADB5CAE2B190819005863E1 /* VideoCallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB5CA32B190819005863E1 /* VideoCallModel.swift */; };
 		EADBE1012AE823BA00FED579 /* NotificationItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBE1002AE823BA00FED579 /* NotificationItemView.swift */; };
 /* End PBXBuildFile section */
 
@@ -694,6 +705,17 @@
 		EAD048642AE22C530096E6AB /* RegistrationPlansRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPlansRoute.swift; sourceTree = "<group>"; };
 		EAD048662AE22C530096E6AB /* RegistrationPlansAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPlansAssembler.swift; sourceTree = "<group>"; };
 		EAD048672AE22C530096E6AB /* RegistrationPlansAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPlansAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EADB5C912B190818005863E1 /* VideoCallRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallRoute.swift; sourceTree = "<group>"; };
+		EADB5C932B190818005863E1 /* VideoCallAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallAssembler.swift; sourceTree = "<group>"; };
+		EADB5C942B190818005863E1 /* VideoCallAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EADB5C972B190819005863E1 /* VideoCallViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallViewModelProtocol.swift; sourceTree = "<group>"; };
+		EADB5C982B190819005863E1 /* VideoCallViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallViewModel.swift; sourceTree = "<group>"; };
+		EADB5C9A2B190819005863E1 /* VideoCallView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallView.swift; sourceTree = "<group>"; };
+		EADB5C9C2B190819005863E1 /* VideoCallInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallInteractor.swift; sourceTree = "<group>"; };
+		EADB5C9D2B190819005863E1 /* VideoCallInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallInteractorProtocol.swift; sourceTree = "<group>"; };
+		EADB5C9F2B190819005863E1 /* VideoCallRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallRouterProtocol.swift; sourceTree = "<group>"; };
+		EADB5CA02B190819005863E1 /* VideoCallRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallRouter.swift; sourceTree = "<group>"; };
+		EADB5CA32B190819005863E1 /* VideoCallModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallModel.swift; sourceTree = "<group>"; };
 		EADBE1002AE823BA00FED579 /* NotificationItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1021,6 +1043,7 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				EADB5C8E2B190818005863E1 /* VideoCall */,
 				EA50A0682B0BC7590042B238 /* PlansPages */,
 				EA7219782B0560FD00BE2D93 /* WalkyBot */,
 				EA6083BC2B01DBB100295069 /* GalleryPhotos */,
@@ -3407,6 +3430,104 @@
 			path = Assembler;
 			sourceTree = "<group>";
 		};
+		EADB5C8E2B190818005863E1 /* VideoCall */ = {
+			isa = PBXGroup;
+			children = (
+				EADB5C8F2B190818005863E1 /* Configuration */,
+				EADB5C952B190818005863E1 /* Module */,
+				EADB5CA12B190819005863E1 /* Domain */,
+			);
+			path = VideoCall;
+			sourceTree = "<group>";
+		};
+		EADB5C8F2B190818005863E1 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EADB5C902B190818005863E1 /* Route */,
+				EADB5C922B190818005863E1 /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EADB5C902B190818005863E1 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EADB5C912B190818005863E1 /* VideoCallRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EADB5C922B190818005863E1 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EADB5C932B190818005863E1 /* VideoCallAssembler.swift */,
+				EADB5C942B190818005863E1 /* VideoCallAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EADB5C952B190818005863E1 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EADB5C962B190818005863E1 /* ViewModel */,
+				EADB5C992B190819005863E1 /* View */,
+				EADB5C9B2B190819005863E1 /* Interactor */,
+				EADB5C9E2B190819005863E1 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EADB5C962B190818005863E1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EADB5C972B190819005863E1 /* VideoCallViewModelProtocol.swift */,
+				EADB5C982B190819005863E1 /* VideoCallViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EADB5C992B190819005863E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EADB5C9A2B190819005863E1 /* VideoCallView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EADB5C9B2B190819005863E1 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EADB5C9C2B190819005863E1 /* VideoCallInteractor.swift */,
+				EADB5C9D2B190819005863E1 /* VideoCallInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EADB5C9E2B190819005863E1 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EADB5C9F2B190819005863E1 /* VideoCallRouterProtocol.swift */,
+				EADB5CA02B190819005863E1 /* VideoCallRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EADB5CA12B190819005863E1 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EADB5CA22B190819005863E1 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EADB5CA22B190819005863E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EADB5CA32B190819005863E1 /* VideoCallModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3696,8 +3817,10 @@
 				EAA1E6452AFB03FD00A42174 /* CashTabModel.swift in Sources */,
 				EA0E40952AF69771002B7437 /* CashWalletOnboardingAssembler.swift in Sources */,
 				EA50A0882B0BC77F0042B238 /* PlansPagesInteractorProtocol.swift in Sources */,
+				EADB5CA42B190819005863E1 /* VideoCallRoute.swift in Sources */,
 				EA5E1D962AD725DF00738A8F /* ProjectColors.swift in Sources */,
 				EAD0486C2AE22C530096E6AB /* RegistrationPlansView.swift in Sources */,
+				EADB5CAB2B190819005863E1 /* VideoCallInteractorProtocol.swift in Sources */,
 				EAA1E63C2AFB03FD00A42174 /* CashTabAssembler.swift in Sources */,
 				EA91102D2ADDB91100584B98 /* URL+ImageLoadable.swift in Sources */,
 				EA9110202ADDADE100584B98 /* HomeRouterProtocol.swift in Sources */,
@@ -3734,12 +3857,14 @@
 				EA60838A2B01CD0A00295069 /* ShopTabRoute.swift in Sources */,
 				EA172AD92AF0335400EB1514 /* AdvertisementCard.swift in Sources */,
 				EA4164F12AE4B6F7008CE66A /* ComparePlansViewModel.swift in Sources */,
+				EADB5CAA2B190819005863E1 /* VideoCallInteractor.swift in Sources */,
 				EA282ECB2AEB531100B90920 /* FunctionsViewModelProtocol.swift in Sources */,
 				EA172AF92AF06BDE00EB1514 /* ConfirmMailModel.swift in Sources */,
 				EAD048692AE22C530096E6AB /* RegistrationPlansViewModelProtocol.swift in Sources */,
 				EAA1E63B2AFB03FD00A42174 /* CashTabRoute.swift in Sources */,
 				EA910FF02ADCBCC000584B98 /* MenuRoute.swift in Sources */,
 				EA6083452AFD58A900295069 /* CryptoTabRouter.swift in Sources */,
+				EADB5CA92B190819005863E1 /* VideoCallView.swift in Sources */,
 				EA6083D92B01DBDF00295069 /* GalleryPhotosViewModel.swift in Sources */,
 				EA50A08E2B0BC77F0042B238 /* PlansPagesAssemblerProtocol.swift in Sources */,
 				EA0E40BD2AF70E86002B7437 /* CashWalletView.swift in Sources */,
@@ -3819,6 +3944,7 @@
 				EA282EDD2AEB572700B90920 /* FunctionCell.swift in Sources */,
 				EA910F6D2ADA03D600584B98 /* String+Extension.swift in Sources */,
 				EA910F692AD9B57400584B98 /* OnboardingPageView.swift in Sources */,
+				EADB5CA62B190819005863E1 /* VideoCallAssemblerProtocol.swift in Sources */,
 				EAA1E63E2AFB03FD00A42174 /* CashTabViewModelProtocol.swift in Sources */,
 				EA6083662B01981800295069 /* CryptoDetailsInteractor.swift in Sources */,
 				EA910F652AD9B01300584B98 /* OnboardingRouterProtocol.swift in Sources */,
@@ -3860,6 +3986,7 @@
 				EA0E40922AF69771002B7437 /* CashWalletOnboardingRouter.swift in Sources */,
 				EA9110332ADDBF7400584B98 /* WalkyBotItemView.swift in Sources */,
 				EA172AFC2AF06BDE00EB1514 /* ConfirmMailView.swift in Sources */,
+				EADB5CAD2B190819005863E1 /* VideoCallRouter.swift in Sources */,
 				EA6083DD2B01DBDF00295069 /* GalleryPhotosInteractorProtocol.swift in Sources */,
 				EA910F362AD976F600584B98 /* CheckboxToggle.swift in Sources */,
 				EA6083932B01CD0A00295069 /* ShopTabRouterProtocol.swift in Sources */,
@@ -3894,6 +4021,8 @@
 				EA910F8C2ADA06F500584B98 /* RegistrationAssemblerProtocol.swift in Sources */,
 				EA910F9E2ADC43B200584B98 /* FullScreenWrapper.swift in Sources */,
 				56DADB272AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift in Sources */,
+				EADB5CA82B190819005863E1 /* VideoCallViewModel.swift in Sources */,
+				EADB5CAE2B190819005863E1 /* VideoCallModel.swift in Sources */,
 				EA282ED62AEB532800B90920 /* RecentFunctionsCell.swift in Sources */,
 				EA72199C2B05612900BE2D93 /* WalkyBotInteractorProtocol.swift in Sources */,
 				EA172B222AF06EF600EB1514 /* StartupViewModelProtocol.swift in Sources */,
@@ -3909,6 +4038,7 @@
 				EA910F992ADC40DB00584B98 /* AlertView.swift in Sources */,
 				EA0E40C42AF70E86002B7437 /* CashWalletAssemblerProtocol.swift in Sources */,
 				EA60833E2AFD58A900295069 /* CryptoTabAssembler.swift in Sources */,
+				EADB5CAC2B190819005863E1 /* VideoCallRouterProtocol.swift in Sources */,
 				EAD048712AE22C530096E6AB /* RegistrationPlansRoute.swift in Sources */,
 				EA910F8D2ADA06F500584B98 /* RegistrationAssembler.swift in Sources */,
 				EA6083942B01CD0A00295069 /* ShopTabRouter.swift in Sources */,
@@ -3949,6 +4079,7 @@
 				EA910F922ADA06F500584B98 /* RegistrationInteractor.swift in Sources */,
 				EA910FC52ADC495700584B98 /* TabBarAssembler.swift in Sources */,
 				EA82DB502ADF4DBB00E6B39A /* HomeSectionView.swift in Sources */,
+				EADB5CA72B190819005863E1 /* VideoCallViewModelProtocol.swift in Sources */,
 				EA282E132AE832F100B90920 /* Date+Extension.swift in Sources */,
 				EA6083B42B01D9E100295069 /* GalleryModel.swift in Sources */,
 				EA6083BB2B01D9E100295069 /* GalleryRouter.swift in Sources */,
@@ -3960,6 +4091,7 @@
 				EA4165462AE706C6008CE66A /* NotificationsRouter.swift in Sources */,
 				EA0E40BE2AF70E86002B7437 /* CashWalletInteractorProtocol.swift in Sources */,
 				EA15B5A12AD6E44D00C03407 /* LoginAssembler.swift in Sources */,
+				EADB5CA52B190819005863E1 /* VideoCallAssembler.swift in Sources */,
 				EA6083672B01981800295069 /* CryptoDetailsInteractorProtocol.swift in Sources */,
 				EA60838F2B01CD0A00295069 /* ShopTabViewModel.swift in Sources */,
 				EA0E40C52AF70E86002B7437 /* CashWalletAssembler.swift in Sources */,
