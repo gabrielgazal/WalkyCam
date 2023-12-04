@@ -93,7 +93,7 @@ struct VideoCallView<ViewModel:VideoCallViewModelProtocol, Router: VideoCallRout
             Text("Ingresa el código que has recebido.")
                 .font(.projectFont(size: Tokens.Size.Font.regular))
             HStack(spacing: Tokens.Size.Spacing.regular) {
-                TextInputView(text: .constant(""),
+                TextInputView(text: .constant("https://meet.jit.si/\(viewModel.videoCallLink)"),
                               placeholder: "Teste")
                 WCUIButton(title: "Unirme",
                            style: .outline,

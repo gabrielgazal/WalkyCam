@@ -1,5 +1,5 @@
 import SwiftUI
 
 protocol VideoCallViewModelProtocol: ViewModelProtocol {
-    func someAction()
+    var videoCallLink: String { get set }
 }
