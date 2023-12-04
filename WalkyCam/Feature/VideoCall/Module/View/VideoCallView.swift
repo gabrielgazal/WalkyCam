@@ -40,12 +40,16 @@ struct VideoCallView<ViewModel:VideoCallViewModelProtocol, Router: VideoCallRout
                              icon: Asset.Icons.calendar.name,
                              action: {})
             }
-            horizontalCard(action: {})
+            horizontalCard(action: {
+                router.routeToMeetRoom()
+            })
         }
                .preferredColorScheme(.dark)
                .padding(Tokens.Size.Spacing.regular)
                .background(Asset.Fondos.videocallFondo .swiftUIImage
                    .ignoresSafeArea())
+               .navigation(router)
+               .sheet(router)
     }
 
     private func verticalCard(title: String,

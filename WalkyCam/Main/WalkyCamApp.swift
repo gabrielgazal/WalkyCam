@@ -15,7 +15,6 @@ struct WalkyCamApp: App {
     @State var isPresented = false
     
     init() {
-        //FirebaseConfiguration().configureFirebaseOnApplication()
         appNavigator.configure(isUserAlreadyLoggedIn: false)
     }
     

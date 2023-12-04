@@ -63,7 +63,12 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                             if isLastRecentsItem(itemId: item.id) {
                                 tabBar.tabSelection = tabBar.tabBarItems[SelectedTabItem.functions.rawValue]
                             } else {
-                                print("Touched \(item.id)")
+                                switch item.id {
+                                case 0:
+                                    router.routeToVideoCall()
+                                default:
+                                    print("Touched \(item.id)")
+                                }
                             }
                         }
                 }

@@ -4,4 +4,5 @@ protocol HomeRouterProtocol: Router {
     func routeToNotifications()
     func routeToProfile()
     func routeToWalkyBot()
+    func routeToVideoCall()
 }
