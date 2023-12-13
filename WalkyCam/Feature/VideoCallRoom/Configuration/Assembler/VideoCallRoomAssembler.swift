@@ -10,7 +10,8 @@ final class VideoCallRoomAssembler: VideoCallRoomAssemblerProtocol {
         let interactor = VideoCallRoomInteractor(
             useCases: .init()
         )
-        let viewModel = VideoCallRoomViewModel(interactor: interactor)
+        let viewModel = VideoCallRoomViewModel(meetURL: route.meetLink,
+                                               interactor: interactor)
         let view = VideoCallRoomView(viewModel: viewModel, router: router)
 
         return view

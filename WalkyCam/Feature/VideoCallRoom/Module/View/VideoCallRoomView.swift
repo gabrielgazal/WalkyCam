@@ -1,26 +1,26 @@
 import SwiftUI
 import JitsiMeetSDK
 
-struct VideoCallRoomView<ViewModel:VideoCallRoomViewModelProtocol, Router: VideoCallRoomRouterProtocol>: View {
-    
+struct VideoCallRoomView<ViewModel: VideoCallRoomViewModelProtocol, Router: VideoCallRoomRouterProtocol>: View {
+
     // MARK: - Dependencies
-    
+
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
     @State var roomName = "testeGazal"
-    @State private var jitsiMeetView: JitsiMeetView? = nil
-    @State private var pipViewCoordinator: PiPViewCoordinator? = nil
-    
+    @State private var jitsiMeetView: JitsiMeetView?
+    @State private var pipViewCoordinator: PiPViewCoordinator?
+
     // MARK: - Initialization
-    
+
     init(viewModel: ViewModel,
          router: Router) {
         self.viewModel = viewModel
         self.router = router
     }
-    
+
     // MARK: - View Body
-    
+
     var body: some View {
         Group {
             if let jitsiMeetView = jitsiMeetView {
@@ -35,15 +35,15 @@ struct VideoCallRoomView<ViewModel:VideoCallRoomViewModelProtocol, Router: Video
         .onAppear {
             openJitsiMeet()
         }
-        .navigationBarTitle("Jitsi Meet", displayMode: .inline)
+        .ignoresSafeArea()
     }
-    
+
     private func openJitsiMeet() {
         let room: String = roomName
         guard room.count > 1 else {
             return
         }
-        
+
         // create and configure jitsimeet view
         let jitsiMeetView = JitsiMeetView()
         jitsiMeetView.delegate = JitsiMeetDelegateWrapper(onReadyToClose: { [self] in
@@ -54,34 +54,31 @@ struct VideoCallRoomView<ViewModel:VideoCallRoomViewModelProtocol, Router: Video
         }, onEnterPictureInPicture: { [self] in
             self.pipViewCoordinator?.enterPictureInPicture()
         })
-        
+
         let options = JitsiMeetConferenceOptions.fromBuilder { (builder) in
             builder.room = room
         }
-        
+
         // join room and display jitsi-call
         jitsiMeetView.join(options)
-        
+
         self.jitsiMeetView = jitsiMeetView
-        
-        // Enable jitsimeet view to be a view that can be displayed
-        // on top of all the things, and let the coordinator to manage
-        // the view state and interactions
+
         pipViewCoordinator = PiPViewCoordinator(withView: jitsiMeetView)
         pipViewCoordinator?.configureAsStickyView()
-        
+
         // animate in
         jitsiMeetView.alpha = 0
         pipViewCoordinator?.show()
     }
-    
+
     private func leaveJitsiMeet() {
         jitsiMeetView?.leave()
         pipViewCoordinator?.hide { _ in
             self.cleanUp()
         }
     }
-    
+
     private func cleanUp() {
         jitsiMeetView?.removeFromSuperview()
         jitsiMeetView = nil
@@ -91,10 +88,12 @@ struct VideoCallRoomView<ViewModel:VideoCallRoomViewModelProtocol, Router: Video
 
 struct VideoCallRoomView_Previews: PreviewProvider {
     static var previews: some View {
-        VideoCallRoomView(
-            viewModel: VideoCallRoomViewModel(),
-            router: VideoCallRoomRouter(isPresented: .constant(false))
-        )
+        NavigationView {
+            VideoCallRoomView(
+                viewModel: VideoCallRoomViewModel(meetURL: ""),
+                router: VideoCallRoomRouter(isPresented: .constant(false))
+            )
+        }
     }
 }
 

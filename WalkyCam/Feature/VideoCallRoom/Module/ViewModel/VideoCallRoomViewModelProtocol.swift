@@ -1,5 +1,5 @@
 import SwiftUI
 
 protocol VideoCallRoomViewModelProtocol: ViewModelProtocol {
-    func someAction()
+    var meetURL: String { get set }
 }

@@ -4,9 +4,10 @@ final class VideoCallRouter: Router, VideoCallRouterProtocol {
 
     // MARK: - Public API
 
-    func routeToMeetRoom() {
+    func routeToMeetRoom(_ link: String) {
         navigateTo(
-            VideoCallRoomRoute(isPresented: isPresentingSheet)
+            VideoCallRoomRoute(isPresented: isPresentingSheet,
+                               meetLink: link)
         )
     }
 }

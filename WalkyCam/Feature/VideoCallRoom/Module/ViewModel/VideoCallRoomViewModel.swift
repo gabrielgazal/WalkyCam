@@ -5,24 +5,13 @@ final class VideoCallRoomViewModel: VideoCallRoomViewModelProtocol {
     // MARK: - Dependencies
 
     private let interactor: VideoCallRoomInteractorProtocol
+    @Published var meetURL: String
 
     // MARK: - Initialization
 
-    init(interactor: VideoCallRoomInteractorProtocol = VideoCallRoomInteractor()) {
+    init(meetURL: String,
+         interactor: VideoCallRoomInteractorProtocol = VideoCallRoomInteractor()) {
+        self.meetURL = meetURL
         self.interactor = interactor
-    }
-
-    // MARK: - Public API
-
-    #warning("Example function. Rename or remove it")
-    func someAction() {
-
-    }
-
-    // MARK: - Private Methods
-
-    #warning("Example function. Rename or remove it")
-    private func somePrivateMethod() {
-
     }
 }
