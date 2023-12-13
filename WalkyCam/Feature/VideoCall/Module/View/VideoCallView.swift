@@ -44,7 +44,6 @@ struct VideoCallView<ViewModel:VideoCallViewModelProtocol, Router: VideoCallRout
                 router.routeToMeetRoom()
             })
         }
-               .preferredColorScheme(.dark)
                .padding(Tokens.Size.Spacing.regular)
                .background(Asset.Fondos.videocallFondo .swiftUIImage
                    .ignoresSafeArea())

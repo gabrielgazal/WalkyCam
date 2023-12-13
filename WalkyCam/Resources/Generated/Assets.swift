@@ -137,9 +137,9 @@ internal enum Asset {
     internal static let google = ImageAsset(name: "google")
   }
   internal enum TabBar {
+    internal static let menu = ImageAsset(name: "Menu")
     internal static let grid = ImageAsset(name: "grid")
     internal static let home = ImageAsset(name: "home")
-    internal static let menu = ImageAsset(name: "menu")
   }
   internal static let logo = ImageAsset(name: "logo")
 }

@@ -5,7 +5,7 @@ final class VideoCallRouter: Router, VideoCallRouterProtocol {
     // MARK: - Public API
 
     func routeToMeetRoom() {
-        presentSheet(
+        navigateTo(
             VideoCallRoomRoute(isPresented: isPresentingSheet)
         )
     }
