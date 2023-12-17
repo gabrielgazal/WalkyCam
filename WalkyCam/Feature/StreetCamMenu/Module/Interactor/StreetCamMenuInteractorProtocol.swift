@@ -1,0 +1,3 @@
+protocol StreetCamMenuInteractorProtocol {
+    func someFunction()
+}

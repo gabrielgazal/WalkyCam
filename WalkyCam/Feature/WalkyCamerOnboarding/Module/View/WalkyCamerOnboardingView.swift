@@ -62,16 +62,14 @@ struct WalkyCamerOnboardingView<ViewModel: WalkyCamerOnboardingViewModelProtocol
                         title: "Buscar WalkCamer",
                         style: .standard,
                         descriptor: OrangeButtonStyleDescriptor(),
-                        action: {
-                            if viewModel.currentPage < 2 {
-                                viewModel.currentPage += 1
-                            }
-                        }
+                        action: {}
                     )
                     .frame(maxWidth: .infinity)
                     LinkButton(title: "Salir",
                                color: .naranja,
-                               action: {})
+                               action: {
+                        router.dismiss()
+                    })
                     .frame(maxWidth: .infinity)
                 }
                 .isHidden(viewModel.currentPage != 1)

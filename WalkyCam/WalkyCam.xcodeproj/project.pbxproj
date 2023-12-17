@@ -22,6 +22,17 @@
 		56A552352B2F6135006B1B17 /* WalkyCamerOnboardingRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552282B2F6135006B1B17 /* WalkyCamerOnboardingRouterProtocol.swift */; };
 		56A552362B2F6135006B1B17 /* WalkyCamerOnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5522B2B2F6135006B1B17 /* WalkyCamerOnboardingModel.swift */; };
 		56A552382B2F6168006B1B17 /* WalkyCamerOnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552372B2F6168006B1B17 /* WalkyCamerOnboardingPageView.swift */; };
+		56A552552B2F6E3D006B1B17 /* StreetCamMenuRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552422B2F6E3D006B1B17 /* StreetCamMenuRoute.swift */; };
+		56A552562B2F6E3D006B1B17 /* StreetCamMenuAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552442B2F6E3D006B1B17 /* StreetCamMenuAssemblerProtocol.swift */; };
+		56A552572B2F6E3D006B1B17 /* StreetCamMenuAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552452B2F6E3D006B1B17 /* StreetCamMenuAssembler.swift */; };
+		56A552582B2F6E3D006B1B17 /* StreetCamMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552482B2F6E3D006B1B17 /* StreetCamMenuViewModel.swift */; };
+		56A552592B2F6E3D006B1B17 /* StreetCamMenuViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552492B2F6E3D006B1B17 /* StreetCamMenuViewModelProtocol.swift */; };
+		56A5525A2B2F6E3D006B1B17 /* StreetCamMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5524B2B2F6E3D006B1B17 /* StreetCamMenuView.swift */; };
+		56A5525B2B2F6E3D006B1B17 /* StreetCamMenuInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5524D2B2F6E3D006B1B17 /* StreetCamMenuInteractorProtocol.swift */; };
+		56A5525C2B2F6E3D006B1B17 /* StreetCamMenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5524E2B2F6E3D006B1B17 /* StreetCamMenuInteractor.swift */; };
+		56A5525D2B2F6E3D006B1B17 /* StreetCamMenuRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552502B2F6E3D006B1B17 /* StreetCamMenuRouterProtocol.swift */; };
+		56A5525E2B2F6E3D006B1B17 /* StreetCamMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552512B2F6E3D006B1B17 /* StreetCamMenuRouter.swift */; };
+		56A5525F2B2F6E3D006B1B17 /* StreetCamMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552542B2F6E3D006B1B17 /* StreetCamMenuModel.swift */; };
 		56DADB202AD5EA7200710618 /* AppNavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB1F2AD5EA7200710618 /* AppNavigatorProtocol.swift */; };
 		56DADB222AD5EAA400710618 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB212AD5EAA400710618 /* AppNavigator.swift */; };
 		56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB232AD5EB3800710618 /* AppDelegate.swift */; };
@@ -411,6 +422,17 @@
 		56A552282B2F6135006B1B17 /* WalkyCamerOnboardingRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingRouterProtocol.swift; sourceTree = "<group>"; };
 		56A5522B2B2F6135006B1B17 /* WalkyCamerOnboardingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingModel.swift; sourceTree = "<group>"; };
 		56A552372B2F6168006B1B17 /* WalkyCamerOnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingPageView.swift; sourceTree = "<group>"; };
+		56A552422B2F6E3D006B1B17 /* StreetCamMenuRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetCamMenuRoute.swift; sourceTree = "<group>"; };
+		56A552442B2F6E3D006B1B17 /* StreetCamMenuAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetCamMenuAssemblerProtocol.swift; sourceTree = "<group>"; };
+		56A552452B2F6E3D006B1B17 /* StreetCamMenuAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetCamMenuAssembler.swift; sourceTree = "<group>"; };
+		56A552482B2F6E3D006B1B17 /* StreetCamMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetCamMenuViewModel.swift; sourceTree = "<group>"; };
+		56A552492B2F6E3D006B1B17 /* StreetCamMenuViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetCamMenuViewModelProtocol.swift; sourceTree = "<group>"; };
+		56A5524B2B2F6E3D006B1B17 /* StreetCamMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetCamMenuView.swift; sourceTree = "<group>"; };
+		56A5524D2B2F6E3D006B1B17 /* StreetCamMenuInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetCamMenuInteractorProtocol.swift; sourceTree = "<group>"; };
+		56A5524E2B2F6E3D006B1B17 /* StreetCamMenuInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetCamMenuInteractor.swift; sourceTree = "<group>"; };
+		56A552502B2F6E3D006B1B17 /* StreetCamMenuRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetCamMenuRouterProtocol.swift; sourceTree = "<group>"; };
+		56A552512B2F6E3D006B1B17 /* StreetCamMenuRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetCamMenuRouter.swift; sourceTree = "<group>"; };
+		56A552542B2F6E3D006B1B17 /* StreetCamMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetCamMenuModel.swift; sourceTree = "<group>"; };
 		56DADB1F2AD5EA7200710618 /* AppNavigatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigatorProtocol.swift; sourceTree = "<group>"; };
 		56DADB212AD5EAA400710618 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		56DADB232AD5EB3800710618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -939,6 +961,104 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		56A552392B2F6E16006B1B17 /* StreetCamMenu */ = {
+			isa = PBXGroup;
+			children = (
+				56A552402B2F6E3D006B1B17 /* Configuration */,
+				56A552522B2F6E3D006B1B17 /* Domain */,
+				56A552462B2F6E3D006B1B17 /* Module */,
+			);
+			path = StreetCamMenu;
+			sourceTree = "<group>";
+		};
+		56A552402B2F6E3D006B1B17 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				56A552412B2F6E3D006B1B17 /* Route */,
+				56A552432B2F6E3D006B1B17 /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		56A552412B2F6E3D006B1B17 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				56A552422B2F6E3D006B1B17 /* StreetCamMenuRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		56A552432B2F6E3D006B1B17 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				56A552442B2F6E3D006B1B17 /* StreetCamMenuAssemblerProtocol.swift */,
+				56A552452B2F6E3D006B1B17 /* StreetCamMenuAssembler.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		56A552462B2F6E3D006B1B17 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				56A552472B2F6E3D006B1B17 /* ViewModel */,
+				56A5524A2B2F6E3D006B1B17 /* View */,
+				56A5524C2B2F6E3D006B1B17 /* Interactor */,
+				56A5524F2B2F6E3D006B1B17 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		56A552472B2F6E3D006B1B17 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				56A552482B2F6E3D006B1B17 /* StreetCamMenuViewModel.swift */,
+				56A552492B2F6E3D006B1B17 /* StreetCamMenuViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		56A5524A2B2F6E3D006B1B17 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				56A5524B2B2F6E3D006B1B17 /* StreetCamMenuView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		56A5524C2B2F6E3D006B1B17 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				56A5524D2B2F6E3D006B1B17 /* StreetCamMenuInteractorProtocol.swift */,
+				56A5524E2B2F6E3D006B1B17 /* StreetCamMenuInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		56A5524F2B2F6E3D006B1B17 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				56A552502B2F6E3D006B1B17 /* StreetCamMenuRouterProtocol.swift */,
+				56A552512B2F6E3D006B1B17 /* StreetCamMenuRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		56A552522B2F6E3D006B1B17 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				56A552532B2F6E3D006B1B17 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		56A552532B2F6E3D006B1B17 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				56A552542B2F6E3D006B1B17 /* StreetCamMenuModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		56DADB1D2AD5EA3400710618 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -1189,6 +1309,7 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				56A552392B2F6E16006B1B17 /* StreetCamMenu */,
 				56A552102B2F5FE7006B1B17 /* WalkyCamerOnboarding */,
 				EA1FD19D2B1E930C000E583D /* VideoCallRoom */,
 				EADB5C8E2B190818005863E1 /* VideoCall */,
@@ -4093,6 +4214,7 @@
 				EA50A08A2B0BC77F0042B238 /* PlansPagesRouterProtocol.swift in Sources */,
 				EA4164F72AE4B6F7008CE66A /* ComparePlansRouter.swift in Sources */,
 				EA5E1D712AD7167300738A8F /* LinkButtonStyle.swift in Sources */,
+				56A552582B2F6E3D006B1B17 /* StreetCamMenuViewModel.swift in Sources */,
 				EA910F952ADA06F500584B98 /* RegistrationRouterProtocol.swift in Sources */,
 				EA282E542AE952F700B90920 /* ProfileModel.swift in Sources */,
 				EA91101E2ADDADE100584B98 /* HomeInteractorProtocol.swift in Sources */,
@@ -4148,6 +4270,7 @@
 				EA0E408B2AF69771002B7437 /* CashWalletOnboardingModel.swift in Sources */,
 				EAD0486B2AE22C530096E6AB /* RegistrationPlansViewModel.swift in Sources */,
 				EA1FD1BE2B1E932F000E583D /* VideoCallRoomRouter.swift in Sources */,
+				56A5525C2B2F6E3D006B1B17 /* StreetCamMenuInteractor.swift in Sources */,
 				EA6083B32B01D9E100295069 /* GalleryAssembler.swift in Sources */,
 				EA1FD1BD2B1E932F000E583D /* VideoCallRoomInteractorProtocol.swift in Sources */,
 				EA910FF32ADCBCC000584B98 /* MenuItemModel.swift in Sources */,
@@ -4194,6 +4317,7 @@
 				EA910F8E2ADA06F500584B98 /* RegistrationViewModel.swift in Sources */,
 				EA6083462AFD58A900295069 /* CryptoTabRouterProtocol.swift in Sources */,
 				EA282ED02AEB531100B90920 /* FunctionsRouter.swift in Sources */,
+				56A552562B2F6E3D006B1B17 /* StreetCamMenuAssemblerProtocol.swift in Sources */,
 				EA282E562AE952F700B90920 /* ProfileViewModel.swift in Sources */,
 				EA910FCA2ADC495700584B98 /* TabBarView.swift in Sources */,
 				EA4165492AE706C6008CE66A /* NotificationsAssemblerProtocol.swift in Sources */,
@@ -4227,6 +4351,8 @@
 				EA9110242ADDADE100584B98 /* HomeAssembler.swift in Sources */,
 				EA4164F02AE4B6F7008CE66A /* ComparePlansAssemblerProtocol.swift in Sources */,
 				EA910F962ADA06F500584B98 /* RegistrationModel.swift in Sources */,
+				56A552592B2F6E3D006B1B17 /* StreetCamMenuViewModelProtocol.swift in Sources */,
+				56A5525E2B2F6E3D006B1B17 /* StreetCamMenuRouter.swift in Sources */,
 				EA5E1D9A2AD883D800738A8F /* Text+Extension.swift in Sources */,
 				EA9110192ADDADE100584B98 /* HomeViewModelProtocol.swift in Sources */,
 				56A552352B2F6135006B1B17 /* WalkyCamerOnboardingRouterProtocol.swift in Sources */,
@@ -4234,6 +4360,7 @@
 				EA6083DA2B01DBDF00295069 /* GalleryPhotosViewModelProtocol.swift in Sources */,
 				EA910FD22ADC499500584B98 /* TabBarBuilder.swift in Sources */,
 				EA5E1D762AD716D200738A8F /* ButtonStyleDescriptor.swift in Sources */,
+				56A552572B2F6E3D006B1B17 /* StreetCamMenuAssembler.swift in Sources */,
 				EA172AF82AF06BDE00EB1514 /* ConfirmMailAssembler.swift in Sources */,
 				EA82DB532ADF605500E6B39A /* ReminderCardView.swift in Sources */,
 				EA9110262ADDAE6400584B98 /* ProfileHeaderView.swift in Sources */,
@@ -4270,6 +4397,7 @@
 				EA7219A42B05863C00BE2D93 /* FavoriteItemView.swift in Sources */,
 				EA60833D2AFD58A900295069 /* CryptoTabRoute.swift in Sources */,
 				EA7219972B05612900BE2D93 /* WalkyBotModel.swift in Sources */,
+				56A552552B2F6E3D006B1B17 /* StreetCamMenuRoute.swift in Sources */,
 				EA6083E22B01DBE000295069 /* GalleryPhotosAssembler.swift in Sources */,
 				EA4164F42AE4B6F7008CE66A /* ComparePlansView.swift in Sources */,
 				EA910F932ADA06F500584B98 /* RegistrationInteractorProtocol.swift in Sources */,
@@ -4280,6 +4408,7 @@
 				EA172B1D2AF06EF600EB1514 /* StartupModel.swift in Sources */,
 				EA910F5B2AD9B01300584B98 /* OnboardingAssembler.swift in Sources */,
 				EA910F5C2AD9B01300584B98 /* OnboardingAssemblerProtocol.swift in Sources */,
+				56A5525A2B2F6E3D006B1B17 /* StreetCamMenuView.swift in Sources */,
 				EA910FC42ADC495700584B98 /* TabBarRoute.swift in Sources */,
 				EADBE1012AE823BA00FED579 /* NotificationItemView.swift in Sources */,
 				EA6083B12B01D9E100295069 /* GalleryRoute.swift in Sources */,
@@ -4368,6 +4497,7 @@
 				EADB5CA52B190819005863E1 /* VideoCallAssembler.swift in Sources */,
 				EA6083672B01981800295069 /* CryptoDetailsInteractorProtocol.swift in Sources */,
 				EA1FD1C32B1E932F000E583D /* VideoCallRoomModel.swift in Sources */,
+				56A5525F2B2F6E3D006B1B17 /* StreetCamMenuModel.swift in Sources */,
 				EA60838F2B01CD0A00295069 /* ShopTabViewModel.swift in Sources */,
 				EA0E40C52AF70E86002B7437 /* CashWalletAssembler.swift in Sources */,
 				EA1FD1BB2B1E932F000E583D /* VideoCallRoomView.swift in Sources */,
@@ -4395,6 +4525,8 @@
 				EA5E1D932AD71ABB00738A8F /* Tokens.swift in Sources */,
 				EA4165422AE706C6008CE66A /* NotificationsViewModel.swift in Sources */,
 				EA910FC92ADC495700584B98 /* TabBarViewModel.swift in Sources */,
+				56A5525B2B2F6E3D006B1B17 /* StreetCamMenuInteractorProtocol.swift in Sources */,
+				56A5525D2B2F6E3D006B1B17 /* StreetCamMenuRouterProtocol.swift in Sources */,
 				EA72199E2B05612900BE2D93 /* WalkyBotRouter.swift in Sources */,
 				EA910F8F2ADA06F500584B98 /* RegistrationViewModelProtocol.swift in Sources */,
 				EA41654A2AE706C6008CE66A /* NotificationsAssembler.swift in Sources */,

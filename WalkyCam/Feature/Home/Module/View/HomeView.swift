@@ -66,6 +66,8 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                                 switch item.id {
                                 case 0:
                                     router.routeToVideoCall()
+                                case 1:
+                                    router.routeToWalkCamer()
                                 default:
                                     print("Touched \(item.id)")
                                 }

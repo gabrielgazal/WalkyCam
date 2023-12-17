@@ -5,4 +5,5 @@ protocol HomeRouterProtocol: Router {
     func routeToProfile()
     func routeToWalkyBot()
     func routeToVideoCall()
+    func routeToWalkCamer()
 }

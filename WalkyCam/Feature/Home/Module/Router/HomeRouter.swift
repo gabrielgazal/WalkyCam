@@ -27,4 +27,10 @@ final class HomeRouter: Router, HomeRouterProtocol {
             VideoCallRoute(isPresented: isNavigating)
         )
     }
+    
+    func routeToWalkCamer() {
+        navigateTo(
+            WalkyCamerOnboardingRoute(isPresented: isNavigating)
+        )
+    }
 }
