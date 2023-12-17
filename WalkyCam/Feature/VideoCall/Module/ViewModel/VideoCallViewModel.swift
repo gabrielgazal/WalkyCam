@@ -3,7 +3,7 @@ import SwiftUI
 final class VideoCallViewModel: VideoCallViewModelProtocol {
 
     // MARK: - Dependencies
-   @Published var videoCallLink: String = "testeGazal"
+   @Published var videoCallLink: String = ""
 
     private let interactor: VideoCallInteractorProtocol
 

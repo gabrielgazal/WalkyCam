@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct VideoCallView<ViewModel:VideoCallViewModelProtocol, Router: VideoCallRouterProtocol>: View {
+struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -40,12 +40,16 @@ struct VideoCallView<ViewModel:VideoCallViewModelProtocol, Router: VideoCallRout
                              icon: Asset.Icons.calendar.name,
                              action: {})
             }
-            horizontalCard(action: {})
+            horizontalCard(action: {
+                router.routeToMeetRoom(viewModel.videoCallLink)
+            })
         }
-               .preferredColorScheme(.dark)
                .padding(Tokens.Size.Spacing.regular)
                .background(Asset.Fondos.videocallFondo .swiftUIImage
                    .ignoresSafeArea())
+               .navigation(router)
+               .sheet(router)
+               .environment(\.colorScheme, .dark)
     }
 
     private func verticalCard(title: String,
@@ -93,8 +97,8 @@ struct VideoCallView<ViewModel:VideoCallViewModelProtocol, Router: VideoCallRout
             Text("Ingresa el código que has recebido.")
                 .font(.projectFont(size: Tokens.Size.Font.regular))
             HStack(spacing: Tokens.Size.Spacing.regular) {
-                TextInputView(text: .constant("https://meet.jit.si/\(viewModel.videoCallLink)"),
-                              placeholder: "Teste")
+                TextInputView(text: $viewModel.videoCallLink,
+                              placeholder: "Código de videollamada")
                 WCUIButton(title: "Unirme",
                            style: .outline,
                            descriptor: OrangeButtonStyleDescriptor(),

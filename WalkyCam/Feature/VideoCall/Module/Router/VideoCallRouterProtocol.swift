@@ -1,6 +1,5 @@
 import SwiftUI
 
 protocol VideoCallRouterProtocol: Router {
-    func routeToSomething()
+    func routeToMeetRoom(_ link: String)
 }
-
