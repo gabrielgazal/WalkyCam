@@ -73,6 +73,7 @@ internal enum Asset {
     internal static let check = ImageAsset(name: "check")
     internal static let crm = ImageAsset(name: "crm")
     internal static let crypto = ImageAsset(name: "crypto")
+    internal static let danger = ImageAsset(name: "danger")
     internal static let detectorMetales = ImageAsset(name: "detectorMetales")
     internal static let digitalTwins = ImageAsset(name: "digitalTwins")
     internal static let ecografia = ImageAsset(name: "ecografia")
@@ -111,6 +112,7 @@ internal enum Asset {
     internal static let wIcon = ImageAsset(name: "wIcon")
   }
   internal enum Illustrations {
+    internal static let camerOnboarding = ImageAsset(name: "camerOnboarding")
     internal static let cammy = ImageAsset(name: "cammy")
     internal static let chatBot = ImageAsset(name: "chat-bot")
     internal static let cryptoOnboarding1 = ImageAsset(name: "crypto-onboarding1")

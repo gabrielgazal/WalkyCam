@@ -10,6 +10,18 @@
 		3C514EC9017EB5CE2902B79C /* Pods_WalkyCamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F44B040E9D3F5ADD523210 /* Pods_WalkyCamTests.framework */; };
 		5637A8162AD5DD72000586DF /* WalkyCamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5637A8152AD5DD72000586DF /* WalkyCamApp.swift */; };
 		5637A81A2AD5DD73000586DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5637A8192AD5DD73000586DF /* Assets.xcassets */; };
+		56A5522C2B2F6135006B1B17 /* WalkyCamerOnboardingRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552192B2F6134006B1B17 /* WalkyCamerOnboardingRoute.swift */; };
+		56A5522D2B2F6135006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5521B2B2F6134006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift */; };
+		56A5522E2B2F6135006B1B17 /* WalkyCamerOnboardingAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5521C2B2F6134006B1B17 /* WalkyCamerOnboardingAssembler.swift */; };
+		56A5522F2B2F6135006B1B17 /* WalkyCamerOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5521F2B2F6135006B1B17 /* WalkyCamerOnboardingViewModel.swift */; };
+		56A552302B2F6135006B1B17 /* WalkyCamerOnboardingViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552202B2F6135006B1B17 /* WalkyCamerOnboardingViewModelProtocol.swift */; };
+		56A552312B2F6135006B1B17 /* WalkyCamerOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552222B2F6135006B1B17 /* WalkyCamerOnboardingView.swift */; };
+		56A552322B2F6135006B1B17 /* WalkyCamerOnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552242B2F6135006B1B17 /* WalkyCamerOnboardingInteractor.swift */; };
+		56A552332B2F6135006B1B17 /* WalkyCamerOnboardingInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552252B2F6135006B1B17 /* WalkyCamerOnboardingInteractorProtocol.swift */; };
+		56A552342B2F6135006B1B17 /* WalkyCamerOnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552272B2F6135006B1B17 /* WalkyCamerOnboardingRouter.swift */; };
+		56A552352B2F6135006B1B17 /* WalkyCamerOnboardingRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552282B2F6135006B1B17 /* WalkyCamerOnboardingRouterProtocol.swift */; };
+		56A552362B2F6135006B1B17 /* WalkyCamerOnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5522B2B2F6135006B1B17 /* WalkyCamerOnboardingModel.swift */; };
+		56A552382B2F6168006B1B17 /* WalkyCamerOnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552372B2F6168006B1B17 /* WalkyCamerOnboardingPageView.swift */; };
 		56DADB202AD5EA7200710618 /* AppNavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB1F2AD5EA7200710618 /* AppNavigatorProtocol.swift */; };
 		56DADB222AD5EAA400710618 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB212AD5EAA400710618 /* AppNavigator.swift */; };
 		56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB232AD5EB3800710618 /* AppDelegate.swift */; };
@@ -387,6 +399,18 @@
 		5637A8192AD5DD73000586DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5637A8222AD5DD74000586DF /* WalkyCamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalkyCamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5637A82C2AD5DD74000586DF /* WalkyCamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalkyCamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		56A552192B2F6134006B1B17 /* WalkyCamerOnboardingRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingRoute.swift; sourceTree = "<group>"; };
+		56A5521B2B2F6134006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingAssemblerProtocol.swift; sourceTree = "<group>"; };
+		56A5521C2B2F6134006B1B17 /* WalkyCamerOnboardingAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingAssembler.swift; sourceTree = "<group>"; };
+		56A5521F2B2F6135006B1B17 /* WalkyCamerOnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingViewModel.swift; sourceTree = "<group>"; };
+		56A552202B2F6135006B1B17 /* WalkyCamerOnboardingViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingViewModelProtocol.swift; sourceTree = "<group>"; };
+		56A552222B2F6135006B1B17 /* WalkyCamerOnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingView.swift; sourceTree = "<group>"; };
+		56A552242B2F6135006B1B17 /* WalkyCamerOnboardingInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingInteractor.swift; sourceTree = "<group>"; };
+		56A552252B2F6135006B1B17 /* WalkyCamerOnboardingInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingInteractorProtocol.swift; sourceTree = "<group>"; };
+		56A552272B2F6135006B1B17 /* WalkyCamerOnboardingRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingRouter.swift; sourceTree = "<group>"; };
+		56A552282B2F6135006B1B17 /* WalkyCamerOnboardingRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingRouterProtocol.swift; sourceTree = "<group>"; };
+		56A5522B2B2F6135006B1B17 /* WalkyCamerOnboardingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingModel.swift; sourceTree = "<group>"; };
+		56A552372B2F6168006B1B17 /* WalkyCamerOnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingPageView.swift; sourceTree = "<group>"; };
 		56DADB1F2AD5EA7200710618 /* AppNavigatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigatorProtocol.swift; sourceTree = "<group>"; };
 		56DADB212AD5EAA400710618 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		56DADB232AD5EB3800710618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -816,6 +840,105 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		56A552102B2F5FE7006B1B17 /* WalkyCamerOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+				56A552172B2F6134006B1B17 /* Configuration */,
+				56A552292B2F6135006B1B17 /* Domain */,
+				56A5521D2B2F6135006B1B17 /* Module */,
+			);
+			path = WalkyCamerOnboarding;
+			sourceTree = "<group>";
+		};
+		56A552172B2F6134006B1B17 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				56A552182B2F6134006B1B17 /* Route */,
+				56A5521A2B2F6134006B1B17 /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		56A552182B2F6134006B1B17 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				56A552192B2F6134006B1B17 /* WalkyCamerOnboardingRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		56A5521A2B2F6134006B1B17 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				56A5521B2B2F6134006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift */,
+				56A5521C2B2F6134006B1B17 /* WalkyCamerOnboardingAssembler.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		56A5521D2B2F6135006B1B17 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				56A5521E2B2F6135006B1B17 /* ViewModel */,
+				56A552212B2F6135006B1B17 /* View */,
+				56A552232B2F6135006B1B17 /* Interactor */,
+				56A552262B2F6135006B1B17 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		56A5521E2B2F6135006B1B17 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				56A5521F2B2F6135006B1B17 /* WalkyCamerOnboardingViewModel.swift */,
+				56A552202B2F6135006B1B17 /* WalkyCamerOnboardingViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		56A552212B2F6135006B1B17 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				56A552222B2F6135006B1B17 /* WalkyCamerOnboardingView.swift */,
+				56A552372B2F6168006B1B17 /* WalkyCamerOnboardingPageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		56A552232B2F6135006B1B17 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				56A552242B2F6135006B1B17 /* WalkyCamerOnboardingInteractor.swift */,
+				56A552252B2F6135006B1B17 /* WalkyCamerOnboardingInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		56A552262B2F6135006B1B17 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				56A552272B2F6135006B1B17 /* WalkyCamerOnboardingRouter.swift */,
+				56A552282B2F6135006B1B17 /* WalkyCamerOnboardingRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		56A552292B2F6135006B1B17 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				56A5522A2B2F6135006B1B17 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		56A5522A2B2F6135006B1B17 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				56A5522B2B2F6135006B1B17 /* WalkyCamerOnboardingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		56DADB1D2AD5EA3400710618 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -1066,6 +1189,7 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				56A552102B2F5FE7006B1B17 /* WalkyCamerOnboarding */,
 				EA1FD19D2B1E930C000E583D /* VideoCallRoom */,
 				EADB5C8E2B190818005863E1 /* VideoCall */,
 				EA50A0682B0BC7590042B238 /* PlansPages */,
@@ -3947,6 +4071,7 @@
 				EA15B5B22AD7072400C03407 /* SnackBarModifier.swift in Sources */,
 				EAA1E6452AFB03FD00A42174 /* CashTabModel.swift in Sources */,
 				EA0E40952AF69771002B7437 /* CashWalletOnboardingAssembler.swift in Sources */,
+				56A552362B2F6135006B1B17 /* WalkyCamerOnboardingModel.swift in Sources */,
 				EA50A0882B0BC77F0042B238 /* PlansPagesInteractorProtocol.swift in Sources */,
 				EADB5CA42B190819005863E1 /* VideoCallRoute.swift in Sources */,
 				EA5E1D962AD725DF00738A8F /* ProjectColors.swift in Sources */,
@@ -3988,6 +4113,7 @@
 				EA15B59E2AD6E44D00C03407 /* LoginRouter.swift in Sources */,
 				EA282ECC2AEB531100B90920 /* FunctionsView.swift in Sources */,
 				EA60838A2B01CD0A00295069 /* ShopTabRoute.swift in Sources */,
+				56A552322B2F6135006B1B17 /* WalkyCamerOnboardingInteractor.swift in Sources */,
 				EA172AD92AF0335400EB1514 /* AdvertisementCard.swift in Sources */,
 				EA4164F12AE4B6F7008CE66A /* ComparePlansViewModel.swift in Sources */,
 				EADB5CAA2B190819005863E1 /* VideoCallInteractor.swift in Sources */,
@@ -4074,6 +4200,7 @@
 				EAA1E61D2AFAFA7100A42174 /* WCTopBarItem.swift in Sources */,
 				EAA1E61E2AFAFA7100A42174 /* WCTopBarContainerView.swift in Sources */,
 				EA910F312AD8B55200584B98 /* Divider.swift in Sources */,
+				56A552302B2F6135006B1B17 /* WalkyCamerOnboardingViewModelProtocol.swift in Sources */,
 				EAD048722AE22C530096E6AB /* RegistrationPlansAssembler.swift in Sources */,
 				EA172AFD2AF06BDE00EB1514 /* ConfirmMailInteractorProtocol.swift in Sources */,
 				EA282EDD2AEB572700B90920 /* FunctionCell.swift in Sources */,
@@ -4102,6 +4229,7 @@
 				EA910F962ADA06F500584B98 /* RegistrationModel.swift in Sources */,
 				EA5E1D9A2AD883D800738A8F /* Text+Extension.swift in Sources */,
 				EA9110192ADDADE100584B98 /* HomeViewModelProtocol.swift in Sources */,
+				56A552352B2F6135006B1B17 /* WalkyCamerOnboardingRouterProtocol.swift in Sources */,
 				EA910F5A2AD9B01300584B98 /* OnboardingRoute.swift in Sources */,
 				EA6083DA2B01DBDF00295069 /* GalleryPhotosViewModelProtocol.swift in Sources */,
 				EA910FD22ADC499500584B98 /* TabBarBuilder.swift in Sources */,
@@ -4111,6 +4239,7 @@
 				EA9110262ADDAE6400584B98 /* ProfileHeaderView.swift in Sources */,
 				EA282E602AE9A10600B90920 /* ImageMock.swift in Sources */,
 				EA1FD1C22B1E932F000E583D /* VideoCallRoomAssembler.swift in Sources */,
+				56A552332B2F6135006B1B17 /* WalkyCamerOnboardingInteractorProtocol.swift in Sources */,
 				EA6083E02B01DBE000295069 /* GalleryPhotosRoute.swift in Sources */,
 				EA910FF22ADCBCC000584B98 /* MenuAssembler.swift in Sources */,
 				EA15B5B62AD7075600C03407 /* Router.swift in Sources */,
@@ -4137,6 +4266,7 @@
 				EA9110292ADDB03300584B98 /* AsyncImageView.swift in Sources */,
 				EA282ED22AEB531100B90920 /* FunctionsRoute.swift in Sources */,
 				EA0E40C12AF70E86002B7437 /* CashWalletRouter.swift in Sources */,
+				56A5522F2B2F6135006B1B17 /* WalkyCamerOnboardingViewModel.swift in Sources */,
 				EA7219A42B05863C00BE2D93 /* FavoriteItemView.swift in Sources */,
 				EA60833D2AFD58A900295069 /* CryptoTabRoute.swift in Sources */,
 				EA7219972B05612900BE2D93 /* WalkyBotModel.swift in Sources */,
@@ -4171,6 +4301,7 @@
 				EA0E408F2AF69771002B7437 /* CashWalletOnboardingInteractor.swift in Sources */,
 				EA50A08B2B0BC77F0042B238 /* PlansPagesRouter.swift in Sources */,
 				EA50A0872B0BC77F0042B238 /* PlansPagesView.swift in Sources */,
+				56A5522C2B2F6135006B1B17 /* WalkyCamerOnboardingRoute.swift in Sources */,
 				EA0E40912AF69771002B7437 /* CashWalletOnboardingRouterProtocol.swift in Sources */,
 				EA50A08C2B0BC77F0042B238 /* PlansPagesRoute.swift in Sources */,
 				EA50A0842B0BC77F0042B238 /* PlansPagesModel.swift in Sources */,
@@ -4188,6 +4319,7 @@
 				EA7219772B0553C900BE2D93 /* GalleryItemView.swift in Sources */,
 				5637A8162AD5DD72000586DF /* WalkyCamApp.swift in Sources */,
 				EA15B5B42AD7074200C03407 /* RouterState.swift in Sources */,
+				56A552342B2F6135006B1B17 /* WalkyCamerOnboardingRouter.swift in Sources */,
 				EA910F2E2AD8B14C00584B98 /* WCUIButton.swift in Sources */,
 				EA7219982B05612900BE2D93 /* WalkyBotViewModelProtocol.swift in Sources */,
 				EA0E408E2AF69771002B7437 /* CashWalletOnboardingView.swift in Sources */,
@@ -4201,7 +4333,9 @@
 				EA282E522AE952F700B90920 /* ProfileAssemblerProtocol.swift in Sources */,
 				EA910F3A2AD9782000584B98 /* SelectorModel.swift in Sources */,
 				EAD0486F2AE22C530096E6AB /* RegistrationPlansRouterProtocol.swift in Sources */,
+				56A5522E2B2F6135006B1B17 /* WalkyCamerOnboardingAssembler.swift in Sources */,
 				EAD048702AE22C530096E6AB /* RegistrationPlansRouter.swift in Sources */,
+				56A552312B2F6135006B1B17 /* WalkyCamerOnboardingView.swift in Sources */,
 				EA6083652B01981800295069 /* CryptoDetailsView.swift in Sources */,
 				EA0E408C2AF69771002B7437 /* CashWalletOnboardingViewModel.swift in Sources */,
 				EA6083B62B01D9E100295069 /* GalleryViewModelProtocol.swift in Sources */,
@@ -4245,6 +4379,7 @@
 				EA172AFE2AF06BDE00EB1514 /* ConfirmMailInteractor.swift in Sources */,
 				EA172AFB2AF06BDE00EB1514 /* ConfirmMailViewModelProtocol.swift in Sources */,
 				EA9110232ADDADE100584B98 /* HomeAssemblerProtocol.swift in Sources */,
+				56A552382B2F6168006B1B17 /* WalkyCamerOnboardingPageView.swift in Sources */,
 				EA15B5A22AD6E44D00C03407 /* LoginAssemblerProtocol.swift in Sources */,
 				EA282ECE2AEB531100B90920 /* FunctionsInteractor.swift in Sources */,
 				EA910F3C2AD982F300584B98 /* SecureTextInputView.swift in Sources */,
@@ -4252,6 +4387,7 @@
 				EA910FA42ADC470A00584B98 /* WCTabBarView.swift in Sources */,
 				EA60838E2B01CD0A00295069 /* ShopTabViewModelProtocol.swift in Sources */,
 				EA6083DB2B01DBDF00295069 /* GalleryPhotosView.swift in Sources */,
+				56A5522D2B2F6135006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift in Sources */,
 				EA0E40932AF69771002B7437 /* CashWalletOnboardingRoute.swift in Sources */,
 				EA4165482AE706C6008CE66A /* NotificationsRoute.swift in Sources */,
 				EAA1E61C2AFAFA7100A42174 /* WCTopBarView.swift in Sources */,

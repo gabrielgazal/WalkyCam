@@ -203,6 +203,26 @@ internal enum L10n {
     /// ¿Qué hacemos hoy?
     internal static let text = L10n.tr("Localizable", "WalkyBotView.text", fallback: "¿Qué hacemos hoy?")
   }
+  internal enum WalkyCamerOnboardingView {
+    internal enum Page1 {
+      /// 1. Indica la zona a grabar.
+      /// 
+      /// 2. Elige un WalkCamer acorde con tus necesidades.
+      /// 
+      /// 3. Tu WalkCamer aceptará la invitación para iniciar la videollamada.
+      internal static let subtitle = L10n.tr("Localizable", "WalkyCamerOnboardingView.Page1.subtitle", fallback: "1. Indica la zona a grabar.\n\n2. Elige un WalkCamer acorde con tus necesidades.\n\n3. Tu WalkCamer aceptará la invitación para iniciar la videollamada.")
+      /// Conéctate con el mundo
+      internal static let title = L10n.tr("Localizable", "WalkyCamerOnboardingView.Page1.title", fallback: "Conéctate con el mundo")
+    }
+    internal enum Page2 {
+      /// Para cuidar su privacidad, WalkyCam ofrece la posibilidad de pixelar el rostro de las personas y las placas de los autos que puedan aparecer en una transmisión.
+      internal static let subtitle1 = L10n.tr("Localizable", "WalkyCamerOnboardingView.Page2.subtitle1", fallback: "Para cuidar su privacidad, WalkyCam ofrece la posibilidad de pixelar el rostro de las personas y las placas de los autos que puedan aparecer en una transmisión.")
+      /// WalkyCam no se responsabiliza por las imagenes que se transmiten ni por la grabación realizada.
+      internal static let subtitle2 = L10n.tr("Localizable", "WalkyCamerOnboardingView.Page2.subtitle2", fallback: "WalkyCam no se responsabiliza por las imagenes que se transmiten ni por la grabación realizada.")
+      /// Su privacidad es importante para nosotros
+      internal static let title = L10n.tr("Localizable", "WalkyCamerOnboardingView.Page2.title", fallback: "Su privacidad es importante para nosotros")
+    }
+  }
   internal enum Copyright {
     /// @WalkyCam 2021 - All reserved copyright
     internal static let text = L10n.tr("Localizable", "copyright.text", fallback: "@WalkyCam 2021 - All reserved copyright")

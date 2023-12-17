@@ -1,0 +1,3 @@
+protocol WalkyCamerOnboardingInteractorProtocol {
+    func someFunction()
+}
