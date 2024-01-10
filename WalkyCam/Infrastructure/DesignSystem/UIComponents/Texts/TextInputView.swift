@@ -77,6 +77,10 @@ public struct TextInputView: View {
             buildDescriptionText(topDescriptionText)
             HStack(spacing: Tokens.Size.Spacing.small) {
                 ZStack(alignment: .leading) {
+                    Text(placeholder)
+                        .context(size: Tokens.Size.Font.regular)
+                        .foregroundColor(.gray)
+                        .isHidden(!text.isEmpty)
                     textFieldView
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
@@ -100,7 +104,7 @@ public struct TextInputView: View {
 
     var textFieldView: some View {
         TextField(
-            placeholder,
+            "",
             text: $text,
             onEditingChanged: { editingChanged in
                 self.isFocused = editingChanged
@@ -135,9 +139,21 @@ public struct TextInputView: View {
         return AnyView(
             Button(action: { actions.accessoryAction?() },
                    label: {
-                accessory
-                    .foregroundColor(Color.negro)
-            })
+                       accessory
+                           .foregroundColor(Color.negro)
+                   })
         )
+    }
+}
+
+struct TextInputView_Previews: PreviewProvider {
+    static var previews: some View {
+        TextInputView(text: .constant(""),
+                      accessory: nil,
+                      topDescriptionText: nil,
+                      placeholder: "Teste",
+                      keyboardType: .default,
+                      backgroundColor: Color.blanco,
+                      actions: .init())
     }
 }

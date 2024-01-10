@@ -98,7 +98,7 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
                 .font(.projectFont(size: Tokens.Size.Font.regular))
             HStack(spacing: Tokens.Size.Spacing.regular) {
                 TextInputView(text: $viewModel.videoCallLink,
-                              placeholder: "Código de videollamada")
+                              placeholder: "Ingresar código")
                 WCUIButton(title: "Unirme",
                            style: .outline,
                            descriptor: OrangeButtonStyleDescriptor(),

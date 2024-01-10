@@ -13,11 +13,11 @@ struct WalkyCamApp: App {
     @ObservedObject var appNavigator = AppNavigator.shared
     @Environment(\.scenePhase) var scenePhase
     @State var isPresented = false
-    
+
     init() {
         appNavigator.configure(isUserAlreadyLoggedIn: false)
     }
-    
+
     var body: some Scene {
         WindowGroup {
             NavigationView {

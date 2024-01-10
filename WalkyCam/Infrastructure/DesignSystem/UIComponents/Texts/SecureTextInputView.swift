@@ -64,9 +64,13 @@ public struct SecureTextInputView: View {
             buildDescriptionText(topDescriptionText)
             HStack(spacing: Tokens.Size.Spacing.small) {
                 ZStack(alignment: .leading) {
+                    Text(placeholder)
+                        .context(size: Tokens.Size.Font.regular)
+                        .foregroundColor(.gray)
+                        .isHidden(!text.isEmpty)
                     Group {
                         SecureField(
-                            placeholder,
+                            "",
                             text: $text,
                             onCommit: actions.onCommitAction ?? {})
                         .foregroundColor(isSecure ? Color.negro : .clear)
@@ -74,7 +78,7 @@ public struct SecureTextInputView: View {
                         .disableAutocorrection(true)
 
                         TextField(
-                            placeholder,
+                            "",
                             text: $text,
                             onEditingChanged: { editingChanged in
                                 if editingChanged {
