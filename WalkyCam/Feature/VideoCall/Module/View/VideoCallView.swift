@@ -105,6 +105,7 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
                            action: {
                     action?()
                 })
+                .disabled(viewModel.videoCallLink.isEmpty)
             }
         }
                .padding(Tokens.Size.Spacing.regular)

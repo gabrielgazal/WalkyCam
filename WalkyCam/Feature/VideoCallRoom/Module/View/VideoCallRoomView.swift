@@ -7,7 +7,6 @@ struct VideoCallRoomView<ViewModel: VideoCallRoomViewModelProtocol, Router: Vide
 
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
-    @State var roomName = "testeGazal"
     @State private var jitsiMeetView: JitsiMeetView?
     @State private var pipViewCoordinator: PiPViewCoordinator?
 
@@ -39,7 +38,7 @@ struct VideoCallRoomView<ViewModel: VideoCallRoomViewModelProtocol, Router: Vide
     }
 
     private func openJitsiMeet() {
-        let room: String = roomName
+        let room: String = viewModel.meetURL.replacingOccurrences(of: "https://meet.jit.si/", with: "")
         guard room.count > 1 else {
             return
         }
@@ -90,7 +89,7 @@ struct VideoCallRoomView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             VideoCallRoomView(
-                viewModel: VideoCallRoomViewModel(meetURL: ""),
+                viewModel: VideoCallRoomViewModel(meetURL: "https://meet.jit.si/testeGazal"),
                 router: VideoCallRoomRouter(isPresented: .constant(false))
             )
         }
