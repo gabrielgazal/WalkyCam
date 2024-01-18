@@ -7,6 +7,10 @@ target 'WalkyCam' do
 
   # Pods for WalkyCam
   pod 'JitsiMeetSDK'
+  pod "ChatSDK"
+  pod "ChatSDKFirebase/Adapter"
+  pod "ChatSDKFirebase/Upload"
+  pod "ChatSDKFirebase/Push"
 
   target 'WalkyCamTests' do
     inherit! :search_paths
