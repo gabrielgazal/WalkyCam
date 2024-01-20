@@ -68,6 +68,8 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                                     router.routeToVideoCall()
                                 case 1:
                                     router.routeToWalkCamer()
+                                case 3:
+                                    router.routeToARHands()
                                 default:
                                     print("Touched \(item.id)")
                                 }

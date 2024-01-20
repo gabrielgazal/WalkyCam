@@ -33,4 +33,11 @@ final class HomeRouter: Router, HomeRouterProtocol {
             WalkyCamerOnboardingRoute(isPresented: isNavigating)
         )
     }
+    
+    func routeToARHands() {
+        navigateTo(
+            WebRoute(isPreseted: isNavigating,
+                     webViewURL: "https://vcprojectj4g.com/static/main/")
+        )
+    }
 }

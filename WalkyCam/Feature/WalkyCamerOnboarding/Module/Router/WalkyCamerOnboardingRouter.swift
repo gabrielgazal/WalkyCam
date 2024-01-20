@@ -4,9 +4,10 @@ final class WalkyCamerOnboardingRouter: Router, WalkyCamerOnboardingRouterProtoc
 
     // MARK: - Public API
 
-    #warning("Example function. Rename or remove it")
-    func routeToSomething() { 
-
+    func routeToStreetCam() {
+        navigateTo(
+            StreetCamMenuRoute(isPresented: isNavigating)
+        )
     }
 }
 

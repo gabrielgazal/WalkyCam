@@ -227,6 +227,18 @@ internal enum L10n {
     /// @WalkyCam 2021 - All reserved copyright
     internal static let text = L10n.tr("Localizable", "copyright.text", fallback: "@WalkyCam 2021 - All reserved copyright")
   }
+  internal enum ErrorView {
+    internal enum Generic {
+      /// Tentar novamente
+      internal static let buttonTitle = L10n.tr("Localizable", "errorView.generic.buttonTitle", fallback: "Tentar novamente")
+      /// Por algum motivo as informações não carregaram
+      internal static let description = L10n.tr("Localizable", "errorView.generic.description", fallback: "Por algum motivo as informações não carregaram")
+      /// retry
+      internal static let icon = L10n.tr("Localizable", "errorView.generic.icon", fallback: "retry")
+      /// Ops! Algo deu errado
+      internal static let message = L10n.tr("Localizable", "errorView.generic.message", fallback: "Ops! Algo deu errado")
+    }
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

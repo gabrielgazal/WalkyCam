@@ -40,7 +40,7 @@ struct WalkyCamerOnboardingView<ViewModel: WalkyCamerOnboardingViewModelProtocol
                 HStack(spacing: Tokens.Size.Spacing.big) {
                     LinkButton(title: L10n.CashWalletOnboardingView.Button.skip,
                                color: .naranja,
-                               action: {})
+                               action: handleProceedToStreetCam)
                     .frame(maxWidth: .infinity)
                     WCUIButton(
                         title: L10n.CashWalletOnboardingView.Button.next,
@@ -62,7 +62,7 @@ struct WalkyCamerOnboardingView<ViewModel: WalkyCamerOnboardingViewModelProtocol
                         title: "Buscar WalkCamer",
                         style: .standard,
                         descriptor: OrangeButtonStyleDescriptor(),
-                        action: {}
+                        action: handleProceedToStreetCam
                     )
                     .frame(maxWidth: .infinity)
                     LinkButton(title: "Salir",
@@ -87,6 +87,10 @@ struct WalkyCamerOnboardingView<ViewModel: WalkyCamerOnboardingViewModelProtocol
     private func setupAppearence() {
         UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(Color.naranja)
         UIPageControl.appearance().pageIndicatorTintColor = UIColor(Color.blancoGris)
+    }
+    
+    private func handleProceedToStreetCam() {
+        router.routeToStreetCam()
     }
 }
 

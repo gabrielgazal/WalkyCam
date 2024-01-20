@@ -87,3 +87,10 @@
 "WalkyCamerOnboardingView.Page2.title" = "Su privacidad es importante para nosotros";
 "WalkyCamerOnboardingView.Page2.subtitle1" = "Para cuidar su privacidad, WalkyCam ofrece la posibilidad de pixelar el rostro de las personas y las placas de los autos que puedan aparecer en una transmisión.";
 "WalkyCamerOnboardingView.Page2.subtitle2"= "WalkyCam no se responsabiliza por las imagenes que se transmiten ni por la grabación realizada.";
+
+// MARK: - ErrorView
+
+"errorView.generic.icon" = "retry";
+"errorView.generic.message" = "Ops! Algo deu errado";
+"errorView.generic.description" = "Por algum motivo as informações não carregaram";
+"errorView.generic.buttonTitle" = "Tentar novamente";

@@ -1,6 +1,6 @@
 import SwiftUI
 
 protocol WalkyCamerOnboardingRouterProtocol: Router {
-    func routeToSomething()
+    func routeToStreetCam()
 }
 

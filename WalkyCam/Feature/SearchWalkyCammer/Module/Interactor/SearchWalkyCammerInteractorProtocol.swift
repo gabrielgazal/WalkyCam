@@ -1,0 +1,3 @@
+protocol SearchWalkyCammerInteractorProtocol {
+    func someFunction()
+}
