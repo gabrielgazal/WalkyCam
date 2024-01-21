@@ -1,5 +1,7 @@
 import SwiftUI
+import MapKit
 
 protocol SearchWalkyCammerViewModelProtocol: ViewModelProtocol {
-    func someAction()
+    var userLocation: AsyncData<CLLocationCoordinate2D, ErrorProtocol> { get set }
+    func getUserRegion()
 }

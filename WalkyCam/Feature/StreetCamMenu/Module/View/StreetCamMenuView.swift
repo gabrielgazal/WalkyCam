@@ -34,7 +34,9 @@ struct StreetCamMenuView<ViewModel: StreetCamMenuViewModelProtocol, Router: Stre
                              description: "Localiza tu WalkCamer más cercano.",
                              buttonTitle: "Buscar",
                              icon: Asset.Icons.link.name,
-                             action: {})
+                             action: {
+                    router.routeToSearchCammer()
+                })
                 verticalCard(title: "RESERVAR",
                              description: "Programa tu WalkCamer con anterioridad.",
                              buttonTitle: "Reservar",

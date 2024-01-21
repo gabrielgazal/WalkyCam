@@ -4,9 +4,10 @@ final class StreetCamMenuRouter: Router, StreetCamMenuRouterProtocol {
 
     // MARK: - Public API
 
-    #warning("Example function. Rename or remove it")
-    func routeToSomething() { 
-
+    func routeToSearchCammer() {
+        navigateTo(
+            SearchWalkyCammerRoute(isPresented: isNavigating)
+        )
     }
 }
 
