@@ -3,13 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3C514EC9017EB5CE2902B79C /* Pods_WalkyCamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F44B040E9D3F5ADD523210 /* Pods_WalkyCamTests.framework */; };
-		5616A3332B5DB5A90081F7C2 /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5616A3322B5DB5A90081F7C2 /* Dependency.swift */; };
-		5616A3392B5EA02E0081F7C2 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 5616A3382B5EA02E0081F7C2 /* Networking */; };
 		561FC8B42B5C66F7005B6006 /* WebView+PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FC8B02B5C66F7005B6006 /* WebView+PullToRefresh.swift */; };
 		561FC8B52B5C66F7005B6006 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FC8B12B5C66F7005B6006 /* WebView.swift */; };
 		561FC8B62B5C66F7005B6006 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FC8B22B5C66F7005B6006 /* WebViewModel.swift */; };
@@ -429,7 +427,6 @@
 		01210015DB17D27A5A6A4908 /* Pods-WalkyCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkyCam.debug.xcconfig"; path = "Target Support Files/Pods-WalkyCam/Pods-WalkyCam.debug.xcconfig"; sourceTree = "<group>"; };
 		1657E0E09B4F0512C50B8036 /* Pods-WalkyCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkyCam.release.xcconfig"; path = "Target Support Files/Pods-WalkyCam/Pods-WalkyCam.release.xcconfig"; sourceTree = "<group>"; };
 		3892066162EC4092B81855CF /* Pods-WalkyCamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkyCamTests.debug.xcconfig"; path = "Target Support Files/Pods-WalkyCamTests/Pods-WalkyCamTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5616A3322B5DB5A90081F7C2 /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
 		561FC8B02B5C66F7005B6006 /* WebView+PullToRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebView+PullToRefresh.swift"; sourceTree = "<group>"; };
 		561FC8B12B5C66F7005B6006 /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		561FC8B22B5C66F7005B6006 /* WebViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
@@ -841,7 +838,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5616A3392B5EA02E0081F7C2 /* Networking in Frameworks */,
 				DFD0945A60FA5B637D89BC1D /* Pods_WalkyCam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -873,22 +869,6 @@
 				E0F44B040E9D3F5ADD523210 /* Pods_WalkyCamTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5616A3302B5DB5900081F7C2 /* DependencyStore */ = {
-			isa = PBXGroup;
-			children = (
-				5616A3312B5DB59B0081F7C2 /* Implementation */,
-			);
-			path = DependencyStore;
-			sourceTree = "<group>";
-		};
-		5616A3312B5DB59B0081F7C2 /* Implementation */ = {
-			isa = PBXGroup;
-			children = (
-				5616A3322B5DB5A90081F7C2 /* Dependency.swift */,
-			);
-			path = Implementation;
 			sourceTree = "<group>";
 		};
 		561FC8AF2B5C66F7005B6006 /* WebView */ = {
@@ -1165,7 +1145,6 @@
 		56DADB1D2AD5EA3400710618 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				5616A3302B5DB5900081F7C2 /* DependencyStore */,
 				5637A8152AD5DD72000586DF /* WalkyCamApp.swift */,
 				56DADB252AD5ECB900710618 /* Extension */,
 				56DADB1E2AD5EA6000710618 /* AppNavigator */,
@@ -4130,9 +4109,6 @@
 			dependencies = (
 			);
 			name = WalkyCam;
-			packageProductDependencies = (
-				5616A3382B5EA02E0081F7C2 /* Networking */,
-			);
 			productName = WalkyCam;
 			productReference = 5637A8122AD5DD72000586DF /* WalkyCam.app */;
 			productType = "com.apple.product-type.application";
@@ -4207,9 +4183,6 @@
 				en,
 			);
 			mainGroup = 5637A8092AD5DD71000586DF;
-			packageReferences = (
-				5616A3372B5EA02E0081F7C2 /* XCLocalSwiftPackageReference "Networking/Networking" */,
-			);
 			productRefGroup = 5637A8132AD5DD72000586DF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -4442,7 +4415,6 @@
 				EA910F602AD9B01300584B98 /* OnboardingViewModel.swift in Sources */,
 				EA282ED32AEB531100B90920 /* FunctionsAssembler.swift in Sources */,
 				EAA1E6432AFB03FD00A42174 /* CashTabRouter.swift in Sources */,
-				5616A3332B5DB5A90081F7C2 /* Dependency.swift in Sources */,
 				EA4164EF2AE4B6F7008CE66A /* ComparePlansAssembler.swift in Sources */,
 				EA910FCF2ADC495700584B98 /* TabBarModel.swift in Sources */,
 				EA910F8B2ADA06F500584B98 /* RegistrationRoute.swift in Sources */,
@@ -5110,20 +5082,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCLocalSwiftPackageReference section */
-		5616A3372B5EA02E0081F7C2 /* XCLocalSwiftPackageReference "Networking/Networking" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = Networking/Networking;
-		};
-/* End XCLocalSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		5616A3382B5EA02E0081F7C2 /* Networking */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Networking;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5637A80A2AD5DD72000586DF /* Project object */;
 }
