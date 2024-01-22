@@ -14,6 +14,7 @@ struct Dependency<T> {
     }
 }
 
+
 final class DependencyContainer {
     private var dependencies = [String: AnyObject]()
     private static var shared = DependencyContainer()
