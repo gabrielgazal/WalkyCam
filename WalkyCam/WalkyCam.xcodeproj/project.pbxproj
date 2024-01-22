@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3C514EC9017EB5CE2902B79C /* Pods_WalkyCamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F44B040E9D3F5ADD523210 /* Pods_WalkyCamTests.framework */; };
+		5616A3392B5EA02E0081F7C2 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 5616A3382B5EA02E0081F7C2 /* Networking */; };
 		561FC8B42B5C66F7005B6006 /* WebView+PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FC8B02B5C66F7005B6006 /* WebView+PullToRefresh.swift */; };
 		561FC8B52B5C66F7005B6006 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FC8B12B5C66F7005B6006 /* WebView.swift */; };
 		561FC8B62B5C66F7005B6006 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FC8B22B5C66F7005B6006 /* WebViewModel.swift */; };
@@ -838,6 +839,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5616A3392B5EA02E0081F7C2 /* Networking in Frameworks */,
 				DFD0945A60FA5B637D89BC1D /* Pods_WalkyCam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4109,6 +4111,9 @@
 			dependencies = (
 			);
 			name = WalkyCam;
+			packageProductDependencies = (
+				5616A3382B5EA02E0081F7C2 /* Networking */,
+			);
 			productName = WalkyCam;
 			productReference = 5637A8122AD5DD72000586DF /* WalkyCam.app */;
 			productType = "com.apple.product-type.application";
@@ -4183,6 +4188,9 @@
 				en,
 			);
 			mainGroup = 5637A8092AD5DD71000586DF;
+			packageReferences = (
+				5616A3372B5EA02E0081F7C2 /* XCLocalSwiftPackageReference "Networking/Networking" */,
+			);
 			productRefGroup = 5637A8132AD5DD72000586DF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -5082,6 +5090,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		5616A3372B5EA02E0081F7C2 /* XCLocalSwiftPackageReference "Networking/Networking" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Networking/Networking;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5616A3382B5EA02E0081F7C2 /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5637A80A2AD5DD72000586DF /* Project object */;
 }
