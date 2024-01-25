@@ -21,9 +21,9 @@ extension AuthRouter: TargetType {
     var path: String {
         switch self {
         case .login:
-            return "v1/login"
+            return "/login"
         case .register:
-            return "v1/register"
+            return "/register"
         }
     }
     
@@ -47,7 +47,7 @@ extension AuthRouter: TargetType {
     
     private func getLogin(_ userName: String, _ password: String) -> Task {
         let parameters = [
-            "user_name": userName,
+            "user": userName,
             "password": password
         ] as [String:Any]
         

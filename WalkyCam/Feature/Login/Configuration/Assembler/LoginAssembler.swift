@@ -12,7 +12,7 @@ final class LoginAssembler: LoginAssemblerProtocol {
 
         let interactor = LoginInteractor(
             useCases: .init(
-                login: .static(true)
+                login: .live(repository: repository)
             )
         )
         

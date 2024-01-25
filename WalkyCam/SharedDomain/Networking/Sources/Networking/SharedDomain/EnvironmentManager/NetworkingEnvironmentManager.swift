@@ -11,39 +11,28 @@ import Foundation
 /// NOTE: Simplified implementation, that could be extendend.
 public final class NetworkingEnvironmentManager: NetworkingEnvironmentManagerProtocol {
     // MARK: - Singleton
-    
+
     public static let shared = NetworkingEnvironmentManager()
-    
-    // MARK: - Constants
-    
-    
-    // MARK: - Dependencies
-    
-    
-    // MARK: - Public Properties
-    
-    /// TODO: Pass the URLs from secrets here
-    public func configure() {
-        
-    }
-    
+
+    public func configure() {}
+
     /// Defines the current enviroment
     public var currentEnvironment: APIEnvironment { getServicesEnvironment() }
-    
+
     /// Provides de base URL for the services
     public var baseURL: URL {
         switch currentEnvironment {
         case .production, .debug:
-            return URL(string: "http://www.walkycam.com/api")!
+            return URL(string: "https://www.walkycam.com/api/v1/user")!
         }
     }
-    
+
     // MARK: - Initialization
-    
+
     init() {}
-    
+
     // MARK: - Public API
-    
+
     func getServicesEnvironment() -> APIEnvironment {
 #if DEBUG
         return .debug
