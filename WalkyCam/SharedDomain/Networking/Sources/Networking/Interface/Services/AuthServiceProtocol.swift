@@ -10,6 +10,14 @@ import Moya
 import Foundation
 
 protocol AuthServiceProtocol {
-    func login(userName: String, password: String) -> AnyPublisher<Response, MoyaError>
-    func register(name: String, lastName: String, userName: String, email: String, password: String) -> AnyPublisher<Response, MoyaError>
+    typealias LoginResult = ()
+    func login(userName: String,
+               password: String,
+               completion: @escaping Completion)
+    func register(name: String,
+                  lastName: String,
+                  userName: String,
+                  email: String,
+                  password: String,
+                  completion: @escaping Completion)
 }

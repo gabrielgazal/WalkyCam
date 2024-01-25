@@ -12,27 +12,38 @@ final class AuthRepository: AuthRepositoryProtocol {
     // MARK: - Dependencies
 
     private let service: AuthServiceProtocol
+    private let requestHandler: DefaultRequestHandler
+
     // MARK: - Initialization
 
     init(
-        service: AuthServiceProtocol = AuthService()
+        service: AuthServiceProtocol = AuthService(),
+        requestHandler: DefaultRequestHandler = DefaultRequestHandler()
     ) {
         self.service = service
+        self.requestHandler = requestHandler
     }
 
     // MARK: - Public API
 
-    func login(userName: String, password: String) -> AnyPublisher<Bool, RepositoryError> {
-        service
-            .login(userName: userName, password: password)
-            .handle(by: DefaultRequestHandler(at: "success"))
-            .eraseToAnyPublisher()
+    func login(userName: String, password: String, completion: @escaping (LoginResult) -> Void) {
+        service.login(userName: userName, password: password) { result in
+            completion(result.mapToRepositoryResult(with: self.requestHandler))
+        }
     }
-    
-    func register(name: String, lastName: String, userName: String, email: String, password: String) -> AnyPublisher<Bool, RepositoryError> {
-        service
-            .register(name: name, lastName: lastName, userName: userName, email: email, password: password)
-            .handle(by: DefaultRequestHandler(at: "success"))
-            .eraseToAnyPublisher()
+
+    func register(name: String,
+                  lastName: String,
+                  userName: String,
+                  email: String,
+                  password: String,
+                  completion: @escaping (RegisterResult) -> Void) {
+        service.register(name: name,
+                         lastName: lastName,
+                         userName: userName,
+                         email: email,
+                         password: password) { result in
+            completion(result.mapToRepositoryResult(with: self.requestHandler))
+        }
     }
 }

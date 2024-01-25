@@ -8,6 +8,16 @@
 import Combine
 
 public protocol AuthRepositoryProtocol {
-    func login(userName: String, password: String) -> AnyPublisher<Bool, RepositoryError>
-    func register(name: String, lastName: String, userName: String, email: String, password: String) -> AnyPublisher<Bool, RepositoryError>
+    typealias LoginResult = Result<Bool, RepositoryError>
+    typealias RegisterResult = Result<Bool, RepositoryError>
+
+    func login(userName: String,
+               password: String,
+               completion: @escaping (LoginResult) -> Void)
+    func register(name: String,
+                  lastName: String,
+                  userName: String,
+                  email: String,
+                  password: String,
+                  completion: @escaping (RegisterResult) -> Void)
 }

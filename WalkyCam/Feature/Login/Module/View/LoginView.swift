@@ -47,6 +47,7 @@ struct LoginView<ViewModel: LoginViewModelProtocol, Router: LoginRouterProtocol>
                 WCUIButton(title: L10n.LoginView.Button.login,
                            descriptor: OrangeButtonStyleDescriptor(),
                            action: handleLogin)
+                .disabled(!viewModel.validateFields())
                 WCUIButton(title: L10n.LoginView.Button.signup,
                            descriptor: BlackButtonStyleDescriptor(),
                            action: handleSignUp)
@@ -88,7 +89,12 @@ struct LoginView<ViewModel: LoginViewModelProtocol, Router: LoginRouterProtocol>
     private func handleForgotPassword() {}
 
     private func handleLogin() {
-        router.routeToHome()
+        viewModel.loginUserAsyncData = .loading
+        Task {
+            await viewModel.loginUser()
+            guard case .loaded = viewModel.loginUserAsyncData else { return }
+            router.routeToHome()
+        }
     }
 
     private func handleSignUp() {
@@ -99,7 +105,11 @@ struct LoginView<ViewModel: LoginViewModelProtocol, Router: LoginRouterProtocol>
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView(
-            viewModel: LoginViewModel(),
+            viewModel: LoginViewModel(
+                interactor: LoginInteractor(
+                    useCases: .init(login: .empty)
+                )
+            ),
             router: LoginRouter(isPresented: .constant(false))
         )
     }

@@ -167,6 +167,10 @@
 		EA282ED62AEB532800B90920 /* RecentFunctionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282ED52AEB532800B90920 /* RecentFunctionsCell.swift */; };
 		EA282EDA2AEB56B800B90920 /* FunctionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282ED92AEB56B800B90920 /* FunctionData.swift */; };
 		EA282EDD2AEB572700B90920 /* FunctionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282EDC2AEB572700B90920 /* FunctionCell.swift */; };
+		EA2F93F52B62C99300E1C146 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F93F42B62C99300E1C146 /* LoginUseCase.swift */; };
+		EA2F93F72B62C9C800E1C146 /* LoginInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F93F62B62C9C800E1C146 /* LoginInput.swift */; };
+		EA2F93FA2B62CECD00E1C146 /* LoginInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F93F92B62CECD00E1C146 /* LoginInteractorProtocol.swift */; };
+		EA2F93FC2B62CED700E1C146 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F93FB2B62CED700E1C146 /* LoginInteractor.swift */; };
 		EA4164EE2AE4B6F7008CE66A /* ComparePlansRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164DA2AE4B6F6008CE66A /* ComparePlansRoute.swift */; };
 		EA4164EF2AE4B6F7008CE66A /* ComparePlansAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164DC2AE4B6F6008CE66A /* ComparePlansAssembler.swift */; };
 		EA4164F02AE4B6F7008CE66A /* ComparePlansAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164DD2AE4B6F6008CE66A /* ComparePlansAssemblerProtocol.swift */; };
@@ -596,6 +600,10 @@
 		EA282ED52AEB532800B90920 /* RecentFunctionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentFunctionsCell.swift; sourceTree = "<group>"; };
 		EA282ED92AEB56B800B90920 /* FunctionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionData.swift; sourceTree = "<group>"; };
 		EA282EDC2AEB572700B90920 /* FunctionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionCell.swift; sourceTree = "<group>"; };
+		EA2F93F42B62C99300E1C146 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		EA2F93F62B62C9C800E1C146 /* LoginInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInput.swift; sourceTree = "<group>"; };
+		EA2F93F92B62CECD00E1C146 /* LoginInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorProtocol.swift; sourceTree = "<group>"; };
+		EA2F93FB2B62CED700E1C146 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		EA4164DA2AE4B6F6008CE66A /* ComparePlansRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansRoute.swift; sourceTree = "<group>"; };
 		EA4164DC2AE4B6F6008CE66A /* ComparePlansAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansAssembler.swift; sourceTree = "<group>"; };
 		EA4164DD2AE4B6F6008CE66A /* ComparePlansAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansAssemblerProtocol.swift; sourceTree = "<group>"; };
@@ -1530,6 +1538,8 @@
 		EA15B57B2AD6E42800C03407 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				EA2F93F22B62C98800E1C146 /* Model */,
+				EA2F93F32B62C98800E1C146 /* UseCase */,
 				EA15B58F2AD6E44D00C03407 /* Configuration */,
 				EA15B5822AD6E44D00C03407 /* Module */,
 			);
@@ -1539,6 +1549,7 @@
 		EA15B5822AD6E44D00C03407 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				EA2F93F82B62CEBF00E1C146 /* Interactor */,
 				EA15B5832AD6E44D00C03407 /* ViewModel */,
 				EA15B5872AD6E44D00C03407 /* View */,
 				EA15B58C2AD6E44D00C03407 /* Router */,
@@ -2196,6 +2207,33 @@
 				EA172AD82AF0335400EB1514 /* AdvertisementCard.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		EA2F93F22B62C98800E1C146 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA2F93F62B62C9C800E1C146 /* LoginInput.swift */,
+			);
+			name = Model;
+			path = Domain/Model;
+			sourceTree = "<group>";
+		};
+		EA2F93F32B62C98800E1C146 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				EA2F93F42B62C99300E1C146 /* LoginUseCase.swift */,
+			);
+			name = UseCase;
+			path = Domain/UseCase;
+			sourceTree = "<group>";
+		};
+		EA2F93F82B62CEBF00E1C146 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA2F93F92B62CECD00E1C146 /* LoginInteractorProtocol.swift */,
+				EA2F93FB2B62CED700E1C146 /* LoginInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		EA4164D12AE4B6D3008CE66A /* ComparePlans */ = {
@@ -4420,6 +4458,7 @@
 				EA50A08A2B0BC77F0042B238 /* PlansPagesRouterProtocol.swift in Sources */,
 				EA4164F72AE4B6F7008CE66A /* ComparePlansRouter.swift in Sources */,
 				EA5E1D712AD7167300738A8F /* LinkButtonStyle.swift in Sources */,
+				EA2F93FA2B62CECD00E1C146 /* LoginInteractorProtocol.swift in Sources */,
 				56A552582B2F6E3D006B1B17 /* StreetCamMenuViewModel.swift in Sources */,
 				EA910F952ADA06F500584B98 /* RegistrationRouterProtocol.swift in Sources */,
 				EA282E542AE952F700B90920 /* ProfileModel.swift in Sources */,
@@ -4481,6 +4520,7 @@
 				EA1FD1BE2B1E932F000E583D /* VideoCallRoomRouter.swift in Sources */,
 				56A5525C2B2F6E3D006B1B17 /* StreetCamMenuInteractor.swift in Sources */,
 				EA6083B32B01D9E100295069 /* GalleryAssembler.swift in Sources */,
+				EA2F93FC2B62CED700E1C146 /* LoginInteractor.swift in Sources */,
 				EA1FD1BD2B1E932F000E583D /* VideoCallRoomInteractorProtocol.swift in Sources */,
 				EA910FF32ADCBCC000584B98 /* MenuItemModel.swift in Sources */,
 				EA7219942B05612900BE2D93 /* WalkyBotRoute.swift in Sources */,
@@ -4605,6 +4645,7 @@
 				EA0E40942AF69771002B7437 /* CashWalletOnboardingAssemblerProtocol.swift in Sources */,
 				EA5E1D6F2AD7164E00738A8F /* MainButtonStyle.swift in Sources */,
 				EA5E1D9E2AD8A3DA00738A8F /* Strings.swift in Sources */,
+				EA2F93F52B62C99300E1C146 /* LoginUseCase.swift in Sources */,
 				EA9110292ADDB03300584B98 /* AsyncImageView.swift in Sources */,
 				EA282ED22AEB531100B90920 /* FunctionsRoute.swift in Sources */,
 				EA0E40C12AF70E86002B7437 /* CashWalletRouter.swift in Sources */,
@@ -4713,6 +4754,7 @@
 				EA4165472AE706C6008CE66A /* NotificationsRouterProtocol.swift in Sources */,
 				EA172AFA2AF06BDE00EB1514 /* ConfirmMailViewModel.swift in Sources */,
 				EA4165462AE706C6008CE66A /* NotificationsRouter.swift in Sources */,
+				EA2F93F72B62C9C800E1C146 /* LoginInput.swift in Sources */,
 				56FEECEF2B5C802C003FA686 /* SearchWalkyCammerRoute.swift in Sources */,
 				EA0E40BE2AF70E86002B7437 /* CashWalletInteractorProtocol.swift in Sources */,
 				56FEECF32B5C802C003FA686 /* SearchWalkyCammerViewModel.swift in Sources */,

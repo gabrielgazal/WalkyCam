@@ -15,6 +15,7 @@ struct WalkyCamApp: App {
     @State var isPresented = false
 
     init() {
+        appDelegate.registerDependencies()
         appNavigator.configure(isUserAlreadyLoggedIn: false)
     }
 

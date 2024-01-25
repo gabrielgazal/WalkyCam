@@ -1,4 +1,5 @@
 import SwiftUI
+import Networking
 
 final class LoginAssembler: LoginAssemblerProtocol {
     func resolveView(
@@ -7,7 +8,15 @@ final class LoginAssembler: LoginAssemblerProtocol {
 
         let router = LoginRouter(isPresented: route.isPresented)
 
-        let viewModel = LoginViewModel()
+        let repository = route.retailRepository.resolve(AuthRepositoryProtocol.self)
+
+        let interactor = LoginInteractor(
+            useCases: .init(
+                login: .static(true)
+            )
+        )
+        
+        let viewModel = LoginViewModel(interactor: interactor)
         let view = LoginView(viewModel: viewModel, router: router)
 
         return view

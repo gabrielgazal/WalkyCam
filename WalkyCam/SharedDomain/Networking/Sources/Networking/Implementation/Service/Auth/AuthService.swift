@@ -25,16 +25,25 @@ final class AuthService: AuthServiceProtocol {
     }
     
     // MARK: - Public API
-    
-    public func login(userName: String, password: String) -> AnyPublisher<Response, MoyaError> {
-        provider
-            .requestPublisher(.login(userName: userName, password: password))
-            .eraseToAnyPublisher()
+
+    func login(userName: String,
+               password: String,
+               completion: @escaping Completion) {
+        provider.request(.login(userName: userName, password: password),
+                         completion: completion)
     }
-    
-    func register(name: String, lastName: String, userName: String, email: String, password: String) -> AnyPublisher<Response, MoyaError> {
-        provider
-            .requestPublisher(.register(name: name, lastName: lastName, userName: userName, email: email, password: password))
-            .eraseToAnyPublisher()
+
+    func register(name: String,
+                  lastName: String,
+                  userName: String,
+                  email: String,
+                  password: String,
+                  completion: @escaping Completion) {
+        provider.request(.register(name: name,
+                                   lastName: lastName,
+                                   userName: userName,
+                                   email: email,
+                                   password: password),
+                         completion: completion)
     }
 }
