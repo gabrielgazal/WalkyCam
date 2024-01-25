@@ -718,7 +718,6 @@
 		EA7219A32B05863C00BE2D93 /* FavoriteItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteItemView.swift; sourceTree = "<group>"; };
 		EA82DB4F2ADF4DBB00E6B39A /* HomeSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionView.swift; sourceTree = "<group>"; };
 		EA82DB522ADF605500E6B39A /* ReminderCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCardView.swift; sourceTree = "<group>"; };
-		EA890A242B61EBFB00FC369B /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Networking; sourceTree = "<group>"; };
 		EA890A282B61EDE500FC369B /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
 		EA910F1B2AD8AA6400584B98 /* Mulish-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Black.ttf"; sourceTree = "<group>"; };
 		EA910F1D2AD8AA8400584B98 /* Mulish-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Light.ttf"; sourceTree = "<group>"; };
@@ -918,7 +917,6 @@
 		5637A8092AD5DD71000586DF = {
 			isa = PBXGroup;
 			children = (
-				EA890A232B61EBFB00FC369B /* Packages */,
 				EA15B5BF2AD709B000C03407 /* WalkyCam-Info.plist */,
 				EA15B5A52AD7067400C03407 /* Infrastructure */,
 				EA15B57A2AD6E41400C03407 /* Feature */,
@@ -3259,14 +3257,6 @@
 				EA82DB522ADF605500E6B39A /* ReminderCardView.swift */,
 			);
 			path = Reminder;
-			sourceTree = "<group>";
-		};
-		EA890A232B61EBFB00FC369B /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				EA890A242B61EBFB00FC369B /* Networking */,
-			);
-			name = Packages;
 			sourceTree = "<group>";
 		};
 		EA890A272B61EDCE00FC369B /* DependencyStore */ = {

@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:SharedDomain/Networking">
+   </FileRef>
+   <FileRef
       location = "group:WalkyCam.xcodeproj">
    </FileRef>
    <FileRef
