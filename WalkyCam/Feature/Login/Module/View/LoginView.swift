@@ -48,6 +48,7 @@ struct LoginView<ViewModel: LoginViewModelProtocol, Router: LoginRouterProtocol>
                            descriptor: OrangeButtonStyleDescriptor(),
                            action: handleLogin)
                 .disabled(!viewModel.validateFields())
+                .loading(viewModel.loginUserAsyncData == .loading)
                 WCUIButton(title: L10n.LoginView.Button.signup,
                            descriptor: BlackButtonStyleDescriptor(),
                            action: handleSignUp)

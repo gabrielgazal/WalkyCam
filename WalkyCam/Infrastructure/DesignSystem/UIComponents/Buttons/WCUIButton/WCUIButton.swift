@@ -7,7 +7,26 @@
 
 import SwiftUI
 
+private struct Loading: EnvironmentKey {
+    static let defaultValue = false
+}
+
+public extension EnvironmentValues {
+    var isLoading: Bool {
+        get { self[Loading.self] }
+        set { self[Loading.self] = newValue }
+    }
+}
+
+public extension View {
+    func loading(_ bool: Bool = true) -> some View {
+        environment(\.isLoading, bool)
+    }
+}
+
 public struct WCUIButton: View {
+
+    @Environment(\.isLoading) var isLoading
 
     private let title: String?
     private let leftIcon: String?
@@ -36,20 +55,25 @@ public struct WCUIButton: View {
         Button(
             action: action,
             label: {
-                HStack(spacing: 8) {
-                    if let leftIcon = leftIcon {
-                        Image(leftIcon)
-                    }
-                    if let title = title {
-                        Text(title)
-                    }
-                    if let rightIcon = rightIcon {
-                        Image(rightIcon)
+                if isLoading {
+                    ProgressView()
+                        .frame(width: 30, height: 30)
+                        .progressViewStyle(CircularProgressViewStyle(tint: Color.blanco))
+                } else {
+                    HStack(spacing: 8) {
+                        if let leftIcon = leftIcon {
+                            Image(leftIcon)
+                        }
+                        if let title = title {
+                            Text(title)
+                        }
+                        if let rightIcon = rightIcon {
+                            Image(rightIcon)
+                        }
                     }
                 }
-        }).style(buttonType)
+            }).style(buttonType)
     }
-
     private var buttonType: MainButtonStyle.ButtonType {
         switch style {
         case .standard:
