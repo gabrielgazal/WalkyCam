@@ -1,6 +1,7 @@
 import SwiftUI
 
 protocol FunctionsRouterProtocol: Router {
-    func routeToSomething()
+    func routeToVideoCall()
+    func routeToWalkCamer()
+    func routeToARHands()
 }
-

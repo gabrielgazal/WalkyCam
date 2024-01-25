@@ -35,6 +35,17 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
                             HStack(spacing: Tokens.Size.Spacing.regular) {
                                 ForEach(viewModel.basicFunctions, id: \.self) { item in
                                     FunctionCell(title: item.title, icon: item.icon, lastItem: false)
+                                        .onTapGesture {
+                                            switch item.title {
+                                            case "Video Call":
+                                                router.routeToVideoCall()
+                                            case "Street Cam":
+                                                router.routeToWalkCamer()
+                                            case "AR Hands":
+                                                router.routeToARHands()
+                                            default: break
+                                            }
+                                        }
                                 }
                             }
                         }
@@ -75,6 +86,7 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
             }
             .padding([.top], Tokens.Size.Spacing.large)
         }
+        .navigation(router)
     }
 }
 

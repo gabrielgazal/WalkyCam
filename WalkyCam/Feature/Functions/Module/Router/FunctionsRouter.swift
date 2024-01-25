@@ -4,9 +4,23 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
 
     // MARK: - Public API
 
-    #warning("Example function. Rename or remove it")
-    func routeToSomething() { 
+    func routeToVideoCall() {
+        navigateTo(
+            VideoCallRoute(isPresented: isNavigating)
+        )
+    }
 
+    func routeToWalkCamer() {
+        navigateTo(
+            WalkyCamerOnboardingRoute(isPresented: isNavigating)
+        )
+    }
+
+    func routeToARHands() {
+        navigateTo(
+            WebRoute(isPreseted: isNavigating,
+                     webViewURL: "https://vcprojectj4g.com/static/main/")
+        )
     }
 }
 
