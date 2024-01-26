@@ -22,14 +22,16 @@ final class LoginViewModel: LoginViewModelProtocol {
         return !userName.isEmpty && !password.isEmpty
     }
 
-    @MainActor func loginUser() async {
+    @MainActor func loginUser(onSuccess: (() -> Void)?, onFailure: (() -> Void)?) async {
         loginUserAsyncData = .loading
         do {
             let loginOutput = try await interactor.login(with: .init(userName: userName,
                                                            password: password))
             loginUserAsyncData = .loaded(loginOutput)
+            onSuccess?()
         } catch {
             loginUserAsyncData = .failed(GenericError())
+            onFailure?()
         }
     }
 }

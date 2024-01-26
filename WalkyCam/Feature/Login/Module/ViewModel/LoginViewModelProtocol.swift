@@ -7,5 +7,5 @@ protocol LoginViewModelProtocol: ViewModelProtocol {
     var loginUserAsyncData: AsyncData<Bool, ErrorProtocol> { get set }
 
     func validateFields() -> Bool
-    func loginUser() async
+    func loginUser(onSuccess: (() -> Void)?, onFailure: (() -> Void)?) async
 }
