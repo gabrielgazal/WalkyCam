@@ -5,7 +5,7 @@ final class HomeInteractor: HomeInteractorProtocol {
     // MARK: - Inner Types
 
     struct UseCases {
-        
+        let fetchUserHeaderDataUseCase: FetchUserHeaderDataUseCase
     }
 
     // MARK: - Dependencies
@@ -15,14 +15,22 @@ final class HomeInteractor: HomeInteractorProtocol {
 
     // MARK: - Initialization
 
-    init(useCases: UseCases = UseCases()) {
+    init(useCases: UseCases) {
         self.useCases = useCases
     }
 
     // MARK: - Public API
 
-    #warning("Example function. Rename or remove it")
-    func someFunction() {
-
+    func fetchProfileData() async -> ProfileData {
+        return await withCheckedContinuation { continuation in
+            useCases.fetchUserHeaderDataUseCase()
+                .sink(
+                    receiveCompletion: { _ in },
+                    receiveValue: { data in
+                        continuation.resume(returning: data)
+                    }
+                )
+                .store(in: &bag)
+        }
     }
 }

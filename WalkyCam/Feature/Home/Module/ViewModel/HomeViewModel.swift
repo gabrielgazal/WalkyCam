@@ -10,7 +10,7 @@ final class HomeViewModel: HomeViewModelProtocol {
 
     // MARK: - Initialization
 
-    init(interactor: HomeInteractorProtocol = HomeInteractor()) {
+    init(interactor: HomeInteractorProtocol) {
         self.interactor = interactor
         self.updateData()
     }
@@ -18,7 +18,9 @@ final class HomeViewModel: HomeViewModelProtocol {
     // MARK: - Private Methods
 
     private func updateData() {
-        fetchProfileData()
+        Task {
+            await fetchProfileData()
+        }
         fetchRecentFunctions()
         fetchReminders()
         fetchNews()
@@ -26,8 +28,9 @@ final class HomeViewModel: HomeViewModelProtocol {
         fetchFiles()
     }
 
-    private func fetchProfileData() {
-        homeData.profileInfo = .init(name: "Andrea",
+    @MainActor private func fetchProfileData() async {
+        let user = await interactor.fetchProfileData()
+        homeData.profileInfo = .init(name: user.name,
                                      imageURL: .imageMock)
     }
 

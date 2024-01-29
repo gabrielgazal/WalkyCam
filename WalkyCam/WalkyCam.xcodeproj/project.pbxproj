@@ -296,6 +296,15 @@
 		EA82DB532ADF605500E6B39A /* ReminderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82DB522ADF605500E6B39A /* ReminderCardView.swift */; };
 		EA890A262B61ECFB00FC369B /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = EA890A252B61ECFB00FC369B /* Networking */; };
 		EA890A292B61EDE500FC369B /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA890A282B61EDE500FC369B /* Dependency.swift */; };
+		EA8EF8D02B67E12400136D1F /* UserSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8EF8CF2B67E12400136D1F /* UserSessionProtocol.swift */; };
+		EA8EF8D32B67E14300136D1F /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8EF8D22B67E14300136D1F /* UserSession.swift */; };
+		EA8EF8DA2B67E24400136D1F /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8EF8D52B67E24400136D1F /* KeychainError.swift */; };
+		EA8EF8DB2B67E24400136D1F /* KeychainProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8EF8D62B67E24400136D1F /* KeychainProtocol.swift */; };
+		EA8EF8DC2B67E24400136D1F /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8EF8D72B67E24400136D1F /* Keychain.swift */; };
+		EA8EF8DD2B67E24400136D1F /* KeychainPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8EF8D82B67E24400136D1F /* KeychainPersistence.swift */; };
+		EA8EF8DE2B67E24400136D1F /* KeychainPersistenceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8EF8D92B67E24400136D1F /* KeychainPersistenceProtocol.swift */; };
+		EA8EF8E92B67E71B00136D1F /* UserSessionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8EF8E82B67E71B00136D1F /* UserSessionData.swift */; };
+		EA8EF8EC2B67E8B800136D1F /* FetchUserHeaderDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8EF8EB2B67E8B800136D1F /* FetchUserHeaderDataUseCase.swift */; };
 		EA910F1C2AD8AA6400584B98 /* Mulish-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA910F1B2AD8AA6400584B98 /* Mulish-Black.ttf */; };
 		EA910F232AD8AA8500584B98 /* Mulish-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA910F1D2AD8AA8400584B98 /* Mulish-Light.ttf */; };
 		EA910F242AD8AA8500584B98 /* Mulish-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA910F1E2AD8AA8400584B98 /* Mulish-ExtraLight.ttf */; };
@@ -729,6 +738,15 @@
 		EA82DB4F2ADF4DBB00E6B39A /* HomeSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionView.swift; sourceTree = "<group>"; };
 		EA82DB522ADF605500E6B39A /* ReminderCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCardView.swift; sourceTree = "<group>"; };
 		EA890A282B61EDE500FC369B /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
+		EA8EF8CF2B67E12400136D1F /* UserSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionProtocol.swift; sourceTree = "<group>"; };
+		EA8EF8D22B67E14300136D1F /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		EA8EF8D52B67E24400136D1F /* KeychainError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainError.swift; sourceTree = "<group>"; };
+		EA8EF8D62B67E24400136D1F /* KeychainProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainProtocol.swift; sourceTree = "<group>"; };
+		EA8EF8D72B67E24400136D1F /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		EA8EF8D82B67E24400136D1F /* KeychainPersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPersistence.swift; sourceTree = "<group>"; };
+		EA8EF8D92B67E24400136D1F /* KeychainPersistenceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPersistenceProtocol.swift; sourceTree = "<group>"; };
+		EA8EF8E82B67E71B00136D1F /* UserSessionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionData.swift; sourceTree = "<group>"; };
+		EA8EF8EB2B67E8B800136D1F /* FetchUserHeaderDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUserHeaderDataUseCase.swift; sourceTree = "<group>"; };
 		EA910F1B2AD8AA6400584B98 /* Mulish-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Black.ttf"; sourceTree = "<group>"; };
 		EA910F1D2AD8AA8400584B98 /* Mulish-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Light.ttf"; sourceTree = "<group>"; };
 		EA910F1E2AD8AA8400584B98 /* Mulish-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-ExtraLight.ttf"; sourceTree = "<group>"; };
@@ -1614,6 +1632,7 @@
 		EA15B5A52AD7067400C03407 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				EA8EF8CE2B67E11600136D1F /* Persistence */,
 				EA890A272B61EDCE00FC369B /* DependencyStore */,
 				EA1FD19A2B1E8F83000E583D /* Jitsi */,
 				EA5E1D652AD70B8100738A8F /* DesignSystem */,
@@ -3308,6 +3327,53 @@
 			path = DependencyStore;
 			sourceTree = "<group>";
 		};
+		EA8EF8CE2B67E11600136D1F /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				EA8EF8D42B67E24400136D1F /* Keychain */,
+				EA8EF8D12B67E13700136D1F /* UserSession */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		EA8EF8D12B67E13700136D1F /* UserSession */ = {
+			isa = PBXGroup;
+			children = (
+				EA8EF8E72B67E70F00136D1F /* Model */,
+				EA8EF8CF2B67E12400136D1F /* UserSessionProtocol.swift */,
+				EA8EF8D22B67E14300136D1F /* UserSession.swift */,
+			);
+			path = UserSession;
+			sourceTree = "<group>";
+		};
+		EA8EF8D42B67E24400136D1F /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				EA8EF8D52B67E24400136D1F /* KeychainError.swift */,
+				EA8EF8D62B67E24400136D1F /* KeychainProtocol.swift */,
+				EA8EF8D72B67E24400136D1F /* Keychain.swift */,
+				EA8EF8D82B67E24400136D1F /* KeychainPersistence.swift */,
+				EA8EF8D92B67E24400136D1F /* KeychainPersistenceProtocol.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		EA8EF8E72B67E70F00136D1F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA8EF8E82B67E71B00136D1F /* UserSessionData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA8EF8EA2B67E85500136D1F /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				EA8EF8EB2B67E8B800136D1F /* FetchUserHeaderDataUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
 		EA910F2F2AD8B53000584B98 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -3790,6 +3856,7 @@
 		EA9110102ADDADE100584B98 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				EA8EF8EA2B67E85500136D1F /* UseCase */,
 				EA9110112ADDADE100584B98 /* Model */,
 			);
 			path = Domain;
@@ -4493,6 +4560,7 @@
 				EA172AF92AF06BDE00EB1514 /* ConfirmMailModel.swift in Sources */,
 				EAD048692AE22C530096E6AB /* RegistrationPlansViewModelProtocol.swift in Sources */,
 				EAA1E63B2AFB03FD00A42174 /* CashTabRoute.swift in Sources */,
+				EA8EF8DE2B67E24400136D1F /* KeychainPersistenceProtocol.swift in Sources */,
 				EA910FF02ADCBCC000584B98 /* MenuRoute.swift in Sources */,
 				EA6083452AFD58A900295069 /* CryptoTabRouter.swift in Sources */,
 				EADB5CA92B190819005863E1 /* VideoCallView.swift in Sources */,
@@ -4554,6 +4622,7 @@
 				EA60836D2B01981800295069 /* CryptoDetailsAssembler.swift in Sources */,
 				EA72199D2B05612900BE2D93 /* WalkyBotRouterProtocol.swift in Sources */,
 				EA172B262AF06EF600EB1514 /* StartupRouter.swift in Sources */,
+				EA8EF8D32B67E14300136D1F /* UserSession.swift in Sources */,
 				EA172B1E2AF06EF600EB1514 /* StartupRoute.swift in Sources */,
 				EA15B59B2AD6E44D00C03407 /* LoginView.swift in Sources */,
 				EA6083692B01981800295069 /* CryptoDetailsRouterProtocol.swift in Sources */,
@@ -4567,6 +4636,7 @@
 				EA6083902B01CD0A00295069 /* ShopTabView.swift in Sources */,
 				EA91102B2ADDB05300584B98 /* ImageLoader.swift in Sources */,
 				EA9110312ADDB95C00584B98 /* ImageCache.swift in Sources */,
+				EA8EF8DA2B67E24400136D1F /* KeychainError.swift in Sources */,
 				EA910FC82ADC495700584B98 /* TabBarViewModelProtocol.swift in Sources */,
 				EA910F8E2ADA06F500584B98 /* RegistrationViewModel.swift in Sources */,
 				EA6083462AFD58A900295069 /* CryptoTabRouterProtocol.swift in Sources */,
@@ -4582,6 +4652,7 @@
 				EAD048722AE22C530096E6AB /* RegistrationPlansAssembler.swift in Sources */,
 				EA172AFD2AF06BDE00EB1514 /* ConfirmMailInteractorProtocol.swift in Sources */,
 				EA282EDD2AEB572700B90920 /* FunctionCell.swift in Sources */,
+				EA8EF8DD2B67E24400136D1F /* KeychainPersistence.swift in Sources */,
 				EA910F6D2ADA03D600584B98 /* String+Extension.swift in Sources */,
 				561FC8C02B5C67FB005B6006 /* AsyncDataView.swift in Sources */,
 				EA910F692AD9B57400584B98 /* OnboardingPageView.swift in Sources */,
@@ -4624,6 +4695,7 @@
 				EA282E602AE9A10600B90920 /* ImageMock.swift in Sources */,
 				EA1FD1C22B1E932F000E583D /* VideoCallRoomAssembler.swift in Sources */,
 				56A552332B2F6135006B1B17 /* WalkyCamerOnboardingInteractorProtocol.swift in Sources */,
+				EA8EF8DB2B67E24400136D1F /* KeychainProtocol.swift in Sources */,
 				EA6083E02B01DBE000295069 /* GalleryPhotosRoute.swift in Sources */,
 				EA910FF22ADCBCC000584B98 /* MenuAssembler.swift in Sources */,
 				EA15B5B62AD7075600C03407 /* Router.swift in Sources */,
@@ -4699,6 +4771,7 @@
 				EA0E40C42AF70E86002B7437 /* CashWalletAssemblerProtocol.swift in Sources */,
 				EA60833E2AFD58A900295069 /* CryptoTabAssembler.swift in Sources */,
 				EADB5CAC2B190819005863E1 /* VideoCallRouterProtocol.swift in Sources */,
+				EA8EF8D02B67E12400136D1F /* UserSessionProtocol.swift in Sources */,
 				EAD048712AE22C530096E6AB /* RegistrationPlansRoute.swift in Sources */,
 				EA910F8D2ADA06F500584B98 /* RegistrationAssembler.swift in Sources */,
 				EA6083942B01CD0A00295069 /* ShopTabRouter.swift in Sources */,
@@ -4751,9 +4824,11 @@
 				EA6083B42B01D9E100295069 /* GalleryModel.swift in Sources */,
 				56FEECF42B5C802C003FA686 /* SearchWalkyCammerViewModelProtocol.swift in Sources */,
 				EA6083BB2B01D9E100295069 /* GalleryRouter.swift in Sources */,
+				EA8EF8EC2B67E8B800136D1F /* FetchUserHeaderDataUseCase.swift in Sources */,
 				EA9110222ADDADE100584B98 /* HomeRoute.swift in Sources */,
 				EA50A0892B0BC77F0042B238 /* PlansPagesInteractor.swift in Sources */,
 				EA0E40C02AF70E86002B7437 /* CashWalletRouterProtocol.swift in Sources */,
+				EA8EF8E92B67E71B00136D1F /* UserSessionData.swift in Sources */,
 				EA4165472AE706C6008CE66A /* NotificationsRouterProtocol.swift in Sources */,
 				EA172AFA2AF06BDE00EB1514 /* ConfirmMailViewModel.swift in Sources */,
 				EA4165462AE706C6008CE66A /* NotificationsRouter.swift in Sources */,
@@ -4781,6 +4856,7 @@
 				EA9110232ADDADE100584B98 /* HomeAssemblerProtocol.swift in Sources */,
 				56A552382B2F6168006B1B17 /* WalkyCamerOnboardingPageView.swift in Sources */,
 				EA15B5A22AD6E44D00C03407 /* LoginAssemblerProtocol.swift in Sources */,
+				EA8EF8DC2B67E24400136D1F /* Keychain.swift in Sources */,
 				EA282ECE2AEB531100B90920 /* FunctionsInteractor.swift in Sources */,
 				EA910F3C2AD982F300584B98 /* SecureTextInputView.swift in Sources */,
 				EA1FD1C02B1E932F000E583D /* VideoCallRoomRoute.swift in Sources */,

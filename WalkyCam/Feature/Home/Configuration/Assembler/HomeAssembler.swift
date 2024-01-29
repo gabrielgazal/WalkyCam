@@ -8,7 +8,9 @@ final class HomeAssembler: HomeAssemblerProtocol {
         let router = HomeRouter(isPresented: route.isPresented)
 
         let interactor = HomeInteractor(
-            useCases: .init()
+            useCases: .init(
+                fetchUserHeaderDataUseCase: .live()
+            )
         )
         let viewModel = HomeViewModel(interactor: interactor)
         let view = HomeView(viewModel: viewModel, router: router)

@@ -16,7 +16,7 @@ struct WalkyCamApp: App {
 
     init() {
         appDelegate.registerDependencies()
-        appNavigator.configure(isUserAlreadyLoggedIn: false)
+        appNavigator.configure(isUserAlreadyLoggedIn: UserSession().isLogged())
     }
 
     var body: some Scene {
