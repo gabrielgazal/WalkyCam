@@ -8,7 +8,7 @@ final class LoginViewModel: LoginViewModelProtocol {
     @Published var userName: String = ""
     @Published var password: String = ""
     @Published var rememberPassword: SelectorModel = .init(value: "Recordar contraseña")
-    @Published var loginUserAsyncData: AsyncData<Bool, ErrorProtocol> = .idle
+    @Published var loginUserAsyncData: AsyncData<LoginOutput, ErrorProtocol> = .idle
 
     // MARK: - Initialization
 

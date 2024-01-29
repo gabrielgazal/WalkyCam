@@ -28,7 +28,7 @@ final class LoginInteractor: LoginInteractorProtocol {
 
     // MARK: - Public API
 
-    func login(with input: LoginInput) async throws -> Bool {
+    func login(with input: LoginInput) async throws -> LoginOutput {
         return try await withCheckedThrowingContinuation { continuation in
             useCases.login(input)
                 .sink(

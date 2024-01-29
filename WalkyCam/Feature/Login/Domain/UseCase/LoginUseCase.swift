@@ -9,7 +9,7 @@ import Foundation
 import Networking
 import Combine
 
-typealias LoginUseCase = GenericUseCase<LoginInput, Bool>
+typealias LoginUseCase = GenericUseCase<LoginInput, LoginOutput>
 
 extension LoginUseCase {
 
@@ -24,7 +24,7 @@ extension LoginUseCase {
                             promise(.failure(error))
                         case let .success(response):
                             promise(
-                                .success(response)
+                                .success(mapResponseToResult(response))
                             )
                         }
                         return
@@ -33,5 +33,14 @@ extension LoginUseCase {
             }
             .eraseToAnyPublisher()
         }
+    }
+
+    private static func mapResponseToResult(_ data: Networking.UserData) -> LoginOutput {
+        return .init(id: data.id,
+                     userName: data.userName,
+                     name: data.name,
+                     lastName: data.lastName,
+                     email: data.email,
+                     address: data.address)
     }
 }
