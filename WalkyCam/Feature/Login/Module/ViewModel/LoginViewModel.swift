@@ -8,7 +8,7 @@ final class LoginViewModel: LoginViewModelProtocol {
     @Published var userName: String = ""
     @Published var password: String = ""
     @Published var rememberPassword: SelectorModel = .init(value: "Recordar contraseña")
-    @Published var loginUserAsyncData: AsyncData<Bool, ErrorProtocol> = .idle
+    @Published var loginUserAsyncData: AsyncData<LoginOutput, ErrorProtocol> = .idle
 
     // MARK: - Initialization
 
@@ -22,14 +22,16 @@ final class LoginViewModel: LoginViewModelProtocol {
         return !userName.isEmpty && !password.isEmpty
     }
 
-    @MainActor func loginUser() async {
+    @MainActor func loginUser(onSuccess: (() -> Void)?, onFailure: (() -> Void)?) async {
         loginUserAsyncData = .loading
         do {
             let loginOutput = try await interactor.login(with: .init(userName: userName,
                                                            password: password))
             loginUserAsyncData = .loaded(loginOutput)
+            onSuccess?()
         } catch {
             loginUserAsyncData = .failed(GenericError())
+            onFailure?()
         }
     }
 }

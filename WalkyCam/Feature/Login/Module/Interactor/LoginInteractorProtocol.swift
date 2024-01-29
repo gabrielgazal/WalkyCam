@@ -6,5 +6,5 @@
 //
 
 protocol LoginInteractorProtocol {
-    func login(with input: LoginInput) async throws -> Bool
+    func login(with input: LoginInput) async throws -> LoginOutput
 }

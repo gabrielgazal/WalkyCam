@@ -18,7 +18,7 @@ final class AuthRepository: AuthRepositoryProtocol {
 
     init(
         service: AuthServiceProtocol = AuthService(),
-        requestHandler: DefaultRequestHandler = DefaultRequestHandler()
+        requestHandler: DefaultRequestHandler = DefaultRequestHandler(at: "user")
     ) {
         self.service = service
         self.requestHandler = requestHandler

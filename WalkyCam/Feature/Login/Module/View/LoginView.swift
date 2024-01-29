@@ -92,9 +92,12 @@ struct LoginView<ViewModel: LoginViewModelProtocol, Router: LoginRouterProtocol>
     private func handleLogin() {
         viewModel.loginUserAsyncData = .loading
         Task {
-            await viewModel.loginUser()
-            guard case .loaded = viewModel.loginUserAsyncData else { return }
-            router.routeToHome()
+            await viewModel.loginUser(
+                onSuccess: {
+                    router.routeToHome()
+                },
+                onFailure: { print("Error")}
+            )
         }
     }
 

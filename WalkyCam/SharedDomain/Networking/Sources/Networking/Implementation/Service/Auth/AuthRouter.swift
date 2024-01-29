@@ -21,9 +21,9 @@ extension AuthRouter: TargetType {
     var path: String {
         switch self {
         case .login:
-            return "/login"
+            return "user/login"
         case .register:
-            return "/register"
+            return "user/register"
         }
     }
     

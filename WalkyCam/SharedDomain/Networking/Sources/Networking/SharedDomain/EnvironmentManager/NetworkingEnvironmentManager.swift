@@ -23,7 +23,7 @@ public final class NetworkingEnvironmentManager: NetworkingEnvironmentManagerPro
     public var baseURL: URL {
         switch currentEnvironment {
         case .production, .debug:
-            return URL(string: "https://www.walkycam.com/api/v1/user")!
+            return URL(string: "https://www.walkycam.com/api/v1/")!
         }
     }
 

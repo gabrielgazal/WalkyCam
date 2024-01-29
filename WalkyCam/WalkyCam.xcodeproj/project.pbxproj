@@ -171,6 +171,7 @@
 		EA2F93F72B62C9C800E1C146 /* LoginInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F93F62B62C9C800E1C146 /* LoginInput.swift */; };
 		EA2F93FA2B62CECD00E1C146 /* LoginInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F93F92B62CECD00E1C146 /* LoginInteractorProtocol.swift */; };
 		EA2F93FC2B62CED700E1C146 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F93FB2B62CED700E1C146 /* LoginInteractor.swift */; };
+		EA2F93FE2B65C20A00E1C146 /* LoginOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F93FD2B65C20A00E1C146 /* LoginOutput.swift */; };
 		EA4164EE2AE4B6F7008CE66A /* ComparePlansRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164DA2AE4B6F6008CE66A /* ComparePlansRoute.swift */; };
 		EA4164EF2AE4B6F7008CE66A /* ComparePlansAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164DC2AE4B6F6008CE66A /* ComparePlansAssembler.swift */; };
 		EA4164F02AE4B6F7008CE66A /* ComparePlansAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164DD2AE4B6F6008CE66A /* ComparePlansAssemblerProtocol.swift */; };
@@ -604,6 +605,7 @@
 		EA2F93F62B62C9C800E1C146 /* LoginInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInput.swift; sourceTree = "<group>"; };
 		EA2F93F92B62CECD00E1C146 /* LoginInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorProtocol.swift; sourceTree = "<group>"; };
 		EA2F93FB2B62CED700E1C146 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		EA2F93FD2B65C20A00E1C146 /* LoginOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOutput.swift; sourceTree = "<group>"; };
 		EA4164DA2AE4B6F6008CE66A /* ComparePlansRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansRoute.swift; sourceTree = "<group>"; };
 		EA4164DC2AE4B6F6008CE66A /* ComparePlansAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansAssembler.swift; sourceTree = "<group>"; };
 		EA4164DD2AE4B6F6008CE66A /* ComparePlansAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansAssemblerProtocol.swift; sourceTree = "<group>"; };
@@ -2213,6 +2215,7 @@
 			isa = PBXGroup;
 			children = (
 				EA2F93F62B62C9C800E1C146 /* LoginInput.swift */,
+				EA2F93FD2B65C20A00E1C146 /* LoginOutput.swift */,
 			);
 			name = Model;
 			path = Domain/Model;
@@ -4762,6 +4765,7 @@
 				EA15B5A12AD6E44D00C03407 /* LoginAssembler.swift in Sources */,
 				EADB5CA52B190819005863E1 /* VideoCallAssembler.swift in Sources */,
 				EA6083672B01981800295069 /* CryptoDetailsInteractorProtocol.swift in Sources */,
+				EA2F93FE2B65C20A00E1C146 /* LoginOutput.swift in Sources */,
 				EA1FD1C32B1E932F000E583D /* VideoCallRoomModel.swift in Sources */,
 				56A5525F2B2F6E3D006B1B17 /* StreetCamMenuModel.swift in Sources */,
 				EA60838F2B01CD0A00295069 /* ShopTabViewModel.swift in Sources */,
