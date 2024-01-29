@@ -12,6 +12,6 @@ class AppNavigator: AppNavigatorProtocol, ObservableObject {
     @Published var view: AnyView?
 
     func configure(isUserAlreadyLoggedIn: Bool) {
-        view = isUserAlreadyLoggedIn ? HomeRoute(isPresented: .constant(false)).build() : LoginRoute(isPresented: .constant(false)).build()
+        view = isUserAlreadyLoggedIn ? TabBarRoute(isPresented: .constant(false)).build() : LoginRoute(isPresented: .constant(false)).build()
     }
 }

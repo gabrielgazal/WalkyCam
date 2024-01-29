@@ -1,7 +1,11 @@
 import Foundation
 import SwiftUI
+import Networking
 
 struct RegistrationRoute: Route {
+
+    @Dependency var retailRepository: RepositoryResolving
+
     var isPresented: Binding<Bool>
     let assembler: RegistrationAssemblerProtocol
 

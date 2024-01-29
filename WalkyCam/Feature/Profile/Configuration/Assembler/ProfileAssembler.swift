@@ -8,7 +8,9 @@ final class ProfileAssembler: ProfileAssemblerProtocol {
         let router = ProfileRouter(state: RouterState(isPresented: route.isPresented))
 
         let interactor = ProfileInteractor(
-            useCases: .init()
+            useCases: .init(
+                fetchUserDataUseCase: .live()
+            )
         )
         let viewModel = ProfileViewModel(interactor: interactor)
         let view = ProfileView(viewModel: viewModel, router: router)

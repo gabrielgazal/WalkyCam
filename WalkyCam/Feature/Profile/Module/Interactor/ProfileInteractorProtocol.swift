@@ -1,3 +1,3 @@
 protocol ProfileInteractorProtocol {
-    func someFunction()
+    func fetchUserData() async -> UserSessionData
 }

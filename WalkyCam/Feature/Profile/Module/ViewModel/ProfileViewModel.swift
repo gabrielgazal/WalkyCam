@@ -8,22 +8,36 @@ final class ProfileViewModel: ProfileViewModelProtocol {
     @Published var temporaryName: String = ""
     @Published var temporaryLastname: String = ""
     @Published var temporaryBirthDate: String = ""
+
     private let interactor: ProfileInteractorProtocol
+    let userSession: UserSessionProtocol
 
     // MARK: - Initialization
 
-    init(interactor: ProfileInteractorProtocol = ProfileInteractor()) {
+    init(interactor: ProfileInteractorProtocol,
+         userSession: UserSessionProtocol = UserSession()) {
         self.interactor = interactor
-        fetchUserData()
+        self.userSession = userSession
+        Task {
+            await fetchUserData()
+        }
+    }
+
+    // MARK: - Public API
+
+    func logout() {
+        try? userSession.clear()
     }
 
     // MARK: - Private Functions
 
     // swiftlint:disable line_length
-    private func fetchUserData() {
-        var name = "Teste"
-        var lastName = "Teste"
-        var birthDate = "20/04/1999"
+    @MainActor private func fetchUserData() async {
+        let user = await interactor.fetchUserData()
+        
+        var name = user.name
+        var lastName = user.lastName
+        var birthDate = ""
         userData = .init(profileImage: .imageMock,
                          name: name,
                          lastName: lastName,
@@ -35,3 +49,4 @@ final class ProfileViewModel: ProfileViewModelProtocol {
 
     }
 }
+// swiftlint:enable line_length

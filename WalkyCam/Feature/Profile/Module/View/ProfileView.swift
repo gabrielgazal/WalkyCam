@@ -177,6 +177,7 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
     }
 
     private func handleLogoutAction() {
+        viewModel.logout()
         router.routeToLogin()
     }
 }
@@ -184,7 +185,11 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView(
-            viewModel: ProfileViewModel(),
+            viewModel: ProfileViewModel(
+                interactor: ProfileInteractor(
+                    useCases: .init(fetchUserDataUseCase: .empty)
+                )
+            ),
             router: ProfileRouter(state: RouterState(isPresented: .constant(false)))
         )
     }

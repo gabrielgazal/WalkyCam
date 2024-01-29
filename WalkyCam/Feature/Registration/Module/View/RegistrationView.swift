@@ -26,18 +26,23 @@ struct RegistrationView<ViewModel: RegistrationViewModelProtocol, Router: Regist
                 Text("Registro")
                     .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .semibold))
                     .foregroundColor(Color.blanco)
-                TextInputView(text: $viewModel.name,
-                              topDescriptionText: "Nombre Completo",
-                              placeholder: "Nombre Apellido")
-                TextInputView(text: $viewModel.username,
-                              topDescriptionText: "Usuario",
-                              placeholder: "Nombre Usuario")
-                SecureTextInputView(text: $viewModel.password,
-                                    placeholder: "Contraseña",
-                                    topDescriptionText: "Contraseña")
-                TextInputView(text: $viewModel.email,
-                              topDescriptionText: "Email",
-                              placeholder: "nombre@email.com")
+                Group {
+                    TextInputView(text: $viewModel.name,
+                                  topDescriptionText: "Nombre",
+                                  placeholder: "Nombre")
+                    TextInputView(text: $viewModel.lastName,
+                                  topDescriptionText: "Apellido",
+                                  placeholder: "Apellido")
+                    TextInputView(text: $viewModel.username,
+                                  topDescriptionText: "Usuario",
+                                  placeholder: "Nombre Usuario")
+                    SecureTextInputView(text: $viewModel.password,
+                                        placeholder: "Contraseña",
+                                        topDescriptionText: "Contraseña")
+                    TextInputView(text: $viewModel.email,
+                                  topDescriptionText: "Email",
+                                  placeholder: "nombre@email.com")
+                }
                 CheckBoxToggle(model: viewModel.acceptedTerms)
                     .onTapGesture {
                         viewModel.acceptedTerms.isSelected.toggle()
@@ -46,6 +51,7 @@ struct RegistrationView<ViewModel: RegistrationViewModelProtocol, Router: Regist
                            style: .standard,
                            descriptor: OrangeButtonStyleDescriptor(),
                            action: routeToConfirmMail)
+                .disabled(viewModel.isRegisterButtonDisabled())
                 LinkButton(title: "Ya tengo una cuenta",
                            color: .naranja,
                            action: handleAlreadyRegistered)
@@ -65,14 +71,25 @@ struct RegistrationView<ViewModel: RegistrationViewModelProtocol, Router: Regist
     }
 
     private func routeToConfirmMail() {
-        router.routeToConfirmMail()
+        Task {
+            await viewModel.registerUser(
+                onSuccess: {
+                    router.routeToConfirmMail()
+                },
+                onFailure: {})
+        }
     }
 }
 
 struct RegistrationView_Previews: PreviewProvider {
     static var previews: some View {
         RegistrationView(
-            viewModel: RegistrationViewModel(),
+            viewModel: RegistrationViewModel(
+                interactor: RegistrationInteractor(
+                    useCases: .init(registerUseCase: .empty
+                                   )
+                )
+            ),
             router: RegistrationRouter(state: RouterState(isPresented: .constant(false)))
         )
     }

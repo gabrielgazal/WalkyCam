@@ -9,7 +9,7 @@ import Combine
 
 public protocol AuthRepositoryProtocol {
     typealias LoginResult = Result<UserResponse, RepositoryError>
-    typealias RegisterResult = Result<Bool, RepositoryError>
+    typealias RegisterResult = Result<UserResponse, RepositoryError>
 
     func login(userName: String,
                password: String,

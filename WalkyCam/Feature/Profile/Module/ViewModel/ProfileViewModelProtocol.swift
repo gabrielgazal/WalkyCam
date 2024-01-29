@@ -6,4 +6,6 @@ protocol ProfileViewModelProtocol: ViewModelProtocol {
     var temporaryName: String { get set }
     var temporaryLastname: String { get set }
     var temporaryBirthDate: String { get set }
+
+    func logout()
 }

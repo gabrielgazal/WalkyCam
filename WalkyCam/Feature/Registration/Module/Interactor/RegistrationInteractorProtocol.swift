@@ -1,3 +1,3 @@
 protocol RegistrationInteractorProtocol {
-    func someFunction()
+    func register(with input: RegistrationInput) async throws -> RegistrationOutput
 }

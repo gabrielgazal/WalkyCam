@@ -1,4 +1,5 @@
 import SwiftUI
+import Networking
 
 final class RegistrationAssembler: RegistrationAssemblerProtocol {
     func resolveView(
@@ -7,8 +8,10 @@ final class RegistrationAssembler: RegistrationAssemblerProtocol {
 
         let router = RegistrationRouter(state: RouterState(isPresented: route.isPresented))
 
+        let repository = route.retailRepository.resolve(AuthRepositoryProtocol.self)
+
         let interactor = RegistrationInteractor(
-            useCases: .init()
+            useCases: .init(registerUseCase: .live(repository: repository))
         )
         let viewModel = RegistrationViewModel(interactor: interactor)
         let view = RegistrationView(viewModel: viewModel, router: router)
