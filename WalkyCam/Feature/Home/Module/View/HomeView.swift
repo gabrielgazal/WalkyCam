@@ -171,7 +171,7 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                                 radius: 10,
                                 x: 0,
                                 y: 2
-                           )
+                               )
                     }
                 }
                        .padding()
@@ -195,7 +195,13 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView(
-            viewModel: HomeViewModel(),
+            viewModel: HomeViewModel(
+                interactor: HomeInteractor(
+                    useCases: .init(
+                        fetchUserHeaderDataUseCase: .empty
+                    )
+                )
+            ),
             router: HomeRouter(isPresented: .constant(false))
         )
     }

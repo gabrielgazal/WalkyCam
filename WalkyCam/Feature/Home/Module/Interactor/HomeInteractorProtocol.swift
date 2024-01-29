@@ -1,3 +1,3 @@
 protocol HomeInteractorProtocol {
-    func someFunction()
+    func fetchProfileData() async -> ProfileData
 }

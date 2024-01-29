@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct UserData: Codable, Hashable {
+public struct UserResponse: Codable, Hashable {
     public let id: String
     public let userName: String
     public let name: String
