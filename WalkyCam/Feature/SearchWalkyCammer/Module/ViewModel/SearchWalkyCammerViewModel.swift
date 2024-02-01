@@ -1,13 +1,18 @@
 import SwiftUI
 import MapKit
+@_spi(Experimental) import MapboxMaps
 
 final class SearchWalkyCammerViewModel: SearchWalkyCammerViewModelProtocol {
 
     // MARK: - Dependencies
 
     private let interactor: SearchWalkyCammerInteractorProtocol
-    @Published var userLocation: AsyncData<CLLocationCoordinate2D, ErrorProtocol> = .idle
+    @Published var userLocation: Viewport = .idle
     @Published var locationText: String = ""
+    @Published var currentStep: Int = 1
+    @Published var walkyCammers: AsyncData<[CammerData], ErrorProtocol> = .idle
+    @Published var shouldDisplayCammerList: Bool = false
+    @State var coordinates: CLLocationCoordinate2D = .init()
 
     // MARK: - Initialization
 
@@ -18,31 +23,25 @@ final class SearchWalkyCammerViewModel: SearchWalkyCammerViewModelProtocol {
     // MARK: - Public API
 
     func getUserRegion() {
-        let locationManager = CLLocationManager()
-        let delegate = Coordinator(self)
-        locationManager.delegate = delegate
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.requestLocation()
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(locationText) { (placemarks, error) in
+            guard let placemarks = placemarks,
+                  let location = placemarks.first?.location?.coordinate else { return }
+            self.coordinates = location
+            self.getWalkyCammersOnLocation {
+                self.userLocation = Viewport.camera(center: location,
+                                            zoom: 15,
+                                            bearing: 0,
+                                            pitch: 0)
+                self.currentStep = 2
+            }
+        }
     }
-}
 
-class Coordinator: NSObject, CLLocationManagerDelegate {
-    var parent: SearchWalkyCammerViewModel
-    
-    init(_ parent: SearchWalkyCammerViewModel) {
-        self.parent = parent
+    private func getWalkyCammersOnLocation(completion: @escaping () -> Void) {
+        walkyCammers = .loading
+        let cammers = interactor.getCammersOnLocation(location: coordinates)
+        walkyCammers = .loaded(cammers)
+        completion()
     }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.first?.coordinate {
-            parent.userLocation = .loaded(location)
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        if let nsError = error as NSError? {
-            parent.userLocation = .failed(GenericError())
-        }
-    }
-    
 }

@@ -7,8 +7,6 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
     
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
-    @State private var center = CLLocationCoordinate2D(latitude: 12.3450,
-                                                       longitude: 12.34560)
     
     // MARK: - Initialization
     
@@ -24,13 +22,30 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
         VStack(alignment: .leading,
                spacing: 8) {
             headerView
-            mapView()
+            ZStack {
+                mapView()
+                    .isHidden(viewModel.shouldDisplayCammerList)
+                cammerListView()
+                    .isHidden(!viewModel.shouldDisplayCammerList)
+                VStack {
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        WCUIButton(title: footerButtonTitle(),
+                                   style: .standard,
+                                   descriptor: BlackButtonStyleDescriptor(),
+                                   action: {
+                            viewModel.shouldDisplayCammerList.toggle()
+                        })
+                        .frame(width: 150)
+                    }
+                    .isHidden(viewModel.walkyCammers.loadedValue == nil)
+                }
+                .padding(Tokens.Size.Spacing.large)
+            }
         }
                .padding([.top], Tokens.Size.Spacing.huge)
                .ignoresSafeArea()
-               .onAppear {
-                   viewModel.getUserRegion()
-               }
     }
     
     private var headerView: some View {
@@ -38,7 +53,7 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
                spacing: Tokens.Size.Spacing.regular) {
             HStack {
                 Spacer()
-                headerCounterView(1, 4)
+                headerCounterView(viewModel.currentStep, 4)
             }
             .padding(.horizontal, Tokens.Size.Spacing.large)
             HStack(alignment: .center,
@@ -86,12 +101,7 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
     private func mapView() -> some View {
         return ZStack {
             Map(
-                initialViewport: .camera(
-                    center: center,
-                    zoom: 5,
-                    bearing: 0,
-                    pitch: 0
-                )
+                viewport: $viewModel.userLocation
             )
             .disabled(true)
             VStack {
@@ -100,13 +110,17 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
                     accessory: Image(systemName: "magnifyingglass"),
                     leftIcon: Asset.Icons.location.swiftUIImage,
                     rightIcon: Asset.Icons.filter.swiftUIImage,
-                    placeholder: "Adrese",
-                    backgroundColor: .blanco
+                    placeholder: "Buscar WalkCamer",
+                    backgroundColor: .blanco,
+                    actions: .init(
+                        onCommitAction: {
+                            viewModel.getUserRegion()
+                        })
                 )
                 Spacer()
             }
             .padding(Tokens.Size.Spacing.large)
-
+            
             ZStack {
                 Circle()
                     .fill(Color.naranja.opacity(0.3))
@@ -119,8 +133,30 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
             }
             .padding(Tokens.Size.Spacing.huge)
         }
-        .frame(width: .infinity, height: .infinity)
         .ignoresSafeArea()
+    }
+    
+    private func cammerListView() -> some View {
+        AsyncDataView(viewModel.walkyCammers) { cammers in
+            ScrollView(showsIndicators: false) {
+                VStack(alignment: .leading,
+                       spacing: Tokens.Size.Spacing.regular) {
+                    ForEach(cammers, id: \.self) { cammer in
+                        CammerItemView(name: cammer.name,
+                                       photo: cammer.profileImage,
+                                       description: cammer.description,
+                                       stars: cammer.stars,
+                                       technologies: cammer.technologies)
+                    }
+                }
+                       .padding(.horizontal, Tokens.Size.Spacing.regular)
+            }
+        } errorAction: {}
+        
+    }
+    
+    private func footerButtonTitle() -> String {
+        viewModel.shouldDisplayCammerList ? "Ver Mapa" : "Ver Listado"
     }
 }
 
@@ -131,10 +167,4 @@ struct SearchWalkyCammerView_Previews: PreviewProvider {
             router: SearchWalkyCammerRouter(isPresented: .constant(false))
         )
     }
-}
-
-struct Pin: Identifiable {
-    let id = UUID()
-    let name: String
-    let coordinate: CLLocationCoordinate2D
 }
