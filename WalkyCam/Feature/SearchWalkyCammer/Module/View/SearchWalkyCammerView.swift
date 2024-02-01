@@ -1,5 +1,5 @@
 import SwiftUI
-import MapKit
+@_spi(Experimental) import MapboxMaps
 
 struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Router: SearchWalkyCammerRouterProtocol>: View {
     
@@ -7,11 +7,8 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
     
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
-    @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 12.3450,
-                                       longitude: 12.34560),
-        span: MKCoordinateSpan(latitudeDelta: 0.99,
-                               longitudeDelta: 0.99))
+    @State private var center = CLLocationCoordinate2D(latitude: 12.3450,
+                                                       longitude: 12.34560)
     
     // MARK: - Initialization
     
@@ -24,16 +21,16 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
     // MARK: - View Body
     
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            VStack(alignment: .leading,
-                   spacing: 8) {
-                headerView
-                mapView()
-            }
+        VStack(alignment: .leading,
+               spacing: 8) {
+            headerView
+            mapView()
         }
-        .onAppear {
-            viewModel.getUserRegion()
-        }
+               .padding([.top], Tokens.Size.Spacing.huge)
+               .ignoresSafeArea()
+               .onAppear {
+                   viewModel.getUserRegion()
+               }
     }
     
     private var headerView: some View {
@@ -88,7 +85,15 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
     
     private func mapView() -> some View {
         return ZStack {
-            Map(coordinateRegion: $region)
+            Map(
+                initialViewport: .camera(
+                    center: center,
+                    zoom: 5,
+                    bearing: 0,
+                    pitch: 0
+                )
+            )
+            .disabled(true)
             VStack {
                 TextInputView(
                     text: $viewModel.locationText,
@@ -114,7 +119,7 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
             }
             .padding(Tokens.Size.Spacing.huge)
         }
-        .frame(width: .infinity, height: 500)
+        .frame(width: .infinity, height: .infinity)
         .ignoresSafeArea()
     }
 }

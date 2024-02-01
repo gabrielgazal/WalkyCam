@@ -17,9 +17,18 @@ PODS:
   - libwebp/sharpyuv (1.3.2)
   - libwebp/webp (1.3.2):
     - libwebp/sharpyuv
+  - MapboxCommon (24.1.0)
+  - MapboxCoreMaps (11.1.0):
+    - MapboxCommon (~> 24.1)
+  - MapboxMaps (11.1.0):
+    - MapboxCommon (= 24.1.0)
+    - MapboxCoreMaps (= 11.1.0)
+    - Turf (= 2.7.0)
+  - Turf (2.7.0)
 
 DEPENDENCIES:
   - JitsiMeetSDK
+  - MapboxMaps (= 11.1.0)
 
 SPEC REPOS:
   trunk:
@@ -27,13 +36,21 @@ SPEC REPOS:
     - JitsiMeetSDK
     - JitsiWebRTC
     - libwebp
+    - MapboxCommon
+    - MapboxCoreMaps
+    - MapboxMaps
+    - Turf
 
 SPEC CHECKSUMS:
   Giphy: b6d5087521d251bb8c99cdc0eb07bbdf86d142d5
   JitsiMeetSDK: 1359af17913cf9fe2ef2437dd73b5372b5509833
   JitsiWebRTC: 80f62908fcf2a1160e0d14b584323fb6e6be630b
   libwebp: 1786c9f4ff8a279e4dac1e8f385004d5fc253009
+  MapboxCommon: b84c1cf2d76899e598e2495639e52ebbe2088eac
+  MapboxCoreMaps: eebe37ab62f99bf09436099850646c6b6450615d
+  MapboxMaps: a1ce80599606b43d136814cdb8a869acb776e4a9
+  Turf: 13d1a92d969ca0311bbc26e8356cca178ce95da2
 
-PODFILE CHECKSUM: c93aca87fac8a44ff470eec26994f2dd2521bdb1
+PODFILE CHECKSUM: 0609df21965fa6d95d5bd2d02d994718f9fd9800
 
 COCOAPODS: 1.14.3
