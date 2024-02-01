@@ -35,10 +35,12 @@ struct WCTopBarView: View {
 
     private func tabView(tab: WCTopBarItem) -> some View {
         HStack(spacing: Tokens.Size.Spacing.tiny) {
-            Image(tab.iconName)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 24, height: 24)
+            if !tab.iconName.isEmpty {
+                Image(tab.iconName)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 24, height: 24)
+            }
             Text(tab.title)
                 .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
                 .foregroundColor(fetchCurrentColor(tab))
@@ -76,9 +78,9 @@ struct IMCTopBarView_Previews: PreviewProvider {
         .init(iconName: Asset.Icons.cryptocurrency.name,
               title: "Crypto",
               destination: nil),
-        .init(iconName: Asset.Icons.shop.name,
-              title: "Shop",
-              destination: nil)
+//        .init(iconName: Asset.Icons.shop.name,
+//              title: "Shop",
+//              destination: nil)
     ]
 
     static var previews: some View {

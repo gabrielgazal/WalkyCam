@@ -34,10 +34,10 @@ struct LinkButton: View {
                     iconView
                     Text(title)
                         .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                        .foregroundColor(foregroundColor)
                 }
             })
         .linkButton()
-        .foregroundColor(foregroundColor)
     }
 
     private var foregroundColor: Color {

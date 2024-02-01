@@ -1,6 +1,6 @@
 import SwiftUI
 
 protocol SearchWalkyCammerRouterProtocol: Router {
-    func routeToSomething()
+    func routeToCamerDetail(_ data: CammerData)
 }
 

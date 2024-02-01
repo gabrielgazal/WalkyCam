@@ -7,7 +7,7 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
     
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
-    
+
     // MARK: - Initialization
     
     init(viewModel: ViewModel,
@@ -46,6 +46,7 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
         }
                .padding([.top], Tokens.Size.Spacing.huge)
                .ignoresSafeArea()
+               .navigation(router)
     }
     
     private var headerView: some View {
@@ -120,7 +121,7 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
                 Spacer()
             }
             .padding(Tokens.Size.Spacing.large)
-            
+
             ZStack {
                 Circle()
                     .fill(Color.naranja.opacity(0.3))
@@ -135,7 +136,7 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
         }
         .ignoresSafeArea()
     }
-    
+
     private func cammerListView() -> some View {
         AsyncDataView(viewModel.walkyCammers) { cammers in
             ScrollView(showsIndicators: false) {
@@ -147,14 +148,17 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
                                        description: cammer.description,
                                        stars: cammer.stars,
                                        technologies: cammer.technologies)
+                        .onTapGesture {
+                            router.routeToCamerDetail(cammer)
+                        }
                     }
                 }
                        .padding(.horizontal, Tokens.Size.Spacing.regular)
             }
         } errorAction: {}
-        
+
     }
-    
+
     private func footerButtonTitle() -> String {
         viewModel.shouldDisplayCammerList ? "Ver Mapa" : "Ver Listado"
     }
