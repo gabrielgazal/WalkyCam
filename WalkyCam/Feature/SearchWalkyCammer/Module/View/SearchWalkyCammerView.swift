@@ -8,8 +8,8 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
     @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 0,
-                                       longitude: 0),
+        center: CLLocationCoordinate2D(latitude: 12.3450,
+                                       longitude: 12.34560),
         span: MKCoordinateSpan(latitudeDelta: 0.99,
                                longitudeDelta: 0.99))
     
@@ -28,6 +28,7 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
             VStack(alignment: .leading,
                    spacing: 8) {
                 headerView
+                mapView()
             }
         }
         .onAppear {
@@ -50,7 +51,6 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
                 Spacer()
             }
                    .padding(.horizontal, Tokens.Size.Spacing.large)
-            mapView()
         }
     }
     
@@ -87,32 +87,34 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
     }
     
     private func mapView() -> some View {
-        var annotations: [Pin] = []
-        if let coordinate = viewModel.userLocation.loadedValue {
-            annotations.append(Pin(name: "Teste", coordinate: coordinate))
-        }
-        return Group {
-            Map(coordinateRegion: $region,
-                showsUserLocation: true,
-                userTrackingMode: .constant(.follow),
-                annotationItems: annotations) { pin in
-                MapAnnotation(coordinate: pin.coordinate) {
-                    ZStack {
-                        Circle()
-                            .fill(Color.naranja.opacity(0.3))
-                            .frame(width: 200, height: 200)
-                        Circle()
-                            .stroke(Color.naranja, lineWidth: 2)
-                            .frame(width: 200, height: 200)
-                        Asset.Icons.location.swiftUIImage
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 30, height: 30)
-                    }
-                }
+        return ZStack {
+            Map(coordinateRegion: $region)
+            VStack {
+                TextInputView(
+                    text: $viewModel.locationText,
+                    accessory: Image(systemName: "magnifyingglass"),
+                    leftIcon: Asset.Icons.location.swiftUIImage,
+                    rightIcon: Asset.Icons.filter.swiftUIImage,
+                    placeholder: "Adrese",
+                    backgroundColor: .blanco
+                )
+                Spacer()
             }
+            .padding(Tokens.Size.Spacing.large)
+
+            ZStack {
+                Circle()
+                    .fill(Color.naranja.opacity(0.3))
+                Circle()
+                    .stroke(Color.naranja, lineWidth: 2)
+                Asset.Icons.location.swiftUIImage
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 30, height: 30)
+            }
+            .padding(Tokens.Size.Spacing.huge)
         }
-        .frame(width: .infinity, height: 800)
+        .frame(width: .infinity, height: 500)
         .ignoresSafeArea()
     }
 }

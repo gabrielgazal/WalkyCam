@@ -7,6 +7,7 @@ final class SearchWalkyCammerViewModel: SearchWalkyCammerViewModelProtocol {
 
     private let interactor: SearchWalkyCammerInteractorProtocol
     @Published var userLocation: AsyncData<CLLocationCoordinate2D, ErrorProtocol> = .idle
+    @Published var locationText: String = ""
 
     // MARK: - Initialization
 

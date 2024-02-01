@@ -41,6 +41,8 @@ public struct TextInputView: View {
     @State private var isFocused: Bool = false
     @Binding private var text: String
     private var accessory: Image?
+    private var leftIcon: Image?
+    private var rightIcon: Image?
     private var placeholder: String
     private var topDescriptionText: String?
     private var actions: Actions
@@ -52,6 +54,8 @@ public struct TextInputView: View {
     public init(
         text: Binding<String>,
         accessory: Image? = nil,
+        leftIcon: Image? = nil,
+        rightIcon: Image? = nil,
         topDescriptionText: String? = nil,
         placeholder: String,
         keyboardType: UIKeyboardType = .default,
@@ -60,6 +64,8 @@ public struct TextInputView: View {
     ) {
         self._text = text
         self.accessory = accessory
+        self.leftIcon = leftIcon
+        self.rightIcon = rightIcon
         self.placeholder = placeholder
         self.topDescriptionText = topDescriptionText
         self.keyboardType = keyboardType
@@ -76,6 +82,7 @@ public struct TextInputView: View {
         ) {
             buildDescriptionText(topDescriptionText)
             HStack(spacing: Tokens.Size.Spacing.small) {
+                configureIcon(leftIcon)
                 ZStack(alignment: .leading) {
                     Text(placeholder)
                         .context(size: Tokens.Size.Font.regular)
@@ -92,6 +99,7 @@ public struct TextInputView: View {
                         }
                 }
                 configureAccessoryButton()
+                configureIcon(rightIcon)
             }
             .padding()
             .background(
@@ -142,6 +150,19 @@ public struct TextInputView: View {
                        accessory
                            .foregroundColor(Color.negro)
                    })
+        )
+    }
+
+    private func configureIcon(
+        _ icon: Image?
+    ) -> AnyView {
+        AnyView(
+            icon?
+                .renderingMode(.template)
+                .frame(
+                    width: Tokens.Size.Spacing.regular,
+                    height: Tokens.Size.Spacing.regular
+                )
         )
     }
 }

@@ -15,6 +15,7 @@ function_body_length: 100
 
 included:
   - Source
+  - WalkyCam
 
 excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Carthage
