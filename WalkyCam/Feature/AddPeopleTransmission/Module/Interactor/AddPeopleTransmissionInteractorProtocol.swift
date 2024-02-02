@@ -1,0 +1,3 @@
+protocol AddPeopleTransmissionInteractorProtocol {
+    func someFunction()
+}
