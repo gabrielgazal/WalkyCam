@@ -52,7 +52,9 @@ struct AddPeopleTransmissionView<ViewModel:AddPeopleTransmissionViewModelProtoco
                     HStack {
                         LinkButton(title: "Invitar luego",
                                    color: .negro,
-                                   action: {})
+                                   action: {
+                            router.routeToServiceDetails()
+                        })
                         .frame(width: proxy.size.width / 2)
                         WCUIButton(title: "Siguiente",
                                    style: .standard,
@@ -64,6 +66,7 @@ struct AddPeopleTransmissionView<ViewModel:AddPeopleTransmissionViewModelProtoco
             }
                    .padding(.horizontal, Tokens.Size.Spacing.large)
         }
+        .navigation(router)
     }
 
     private var headerView: some View {

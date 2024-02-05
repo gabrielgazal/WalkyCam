@@ -1,6 +1,6 @@
 import SwiftUI
 
 protocol AddPeopleTransmissionRouterProtocol: Router {
-    func routeToSomething()
+    func routeToServiceDetails()
 }
 

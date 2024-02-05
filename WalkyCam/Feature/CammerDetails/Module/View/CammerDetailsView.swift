@@ -97,7 +97,9 @@ struct CammerDetailsView<ViewModel:CammerDetailsViewModelProtocol, Router: Camme
                 WCUIButton(title: "Seleccionar",
                            style: .standard,
                            descriptor: OrangeButtonStyleDescriptor(),
-                           action: {})
+                           action: {
+                    router.routeToAddPeople()
+                })
                 LinkButton(title: "Chatea conmigo",
                            icon: Asset.Icons.messageCircle.name,
                            color: .negro,
@@ -105,6 +107,7 @@ struct CammerDetailsView<ViewModel:CammerDetailsViewModelProtocol, Router: Camme
             }
             .padding(Tokens.Size.Spacing.large)
         }
+        .navigation(router)
     }
 
     private var headerView: some View {

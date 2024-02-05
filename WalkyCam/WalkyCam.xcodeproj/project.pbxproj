@@ -411,6 +411,17 @@
 		EA91102F2ADDB93D00584B98 /* EnvironmentValues+ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA91102E2ADDB93D00584B98 /* EnvironmentValues+ImageCache.swift */; };
 		EA9110312ADDB95C00584B98 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9110302ADDB95C00584B98 /* ImageCache.swift */; };
 		EA9110332ADDBF7400584B98 /* WalkyBotItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9110322ADDBF7400584B98 /* WalkyBotItemView.swift */; };
+		EA94A52C2B7160EF00EC3037 /* ServiceDetailsRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94A5192B7160EF00EC3037 /* ServiceDetailsRoute.swift */; };
+		EA94A52D2B7160EF00EC3037 /* ServiceDetailsAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94A51B2B7160EF00EC3037 /* ServiceDetailsAssembler.swift */; };
+		EA94A52E2B7160EF00EC3037 /* ServiceDetailsAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94A51C2B7160EF00EC3037 /* ServiceDetailsAssemblerProtocol.swift */; };
+		EA94A52F2B7160EF00EC3037 /* ServiceDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94A51F2B7160EF00EC3037 /* ServiceDetailsViewModel.swift */; };
+		EA94A5302B7160EF00EC3037 /* ServiceDetailsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94A5202B7160EF00EC3037 /* ServiceDetailsViewModelProtocol.swift */; };
+		EA94A5312B7160EF00EC3037 /* ServiceDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94A5222B7160EF00EC3037 /* ServiceDetailsView.swift */; };
+		EA94A5322B7160EF00EC3037 /* ServiceDetailsInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94A5242B7160EF00EC3037 /* ServiceDetailsInteractorProtocol.swift */; };
+		EA94A5332B7160EF00EC3037 /* ServiceDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94A5252B7160EF00EC3037 /* ServiceDetailsInteractor.swift */; };
+		EA94A5342B7160EF00EC3037 /* ServiceDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94A5272B7160EF00EC3037 /* ServiceDetailsRouter.swift */; };
+		EA94A5352B7160EF00EC3037 /* ServiceDetailsRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94A5282B7160EF00EC3037 /* ServiceDetailsRouterProtocol.swift */; };
+		EA94A5362B7160EF00EC3037 /* ServiceDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94A52B2B7160EF00EC3037 /* ServiceDetailsModel.swift */; };
 		EAA1E61C2AFAFA7100A42174 /* WCTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA1E6192AFAFA7100A42174 /* WCTopBarView.swift */; };
 		EAA1E61D2AFAFA7100A42174 /* WCTopBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA1E61A2AFAFA7100A42174 /* WCTopBarItem.swift */; };
 		EAA1E61E2AFAFA7100A42174 /* WCTopBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA1E61B2AFAFA7100A42174 /* WCTopBarContainerView.swift */; };
@@ -882,6 +893,17 @@
 		EA91102E2ADDB93D00584B98 /* EnvironmentValues+ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+ImageCache.swift"; sourceTree = "<group>"; };
 		EA9110302ADDB95C00584B98 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		EA9110322ADDBF7400584B98 /* WalkyBotItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkyBotItemView.swift; sourceTree = "<group>"; };
+		EA94A5192B7160EF00EC3037 /* ServiceDetailsRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailsRoute.swift; sourceTree = "<group>"; };
+		EA94A51B2B7160EF00EC3037 /* ServiceDetailsAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailsAssembler.swift; sourceTree = "<group>"; };
+		EA94A51C2B7160EF00EC3037 /* ServiceDetailsAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailsAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA94A51F2B7160EF00EC3037 /* ServiceDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailsViewModel.swift; sourceTree = "<group>"; };
+		EA94A5202B7160EF00EC3037 /* ServiceDetailsViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailsViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA94A5222B7160EF00EC3037 /* ServiceDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailsView.swift; sourceTree = "<group>"; };
+		EA94A5242B7160EF00EC3037 /* ServiceDetailsInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailsInteractorProtocol.swift; sourceTree = "<group>"; };
+		EA94A5252B7160EF00EC3037 /* ServiceDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailsInteractor.swift; sourceTree = "<group>"; };
+		EA94A5272B7160EF00EC3037 /* ServiceDetailsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailsRouter.swift; sourceTree = "<group>"; };
+		EA94A5282B7160EF00EC3037 /* ServiceDetailsRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailsRouterProtocol.swift; sourceTree = "<group>"; };
+		EA94A52B2B7160EF00EC3037 /* ServiceDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailsModel.swift; sourceTree = "<group>"; };
 		EAA1E6192AFAFA7100A42174 /* WCTopBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCTopBarView.swift; sourceTree = "<group>"; };
 		EAA1E61A2AFAFA7100A42174 /* WCTopBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCTopBarItem.swift; sourceTree = "<group>"; };
 		EAA1E61B2AFAFA7100A42174 /* WCTopBarContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCTopBarContainerView.swift; sourceTree = "<group>"; };
@@ -1581,6 +1603,7 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				EA94A5162B7160EF00EC3037 /* ServiceDetails */,
 				EA57A7AF2B6C2C04006247DD /* AddPeopleTransmission */,
 				EA57A7852B6C1536006247DD /* CammerDetails */,
 				56FEECD32B5C7FEA003FA686 /* SearchWalkyCammer */,
@@ -4199,6 +4222,104 @@
 			path = AsyncImageView;
 			sourceTree = "<group>";
 		};
+		EA94A5162B7160EF00EC3037 /* ServiceDetails */ = {
+			isa = PBXGroup;
+			children = (
+				EA94A5172B7160EF00EC3037 /* Configuration */,
+				EA94A51D2B7160EF00EC3037 /* Module */,
+				EA94A5292B7160EF00EC3037 /* Domain */,
+			);
+			path = ServiceDetails;
+			sourceTree = "<group>";
+		};
+		EA94A5172B7160EF00EC3037 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA94A5182B7160EF00EC3037 /* Route */,
+				EA94A51A2B7160EF00EC3037 /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA94A5182B7160EF00EC3037 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA94A5192B7160EF00EC3037 /* ServiceDetailsRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA94A51A2B7160EF00EC3037 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA94A51B2B7160EF00EC3037 /* ServiceDetailsAssembler.swift */,
+				EA94A51C2B7160EF00EC3037 /* ServiceDetailsAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EA94A51D2B7160EF00EC3037 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA94A51E2B7160EF00EC3037 /* ViewModel */,
+				EA94A5212B7160EF00EC3037 /* View */,
+				EA94A5232B7160EF00EC3037 /* Interactor */,
+				EA94A5262B7160EF00EC3037 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA94A51E2B7160EF00EC3037 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA94A51F2B7160EF00EC3037 /* ServiceDetailsViewModel.swift */,
+				EA94A5202B7160EF00EC3037 /* ServiceDetailsViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA94A5212B7160EF00EC3037 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA94A5222B7160EF00EC3037 /* ServiceDetailsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA94A5232B7160EF00EC3037 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA94A5242B7160EF00EC3037 /* ServiceDetailsInteractorProtocol.swift */,
+				EA94A5252B7160EF00EC3037 /* ServiceDetailsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EA94A5262B7160EF00EC3037 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA94A5272B7160EF00EC3037 /* ServiceDetailsRouter.swift */,
+				EA94A5282B7160EF00EC3037 /* ServiceDetailsRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EA94A5292B7160EF00EC3037 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA94A52A2B7160EF00EC3037 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA94A52A2B7160EF00EC3037 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA94A52B2B7160EF00EC3037 /* ServiceDetailsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EAA1E6182AFAFA7100A42174 /* TopBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -4766,6 +4887,7 @@
 				EA72199A2B05612900BE2D93 /* WalkyBotView.swift in Sources */,
 				EA7219992B05612900BE2D93 /* WalkyBotViewModel.swift in Sources */,
 				EA57A7A22B6C1558006247DD /* CammerDetailsViewModelProtocol.swift in Sources */,
+				EA94A5322B7160EF00EC3037 /* ServiceDetailsInteractorProtocol.swift in Sources */,
 				EA910FC62ADC495700584B98 /* TabBarAssemblerProtocol.swift in Sources */,
 				56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */,
 				EA60833C2AFD58A900295069 /* CryptoTabModel.swift in Sources */,
@@ -4798,13 +4920,16 @@
 				EA15B5AC2AD706DB00C03407 /* BottomSheetModifier.swift in Sources */,
 				EA282E552AE952F700B90920 /* ProfileViewModelProtocol.swift in Sources */,
 				EA91101F2ADDADE100584B98 /* HomeRouter.swift in Sources */,
+				EA94A52D2B7160EF00EC3037 /* ServiceDetailsAssembler.swift in Sources */,
 				561FC8B52B5C66F7005B6006 /* WebView.swift in Sources */,
 				EA1FD19C2B1E8F91000E583D /* JitsiMeetView.swift in Sources */,
 				EA60838C2B01CD0A00295069 /* ShopTabAssembler.swift in Sources */,
 				EA50A08A2B0BC77F0042B238 /* PlansPagesRouterProtocol.swift in Sources */,
 				EA4164F72AE4B6F7008CE66A /* ComparePlansRouter.swift in Sources */,
+				EA94A5302B7160EF00EC3037 /* ServiceDetailsViewModelProtocol.swift in Sources */,
 				EA5E1D712AD7167300738A8F /* LinkButtonStyle.swift in Sources */,
 				EA2F93FA2B62CECD00E1C146 /* LoginInteractorProtocol.swift in Sources */,
+				EA94A5312B7160EF00EC3037 /* ServiceDetailsView.swift in Sources */,
 				56A552582B2F6E3D006B1B17 /* StreetCamMenuViewModel.swift in Sources */,
 				EA910F952ADA06F500584B98 /* RegistrationRouterProtocol.swift in Sources */,
 				EA282E542AE952F700B90920 /* ProfileModel.swift in Sources */,
@@ -4848,7 +4973,9 @@
 				EA57A7D42B6C2C31006247DD /* AddPeopleTransmissionRouter.swift in Sources */,
 				EA57A7AB2B6C1558006247DD /* CammerDetailsAssembler.swift in Sources */,
 				EA0E40BD2AF70E86002B7437 /* CashWalletView.swift in Sources */,
+				EA94A5342B7160EF00EC3037 /* ServiceDetailsRouter.swift in Sources */,
 				EA6083642B01981800295069 /* CryptoDetailsViewModel.swift in Sources */,
+				EA94A52C2B7160EF00EC3037 /* ServiceDetailsRoute.swift in Sources */,
 				EA47D0E02B0FAE6500E5C4FC /* PlansComparisonPageView.swift in Sources */,
 				EA282E512AE952F700B90920 /* ProfileRoute.swift in Sources */,
 				EA4165452AE706C6008CE66A /* NotificationsInteractor.swift in Sources */,
@@ -4860,6 +4987,7 @@
 				EA15B5A92AD706AF00C03407 /* Route.swift in Sources */,
 				EA57A7A72B6C1558006247DD /* CammerDetailsRouterProtocol.swift in Sources */,
 				56FEECF12B5C802C003FA686 /* SearchWalkyCammerAssemblerProtocol.swift in Sources */,
+				EA94A5332B7160EF00EC3037 /* ServiceDetailsInteractor.swift in Sources */,
 				EA910FA62ADC48DE00584B98 /* WCTabBarContainerView.swift in Sources */,
 				EA910F672AD9B20600584B98 /* NavigationController+Extension.swift in Sources */,
 				EA0E40BB2AF70E86002B7437 /* CashWalletViewModelProtocol.swift in Sources */,
@@ -4875,6 +5003,7 @@
 				EA1FD1BE2B1E932F000E583D /* VideoCallRoomRouter.swift in Sources */,
 				56A5525C2B2F6E3D006B1B17 /* StreetCamMenuInteractor.swift in Sources */,
 				EA6083B32B01D9E100295069 /* GalleryAssembler.swift in Sources */,
+				EA94A5352B7160EF00EC3037 /* ServiceDetailsRouterProtocol.swift in Sources */,
 				EA2F93FC2B62CED700E1C146 /* LoginInteractor.swift in Sources */,
 				EA1FD1BD2B1E932F000E583D /* VideoCallRoomInteractorProtocol.swift in Sources */,
 				EA910FF32ADCBCC000584B98 /* MenuItemModel.swift in Sources */,
@@ -5046,6 +5175,7 @@
 				EADB5CA82B190819005863E1 /* VideoCallViewModel.swift in Sources */,
 				EADB5CAE2B190819005863E1 /* VideoCallModel.swift in Sources */,
 				561FC8BE2B5C67FB005B6006 /* AsyncDataError.swift in Sources */,
+				EA94A52F2B7160EF00EC3037 /* ServiceDetailsViewModel.swift in Sources */,
 				EA57A7A12B6C1558006247DD /* CammerDetailsViewModel.swift in Sources */,
 				EA282ED62AEB532800B90920 /* RecentFunctionsCell.swift in Sources */,
 				EA72199C2B05612900BE2D93 /* WalkyBotInteractorProtocol.swift in Sources */,
@@ -5138,6 +5268,7 @@
 				56FEECF32B5C802C003FA686 /* SearchWalkyCammerViewModel.swift in Sources */,
 				EA1FD1B92B1E932F000E583D /* VideoCallRoomViewModel.swift in Sources */,
 				EA15B5A12AD6E44D00C03407 /* LoginAssembler.swift in Sources */,
+				EA94A52E2B7160EF00EC3037 /* ServiceDetailsAssemblerProtocol.swift in Sources */,
 				EADB5CA52B190819005863E1 /* VideoCallAssembler.swift in Sources */,
 				EA6083672B01981800295069 /* CryptoDetailsInteractorProtocol.swift in Sources */,
 				EA1FD1C32B1E932F000E583D /* VideoCallRoomModel.swift in Sources */,
@@ -5173,6 +5304,7 @@
 				EA5E1D932AD71ABB00738A8F /* Tokens.swift in Sources */,
 				EA4165422AE706C6008CE66A /* NotificationsViewModel.swift in Sources */,
 				EA910FC92ADC495700584B98 /* TabBarViewModel.swift in Sources */,
+				EA94A5362B7160EF00EC3037 /* ServiceDetailsModel.swift in Sources */,
 				56A5525B2B2F6E3D006B1B17 /* StreetCamMenuInteractorProtocol.swift in Sources */,
 				56A5525D2B2F6E3D006B1B17 /* StreetCamMenuRouterProtocol.swift in Sources */,
 				EA72199E2B05612900BE2D93 /* WalkyBotRouter.swift in Sources */,

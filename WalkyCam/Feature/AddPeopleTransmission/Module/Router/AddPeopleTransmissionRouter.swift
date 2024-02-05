@@ -4,9 +4,10 @@ final class AddPeopleTransmissionRouter: Router, AddPeopleTransmissionRouterProt
 
     // MARK: - Public API
 
-    #warning("Example function. Rename or remove it")
-    func routeToSomething() { 
-
+    func routeToServiceDetails() {
+        navigateTo(
+            ServiceDetailsRoute(isPresented: isNavigating)
+        )
     }
 }
 

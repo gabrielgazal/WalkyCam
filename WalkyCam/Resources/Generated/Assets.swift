@@ -65,6 +65,7 @@ internal enum Asset {
     internal static let tShirt = ImageAsset(name: "T-Shirt")
     internal static let usd = ImageAsset(name: "Usd")
     internal static let videoCall = ImageAsset(name: "VideoCall")
+    internal static let accionesDetalle = ImageAsset(name: "acciones detalle")
     internal static let alcohol = ImageAsset(name: "alcohol")
     internal static let analisadorRedes = ImageAsset(name: "analisadorRedes")
     internal static let backpack = ImageAsset(name: "backpack")

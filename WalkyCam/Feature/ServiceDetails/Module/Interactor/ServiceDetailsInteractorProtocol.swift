@@ -1,0 +1,3 @@
+protocol ServiceDetailsInteractorProtocol {
+    func someFunction()
+}
