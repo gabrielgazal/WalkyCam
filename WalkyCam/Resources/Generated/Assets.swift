@@ -107,6 +107,7 @@ internal enum Asset {
     internal static let robotDog = ImageAsset(name: "robotDog")
     internal static let robotica = ImageAsset(name: "robotica")
     internal static let rov = ImageAsset(name: "rov")
+    internal static let socialsGrid = ImageAsset(name: "socialsGrid")
     internal static let telepresencia = ImageAsset(name: "telepresencia")
     internal static let thermalCamera = ImageAsset(name: "thermalCamera")
     internal static let translate = ImageAsset(name: "translate")

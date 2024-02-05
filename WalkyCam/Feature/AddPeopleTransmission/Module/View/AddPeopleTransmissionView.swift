@@ -19,7 +19,50 @@ struct AddPeopleTransmissionView<ViewModel:AddPeopleTransmissionViewModelProtoco
 
     var body: some View {
         ScrollView(showsIndicators: false) {
-            headerView
+            VStack(alignment: .leading,
+                   spacing: Tokens.Size.Spacing.xlarge) {
+                headerView
+                Text("Puedes agregar hasta 200 asistentes más.")
+                    .font(.projectFont(size: Tokens.Size.Font.regular))
+                WCUIButton(title: "Invitar amigos de Walkycam",
+                           leftIcon: Asset.Icons.wIcon.name,
+                           style: .outline,
+                           descriptor: OrangeButtonStyleDescriptor(),
+                           action: {})
+                Spacer()
+                    .frame(height: 16)
+                HStack(spacing: Tokens.Size.Spacing.small) {
+                    Image(Asset.Icons.share.name)
+                        .resizable()
+                        .renderingMode(.template)
+                        .foregroundColor(.naranja)
+                        .frame(width: 24, height: 24)
+                    Text("O invitar amigos por...")
+                        .font(.projectFont(size: Tokens.Size.Font.regular))
+                    Spacer()
+                }
+                HStack {
+                    Spacer()
+                    Image(Asset.Icons.socialsGrid.name)
+                    Spacer()
+                }
+                Spacer()
+                    .frame(height: 24)
+                GeometryReader { proxy in
+                    HStack {
+                        LinkButton(title: "Invitar luego",
+                                   color: .negro,
+                                   action: {})
+                        .frame(width: proxy.size.width / 2)
+                        WCUIButton(title: "Siguiente",
+                                   style: .standard,
+                                   descriptor: BlackButtonStyleDescriptor(),
+                                   action: {})
+                        .frame(width: proxy.size.width / 2)
+                    }
+                }
+            }
+                   .padding(.horizontal, Tokens.Size.Spacing.large)
         }
     }
 
@@ -37,7 +80,6 @@ struct AddPeopleTransmissionView<ViewModel:AddPeopleTransmissionViewModelProtoco
                     .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                 Spacer()
             }
-                   .padding(.horizontal, Tokens.Size.Spacing.large)
         }
     }
 
@@ -76,7 +118,7 @@ struct AddPeopleTransmissionView<ViewModel:AddPeopleTransmissionViewModelProtoco
 
 struct AddPeopleTransmissionView_Previews: PreviewProvider {
     static var previews: some View {
-    AddPeopleTransmissionView(
+        AddPeopleTransmissionView(
             viewModel: AddPeopleTransmissionViewModel(),
             router: AddPeopleTransmissionRouter(isPresented: .constant(false))
         )
