@@ -320,6 +320,8 @@
 		EA72199E2B05612900BE2D93 /* WalkyBotRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7219932B05612900BE2D93 /* WalkyBotRouter.swift */; };
 		EA7219A12B057D3A00BE2D93 /* NewsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7219A02B057D3A00BE2D93 /* NewsItemView.swift */; };
 		EA7219A42B05863C00BE2D93 /* FavoriteItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7219A32B05863C00BE2D93 /* FavoriteItemView.swift */; };
+		EA791F5A2B71457D00368DD9 /* SendbirdUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = EA791F592B71457D00368DD9 /* SendbirdUIKit */; };
+		EA791F5E2B71583200368DD9 /* ChannelListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA791F5D2B71583200368DD9 /* ChannelListView.swift */; };
 		EA82DB502ADF4DBB00E6B39A /* HomeSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82DB4F2ADF4DBB00E6B39A /* HomeSectionView.swift */; };
 		EA82DB532ADF605500E6B39A /* ReminderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82DB522ADF605500E6B39A /* ReminderCardView.swift */; };
 		EA890A262B61ECFB00FC369B /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = EA890A252B61ECFB00FC369B /* Networking */; };
@@ -792,6 +794,7 @@
 		EA7219932B05612900BE2D93 /* WalkyBotRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyBotRouter.swift; sourceTree = "<group>"; };
 		EA7219A02B057D3A00BE2D93 /* NewsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemView.swift; sourceTree = "<group>"; };
 		EA7219A32B05863C00BE2D93 /* FavoriteItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteItemView.swift; sourceTree = "<group>"; };
+		EA791F5D2B71583200368DD9 /* ChannelListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListView.swift; sourceTree = "<group>"; };
 		EA82DB4F2ADF4DBB00E6B39A /* HomeSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionView.swift; sourceTree = "<group>"; };
 		EA82DB522ADF605500E6B39A /* ReminderCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCardView.swift; sourceTree = "<group>"; };
 		EA890A282B61EDE500FC369B /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
@@ -927,6 +930,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA890A262B61ECFB00FC369B /* Networking in Frameworks */,
+				EA791F5A2B71457D00368DD9 /* SendbirdUIKit in Frameworks */,
 				DFD0945A60FA5B637D89BC1D /* Pods_WalkyCam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1692,6 +1696,7 @@
 		EA15B5A52AD7067400C03407 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				EA791F5B2B71581B00368DD9 /* SendBird */,
 				EA8EF8CE2B67E11600136D1F /* Persistence */,
 				EA890A272B61EDCE00FC369B /* DependencyStore */,
 				EA1FD19A2B1E8F83000E583D /* Jitsi */,
@@ -3579,6 +3584,22 @@
 			path = Favorites;
 			sourceTree = "<group>";
 		};
+		EA791F5B2B71581B00368DD9 /* SendBird */ = {
+			isa = PBXGroup;
+			children = (
+				EA791F5C2B71582500368DD9 /* Chat */,
+			);
+			path = SendBird;
+			sourceTree = "<group>";
+		};
+		EA791F5C2B71582500368DD9 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				EA791F5D2B71583200368DD9 /* ChannelListView.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 		EA82DB4B2ADF49D600E6B39A /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
@@ -4523,6 +4544,7 @@
 			name = WalkyCam;
 			packageProductDependencies = (
 				EA890A252B61ECFB00FC369B /* Networking */,
+				EA791F592B71457D00368DD9 /* SendbirdUIKit */,
 			);
 			productName = WalkyCam;
 			productReference = 5637A8122AD5DD72000586DF /* WalkyCam.app */;
@@ -4598,6 +4620,9 @@
 				en,
 			);
 			mainGroup = 5637A8092AD5DD71000586DF;
+			packageReferences = (
+				EA791F582B71457D00368DD9 /* XCRemoteSwiftPackageReference "sendbird-uikit-ios-spm" */,
+			);
 			productRefGroup = 5637A8132AD5DD72000586DF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -5131,6 +5156,7 @@
 				EA8EF8E92B67E71B00136D1F /* UserSessionData.swift in Sources */,
 				EA57A7CD2B6C2C31006247DD /* AddPeopleTransmissionAssembler.swift in Sources */,
 				EA4165472AE706C6008CE66A /* NotificationsRouterProtocol.swift in Sources */,
+				EA791F5E2B71583200368DD9 /* ChannelListView.swift in Sources */,
 				EA172AFA2AF06BDE00EB1514 /* ConfirmMailViewModel.swift in Sources */,
 				EA4165462AE706C6008CE66A /* NotificationsRouter.swift in Sources */,
 				56FEECEF2B5C802C003FA686 /* SearchWalkyCammerRoute.swift in Sources */,
@@ -5529,7 +5555,23 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		EA791F582B71457D00368DD9 /* XCRemoteSwiftPackageReference "sendbird-uikit-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sendbird/sendbird-uikit-ios-spm";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
+		EA791F592B71457D00368DD9 /* SendbirdUIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA791F582B71457D00368DD9 /* XCRemoteSwiftPackageReference "sendbird-uikit-ios-spm" */;
+			productName = SendbirdUIKit;
+		};
 		EA890A252B61ECFB00FC369B /* Networking */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Networking;
