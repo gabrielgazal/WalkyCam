@@ -59,7 +59,9 @@ struct AddPeopleTransmissionView<ViewModel:AddPeopleTransmissionViewModelProtoco
                         WCUIButton(title: "Siguiente",
                                    style: .standard,
                                    descriptor: BlackButtonStyleDescriptor(),
-                                   action: {})
+                                   action: {
+                            router.routeToServiceDetails()
+                        })
                         .frame(width: proxy.size.width / 2)
                     }
                 }
