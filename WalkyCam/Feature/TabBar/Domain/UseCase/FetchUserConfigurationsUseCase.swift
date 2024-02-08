@@ -13,7 +13,7 @@ typealias FetchUserConfigurationsUseCase = GenericUseCase<String, Void>
 
 extension FetchUserConfigurationsUseCase {
 
-    static func live(
+    static func fetchConfigurations(
         repository: ConfigurationRepositoryProtocol,
         userSession: UserSessionProtocol = UserSession()
     ) -> Self {

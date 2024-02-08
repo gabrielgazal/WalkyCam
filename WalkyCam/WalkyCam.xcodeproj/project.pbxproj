@@ -196,6 +196,7 @@
 		EA4AE4882B75011B00B5A89F /* FetchUserConfigurationsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE4872B75011B00B5A89F /* FetchUserConfigurationsUseCase.swift */; };
 		EA4AE48B2B7505D100B5A89F /* TabBarInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE48A2B7505D100B5A89F /* TabBarInteractorProtocol.swift */; };
 		EA4AE48D2B75065300B5A89F /* TabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE48C2B75065300B5A89F /* TabBarInteractor.swift */; };
+		EA4AE4942B75136600B5A89F /* UpdateStreetcamConfigurationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE4932B75136600B5A89F /* UpdateStreetcamConfigurationUseCase.swift */; };
 		EA50A0842B0BC77F0042B238 /* PlansPagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA50A0712B0BC77F0042B238 /* PlansPagesModel.swift */; };
 		EA50A0852B0BC77F0042B238 /* PlansPagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA50A0742B0BC77F0042B238 /* PlansPagesViewModel.swift */; };
 		EA50A0862B0BC77F0042B238 /* PlansPagesViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA50A0752B0BC77F0042B238 /* PlansPagesViewModelProtocol.swift */; };
@@ -681,6 +682,7 @@
 		EA4AE4872B75011B00B5A89F /* FetchUserConfigurationsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUserConfigurationsUseCase.swift; sourceTree = "<group>"; };
 		EA4AE48A2B7505D100B5A89F /* TabBarInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarInteractorProtocol.swift; sourceTree = "<group>"; };
 		EA4AE48C2B75065300B5A89F /* TabBarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarInteractor.swift; sourceTree = "<group>"; };
+		EA4AE4932B75136600B5A89F /* UpdateStreetcamConfigurationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStreetcamConfigurationUseCase.swift; sourceTree = "<group>"; };
 		EA50A0712B0BC77F0042B238 /* PlansPagesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlansPagesModel.swift; sourceTree = "<group>"; };
 		EA50A0742B0BC77F0042B238 /* PlansPagesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlansPagesViewModel.swift; sourceTree = "<group>"; };
 		EA50A0752B0BC77F0042B238 /* PlansPagesViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlansPagesViewModelProtocol.swift; sourceTree = "<group>"; };
@@ -1149,6 +1151,7 @@
 		56A552292B2F6135006B1B17 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				EA4AE4922B75134A00B5A89F /* UseCase */,
 				56A5522A2B2F6135006B1B17 /* Model */,
 			);
 			path = Domain;
@@ -2543,6 +2546,14 @@
 				EA4AE48C2B75065300B5A89F /* TabBarInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EA4AE4922B75134A00B5A89F /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				EA4AE4932B75136600B5A89F /* UpdateStreetcamConfigurationUseCase.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 		EA50A0682B0BC7590042B238 /* PlansPages */ = {
@@ -5039,6 +5050,7 @@
 				561FC8B42B5C66F7005B6006 /* WebView+PullToRefresh.swift in Sources */,
 				EA0E408D2AF69771002B7437 /* CashWalletOnboardingViewModelProtocol.swift in Sources */,
 				EA91101C2ADDADE100584B98 /* HomeView.swift in Sources */,
+				EA4AE4942B75136600B5A89F /* UpdateStreetcamConfigurationUseCase.swift in Sources */,
 				EA6083442AFD58A900295069 /* CryptoTabInteractorProtocol.swift in Sources */,
 				EA172B252AF06EF600EB1514 /* StartupInteractorProtocol.swift in Sources */,
 				EA6083E12B01DBE000295069 /* GalleryPhotosAssemblerProtocol.swift in Sources */,

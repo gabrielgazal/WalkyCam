@@ -23,8 +23,9 @@ final class HomeRouter: Router, HomeRouterProtocol {
     }
 
     func routeToVideoCall() {
+        let seenOnboarding: Bool = (try? UserSession().user().configurations?.streetCam) ?? false
         navigateTo(
-            VideoCallRoute(isPresented: isNavigating)
+            seenOnboarding ? VideoCallRoute(isPresented: isNavigating) : WalkyCamerOnboardingRoute(isPresented: isNavigating)
         )
     }
 

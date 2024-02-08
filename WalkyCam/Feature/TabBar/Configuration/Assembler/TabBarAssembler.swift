@@ -17,7 +17,7 @@ final class TabBarAssembler: TabBarAssemblerProtocol {
 
         let interactor = TabBarInteractor(
             useCases: .init(
-                fetchConfigurations: .live(repository: repository)
+                fetchConfigurations: .fetchConfigurations(repository: repository)
             )
         )
 

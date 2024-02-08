@@ -1,4 +1,5 @@
 import SwiftUI
+import Networking
 
 final class WalkyCamerOnboardingAssembler: WalkyCamerOnboardingAssemblerProtocol {
     func resolveView(
@@ -7,8 +8,12 @@ final class WalkyCamerOnboardingAssembler: WalkyCamerOnboardingAssemblerProtocol
 
         let router = WalkyCamerOnboardingRouter(isPresented: route.isPresented)
 
+        let repository = route.retailRepository.resolve(ConfigurationRepositoryProtocol.self)
+
         let interactor = WalkyCamerOnboardingInteractor(
-            useCases: .init()
+            useCases: .init(
+                updateStreetcamConfiguration: .updateStreetCam(repository: repository)
+            )
         )
         let viewModel = WalkyCamerOnboardingViewModel(interactor: interactor)
         let view = WalkyCamerOnboardingView(viewModel: viewModel, router: router)

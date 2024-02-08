@@ -90,14 +90,24 @@ struct WalkyCamerOnboardingView<ViewModel: WalkyCamerOnboardingViewModelProtocol
     }
     
     private func handleProceedToStreetCam() {
-        router.routeToStreetCam()
+        Task {
+            await viewModel.updateUserConfiguration() {
+                self.router.routeToStreetCam()
+            }
+        }
     }
 }
 
 struct WalkyCamerOnboardingView_Previews: PreviewProvider {
     static var previews: some View {
     WalkyCamerOnboardingView(
-            viewModel: WalkyCamerOnboardingViewModel(),
+        viewModel: WalkyCamerOnboardingViewModel(
+            interactor: WalkyCamerOnboardingInteractor(
+                useCases: .init(
+                    updateStreetcamConfiguration: .empty
+                )
+            )
+        ),
             router: WalkyCamerOnboardingRouter(isPresented: .constant(false))
         )
     }

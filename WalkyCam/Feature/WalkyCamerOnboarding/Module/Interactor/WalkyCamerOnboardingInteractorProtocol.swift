@@ -1,3 +1,3 @@
 protocol WalkyCamerOnboardingInteractorProtocol {
-    func someFunction()
+    func updateUserConfiguration() async throws
 }

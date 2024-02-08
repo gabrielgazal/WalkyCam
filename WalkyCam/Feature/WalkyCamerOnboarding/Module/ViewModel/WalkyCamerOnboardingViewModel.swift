@@ -9,7 +9,16 @@ final class WalkyCamerOnboardingViewModel: WalkyCamerOnboardingViewModelProtocol
 
     // MARK: - Initialization
 
-    init(interactor: WalkyCamerOnboardingInteractorProtocol = WalkyCamerOnboardingInteractor()) {
+    init(interactor: WalkyCamerOnboardingInteractorProtocol) {
         self.interactor = interactor
+    }
+
+    // MARK: - Public API
+
+   @MainActor func updateUserConfiguration(completion: (() -> Void)?) async {
+       do {
+           _ = try await interactor.updateUserConfiguration()
+       } catch {}
+       completion?()
     }
 }

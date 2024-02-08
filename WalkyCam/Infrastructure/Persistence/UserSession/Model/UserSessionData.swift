@@ -17,11 +17,11 @@ struct UserSessionData: Hashable, Codable {
     public var configurations: Configurations?
 
     public struct Configurations: Hashable, Codable {
-        public let streetCam: Bool
-        public let scan3D: Bool
-        public let videoCall: Bool
-        public let ARHands: Bool
-        public let digitalTwins: Bool
-        public let drone: Bool
+        public var streetCam: Bool
+        public var scan3D: Bool
+        public var videoCall: Bool
+        public var ARHands: Bool
+        public var digitalTwins: Bool
+        public var drone: Bool
     }
 }
