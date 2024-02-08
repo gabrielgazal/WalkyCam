@@ -10,6 +10,7 @@ import Combine
 public protocol AuthRepositoryProtocol {
     typealias LoginResult = Result<UserResponse, RepositoryError>
     typealias RegisterResult = Result<UserResponse, RepositoryError>
+    typealias VerifyByEmailResult = Result<UserResponse, RepositoryError>
 
     func login(userName: String,
                password: String,
@@ -20,4 +21,7 @@ public protocol AuthRepositoryProtocol {
                   email: String,
                   password: String,
                   completion: @escaping (RegisterResult) -> Void)
+    func verifyByEmail(email: String,
+                       verificationCode: String,
+                       completion: @escaping (VerifyByEmailResult) -> Void)
 }

@@ -10,7 +10,6 @@ import Moya
 import Foundation
 
 protocol AuthServiceProtocol {
-    typealias LoginResult = ()
     func login(userName: String,
                password: String,
                completion: @escaping Completion)
@@ -20,4 +19,7 @@ protocol AuthServiceProtocol {
                   email: String,
                   password: String,
                   completion: @escaping Completion)
+    func verifyByEmail(email: String,
+                       verificationCode: String,
+                       completion: @escaping Completion)
 }

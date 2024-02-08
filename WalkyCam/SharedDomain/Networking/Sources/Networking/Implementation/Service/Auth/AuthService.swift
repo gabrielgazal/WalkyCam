@@ -46,4 +46,10 @@ final class AuthService: AuthServiceProtocol {
                                    password: password),
                          completion: completion)
     }
+
+    func verifyByEmail(email: String, verificationCode: String, completion: @escaping Completion) {
+        provider.request(.verifyByEmail(email: email,
+                                        verificationCode: verificationCode),
+                         completion: completion)
+    }
 }

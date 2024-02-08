@@ -11,6 +11,7 @@ import Moya
 enum AuthRouter {
     case login(userName: String, password: String)
     case register(name: String, lastName: String, userName: String, email: String, password: String)
+    case verifyByEmail(email: String, verificationCode: String)
 }
 
 extension AuthRouter: TargetType {
@@ -24,6 +25,8 @@ extension AuthRouter: TargetType {
             return "user/login"
         case .register:
             return "user/register"
+        case let .verifyByEmail(email, verificationCode):
+            return "user/verify-email/\(email)/\(verificationCode)"
         }
     }
     
@@ -31,6 +34,8 @@ extension AuthRouter: TargetType {
         switch self {
         case .login, .register:
             return .post
+        case .verifyByEmail:
+            return .get
         }
     }
     
@@ -40,6 +45,8 @@ extension AuthRouter: TargetType {
             return getLogin(userName, password)
         case let .register(name, lastName, userName, email, password):
             return getRegister(name, lastName, userName, email, password)
+        case .verifyByEmail:
+            return verifyByEmail()
         }
     }
     
@@ -70,5 +77,9 @@ extension AuthRouter: TargetType {
             parameters: parameters,
             encoding: JSONEncoding.default
         )
+    }
+
+    private func verifyByEmail() -> Task {
+        return .requestPlain
     }
 }

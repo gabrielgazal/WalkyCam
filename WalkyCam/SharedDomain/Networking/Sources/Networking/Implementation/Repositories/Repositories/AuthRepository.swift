@@ -46,4 +46,10 @@ final class AuthRepository: AuthRepositoryProtocol {
             completion(result.mapToRepositoryResult(with: self.requestHandler))
         }
     }
+
+    func verifyByEmail(email: String, verificationCode: String, completion: @escaping (VerifyByEmailResult) -> Void) {
+        service.verifyByEmail(email: email, verificationCode: verificationCode) { result in
+            completion(result.mapToRepositoryResult(with: self.requestHandler))
+        }
+    }
 }
