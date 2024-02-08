@@ -193,6 +193,9 @@
 		EA41654A2AE706C6008CE66A /* NotificationsAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA41653D2AE706C6008CE66A /* NotificationsAssembler.swift */; };
 		EA41654B2AE706C6008CE66A /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4165402AE706C6008CE66A /* NotificationModel.swift */; };
 		EA47D0E02B0FAE6500E5C4FC /* PlansComparisonPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47D0DF2B0FAE6400E5C4FC /* PlansComparisonPageView.swift */; };
+		EA4AE4882B75011B00B5A89F /* FetchUserConfigurationsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE4872B75011B00B5A89F /* FetchUserConfigurationsUseCase.swift */; };
+		EA4AE48B2B7505D100B5A89F /* TabBarInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE48A2B7505D100B5A89F /* TabBarInteractorProtocol.swift */; };
+		EA4AE48D2B75065300B5A89F /* TabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE48C2B75065300B5A89F /* TabBarInteractor.swift */; };
 		EA50A0842B0BC77F0042B238 /* PlansPagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA50A0712B0BC77F0042B238 /* PlansPagesModel.swift */; };
 		EA50A0852B0BC77F0042B238 /* PlansPagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA50A0742B0BC77F0042B238 /* PlansPagesViewModel.swift */; };
 		EA50A0862B0BC77F0042B238 /* PlansPagesViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA50A0752B0BC77F0042B238 /* PlansPagesViewModelProtocol.swift */; };
@@ -675,6 +678,9 @@
 		EA41653D2AE706C6008CE66A /* NotificationsAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsAssembler.swift; sourceTree = "<group>"; };
 		EA4165402AE706C6008CE66A /* NotificationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		EA47D0DF2B0FAE6400E5C4FC /* PlansComparisonPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansComparisonPageView.swift; sourceTree = "<group>"; };
+		EA4AE4872B75011B00B5A89F /* FetchUserConfigurationsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUserConfigurationsUseCase.swift; sourceTree = "<group>"; };
+		EA4AE48A2B7505D100B5A89F /* TabBarInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarInteractorProtocol.swift; sourceTree = "<group>"; };
+		EA4AE48C2B75065300B5A89F /* TabBarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarInteractor.swift; sourceTree = "<group>"; };
 		EA50A0712B0BC77F0042B238 /* PlansPagesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlansPagesModel.swift; sourceTree = "<group>"; };
 		EA50A0742B0BC77F0042B238 /* PlansPagesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlansPagesViewModel.swift; sourceTree = "<group>"; };
 		EA50A0752B0BC77F0042B238 /* PlansPagesViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlansPagesViewModelProtocol.swift; sourceTree = "<group>"; };
@@ -2522,6 +2528,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		EA4AE4862B75010700B5A89F /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				EA4AE4872B75011B00B5A89F /* FetchUserConfigurationsUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		EA4AE4892B7505B900B5A89F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA4AE48A2B7505D100B5A89F /* TabBarInteractorProtocol.swift */,
+				EA4AE48C2B75065300B5A89F /* TabBarInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		EA50A0682B0BC7590042B238 /* PlansPages */ = {
 			isa = PBXGroup;
 			children = (
@@ -3965,6 +3988,7 @@
 		EA910FB42ADC495700584B98 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				EA4AE4892B7505B900B5A89F /* Interactor */,
 				EA910FB52ADC495700584B98 /* ViewModel */,
 				EA910FB92ADC495700584B98 /* View */,
 				EA910FBE2ADC495700584B98 /* Router */,
@@ -4001,6 +4025,7 @@
 		EA910FC12ADC495700584B98 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				EA4AE4862B75010700B5A89F /* UseCase */,
 				EA910FD02ADC497D00584B98 /* Builder */,
 				EA910FC22ADC495700584B98 /* Model */,
 			);
@@ -5105,6 +5130,7 @@
 				561FC8C72B5C6854005B6006 /* ErrorProtocol.swift in Sources */,
 				EA910F5A2AD9B01300584B98 /* OnboardingRoute.swift in Sources */,
 				EA6083DA2B01DBDF00295069 /* GalleryPhotosViewModelProtocol.swift in Sources */,
+				EA4AE4882B75011B00B5A89F /* FetchUserConfigurationsUseCase.swift in Sources */,
 				EA910FD22ADC499500584B98 /* TabBarBuilder.swift in Sources */,
 				EA5E1D762AD716D200738A8F /* ButtonStyleDescriptor.swift in Sources */,
 				56A552572B2F6E3D006B1B17 /* StreetCamMenuAssembler.swift in Sources */,
@@ -5158,6 +5184,7 @@
 				EA5E1D842AD7183700738A8F /* RoundedCornerShape.swift in Sources */,
 				EA282EDA2AEB56B800B90920 /* FunctionData.swift in Sources */,
 				EA4164F92AE4B6F7008CE66A /* ComparePlansModel.swift in Sources */,
+				EA4AE48D2B75065300B5A89F /* TabBarInteractor.swift in Sources */,
 				EA172B1D2AF06EF600EB1514 /* StartupModel.swift in Sources */,
 				EA910F5B2AD9B01300584B98 /* OnboardingAssembler.swift in Sources */,
 				EA910F5C2AD9B01300584B98 /* OnboardingAssemblerProtocol.swift in Sources */,
@@ -5201,6 +5228,7 @@
 				EA8EF8D02B67E12400136D1F /* UserSessionProtocol.swift in Sources */,
 				EAD048712AE22C530096E6AB /* RegistrationPlansRoute.swift in Sources */,
 				EA910F8D2ADA06F500584B98 /* RegistrationAssembler.swift in Sources */,
+				EA4AE48B2B7505D100B5A89F /* TabBarInteractorProtocol.swift in Sources */,
 				EA6083942B01CD0A00295069 /* ShopTabRouter.swift in Sources */,
 				56FEECF72B5C802C003FA686 /* SearchWalkyCammerInteractor.swift in Sources */,
 				EA282ECF2AEB531100B90920 /* FunctionsRouterProtocol.swift in Sources */,

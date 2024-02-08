@@ -8,7 +8,7 @@
 import Combine
 
 public protocol ConfigurationRepositoryProtocol {
-    typealias GetConfigurationResult = Result<Void, RepositoryError>
+    typealias GetConfigurationResult = Result<ConfigurationResponse, RepositoryError>
     typealias UpdateConfigurationResult = Result<Void, RepositoryError>
 
     func getStreetCamConfiguration(userId: String, completion: @escaping (GetConfigurationResult) -> Void)

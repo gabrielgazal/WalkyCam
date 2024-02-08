@@ -33,5 +33,10 @@ struct TabBarView<ViewModel: TabBarViewModelProtocol, Router: TabBarRouterProtoc
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
         .environmentObject(viewModel)
+        .onAppear {
+            Task {
+                await viewModel.getConfigurations()
+            }
+        }
     }
 }

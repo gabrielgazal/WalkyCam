@@ -14,4 +14,14 @@ struct UserSessionData: Hashable, Codable {
     public let lastName: String
     public let email: String
     public let address: String
+    public var configurations: Configurations?
+
+    public struct Configurations: Hashable, Codable {
+        public let streetCam: Bool
+        public let scan3D: Bool
+        public let videoCall: Bool
+        public let ARHands: Bool
+        public let digitalTwins: Bool
+        public let drone: Bool
+    }
 }

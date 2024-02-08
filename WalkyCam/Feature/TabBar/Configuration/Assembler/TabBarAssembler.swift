@@ -1,4 +1,5 @@
 import SwiftUI
+import Networking
 
 final class TabBarAssembler: TabBarAssemblerProtocol {
 
@@ -12,7 +13,16 @@ final class TabBarAssembler: TabBarAssemblerProtocol {
 
         let router = TabBarRouter(isPresented: route.isPresented)
 
+        let repository = route.retailRepository.resolve(ConfigurationRepositoryProtocol.self)
+
+        let interactor = TabBarInteractor(
+            useCases: .init(
+                fetchConfigurations: .live(repository: repository)
+            )
+        )
+
         let viewModel = TabBarViewModel(
+            interactor: interactor,
             tabSelection: tabBarItems[0],
             tabBarItems: tabBarItems
         )

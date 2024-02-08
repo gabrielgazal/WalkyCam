@@ -81,6 +81,7 @@ extension LoginOutput {
                                name: name,
                                lastName: lastName,
                                email: email,
-                               address: address)
+                               address: address,
+                               configurations: nil)
     }
 }

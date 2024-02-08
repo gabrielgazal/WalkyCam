@@ -31,29 +31,29 @@ extension ConfigurationRouter: TargetType {
     var path: String {
         switch self {
         case let .getStreetCamConfiguration(userId):
-            return "get-street-cam-configuration/\(userId)"
+            return "user/get-street-cam-configuration/\(userId)"
         case let .getScan3DConfiguration(userId):
-            return "get-scan3d-configuration/\(userId)"
+            return "user/get-scan3d-configuration/\(userId)"
         case let .getVideoCallConfiguration(userId):
-            return "get-videocall-configuration/\(userId)"
+            return "user/get-videocall-configuration/\(userId)"
         case let .getARHandsConfiguration(userId):
-            return "get-arhands-configuration/\(userId)"
+            return "user/get-arhands-configuration/\(userId)"
         case let .getDigitalTwinsCamConfiguration(userId):
-            return "get-digital-twins-configuration/\(userId)"
+            return "user/get-digital-twins-configuration/\(userId)"
         case let .getDroneConfiguration(userId):
-            return "get-drone-configuration/\(userId)"
+            return "user/get-drone-configuration/\(userId)"
         case .updateStreetCamConfiguration:
-            return "update-street-cam-configuration"
+            return "user/update-street-cam-configuration"
         case .updateScan3DConfiguration:
-            return "update-scan3d-configuration"
+            return "user/update-scan3d-configuration"
         case .updateVideoCallConfiguration:
-            return "update-videocall-configuration"
+            return "user/update-videocall-configuration"
         case .updateARHandsConfiguration:
-            return "update-arhands-configuration"
+            return "user/update-arhands-configuration"
         case .updateDigitalTwinsCamConfiguration:
-            return "update-digital-twins-configuration"
+            return "user/update-digital-twins-configuration"
         case .updateDroneConfiguration:
-            return "update-drone-configuration"
+            return "user/update-drone-configuration"
         }
     }
 
