@@ -197,6 +197,19 @@
 		EA4AE48B2B7505D100B5A89F /* TabBarInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE48A2B7505D100B5A89F /* TabBarInteractorProtocol.swift */; };
 		EA4AE48D2B75065300B5A89F /* TabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE48C2B75065300B5A89F /* TabBarInteractor.swift */; };
 		EA4AE4942B75136600B5A89F /* UpdateStreetcamConfigurationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE4932B75136600B5A89F /* UpdateStreetcamConfigurationUseCase.swift */; };
+		EA4AE4972B751A7000B5A89F /* SendbirdChatSDK in Frameworks */ = {isa = PBXBuildFile; productRef = EA4AE4962B751A7000B5A89F /* SendbirdChatSDK */; };
+		EA4AE4992B751B8300B5A89F /* AppDelegate+Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE4982B751B8300B5A89F /* AppDelegate+Chat.swift */; };
+		EA4AE4B62B751CBA00B5A89F /* ChatRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE4A32B751CB900B5A89F /* ChatRoute.swift */; };
+		EA4AE4B72B751CBA00B5A89F /* ChatAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE4A52B751CB900B5A89F /* ChatAssembler.swift */; };
+		EA4AE4B82B751CBA00B5A89F /* ChatAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE4A62B751CB900B5A89F /* ChatAssemblerProtocol.swift */; };
+		EA4AE4B92B751CBA00B5A89F /* ChannelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE4A92B751CB900B5A89F /* ChannelModel.swift */; };
+		EA4AE4BA2B751CBA00B5A89F /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE4AC2B751CBA00B5A89F /* ChatViewModel.swift */; };
+		EA4AE4BB2B751CBA00B5A89F /* ChatViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE4AD2B751CBA00B5A89F /* ChatViewModelProtocol.swift */; };
+		EA4AE4BC2B751CBA00B5A89F /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE4AF2B751CBA00B5A89F /* ChatView.swift */; };
+		EA4AE4BD2B751CBA00B5A89F /* ChatInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE4B12B751CBA00B5A89F /* ChatInteractor.swift */; };
+		EA4AE4BE2B751CBA00B5A89F /* ChatInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE4B22B751CBA00B5A89F /* ChatInteractorProtocol.swift */; };
+		EA4AE4BF2B751CBA00B5A89F /* ChatRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE4B42B751CBA00B5A89F /* ChatRouter.swift */; };
+		EA4AE4C02B751CBA00B5A89F /* ChatRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE4B52B751CBA00B5A89F /* ChatRouterProtocol.swift */; };
 		EA50A0842B0BC77F0042B238 /* PlansPagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA50A0712B0BC77F0042B238 /* PlansPagesModel.swift */; };
 		EA50A0852B0BC77F0042B238 /* PlansPagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA50A0742B0BC77F0042B238 /* PlansPagesViewModel.swift */; };
 		EA50A0862B0BC77F0042B238 /* PlansPagesViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA50A0752B0BC77F0042B238 /* PlansPagesViewModelProtocol.swift */; };
@@ -683,6 +696,18 @@
 		EA4AE48A2B7505D100B5A89F /* TabBarInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarInteractorProtocol.swift; sourceTree = "<group>"; };
 		EA4AE48C2B75065300B5A89F /* TabBarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarInteractor.swift; sourceTree = "<group>"; };
 		EA4AE4932B75136600B5A89F /* UpdateStreetcamConfigurationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStreetcamConfigurationUseCase.swift; sourceTree = "<group>"; };
+		EA4AE4982B751B8300B5A89F /* AppDelegate+Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Chat.swift"; sourceTree = "<group>"; };
+		EA4AE4A32B751CB900B5A89F /* ChatRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoute.swift; sourceTree = "<group>"; };
+		EA4AE4A52B751CB900B5A89F /* ChatAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatAssembler.swift; sourceTree = "<group>"; };
+		EA4AE4A62B751CB900B5A89F /* ChatAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA4AE4A92B751CB900B5A89F /* ChannelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelModel.swift; sourceTree = "<group>"; };
+		EA4AE4AC2B751CBA00B5A89F /* ChatViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		EA4AE4AD2B751CBA00B5A89F /* ChatViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA4AE4AF2B751CBA00B5A89F /* ChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		EA4AE4B12B751CBA00B5A89F /* ChatInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatInteractor.swift; sourceTree = "<group>"; };
+		EA4AE4B22B751CBA00B5A89F /* ChatInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatInteractorProtocol.swift; sourceTree = "<group>"; };
+		EA4AE4B42B751CBA00B5A89F /* ChatRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRouter.swift; sourceTree = "<group>"; };
+		EA4AE4B52B751CBA00B5A89F /* ChatRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRouterProtocol.swift; sourceTree = "<group>"; };
 		EA50A0712B0BC77F0042B238 /* PlansPagesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlansPagesModel.swift; sourceTree = "<group>"; };
 		EA50A0742B0BC77F0042B238 /* PlansPagesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlansPagesViewModel.swift; sourceTree = "<group>"; };
 		EA50A0752B0BC77F0042B238 /* PlansPagesViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlansPagesViewModelProtocol.swift; sourceTree = "<group>"; };
@@ -958,6 +983,7 @@
 			files = (
 				EA890A262B61ECFB00FC369B /* Networking in Frameworks */,
 				DFD0945A60FA5B637D89BC1D /* Pods_WalkyCam.framework in Frameworks */,
+				EA4AE4972B751A7000B5A89F /* SendbirdChatSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1287,6 +1313,7 @@
 			isa = PBXGroup;
 			children = (
 				56DADB262AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift */,
+				EA4AE4982B751B8300B5A89F /* AppDelegate+Chat.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1612,6 +1639,7 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				EA4AE49A2B751C9A00B5A89F /* Chat */,
 				EA94A5162B7160EF00EC3037 /* ServiceDetails */,
 				EA57A7AF2B6C2C04006247DD /* AddPeopleTransmission */,
 				EA57A7852B6C1536006247DD /* CammerDetails */,
@@ -2554,6 +2582,104 @@
 				EA4AE4932B75136600B5A89F /* UpdateStreetcamConfigurationUseCase.swift */,
 			);
 			path = UseCase;
+			sourceTree = "<group>";
+		};
+		EA4AE49A2B751C9A00B5A89F /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				EA4AE4A12B751CB900B5A89F /* Configuration */,
+				EA4AE4A72B751CB900B5A89F /* Domain */,
+				EA4AE4AA2B751CBA00B5A89F /* Module */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		EA4AE4A12B751CB900B5A89F /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA4AE4A22B751CB900B5A89F /* Route */,
+				EA4AE4A42B751CB900B5A89F /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA4AE4A22B751CB900B5A89F /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA4AE4A32B751CB900B5A89F /* ChatRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA4AE4A42B751CB900B5A89F /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA4AE4A52B751CB900B5A89F /* ChatAssembler.swift */,
+				EA4AE4A62B751CB900B5A89F /* ChatAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EA4AE4A72B751CB900B5A89F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA4AE4A82B751CB900B5A89F /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA4AE4A82B751CB900B5A89F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA4AE4A92B751CB900B5A89F /* ChannelModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA4AE4AA2B751CBA00B5A89F /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA4AE4AB2B751CBA00B5A89F /* ViewModel */,
+				EA4AE4AE2B751CBA00B5A89F /* View */,
+				EA4AE4B02B751CBA00B5A89F /* Interactor */,
+				EA4AE4B32B751CBA00B5A89F /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA4AE4AB2B751CBA00B5A89F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA4AE4AC2B751CBA00B5A89F /* ChatViewModel.swift */,
+				EA4AE4AD2B751CBA00B5A89F /* ChatViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA4AE4AE2B751CBA00B5A89F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA4AE4AF2B751CBA00B5A89F /* ChatView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA4AE4B02B751CBA00B5A89F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA4AE4B12B751CBA00B5A89F /* ChatInteractor.swift */,
+				EA4AE4B22B751CBA00B5A89F /* ChatInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EA4AE4B32B751CBA00B5A89F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA4AE4B42B751CBA00B5A89F /* ChatRouter.swift */,
+				EA4AE4B52B751CBA00B5A89F /* ChatRouterProtocol.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		EA50A0682B0BC7590042B238 /* PlansPages */ = {
@@ -4680,6 +4806,7 @@
 			name = WalkyCam;
 			packageProductDependencies = (
 				EA890A252B61ECFB00FC369B /* Networking */,
+				EA4AE4962B751A7000B5A89F /* SendbirdChatSDK */,
 			);
 			productName = WalkyCam;
 			productReference = 5637A8122AD5DD72000586DF /* WalkyCam.app */;
@@ -4755,6 +4882,9 @@
 				en,
 			);
 			mainGroup = 5637A8092AD5DD71000586DF;
+			packageReferences = (
+				EA4AE4952B751A7000B5A89F /* XCRemoteSwiftPackageReference "sendbird-chat-sdk-ios" */,
+			);
 			productRefGroup = 5637A8132AD5DD72000586DF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -4910,6 +5040,7 @@
 			files = (
 				EA0E40BC2AF70E86002B7437 /* CashWalletViewModel.swift in Sources */,
 				EA910FF72ADCBCC000584B98 /* MenuView.swift in Sources */,
+				EA4AE4992B751B8300B5A89F /* AppDelegate+Chat.swift in Sources */,
 				EAD048682AE22C530096E6AB /* RegistrationPlansModel.swift in Sources */,
 				EA172AFF2AF06BDE00EB1514 /* ConfirmMailRouterProtocol.swift in Sources */,
 				EA910FCD2ADC495700584B98 /* TabBarRouterProtocol.swift in Sources */,
@@ -4961,6 +5092,7 @@
 				EA1FD19C2B1E8F91000E583D /* JitsiMeetView.swift in Sources */,
 				EA60838C2B01CD0A00295069 /* ShopTabAssembler.swift in Sources */,
 				EA50A08A2B0BC77F0042B238 /* PlansPagesRouterProtocol.swift in Sources */,
+				EA4AE4BD2B751CBA00B5A89F /* ChatInteractor.swift in Sources */,
 				EA4164F72AE4B6F7008CE66A /* ComparePlansRouter.swift in Sources */,
 				EA94A5302B7160EF00EC3037 /* ServiceDetailsViewModelProtocol.swift in Sources */,
 				EA5E1D712AD7167300738A8F /* LinkButtonStyle.swift in Sources */,
@@ -4968,6 +5100,7 @@
 				EA94A5312B7160EF00EC3037 /* ServiceDetailsView.swift in Sources */,
 				56A552582B2F6E3D006B1B17 /* StreetCamMenuViewModel.swift in Sources */,
 				EA910F952ADA06F500584B98 /* RegistrationRouterProtocol.swift in Sources */,
+				EA4AE4B62B751CBA00B5A89F /* ChatRoute.swift in Sources */,
 				EA282E542AE952F700B90920 /* ProfileModel.swift in Sources */,
 				EA91101E2ADDADE100584B98 /* HomeInteractorProtocol.swift in Sources */,
 				EAA1E6442AFB03FD00A42174 /* CashTabRouterProtocol.swift in Sources */,
@@ -5010,6 +5143,7 @@
 				EA57A7AB2B6C1558006247DD /* CammerDetailsAssembler.swift in Sources */,
 				EA0E40BD2AF70E86002B7437 /* CashWalletView.swift in Sources */,
 				EA94A5342B7160EF00EC3037 /* ServiceDetailsRouter.swift in Sources */,
+				EA4AE4BF2B751CBA00B5A89F /* ChatRouter.swift in Sources */,
 				EA6083642B01981800295069 /* CryptoDetailsViewModel.swift in Sources */,
 				EA94A52C2B7160EF00EC3037 /* ServiceDetailsRoute.swift in Sources */,
 				EA47D0E02B0FAE6500E5C4FC /* PlansComparisonPageView.swift in Sources */,
@@ -5038,6 +5172,7 @@
 				EAD0486B2AE22C530096E6AB /* RegistrationPlansViewModel.swift in Sources */,
 				EA1FD1BE2B1E932F000E583D /* VideoCallRoomRouter.swift in Sources */,
 				56A5525C2B2F6E3D006B1B17 /* StreetCamMenuInteractor.swift in Sources */,
+				EA4AE4C02B751CBA00B5A89F /* ChatRouterProtocol.swift in Sources */,
 				EA6083B32B01D9E100295069 /* GalleryAssembler.swift in Sources */,
 				EA94A5352B7160EF00EC3037 /* ServiceDetailsRouterProtocol.swift in Sources */,
 				EA2F93FC2B62CED700E1C146 /* LoginInteractor.swift in Sources */,
@@ -5076,6 +5211,7 @@
 				EA172B262AF06EF600EB1514 /* StartupRouter.swift in Sources */,
 				EA8EF8D32B67E14300136D1F /* UserSession.swift in Sources */,
 				EA172B1E2AF06EF600EB1514 /* StartupRoute.swift in Sources */,
+				EA4AE4BB2B751CBA00B5A89F /* ChatViewModelProtocol.swift in Sources */,
 				EA15B59B2AD6E44D00C03407 /* LoginView.swift in Sources */,
 				EA6083692B01981800295069 /* CryptoDetailsRouterProtocol.swift in Sources */,
 				EA6083B82B01D9E100295069 /* GalleryInteractorProtocol.swift in Sources */,
@@ -5144,6 +5280,7 @@
 				EA6083DA2B01DBDF00295069 /* GalleryPhotosViewModelProtocol.swift in Sources */,
 				EA4AE4882B75011B00B5A89F /* FetchUserConfigurationsUseCase.swift in Sources */,
 				EA910FD22ADC499500584B98 /* TabBarBuilder.swift in Sources */,
+				EA4AE4BE2B751CBA00B5A89F /* ChatInteractorProtocol.swift in Sources */,
 				EA5E1D762AD716D200738A8F /* ButtonStyleDescriptor.swift in Sources */,
 				56A552572B2F6E3D006B1B17 /* StreetCamMenuAssembler.swift in Sources */,
 				EA172AF82AF06BDE00EB1514 /* ConfirmMailAssembler.swift in Sources */,
@@ -5197,11 +5334,13 @@
 				EA282EDA2AEB56B800B90920 /* FunctionData.swift in Sources */,
 				EA4164F92AE4B6F7008CE66A /* ComparePlansModel.swift in Sources */,
 				EA4AE48D2B75065300B5A89F /* TabBarInteractor.swift in Sources */,
+				EA4AE4BC2B751CBA00B5A89F /* ChatView.swift in Sources */,
 				EA172B1D2AF06EF600EB1514 /* StartupModel.swift in Sources */,
 				EA910F5B2AD9B01300584B98 /* OnboardingAssembler.swift in Sources */,
 				EA910F5C2AD9B01300584B98 /* OnboardingAssemblerProtocol.swift in Sources */,
 				56A5525A2B2F6E3D006B1B17 /* StreetCamMenuView.swift in Sources */,
 				EA910FC42ADC495700584B98 /* TabBarRoute.swift in Sources */,
+				EA4AE4B82B751CBA00B5A89F /* ChatAssemblerProtocol.swift in Sources */,
 				EADBE1012AE823BA00FED579 /* NotificationItemView.swift in Sources */,
 				EA6083B12B01D9E100295069 /* GalleryRoute.swift in Sources */,
 				EA6083432AFD58A900295069 /* CryptoTabInteractor.swift in Sources */,
@@ -5237,6 +5376,7 @@
 				EA0E40C42AF70E86002B7437 /* CashWalletAssemblerProtocol.swift in Sources */,
 				EA60833E2AFD58A900295069 /* CryptoTabAssembler.swift in Sources */,
 				EADB5CAC2B190819005863E1 /* VideoCallRouterProtocol.swift in Sources */,
+				EA4AE4B72B751CBA00B5A89F /* ChatAssembler.swift in Sources */,
 				EA8EF8D02B67E12400136D1F /* UserSessionProtocol.swift in Sources */,
 				EAD048712AE22C530096E6AB /* RegistrationPlansRoute.swift in Sources */,
 				EA910F8D2ADA06F500584B98 /* RegistrationAssembler.swift in Sources */,
@@ -5281,6 +5421,7 @@
 				EAD0486E2AE22C530096E6AB /* RegistrationPlansInteractorProtocol.swift in Sources */,
 				EA910F612AD9B01300584B98 /* OnboardingView.swift in Sources */,
 				EAA1E63D2AFB03FD00A42174 /* CashTabAssemblerProtocol.swift in Sources */,
+				EA4AE4B92B751CBA00B5A89F /* ChannelModel.swift in Sources */,
 				EA57A7CF2B6C2C31006247DD /* AddPeopleTransmissionViewModel.swift in Sources */,
 				EA4165432AE706C6008CE66A /* NotificationsView.swift in Sources */,
 				56FEECF92B5C802C003FA686 /* SearchWalkyCammerRouterProtocol.swift in Sources */,
@@ -5345,6 +5486,7 @@
 				EA4165422AE706C6008CE66A /* NotificationsViewModel.swift in Sources */,
 				EA910FC92ADC495700584B98 /* TabBarViewModel.swift in Sources */,
 				EA94A5362B7160EF00EC3037 /* ServiceDetailsModel.swift in Sources */,
+				EA4AE4BA2B751CBA00B5A89F /* ChatViewModel.swift in Sources */,
 				56A5525B2B2F6E3D006B1B17 /* StreetCamMenuInteractorProtocol.swift in Sources */,
 				56A5525D2B2F6E3D006B1B17 /* StreetCamMenuRouterProtocol.swift in Sources */,
 				EA72199E2B05612900BE2D93 /* WalkyBotRouter.swift in Sources */,
@@ -5701,7 +5843,23 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		EA4AE4952B751A7000B5A89F /* XCRemoteSwiftPackageReference "sendbird-chat-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sendbird/sendbird-chat-sdk-ios";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
+		EA4AE4962B751A7000B5A89F /* SendbirdChatSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA4AE4952B751A7000B5A89F /* XCRemoteSwiftPackageReference "sendbird-chat-sdk-ios" */;
+			productName = SendbirdChatSDK;
+		};
 		EA890A252B61ECFB00FC369B /* Networking */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Networking;

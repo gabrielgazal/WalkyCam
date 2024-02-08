@@ -4,6 +4,12 @@ final class HomeRouter: Router, HomeRouterProtocol {
 
     // MARK: - Public API
 
+    func routeToChat() {
+        navigateTo(
+            ChatRoute(isPresented: isNavigating)
+        )
+    }
+
     func routeToNotifications() {
         navigateTo(
             NotificationsRoute(isPresented: isNavigating)

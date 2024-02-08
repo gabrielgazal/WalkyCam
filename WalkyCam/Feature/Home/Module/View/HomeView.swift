@@ -33,7 +33,8 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                        spacing: Tokens.Size.Spacing.large) {
                     ProfileHeaderView(name: viewModel.homeData.profileInfo.name,
                                       imageURL: URL(string: viewModel.homeData.profileInfo.imageURL),
-                                      actions: .init(notificationsAction: handleNotificationsAction,
+                                      actions: .init(chatAction: handleChatAction,
+                                                     notificationsAction: handleNotificationsAction,
                                                      profileAction: handleProfileAction))
                     .padding(.horizontal, Tokens.Size.Spacing.large)
                     WalkyBotItemView(action: {
@@ -181,6 +182,10 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
 
     private func isLastRecentsItem(itemId: Int) -> Bool {
         return itemId == (viewModel.homeData.recentFunctions.count - 1)
+    }
+
+    private func handleChatAction() {
+        router.routeToChat()
     }
 
     private func handleNotificationsAction() {

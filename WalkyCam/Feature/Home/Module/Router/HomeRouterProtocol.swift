@@ -1,6 +1,7 @@
 import SwiftUI
 
 protocol HomeRouterProtocol: Router {
+    func routeToChat()
     func routeToNotifications()
     func routeToProfile()
     func routeToWalkyBot()

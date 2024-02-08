@@ -16,12 +16,15 @@ struct ProfileHeaderView: View {
     // MARK: - Inner Types
 
     public struct Actions {
+        let chatAction: (() -> Void)?
         let notificationsAction: (() -> Void)?
         let profileAction: (() -> Void)?
         public init(
+            chatAction: (() -> Void)? = nil,
             notificationsAction: (() -> Void)? = nil,
             profileAction: (() -> Void)? = nil
         ) {
+            self.chatAction = chatAction
             self.notificationsAction = notificationsAction
             self.profileAction = profileAction
         }
@@ -49,6 +52,9 @@ struct ProfileHeaderView: View {
             Image(Asset.Icons.mail.name)
                 .resizable()
                 .frame(width: Tokens.Size.Font.xlarge, height: Tokens.Size.Font.xlarge)
+                .onTapGesture {
+                    actions.chatAction?()
+                }
             Image(systemName: "bell.fill")
                 .resizable()
                 .frame(width: Tokens.Size.Font.xlarge, height: Tokens.Size.Font.xlarge)
