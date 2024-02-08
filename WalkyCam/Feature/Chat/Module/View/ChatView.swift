@@ -38,11 +38,17 @@ struct ChatView<ViewModel:ChatViewModelProtocol, Router: ChatRouterProtocol>: Vi
                 ForEach(viewModel.channels, id: \.self) { item in
                     channelItem(item)
                         .background(item.chatOpened ?  Color.blanco : Color.blancoGris)
+                        .onTapGesture {
+                            if let channel = viewModel.handleChatSelection(item.id) {
+                                router.routeToChatDetails(channel: channel)
+                            }
+                        }
                     Divider()
                         .padding(.horizontal, Tokens.Size.Spacing.large)
                 }
             }
         }
+        .navigation(router)
     }
 
     private func channelItem(_ channel: ChannelModel) -> some View {

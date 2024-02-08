@@ -8,12 +8,19 @@ final class ChatViewModel: ChatViewModelProtocol {
     private let interactor: ChatInteractorProtocol
     private var userID = "testegazodia123123"
     @Published var channels: [ChannelModel] = []
+    @State private var openChannels: [OpenChannel] = []
 
     // MARK: - Initialization
 
     init(interactor: ChatInteractorProtocol = ChatInteractor()) {
         self.interactor = interactor
         self.initializeUser()
+    }
+
+    // MARK: - Public API
+
+    func handleChatSelection(_ id: String) -> OpenChannel? {
+        return openChannels.first(where: { $0.id == id })
     }
 
     // MARK: - Private Methods
@@ -37,6 +44,7 @@ final class ChatViewModel: ChatViewModelProtocol {
                 print("Erros nos canais")
                 return
             }
+            self.openChannels = channels ?? []
             let mappedChannels = channels?.compactMap { channel in
                 return ChannelModel(id: channel.id,
                                     title: channel.name,

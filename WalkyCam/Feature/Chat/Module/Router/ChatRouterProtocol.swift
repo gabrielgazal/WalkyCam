@@ -1,6 +1,7 @@
 import SwiftUI
+import SendbirdChatSDK
 
 protocol ChatRouterProtocol: Router {
-    func routeToSomething()
+    func routeToChatDetails(channel: OpenChannel)
 }
 

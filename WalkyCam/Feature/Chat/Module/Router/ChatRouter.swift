@@ -1,12 +1,14 @@
 import SwiftUI
+import SendbirdChatSDK
 
 final class ChatRouter: Router, ChatRouterProtocol {
 
     // MARK: - Public API
 
-    #warning("Example function. Rename or remove it")
-    func routeToSomething() { 
-
+    func routeToChatDetails(channel: OpenChannel) {
+        navigateTo(
+            ChatDetailsRoute(isPresented: isNavigating, channel: channel)
+        )
     }
 }
 

@@ -1,0 +1,3 @@
+protocol ChatDetailsInteractorProtocol {
+    func someFunction()
+}
