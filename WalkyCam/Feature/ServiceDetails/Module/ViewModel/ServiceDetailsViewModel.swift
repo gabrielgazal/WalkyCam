@@ -5,24 +5,19 @@ final class ServiceDetailsViewModel: ServiceDetailsViewModelProtocol {
     // MARK: - Dependencies
 
     private let interactor: ServiceDetailsInteractorProtocol
+    var onCancelAction: (() -> Void)?
 
     // MARK: - Initialization
 
-    init(interactor: ServiceDetailsInteractorProtocol = ServiceDetailsInteractor()) {
+    init(interactor: ServiceDetailsInteractorProtocol = ServiceDetailsInteractor(),
+         onCancelAction: (() -> Void)? = nil) {
         self.interactor = interactor
+        self.onCancelAction = onCancelAction
     }
 
     // MARK: - Public API
 
-    #warning("Example function. Rename or remove it")
-    func someAction() {
-
-    }
-
-    // MARK: - Private Methods
-
-    #warning("Example function. Rename or remove it")
-    private func somePrivateMethod() {
-
+    func cancelAction() {
+        onCancelAction?()
     }
 }

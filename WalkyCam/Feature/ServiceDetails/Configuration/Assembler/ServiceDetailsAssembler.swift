@@ -10,7 +10,8 @@ final class ServiceDetailsAssembler: ServiceDetailsAssemblerProtocol {
         let interactor = ServiceDetailsInteractor(
             useCases: .init()
         )
-        let viewModel = ServiceDetailsViewModel(interactor: interactor)
+        let viewModel = ServiceDetailsViewModel(interactor: interactor,
+                                                onCancelAction: route.onCancelAction)
         let view = ServiceDetailsView(viewModel: viewModel, router: router)
 
         return view

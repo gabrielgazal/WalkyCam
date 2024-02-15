@@ -54,7 +54,10 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
                 WCUIButton(title: "Cancelar",
                            style: .standard,
                            descriptor: BlackButtonStyleDescriptor(),
-                           action: {})
+                           action: {
+                    router.dismiss()
+                    viewModel.cancelAction()
+                })
             }
             .padding(Tokens.Size.Spacing.large)
         }

@@ -43,7 +43,16 @@ struct CammerDetailsView<ViewModel:CammerDetailsViewModelProtocol, Router: Camme
                                     bearing: 0,
                                     pitch: 0
                                 )
-                            )
+                            ) {
+                                MapViewAnnotation(
+                                    coordinate: .init(
+                                        latitude: viewModel.cammerData.coordinates.latitude,
+                                        longitude: viewModel.cammerData.coordinates.longitude
+                                    )
+                                ) {
+                                    Asset.Icons.wIcon.swiftUIImage
+                                }
+                            }
                             .frame(height: 170)
                             .cornerRadius(Tokens.Size.Border.Radius.medium)
                             .disabled(true)

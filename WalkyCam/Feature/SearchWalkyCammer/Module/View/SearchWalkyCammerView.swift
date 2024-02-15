@@ -103,7 +103,20 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
         return ZStack {
             Map(
                 viewport: $viewModel.userLocation
-            )
+            ) {
+                if let values = viewModel.walkyCammers.loadedValue {
+                    ForEvery(values, id: \.self) { item in
+                        MapViewAnnotation(
+                            coordinate: .init(
+                                latitude: item.coordinates.latitude,
+                                longitude: item.coordinates.longitude
+                            )
+                        ) {
+                            Asset.Icons.wIcon.swiftUIImage
+                        }
+                    }
+                }
+            }
             .disabled(true)
             VStack {
                 TextInputView(

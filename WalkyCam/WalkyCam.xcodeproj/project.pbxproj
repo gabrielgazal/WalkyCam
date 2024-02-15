@@ -167,6 +167,18 @@
 		EA282ED62AEB532800B90920 /* RecentFunctionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282ED52AEB532800B90920 /* RecentFunctionsCell.swift */; };
 		EA282EDA2AEB56B800B90920 /* FunctionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282ED92AEB56B800B90920 /* FunctionData.swift */; };
 		EA282EDD2AEB572700B90920 /* FunctionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282EDC2AEB572700B90920 /* FunctionCell.swift */; };
+		EA2C4C1F2B7E5C4300F1EE26 /* DroneOnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C4C0C2B7E5C4200F1EE26 /* DroneOnboardingModel.swift */; };
+		EA2C4C202B7E5C4300F1EE26 /* DroneOnboardingViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C4C0F2B7E5C4200F1EE26 /* DroneOnboardingViewModelProtocol.swift */; };
+		EA2C4C212B7E5C4300F1EE26 /* DroneOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C4C102B7E5C4200F1EE26 /* DroneOnboardingViewModel.swift */; };
+		EA2C4C222B7E5C4300F1EE26 /* DroneOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C4C122B7E5C4200F1EE26 /* DroneOnboardingView.swift */; };
+		EA2C4C232B7E5C4300F1EE26 /* DroneOnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C4C142B7E5C4200F1EE26 /* DroneOnboardingInteractor.swift */; };
+		EA2C4C242B7E5C4300F1EE26 /* DroneOnboardingInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C4C152B7E5C4200F1EE26 /* DroneOnboardingInteractorProtocol.swift */; };
+		EA2C4C252B7E5C4300F1EE26 /* DroneOnboardingRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C4C172B7E5C4200F1EE26 /* DroneOnboardingRouterProtocol.swift */; };
+		EA2C4C262B7E5C4300F1EE26 /* DroneOnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C4C182B7E5C4200F1EE26 /* DroneOnboardingRouter.swift */; };
+		EA2C4C272B7E5C4300F1EE26 /* DroneOnboardingRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C4C1B2B7E5C4300F1EE26 /* DroneOnboardingRoute.swift */; };
+		EA2C4C282B7E5C4300F1EE26 /* DroneOnboardingAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C4C1D2B7E5C4300F1EE26 /* DroneOnboardingAssembler.swift */; };
+		EA2C4C292B7E5C4300F1EE26 /* DroneOnboardingAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C4C1E2B7E5C4300F1EE26 /* DroneOnboardingAssemblerProtocol.swift */; };
+		EA2C4C2B2B7E5C9500F1EE26 /* DroneOnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C4C2A2B7E5C9500F1EE26 /* DroneOnboardingPageView.swift */; };
 		EA2F93FA2B62CECD00E1C146 /* LoginInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F93F92B62CECD00E1C146 /* LoginInteractorProtocol.swift */; };
 		EA2F93FC2B62CED700E1C146 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F93FB2B62CED700E1C146 /* LoginInteractor.swift */; };
 		EA4164EE2AE4B6F7008CE66A /* ComparePlansRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164DA2AE4B6F6008CE66A /* ComparePlansRoute.swift */; };
@@ -653,6 +665,18 @@
 		EA282ED52AEB532800B90920 /* RecentFunctionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentFunctionsCell.swift; sourceTree = "<group>"; };
 		EA282ED92AEB56B800B90920 /* FunctionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionData.swift; sourceTree = "<group>"; };
 		EA282EDC2AEB572700B90920 /* FunctionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionCell.swift; sourceTree = "<group>"; };
+		EA2C4C0C2B7E5C4200F1EE26 /* DroneOnboardingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneOnboardingModel.swift; sourceTree = "<group>"; };
+		EA2C4C0F2B7E5C4200F1EE26 /* DroneOnboardingViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneOnboardingViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA2C4C102B7E5C4200F1EE26 /* DroneOnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneOnboardingViewModel.swift; sourceTree = "<group>"; };
+		EA2C4C122B7E5C4200F1EE26 /* DroneOnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneOnboardingView.swift; sourceTree = "<group>"; };
+		EA2C4C142B7E5C4200F1EE26 /* DroneOnboardingInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneOnboardingInteractor.swift; sourceTree = "<group>"; };
+		EA2C4C152B7E5C4200F1EE26 /* DroneOnboardingInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneOnboardingInteractorProtocol.swift; sourceTree = "<group>"; };
+		EA2C4C172B7E5C4200F1EE26 /* DroneOnboardingRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneOnboardingRouterProtocol.swift; sourceTree = "<group>"; };
+		EA2C4C182B7E5C4200F1EE26 /* DroneOnboardingRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneOnboardingRouter.swift; sourceTree = "<group>"; };
+		EA2C4C1B2B7E5C4300F1EE26 /* DroneOnboardingRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneOnboardingRoute.swift; sourceTree = "<group>"; };
+		EA2C4C1D2B7E5C4300F1EE26 /* DroneOnboardingAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneOnboardingAssembler.swift; sourceTree = "<group>"; };
+		EA2C4C1E2B7E5C4300F1EE26 /* DroneOnboardingAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneOnboardingAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA2C4C2A2B7E5C9500F1EE26 /* DroneOnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneOnboardingPageView.swift; sourceTree = "<group>"; };
 		EA2F93F92B62CECD00E1C146 /* LoginInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorProtocol.swift; sourceTree = "<group>"; };
 		EA2F93FB2B62CED700E1C146 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		EA4164DA2AE4B6F6008CE66A /* ComparePlansRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansRoute.swift; sourceTree = "<group>"; };
@@ -1612,6 +1636,7 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				EA2C4C032B7E5C2600F1EE26 /* DroneOnboarding */,
 				EA94A5162B7160EF00EC3037 /* ServiceDetails */,
 				EA57A7AF2B6C2C04006247DD /* AddPeopleTransmission */,
 				EA57A7852B6C1536006247DD /* CammerDetails */,
@@ -2322,6 +2347,105 @@
 				EA172AD82AF0335400EB1514 /* AdvertisementCard.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		EA2C4C032B7E5C2600F1EE26 /* DroneOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+				EA2C4C192B7E5C4300F1EE26 /* Configuration */,
+				EA2C4C0A2B7E5C4200F1EE26 /* Domain */,
+				EA2C4C0D2B7E5C4200F1EE26 /* Module */,
+			);
+			path = DroneOnboarding;
+			sourceTree = "<group>";
+		};
+		EA2C4C0A2B7E5C4200F1EE26 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA2C4C0B2B7E5C4200F1EE26 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA2C4C0B2B7E5C4200F1EE26 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA2C4C0C2B7E5C4200F1EE26 /* DroneOnboardingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA2C4C0D2B7E5C4200F1EE26 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA2C4C0E2B7E5C4200F1EE26 /* ViewModel */,
+				EA2C4C112B7E5C4200F1EE26 /* View */,
+				EA2C4C132B7E5C4200F1EE26 /* Interactor */,
+				EA2C4C162B7E5C4200F1EE26 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA2C4C0E2B7E5C4200F1EE26 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA2C4C0F2B7E5C4200F1EE26 /* DroneOnboardingViewModelProtocol.swift */,
+				EA2C4C102B7E5C4200F1EE26 /* DroneOnboardingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA2C4C112B7E5C4200F1EE26 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA2C4C122B7E5C4200F1EE26 /* DroneOnboardingView.swift */,
+				EA2C4C2A2B7E5C9500F1EE26 /* DroneOnboardingPageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA2C4C132B7E5C4200F1EE26 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA2C4C142B7E5C4200F1EE26 /* DroneOnboardingInteractor.swift */,
+				EA2C4C152B7E5C4200F1EE26 /* DroneOnboardingInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EA2C4C162B7E5C4200F1EE26 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA2C4C172B7E5C4200F1EE26 /* DroneOnboardingRouterProtocol.swift */,
+				EA2C4C182B7E5C4200F1EE26 /* DroneOnboardingRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EA2C4C192B7E5C4300F1EE26 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA2C4C1A2B7E5C4300F1EE26 /* Route */,
+				EA2C4C1C2B7E5C4300F1EE26 /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA2C4C1A2B7E5C4300F1EE26 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA2C4C1B2B7E5C4300F1EE26 /* DroneOnboardingRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA2C4C1C2B7E5C4300F1EE26 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA2C4C1D2B7E5C4300F1EE26 /* DroneOnboardingAssembler.swift */,
+				EA2C4C1E2B7E5C4300F1EE26 /* DroneOnboardingAssemblerProtocol.swift */,
+			);
+			path = Assembler;
 			sourceTree = "<group>";
 		};
 		EA2F93F82B62CEBF00E1C146 /* Interactor */ = {
@@ -4936,6 +5060,7 @@
 				EAA1E6452AFB03FD00A42174 /* CashTabModel.swift in Sources */,
 				EA0E40952AF69771002B7437 /* CashWalletOnboardingAssembler.swift in Sources */,
 				56A552362B2F6135006B1B17 /* WalkyCamerOnboardingModel.swift in Sources */,
+				EA2C4C222B7E5C4300F1EE26 /* DroneOnboardingView.swift in Sources */,
 				EA50A0882B0BC77F0042B238 /* PlansPagesInteractorProtocol.swift in Sources */,
 				EADB5CA42B190819005863E1 /* VideoCallRoute.swift in Sources */,
 				EA5E1D962AD725DF00738A8F /* ProjectColors.swift in Sources */,
@@ -4990,6 +5115,7 @@
 				EA15B59E2AD6E44D00C03407 /* LoginRouter.swift in Sources */,
 				EA282ECC2AEB531100B90920 /* FunctionsView.swift in Sources */,
 				EA60838A2B01CD0A00295069 /* ShopTabRoute.swift in Sources */,
+				EA2C4C202B7E5C4300F1EE26 /* DroneOnboardingViewModelProtocol.swift in Sources */,
 				56A552322B2F6135006B1B17 /* WalkyCamerOnboardingInteractor.swift in Sources */,
 				EA172AD92AF0335400EB1514 /* AdvertisementCard.swift in Sources */,
 				EA4164F12AE4B6F7008CE66A /* ComparePlansViewModel.swift in Sources */,
@@ -5004,6 +5130,7 @@
 				EA910FF02ADCBCC000584B98 /* MenuRoute.swift in Sources */,
 				EA6083452AFD58A900295069 /* CryptoTabRouter.swift in Sources */,
 				EADB5CA92B190819005863E1 /* VideoCallView.swift in Sources */,
+				EA2C4C212B7E5C4300F1EE26 /* DroneOnboardingViewModel.swift in Sources */,
 				EA6083D92B01DBDF00295069 /* GalleryPhotosViewModel.swift in Sources */,
 				EA50A08E2B0BC77F0042B238 /* PlansPagesAssemblerProtocol.swift in Sources */,
 				EA57A7D42B6C2C31006247DD /* AddPeopleTransmissionRouter.swift in Sources */,
@@ -5050,6 +5177,7 @@
 				561FC8B42B5C66F7005B6006 /* WebView+PullToRefresh.swift in Sources */,
 				EA0E408D2AF69771002B7437 /* CashWalletOnboardingViewModelProtocol.swift in Sources */,
 				EA91101C2ADDADE100584B98 /* HomeView.swift in Sources */,
+				EA2C4C272B7E5C4300F1EE26 /* DroneOnboardingRoute.swift in Sources */,
 				EA4AE4942B75136600B5A89F /* UpdateStreetcamConfigurationUseCase.swift in Sources */,
 				EA6083442AFD58A900295069 /* CryptoTabInteractorProtocol.swift in Sources */,
 				EA172B252AF06EF600EB1514 /* StartupInteractorProtocol.swift in Sources */,
@@ -5059,6 +5187,7 @@
 				EA5A87FC2B68002A00BBB7F9 /* RegistrationOutput.swift in Sources */,
 				EA0E40972AF697F0002B7437 /* CashWalletOnboardingPageView.swift in Sources */,
 				56FEECF52B5C802C003FA686 /* SearchWalkyCammerView.swift in Sources */,
+				EA2C4C292B7E5C4300F1EE26 /* DroneOnboardingAssemblerProtocol.swift in Sources */,
 				EA4164F32AE4B6F7008CE66A /* ComparePlansViewModelProtocol.swift in Sources */,
 				EA6083B52B01D9E100295069 /* GalleryViewModel.swift in Sources */,
 				EA5A88042B68039400BBB7F9 /* LoginOutput.swift in Sources */,
@@ -5068,6 +5197,7 @@
 				EA4164FB2AE4B805008CE66A /* ComparePlansPageView.swift in Sources */,
 				EA5E1D7B2AD7174700738A8F /* Button+Extension.swift in Sources */,
 				EA50A08D2B0BC77F0042B238 /* PlansPagesAssembler.swift in Sources */,
+				EA2C4C232B7E5C4300F1EE26 /* DroneOnboardingInteractor.swift in Sources */,
 				EA910F642AD9B01300584B98 /* OnboardingRouter.swift in Sources */,
 				EA6083BA2B01D9E100295069 /* GalleryRouterProtocol.swift in Sources */,
 				EA72199B2B05612900BE2D93 /* WalkyBotInteractor.swift in Sources */,
@@ -5116,6 +5246,7 @@
 				EA6083B72B01D9E100295069 /* GalleryView.swift in Sources */,
 				EA282E592AE952F700B90920 /* ProfileInteractor.swift in Sources */,
 				EA1FD1BC2B1E932F000E583D /* VideoCallRoomInteractor.swift in Sources */,
+				EA2C4C1F2B7E5C4300F1EE26 /* DroneOnboardingModel.swift in Sources */,
 				EA910FFA2ADCBCC000584B98 /* MenuRouter.swift in Sources */,
 				EA57A7A62B6C1558006247DD /* CammerDetailsRouter.swift in Sources */,
 				EA6083412AFD58A900295069 /* CryptoTabViewModelProtocol.swift in Sources */,
@@ -5199,8 +5330,10 @@
 				EA4AE48D2B75065300B5A89F /* TabBarInteractor.swift in Sources */,
 				EA172B1D2AF06EF600EB1514 /* StartupModel.swift in Sources */,
 				EA910F5B2AD9B01300584B98 /* OnboardingAssembler.swift in Sources */,
+				EA2C4C262B7E5C4300F1EE26 /* DroneOnboardingRouter.swift in Sources */,
 				EA910F5C2AD9B01300584B98 /* OnboardingAssemblerProtocol.swift in Sources */,
 				56A5525A2B2F6E3D006B1B17 /* StreetCamMenuView.swift in Sources */,
+				EA2C4C242B7E5C4300F1EE26 /* DroneOnboardingInteractorProtocol.swift in Sources */,
 				EA910FC42ADC495700584B98 /* TabBarRoute.swift in Sources */,
 				EADBE1012AE823BA00FED579 /* NotificationItemView.swift in Sources */,
 				EA6083B12B01D9E100295069 /* GalleryRoute.swift in Sources */,
@@ -5212,6 +5345,7 @@
 				EA910F9E2ADC43B200584B98 /* FullScreenWrapper.swift in Sources */,
 				56DADB272AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift in Sources */,
 				EADB5CA82B190819005863E1 /* VideoCallViewModel.swift in Sources */,
+				EA2C4C252B7E5C4300F1EE26 /* DroneOnboardingRouterProtocol.swift in Sources */,
 				EADB5CAE2B190819005863E1 /* VideoCallModel.swift in Sources */,
 				561FC8BE2B5C67FB005B6006 /* AsyncDataError.swift in Sources */,
 				EA94A52F2B7160EF00EC3037 /* ServiceDetailsViewModel.swift in Sources */,
@@ -5319,6 +5453,7 @@
 				EA0E40C52AF70E86002B7437 /* CashWalletAssembler.swift in Sources */,
 				EA1FD1BB2B1E932F000E583D /* VideoCallRoomView.swift in Sources */,
 				EA910F6B2AD9CCF500584B98 /* PageControl.swift in Sources */,
+				EA2C4C2B2B7E5C9500F1EE26 /* DroneOnboardingPageView.swift in Sources */,
 				EA172B212AF06EF600EB1514 /* StartupViewModel.swift in Sources */,
 				EA282E572AE952F700B90920 /* ProfileView.swift in Sources */,
 				EA4164F52AE4B6F7008CE66A /* ComparePlansInteractor.swift in Sources */,
@@ -5349,6 +5484,7 @@
 				56A5525D2B2F6E3D006B1B17 /* StreetCamMenuRouterProtocol.swift in Sources */,
 				EA72199E2B05612900BE2D93 /* WalkyBotRouter.swift in Sources */,
 				EA910F8F2ADA06F500584B98 /* RegistrationViewModelProtocol.swift in Sources */,
+				EA2C4C282B7E5C4300F1EE26 /* DroneOnboardingAssembler.swift in Sources */,
 				EA41654A2AE706C6008CE66A /* NotificationsAssembler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

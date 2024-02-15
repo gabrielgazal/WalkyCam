@@ -53,14 +53,18 @@ struct AddPeopleTransmissionView<ViewModel:AddPeopleTransmissionViewModelProtoco
                         LinkButton(title: "Invitar luego",
                                    color: .negro,
                                    action: {
-                            router.routeToServiceDetails()
+                            router.routeToServiceDetails(onCancelAction: {
+                                router.dismiss()
+                            })
                         })
                         .frame(width: proxy.size.width / 2)
                         WCUIButton(title: "Siguiente",
                                    style: .standard,
                                    descriptor: BlackButtonStyleDescriptor(),
                                    action: {
-                            router.routeToServiceDetails()
+                            router.routeToServiceDetails(onCancelAction: {
+                                router.dismiss()
+                            })
                         })
                         .frame(width: proxy.size.width / 2)
                     }

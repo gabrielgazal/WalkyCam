@@ -4,9 +4,10 @@ final class AddPeopleTransmissionRouter: Router, AddPeopleTransmissionRouterProt
 
     // MARK: - Public API
 
-    func routeToServiceDetails() {
+    func routeToServiceDetails(onCancelAction: (() -> Void)?) {
         navigateTo(
-            ServiceDetailsRoute(isPresented: isNavigating)
+            ServiceDetailsRoute(isPresented: isNavigating,
+                                onCancelAction: onCancelAction)
         )
     }
 }
