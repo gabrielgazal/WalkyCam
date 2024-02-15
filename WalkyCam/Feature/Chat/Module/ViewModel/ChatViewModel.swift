@@ -26,25 +26,43 @@ final class ChatViewModel: ChatViewModelProtocol {
     // MARK: - Private Methods
 
     private func initializeUser() {
-        SendbirdChat.connect(userId: "testegazodia123123@@!11") { user, error in
+        SendbirdChat.connect(userId: userID) { user, error in
             guard let user = user,
                   error == nil else {
                 print("Connection error")
                 return
             }
             print("Connected")
-            self.getChannels()
+            self.getOpenChannels()
+            self.getGroupChannels()
         }
     }
 
-    private func getChannels() {
+    private func messageTest() {
+        let params = OpenChannelCreateParams()
+        params.name = "Mensageria Gazal"
+        OpenChannel.createChannel(params: params) { channel, error in
+            guard let canal = channel, error == nil else {
+                print("Teste")
+                return
+            }
+            canal.enter { error in
+                guard error == nil else { return }
+            }
+            canal.sendUserMessage("TESTEEE") { message, error in
+                guard let message = message, error == nil else { return }
+            }
+        }
+    }
+
+    private func getOpenChannels() {
         let query = OpenChannel.createOpenChannelListQuery()
         query.loadNextPage { channels, error in
             guard error == nil else {
                 print("Erros nos canais")
                 return
             }
-            self.openChannels = channels ?? []
+            self.openChannels.append(contentsOf: channels ?? [])
             let mappedChannels = channels?.compactMap { channel in
                 return ChannelModel(id: channel.id,
                                     title: channel.name,
@@ -53,7 +71,32 @@ final class ChatViewModel: ChatViewModelProtocol {
                                     chatOpened: false,
                                     lastMessage: "Teste de mensagem")
             }
-            self.channels = mappedChannels ?? []
+            self.channels.append(contentsOf: mappedChannels ?? [])
+        }
+    }
+
+    private func getGroupChannels() {
+        let params = GroupChannelListQueryParams()
+        params.includeEmptyChannel = true
+        params.order = .chronological
+        let query = GroupChannel.createMyGroupChannelListQuery(params: params)
+        let collection = SendbirdChat.createGroupChannelCollection(query: query)
+        if collection?.hasNext == true {
+            collection?.loadMore(completionHandler: { channels, error in
+                guard error == nil else {
+                    print("Erro nas mensagens em grupo")
+                    return
+                }
+                let mappedChannels = channels?.compactMap { channel in
+                    return ChannelModel(id: channel.id,
+                                        title: channel.name,
+                                        image: channel.coverURL,
+                                        timeStamp: String(channel.createdAt),
+                                        chatOpened: false,
+                                        lastMessage: "TEste de mensagem em grupo")
+                }
+                self.channels.append(contentsOf: mappedChannels ?? [])
+            })
         }
     }
 }

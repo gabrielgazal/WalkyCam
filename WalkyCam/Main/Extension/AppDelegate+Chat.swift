@@ -10,7 +10,7 @@ import SendbirdChatSDK
 
 extension AppDelegate {
     func initializeChatSDK() {
-        let initParams = InitParams(applicationId: "7BCB9668-EC01-4AE3-BBA9-5C42E39867E2")
+        let initParams = InitParams(applicationId: "07CFB1E5-4520-4048-A2DF-C615E3DB183F")
         SendbirdChat.initialize(params: initParams)
     }
 }
