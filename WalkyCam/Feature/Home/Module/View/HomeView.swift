@@ -40,6 +40,7 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                         router.routeToWalkyBot()
                     })
                     recentFunctionsView(proxy)
+                        .padding([.leading, .trailing], Tokens.Size.Spacing.regular)
                     remindersView()
                     newsView()
                     favoritesView()

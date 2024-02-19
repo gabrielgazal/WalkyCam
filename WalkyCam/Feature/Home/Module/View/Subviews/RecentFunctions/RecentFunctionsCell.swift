@@ -38,7 +38,7 @@ struct RecentFunctionsCell: View {
                     .multilineTextAlignment(.center)
             }
         }
-        .padding(Tokens.Size.Spacing.regular)
+        .padding(Tokens.Size.Spacing.small)
         .shadow(
             color: lastItem ? .clear : Color.negro.opacity(0.1),
             radius: 10,
