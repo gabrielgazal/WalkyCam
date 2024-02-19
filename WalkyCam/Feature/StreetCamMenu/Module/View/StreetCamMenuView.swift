@@ -41,7 +41,9 @@ struct StreetCamMenuView<ViewModel: StreetCamMenuViewModelProtocol, Router: Stre
                              description: "Programa tu WalkCamer con anterioridad.",
                              buttonTitle: "Reservar",
                              icon: Asset.Icons.calendar.name,
-                             action: {})
+                             action: {
+                    router.routeToBookCammer()
+                })
             }
             horizontalCard(action: {})
         }
@@ -99,7 +101,7 @@ struct StreetCamMenuView<ViewModel: StreetCamMenuViewModelProtocol, Router: Stre
                 .font(.projectFont(size: Tokens.Size.Font.regular))
             HStack(spacing: Tokens.Size.Spacing.regular) {
                 TextInputView(text: .constant(""),
-                              placeholder: "Código de videollamada")
+                              placeholder: "Ingresar código")
                 WCUIButton(title: "Unirme",
                            style: .outline,
                            descriptor: OrangeButtonStyleDescriptor(),

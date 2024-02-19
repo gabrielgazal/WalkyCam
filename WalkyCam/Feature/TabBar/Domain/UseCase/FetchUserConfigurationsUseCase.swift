@@ -108,11 +108,11 @@ extension FetchUserConfigurationsUseCase {
         do {
             let configurations = UserSessionData.Configurations(
                 streetCam: data["street_cam"] ?? false,
-                scan3D: data["street_cam"] ?? false,
-                videoCall: data["street_cam"] ?? false,
-                ARHands: data["street_cam"] ?? false,
-                digitalTwins: data["street_cam"] ?? false,
-                drone: data["street_cam"] ?? false
+                scan3D: data["scan3d"] ?? false,
+                videoCall: data["videocall"] ?? false,
+                ARHands: data["arhands"] ?? false,
+                digitalTwins: data["digital_twins"] ?? false,
+                drone: data["drone"] ?? false
             )
             var user = try session.user()
             user.configurations = configurations

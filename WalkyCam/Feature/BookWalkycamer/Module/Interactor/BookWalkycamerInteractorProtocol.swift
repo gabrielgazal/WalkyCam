@@ -1,0 +1,3 @@
+protocol BookWalkycamerInteractorProtocol {
+    func someFunction()
+}

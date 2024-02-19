@@ -12,13 +12,16 @@ public struct CheckBoxToggle: View {
     // MARK: - Dependencies
 
     private var model: SelectorModel
+    private var foregroundColor: Color
 
     // MARK: - Initialization
 
     public init(
-        model: SelectorModel
+        model: SelectorModel,
+        foregroundColor: Color = Color.blanco
     ) {
         self.model = model
+        self.foregroundColor = foregroundColor
     }
 
     // MARK: - UIView Body
@@ -30,7 +33,7 @@ public struct CheckBoxToggle: View {
         ) {
             ZStack {
                 RoundedRectangle(cornerRadius: Tokens.Size.Border.Radius.small)
-                    .fill(Color.negro.opacity(0.25))
+                    .fill(foregroundColor == .blanco ? Color.negro.opacity(0.25) : Color.blanco)
                 RoundedRectangle(cornerRadius: Tokens.Size.Border.Radius.small)
                     .stroke(Color.naranja)
                 Image(uiImage: Asset.Icons.check.image)
@@ -42,7 +45,7 @@ public struct CheckBoxToggle: View {
                    height: 24)
             Text(model.value)
                 .font(.projectFont(size: Tokens.Size.Font.small, weight: .bold))
-                .foregroundColor(Color.blanco)
+                .foregroundColor(foregroundColor)
             Spacer()
         }
         .padding(.vertical, Tokens.Size.Spacing.regular)

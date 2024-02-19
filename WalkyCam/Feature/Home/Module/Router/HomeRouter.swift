@@ -25,7 +25,7 @@ final class HomeRouter: Router, HomeRouterProtocol {
     func routeToVideoCall() {
         let seenOnboarding: Bool = (try? UserSession().user().configurations?.streetCam) ?? false
         navigateTo(
-            seenOnboarding ? VideoCallRoute(isPresented: isNavigating) : WalkyCamerOnboardingRoute(isPresented: isNavigating)
+            seenOnboarding ? VideoCallRoute(isPresented: isNavigating) : VideocallOnboardingRoute(isPresented: isNavigating)
         )
     }
 
@@ -39,6 +39,13 @@ final class HomeRouter: Router, HomeRouterProtocol {
         navigateTo(
             WebRoute(isPreseted: isNavigating,
                      webViewURL: "https://vcprojectj4g.com/static/main/")
+        )
+    }
+
+    func routeToDrone() {
+        let seenOnboarding: Bool = (try? UserSession().user().configurations?.drone) ?? false
+        navigateTo(
+            DroneOnboardingRoute(isPresented: isNavigating)
         )
     }
 }

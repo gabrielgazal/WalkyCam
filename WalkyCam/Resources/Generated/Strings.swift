@@ -199,6 +199,16 @@ internal enum L10n {
       internal static let menu = L10n.tr("Localizable", "TabBarBuilder.tab.menu", fallback: "Menú")
     }
   }
+  internal enum VideocallOnboardingView {
+    internal enum Page {
+      /// Crea una nueva reunión o programa para otro dia.
+      /// 
+      /// También puedes unirte a una reunión ingresando el código que te han compartido.
+      internal static let subtitle = L10n.tr("Localizable", "VideocallOnboardingView.Page.subtitle", fallback: "Crea una nueva reunión o programa para otro dia.\n\nTambién puedes unirte a una reunión ingresando el código que te han compartido.")
+      /// Videollamada
+      internal static let title = L10n.tr("Localizable", "VideocallOnboardingView.Page.title", fallback: "Videollamada")
+    }
+  }
   internal enum WalkyBotView {
     /// ¿Qué hacemos hoy?
     internal static let text = L10n.tr("Localizable", "WalkyBotView.text", fallback: "¿Qué hacemos hoy?")

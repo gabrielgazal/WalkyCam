@@ -22,5 +22,11 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
                      webViewURL: "https://vcprojectj4g.com/static/main/")
         )
     }
+
+    func routeToDrone() {
+        navigateTo(
+            DroneOnboardingRoute(isPresented: isNavigating)
+        )
+    }
 }
 

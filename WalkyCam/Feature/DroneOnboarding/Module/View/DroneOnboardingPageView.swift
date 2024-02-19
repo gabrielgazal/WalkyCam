@@ -13,13 +13,14 @@ struct DroneOnboardingPageView: View {
     private var illustration: Image
     private var title: String
     private var description: String
-    private var secondDescription: String?
+    private var secondDescription: [String]?
+    @State private var acceptedTerms: SelectorModel = .init(value: "Acepto todas las condiciones. Leer AQUÍ")
 
     public init(
         illustration: Image,
         title: String,
         description: String,
-        secondDescription: String? = nil
+        secondDescription: [String]? = nil
     ) {
         self.illustration = illustration
         self.title = title
@@ -40,45 +41,58 @@ struct DroneOnboardingPageView: View {
                 .font(.projectFont(size: Tokens.Size.Font.large,
                                    weight: .bold))
                 .foregroundColor(.negro)
-            HStack {
-                if secondDescription != nil {
-                    VStack {
-                        Image(Asset.Icons.danger.name)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 24, height: 24)
-                        Spacer()
-                    }
-                }
-                VStack {
-                    Text(description.toMarkdown())
-                        .font(.projectFont(size: Tokens.Size.Font.medium,
-                                           weight: .medium))
-                        .foregroundColor(.negro)
-                        .lineLimit(nil)
-                    Spacer()
-                }
-            }
-            if let secondDescription = secondDescription {
+            VStack(alignment: .leading) {
                 HStack {
-                    VStack {
-                        Image(Asset.Icons.danger.name)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 24, height: 24)
-                        Spacer()
+                    if secondDescription != nil {
+                        VStack {
+                            Image(Asset.Icons.danger.name)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 24, height: 24)
+                                .multilineTextAlignment(.center)
+                            Spacer()
+                        }
                     }
                     VStack {
-                        Text(secondDescription.toMarkdown())
+                        Text(description.toMarkdown())
                             .font(.projectFont(size: Tokens.Size.Font.medium,
                                                weight: .medium))
                             .foregroundColor(.negro)
                             .lineLimit(nil)
+                            .multilineTextAlignment(.center)
                         Spacer()
                     }
                 }
+                if let secondDescription = secondDescription {
+                    ForEach(secondDescription, id: \.self) { item in
+                        HStack {
+                            VStack {
+                                Image(Asset.Icons.danger.name)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 24, height: 24)
+                                Spacer()
+                            }
+                            VStack {
+                                Text(item.toMarkdown())
+                                    .font(.projectFont(size: Tokens.Size.Font.medium,
+                                                       weight: .medium))
+                                    .foregroundColor(.negro)
+                                    .lineLimit(nil)
+                                Spacer()
+                            }
+                        }
+                    }
+                    HStack(spacing: Tokens.Size.Spacing.small) {
+                        CheckBoxToggle(model: acceptedTerms,
+                                       foregroundColor: Color.negro)
+                            .onTapGesture {
+                                acceptedTerms.isSelected.toggle()
+                            }
+                    }
+                }
+                Spacer()
             }
-            Spacer()
         }
                .padding(Tokens.Size.Spacing.large)
     }
@@ -87,10 +101,14 @@ struct DroneOnboardingPageView: View {
 struct DroneOnboardingPageView_Previews: PreviewProvider {
     static var previews: some View {
         DroneOnboardingPageView(
-            illustration: Asset.Illustrations.camerOnboarding.swiftUIImage,
-            title: L10n.OnboardingView.Page1.title,
-            description: L10n.WalkyCamerOnboardingView.Page2.subtitle1,
-            secondDescription: L10n.WalkyCamerOnboardingView.Page2.subtitle2
+            illustration: Asset.Icons.drone.swiftUIImage,
+            title: "Consideraciones básicas",
+            description: "No se permite volar a mas de 110 m de altura",
+            secondDescription: [
+                "Mantendremos la distancia legalmente regulada con áreas pobladas",
+                "No está permitido el vuelvo en áreas restringidas.",
+                "Si se requiere plan de vuelo, se coordinará con anticipación y con la autoridad aeronautica."
+            ]
         )
     }
 }

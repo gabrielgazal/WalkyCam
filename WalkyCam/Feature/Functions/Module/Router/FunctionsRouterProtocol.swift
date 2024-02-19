@@ -4,4 +4,5 @@ protocol FunctionsRouterProtocol: Router {
     func routeToVideoCall()
     func routeToWalkCamer()
     func routeToARHands()
+    func routeToDrone()
 }

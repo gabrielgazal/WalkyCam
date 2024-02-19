@@ -113,6 +113,9 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
                             )
                         ) {
                             Asset.Icons.wIcon.swiftUIImage
+                                .onTapGesture {
+                                    router.routeToCamerDetail(item)
+                                }
                         }
                     }
                 }

@@ -1,0 +1,3 @@
+protocol MapTabInteractorProtocol {
+    func someFunction()
+}

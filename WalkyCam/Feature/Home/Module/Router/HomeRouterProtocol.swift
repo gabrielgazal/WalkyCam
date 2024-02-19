@@ -7,4 +7,5 @@ protocol HomeRouterProtocol: Router {
     func routeToVideoCall()
     func routeToWalkCamer()
     func routeToARHands()
+    func routeToDrone()
 }

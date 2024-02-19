@@ -9,5 +9,11 @@ final class StreetCamMenuRouter: Router, StreetCamMenuRouterProtocol {
             SearchWalkyCammerRoute(isPresented: isNavigating)
         )
     }
+
+    func routeToBookCammer() {
+        navigateTo(
+            BookWalkycamerRoute(isPresented: isNavigating)
+        )
+    }
 }
 

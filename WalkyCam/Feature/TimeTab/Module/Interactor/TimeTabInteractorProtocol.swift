@@ -1,0 +1,3 @@
+protocol TimeTabInteractorProtocol {
+    func someFunction()
+}

@@ -1,0 +1,3 @@
+protocol CalendarTabInteractorProtocol {
+    func someFunction()
+}

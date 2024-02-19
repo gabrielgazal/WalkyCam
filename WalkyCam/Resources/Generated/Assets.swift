@@ -121,9 +121,11 @@ internal enum Asset {
     internal static let chatBot = ImageAsset(name: "chat-bot")
     internal static let cryptoOnboarding1 = ImageAsset(name: "crypto-onboarding1")
     internal static let cryptoOnboarding2 = ImageAsset(name: "crypto-onboarding2")
+    internal static let droneOnboarding1 = ImageAsset(name: "drone-onboarding1")
     internal static let onboarding1 = ImageAsset(name: "onboarding1")
     internal static let onboarding2 = ImageAsset(name: "onboarding2")
     internal static let onboarding3 = ImageAsset(name: "onboarding3")
+    internal static let videocallOnboarding = ImageAsset(name: "videocall-onboarding")
   }
   internal static let launchScreen = ImageAsset(name: "LaunchScreen")
   internal enum Menu {
