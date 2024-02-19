@@ -18,30 +18,32 @@ struct FlightMenuView<ViewModel:FlightMenuViewModelProtocol, Router: FlightMenuR
     // MARK: - View Body
 
     var body: some View {
-        VStack(alignment: .center,
-               spacing: Tokens.Size.Spacing.regular) {
-            Image(Asset.Icons.drone.name)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 170)
-            Text("Programa tu vuelo")
-                .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .bold))
-                .multilineTextAlignment(.center)
-            Spacer()
-                .frame(height: 30)
-            HStack(spacing: Tokens.Size.Spacing.regular) {
-                verticalCard(title: "BUSCAR",
-                             description: "Localiza tu Piloto más cercano.",
-                             buttonTitle: "Buscar",
-                             icon: Asset.Icons.location.name,
-                             action: {})
-                verticalCard(title: "RESERVAR",
-                             description: "Programa tu Vuelo con anterioridad.",
-                             buttonTitle: "Reservar",
-                             icon: Asset.Icons.calendar.name,
-                             action: {})
+        ScrollView(showsIndicators: false) {
+            VStack(alignment: .center,
+                   spacing: Tokens.Size.Spacing.regular) {
+                Image(Asset.Icons.drone.name)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 170)
+                Text("Programa tu vuelo")
+                    .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .bold))
+                    .multilineTextAlignment(.center)
+                Spacer()
+                    .frame(height: 24)
+                HStack(spacing: Tokens.Size.Spacing.regular) {
+                    verticalCard(title: "BUSCAR",
+                                 description: "Localiza tu Piloto más cercano.",
+                                 buttonTitle: "Buscar",
+                                 icon: Asset.Icons.location.name,
+                                 action: {})
+                    verticalCard(title: "RESERVAR",
+                                 description: "Programa tu Vuelo con anterioridad.",
+                                 buttonTitle: "Reservar",
+                                 icon: Asset.Icons.calendar.name,
+                                 action: {})
+                }
+                horizontalCard(action: {})
             }
-            horizontalCard(action: {})
         }
                .padding(Tokens.Size.Spacing.regular)
                .background(Asset.Fondos.videocallFondo .swiftUIImage
@@ -69,6 +71,7 @@ struct FlightMenuView<ViewModel:FlightMenuViewModelProtocol, Router: FlightMenuR
             Text(description)
                 .font(.projectFont(size: Tokens.Size.Font.regular))
                 .multilineTextAlignment(.center)
+                .lineLimit(3)
             WCUIButton(title: buttonTitle,
                        style: .standard,
                        descriptor: OrangeButtonStyleDescriptor(),
