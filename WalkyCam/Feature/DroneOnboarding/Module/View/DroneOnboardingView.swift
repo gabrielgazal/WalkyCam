@@ -41,10 +41,6 @@ struct DroneOnboardingView<ViewModel:DroneOnboardingViewModelProtocol, Router: D
             .disabled(true)
             ZStack {
                 HStack(spacing: Tokens.Size.Spacing.big) {
-                    LinkButton(title: L10n.CashWalletOnboardingView.Button.skip,
-                               color: .naranja,
-                               action: {})
-                    .frame(maxWidth: .infinity)
                     WCUIButton(
                         title: L10n.CashWalletOnboardingView.Button.next,
                         style: .outline,

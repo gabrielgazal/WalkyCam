@@ -82,6 +82,7 @@ internal enum Asset {
     internal static let ecografia = ImageAsset(name: "ecografia")
     internal static let edit = ImageAsset(name: "edit")
     internal static let engineering = ImageAsset(name: "engineering")
+    internal static let externalHands = ImageAsset(name: "externalHands")
     internal static let eyeDisabledIcon = ImageAsset(name: "eyeDisabledIcon")
     internal static let eyeIcon = ImageAsset(name: "eyeIcon")
     internal static let funciones = ImageAsset(name: "funciones")
@@ -115,8 +116,10 @@ internal enum Asset {
     internal static let translate = ImageAsset(name: "translate")
     internal static let videos = ImageAsset(name: "videos")
     internal static let wIcon = ImageAsset(name: "wIcon")
+    internal static let walkycamerHands = ImageAsset(name: "walkycamerHands")
   }
   internal enum Illustrations {
+    internal static let asistenteRemoto = ImageAsset(name: "Asistente Remoto")
     internal static let camerOnboarding = ImageAsset(name: "camerOnboarding")
     internal static let cammy = ImageAsset(name: "cammy")
     internal static let chatBot = ImageAsset(name: "chat-bot")

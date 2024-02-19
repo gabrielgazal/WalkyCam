@@ -36,9 +36,9 @@ final class HomeRouter: Router, HomeRouterProtocol {
     }
 
     func routeToARHands() {
+        let seenOnboarding: Bool = (try? UserSession().user().configurations?.ARHands) ?? false
         navigateTo(
-            WebRoute(isPreseted: isNavigating,
-                     webViewURL: "https://vcprojectj4g.com/static/main/")
+            seenOnboarding ? ARHandsMenuRoute(isPresented: isNavigating) : ARHandsOnboardingRoute(isPresented: isNavigating)
         )
     }
 

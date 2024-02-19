@@ -1,0 +1,3 @@
+protocol ARHandsMenuInteractorProtocol {
+    func someFunction()
+}

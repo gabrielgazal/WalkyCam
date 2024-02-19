@@ -1,0 +1,3 @@
+protocol ARHandsOnboardingInteractorProtocol {
+    func someFunction()
+}
