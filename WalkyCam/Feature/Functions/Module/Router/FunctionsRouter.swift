@@ -5,8 +5,9 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
     // MARK: - Public API
 
     func routeToVideoCall() {
+        let seenOnboarding: Bool = (try? UserSession().user().configurations?.streetCam) ?? false
         navigateTo(
-            VideoCallRoute(isPresented: isNavigating)
+            seenOnboarding ? VideoCallRoute(isPresented: isNavigating) : VideocallOnboardingRoute(isPresented: isNavigating)
         )
     }
 
@@ -17,9 +18,9 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
     }
 
     func routeToARHands() {
+        let seenOnboarding: Bool = (try? UserSession().user().configurations?.ARHands) ?? false
         navigateTo(
-            WebRoute(isPreseted: isNavigating,
-                     webViewURL: "https://vcprojectj4g.com/static/main/")
+            seenOnboarding ? ARHandsMenuRoute(isPresented: isNavigating) : ARHandsOnboardingRoute(isPresented: isNavigating)
         )
     }
 
