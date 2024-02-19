@@ -23,7 +23,7 @@ struct FlightMenuView<ViewModel:FlightMenuViewModelProtocol, Router: FlightMenuR
             Image(Asset.Icons.drone.name)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 100, height: 100)
+                .frame(width: 170)
             Text("Programa tu vuelo")
                 .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .bold))
                 .multilineTextAlignment(.center)

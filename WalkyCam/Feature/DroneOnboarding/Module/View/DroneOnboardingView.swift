@@ -72,7 +72,9 @@ struct DroneOnboardingView<ViewModel:DroneOnboardingViewModelProtocol, Router: D
                         title: "Acepto términos y condiciones",
                         style: .standard,
                         descriptor: OrangeButtonStyleDescriptor(),
-                        action: {}
+                        action: {
+                            router.routeToFlightMenu()
+                        }
                     )
                     .frame(maxWidth: .infinity)
                     .disabled(!viewModel.acceptedTerms.isSelected)
