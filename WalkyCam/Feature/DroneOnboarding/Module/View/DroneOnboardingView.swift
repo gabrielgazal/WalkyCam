@@ -61,6 +61,13 @@ struct DroneOnboardingView<ViewModel:DroneOnboardingViewModelProtocol, Router: D
                 .animation(.easeInOut, value: viewModel.currentPage)
                 .padding(.horizontal, Tokens.Size.Spacing.regular)
                 VStack(spacing: Tokens.Size.Spacing.regular) {
+                    CheckBoxToggle(model: viewModel.acceptedTerms,
+                                   foregroundColor: Color.negro)
+                    .isHidden(viewModel.currentPage != 1)
+                    .onTapGesture {
+                        viewModel.acceptedTerms.isSelected.toggle()
+                    }
+
                     WCUIButton(
                         title: "Acepto términos y condiciones",
                         style: .standard,
@@ -68,6 +75,7 @@ struct DroneOnboardingView<ViewModel:DroneOnboardingViewModelProtocol, Router: D
                         action: {}
                     )
                     .frame(maxWidth: .infinity)
+                    .disabled(!viewModel.acceptedTerms.isSelected)
                     WCUIButton(
                         title: "Cancelar",
                         style: .standard,

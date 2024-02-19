@@ -1,6 +1,6 @@
 import SwiftUI
 
 protocol DroneOnboardingRouterProtocol: Router {
-    func routeToSomething()
+    func routeToFlightMenu()
 }
 

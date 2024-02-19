@@ -1,0 +1,3 @@
+protocol FlightMenuInteractorProtocol {
+    func someFunction()
+}

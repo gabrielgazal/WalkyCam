@@ -6,6 +6,7 @@ final class DroneOnboardingViewModel: DroneOnboardingViewModelProtocol {
 
     private let interactor: DroneOnboardingInteractorProtocol
     @Published var currentPage: Int = 0
+    @Published var acceptedTerms: SelectorModel = .init(value: "Acepto todas las condiciones. Leer AQUÍ")
 
     // MARK: - Initialization
 

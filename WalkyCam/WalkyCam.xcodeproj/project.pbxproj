@@ -543,6 +543,28 @@
 		EAF47C1A2B830C80003F8B86 /* WalkyCammerListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47C0D2B830C80003F8B86 /* WalkyCammerListRouter.swift */; };
 		EAF47C1B2B830C80003F8B86 /* WalkyCammerListRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47C0E2B830C80003F8B86 /* WalkyCammerListRouterProtocol.swift */; };
 		EAF47C1C2B830C80003F8B86 /* WalkyCammerListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47C112B830C80003F8B86 /* WalkyCammerListModel.swift */; };
+		EAF47C392B838D74003F8B86 /* DroneMenuRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47C262B838D73003F8B86 /* DroneMenuRoute.swift */; };
+		EAF47C3A2B838D74003F8B86 /* DroneMenuAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47C282B838D73003F8B86 /* DroneMenuAssemblerProtocol.swift */; };
+		EAF47C3B2B838D74003F8B86 /* DroneMenuAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47C292B838D73003F8B86 /* DroneMenuAssembler.swift */; };
+		EAF47C3C2B838D74003F8B86 /* DroneMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47C2C2B838D73003F8B86 /* DroneMenuModel.swift */; };
+		EAF47C3D2B838D74003F8B86 /* DroneMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47C2F2B838D73003F8B86 /* DroneMenuViewModel.swift */; };
+		EAF47C3E2B838D74003F8B86 /* DroneMenuViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47C302B838D73003F8B86 /* DroneMenuViewModelProtocol.swift */; };
+		EAF47C3F2B838D74003F8B86 /* DroneMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47C322B838D73003F8B86 /* DroneMenuView.swift */; };
+		EAF47C402B838D74003F8B86 /* DroneMenuInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47C342B838D73003F8B86 /* DroneMenuInteractorProtocol.swift */; };
+		EAF47C412B838D74003F8B86 /* DroneMenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47C352B838D73003F8B86 /* DroneMenuInteractor.swift */; };
+		EAF47C422B838D74003F8B86 /* DroneMenuRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47C372B838D73003F8B86 /* DroneMenuRouterProtocol.swift */; };
+		EAF47C432B838D74003F8B86 /* DroneMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47C382B838D73003F8B86 /* DroneMenuRouter.swift */; };
+		EAF47C812B839308003F8B86 /* FlightMenuRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47C6E2B839308003F8B86 /* FlightMenuRoute.swift */; };
+		EAF47C822B839308003F8B86 /* FlightMenuAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47C702B839308003F8B86 /* FlightMenuAssemblerProtocol.swift */; };
+		EAF47C832B839308003F8B86 /* FlightMenuAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47C712B839308003F8B86 /* FlightMenuAssembler.swift */; };
+		EAF47C842B839308003F8B86 /* FlightMenuViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47C742B839308003F8B86 /* FlightMenuViewModelProtocol.swift */; };
+		EAF47C852B839308003F8B86 /* FlightMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47C752B839308003F8B86 /* FlightMenuViewModel.swift */; };
+		EAF47C862B839308003F8B86 /* FlightMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47C772B839308003F8B86 /* FlightMenuView.swift */; };
+		EAF47C872B839308003F8B86 /* FlightMenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47C792B839308003F8B86 /* FlightMenuInteractor.swift */; };
+		EAF47C882B839308003F8B86 /* FlightMenuInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47C7A2B839308003F8B86 /* FlightMenuInteractorProtocol.swift */; };
+		EAF47C892B839308003F8B86 /* FlightMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47C7C2B839308003F8B86 /* FlightMenuRouter.swift */; };
+		EAF47C8A2B839308003F8B86 /* FlightMenuRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47C7D2B839308003F8B86 /* FlightMenuRouterProtocol.swift */; };
+		EAF47C8B2B839308003F8B86 /* FlightMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47C802B839308003F8B86 /* FlightMenuModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1109,6 +1131,28 @@
 		EAF47C0D2B830C80003F8B86 /* WalkyCammerListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCammerListRouter.swift; sourceTree = "<group>"; };
 		EAF47C0E2B830C80003F8B86 /* WalkyCammerListRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCammerListRouterProtocol.swift; sourceTree = "<group>"; };
 		EAF47C112B830C80003F8B86 /* WalkyCammerListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCammerListModel.swift; sourceTree = "<group>"; };
+		EAF47C262B838D73003F8B86 /* DroneMenuRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneMenuRoute.swift; sourceTree = "<group>"; };
+		EAF47C282B838D73003F8B86 /* DroneMenuAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneMenuAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EAF47C292B838D73003F8B86 /* DroneMenuAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneMenuAssembler.swift; sourceTree = "<group>"; };
+		EAF47C2C2B838D73003F8B86 /* DroneMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneMenuModel.swift; sourceTree = "<group>"; };
+		EAF47C2F2B838D73003F8B86 /* DroneMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneMenuViewModel.swift; sourceTree = "<group>"; };
+		EAF47C302B838D73003F8B86 /* DroneMenuViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneMenuViewModelProtocol.swift; sourceTree = "<group>"; };
+		EAF47C322B838D73003F8B86 /* DroneMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneMenuView.swift; sourceTree = "<group>"; };
+		EAF47C342B838D73003F8B86 /* DroneMenuInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneMenuInteractorProtocol.swift; sourceTree = "<group>"; };
+		EAF47C352B838D73003F8B86 /* DroneMenuInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneMenuInteractor.swift; sourceTree = "<group>"; };
+		EAF47C372B838D73003F8B86 /* DroneMenuRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneMenuRouterProtocol.swift; sourceTree = "<group>"; };
+		EAF47C382B838D73003F8B86 /* DroneMenuRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneMenuRouter.swift; sourceTree = "<group>"; };
+		EAF47C6E2B839308003F8B86 /* FlightMenuRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightMenuRoute.swift; sourceTree = "<group>"; };
+		EAF47C702B839308003F8B86 /* FlightMenuAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightMenuAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EAF47C712B839308003F8B86 /* FlightMenuAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightMenuAssembler.swift; sourceTree = "<group>"; };
+		EAF47C742B839308003F8B86 /* FlightMenuViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightMenuViewModelProtocol.swift; sourceTree = "<group>"; };
+		EAF47C752B839308003F8B86 /* FlightMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightMenuViewModel.swift; sourceTree = "<group>"; };
+		EAF47C772B839308003F8B86 /* FlightMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightMenuView.swift; sourceTree = "<group>"; };
+		EAF47C792B839308003F8B86 /* FlightMenuInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightMenuInteractor.swift; sourceTree = "<group>"; };
+		EAF47C7A2B839308003F8B86 /* FlightMenuInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightMenuInteractorProtocol.swift; sourceTree = "<group>"; };
+		EAF47C7C2B839308003F8B86 /* FlightMenuRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightMenuRouter.swift; sourceTree = "<group>"; };
+		EAF47C7D2B839308003F8B86 /* FlightMenuRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightMenuRouterProtocol.swift; sourceTree = "<group>"; };
+		EAF47C802B839308003F8B86 /* FlightMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightMenuModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1772,6 +1816,8 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				EAF47C442B8392DE003F8B86 /* FlightMenu */,
+				EAF47C1D2B838D54003F8B86 /* DroneMenu */,
 				EAF47BF62B830C31003F8B86 /* WalkyCammerList */,
 				EAF47BCF2B83098B003F8B86 /* MapTab */,
 				EAF47BA82B8306CE003F8B86 /* TimeTab */,
@@ -5516,6 +5562,202 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		EAF47C1D2B838D54003F8B86 /* DroneMenu */ = {
+			isa = PBXGroup;
+			children = (
+				EAF47C242B838D73003F8B86 /* Configuration */,
+				EAF47C2A2B838D73003F8B86 /* Domain */,
+				EAF47C2D2B838D73003F8B86 /* Module */,
+			);
+			path = DroneMenu;
+			sourceTree = "<group>";
+		};
+		EAF47C242B838D73003F8B86 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EAF47C252B838D73003F8B86 /* Route */,
+				EAF47C272B838D73003F8B86 /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EAF47C252B838D73003F8B86 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EAF47C262B838D73003F8B86 /* DroneMenuRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EAF47C272B838D73003F8B86 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EAF47C282B838D73003F8B86 /* DroneMenuAssemblerProtocol.swift */,
+				EAF47C292B838D73003F8B86 /* DroneMenuAssembler.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EAF47C2A2B838D73003F8B86 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EAF47C2B2B838D73003F8B86 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EAF47C2B2B838D73003F8B86 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EAF47C2C2B838D73003F8B86 /* DroneMenuModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EAF47C2D2B838D73003F8B86 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EAF47C2E2B838D73003F8B86 /* ViewModel */,
+				EAF47C312B838D73003F8B86 /* View */,
+				EAF47C332B838D73003F8B86 /* Interactor */,
+				EAF47C362B838D73003F8B86 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EAF47C2E2B838D73003F8B86 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EAF47C2F2B838D73003F8B86 /* DroneMenuViewModel.swift */,
+				EAF47C302B838D73003F8B86 /* DroneMenuViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EAF47C312B838D73003F8B86 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EAF47C322B838D73003F8B86 /* DroneMenuView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EAF47C332B838D73003F8B86 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EAF47C342B838D73003F8B86 /* DroneMenuInteractorProtocol.swift */,
+				EAF47C352B838D73003F8B86 /* DroneMenuInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EAF47C362B838D73003F8B86 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EAF47C372B838D73003F8B86 /* DroneMenuRouterProtocol.swift */,
+				EAF47C382B838D73003F8B86 /* DroneMenuRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EAF47C442B8392DE003F8B86 /* FlightMenu */ = {
+			isa = PBXGroup;
+			children = (
+				EAF47C6C2B839308003F8B86 /* Configuration */,
+				EAF47C7E2B839308003F8B86 /* Domain */,
+				EAF47C722B839308003F8B86 /* Module */,
+			);
+			path = FlightMenu;
+			sourceTree = "<group>";
+		};
+		EAF47C6C2B839308003F8B86 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EAF47C6D2B839308003F8B86 /* Route */,
+				EAF47C6F2B839308003F8B86 /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EAF47C6D2B839308003F8B86 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EAF47C6E2B839308003F8B86 /* FlightMenuRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EAF47C6F2B839308003F8B86 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EAF47C702B839308003F8B86 /* FlightMenuAssemblerProtocol.swift */,
+				EAF47C712B839308003F8B86 /* FlightMenuAssembler.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EAF47C722B839308003F8B86 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EAF47C732B839308003F8B86 /* ViewModel */,
+				EAF47C762B839308003F8B86 /* View */,
+				EAF47C782B839308003F8B86 /* Interactor */,
+				EAF47C7B2B839308003F8B86 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EAF47C732B839308003F8B86 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EAF47C742B839308003F8B86 /* FlightMenuViewModelProtocol.swift */,
+				EAF47C752B839308003F8B86 /* FlightMenuViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EAF47C762B839308003F8B86 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EAF47C772B839308003F8B86 /* FlightMenuView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EAF47C782B839308003F8B86 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EAF47C792B839308003F8B86 /* FlightMenuInteractor.swift */,
+				EAF47C7A2B839308003F8B86 /* FlightMenuInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EAF47C7B2B839308003F8B86 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EAF47C7C2B839308003F8B86 /* FlightMenuRouter.swift */,
+				EAF47C7D2B839308003F8B86 /* FlightMenuRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EAF47C7E2B839308003F8B86 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EAF47C7F2B839308003F8B86 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EAF47C7F2B839308003F8B86 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EAF47C802B839308003F8B86 /* FlightMenuModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -5784,6 +6026,7 @@
 				EA94A5322B7160EF00EC3037 /* ServiceDetailsInteractorProtocol.swift in Sources */,
 				EA910FC62ADC495700584B98 /* TabBarAssemblerProtocol.swift in Sources */,
 				56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */,
+				EAF47C842B839308003F8B86 /* FlightMenuViewModelProtocol.swift in Sources */,
 				EA60833C2AFD58A900295069 /* CryptoTabModel.swift in Sources */,
 				EA41654B2AE706C6008CE66A /* NotificationModel.swift in Sources */,
 				EA910FA22ADC466400584B98 /* WCTabBarItem.swift in Sources */,
@@ -5793,6 +6036,7 @@
 				EA15B5B22AD7072400C03407 /* SnackBarModifier.swift in Sources */,
 				EAA1E6452AFB03FD00A42174 /* CashTabModel.swift in Sources */,
 				EA0E40952AF69771002B7437 /* CashWalletOnboardingAssembler.swift in Sources */,
+				EAF47C412B838D74003F8B86 /* DroneMenuInteractor.swift in Sources */,
 				56A552362B2F6135006B1B17 /* WalkyCamerOnboardingModel.swift in Sources */,
 				EA2C4C222B7E5C4300F1EE26 /* DroneOnboardingView.swift in Sources */,
 				EA50A0882B0BC77F0042B238 /* PlansPagesInteractorProtocol.swift in Sources */,
@@ -5850,6 +6094,7 @@
 				EA57A7AA2B6C1558006247DD /* CammerDetailsAssemblerProtocol.swift in Sources */,
 				EA4164EF2AE4B6F7008CE66A /* ComparePlansAssembler.swift in Sources */,
 				EA910FCF2ADC495700584B98 /* TabBarModel.swift in Sources */,
+				EAF47C432B838D74003F8B86 /* DroneMenuRouter.swift in Sources */,
 				EA910F8B2ADA06F500584B98 /* RegistrationRoute.swift in Sources */,
 				EA172AF72AF06BDE00EB1514 /* ConfirmMailAssemblerProtocol.swift in Sources */,
 				EA282ED12AEB531100B90920 /* FunctionsModel.swift in Sources */,
@@ -5866,6 +6111,7 @@
 				EA4164F12AE4B6F7008CE66A /* ComparePlansViewModel.swift in Sources */,
 				EADB5CAA2B190819005863E1 /* VideoCallInteractor.swift in Sources */,
 				EA282ECB2AEB531100B90920 /* FunctionsViewModelProtocol.swift in Sources */,
+				EAF47C892B839308003F8B86 /* FlightMenuRouter.swift in Sources */,
 				561FC8B72B5C66F7005B6006 /* WebViewSwiftUI.swift in Sources */,
 				EA172AF92AF06BDE00EB1514 /* ConfirmMailModel.swift in Sources */,
 				EAD048692AE22C530096E6AB /* RegistrationPlansViewModelProtocol.swift in Sources */,
@@ -5894,6 +6140,7 @@
 				EA282E512AE952F700B90920 /* ProfileRoute.swift in Sources */,
 				EA4165452AE706C6008CE66A /* NotificationsInteractor.swift in Sources */,
 				EA282ECD2AEB531100B90920 /* FunctionsInteractorProtocol.swift in Sources */,
+				EAF47C392B838D74003F8B86 /* DroneMenuRoute.swift in Sources */,
 				EA57A7A52B6C1558006247DD /* CammerDetailsInteractorProtocol.swift in Sources */,
 				EA282ED42AEB531100B90920 /* FunctionsAssemblerProtocol.swift in Sources */,
 				EA282E532AE952F700B90920 /* ProfileAssembler.swift in Sources */,
@@ -5910,6 +6157,8 @@
 				EAF47BC82B8306E9003F8B86 /* TimeTabInteractor.swift in Sources */,
 				EA0E40C22AF70E86002B7437 /* CashWalletModel.swift in Sources */,
 				EAF47BCC2B8306E9003F8B86 /* TimeTabRoute.swift in Sources */,
+				EAF47C832B839308003F8B86 /* FlightMenuAssembler.swift in Sources */,
+				EAF47C8A2B839308003F8B86 /* FlightMenuRouterProtocol.swift in Sources */,
 				56DADB202AD5EA7200710618 /* AppNavigatorProtocol.swift in Sources */,
 				EA50A0862B0BC77F0042B238 /* PlansPagesViewModelProtocol.swift in Sources */,
 				EA7219962B05612900BE2D93 /* WalkyBotAssembler.swift in Sources */,
@@ -5945,10 +6194,12 @@
 				EA0E40972AF697F0002B7437 /* CashWalletOnboardingPageView.swift in Sources */,
 				56FEECF52B5C802C003FA686 /* SearchWalkyCammerView.swift in Sources */,
 				EA2C4C292B7E5C4300F1EE26 /* DroneOnboardingAssemblerProtocol.swift in Sources */,
+				EAF47C402B838D74003F8B86 /* DroneMenuInteractorProtocol.swift in Sources */,
 				EA4164F32AE4B6F7008CE66A /* ComparePlansViewModelProtocol.swift in Sources */,
 				EA6083B52B01D9E100295069 /* GalleryViewModel.swift in Sources */,
 				EAF47BCB2B8306E9003F8B86 /* TimeTabRouter.swift in Sources */,
 				EA5A88042B68039400BBB7F9 /* LoginOutput.swift in Sources */,
+				EAF47C422B838D74003F8B86 /* DroneMenuRouterProtocol.swift in Sources */,
 				EA6083DE2B01DBDF00295069 /* GalleryPhotosRouterProtocol.swift in Sources */,
 				EA6083DF2B01DBE000295069 /* GalleryPhotosRouter.swift in Sources */,
 				EA172B202AF06EF600EB1514 /* StartupAssemblerProtocol.swift in Sources */,
@@ -5967,6 +6218,7 @@
 				EA172B1E2AF06EF600EB1514 /* StartupRoute.swift in Sources */,
 				EA15B59B2AD6E44D00C03407 /* LoginView.swift in Sources */,
 				EA6083692B01981800295069 /* CryptoDetailsRouterProtocol.swift in Sources */,
+				EAF47C8B2B839308003F8B86 /* FlightMenuModel.swift in Sources */,
 				EA6083B82B01D9E100295069 /* GalleryInteractorProtocol.swift in Sources */,
 				EA910F5E2AD9B01300584B98 /* OnboardingViewModelProtocol.swift in Sources */,
 				EA7219A12B057D3A00BE2D93 /* NewsItemView.swift in Sources */,
@@ -5992,6 +6244,7 @@
 				EA910FCA2ADC495700584B98 /* TabBarView.swift in Sources */,
 				EA4165492AE706C6008CE66A /* NotificationsAssemblerProtocol.swift in Sources */,
 				EAA1E61D2AFAFA7100A42174 /* WCTopBarItem.swift in Sources */,
+				EAF47C3B2B838D74003F8B86 /* DroneMenuAssembler.swift in Sources */,
 				EAA1E61E2AFAFA7100A42174 /* WCTopBarContainerView.swift in Sources */,
 				EA910F312AD8B55200584B98 /* Divider.swift in Sources */,
 				56A552302B2F6135006B1B17 /* WalkyCamerOnboardingViewModelProtocol.swift in Sources */,
@@ -6033,6 +6286,7 @@
 				56A552592B2F6E3D006B1B17 /* StreetCamMenuViewModelProtocol.swift in Sources */,
 				EA57A7A42B6C1558006247DD /* CammerDetailsInteractor.swift in Sources */,
 				EA57A7D02B6C2C31006247DD /* AddPeopleTransmissionViewModelProtocol.swift in Sources */,
+				EAF47C822B839308003F8B86 /* FlightMenuAssemblerProtocol.swift in Sources */,
 				56A5525E2B2F6E3D006B1B17 /* StreetCamMenuRouter.swift in Sources */,
 				EA5E1D9A2AD883D800738A8F /* Text+Extension.swift in Sources */,
 				EA9110192ADDADE100584B98 /* HomeViewModelProtocol.swift in Sources */,
@@ -6111,7 +6365,9 @@
 				56A5525A2B2F6E3D006B1B17 /* StreetCamMenuView.swift in Sources */,
 				EA2C4C242B7E5C4300F1EE26 /* DroneOnboardingInteractorProtocol.swift in Sources */,
 				EA910FC42ADC495700584B98 /* TabBarRoute.swift in Sources */,
+				EAF47C862B839308003F8B86 /* FlightMenuView.swift in Sources */,
 				EADBE1012AE823BA00FED579 /* NotificationItemView.swift in Sources */,
+				EAF47C812B839308003F8B86 /* FlightMenuRoute.swift in Sources */,
 				EAF47BA02B82FFF2003F8B86 /* CalendarTabInteractor.swift in Sources */,
 				EA6083B12B01D9E100295069 /* GalleryRoute.swift in Sources */,
 				EA6083432AFD58A900295069 /* CryptoTabInteractor.swift in Sources */,
@@ -6119,6 +6375,7 @@
 				EA60836B2B01981800295069 /* CryptoDetailsRoute.swift in Sources */,
 				EAF47BC72B8306E9003F8B86 /* TimeTabView.swift in Sources */,
 				561FC8B62B5C66F7005B6006 /* WebViewModel.swift in Sources */,
+				EAF47C3D2B838D74003F8B86 /* DroneMenuViewModel.swift in Sources */,
 				EA910FF52ADCBCC000584B98 /* MenuViewModelProtocol.swift in Sources */,
 				EA910F8C2ADA06F500584B98 /* RegistrationAssemblerProtocol.swift in Sources */,
 				EA910F9E2ADC43B200584B98 /* FullScreenWrapper.swift in Sources */,
@@ -6135,6 +6392,7 @@
 				EA282ED62AEB532800B90920 /* RecentFunctionsCell.swift in Sources */,
 				EA72199C2B05612900BE2D93 /* WalkyBotInteractorProtocol.swift in Sources */,
 				EA5A88062B68039400BBB7F9 /* LoginUseCase.swift in Sources */,
+				EAF47C3F2B838D74003F8B86 /* DroneMenuView.swift in Sources */,
 				EA57A7842B6C0A75006247DD /* CammerItemView.swift in Sources */,
 				EAF47B552B82F7EA003F8B86 /* VideocallOnboardingRouterProtocol.swift in Sources */,
 				EA1FD1C12B1E932F000E583D /* VideoCallRoomAssemblerProtocol.swift in Sources */,
@@ -6185,10 +6443,12 @@
 				EA5E1D9D2AD8A3DA00738A8F /* Assets.swift in Sources */,
 				EA6083D82B01DBDF00295069 /* GalleryPhotosModel.swift in Sources */,
 				EA910FF62ADCBCC000584B98 /* MenuViewModel.swift in Sources */,
+				EAF47C882B839308003F8B86 /* FlightMenuInteractorProtocol.swift in Sources */,
 				EA6083422AFD58A900295069 /* CryptoTabView.swift in Sources */,
 				EAF47BF02B83099F003F8B86 /* MapTabViewModelProtocol.swift in Sources */,
 				EA5E1D8C2AD719C400738A8F /* TextInputView.swift in Sources */,
 				56FEECF62B5C802C003FA686 /* SearchWalkyCammerInteractorProtocol.swift in Sources */,
+				EAF47C3E2B838D74003F8B86 /* DroneMenuViewModelProtocol.swift in Sources */,
 				EA282E522AE952F700B90920 /* ProfileAssemblerProtocol.swift in Sources */,
 				EA910F3A2AD9782000584B98 /* SelectorModel.swift in Sources */,
 				EAD0486F2AE22C530096E6AB /* RegistrationPlansRouterProtocol.swift in Sources */,
@@ -6201,6 +6461,7 @@
 				EA60833F2AFD58A900295069 /* CryptoTabAssemblerProtocol.swift in Sources */,
 				EA91102F2ADDB93D00584B98 /* EnvironmentValues+ImageCache.swift in Sources */,
 				EA57A7D32B6C2C31006247DD /* AddPeopleTransmissionInteractor.swift in Sources */,
+				EAF47C3C2B838D74003F8B86 /* DroneMenuModel.swift in Sources */,
 				EA910F9C2ADC437300584B98 /* AlertModifier.swift in Sources */,
 				EA910FFB2ADCBCC000584B98 /* MenuRouterProtocol.swift in Sources */,
 				EA4164F82AE4B6F7008CE66A /* ComparePlansRouterProtocol.swift in Sources */,
@@ -6227,11 +6488,13 @@
 				EA9110222ADDADE100584B98 /* HomeRoute.swift in Sources */,
 				EA50A0892B0BC77F0042B238 /* PlansPagesInteractor.swift in Sources */,
 				EAF47B9C2B82FFF2003F8B86 /* CalendarTabViewModelProtocol.swift in Sources */,
+				EAF47C3A2B838D74003F8B86 /* DroneMenuAssemblerProtocol.swift in Sources */,
 				EA0E40C02AF70E86002B7437 /* CashWalletRouterProtocol.swift in Sources */,
 				EA8EF8E92B67E71B00136D1F /* UserSessionData.swift in Sources */,
 				EA57A7CD2B6C2C31006247DD /* AddPeopleTransmissionAssembler.swift in Sources */,
 				EA4165472AE706C6008CE66A /* NotificationsRouterProtocol.swift in Sources */,
 				EA172AFA2AF06BDE00EB1514 /* ConfirmMailViewModel.swift in Sources */,
+				EAF47C852B839308003F8B86 /* FlightMenuViewModel.swift in Sources */,
 				EA4165462AE706C6008CE66A /* NotificationsRouter.swift in Sources */,
 				56FEECEF2B5C802C003FA686 /* SearchWalkyCammerRoute.swift in Sources */,
 				EA0E40BE2AF70E86002B7437 /* CashWalletInteractorProtocol.swift in Sources */,
@@ -6254,6 +6517,7 @@
 				EA172B212AF06EF600EB1514 /* StartupViewModel.swift in Sources */,
 				EA282E572AE952F700B90920 /* ProfileView.swift in Sources */,
 				EA4164F52AE4B6F7008CE66A /* ComparePlansInteractor.swift in Sources */,
+				EAF47C872B839308003F8B86 /* FlightMenuInteractor.swift in Sources */,
 				EA60836A2B01981800295069 /* CryptoDetailsModel.swift in Sources */,
 				EA172AFE2AF06BDE00EB1514 /* ConfirmMailInteractor.swift in Sources */,
 				EA172AFB2AF06BDE00EB1514 /* ConfirmMailViewModelProtocol.swift in Sources */,

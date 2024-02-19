@@ -38,7 +38,8 @@ public struct CheckBoxToggle: View {
                     .stroke(Color.naranja)
                 Image(uiImage: Asset.Icons.check.image)
                     .resizable()
-                    .foregroundColor(Color.negro)
+                    .renderingMode(.template)
+                    .foregroundColor(foregroundColor)
                     .isHidden(!model.isSelected)
             }
             .frame(width: 24,

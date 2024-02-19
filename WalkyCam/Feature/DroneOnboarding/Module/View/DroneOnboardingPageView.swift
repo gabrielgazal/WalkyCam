@@ -14,7 +14,6 @@ struct DroneOnboardingPageView: View {
     private var title: String
     private var description: String
     private var secondDescription: [String]?
-    @State private var acceptedTerms: SelectorModel = .init(value: "Acepto todas las condiciones. Leer AQUÍ")
 
     public init(
         illustration: Image,
@@ -35,7 +34,7 @@ struct DroneOnboardingPageView: View {
             illustration
                 .resizable()
                 .scaledToFit()
-                .frame(width: 280)
+                .frame(width: 170)
             Text(title)
                 .multilineTextAlignment(.center)
                 .font(.projectFont(size: Tokens.Size.Font.large,
@@ -82,13 +81,6 @@ struct DroneOnboardingPageView: View {
                                 Spacer()
                             }
                         }
-                    }
-                    HStack(spacing: Tokens.Size.Spacing.small) {
-                        CheckBoxToggle(model: acceptedTerms,
-                                       foregroundColor: Color.negro)
-                            .onTapGesture {
-                                acceptedTerms.isSelected.toggle()
-                            }
                     }
                 }
                 Spacer()

@@ -43,9 +43,8 @@ final class HomeRouter: Router, HomeRouterProtocol {
     }
 
     func routeToDrone() {
-        let seenOnboarding: Bool = (try? UserSession().user().configurations?.drone) ?? false
         navigateTo(
-            DroneOnboardingRoute(isPresented: isNavigating)
+            DroneMenuRoute(isPresented: isNavigating)
         )
     }
 }

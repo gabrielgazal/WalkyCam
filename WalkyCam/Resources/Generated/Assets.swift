@@ -58,6 +58,7 @@ internal enum Asset {
     internal static let music = ImageAsset(name: "Music")
     internal static let notes = ImageAsset(name: "Notes")
     internal static let recent = ImageAsset(name: "Recent")
+    internal static let riego = ImageAsset(name: "Riego")
     internal static let scan3D = ImageAsset(name: "Scan3D")
     internal static let share = ImageAsset(name: "Share")
     internal static let shop = ImageAsset(name: "Shop")

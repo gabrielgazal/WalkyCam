@@ -1,0 +1,3 @@
+protocol DroneMenuInteractorProtocol {
+    func someFunction()
+}
