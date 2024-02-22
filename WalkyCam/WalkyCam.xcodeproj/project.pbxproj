@@ -217,6 +217,28 @@
 		EA41654A2AE706C6008CE66A /* NotificationsAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA41653D2AE706C6008CE66A /* NotificationsAssembler.swift */; };
 		EA41654B2AE706C6008CE66A /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4165402AE706C6008CE66A /* NotificationModel.swift */; };
 		EA47D0E02B0FAE6500E5C4FC /* PlansComparisonPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47D0DF2B0FAE6400E5C4FC /* PlansComparisonPageView.swift */; };
+		EA4A1C152B87799100B5FC59 /* AvailableAssistantsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A1C022B87799100B5FC59 /* AvailableAssistantsViewModel.swift */; };
+		EA4A1C162B87799100B5FC59 /* AvailableAssistantsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A1C032B87799100B5FC59 /* AvailableAssistantsViewModelProtocol.swift */; };
+		EA4A1C172B87799100B5FC59 /* AvailableAssistantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A1C052B87799100B5FC59 /* AvailableAssistantsView.swift */; };
+		EA4A1C182B87799100B5FC59 /* AvailableAssistantsInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A1C072B87799100B5FC59 /* AvailableAssistantsInteractorProtocol.swift */; };
+		EA4A1C192B87799100B5FC59 /* AvailableAssistantsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A1C082B87799100B5FC59 /* AvailableAssistantsInteractor.swift */; };
+		EA4A1C1A2B87799100B5FC59 /* AvailableAssistantsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A1C0A2B87799100B5FC59 /* AvailableAssistantsRouter.swift */; };
+		EA4A1C1B2B87799100B5FC59 /* AvailableAssistantsRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A1C0B2B87799100B5FC59 /* AvailableAssistantsRouterProtocol.swift */; };
+		EA4A1C1C2B87799100B5FC59 /* AvailableAssistantsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A1C0E2B87799100B5FC59 /* AvailableAssistantsModel.swift */; };
+		EA4A1C1D2B87799100B5FC59 /* AvailableAssistantsRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A1C112B87799100B5FC59 /* AvailableAssistantsRoute.swift */; };
+		EA4A1C1E2B87799100B5FC59 /* AvailableAssistantsAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A1C132B87799100B5FC59 /* AvailableAssistantsAssemblerProtocol.swift */; };
+		EA4A1C1F2B87799100B5FC59 /* AvailableAssistantsAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A1C142B87799100B5FC59 /* AvailableAssistantsAssembler.swift */; };
+		EA4A1C3C2B8788DB00B5FC59 /* SpecialistNotifiedRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A1C292B8788DA00B5FC59 /* SpecialistNotifiedRoute.swift */; };
+		EA4A1C3D2B8788DB00B5FC59 /* SpecialistNotifiedAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A1C2B2B8788DA00B5FC59 /* SpecialistNotifiedAssemblerProtocol.swift */; };
+		EA4A1C3E2B8788DB00B5FC59 /* SpecialistNotifiedAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A1C2C2B8788DA00B5FC59 /* SpecialistNotifiedAssembler.swift */; };
+		EA4A1C3F2B8788DB00B5FC59 /* SpecialistNotifiedViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A1C2F2B8788DA00B5FC59 /* SpecialistNotifiedViewModelProtocol.swift */; };
+		EA4A1C402B8788DB00B5FC59 /* SpecialistNotifiedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A1C302B8788DA00B5FC59 /* SpecialistNotifiedViewModel.swift */; };
+		EA4A1C412B8788DB00B5FC59 /* SpecialistNotifiedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A1C322B8788DA00B5FC59 /* SpecialistNotifiedView.swift */; };
+		EA4A1C422B8788DB00B5FC59 /* SpecialistNotifiedInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A1C342B8788DA00B5FC59 /* SpecialistNotifiedInteractorProtocol.swift */; };
+		EA4A1C432B8788DB00B5FC59 /* SpecialistNotifiedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A1C352B8788DA00B5FC59 /* SpecialistNotifiedInteractor.swift */; };
+		EA4A1C442B8788DB00B5FC59 /* SpecialistNotifiedRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A1C372B8788DA00B5FC59 /* SpecialistNotifiedRouterProtocol.swift */; };
+		EA4A1C452B8788DB00B5FC59 /* SpecialistNotifiedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A1C382B8788DA00B5FC59 /* SpecialistNotifiedRouter.swift */; };
+		EA4A1C462B8788DB00B5FC59 /* SpecialistNotifiedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A1C3B2B8788DA00B5FC59 /* SpecialistNotifiedModel.swift */; };
 		EA4AE4882B75011B00B5A89F /* FetchUserConfigurationsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE4872B75011B00B5A89F /* FetchUserConfigurationsUseCase.swift */; };
 		EA4AE48B2B7505D100B5A89F /* TabBarInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE48A2B7505D100B5A89F /* TabBarInteractorProtocol.swift */; };
 		EA4AE48D2B75065300B5A89F /* TabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE48C2B75065300B5A89F /* TabBarInteractor.swift */; };
@@ -839,6 +861,28 @@
 		EA41653D2AE706C6008CE66A /* NotificationsAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsAssembler.swift; sourceTree = "<group>"; };
 		EA4165402AE706C6008CE66A /* NotificationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		EA47D0DF2B0FAE6400E5C4FC /* PlansComparisonPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansComparisonPageView.swift; sourceTree = "<group>"; };
+		EA4A1C022B87799100B5FC59 /* AvailableAssistantsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailableAssistantsViewModel.swift; sourceTree = "<group>"; };
+		EA4A1C032B87799100B5FC59 /* AvailableAssistantsViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailableAssistantsViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA4A1C052B87799100B5FC59 /* AvailableAssistantsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailableAssistantsView.swift; sourceTree = "<group>"; };
+		EA4A1C072B87799100B5FC59 /* AvailableAssistantsInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailableAssistantsInteractorProtocol.swift; sourceTree = "<group>"; };
+		EA4A1C082B87799100B5FC59 /* AvailableAssistantsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailableAssistantsInteractor.swift; sourceTree = "<group>"; };
+		EA4A1C0A2B87799100B5FC59 /* AvailableAssistantsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailableAssistantsRouter.swift; sourceTree = "<group>"; };
+		EA4A1C0B2B87799100B5FC59 /* AvailableAssistantsRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailableAssistantsRouterProtocol.swift; sourceTree = "<group>"; };
+		EA4A1C0E2B87799100B5FC59 /* AvailableAssistantsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailableAssistantsModel.swift; sourceTree = "<group>"; };
+		EA4A1C112B87799100B5FC59 /* AvailableAssistantsRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailableAssistantsRoute.swift; sourceTree = "<group>"; };
+		EA4A1C132B87799100B5FC59 /* AvailableAssistantsAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailableAssistantsAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA4A1C142B87799100B5FC59 /* AvailableAssistantsAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailableAssistantsAssembler.swift; sourceTree = "<group>"; };
+		EA4A1C292B8788DA00B5FC59 /* SpecialistNotifiedRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialistNotifiedRoute.swift; sourceTree = "<group>"; };
+		EA4A1C2B2B8788DA00B5FC59 /* SpecialistNotifiedAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialistNotifiedAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA4A1C2C2B8788DA00B5FC59 /* SpecialistNotifiedAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialistNotifiedAssembler.swift; sourceTree = "<group>"; };
+		EA4A1C2F2B8788DA00B5FC59 /* SpecialistNotifiedViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialistNotifiedViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA4A1C302B8788DA00B5FC59 /* SpecialistNotifiedViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialistNotifiedViewModel.swift; sourceTree = "<group>"; };
+		EA4A1C322B8788DA00B5FC59 /* SpecialistNotifiedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialistNotifiedView.swift; sourceTree = "<group>"; };
+		EA4A1C342B8788DA00B5FC59 /* SpecialistNotifiedInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialistNotifiedInteractorProtocol.swift; sourceTree = "<group>"; };
+		EA4A1C352B8788DA00B5FC59 /* SpecialistNotifiedInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialistNotifiedInteractor.swift; sourceTree = "<group>"; };
+		EA4A1C372B8788DA00B5FC59 /* SpecialistNotifiedRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialistNotifiedRouterProtocol.swift; sourceTree = "<group>"; };
+		EA4A1C382B8788DA00B5FC59 /* SpecialistNotifiedRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialistNotifiedRouter.swift; sourceTree = "<group>"; };
+		EA4A1C3B2B8788DA00B5FC59 /* SpecialistNotifiedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialistNotifiedModel.swift; sourceTree = "<group>"; };
 		EA4AE4872B75011B00B5A89F /* FetchUserConfigurationsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUserConfigurationsUseCase.swift; sourceTree = "<group>"; };
 		EA4AE48A2B7505D100B5A89F /* TabBarInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarInteractorProtocol.swift; sourceTree = "<group>"; };
 		EA4AE48C2B75065300B5A89F /* TabBarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarInteractor.swift; sourceTree = "<group>"; };
@@ -1884,6 +1928,8 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				EA4A1C202B8788B700B5FC59 /* SpecialistNotified */,
+				EA4A1BF92B87796800B5FC59 /* AvailableAssistants */,
 				EA3E5C742B87688B00158207 /* AssistantMenu */,
 				EAB63B9F2B83D6220017BDA4 /* ARHandsMenu */,
 				EAB63B762B83D2CD0017BDA4 /* ARHandsOnboarding */,
@@ -3008,6 +3054,202 @@
 			isa = PBXGroup;
 			children = (
 				EA4165402AE706C6008CE66A /* NotificationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA4A1BF92B87796800B5FC59 /* AvailableAssistants */ = {
+			isa = PBXGroup;
+			children = (
+				EA4A1C0F2B87799100B5FC59 /* Configuration */,
+				EA4A1C0C2B87799100B5FC59 /* Domain */,
+				EA4A1C002B87799100B5FC59 /* Module */,
+			);
+			path = AvailableAssistants;
+			sourceTree = "<group>";
+		};
+		EA4A1C002B87799100B5FC59 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA4A1C012B87799100B5FC59 /* ViewModel */,
+				EA4A1C042B87799100B5FC59 /* View */,
+				EA4A1C062B87799100B5FC59 /* Interactor */,
+				EA4A1C092B87799100B5FC59 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA4A1C012B87799100B5FC59 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA4A1C022B87799100B5FC59 /* AvailableAssistantsViewModel.swift */,
+				EA4A1C032B87799100B5FC59 /* AvailableAssistantsViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA4A1C042B87799100B5FC59 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA4A1C052B87799100B5FC59 /* AvailableAssistantsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA4A1C062B87799100B5FC59 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA4A1C072B87799100B5FC59 /* AvailableAssistantsInteractorProtocol.swift */,
+				EA4A1C082B87799100B5FC59 /* AvailableAssistantsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EA4A1C092B87799100B5FC59 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA4A1C0A2B87799100B5FC59 /* AvailableAssistantsRouter.swift */,
+				EA4A1C0B2B87799100B5FC59 /* AvailableAssistantsRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EA4A1C0C2B87799100B5FC59 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA4A1C0D2B87799100B5FC59 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA4A1C0D2B87799100B5FC59 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA4A1C0E2B87799100B5FC59 /* AvailableAssistantsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA4A1C0F2B87799100B5FC59 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA4A1C102B87799100B5FC59 /* Route */,
+				EA4A1C122B87799100B5FC59 /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA4A1C102B87799100B5FC59 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA4A1C112B87799100B5FC59 /* AvailableAssistantsRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA4A1C122B87799100B5FC59 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA4A1C132B87799100B5FC59 /* AvailableAssistantsAssemblerProtocol.swift */,
+				EA4A1C142B87799100B5FC59 /* AvailableAssistantsAssembler.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EA4A1C202B8788B700B5FC59 /* SpecialistNotified */ = {
+			isa = PBXGroup;
+			children = (
+				EA4A1C272B8788DA00B5FC59 /* Configuration */,
+				EA4A1C392B8788DA00B5FC59 /* Domain */,
+				EA4A1C2D2B8788DA00B5FC59 /* Module */,
+			);
+			path = SpecialistNotified;
+			sourceTree = "<group>";
+		};
+		EA4A1C272B8788DA00B5FC59 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA4A1C282B8788DA00B5FC59 /* Route */,
+				EA4A1C2A2B8788DA00B5FC59 /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA4A1C282B8788DA00B5FC59 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA4A1C292B8788DA00B5FC59 /* SpecialistNotifiedRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA4A1C2A2B8788DA00B5FC59 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA4A1C2B2B8788DA00B5FC59 /* SpecialistNotifiedAssemblerProtocol.swift */,
+				EA4A1C2C2B8788DA00B5FC59 /* SpecialistNotifiedAssembler.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EA4A1C2D2B8788DA00B5FC59 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA4A1C2E2B8788DA00B5FC59 /* ViewModel */,
+				EA4A1C312B8788DA00B5FC59 /* View */,
+				EA4A1C332B8788DA00B5FC59 /* Interactor */,
+				EA4A1C362B8788DA00B5FC59 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA4A1C2E2B8788DA00B5FC59 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA4A1C2F2B8788DA00B5FC59 /* SpecialistNotifiedViewModelProtocol.swift */,
+				EA4A1C302B8788DA00B5FC59 /* SpecialistNotifiedViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA4A1C312B8788DA00B5FC59 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA4A1C322B8788DA00B5FC59 /* SpecialistNotifiedView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA4A1C332B8788DA00B5FC59 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA4A1C342B8788DA00B5FC59 /* SpecialistNotifiedInteractorProtocol.swift */,
+				EA4A1C352B8788DA00B5FC59 /* SpecialistNotifiedInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EA4A1C362B8788DA00B5FC59 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA4A1C372B8788DA00B5FC59 /* SpecialistNotifiedRouterProtocol.swift */,
+				EA4A1C382B8788DA00B5FC59 /* SpecialistNotifiedRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EA4A1C392B8788DA00B5FC59 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA4A1C3A2B8788DA00B5FC59 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA4A1C3A2B8788DA00B5FC59 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA4A1C3B2B8788DA00B5FC59 /* SpecialistNotifiedModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -6377,6 +6619,7 @@
 				EAD048682AE22C530096E6AB /* RegistrationPlansModel.swift in Sources */,
 				EA172AFF2AF06BDE00EB1514 /* ConfirmMailRouterProtocol.swift in Sources */,
 				EA910FCD2ADC495700584B98 /* TabBarRouterProtocol.swift in Sources */,
+				EA4A1C162B87799100B5FC59 /* AvailableAssistantsViewModelProtocol.swift in Sources */,
 				EA172B002AF06BDE00EB1514 /* ConfirmMailRouter.swift in Sources */,
 				EAD048732AE22C530096E6AB /* RegistrationPlansAssemblerProtocol.swift in Sources */,
 				EAF47B4E2B82F7EA003F8B86 /* VideocallOnboardingViewModel.swift in Sources */,
@@ -6390,6 +6633,7 @@
 				EA72199A2B05612900BE2D93 /* WalkyBotView.swift in Sources */,
 				EA7219992B05612900BE2D93 /* WalkyBotViewModel.swift in Sources */,
 				EA57A7A22B6C1558006247DD /* CammerDetailsViewModelProtocol.swift in Sources */,
+				EA4A1C1E2B87799100B5FC59 /* AvailableAssistantsAssemblerProtocol.swift in Sources */,
 				EA94A5322B7160EF00EC3037 /* ServiceDetailsInteractorProtocol.swift in Sources */,
 				EA910FC62ADC495700584B98 /* TabBarAssemblerProtocol.swift in Sources */,
 				56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */,
@@ -6535,12 +6779,14 @@
 				EAB63BBC2B83D6390017BDA4 /* ARHandsMenuViewModelProtocol.swift in Sources */,
 				56DADB202AD5EA7200710618 /* AppNavigatorProtocol.swift in Sources */,
 				EA50A0862B0BC77F0042B238 /* PlansPagesViewModelProtocol.swift in Sources */,
+				EA4A1C422B8788DB00B5FC59 /* SpecialistNotifiedInteractorProtocol.swift in Sources */,
 				EA7219962B05612900BE2D93 /* WalkyBotAssembler.swift in Sources */,
 				EA0E408B2AF69771002B7437 /* CashWalletOnboardingModel.swift in Sources */,
 				EA5A88052B68039400BBB7F9 /* LoginInput.swift in Sources */,
 				EAD0486B2AE22C530096E6AB /* RegistrationPlansViewModel.swift in Sources */,
 				EA1FD1BE2B1E932F000E583D /* VideoCallRoomRouter.swift in Sources */,
 				56A5525C2B2F6E3D006B1B17 /* StreetCamMenuInteractor.swift in Sources */,
+				EA4A1C402B8788DB00B5FC59 /* SpecialistNotifiedViewModel.swift in Sources */,
 				EAF47BF22B83099F003F8B86 /* MapTabInteractor.swift in Sources */,
 				EA6083B32B01D9E100295069 /* GalleryAssembler.swift in Sources */,
 				EA94A5352B7160EF00EC3037 /* ServiceDetailsRouterProtocol.swift in Sources */,
@@ -6567,6 +6813,7 @@
 				EA5E1D742AD716A500738A8F /* ProjectFont.swift in Sources */,
 				EAA1E6402AFB03FD00A42174 /* CashTabView.swift in Sources */,
 				EA5A87FC2B68002A00BBB7F9 /* RegistrationOutput.swift in Sources */,
+				EA4A1C192B87799100B5FC59 /* AvailableAssistantsInteractor.swift in Sources */,
 				EA0E40972AF697F0002B7437 /* CashWalletOnboardingPageView.swift in Sources */,
 				56FEECF52B5C802C003FA686 /* SearchWalkyCammerView.swift in Sources */,
 				EAB63BC52B83D63A0017BDA4 /* ARHandsMenuAssemblerProtocol.swift in Sources */,
@@ -6626,6 +6873,7 @@
 				EAB63BC12B83D6390017BDA4 /* ARHandsMenuRouter.swift in Sources */,
 				EA4165492AE706C6008CE66A /* NotificationsAssemblerProtocol.swift in Sources */,
 				EAA1E61D2AFAFA7100A42174 /* WCTopBarItem.swift in Sources */,
+				EA4A1C1C2B87799100B5FC59 /* AvailableAssistantsModel.swift in Sources */,
 				EAF47C3B2B838D74003F8B86 /* DroneMenuAssembler.swift in Sources */,
 				EAA1E61E2AFAFA7100A42174 /* WCTopBarContainerView.swift in Sources */,
 				EA910F312AD8B55200584B98 /* Divider.swift in Sources */,
@@ -6644,8 +6892,10 @@
 				EAA1E63E2AFB03FD00A42174 /* CashTabViewModelProtocol.swift in Sources */,
 				EA6083662B01981800295069 /* CryptoDetailsInteractor.swift in Sources */,
 				EA3E5C982B87692400158207 /* AssistantMenuInteractorProtocol.swift in Sources */,
+				EA4A1C1F2B87799100B5FC59 /* AvailableAssistantsAssembler.swift in Sources */,
 				EA910F652AD9B01300584B98 /* OnboardingRouterProtocol.swift in Sources */,
 				EAF47C182B830C80003F8B86 /* WalkyCammerListInteractorProtocol.swift in Sources */,
+				EA4A1C3E2B8788DB00B5FC59 /* SpecialistNotifiedAssembler.swift in Sources */,
 				EA6083B72B01D9E100295069 /* GalleryView.swift in Sources */,
 				EA282E592AE952F700B90920 /* ProfileInteractor.swift in Sources */,
 				EA1FD1BC2B1E932F000E583D /* VideoCallRoomInteractor.swift in Sources */,
@@ -6656,7 +6906,9 @@
 				EA6083412AFD58A900295069 /* CryptoTabViewModelProtocol.swift in Sources */,
 				EAD0486D2AE22C530096E6AB /* RegistrationPlansInteractor.swift in Sources */,
 				EA5E1D782AD7170400738A8F /* LinkButton.swift in Sources */,
+				EA4A1C182B87799100B5FC59 /* AvailableAssistantsInteractorProtocol.swift in Sources */,
 				EA282E7C2AE9F14B00B90920 /* WCToggleStyle.swift in Sources */,
+				EA4A1C412B8788DB00B5FC59 /* SpecialistNotifiedView.swift in Sources */,
 				EA15B5B02AD7071300C03407 /* SheetModifier.swift in Sources */,
 				EA50A0902B0BCC940042B238 /* PlanPageView.swift in Sources */,
 				EAA1E6422AFB03FD00A42174 /* CashTabInteractor.swift in Sources */,
@@ -6722,6 +6974,7 @@
 				EA5A87FA2B67FF8900BBB7F9 /* RegisterUserUseCase.swift in Sources */,
 				EAA1E63F2AFB03FD00A42174 /* CashTabViewModel.swift in Sources */,
 				EAF47B7E2B82FCE8003F8B86 /* BookWalkycamerAssemblerProtocol.swift in Sources */,
+				EA4A1C1A2B87799100B5FC59 /* AvailableAssistantsRouter.swift in Sources */,
 				EA91101D2ADDADE100584B98 /* HomeInteractor.swift in Sources */,
 				EA0E40942AF69771002B7437 /* CashWalletOnboardingAssemblerProtocol.swift in Sources */,
 				EA5E1D6F2AD7164E00738A8F /* MainButtonStyle.swift in Sources */,
@@ -6785,12 +7038,14 @@
 				EAF47B552B82F7EA003F8B86 /* VideocallOnboardingRouterProtocol.swift in Sources */,
 				EA1FD1C12B1E932F000E583D /* VideoCallRoomAssemblerProtocol.swift in Sources */,
 				EA172B222AF06EF600EB1514 /* StartupViewModelProtocol.swift in Sources */,
+				EA4A1C1B2B87799100B5FC59 /* AvailableAssistantsRouterProtocol.swift in Sources */,
 				EAF47C162B830C80003F8B86 /* WalkyCammerListViewModel.swift in Sources */,
 				EA6083B22B01D9E100295069 /* GalleryAssemblerProtocol.swift in Sources */,
 				EA4164F62AE4B6F7008CE66A /* ComparePlansInteractorProtocol.swift in Sources */,
 				EA3E5C962B87692400158207 /* AssistantMenuView.swift in Sources */,
 				EA57A7CC2B6C2C31006247DD /* AddPeopleTransmissionAssemblerProtocol.swift in Sources */,
 				EA282E112AE8327100B90920 /* DateFormat.swift in Sources */,
+				EA4A1C172B87799100B5FC59 /* AvailableAssistantsView.swift in Sources */,
 				EA0E408F2AF69771002B7437 /* CashWalletOnboardingInteractor.swift in Sources */,
 				EAB63BC22B83D63A0017BDA4 /* ARHandsMenuRouterProtocol.swift in Sources */,
 				EAF47B752B82FCE8003F8B86 /* BookWalkycamerViewModelProtocol.swift in Sources */,
@@ -6802,7 +7057,9 @@
 				EA50A08C2B0BC77F0042B238 /* PlansPagesRoute.swift in Sources */,
 				EA50A0842B0BC77F0042B238 /* PlansPagesModel.swift in Sources */,
 				EA910F992ADC40DB00584B98 /* AlertView.swift in Sources */,
+				EA4A1C442B8788DB00B5FC59 /* SpecialistNotifiedRouterProtocol.swift in Sources */,
 				EAF47C122B830C80003F8B86 /* WalkyCammerListRoute.swift in Sources */,
+				EA4A1C432B8788DB00B5FC59 /* SpecialistNotifiedInteractor.swift in Sources */,
 				EA0E40C42AF70E86002B7437 /* CashWalletAssemblerProtocol.swift in Sources */,
 				EA60833E2AFD58A900295069 /* CryptoTabAssembler.swift in Sources */,
 				EADB5CAC2B190819005863E1 /* VideoCallRouterProtocol.swift in Sources */,
@@ -6813,8 +7070,11 @@
 				EAF47BCE2B8306E9003F8B86 /* TimeTabAssembler.swift in Sources */,
 				EA6083942B01CD0A00295069 /* ShopTabRouter.swift in Sources */,
 				56FEECF72B5C802C003FA686 /* SearchWalkyCammerInteractor.swift in Sources */,
+				EA4A1C1D2B87799100B5FC59 /* AvailableAssistantsRoute.swift in Sources */,
+				EA4A1C452B8788DB00B5FC59 /* SpecialistNotifiedRouter.swift in Sources */,
 				EA3E5C9A2B87692400158207 /* AssistantMenuRouterProtocol.swift in Sources */,
 				EA282ECF2AEB531100B90920 /* FunctionsRouterProtocol.swift in Sources */,
+				EA4A1C462B8788DB00B5FC59 /* SpecialistNotifiedModel.swift in Sources */,
 				EA172B272AF06EF600EB1514 /* StartupRouterProtocol.swift in Sources */,
 				EA6083632B01981800295069 /* CryptoDetailsViewModelProtocol.swift in Sources */,
 				EA7219952B05612900BE2D93 /* WalkyBotAssemblerProtocol.swift in Sources */,
@@ -6831,6 +7091,7 @@
 				EA282E5B2AE952F700B90920 /* ProfileRouterProtocol.swift in Sources */,
 				EAF47BA52B82FFF2003F8B86 /* CalendarTabAssembler.swift in Sources */,
 				EA15B59F2AD6E44D00C03407 /* LoginRouterProtocol.swift in Sources */,
+				EA4A1C3D2B8788DB00B5FC59 /* SpecialistNotifiedAssemblerProtocol.swift in Sources */,
 				EAF47BEE2B83099F003F8B86 /* MapTabAssembler.swift in Sources */,
 				EA5E1D9D2AD8A3DA00738A8F /* Assets.swift in Sources */,
 				EA6083D82B01DBDF00295069 /* GalleryPhotosModel.swift in Sources */,
@@ -6850,8 +7111,10 @@
 				EAD048702AE22C530096E6AB /* RegistrationPlansRouter.swift in Sources */,
 				56A552312B2F6135006B1B17 /* WalkyCamerOnboardingView.swift in Sources */,
 				EA6083652B01981800295069 /* CryptoDetailsView.swift in Sources */,
+				EA4A1C3C2B8788DB00B5FC59 /* SpecialistNotifiedRoute.swift in Sources */,
 				EA0E408C2AF69771002B7437 /* CashWalletOnboardingViewModel.swift in Sources */,
 				EA6083B62B01D9E100295069 /* GalleryViewModelProtocol.swift in Sources */,
+				EA4A1C152B87799100B5FC59 /* AvailableAssistantsViewModel.swift in Sources */,
 				EA60833F2AFD58A900295069 /* CryptoTabAssemblerProtocol.swift in Sources */,
 				EA91102F2ADDB93D00584B98 /* EnvironmentValues+ImageCache.swift in Sources */,
 				EA57A7D32B6C2C31006247DD /* AddPeopleTransmissionInteractor.swift in Sources */,
@@ -6904,6 +7167,7 @@
 				EA1FD1C32B1E932F000E583D /* VideoCallRoomModel.swift in Sources */,
 				EA57A7A32B6C1558006247DD /* CammerDetailsView.swift in Sources */,
 				EA57A7CE2B6C2C31006247DD /* AddPeopleTransmissionModel.swift in Sources */,
+				EA4A1C3F2B8788DB00B5FC59 /* SpecialistNotifiedViewModelProtocol.swift in Sources */,
 				EA3E5C902B87692400158207 /* AssistantMenuRoute.swift in Sources */,
 				EAF47B792B82FCE8003F8B86 /* BookWalkycamerInteractorProtocol.swift in Sources */,
 				56A5525F2B2F6E3D006B1B17 /* StreetCamMenuModel.swift in Sources */,

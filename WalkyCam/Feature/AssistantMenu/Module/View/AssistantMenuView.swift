@@ -66,13 +66,15 @@ struct AssistantMenuView<ViewModel:AssistantMenuViewModelProtocol, Router: Assis
                                style: .standard,
                                descriptor: BlackButtonStyleDescriptor(),
                                action: {
-
+                        router.routeToAvailableAssistants()
                     })
                     .frame(width: 170)
                     .padding(Tokens.Size.Spacing.large)
+                    .isHidden(selection == "")
                 }
             }
         }
+        .navigation(router)
     }
 
     private var headerView: some View {

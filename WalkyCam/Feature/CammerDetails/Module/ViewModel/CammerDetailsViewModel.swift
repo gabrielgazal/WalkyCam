@@ -12,12 +12,15 @@ final class CammerDetailsViewModel: CammerDetailsViewModelProtocol {
         .init(iconName: "", title: "Reseñas (10)")
     ]
     @Published var selection: WCTopBarItem = .init(iconName: "", title: "Información")
+    @Published var specialistMode: Bool
 
     // MARK: - Initialization
 
     init(interactor: CammerDetailsInteractorProtocol,
-         cammerData: CammerData) {
+         cammerData: CammerData,
+         specialistMode: Bool) {
         self.interactor = interactor
         self.cammerData = cammerData
+        self.specialistMode = specialistMode
     }
 }

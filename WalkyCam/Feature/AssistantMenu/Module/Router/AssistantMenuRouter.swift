@@ -4,9 +4,10 @@ final class AssistantMenuRouter: Router, AssistantMenuRouterProtocol {
 
     // MARK: - Public API
 
-    #warning("Example function. Rename or remove it")
-    func routeToSomething() { 
-
+    func routeToAvailableAssistants() {
+        navigateTo(
+            AvailableAssistantsRoute(isPresented: isNavigating)
+        )
     }
 }
 

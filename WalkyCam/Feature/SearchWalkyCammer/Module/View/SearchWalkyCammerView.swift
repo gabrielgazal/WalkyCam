@@ -172,7 +172,6 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
                        .padding(.horizontal, Tokens.Size.Spacing.regular)
             }
         } errorAction: {}
-
     }
 
     private func footerButtonTitle() -> String {

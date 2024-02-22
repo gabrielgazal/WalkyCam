@@ -6,7 +6,7 @@ final class SearchWalkyCammerRouter: Router, SearchWalkyCammerRouterProtocol {
 
     func routeToCamerDetail(_ data: CammerData) {
         navigateTo(
-            CammerDetailsRoute(isPresented: isNavigating, cammerData: data)
+            CammerDetailsRoute(isPresented: isNavigating, cammerData: data, specialistMode: false)
         )
     }
 }

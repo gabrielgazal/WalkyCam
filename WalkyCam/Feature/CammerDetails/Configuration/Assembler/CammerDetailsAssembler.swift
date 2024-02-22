@@ -11,7 +11,8 @@ final class CammerDetailsAssembler: CammerDetailsAssemblerProtocol {
             useCases: .init()
         )
         let viewModel = CammerDetailsViewModel(interactor: interactor,
-                                               cammerData: route.cammerData)
+                                               cammerData: route.cammerData,
+                                               specialistMode: route.specialistMode)
         let view = CammerDetailsView(viewModel: viewModel, router: router)
 
         return view

@@ -1,0 +1,3 @@
+protocol SpecialistNotifiedInteractorProtocol {
+    func someFunction()
+}

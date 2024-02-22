@@ -1,6 +1,6 @@
 import SwiftUI
 
 protocol CammerDetailsRouterProtocol: Router {
-    func routeToAddPeople()
+    func routeToAddPeople(specialistMode: Bool)
 }
 

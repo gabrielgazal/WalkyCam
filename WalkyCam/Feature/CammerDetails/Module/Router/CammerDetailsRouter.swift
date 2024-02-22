@@ -4,9 +4,9 @@ final class CammerDetailsRouter: Router, CammerDetailsRouterProtocol {
 
     // MARK: - Public API
 
-    func routeToAddPeople() {
+    func routeToAddPeople(specialistMode: Bool) {
         navigateTo(
-            AddPeopleTransmissionRoute(isPresented: isNavigating)
+            specialistMode ? SpecialistNotifiedRoute(isPresented: isNavigating) : AddPeopleTransmissionRoute(isPresented: isNavigating)
         )
     }
 }

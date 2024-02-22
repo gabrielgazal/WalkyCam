@@ -1,0 +1,3 @@
+protocol AvailableAssistantsInteractorProtocol {
+    func someFunction()
+}

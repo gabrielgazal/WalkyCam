@@ -107,7 +107,7 @@ struct CammerDetailsView<ViewModel:CammerDetailsViewModelProtocol, Router: Camme
                            style: .standard,
                            descriptor: OrangeButtonStyleDescriptor(),
                            action: {
-                    router.routeToAddPeople()
+                    router.routeToAddPeople(specialistMode: viewModel.specialistMode)
                 })
                 LinkButton(title: "Chatea conmigo",
                            icon: Asset.Icons.messageCircle.name,
@@ -160,7 +160,8 @@ struct CammerDetailsView_Previews: PreviewProvider {
                               description: "",
                               profileImage: .imageMock,
                               technologies: [],
-                              coordinates: .init(latitude: -12.123123, longitude: -49.123))),
+                              coordinates: .init(latitude: -12.123123, longitude: -49.123)),
+            specialistMode: false),
             router: CammerDetailsRouter(isPresented: .constant(false))
         )
     }
