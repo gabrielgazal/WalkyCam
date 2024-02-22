@@ -37,13 +37,16 @@ struct SpecialistNotifiedView<ViewModel:SpecialistNotifiedViewModelProtocol, Rou
             WCUIButton(title: "Aceptar",
                        style: .standard,
                        descriptor: OrangeButtonStyleDescriptor(),
-                       action: {})
+                       action: {
+                router.routeToARHands()
+            })
             WCUIButton(title: "Cancelar asistencia",
                        style: .standard,
                        descriptor: BlackButtonStyleDescriptor(),
                        action: {})
         }
                .padding(.horizontal, Tokens.Size.Spacing.large)
+               .navigation(router)
     }
 
     private var headerView: some View {

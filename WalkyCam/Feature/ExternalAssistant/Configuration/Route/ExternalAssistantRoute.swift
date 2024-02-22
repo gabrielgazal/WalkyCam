@@ -1,17 +1,14 @@
 import Foundation
 import SwiftUI
 
-struct FlightMenuRoute: Route {
+struct ExternalAssistantRoute: Route {
     var isPresented: Binding<Bool>
-    let assembler: FlightMenuAssemblerProtocol
-    let menuMode: FlightMenuMode
+    let assembler: ExternalAssistantAssemblerProtocol
 
     init(isPresented: Binding<Bool>,
-         assembler: FlightMenuAssemblerProtocol = FlightMenuAssembler(),
-         menuMode: FlightMenuMode) {
+         assembler: ExternalAssistantAssemblerProtocol = ExternalAssistantAssembler()) {
         self.isPresented = isPresented
         self.assembler = assembler
-        self.menuMode = menuMode
     }
 
     func build() -> AnyView {

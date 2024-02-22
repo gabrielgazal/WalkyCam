@@ -21,7 +21,7 @@ struct FlightMenuView<ViewModel:FlightMenuViewModelProtocol, Router: FlightMenuR
         ScrollView(showsIndicators: false) {
             VStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {
-                Image(Asset.Icons.drone.name)
+                Image(getFlightMenuImage())
                     .resizable()
                     .scaledToFit()
                     .frame(width: 170)
@@ -35,7 +35,9 @@ struct FlightMenuView<ViewModel:FlightMenuViewModelProtocol, Router: FlightMenuR
                                  description: "Localiza tu Piloto más cercano.",
                                  buttonTitle: "Buscar",
                                  icon: Asset.Icons.location.name,
-                                 action: {})
+                                 action: {
+                        router.routeToSearchCammer()
+                    })
                     verticalCard(title: "RESERVAR",
                                  description: "Programa tu Vuelo con anterioridad.",
                                  buttonTitle: "Reservar",
@@ -46,11 +48,22 @@ struct FlightMenuView<ViewModel:FlightMenuViewModelProtocol, Router: FlightMenuR
             }
         }
                .padding(Tokens.Size.Spacing.regular)
-               .background(Asset.Fondos.videocallFondo .swiftUIImage
+               .background(Asset.Fondos.droneFondo.swiftUIImage
                    .ignoresSafeArea())
                .navigation(router)
                .sheet(router)
                .environment(\.colorScheme, .dark)
+    }
+
+    private func getFlightMenuImage() -> String {
+        switch viewModel.menuMode {
+        case .video:
+            return Asset.Icons.drone.name
+        case .rural:
+            return Asset.Icons.riego.name
+        case .lidar:
+            return Asset.Icons.drone.name
+        }
     }
 
     private func verticalCard(title: String,
@@ -123,7 +136,7 @@ struct FlightMenuView<ViewModel:FlightMenuViewModelProtocol, Router: FlightMenuR
 struct FlightMenuView_Previews: PreviewProvider {
     static var previews: some View {
     FlightMenuView(
-            viewModel: FlightMenuViewModel(),
+        viewModel: FlightMenuViewModel(menuMode: .rural),
             router: FlightMenuRouter(isPresented: .constant(false))
         )
     }

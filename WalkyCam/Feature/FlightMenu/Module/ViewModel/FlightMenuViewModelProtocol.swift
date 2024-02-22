@@ -1,5 +1,5 @@
 import SwiftUI
 
 protocol FlightMenuViewModelProtocol: ViewModelProtocol {
-    func someAction()
+    var menuMode: FlightMenuMode { get set }
 }

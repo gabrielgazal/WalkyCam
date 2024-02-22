@@ -6,7 +6,7 @@ final class DroneOnboardingRouter: Router, DroneOnboardingRouterProtocol {
 
     func routeToFlightMenu() {
         navigateTo(
-            FlightMenuRoute(isPresented: isNavigating)
+            FlightMenuRoute(isPresented: isNavigating, menuMode: .video)
         )
     }
 }

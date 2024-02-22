@@ -10,7 +10,8 @@ final class FlightMenuAssembler: FlightMenuAssemblerProtocol {
         let interactor = FlightMenuInteractor(
             useCases: .init()
         )
-        let viewModel = FlightMenuViewModel(interactor: interactor)
+        let viewModel = FlightMenuViewModel(interactor: interactor,
+                                            menuMode: route.menuMode)
         let view = FlightMenuView(viewModel: viewModel, router: router)
 
         return view

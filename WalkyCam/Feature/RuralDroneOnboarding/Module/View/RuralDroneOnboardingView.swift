@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct DroneOnboardingView<ViewModel:DroneOnboardingViewModelProtocol, Router: DroneOnboardingRouterProtocol>: View {
+struct RuralDroneOnboardingView<ViewModel:RuralDroneOnboardingViewModelProtocol, Router: RuralDroneOnboardingRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -21,12 +21,12 @@ struct DroneOnboardingView<ViewModel:DroneOnboardingViewModelProtocol, Router: D
         VStack(alignment: .center,
                spacing: Tokens.Size.Spacing.regular) {
             TabView(selection: $viewModel.currentPage) {
-                DroneOnboardingPageView(illustration: Asset.Illustrations.droneOnboarding1.swiftUIImage,
-                                        title: "Graba a distancia",
-                                        description: "Tu eliges donde grabar tus videos y/o capturar imágenes \n\nNosotros pilotamos por ti.\n\nContamos con profesionales acreditados y con expeciencia tu WalkCamer te guiará."
+                DroneOnboardingPageView(illustration: Asset.Illustrations.ruralDrone.swiftUIImage,
+                                        title: "Utiliuza drones en tu cultivo",
+                                        description: "Mapeo de campos, IOT, vigilancia y monitoreo de los cultivos, agricultura ecológica, mediante Drone. \n\nContamos con profesionales acreditados y con experiencia.\nTu WalkCamer te guiará."
                 ).tag(0)
                 DroneOnboardingPageView(
-                    illustration: Asset.Icons.drone.swiftUIImage,
+                    illustration: Asset.Icons.riego.swiftUIImage,
                     title: "Consideraciones básicas",
                     description: "No se permite volar a mas de 110 m de altura",
                     secondDescription: [
@@ -102,11 +102,11 @@ struct DroneOnboardingView<ViewModel:DroneOnboardingViewModelProtocol, Router: D
     }
 }
 
-struct DroneOnboardingView_Previews: PreviewProvider {
+struct RuralDroneOnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-    DroneOnboardingView(
-            viewModel: DroneOnboardingViewModel(),
-            router: DroneOnboardingRouter(isPresented: .constant(false))
+        RuralDroneOnboardingView(
+            viewModel: RuralDroneOnboardingViewModel(),
+            router: RuralDroneOnboardingRouter(isPresented: .constant(false))
         )
     }
 }

@@ -1,0 +1,3 @@
+protocol RuralDroneOnboardingInteractorProtocol {
+    func someFunction()
+}

@@ -131,7 +131,7 @@ public struct TextInputView: View {
 
     private func buildDescriptionText(
         _ text: String?,
-        _ textColor: Color = Color.blanco
+        _ textColor: Color = Color.negro
     ) -> AnyView? {
         guard let text = text, !text.isEmpty else { return nil }
         return AnyView(

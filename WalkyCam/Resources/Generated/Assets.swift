@@ -35,6 +35,7 @@ internal enum Asset {
     internal static let search = ImageAsset(name: "search")
   }
   internal enum Fondos {
+    internal static let droneFondo = ImageAsset(name: "drone_fondo")
     internal static let loginFondo = ImageAsset(name: "login_fondo")
     internal static let planFondo = ImageAsset(name: "plan_fondo")
     internal static let videocallFondo = ImageAsset(name: "videocall_fondo")
@@ -130,6 +131,7 @@ internal enum Asset {
     internal static let onboarding1 = ImageAsset(name: "onboarding1")
     internal static let onboarding2 = ImageAsset(name: "onboarding2")
     internal static let onboarding3 = ImageAsset(name: "onboarding3")
+    internal static let ruralDrone = ImageAsset(name: "rural-drone")
     internal static let videocallOnboarding = ImageAsset(name: "videocall-onboarding")
   }
   internal static let launchScreen = ImageAsset(name: "LaunchScreen")

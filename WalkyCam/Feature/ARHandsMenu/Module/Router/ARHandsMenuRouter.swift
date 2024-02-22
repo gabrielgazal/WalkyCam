@@ -12,8 +12,7 @@ final class ARHandsMenuRouter: Router, ARHandsMenuRouterProtocol {
 
     func routeToExternalHands() {
         navigateTo(
-            WebRoute(isPreseted: isNavigating,
-                     webViewURL: "https://vcprojectj4g.com/static/main/")
+            ExternalAssistantRoute(isPresented: isNavigating)
         )
     }
     func routeToDigitalTwins() {}

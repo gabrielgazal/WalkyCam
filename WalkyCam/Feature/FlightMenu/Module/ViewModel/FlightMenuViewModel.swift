@@ -5,24 +5,13 @@ final class FlightMenuViewModel: FlightMenuViewModelProtocol {
     // MARK: - Dependencies
 
     private let interactor: FlightMenuInteractorProtocol
+    @Published var menuMode: FlightMenuMode
 
     // MARK: - Initialization
 
-    init(interactor: FlightMenuInteractorProtocol = FlightMenuInteractor()) {
+    init(interactor: FlightMenuInteractorProtocol = FlightMenuInteractor(),
+         menuMode: FlightMenuMode) {
         self.interactor = interactor
-    }
-
-    // MARK: - Public API
-
-    #warning("Example function. Rename or remove it")
-    func someAction() {
-
-    }
-
-    // MARK: - Private Methods
-
-    #warning("Example function. Rename or remove it")
-    private func somePrivateMethod() {
-
+        self.menuMode = menuMode
     }
 }
