@@ -43,7 +43,9 @@ struct SpecialistNotifiedView<ViewModel:SpecialistNotifiedViewModelProtocol, Rou
             WCUIButton(title: "Cancelar asistencia",
                        style: .standard,
                        descriptor: BlackButtonStyleDescriptor(),
-                       action: {})
+                       action: {
+                router.dismiss()
+            })
         }
                .padding(.horizontal, Tokens.Size.Spacing.large)
                .navigation(router)

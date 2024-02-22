@@ -42,7 +42,9 @@ struct FlightMenuView<ViewModel:FlightMenuViewModelProtocol, Router: FlightMenuR
                                  description: "Programa tu Vuelo con anterioridad.",
                                  buttonTitle: "Reservar",
                                  icon: Asset.Icons.calendar.name,
-                                 action: {})
+                                 action: {
+                        router.routeToScheduleCammer()
+                    })
                 }
                 horizontalCard(action: {})
             }

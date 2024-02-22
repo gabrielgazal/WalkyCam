@@ -9,5 +9,11 @@ final class FlightMenuRouter: Router, FlightMenuRouterProtocol {
             SearchWalkyCammerRoute(isPresented: isNavigating)
         )
     }
+
+    func routeToScheduleCammer() {
+        navigateTo(
+            BookWalkycamerRoute(isPresented: isNavigating)
+        )
+    }
 }
 
