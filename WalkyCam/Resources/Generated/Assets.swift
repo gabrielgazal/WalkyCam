@@ -120,6 +120,7 @@ internal enum Asset {
   }
   internal enum Illustrations {
     internal static let asistenteRemoto = ImageAsset(name: "Asistente Remoto")
+    internal static let asistenteMenu = ImageAsset(name: "asistente-menu")
     internal static let camerOnboarding = ImageAsset(name: "camerOnboarding")
     internal static let cammy = ImageAsset(name: "cammy")
     internal static let chatBot = ImageAsset(name: "chat-bot")
