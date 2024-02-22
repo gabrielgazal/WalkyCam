@@ -20,43 +20,56 @@ struct AssistantMenuView<ViewModel:AssistantMenuViewModelProtocol, Router: Assis
     // MARK: - View Body
 
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            ZStack {
+        ZStack {
+            VStack(alignment: .leading,
+                   spacing: Tokens.Size.Spacing.regular) {
+                Group {
+                    headerView
+                    Spacer()
+                        .frame(height: 50)
+                }
+                .padding(Tokens.Size.Spacing.large)
+                HStack {
+                    Spacer()
+                    Asset.Illustrations.asistenteMenu.swiftUIImage
+                }
+                Spacer()
+            }
+            VStack {
+                Spacer()
+                    .frame(height: 150)
                 VStack(alignment: .leading,
                        spacing: Tokens.Size.Spacing.regular) {
-                    Group {
-                        headerView
-                        Spacer()
-                            .frame(height: 100)
-                    }
-                    .padding(Tokens.Size.Spacing.large)
-                    HStack {
-                        Spacer()
-                        Asset.Illustrations.asistenteMenu.swiftUIImage
-                    }
-                }
-                VStack {
-                    Spacer()
-                        .frame(height: 150)
-                    VStack(alignment: .leading,
-                           spacing: Tokens.Size.Spacing.regular) {
-                        Text("Especialista")
-                            .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
-                        ListInputView(
-                            dataList: [
-                                "Carpintero",
-                                "Eletricista",
-                                "Informático/a",
-                                "Mecánico/a",
-                                "Veterinario"
-                            ],
-                            selection: $selection,
-                            rightIcon: Image(systemName: "chevron.down"),
-                            placeholder: "Selecciona especialista",
+                    Text("Especialista")
+                        .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                    ListInputView(
+                        dataList: [
+                            "Carpintero",
+                            "Eletricista",
+                            "Informático/a",
+                            "Mecánico/a",
+                            "Veterinario"
+                        ],
+                        selection: $selection,
+                        rightIcon: Image(systemName: "chevron.down"),
+                        placeholder: "Selecciona especialista",
                         backgroundColor: .blanco)
-                    }
-                           .padding(Tokens.Size.Spacing.large)
+                }
+                       .padding(Tokens.Size.Spacing.large)
+                Spacer()
+            }
+            VStack {
+                Spacer()
+                HStack {
                     Spacer()
+                    WCUIButton(title: "Siguiente",
+                               style: .standard,
+                               descriptor: BlackButtonStyleDescriptor(),
+                               action: {
+
+                    })
+                    .frame(width: 170)
+                    .padding(Tokens.Size.Spacing.large)
                 }
             }
         }
