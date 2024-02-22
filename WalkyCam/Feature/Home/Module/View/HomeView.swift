@@ -69,6 +69,8 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                                     router.routeToVideoCall()
                                 case 1:
                                     router.routeToWalkCamer()
+                                case 2:
+                                    router.routeToScan3D()
                                 case 3:
                                     router.routeToARHands()
                                 case 4:

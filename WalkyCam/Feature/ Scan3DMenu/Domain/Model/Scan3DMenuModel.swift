@@ -1,0 +1,3 @@
+struct Scan3DMenuModel {
+
+}

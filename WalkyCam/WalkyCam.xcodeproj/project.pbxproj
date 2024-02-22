@@ -138,6 +138,51 @@
 		EA1FD1C12B1E932F000E583D /* VideoCallRoomAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1FD1B42B1E932F000E583D /* VideoCallRoomAssemblerProtocol.swift */; };
 		EA1FD1C22B1E932F000E583D /* VideoCallRoomAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1FD1B52B1E932F000E583D /* VideoCallRoomAssembler.swift */; };
 		EA1FD1C32B1E932F000E583D /* VideoCallRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1FD1B82B1E932F000E583D /* VideoCallRoomModel.swift */; };
+		EA20A4E82B87C3B4006662FA /* Scan3DOnboardingViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A4D52B87C3B0006662FA /* Scan3DOnboardingViewModelProtocol.swift */; };
+		EA20A4E92B87C3B4006662FA /* Scan3DOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A4D62B87C3B0006662FA /* Scan3DOnboardingViewModel.swift */; };
+		EA20A4EA2B87C3B4006662FA /* Scan3DOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A4D82B87C3B0006662FA /* Scan3DOnboardingView.swift */; };
+		EA20A4EB2B87C3B4006662FA /* Scan3DOnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A4DA2B87C3B0006662FA /* Scan3DOnboardingInteractor.swift */; };
+		EA20A4EC2B87C3B4006662FA /* Scan3DOnboardingInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A4DB2B87C3B0006662FA /* Scan3DOnboardingInteractorProtocol.swift */; };
+		EA20A4ED2B87C3B5006662FA /* Scan3DOnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A4DD2B87C3B0006662FA /* Scan3DOnboardingRouter.swift */; };
+		EA20A4EE2B87C3B5006662FA /* Scan3DOnboardingRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A4DE2B87C3B0006662FA /* Scan3DOnboardingRouterProtocol.swift */; };
+		EA20A4EF2B87C3B5006662FA /* Scan3DOnboardingRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A4E12B87C3B1006662FA /* Scan3DOnboardingRoute.swift */; };
+		EA20A4F02B87C3B5006662FA /* Scan3DOnboardingAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A4E32B87C3B1006662FA /* Scan3DOnboardingAssembler.swift */; };
+		EA20A4F12B87C3B5006662FA /* Scan3DOnboardingAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A4E42B87C3B1006662FA /* Scan3DOnboardingAssemblerProtocol.swift */; };
+		EA20A4F22B87C3B5006662FA /* Scan3DOnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A4E72B87C3B3006662FA /* Scan3DOnboardingModel.swift */; };
+		EA20A4F42B87C47F006662FA /* Scan3DOnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A4F32B87C47F006662FA /* Scan3DOnboardingPageView.swift */; };
+		EA20A5112B87C913006662FA /* Scan3DMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A4FE2B87C913006662FA /* Scan3DMenuModel.swift */; };
+		EA20A5122B87C913006662FA /* Scan3DMenuRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A5012B87C913006662FA /* Scan3DMenuRoute.swift */; };
+		EA20A5132B87C913006662FA /* Scan3DMenuAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A5032B87C913006662FA /* Scan3DMenuAssembler.swift */; };
+		EA20A5142B87C913006662FA /* Scan3DMenuAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A5042B87C913006662FA /* Scan3DMenuAssemblerProtocol.swift */; };
+		EA20A5152B87C913006662FA /* Scan3DMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A5072B87C913006662FA /* Scan3DMenuViewModel.swift */; };
+		EA20A5162B87C913006662FA /* Scan3DMenuViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A5082B87C913006662FA /* Scan3DMenuViewModelProtocol.swift */; };
+		EA20A5172B87C913006662FA /* Scan3DMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A50A2B87C913006662FA /* Scan3DMenuView.swift */; };
+		EA20A5182B87C913006662FA /* Scan3DMenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A50C2B87C913006662FA /* Scan3DMenuInteractor.swift */; };
+		EA20A5192B87C913006662FA /* Scan3DMenuInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A50D2B87C913006662FA /* Scan3DMenuInteractorProtocol.swift */; };
+		EA20A51A2B87C913006662FA /* Scan3DMenuRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A50F2B87C913006662FA /* Scan3DMenuRouterProtocol.swift */; };
+		EA20A51B2B87C913006662FA /* Scan3DMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A5102B87C913006662FA /* Scan3DMenuRouter.swift */; };
+		EA20A5382B87D274006662FA /* ScannerMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A5252B87D273006662FA /* ScannerMenuModel.swift */; };
+		EA20A5392B87D274006662FA /* ScannerMenuRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A5282B87D273006662FA /* ScannerMenuRoute.swift */; };
+		EA20A53A2B87D274006662FA /* ScannerMenuAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A52A2B87D273006662FA /* ScannerMenuAssemblerProtocol.swift */; };
+		EA20A53B2B87D274006662FA /* ScannerMenuAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A52B2B87D273006662FA /* ScannerMenuAssembler.swift */; };
+		EA20A53C2B87D274006662FA /* ScannerMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A52E2B87D274006662FA /* ScannerMenuViewModel.swift */; };
+		EA20A53D2B87D274006662FA /* ScannerMenuViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A52F2B87D274006662FA /* ScannerMenuViewModelProtocol.swift */; };
+		EA20A53E2B87D274006662FA /* ScannerMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A5312B87D274006662FA /* ScannerMenuView.swift */; };
+		EA20A53F2B87D274006662FA /* ScannerMenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A5332B87D274006662FA /* ScannerMenuInteractor.swift */; };
+		EA20A5402B87D274006662FA /* ScannerMenuInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A5342B87D274006662FA /* ScannerMenuInteractorProtocol.swift */; };
+		EA20A5412B87D274006662FA /* ScannerMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A5362B87D274006662FA /* ScannerMenuRouter.swift */; };
+		EA20A5422B87D274006662FA /* ScannerMenuRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A5372B87D274006662FA /* ScannerMenuRouterProtocol.swift */; };
+		EA20A55F2B87D35B006662FA /* ShareSheetRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A54C2B87D35A006662FA /* ShareSheetRoute.swift */; };
+		EA20A5602B87D35B006662FA /* ShareSheetAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A54E2B87D35A006662FA /* ShareSheetAssembler.swift */; };
+		EA20A5612B87D35B006662FA /* ShareSheetAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A54F2B87D35A006662FA /* ShareSheetAssemblerProtocol.swift */; };
+		EA20A5622B87D35B006662FA /* ShareSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A5522B87D35A006662FA /* ShareSheetViewModel.swift */; };
+		EA20A5632B87D35B006662FA /* ShareSheetViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A5532B87D35A006662FA /* ShareSheetViewModelProtocol.swift */; };
+		EA20A5642B87D35B006662FA /* ShareSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A5552B87D35A006662FA /* ShareSheetView.swift */; };
+		EA20A5652B87D35B006662FA /* ShareSheetInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A5572B87D35A006662FA /* ShareSheetInteractorProtocol.swift */; };
+		EA20A5662B87D35B006662FA /* ShareSheetInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A5582B87D35A006662FA /* ShareSheetInteractor.swift */; };
+		EA20A5672B87D35B006662FA /* ShareSheetRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A55A2B87D35A006662FA /* ShareSheetRouter.swift */; };
+		EA20A5682B87D35B006662FA /* ShareSheetRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A55B2B87D35A006662FA /* ShareSheetRouterProtocol.swift */; };
+		EA20A5692B87D35B006662FA /* ShareSheetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A55E2B87D35A006662FA /* ShareSheetModel.swift */; };
 		EA282E112AE8327100B90920 /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282E102AE8327100B90920 /* DateFormat.swift */; };
 		EA282E132AE832F100B90920 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282E122AE832F100B90920 /* Date+Extension.swift */; };
 		EA282E512AE952F700B90920 /* ProfileRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA282E3E2AE952F600B90920 /* ProfileRoute.swift */; };
@@ -803,6 +848,51 @@
 		EA1FD1B42B1E932F000E583D /* VideoCallRoomAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallRoomAssemblerProtocol.swift; sourceTree = "<group>"; };
 		EA1FD1B52B1E932F000E583D /* VideoCallRoomAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallRoomAssembler.swift; sourceTree = "<group>"; };
 		EA1FD1B82B1E932F000E583D /* VideoCallRoomModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallRoomModel.swift; sourceTree = "<group>"; };
+		EA20A4D52B87C3B0006662FA /* Scan3DOnboardingViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DOnboardingViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA20A4D62B87C3B0006662FA /* Scan3DOnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DOnboardingViewModel.swift; sourceTree = "<group>"; };
+		EA20A4D82B87C3B0006662FA /* Scan3DOnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DOnboardingView.swift; sourceTree = "<group>"; };
+		EA20A4DA2B87C3B0006662FA /* Scan3DOnboardingInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DOnboardingInteractor.swift; sourceTree = "<group>"; };
+		EA20A4DB2B87C3B0006662FA /* Scan3DOnboardingInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DOnboardingInteractorProtocol.swift; sourceTree = "<group>"; };
+		EA20A4DD2B87C3B0006662FA /* Scan3DOnboardingRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DOnboardingRouter.swift; sourceTree = "<group>"; };
+		EA20A4DE2B87C3B0006662FA /* Scan3DOnboardingRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DOnboardingRouterProtocol.swift; sourceTree = "<group>"; };
+		EA20A4E12B87C3B1006662FA /* Scan3DOnboardingRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DOnboardingRoute.swift; sourceTree = "<group>"; };
+		EA20A4E32B87C3B1006662FA /* Scan3DOnboardingAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DOnboardingAssembler.swift; sourceTree = "<group>"; };
+		EA20A4E42B87C3B1006662FA /* Scan3DOnboardingAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DOnboardingAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA20A4E72B87C3B3006662FA /* Scan3DOnboardingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DOnboardingModel.swift; sourceTree = "<group>"; };
+		EA20A4F32B87C47F006662FA /* Scan3DOnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scan3DOnboardingPageView.swift; sourceTree = "<group>"; };
+		EA20A4FE2B87C913006662FA /* Scan3DMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DMenuModel.swift; sourceTree = "<group>"; };
+		EA20A5012B87C913006662FA /* Scan3DMenuRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DMenuRoute.swift; sourceTree = "<group>"; };
+		EA20A5032B87C913006662FA /* Scan3DMenuAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DMenuAssembler.swift; sourceTree = "<group>"; };
+		EA20A5042B87C913006662FA /* Scan3DMenuAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DMenuAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA20A5072B87C913006662FA /* Scan3DMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DMenuViewModel.swift; sourceTree = "<group>"; };
+		EA20A5082B87C913006662FA /* Scan3DMenuViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DMenuViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA20A50A2B87C913006662FA /* Scan3DMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DMenuView.swift; sourceTree = "<group>"; };
+		EA20A50C2B87C913006662FA /* Scan3DMenuInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DMenuInteractor.swift; sourceTree = "<group>"; };
+		EA20A50D2B87C913006662FA /* Scan3DMenuInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DMenuInteractorProtocol.swift; sourceTree = "<group>"; };
+		EA20A50F2B87C913006662FA /* Scan3DMenuRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DMenuRouterProtocol.swift; sourceTree = "<group>"; };
+		EA20A5102B87C913006662FA /* Scan3DMenuRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DMenuRouter.swift; sourceTree = "<group>"; };
+		EA20A5252B87D273006662FA /* ScannerMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerMenuModel.swift; sourceTree = "<group>"; };
+		EA20A5282B87D273006662FA /* ScannerMenuRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerMenuRoute.swift; sourceTree = "<group>"; };
+		EA20A52A2B87D273006662FA /* ScannerMenuAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerMenuAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA20A52B2B87D273006662FA /* ScannerMenuAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerMenuAssembler.swift; sourceTree = "<group>"; };
+		EA20A52E2B87D274006662FA /* ScannerMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerMenuViewModel.swift; sourceTree = "<group>"; };
+		EA20A52F2B87D274006662FA /* ScannerMenuViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerMenuViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA20A5312B87D274006662FA /* ScannerMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerMenuView.swift; sourceTree = "<group>"; };
+		EA20A5332B87D274006662FA /* ScannerMenuInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerMenuInteractor.swift; sourceTree = "<group>"; };
+		EA20A5342B87D274006662FA /* ScannerMenuInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerMenuInteractorProtocol.swift; sourceTree = "<group>"; };
+		EA20A5362B87D274006662FA /* ScannerMenuRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerMenuRouter.swift; sourceTree = "<group>"; };
+		EA20A5372B87D274006662FA /* ScannerMenuRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerMenuRouterProtocol.swift; sourceTree = "<group>"; };
+		EA20A54C2B87D35A006662FA /* ShareSheetRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSheetRoute.swift; sourceTree = "<group>"; };
+		EA20A54E2B87D35A006662FA /* ShareSheetAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSheetAssembler.swift; sourceTree = "<group>"; };
+		EA20A54F2B87D35A006662FA /* ShareSheetAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSheetAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA20A5522B87D35A006662FA /* ShareSheetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSheetViewModel.swift; sourceTree = "<group>"; };
+		EA20A5532B87D35A006662FA /* ShareSheetViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSheetViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA20A5552B87D35A006662FA /* ShareSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSheetView.swift; sourceTree = "<group>"; };
+		EA20A5572B87D35A006662FA /* ShareSheetInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSheetInteractorProtocol.swift; sourceTree = "<group>"; };
+		EA20A5582B87D35A006662FA /* ShareSheetInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSheetInteractor.swift; sourceTree = "<group>"; };
+		EA20A55A2B87D35A006662FA /* ShareSheetRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSheetRouter.swift; sourceTree = "<group>"; };
+		EA20A55B2B87D35A006662FA /* ShareSheetRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSheetRouterProtocol.swift; sourceTree = "<group>"; };
+		EA20A55E2B87D35A006662FA /* ShareSheetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSheetModel.swift; sourceTree = "<group>"; };
 		EA282E102AE8327100B90920 /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
 		EA282E122AE832F100B90920 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		EA282E3E2AE952F600B90920 /* ProfileRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileRoute.swift; sourceTree = "<group>"; };
@@ -1970,6 +2060,10 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				EA20A5432B87D327006662FA /* ShareSheet */,
+				EA20A51C2B87D25A006662FA /* ScannerMenu */,
+				EA20A4F52B87C8FD006662FA /*  Scan3DMenu */,
+				EA20A4CC2B87C35B006662FA /* Scan3DOnboarding */,
 				EA4A1C6E2B8799B400B5FC59 /* RuralDroneOnboarding */,
 				EA4A1C472B87908500B5FC59 /* ExternalAssistant */,
 				EA4A1C202B8788B700B5FC59 /* SpecialistNotified */,
@@ -2454,6 +2548,399 @@
 			isa = PBXGroup;
 			children = (
 				EA1FD1B82B1E932F000E583D /* VideoCallRoomModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA20A4CC2B87C35B006662FA /* Scan3DOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A4DF2B87C3B1006662FA /* Configuration */,
+				EA20A4E52B87C3B3006662FA /* Domain */,
+				EA20A4D32B87C3B0006662FA /* Module */,
+			);
+			path = Scan3DOnboarding;
+			sourceTree = "<group>";
+		};
+		EA20A4D32B87C3B0006662FA /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A4D42B87C3B0006662FA /* ViewModel */,
+				EA20A4D72B87C3B0006662FA /* View */,
+				EA20A4D92B87C3B0006662FA /* Interactor */,
+				EA20A4DC2B87C3B0006662FA /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA20A4D42B87C3B0006662FA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A4D52B87C3B0006662FA /* Scan3DOnboardingViewModelProtocol.swift */,
+				EA20A4D62B87C3B0006662FA /* Scan3DOnboardingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA20A4D72B87C3B0006662FA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A4D82B87C3B0006662FA /* Scan3DOnboardingView.swift */,
+				EA20A4F32B87C47F006662FA /* Scan3DOnboardingPageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA20A4D92B87C3B0006662FA /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A4DA2B87C3B0006662FA /* Scan3DOnboardingInteractor.swift */,
+				EA20A4DB2B87C3B0006662FA /* Scan3DOnboardingInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EA20A4DC2B87C3B0006662FA /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A4DD2B87C3B0006662FA /* Scan3DOnboardingRouter.swift */,
+				EA20A4DE2B87C3B0006662FA /* Scan3DOnboardingRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EA20A4DF2B87C3B1006662FA /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A4E02B87C3B1006662FA /* Route */,
+				EA20A4E22B87C3B1006662FA /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA20A4E02B87C3B1006662FA /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A4E12B87C3B1006662FA /* Scan3DOnboardingRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA20A4E22B87C3B1006662FA /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A4E32B87C3B1006662FA /* Scan3DOnboardingAssembler.swift */,
+				EA20A4E42B87C3B1006662FA /* Scan3DOnboardingAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EA20A4E52B87C3B3006662FA /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A4E62B87C3B3006662FA /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA20A4E62B87C3B3006662FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A4E72B87C3B3006662FA /* Scan3DOnboardingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA20A4F52B87C8FD006662FA /*  Scan3DMenu */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A4FF2B87C913006662FA /* Configuration */,
+				EA20A4FC2B87C913006662FA /* Domain */,
+				EA20A5052B87C913006662FA /* Module */,
+			);
+			path = " Scan3DMenu";
+			sourceTree = "<group>";
+		};
+		EA20A4FC2B87C913006662FA /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A4FD2B87C913006662FA /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA20A4FD2B87C913006662FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A4FE2B87C913006662FA /* Scan3DMenuModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA20A4FF2B87C913006662FA /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A5002B87C913006662FA /* Route */,
+				EA20A5022B87C913006662FA /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA20A5002B87C913006662FA /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A5012B87C913006662FA /* Scan3DMenuRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA20A5022B87C913006662FA /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A5032B87C913006662FA /* Scan3DMenuAssembler.swift */,
+				EA20A5042B87C913006662FA /* Scan3DMenuAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EA20A5052B87C913006662FA /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A5062B87C913006662FA /* ViewModel */,
+				EA20A5092B87C913006662FA /* View */,
+				EA20A50B2B87C913006662FA /* Interactor */,
+				EA20A50E2B87C913006662FA /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA20A5062B87C913006662FA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A5072B87C913006662FA /* Scan3DMenuViewModel.swift */,
+				EA20A5082B87C913006662FA /* Scan3DMenuViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA20A5092B87C913006662FA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A50A2B87C913006662FA /* Scan3DMenuView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA20A50B2B87C913006662FA /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A50C2B87C913006662FA /* Scan3DMenuInteractor.swift */,
+				EA20A50D2B87C913006662FA /* Scan3DMenuInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EA20A50E2B87C913006662FA /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A50F2B87C913006662FA /* Scan3DMenuRouterProtocol.swift */,
+				EA20A5102B87C913006662FA /* Scan3DMenuRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EA20A51C2B87D25A006662FA /* ScannerMenu */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A5262B87D273006662FA /* Configuration */,
+				EA20A5232B87D273006662FA /* Domain */,
+				EA20A52C2B87D274006662FA /* Module */,
+			);
+			path = ScannerMenu;
+			sourceTree = "<group>";
+		};
+		EA20A5232B87D273006662FA /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A5242B87D273006662FA /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA20A5242B87D273006662FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A5252B87D273006662FA /* ScannerMenuModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA20A5262B87D273006662FA /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A5272B87D273006662FA /* Route */,
+				EA20A5292B87D273006662FA /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA20A5272B87D273006662FA /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A5282B87D273006662FA /* ScannerMenuRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA20A5292B87D273006662FA /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A52A2B87D273006662FA /* ScannerMenuAssemblerProtocol.swift */,
+				EA20A52B2B87D273006662FA /* ScannerMenuAssembler.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EA20A52C2B87D274006662FA /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A52D2B87D274006662FA /* ViewModel */,
+				EA20A5302B87D274006662FA /* View */,
+				EA20A5322B87D274006662FA /* Interactor */,
+				EA20A5352B87D274006662FA /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA20A52D2B87D274006662FA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A52E2B87D274006662FA /* ScannerMenuViewModel.swift */,
+				EA20A52F2B87D274006662FA /* ScannerMenuViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA20A5302B87D274006662FA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A5312B87D274006662FA /* ScannerMenuView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA20A5322B87D274006662FA /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A5332B87D274006662FA /* ScannerMenuInteractor.swift */,
+				EA20A5342B87D274006662FA /* ScannerMenuInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EA20A5352B87D274006662FA /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A5362B87D274006662FA /* ScannerMenuRouter.swift */,
+				EA20A5372B87D274006662FA /* ScannerMenuRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EA20A5432B87D327006662FA /* ShareSheet */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A54A2B87D35A006662FA /* Configuration */,
+				EA20A55C2B87D35A006662FA /* Domain */,
+				EA20A5502B87D35A006662FA /* Module */,
+			);
+			path = ShareSheet;
+			sourceTree = "<group>";
+		};
+		EA20A54A2B87D35A006662FA /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A54B2B87D35A006662FA /* Route */,
+				EA20A54D2B87D35A006662FA /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA20A54B2B87D35A006662FA /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A54C2B87D35A006662FA /* ShareSheetRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA20A54D2B87D35A006662FA /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A54E2B87D35A006662FA /* ShareSheetAssembler.swift */,
+				EA20A54F2B87D35A006662FA /* ShareSheetAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EA20A5502B87D35A006662FA /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A5512B87D35A006662FA /* ViewModel */,
+				EA20A5542B87D35A006662FA /* View */,
+				EA20A5562B87D35A006662FA /* Interactor */,
+				EA20A5592B87D35A006662FA /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA20A5512B87D35A006662FA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A5522B87D35A006662FA /* ShareSheetViewModel.swift */,
+				EA20A5532B87D35A006662FA /* ShareSheetViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA20A5542B87D35A006662FA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A5552B87D35A006662FA /* ShareSheetView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA20A5562B87D35A006662FA /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A5572B87D35A006662FA /* ShareSheetInteractorProtocol.swift */,
+				EA20A5582B87D35A006662FA /* ShareSheetInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EA20A5592B87D35A006662FA /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A55A2B87D35A006662FA /* ShareSheetRouter.swift */,
+				EA20A55B2B87D35A006662FA /* ShareSheetRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EA20A55C2B87D35A006662FA /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A55D2B87D35A006662FA /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA20A55D2B87D35A006662FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA20A55E2B87D35A006662FA /* ShareSheetModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -6848,6 +7335,7 @@
 				EAF47B4E2B82F7EA003F8B86 /* VideocallOnboardingViewModel.swift in Sources */,
 				EA6083DC2B01DBDF00295069 /* GalleryPhotosInteractor.swift in Sources */,
 				EA4A1C8F2B8799B400B5FC59 /* RuralDroneOnboardingRouter.swift in Sources */,
+				EA20A5142B87C913006662FA /* Scan3DMenuAssemblerProtocol.swift in Sources */,
 				EA282E582AE952F700B90920 /* ProfileInteractorProtocol.swift in Sources */,
 				56FEECF02B5C802C003FA686 /* SearchWalkyCammerAssembler.swift in Sources */,
 				EA3E5C932B87692400158207 /* AssistantMenuModel.swift in Sources */,
@@ -6856,6 +7344,7 @@
 				EA6083922B01CD0A00295069 /* ShopTabInteractorProtocol.swift in Sources */,
 				EA72199A2B05612900BE2D93 /* WalkyBotView.swift in Sources */,
 				EA7219992B05612900BE2D93 /* WalkyBotViewModel.swift in Sources */,
+				EA20A5612B87D35B006662FA /* ShareSheetAssemblerProtocol.swift in Sources */,
 				EA57A7A22B6C1558006247DD /* CammerDetailsViewModelProtocol.swift in Sources */,
 				EA4A1C1E2B87799100B5FC59 /* AvailableAssistantsAssemblerProtocol.swift in Sources */,
 				EA94A5322B7160EF00EC3037 /* ServiceDetailsInteractorProtocol.swift in Sources */,
@@ -6870,6 +7359,7 @@
 				EA4165442AE706C6008CE66A /* NotificationsInteractorProtocol.swift in Sources */,
 				EA6083682B01981800295069 /* CryptoDetailsRouter.swift in Sources */,
 				EA15B5B22AD7072400C03407 /* SnackBarModifier.swift in Sources */,
+				EA20A4EE2B87C3B5006662FA /* Scan3DOnboardingRouterProtocol.swift in Sources */,
 				EAA1E6452AFB03FD00A42174 /* CashTabModel.swift in Sources */,
 				EA0E40952AF69771002B7437 /* CashWalletOnboardingAssembler.swift in Sources */,
 				EAF47C412B838D74003F8B86 /* DroneMenuInteractor.swift in Sources */,
@@ -6880,11 +7370,14 @@
 				EAF47BF42B83099F003F8B86 /* MapTabRouterProtocol.swift in Sources */,
 				EA5E1D962AD725DF00738A8F /* ProjectColors.swift in Sources */,
 				EAF47B9E2B82FFF2003F8B86 /* CalendarTabView.swift in Sources */,
+				EA20A5672B87D35B006662FA /* ShareSheetRouter.swift in Sources */,
 				EAD0486C2AE22C530096E6AB /* RegistrationPlansView.swift in Sources */,
 				EAF47B572B82F7EA003F8B86 /* UpdateVideocallConfigurationUseCase.swift in Sources */,
+				EA20A5682B87D35B006662FA /* ShareSheetRouterProtocol.swift in Sources */,
 				EADB5CAB2B190819005863E1 /* VideoCallInteractorProtocol.swift in Sources */,
 				56FEECF82B5C802C003FA686 /* SearchWalkyCammerRouter.swift in Sources */,
 				EA57A7D12B6C2C31006247DD /* AddPeopleTransmissionView.swift in Sources */,
+				EA20A53C2B87D274006662FA /* ScannerMenuViewModel.swift in Sources */,
 				561FC8BF2B5C67FB005B6006 /* AsyncData.swift in Sources */,
 				EAA1E63C2AFB03FD00A42174 /* CashTabAssembler.swift in Sources */,
 				EA91102D2ADDB91100584B98 /* URL+ImageLoadable.swift in Sources */,
@@ -6906,12 +7399,14 @@
 				EA60838C2B01CD0A00295069 /* ShopTabAssembler.swift in Sources */,
 				EA50A08A2B0BC77F0042B238 /* PlansPagesRouterProtocol.swift in Sources */,
 				EA4164F72AE4B6F7008CE66A /* ComparePlansRouter.swift in Sources */,
+				EA20A4EC2B87C3B4006662FA /* Scan3DOnboardingInteractorProtocol.swift in Sources */,
 				EA94A5302B7160EF00EC3037 /* ServiceDetailsViewModelProtocol.swift in Sources */,
 				EA5E1D712AD7167300738A8F /* LinkButtonStyle.swift in Sources */,
 				EAF47C1B2B830C80003F8B86 /* WalkyCammerListRouterProtocol.swift in Sources */,
 				EA2F93FA2B62CECD00E1C146 /* LoginInteractorProtocol.swift in Sources */,
 				EA94A5312B7160EF00EC3037 /* ServiceDetailsView.swift in Sources */,
 				EAF47BCA2B8306E9003F8B86 /* TimeTabRouterProtocol.swift in Sources */,
+				EA20A5602B87D35B006662FA /* ShareSheetAssembler.swift in Sources */,
 				EAB63BBE2B83D6390017BDA4 /* ARHandsMenuView.swift in Sources */,
 				56A552582B2F6E3D006B1B17 /* StreetCamMenuViewModel.swift in Sources */,
 				EA910F952ADA06F500584B98 /* RegistrationRouterProtocol.swift in Sources */,
@@ -6921,7 +7416,10 @@
 				EA91101E2ADDADE100584B98 /* HomeInteractorProtocol.swift in Sources */,
 				EAF47C132B830C80003F8B86 /* WalkyCammerListAssembler.swift in Sources */,
 				EAA1E6442AFB03FD00A42174 /* CashTabRouterProtocol.swift in Sources */,
+				EA20A5152B87C913006662FA /* Scan3DMenuViewModel.swift in Sources */,
 				EA172B242AF06EF600EB1514 /* StartupInteractor.swift in Sources */,
+				EA20A5182B87C913006662FA /* Scan3DMenuInteractor.swift in Sources */,
+				EA20A5132B87C913006662FA /* Scan3DMenuAssembler.swift in Sources */,
 				EA6083B92B01D9E100295069 /* GalleryInteractor.swift in Sources */,
 				EA0E40C32AF70E86002B7437 /* CashWalletRoute.swift in Sources */,
 				EA910F602AD9B01300584B98 /* OnboardingViewModel.swift in Sources */,
@@ -6945,9 +7443,11 @@
 				EA60838A2B01CD0A00295069 /* ShopTabRoute.swift in Sources */,
 				EA2C4C202B7E5C4300F1EE26 /* DroneOnboardingViewModelProtocol.swift in Sources */,
 				56A552322B2F6135006B1B17 /* WalkyCamerOnboardingInteractor.swift in Sources */,
+				EA20A5662B87D35B006662FA /* ShareSheetInteractor.swift in Sources */,
 				EA172AD92AF0335400EB1514 /* AdvertisementCard.swift in Sources */,
 				EA4164F12AE4B6F7008CE66A /* ComparePlansViewModel.swift in Sources */,
 				EADB5CAA2B190819005863E1 /* VideoCallInteractor.swift in Sources */,
+				EA20A5692B87D35B006662FA /* ShareSheetModel.swift in Sources */,
 				EA282ECB2AEB531100B90920 /* FunctionsViewModelProtocol.swift in Sources */,
 				EAF47C892B839308003F8B86 /* FlightMenuRouter.swift in Sources */,
 				561FC8B72B5C66F7005B6006 /* WebViewSwiftUI.swift in Sources */,
@@ -6957,9 +7457,11 @@
 				EAF47B7D2B82FCE8003F8B86 /* BookWalkycamerAssembler.swift in Sources */,
 				EAA1E63B2AFB03FD00A42174 /* CashTabRoute.swift in Sources */,
 				EA8EF8DE2B67E24400136D1F /* KeychainPersistenceProtocol.swift in Sources */,
+				EA20A53A2B87D274006662FA /* ScannerMenuAssemblerProtocol.swift in Sources */,
 				EA910FF02ADCBCC000584B98 /* MenuRoute.swift in Sources */,
 				EAF47BF12B83099F003F8B86 /* MapTabView.swift in Sources */,
 				EA6083452AFD58A900295069 /* CryptoTabRouter.swift in Sources */,
+				EA20A53B2B87D274006662FA /* ScannerMenuAssembler.swift in Sources */,
 				EAF47B522B82F7EA003F8B86 /* VideocallOnboardingInteractor.swift in Sources */,
 				EADB5CA92B190819005863E1 /* VideoCallView.swift in Sources */,
 				EA2C4C212B7E5C4300F1EE26 /* DroneOnboardingViewModel.swift in Sources */,
@@ -6969,6 +7471,7 @@
 				EA4A1C652B87909F00B5FC59 /* ExternalAssistantView.swift in Sources */,
 				EAF47BEB2B83099F003F8B86 /* MapTabModel.swift in Sources */,
 				EA50A08E2B0BC77F0042B238 /* PlansPagesAssemblerProtocol.swift in Sources */,
+				EA20A5402B87D274006662FA /* ScannerMenuInteractorProtocol.swift in Sources */,
 				EA57A7D42B6C2C31006247DD /* AddPeopleTransmissionRouter.swift in Sources */,
 				EA57A7AB2B6C1558006247DD /* CammerDetailsAssembler.swift in Sources */,
 				EA0E40BD2AF70E86002B7437 /* CashWalletView.swift in Sources */,
@@ -7007,6 +7510,7 @@
 				56DADB202AD5EA7200710618 /* AppNavigatorProtocol.swift in Sources */,
 				EA50A0862B0BC77F0042B238 /* PlansPagesViewModelProtocol.swift in Sources */,
 				EA4A1C422B8788DB00B5FC59 /* SpecialistNotifiedInteractorProtocol.swift in Sources */,
+				EA20A5632B87D35B006662FA /* ShareSheetViewModelProtocol.swift in Sources */,
 				EA4A1C632B87909F00B5FC59 /* ExternalAssistantViewModelProtocol.swift in Sources */,
 				EA7219962B05612900BE2D93 /* WalkyBotAssembler.swift in Sources */,
 				EA0E408B2AF69771002B7437 /* CashWalletOnboardingModel.swift in Sources */,
@@ -7040,6 +7544,7 @@
 				EAF47B4B2B82F7EA003F8B86 /* VideocallOnboardingRoute.swift in Sources */,
 				EA172B252AF06EF600EB1514 /* StartupInteractorProtocol.swift in Sources */,
 				EA6083E12B01DBE000295069 /* GalleryPhotosAssemblerProtocol.swift in Sources */,
+				EA20A53D2B87D274006662FA /* ScannerMenuViewModelProtocol.swift in Sources */,
 				EA5E1D742AD716A500738A8F /* ProjectFont.swift in Sources */,
 				EAA1E6402AFB03FD00A42174 /* CashTabView.swift in Sources */,
 				EA4A1C6C2B87909F00B5FC59 /* ExternalAssistantAssembler.swift in Sources */,
@@ -7057,6 +7562,7 @@
 				EAF47C422B838D74003F8B86 /* DroneMenuRouterProtocol.swift in Sources */,
 				EA6083DE2B01DBDF00295069 /* GalleryPhotosRouterProtocol.swift in Sources */,
 				EA6083DF2B01DBE000295069 /* GalleryPhotosRouter.swift in Sources */,
+				EA20A5112B87C913006662FA /* Scan3DMenuModel.swift in Sources */,
 				EA172B202AF06EF600EB1514 /* StartupAssemblerProtocol.swift in Sources */,
 				EA4164FB2AE4B805008CE66A /* ComparePlansPageView.swift in Sources */,
 				EA5E1D7B2AD7174700738A8F /* Button+Extension.swift in Sources */,
@@ -7067,6 +7573,8 @@
 				EA72199B2B05612900BE2D93 /* WalkyBotInteractor.swift in Sources */,
 				EA60836D2B01981800295069 /* CryptoDetailsAssembler.swift in Sources */,
 				EA72199D2B05612900BE2D93 /* WalkyBotRouterProtocol.swift in Sources */,
+				EA20A5382B87D274006662FA /* ScannerMenuModel.swift in Sources */,
+				EA20A5652B87D35B006662FA /* ShareSheetInteractorProtocol.swift in Sources */,
 				EA172B262AF06EF600EB1514 /* StartupRouter.swift in Sources */,
 				EA8EF8D32B67E14300136D1F /* UserSession.swift in Sources */,
 				EAF47BCD2B8306E9003F8B86 /* TimeTabAssemblerProtocol.swift in Sources */,
@@ -7092,6 +7600,7 @@
 				EA9110312ADDB95C00584B98 /* ImageCache.swift in Sources */,
 				EA8EF8DA2B67E24400136D1F /* KeychainError.swift in Sources */,
 				EA910FC82ADC495700584B98 /* TabBarViewModelProtocol.swift in Sources */,
+				EA20A4EA2B87C3B4006662FA /* Scan3DOnboardingView.swift in Sources */,
 				EA910F8E2ADA06F500584B98 /* RegistrationViewModel.swift in Sources */,
 				EA6083462AFD58A900295069 /* CryptoTabRouterProtocol.swift in Sources */,
 				EA282ED02AEB531100B90920 /* FunctionsRouter.swift in Sources */,
@@ -7101,6 +7610,7 @@
 				EA3E5C9E2B876E1F00158207 /* ListInputView.swift in Sources */,
 				EAF47BA42B82FFF2003F8B86 /* CalendarTabAssemblerProtocol.swift in Sources */,
 				EA282E562AE952F700B90920 /* ProfileViewModel.swift in Sources */,
+				EA20A4F02B87C3B5006662FA /* Scan3DOnboardingAssembler.swift in Sources */,
 				EA910FCA2ADC495700584B98 /* TabBarView.swift in Sources */,
 				EAB63BC12B83D6390017BDA4 /* ARHandsMenuRouter.swift in Sources */,
 				EA4165492AE706C6008CE66A /* NotificationsAssemblerProtocol.swift in Sources */,
@@ -7110,9 +7620,11 @@
 				EAA1E61E2AFAFA7100A42174 /* WCTopBarContainerView.swift in Sources */,
 				EA910F312AD8B55200584B98 /* Divider.swift in Sources */,
 				56A552302B2F6135006B1B17 /* WalkyCamerOnboardingViewModelProtocol.swift in Sources */,
+				EA20A4ED2B87C3B5006662FA /* Scan3DOnboardingRouter.swift in Sources */,
 				EAF47B4C2B82F7EA003F8B86 /* VideocallOnboardingAssemblerProtocol.swift in Sources */,
 				EAD048722AE22C530096E6AB /* RegistrationPlansAssembler.swift in Sources */,
 				EA172AFD2AF06BDE00EB1514 /* ConfirmMailInteractorProtocol.swift in Sources */,
+				EA20A5392B87D274006662FA /* ScannerMenuRoute.swift in Sources */,
 				EA3E5C992B87692400158207 /* AssistantMenuRouter.swift in Sources */,
 				EA282EDD2AEB572700B90920 /* FunctionCell.swift in Sources */,
 				EA8EF8DD2B67E24400136D1F /* KeychainPersistence.swift in Sources */,
@@ -7124,6 +7636,7 @@
 				EAA1E63E2AFB03FD00A42174 /* CashTabViewModelProtocol.swift in Sources */,
 				EA6083662B01981800295069 /* CryptoDetailsInteractor.swift in Sources */,
 				EA3E5C982B87692400158207 /* AssistantMenuInteractorProtocol.swift in Sources */,
+				EA20A5122B87C913006662FA /* Scan3DMenuRoute.swift in Sources */,
 				EA4A1C1F2B87799100B5FC59 /* AvailableAssistantsAssembler.swift in Sources */,
 				EA910F652AD9B01300584B98 /* OnboardingRouterProtocol.swift in Sources */,
 				EAF47C182B830C80003F8B86 /* WalkyCammerListInteractorProtocol.swift in Sources */,
@@ -7134,6 +7647,8 @@
 				EA282E592AE952F700B90920 /* ProfileInteractor.swift in Sources */,
 				EA1FD1BC2B1E932F000E583D /* VideoCallRoomInteractor.swift in Sources */,
 				EA2C4C1F2B7E5C4300F1EE26 /* DroneOnboardingModel.swift in Sources */,
+				EA20A55F2B87D35B006662FA /* ShareSheetRoute.swift in Sources */,
+				EA20A4F22B87C3B5006662FA /* Scan3DOnboardingModel.swift in Sources */,
 				EAF47BC42B8306E9003F8B86 /* TimeTabModel.swift in Sources */,
 				EA910FFA2ADCBCC000584B98 /* MenuRouter.swift in Sources */,
 				EA57A7A62B6C1558006247DD /* CammerDetailsRouter.swift in Sources */,
@@ -7167,14 +7682,17 @@
 				EA6083DA2B01DBDF00295069 /* GalleryPhotosViewModelProtocol.swift in Sources */,
 				EA4AE4882B75011B00B5A89F /* FetchUserConfigurationsUseCase.swift in Sources */,
 				EA910FD22ADC499500584B98 /* TabBarBuilder.swift in Sources */,
+				EA20A53E2B87D274006662FA /* ScannerMenuView.swift in Sources */,
 				EA5E1D762AD716D200738A8F /* ButtonStyleDescriptor.swift in Sources */,
 				EA4A1C6A2B87909F00B5FC59 /* ExternalAssistantModel.swift in Sources */,
 				56A552572B2F6E3D006B1B17 /* StreetCamMenuAssembler.swift in Sources */,
+				EA20A4EB2B87C3B4006662FA /* Scan3DOnboardingInteractor.swift in Sources */,
 				EA172AF82AF06BDE00EB1514 /* ConfirmMailAssembler.swift in Sources */,
 				EA82DB532ADF605500E6B39A /* ReminderCardView.swift in Sources */,
 				EA9110262ADDAE6400584B98 /* ProfileHeaderView.swift in Sources */,
 				EA57A7A82B6C1558006247DD /* CammerDetailsModel.swift in Sources */,
 				EAF47B7B2B82FCE8003F8B86 /* BookWalkycamerRouter.swift in Sources */,
+				EA20A5192B87C913006662FA /* Scan3DMenuInteractorProtocol.swift in Sources */,
 				EA282E602AE9A10600B90920 /* ImageMock.swift in Sources */,
 				EA1FD1C22B1E932F000E583D /* VideoCallRoomAssembler.swift in Sources */,
 				56A552332B2F6135006B1B17 /* WalkyCamerOnboardingInteractorProtocol.swift in Sources */,
@@ -7198,6 +7716,7 @@
 				EA172AFC2AF06BDE00EB1514 /* ConfirmMailView.swift in Sources */,
 				561FC8B92B5C6787005B6006 /* WebViewRoute.swift in Sources */,
 				EADB5CAD2B190819005863E1 /* VideoCallRouter.swift in Sources */,
+				EA20A5622B87D35B006662FA /* ShareSheetViewModel.swift in Sources */,
 				EA57A7CB2B6C2C31006247DD /* AddPeopleTransmissionRoute.swift in Sources */,
 				EA57A7AE2B6C1C9B006247DD /* FooterView.swift in Sources */,
 				EA6083DD2B01DBDF00295069 /* GalleryPhotosInteractorProtocol.swift in Sources */,
@@ -7246,6 +7765,7 @@
 				EAF47C812B839308003F8B86 /* FlightMenuRoute.swift in Sources */,
 				EAF47BA02B82FFF2003F8B86 /* CalendarTabInteractor.swift in Sources */,
 				EA6083B12B01D9E100295069 /* GalleryRoute.swift in Sources */,
+				EA20A4F12B87C3B5006662FA /* Scan3DOnboardingAssemblerProtocol.swift in Sources */,
 				EA6083432AFD58A900295069 /* CryptoTabInteractor.swift in Sources */,
 				EAF47C152B830C80003F8B86 /* WalkyCammerListViewModelProtocol.swift in Sources */,
 				EA60836B2B01981800295069 /* CryptoDetailsRoute.swift in Sources */,
@@ -7261,12 +7781,14 @@
 				EA2C4C252B7E5C4300F1EE26 /* DroneOnboardingRouterProtocol.swift in Sources */,
 				EA4A1C872B8799B400B5FC59 /* RuralDroneOnboardingAssemblerProtocol.swift in Sources */,
 				EADB5CAE2B190819005863E1 /* VideoCallModel.swift in Sources */,
+				EA20A51B2B87C913006662FA /* Scan3DMenuRouter.swift in Sources */,
 				561FC8BE2B5C67FB005B6006 /* AsyncDataError.swift in Sources */,
 				EA94A52F2B7160EF00EC3037 /* ServiceDetailsViewModel.swift in Sources */,
 				EA4A1C662B87909F00B5FC59 /* ExternalAssistantInteractor.swift in Sources */,
 				EAF47BEF2B83099F003F8B86 /* MapTabViewModel.swift in Sources */,
 				EA57A7A12B6C1558006247DD /* CammerDetailsViewModel.swift in Sources */,
 				EAF47B9D2B82FFF2003F8B86 /* CalendarTabViewModel.swift in Sources */,
+				EA20A4E92B87C3B4006662FA /* Scan3DOnboardingViewModel.swift in Sources */,
 				EA282ED62AEB532800B90920 /* RecentFunctionsCell.swift in Sources */,
 				EA72199C2B05612900BE2D93 /* WalkyBotInteractorProtocol.swift in Sources */,
 				EA5A88062B68039400BBB7F9 /* LoginUseCase.swift in Sources */,
@@ -7289,6 +7811,7 @@
 				EA50A08B2B0BC77F0042B238 /* PlansPagesRouter.swift in Sources */,
 				EA50A0872B0BC77F0042B238 /* PlansPagesView.swift in Sources */,
 				EA4A1C8A2B8799B400B5FC59 /* RuralDroneOnboardingView.swift in Sources */,
+				EA20A5422B87D274006662FA /* ScannerMenuRouterProtocol.swift in Sources */,
 				56A5522C2B2F6135006B1B17 /* WalkyCamerOnboardingRoute.swift in Sources */,
 				EAF47B4F2B82F7EA003F8B86 /* VideocallOnboardingViewModelProtocol.swift in Sources */,
 				EA0E40912AF69771002B7437 /* CashWalletOnboardingRouterProtocol.swift in Sources */,
@@ -7330,10 +7853,12 @@
 				EA7219982B05612900BE2D93 /* WalkyBotViewModelProtocol.swift in Sources */,
 				EA0E408E2AF69771002B7437 /* CashWalletOnboardingView.swift in Sources */,
 				EA282E5B2AE952F700B90920 /* ProfileRouterProtocol.swift in Sources */,
+				EA20A5642B87D35B006662FA /* ShareSheetView.swift in Sources */,
 				EA4A1C892B8799B400B5FC59 /* RuralDroneOnboardingViewModel.swift in Sources */,
 				EAF47BA52B82FFF2003F8B86 /* CalendarTabAssembler.swift in Sources */,
 				EA15B59F2AD6E44D00C03407 /* LoginRouterProtocol.swift in Sources */,
 				EA4A1C3D2B8788DB00B5FC59 /* SpecialistNotifiedAssemblerProtocol.swift in Sources */,
+				EA20A51A2B87C913006662FA /* Scan3DMenuRouterProtocol.swift in Sources */,
 				EAF47BEE2B83099F003F8B86 /* MapTabAssembler.swift in Sources */,
 				EA5E1D9D2AD8A3DA00738A8F /* Assets.swift in Sources */,
 				EA6083D82B01DBDF00295069 /* GalleryPhotosModel.swift in Sources */,
@@ -7350,6 +7875,7 @@
 				EA910F3A2AD9782000584B98 /* SelectorModel.swift in Sources */,
 				EAD0486F2AE22C530096E6AB /* RegistrationPlansRouterProtocol.swift in Sources */,
 				56A5522E2B2F6135006B1B17 /* WalkyCamerOnboardingAssembler.swift in Sources */,
+				EA20A5162B87C913006662FA /* Scan3DMenuViewModelProtocol.swift in Sources */,
 				EAD048702AE22C530096E6AB /* RegistrationPlansRouter.swift in Sources */,
 				56A552312B2F6135006B1B17 /* WalkyCamerOnboardingView.swift in Sources */,
 				EA6083652B01981800295069 /* CryptoDetailsView.swift in Sources */,
@@ -7361,6 +7887,7 @@
 				EA91102F2ADDB93D00584B98 /* EnvironmentValues+ImageCache.swift in Sources */,
 				EA57A7D32B6C2C31006247DD /* AddPeopleTransmissionInteractor.swift in Sources */,
 				EA3E5C952B87692400158207 /* AssistantMenuViewModel.swift in Sources */,
+				EA20A5172B87C913006662FA /* Scan3DMenuView.swift in Sources */,
 				EAF47C3C2B838D74003F8B86 /* DroneMenuModel.swift in Sources */,
 				EA910F9C2ADC437300584B98 /* AlertModifier.swift in Sources */,
 				EA910FFB2ADCBCC000584B98 /* MenuRouterProtocol.swift in Sources */,
@@ -7378,6 +7905,7 @@
 				EAB63B922B83D2ED0017BDA4 /* ARHandsOnboardingRoute.swift in Sources */,
 				EA910F922ADA06F500584B98 /* RegistrationInteractor.swift in Sources */,
 				EA910FC52ADC495700584B98 /* TabBarAssembler.swift in Sources */,
+				EA20A53F2B87D274006662FA /* ScannerMenuInteractor.swift in Sources */,
 				EA82DB502ADF4DBB00E6B39A /* HomeSectionView.swift in Sources */,
 				EAF47BF32B83099F003F8B86 /* MapTabInteractorProtocol.swift in Sources */,
 				EADB5CA72B190819005863E1 /* VideoCallViewModelProtocol.swift in Sources */,
@@ -7424,14 +7952,17 @@
 				EA282E572AE952F700B90920 /* ProfileView.swift in Sources */,
 				EA4164F52AE4B6F7008CE66A /* ComparePlansInteractor.swift in Sources */,
 				EAF47C872B839308003F8B86 /* FlightMenuInteractor.swift in Sources */,
+				EA20A4E82B87C3B4006662FA /* Scan3DOnboardingViewModelProtocol.swift in Sources */,
 				EA60836A2B01981800295069 /* CryptoDetailsModel.swift in Sources */,
 				EA172AFE2AF06BDE00EB1514 /* ConfirmMailInteractor.swift in Sources */,
 				EA172AFB2AF06BDE00EB1514 /* ConfirmMailViewModelProtocol.swift in Sources */,
 				EA9110232ADDADE100584B98 /* HomeAssemblerProtocol.swift in Sources */,
 				56A552382B2F6168006B1B17 /* WalkyCamerOnboardingPageView.swift in Sources */,
+				EA20A5412B87D274006662FA /* ScannerMenuRouter.swift in Sources */,
 				EA15B5A22AD6E44D00C03407 /* LoginAssemblerProtocol.swift in Sources */,
 				EA8EF8DC2B67E24400136D1F /* Keychain.swift in Sources */,
 				EAB63B972B83D2ED0017BDA4 /* ARHandsOnboardingViewModel.swift in Sources */,
+				EA20A4F42B87C47F006662FA /* Scan3DOnboardingPageView.swift in Sources */,
 				EA282ECE2AEB531100B90920 /* FunctionsInteractor.swift in Sources */,
 				EAF47BA72B8303BC003F8B86 /* CalendarView.swift in Sources */,
 				EAF47BC62B8306E9003F8B86 /* TimeTabViewModelProtocol.swift in Sources */,
@@ -7456,6 +7987,7 @@
 				EA72199E2B05612900BE2D93 /* WalkyBotRouter.swift in Sources */,
 				EA910F8F2ADA06F500584B98 /* RegistrationViewModelProtocol.swift in Sources */,
 				EA2C4C282B7E5C4300F1EE26 /* DroneOnboardingAssembler.swift in Sources */,
+				EA20A4EF2B87C3B5006662FA /* Scan3DOnboardingRoute.swift in Sources */,
 				EAF47BA22B82FFF2003F8B86 /* CalendarTabRouterProtocol.swift in Sources */,
 				EA41654A2AE706C6008CE66A /* NotificationsAssembler.swift in Sources */,
 			);

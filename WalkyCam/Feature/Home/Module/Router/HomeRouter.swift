@@ -47,4 +47,11 @@ final class HomeRouter: Router, HomeRouterProtocol {
             DroneMenuRoute(isPresented: isNavigating)
         )
     }
+
+    func routeToScan3D() {
+        let seenOnboarding: Bool = (try? UserSession().user().configurations?.scan3D) ?? false
+        navigateTo(
+            seenOnboarding ? Scan3DMenuRoute(isPresented: isNavigating) : Scan3DOnboardingRoute(isPresented: isNavigating)
+        )
+    }
 }
