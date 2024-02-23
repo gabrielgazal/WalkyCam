@@ -5,4 +5,5 @@ protocol FunctionsRouterProtocol: Router {
     func routeToWalkCamer()
     func routeToARHands()
     func routeToDrone()
+    func routeToScan3D()
 }

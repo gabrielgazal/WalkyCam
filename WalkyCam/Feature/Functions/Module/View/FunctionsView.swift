@@ -43,6 +43,8 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
                                                 router.routeToWalkCamer()
                                             case "AR Hands":
                                                 router.routeToARHands()
+                                            case "Scan 3D":
+                                                router.routeToScan3D()
                                             case "Drone":
                                                 router.routeToDrone()
                                             default: break
