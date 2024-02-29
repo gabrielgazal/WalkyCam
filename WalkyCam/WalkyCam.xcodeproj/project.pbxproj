@@ -482,6 +482,17 @@
 		EA8652E02B90DCE900B86A54 /* PrintMenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652D42B90DCE900B86A54 /* PrintMenuInteractor.swift */; };
 		EA8652E12B90DCE900B86A54 /* PrintMenuRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652D62B90DCE900B86A54 /* PrintMenuRouterProtocol.swift */; };
 		EA8652E22B90DCE900B86A54 /* PrintMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652D72B90DCE900B86A54 /* PrintMenuRouter.swift */; };
+		EA8652FF2B90E0FB00B86A54 /* LidarOnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652EC2B90E0FB00B86A54 /* LidarOnboardingModel.swift */; };
+		EA8653002B90E0FB00B86A54 /* LidarOnboardingViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652EF2B90E0FB00B86A54 /* LidarOnboardingViewModelProtocol.swift */; };
+		EA8653012B90E0FB00B86A54 /* LidarOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652F02B90E0FB00B86A54 /* LidarOnboardingViewModel.swift */; };
+		EA8653022B90E0FB00B86A54 /* LidarOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652F22B90E0FB00B86A54 /* LidarOnboardingView.swift */; };
+		EA8653032B90E0FB00B86A54 /* LidarOnboardingInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652F42B90E0FB00B86A54 /* LidarOnboardingInteractorProtocol.swift */; };
+		EA8653042B90E0FB00B86A54 /* LidarOnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652F52B90E0FB00B86A54 /* LidarOnboardingInteractor.swift */; };
+		EA8653052B90E0FB00B86A54 /* LidarOnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652F72B90E0FB00B86A54 /* LidarOnboardingRouter.swift */; };
+		EA8653062B90E0FB00B86A54 /* LidarOnboardingRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652F82B90E0FB00B86A54 /* LidarOnboardingRouterProtocol.swift */; };
+		EA8653072B90E0FB00B86A54 /* LidarOnboardingRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652FB2B90E0FB00B86A54 /* LidarOnboardingRoute.swift */; };
+		EA8653082B90E0FB00B86A54 /* LidarOnboardingAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652FD2B90E0FB00B86A54 /* LidarOnboardingAssemblerProtocol.swift */; };
+		EA8653092B90E0FB00B86A54 /* LidarOnboardingAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652FE2B90E0FB00B86A54 /* LidarOnboardingAssembler.swift */; };
 		EA890A262B61ECFB00FC369B /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = EA890A252B61ECFB00FC369B /* Networking */; };
 		EA890A292B61EDE500FC369B /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA890A282B61EDE500FC369B /* Dependency.swift */; };
 		EA8EF8D02B67E12400136D1F /* UserSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8EF8CF2B67E12400136D1F /* UserSessionProtocol.swift */; };
@@ -1237,6 +1248,17 @@
 		EA8652D42B90DCE900B86A54 /* PrintMenuInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintMenuInteractor.swift; sourceTree = "<group>"; };
 		EA8652D62B90DCE900B86A54 /* PrintMenuRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintMenuRouterProtocol.swift; sourceTree = "<group>"; };
 		EA8652D72B90DCE900B86A54 /* PrintMenuRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintMenuRouter.swift; sourceTree = "<group>"; };
+		EA8652EC2B90E0FB00B86A54 /* LidarOnboardingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LidarOnboardingModel.swift; sourceTree = "<group>"; };
+		EA8652EF2B90E0FB00B86A54 /* LidarOnboardingViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LidarOnboardingViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA8652F02B90E0FB00B86A54 /* LidarOnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LidarOnboardingViewModel.swift; sourceTree = "<group>"; };
+		EA8652F22B90E0FB00B86A54 /* LidarOnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LidarOnboardingView.swift; sourceTree = "<group>"; };
+		EA8652F42B90E0FB00B86A54 /* LidarOnboardingInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LidarOnboardingInteractorProtocol.swift; sourceTree = "<group>"; };
+		EA8652F52B90E0FB00B86A54 /* LidarOnboardingInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LidarOnboardingInteractor.swift; sourceTree = "<group>"; };
+		EA8652F72B90E0FB00B86A54 /* LidarOnboardingRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LidarOnboardingRouter.swift; sourceTree = "<group>"; };
+		EA8652F82B90E0FB00B86A54 /* LidarOnboardingRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LidarOnboardingRouterProtocol.swift; sourceTree = "<group>"; };
+		EA8652FB2B90E0FB00B86A54 /* LidarOnboardingRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LidarOnboardingRoute.swift; sourceTree = "<group>"; };
+		EA8652FD2B90E0FB00B86A54 /* LidarOnboardingAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LidarOnboardingAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA8652FE2B90E0FB00B86A54 /* LidarOnboardingAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LidarOnboardingAssembler.swift; sourceTree = "<group>"; };
 		EA890A282B61EDE500FC369B /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
 		EA8EF8CF2B67E12400136D1F /* UserSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionProtocol.swift; sourceTree = "<group>"; };
 		EA8EF8D22B67E14300136D1F /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
@@ -2148,6 +2170,7 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				EA8652E32B90E0D400B86A54 /* LidarOnboarding */,
 				EA8652BC2B90DC9F00B86A54 /* PrintMenu */,
 				EA8652952B90DA7400B86A54 /* 3DPrintOnboarding */,
 				EA86526E2B90AC8900B86A54 /* IOTOnboarding */,
@@ -5584,6 +5607,104 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		EA8652E32B90E0D400B86A54 /* LidarOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652F92B90E0FB00B86A54 /* Configuration */,
+				EA8652EA2B90E0FB00B86A54 /* Domain */,
+				EA8652ED2B90E0FB00B86A54 /* Module */,
+			);
+			path = LidarOnboarding;
+			sourceTree = "<group>";
+		};
+		EA8652EA2B90E0FB00B86A54 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652EB2B90E0FB00B86A54 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA8652EB2B90E0FB00B86A54 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652EC2B90E0FB00B86A54 /* LidarOnboardingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA8652ED2B90E0FB00B86A54 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652EE2B90E0FB00B86A54 /* ViewModel */,
+				EA8652F12B90E0FB00B86A54 /* View */,
+				EA8652F32B90E0FB00B86A54 /* Interactor */,
+				EA8652F62B90E0FB00B86A54 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA8652EE2B90E0FB00B86A54 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652EF2B90E0FB00B86A54 /* LidarOnboardingViewModelProtocol.swift */,
+				EA8652F02B90E0FB00B86A54 /* LidarOnboardingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA8652F12B90E0FB00B86A54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652F22B90E0FB00B86A54 /* LidarOnboardingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA8652F32B90E0FB00B86A54 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652F42B90E0FB00B86A54 /* LidarOnboardingInteractorProtocol.swift */,
+				EA8652F52B90E0FB00B86A54 /* LidarOnboardingInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EA8652F62B90E0FB00B86A54 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652F72B90E0FB00B86A54 /* LidarOnboardingRouter.swift */,
+				EA8652F82B90E0FB00B86A54 /* LidarOnboardingRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EA8652F92B90E0FB00B86A54 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652FA2B90E0FB00B86A54 /* Route */,
+				EA8652FC2B90E0FB00B86A54 /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA8652FA2B90E0FB00B86A54 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652FB2B90E0FB00B86A54 /* LidarOnboardingRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA8652FC2B90E0FB00B86A54 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652FD2B90E0FB00B86A54 /* LidarOnboardingAssemblerProtocol.swift */,
+				EA8652FE2B90E0FB00B86A54 /* LidarOnboardingAssembler.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
 		EA890A272B61EDCE00FC369B /* DependencyStore */ = {
 			isa = PBXGroup;
 			children = (
@@ -8040,6 +8161,7 @@
 				EA6083442AFD58A900295069 /* CryptoTabInteractorProtocol.swift in Sources */,
 				EAF47B4B2B82F7EA003F8B86 /* VideocallOnboardingRoute.swift in Sources */,
 				EA172B252AF06EF600EB1514 /* StartupInteractorProtocol.swift in Sources */,
+				EA8652FF2B90E0FB00B86A54 /* LidarOnboardingModel.swift in Sources */,
 				EA6083E12B01DBE000295069 /* GalleryPhotosAssemblerProtocol.swift in Sources */,
 				EA5E1D742AD716A500738A8F /* ProjectFont.swift in Sources */,
 				EAA1E6402AFB03FD00A42174 /* CashTabView.swift in Sources */,
@@ -8099,6 +8221,7 @@
 				EA86528B2B90ACC200B86A54 /* IOTOnboardingAssembler.swift in Sources */,
 				EA8EF8DA2B67E24400136D1F /* KeychainError.swift in Sources */,
 				EA910FC82ADC495700584B98 /* TabBarViewModelProtocol.swift in Sources */,
+				EA8653022B90E0FB00B86A54 /* LidarOnboardingView.swift in Sources */,
 				EA20A4EA2B87C3B4006662FA /* Scan3DOnboardingView.swift in Sources */,
 				EA910F8E2ADA06F500584B98 /* RegistrationViewModel.swift in Sources */,
 				EA6083462AFD58A900295069 /* CryptoTabRouterProtocol.swift in Sources */,
@@ -8120,6 +8243,7 @@
 				EAA1E61E2AFAFA7100A42174 /* WCTopBarContainerView.swift in Sources */,
 				EA910F312AD8B55200584B98 /* Divider.swift in Sources */,
 				56A552302B2F6135006B1B17 /* WalkyCamerOnboardingViewModelProtocol.swift in Sources */,
+				EA8653052B90E0FB00B86A54 /* LidarOnboardingRouter.swift in Sources */,
 				EA20A4ED2B87C3B5006662FA /* Scan3DOnboardingRouter.swift in Sources */,
 				EAF47B4C2B82F7EA003F8B86 /* VideocallOnboardingAssemblerProtocol.swift in Sources */,
 				EAD048722AE22C530096E6AB /* RegistrationPlansAssembler.swift in Sources */,
@@ -8138,7 +8262,10 @@
 				EA3E5C982B87692400158207 /* AssistantMenuInteractorProtocol.swift in Sources */,
 				EA20A5122B87C913006662FA /* Scan3DMenuRoute.swift in Sources */,
 				EA4A1C1F2B87799100B5FC59 /* AvailableAssistantsAssembler.swift in Sources */,
+				EA8653042B90E0FB00B86A54 /* LidarOnboardingInteractor.swift in Sources */,
+				EA8653012B90E0FB00B86A54 /* LidarOnboardingViewModel.swift in Sources */,
 				EA8652682B90AC8300B86A54 /* IOTMenuViewModelProtocol.swift in Sources */,
+				EA8653082B90E0FB00B86A54 /* LidarOnboardingAssemblerProtocol.swift in Sources */,
 				EA910F652AD9B01300584B98 /* OnboardingRouterProtocol.swift in Sources */,
 				EAF47C182B830C80003F8B86 /* WalkyCammerListInteractorProtocol.swift in Sources */,
 				EA4A1C3E2B8788DB00B5FC59 /* SpecialistNotifiedAssembler.swift in Sources */,
@@ -8191,6 +8318,7 @@
 				EA5E1D762AD716D200738A8F /* ButtonStyleDescriptor.swift in Sources */,
 				EA8652B22B90DA9600B86A54 /* 3DPrintOnboardingRoute.swift in Sources */,
 				EA4A1C6A2B87909F00B5FC59 /* ExternalAssistantModel.swift in Sources */,
+				EA8653092B90E0FB00B86A54 /* LidarOnboardingAssembler.swift in Sources */,
 				56A552572B2F6E3D006B1B17 /* StreetCamMenuAssembler.swift in Sources */,
 				EA20A4EB2B87C3B4006662FA /* Scan3DOnboardingInteractor.swift in Sources */,
 				EA172AF82AF06BDE00EB1514 /* ConfirmMailAssembler.swift in Sources */,
@@ -8315,10 +8443,12 @@
 				EA6083B22B01D9E100295069 /* GalleryAssemblerProtocol.swift in Sources */,
 				EA4164F62AE4B6F7008CE66A /* ComparePlansInteractorProtocol.swift in Sources */,
 				EA3E5C962B87692400158207 /* AssistantMenuView.swift in Sources */,
+				EA8653072B90E0FB00B86A54 /* LidarOnboardingRoute.swift in Sources */,
 				EA57A7CC2B6C2C31006247DD /* AddPeopleTransmissionAssemblerProtocol.swift in Sources */,
 				EA282E112AE8327100B90920 /* DateFormat.swift in Sources */,
 				EA4A1C172B87799100B5FC59 /* AvailableAssistantsView.swift in Sources */,
 				EA0E408F2AF69771002B7437 /* CashWalletOnboardingInteractor.swift in Sources */,
+				EA8653032B90E0FB00B86A54 /* LidarOnboardingInteractorProtocol.swift in Sources */,
 				EAB63BC22B83D63A0017BDA4 /* ARHandsMenuRouterProtocol.swift in Sources */,
 				EAF47B752B82FCE8003F8B86 /* BookWalkycamerViewModelProtocol.swift in Sources */,
 				EA50A08B2B0BC77F0042B238 /* PlansPagesRouter.swift in Sources */,
@@ -8381,6 +8511,7 @@
 				EA5E1D9D2AD8A3DA00738A8F /* Assets.swift in Sources */,
 				EA6083D82B01DBDF00295069 /* GalleryPhotosModel.swift in Sources */,
 				EA910FF62ADCBCC000584B98 /* MenuViewModel.swift in Sources */,
+				EA8653002B90E0FB00B86A54 /* LidarOnboardingViewModelProtocol.swift in Sources */,
 				EA86523C2B902E4B00B86A54 /* FunctionMenuViewModel.swift in Sources */,
 				EAF47C882B839308003F8B86 /* FlightMenuInteractorProtocol.swift in Sources */,
 				EA6083422AFD58A900295069 /* CryptoTabView.swift in Sources */,
@@ -8491,6 +8622,7 @@
 				EA282ECE2AEB531100B90920 /* FunctionsInteractor.swift in Sources */,
 				EAF47BA72B8303BC003F8B86 /* CalendarView.swift in Sources */,
 				EAF47BC62B8306E9003F8B86 /* TimeTabViewModelProtocol.swift in Sources */,
+				EA8653062B90E0FB00B86A54 /* LidarOnboardingRouterProtocol.swift in Sources */,
 				EA910F3C2AD982F300584B98 /* SecureTextInputView.swift in Sources */,
 				EA1FD1C02B1E932F000E583D /* VideoCallRoomRoute.swift in Sources */,
 				EA910FA42ADC470A00584B98 /* WCTabBarView.swift in Sources */,

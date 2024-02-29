@@ -147,6 +147,7 @@ internal enum Asset {
     internal static let cryptoOnboarding1 = ImageAsset(name: "crypto-onboarding1")
     internal static let cryptoOnboarding2 = ImageAsset(name: "crypto-onboarding2")
     internal static let droneOnboarding1 = ImageAsset(name: "drone-onboarding1")
+    internal static let lidarDrone = ImageAsset(name: "lidarDrone")
     internal static let onboarding1 = ImageAsset(name: "onboarding1")
     internal static let onboarding2 = ImageAsset(name: "onboarding2")
     internal static let onboarding3 = ImageAsset(name: "onboarding3")

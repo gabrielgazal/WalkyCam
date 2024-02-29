@@ -1,0 +1,3 @@
+protocol LidarOnboardingInteractorProtocol {
+    func someFunction()
+}
