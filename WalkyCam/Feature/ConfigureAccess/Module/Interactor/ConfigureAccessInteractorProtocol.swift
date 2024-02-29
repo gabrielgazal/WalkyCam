@@ -1,0 +1,3 @@
+protocol ConfigureAccessInteractorProtocol {
+    func someFunction()
+}

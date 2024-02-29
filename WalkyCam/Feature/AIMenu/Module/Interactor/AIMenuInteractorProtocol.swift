@@ -1,0 +1,3 @@
+protocol AIMenuInteractorProtocol {
+    func someFunction()
+}

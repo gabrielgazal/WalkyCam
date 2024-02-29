@@ -52,5 +52,11 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
             _DPrintOnboardingRoute(isPresented: isNavigating)
         )
     }
+
+    func routeToAI() {
+        navigateTo(
+            AIOnboardingRoute(isPresented: isNavigating)
+        )
+    }
 }
 

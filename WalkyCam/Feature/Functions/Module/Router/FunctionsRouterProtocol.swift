@@ -9,4 +9,5 @@ protocol FunctionsRouterProtocol: Router {
     func routeToCryptoWallet()
     func routeToIOT()
     func routeTo3DPrinting()
+    func routeToAI()
 }
