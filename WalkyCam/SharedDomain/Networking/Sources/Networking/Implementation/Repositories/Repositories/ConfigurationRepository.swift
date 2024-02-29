@@ -26,37 +26,37 @@ final class ConfigurationRepository: ConfigurationRepositoryProtocol {
 
     // MARK: - Public API
 
-    func getStreetCamConfiguration(userId: String, completion: @escaping (GetConfigurationResult) -> Void) {
+    func getStreetCamConfiguration(userId: String, completion: @escaping (GetStreetCamConfigurationResult) -> Void) {
         service.getStreetCamConfiguration(userId: userId) { result in
             completion(result.mapToRepositoryResult(with: self.requestHandler))
         }
     }
 
-    func getScan3DConfiguration(userId: String, completion: @escaping (GetConfigurationResult) -> Void) {
+    func getScan3DConfiguration(userId: String, completion: @escaping (GetScan3DConfigurationResult) -> Void) {
         service.getScan3DConfiguration(userId: userId) { result in
             completion(result.mapToRepositoryResult(with: self.requestHandler))
         }
     }
 
-    func getVideoCallConfiguration(userId: String, completion: @escaping (GetConfigurationResult) -> Void) {
+    func getVideoCallConfiguration(userId: String, completion: @escaping (GetVideoCallConfigurationResult) -> Void) {
         service.getVideoCallConfiguration(userId: userId) { result in
             completion(result.mapToRepositoryResult(with: self.requestHandler))
         }
     }
 
-    func getARHandsConfiguration(userId: String, completion: @escaping (GetConfigurationResult) -> Void) {
+    func getARHandsConfiguration(userId: String, completion: @escaping (GetARHandsConfigurationResult) -> Void) {
         service.getARHandsConfiguration(userId: userId) { result in
             completion(result.mapToRepositoryResult(with: self.requestHandler))
         }
     }
 
-    func getDigitalTwinsCamConfiguration(userId: String, completion: @escaping (GetConfigurationResult) -> Void) {
+    func getDigitalTwinsCamConfiguration(userId: String, completion: @escaping (GetDigitalTwinsConfigurationResult) -> Void) {
         service.getDigitalTwinsCamConfiguration(userId: userId) { result in
             completion(result.mapToRepositoryResult(with: self.requestHandler))
         }
     }
 
-    func getDroneConfiguration(userId: String, completion: @escaping (GetConfigurationResult) -> Void) {
+    func getDroneConfiguration(userId: String, completion: @escaping (GetDroneConfigurationResult) -> Void) {
         service.getDroneConfiguration(userId: userId) { result in
             completion(result.mapToRepositoryResult(with: self.requestHandler))
         }

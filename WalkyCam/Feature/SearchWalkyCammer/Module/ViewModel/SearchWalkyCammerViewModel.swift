@@ -28,7 +28,7 @@ final class SearchWalkyCammerViewModel: SearchWalkyCammerViewModelProtocol {
             guard let placemarks = placemarks,
                   let location = placemarks.first?.location?.coordinate else { return }
             self.coordinates = location
-            self.getWalkyCammersOnLocation {
+            self.getWalkyCammersOnLocation(coordinates: location) {
                 self.userLocation = Viewport.camera(center: location,
                                             zoom: 15,
                                             bearing: 0,
@@ -38,7 +38,7 @@ final class SearchWalkyCammerViewModel: SearchWalkyCammerViewModelProtocol {
         }
     }
 
-    private func getWalkyCammersOnLocation(completion: @escaping () -> Void) {
+    private func getWalkyCammersOnLocation(coordinates: CLLocationCoordinate2D, completion: @escaping () -> Void) {
         walkyCammers = .loading
         let cammers = interactor.getCammersOnLocation(location: coordinates)
         walkyCammers = .loaded(cammers)

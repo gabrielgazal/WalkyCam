@@ -6,8 +6,8 @@ struct TimeTabView<ViewModel:TimeTabViewModelProtocol, Router: TimeTabRouterProt
 
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
-    @State var startTimeSelected = Date.now
-    @State var endTimeSelected = Date.now
+    @State var startTimeSelected = Date()
+    @State var endTimeSelected = Date()
 
     // MARK: - Initialization
 
@@ -28,7 +28,7 @@ struct TimeTabView<ViewModel:TimeTabViewModelProtocol, Router: TimeTabRouterProt
                     VStack(alignment: .leading) {
                         Text("Desde")
                             .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .medium))
-                        Text("10:00h")
+                        Text(startTimeSelected, style: .time)
                             .font(.projectFont(size: Tokens.Size.Font.giant, weight: .bold))
                     }
                     Spacer()
@@ -42,7 +42,7 @@ struct TimeTabView<ViewModel:TimeTabViewModelProtocol, Router: TimeTabRouterProt
                     VStack(alignment: .leading) {
                         Text("Hasta")
                             .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .medium))
-                        Text("14:00h")
+                        Text(endTimeSelected, style: .time)
                             .font(.projectFont(size: Tokens.Size.Font.giant, weight: .bold))
                     }
                     Spacer()

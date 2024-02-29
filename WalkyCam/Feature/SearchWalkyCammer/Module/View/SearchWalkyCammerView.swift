@@ -112,10 +112,33 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
                                 longitude: item.coordinates.longitude
                             )
                         ) {
-                            Asset.Icons.wIcon.swiftUIImage
-                                .onTapGesture {
-                                    router.routeToCamerDetail(item)
+                            Group {
+                                if let url = URL(string: item.profileImage) {
+                                    AsyncImageView(imageLoadable: url) { status in
+                                        Group {
+                                            switch status {
+                                            case .failured:
+                                                placeholder
+                                            case .loading:
+                                                ProgressView()
+                                            default:
+                                                placeholder
+                                            }
+                                        }
+                                    }
+                                    .overlay(
+                                        Circle()
+                                            .stroke(lineWidth: 2)
+                                    )
+                                } else {
+                                    placeholder
                                 }
+                            }
+                            .frame(width: 40, height: 40)
+                            .clipShape(Circle())
+                            .onTapGesture {
+                                router.routeToCamerDetail(item)
+                            }
                         }
                     }
                 }
@@ -176,6 +199,14 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
 
     private func footerButtonTitle() -> String {
         viewModel.shouldDisplayCammerList ? "Ver Mapa" : "Ver Listado"
+    }
+
+    private var placeholder: some View {
+        Image(systemName: "camera")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .padding(Tokens.Size.Spacing.large)
+            .cornerRadius(Tokens.Size.Border.Radius.medium)
     }
 }
 

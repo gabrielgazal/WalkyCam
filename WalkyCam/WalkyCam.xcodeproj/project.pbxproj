@@ -2062,7 +2062,7 @@
 			children = (
 				EA20A5432B87D327006662FA /* ShareSheet */,
 				EA20A51C2B87D25A006662FA /* ScannerMenu */,
-				EA20A4F52B87C8FD006662FA /*  Scan3DMenu */,
+				EA20A4F52B87C8FD006662FA /* Scan3DMenu */,
 				EA20A4CC2B87C35B006662FA /* Scan3DOnboarding */,
 				EA4A1C6E2B8799B400B5FC59 /* RuralDroneOnboarding */,
 				EA4A1C472B87908500B5FC59 /* ExternalAssistant */,
@@ -2651,14 +2651,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		EA20A4F52B87C8FD006662FA /*  Scan3DMenu */ = {
+		EA20A4F52B87C8FD006662FA /* Scan3DMenu */ = {
 			isa = PBXGroup;
 			children = (
 				EA20A4FF2B87C913006662FA /* Configuration */,
 				EA20A4FC2B87C913006662FA /* Domain */,
 				EA20A5052B87C913006662FA /* Module */,
 			);
-			path = " Scan3DMenu";
+			path = Scan3DMenu;
 			sourceTree = "<group>";
 		};
 		EA20A4FC2B87C913006662FA /* Domain */ = {

@@ -1,5 +1,6 @@
 import Combine
 import MapKit
+import CoreLocation
 
 final class SearchWalkyCammerInteractor: SearchWalkyCammerInteractorProtocol {
 
@@ -23,6 +24,8 @@ final class SearchWalkyCammerInteractor: SearchWalkyCammerInteractorProtocol {
     // MARK: - Public API
 
     func getCammersOnLocation(location: CLLocationCoordinate2D) -> [CammerData] {
+        let coordinates = generateNearbyCoordinates(from: location)
+
         return [
             .init(
                 id: 0,
@@ -31,10 +34,7 @@ final class SearchWalkyCammerInteractor: SearchWalkyCammerInteractorProtocol {
                 description: "*4 min* de distancia - Desde $6",
                 profileImage: .imageMock,
                 technologies: [.scan, .smartphone, .video, .camera],
-                coordinates: .init(
-                    latitude: -25.4300744,
-                    longitude: -49.2717098
-                )
+                coordinates: coordinates[0]
             ),
             .init(
                 id: 1,
@@ -43,10 +43,7 @@ final class SearchWalkyCammerInteractor: SearchWalkyCammerInteractorProtocol {
                 description: "*16 min* de distancia - Desde $4",
                 profileImage: .imageMock,
                 technologies: [.scan, .smartphone],
-                coordinates: .init(
-                    latitude: -25.426678,
-                    longitude: -49.272280
-                )
+                coordinates: coordinates[1]
             ),
             .init(
                 id: 2,
@@ -55,10 +52,7 @@ final class SearchWalkyCammerInteractor: SearchWalkyCammerInteractorProtocol {
                 description: "*4 min* de distancia - Desde %6",
                 profileImage: .imageMock,
                 technologies: [.drone, .smartphone],
-                coordinates: .init(
-                    latitude: -25.431048,
-                    longitude: -49.271921
-                )
+                coordinates: coordinates[2]
             ),
             .init(
                 id: 3,
@@ -67,10 +61,7 @@ final class SearchWalkyCammerInteractor: SearchWalkyCammerInteractorProtocol {
                 description: "*4 min* de distancia - Desde %6",
                 profileImage: .imageMock,
                 technologies: [.scan, .smartphone, .video, .camera],
-                coordinates: .init(
-                    latitude: -25.429866,
-                    longitude: -49.270048
-                )
+                coordinates: coordinates[3]
             ),
             .init(id: 4,
 
@@ -79,12 +70,22 @@ final class SearchWalkyCammerInteractor: SearchWalkyCammerInteractorProtocol {
                   description: "*4 min* de distancia - Desde %6",
                   profileImage: .imageMock,
                   technologies: [.drone],
-                  coordinates: .init(
-                    latitude: -25.430924,
-                    longitude: -49.2272714
-                  )
-                 ),
-
+                  coordinates: coordinates[4]
+                 )
         ]
+    }
+
+    func generateNearbyCoordinates(from coordinate: CLLocationCoordinate2D) -> [Coordinate] {
+        var nearbyCoordinates: [Coordinate] = []
+        let maxDistance: Double = 0.001
+        for _ in 1...5 {
+            let latOffset = (Double(arc4random_uniform(1000)) - 500) * maxDistance / 100.0
+            let lonOffset = (Double(arc4random_uniform(1000)) - 500) * maxDistance / 100.0
+            let newLatitude = coordinate.latitude + latOffset
+            let newLongitude = coordinate.longitude + lonOffset
+            let newCoordinate = Coordinate(latitude: newLatitude, longitude: newLongitude)
+            nearbyCoordinates.append(newCoordinate)
+        }
+        return nearbyCoordinates
     }
 }
