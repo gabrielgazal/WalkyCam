@@ -31,6 +31,7 @@ struct CashWalletOnboardingPageView: View {
                 .frame(height: 32)
             illustration
                 .resizable()
+                .scaledToFit()
                 .frame(width: 280,
                        height: 280)
             Text(title)

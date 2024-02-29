@@ -5,7 +5,8 @@ final class IOTOnboardingViewModel: IOTOnboardingViewModelProtocol {
     // MARK: - Dependencies
 
     private let interactor: IOTOnboardingInteractorProtocol
-
+    @Published var currentPage: Int = 0
+    
     // MARK: - Initialization
 
     init(interactor: IOTOnboardingInteractorProtocol = IOTOnboardingInteractor()) {

@@ -40,5 +40,11 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
     func routeToCryptoWallet() {
         navigateTo(CashWalletRoute(isPresented: isNavigating))
     }
+
+    func routeToIOT() {
+        navigateTo(
+            IOTOnboardingRoute(isPresented: isNavigating)
+        )
+    }
 }
 

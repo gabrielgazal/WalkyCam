@@ -71,6 +71,39 @@ struct IOTMenuView<ViewModel:IOTMenuViewModelProtocol, Router: IOTMenuRouterProt
                           )
             }
         }
+        .fullScreen(isPresented: $viewModel.displayQRCode) {
+            VStack(alignment: .leading,
+                   spacing: Tokens.Size.Spacing.xlarge) {
+                HStack{
+                    Image(systemName: "arrow.backward")
+                        .resizable()
+                        .scaledToFit()
+                        .fontWeight(.semibold)
+                        .frame(width: 24, height: 24)
+                        .onTapGesture {
+                            router.dismiss()
+                        }
+                    Spacer()
+                }
+                Text("Código QR")
+                    .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
+                Text("Scanea para autenticar tu ingreso al dashboard IOT Farming")
+                    .font(.projectFont(size: Tokens.Size.Font.large))
+                HStack {
+                    Spacer()
+                    Image(Asset.Icons.qrcode.name)
+                    Spacer()
+                }
+                Spacer()
+                WCUIButton(title: "Scan QR",
+                           style: .standard,
+                           descriptor: OrangeButtonStyleDescriptor(),
+                           action: {
+                    viewModel.displayQRCode = false
+                })
+            }
+                   .padding(Tokens.Size.Spacing.regular)
+        }
     }
 
     private func itemCell(title: String, icon: String) -> some View {

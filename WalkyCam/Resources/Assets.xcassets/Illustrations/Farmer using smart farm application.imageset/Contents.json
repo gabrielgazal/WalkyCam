@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "Farmer using smart farm application.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true
+  }
+}

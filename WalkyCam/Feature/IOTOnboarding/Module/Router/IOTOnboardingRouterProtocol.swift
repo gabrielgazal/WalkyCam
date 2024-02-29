@@ -1,6 +1,6 @@
 import SwiftUI
 
 protocol IOTOnboardingRouterProtocol: Router {
-    func routeToSomething()
+    func routeToIOT()
 }
 

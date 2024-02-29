@@ -7,4 +7,5 @@ protocol FunctionsRouterProtocol: Router {
     func routeToDrone()
     func routeToScan3D()
     func routeToCryptoWallet()
+    func routeToIOT()
 }

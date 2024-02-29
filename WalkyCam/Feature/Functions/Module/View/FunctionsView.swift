@@ -67,8 +67,8 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
                                         switch item.title {
 //                                            case "Digital Twins":
 //                                                router.routeToDrone()
-//                                            case "IOT applications & Data Analysis":
-//                                            router.routeToDrone()
+                                        case "IOT applications & Data Analysis":
+                                            router.routeToIOT()
 //                                            case "3D Printer":
 //                                            router.routeToDrone()
 //                                            case "AI & Data Analysis":

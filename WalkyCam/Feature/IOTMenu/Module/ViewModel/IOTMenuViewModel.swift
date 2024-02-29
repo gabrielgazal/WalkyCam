@@ -5,6 +5,7 @@ final class IOTMenuViewModel: IOTMenuViewModelProtocol {
     // MARK: - Dependencies
 
     private let interactor: IOTMenuInteractorProtocol
+    @Published var displayQRCode: Bool = true
 
     // MARK: - Initialization
 

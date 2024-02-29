@@ -1,5 +1,5 @@
 import SwiftUI
 
 protocol IOTOnboardingViewModelProtocol: ViewModelProtocol {
-    func someAction()
+    var currentPage: Int { get set }
 }

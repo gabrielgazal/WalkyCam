@@ -65,6 +65,7 @@ internal enum Asset {
     internal static let location = ImageAsset(name: "Location")
     internal static let music = ImageAsset(name: "Music")
     internal static let notes = ImageAsset(name: "Notes")
+    internal static let qrcode = ImageAsset(name: "Qrcode")
     internal static let recent = ImageAsset(name: "Recent")
     internal static let retail = ImageAsset(name: "Retail")
     internal static let riego = ImageAsset(name: "Riego")
@@ -134,6 +135,9 @@ internal enum Asset {
   }
   internal enum Illustrations {
     internal static let asistenteRemoto = ImageAsset(name: "Asistente Remoto")
+    internal static let cropMonitoringViaMobileDevice = ImageAsset(name: "Crop monitoring via mobile device")
+    internal static let farmerUsingSmartFarmApplication = ImageAsset(name: "Farmer using smart farm application")
+    internal static let farmingUsingAutonomousCultivator = ImageAsset(name: "Farming using autonomous Cultivator")
     internal static let asistenteMenu = ImageAsset(name: "asistente-menu")
     internal static let camerOnboarding = ImageAsset(name: "camerOnboarding")
     internal static let cammy = ImageAsset(name: "cammy")
