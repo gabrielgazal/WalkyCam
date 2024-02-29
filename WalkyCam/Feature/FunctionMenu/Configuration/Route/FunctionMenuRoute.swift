@@ -1,14 +1,17 @@
 import Foundation
 import SwiftUI
 
-struct ScannerMenuRoute: Route {
+struct FunctionMenuRoute: Route {
     var isPresented: Binding<Bool>
-    let assembler: ScannerMenuAssemblerProtocol
+    let assembler: FunctionMenuAssemblerProtocol
+    let model: FunctionMenuModel
 
     init(isPresented: Binding<Bool>,
-         assembler: ScannerMenuAssemblerProtocol = ScannerMenuAssembler()) {
+         assembler: FunctionMenuAssemblerProtocol = FunctionMenuAssembler(),
+         model: FunctionMenuModel) {
         self.isPresented = isPresented
         self.assembler = assembler
+        self.model = model
     }
 
     func build() -> AnyView {

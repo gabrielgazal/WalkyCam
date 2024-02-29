@@ -6,6 +6,7 @@ final class ServiceDetailsViewModel: ServiceDetailsViewModelProtocol {
 
     private let interactor: ServiceDetailsInteractorProtocol
     var onCancelAction: (() -> Void)?
+    @Published var service: FunctionData = .init(title: "", icon: "")
 
     // MARK: - Initialization
 
@@ -13,11 +14,18 @@ final class ServiceDetailsViewModel: ServiceDetailsViewModelProtocol {
          onCancelAction: (() -> Void)? = nil) {
         self.interactor = interactor
         self.onCancelAction = onCancelAction
+        initializeService()
     }
 
     // MARK: - Public API
 
     func cancelAction() {
         onCancelAction?()
+    }
+
+    // MARK: - Private Methods
+
+    private func initializeService() {
+        self.service = FunctionType(rawValue: UserDefaults.standard.string(forKey: "currentService") ?? "")?.convertedValue ?? .init(title: "", icon: "")
     }
 }

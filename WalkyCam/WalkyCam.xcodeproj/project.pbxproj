@@ -161,17 +161,6 @@
 		EA20A5192B87C913006662FA /* Scan3DMenuInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A50D2B87C913006662FA /* Scan3DMenuInteractorProtocol.swift */; };
 		EA20A51A2B87C913006662FA /* Scan3DMenuRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A50F2B87C913006662FA /* Scan3DMenuRouterProtocol.swift */; };
 		EA20A51B2B87C913006662FA /* Scan3DMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A5102B87C913006662FA /* Scan3DMenuRouter.swift */; };
-		EA20A5382B87D274006662FA /* ScannerMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A5252B87D273006662FA /* ScannerMenuModel.swift */; };
-		EA20A5392B87D274006662FA /* ScannerMenuRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A5282B87D273006662FA /* ScannerMenuRoute.swift */; };
-		EA20A53A2B87D274006662FA /* ScannerMenuAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A52A2B87D273006662FA /* ScannerMenuAssemblerProtocol.swift */; };
-		EA20A53B2B87D274006662FA /* ScannerMenuAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A52B2B87D273006662FA /* ScannerMenuAssembler.swift */; };
-		EA20A53C2B87D274006662FA /* ScannerMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A52E2B87D274006662FA /* ScannerMenuViewModel.swift */; };
-		EA20A53D2B87D274006662FA /* ScannerMenuViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A52F2B87D274006662FA /* ScannerMenuViewModelProtocol.swift */; };
-		EA20A53E2B87D274006662FA /* ScannerMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A5312B87D274006662FA /* ScannerMenuView.swift */; };
-		EA20A53F2B87D274006662FA /* ScannerMenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A5332B87D274006662FA /* ScannerMenuInteractor.swift */; };
-		EA20A5402B87D274006662FA /* ScannerMenuInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A5342B87D274006662FA /* ScannerMenuInteractorProtocol.swift */; };
-		EA20A5412B87D274006662FA /* ScannerMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A5362B87D274006662FA /* ScannerMenuRouter.swift */; };
-		EA20A5422B87D274006662FA /* ScannerMenuRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A5372B87D274006662FA /* ScannerMenuRouterProtocol.swift */; };
 		EA20A55F2B87D35B006662FA /* ShareSheetRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A54C2B87D35A006662FA /* ShareSheetRoute.swift */; };
 		EA20A5602B87D35B006662FA /* ShareSheetAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A54E2B87D35A006662FA /* ShareSheetAssembler.swift */; };
 		EA20A5612B87D35B006662FA /* ShareSheetAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A54F2B87D35A006662FA /* ShareSheetAssemblerProtocol.swift */; };
@@ -438,6 +427,17 @@
 		EA7219A42B05863C00BE2D93 /* FavoriteItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7219A32B05863C00BE2D93 /* FavoriteItemView.swift */; };
 		EA82DB502ADF4DBB00E6B39A /* HomeSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82DB4F2ADF4DBB00E6B39A /* HomeSectionView.swift */; };
 		EA82DB532ADF605500E6B39A /* ReminderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82DB522ADF605500E6B39A /* ReminderCardView.swift */; };
+		EA86523C2B902E4B00B86A54 /* FunctionMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652292B902E4B00B86A54 /* FunctionMenuViewModel.swift */; };
+		EA86523D2B902E4B00B86A54 /* FunctionMenuViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86522A2B902E4B00B86A54 /* FunctionMenuViewModelProtocol.swift */; };
+		EA86523E2B902E4B00B86A54 /* FunctionMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86522C2B902E4B00B86A54 /* FunctionMenuView.swift */; };
+		EA86523F2B902E4B00B86A54 /* FunctionMenuInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86522E2B902E4B00B86A54 /* FunctionMenuInteractorProtocol.swift */; };
+		EA8652402B902E4B00B86A54 /* FunctionMenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86522F2B902E4B00B86A54 /* FunctionMenuInteractor.swift */; };
+		EA8652412B902E4B00B86A54 /* FunctionMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652312B902E4B00B86A54 /* FunctionMenuRouter.swift */; };
+		EA8652422B902E4B00B86A54 /* FunctionMenuRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652322B902E4B00B86A54 /* FunctionMenuRouterProtocol.swift */; };
+		EA8652432B902E4B00B86A54 /* FunctionMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652352B902E4B00B86A54 /* FunctionMenuModel.swift */; };
+		EA8652442B902E4B00B86A54 /* FunctionMenuRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652382B902E4B00B86A54 /* FunctionMenuRoute.swift */; };
+		EA8652452B902E4B00B86A54 /* FunctionMenuAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86523A2B902E4B00B86A54 /* FunctionMenuAssembler.swift */; };
+		EA8652462B902E4B00B86A54 /* FunctionMenuAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86523B2B902E4B00B86A54 /* FunctionMenuAssemblerProtocol.swift */; };
 		EA890A262B61ECFB00FC369B /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = EA890A252B61ECFB00FC369B /* Networking */; };
 		EA890A292B61EDE500FC369B /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA890A282B61EDE500FC369B /* Dependency.swift */; };
 		EA8EF8D02B67E12400136D1F /* UserSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8EF8CF2B67E12400136D1F /* UserSessionProtocol.swift */; };
@@ -871,17 +871,6 @@
 		EA20A50D2B87C913006662FA /* Scan3DMenuInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DMenuInteractorProtocol.swift; sourceTree = "<group>"; };
 		EA20A50F2B87C913006662FA /* Scan3DMenuRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DMenuRouterProtocol.swift; sourceTree = "<group>"; };
 		EA20A5102B87C913006662FA /* Scan3DMenuRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DMenuRouter.swift; sourceTree = "<group>"; };
-		EA20A5252B87D273006662FA /* ScannerMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerMenuModel.swift; sourceTree = "<group>"; };
-		EA20A5282B87D273006662FA /* ScannerMenuRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerMenuRoute.swift; sourceTree = "<group>"; };
-		EA20A52A2B87D273006662FA /* ScannerMenuAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerMenuAssemblerProtocol.swift; sourceTree = "<group>"; };
-		EA20A52B2B87D273006662FA /* ScannerMenuAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerMenuAssembler.swift; sourceTree = "<group>"; };
-		EA20A52E2B87D274006662FA /* ScannerMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerMenuViewModel.swift; sourceTree = "<group>"; };
-		EA20A52F2B87D274006662FA /* ScannerMenuViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerMenuViewModelProtocol.swift; sourceTree = "<group>"; };
-		EA20A5312B87D274006662FA /* ScannerMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerMenuView.swift; sourceTree = "<group>"; };
-		EA20A5332B87D274006662FA /* ScannerMenuInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerMenuInteractor.swift; sourceTree = "<group>"; };
-		EA20A5342B87D274006662FA /* ScannerMenuInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerMenuInteractorProtocol.swift; sourceTree = "<group>"; };
-		EA20A5362B87D274006662FA /* ScannerMenuRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerMenuRouter.swift; sourceTree = "<group>"; };
-		EA20A5372B87D274006662FA /* ScannerMenuRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerMenuRouterProtocol.swift; sourceTree = "<group>"; };
 		EA20A54C2B87D35A006662FA /* ShareSheetRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSheetRoute.swift; sourceTree = "<group>"; };
 		EA20A54E2B87D35A006662FA /* ShareSheetAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSheetAssembler.swift; sourceTree = "<group>"; };
 		EA20A54F2B87D35A006662FA /* ShareSheetAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSheetAssemblerProtocol.swift; sourceTree = "<group>"; };
@@ -1149,6 +1138,17 @@
 		EA7219A32B05863C00BE2D93 /* FavoriteItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteItemView.swift; sourceTree = "<group>"; };
 		EA82DB4F2ADF4DBB00E6B39A /* HomeSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionView.swift; sourceTree = "<group>"; };
 		EA82DB522ADF605500E6B39A /* ReminderCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCardView.swift; sourceTree = "<group>"; };
+		EA8652292B902E4B00B86A54 /* FunctionMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionMenuViewModel.swift; sourceTree = "<group>"; };
+		EA86522A2B902E4B00B86A54 /* FunctionMenuViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionMenuViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA86522C2B902E4B00B86A54 /* FunctionMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionMenuView.swift; sourceTree = "<group>"; };
+		EA86522E2B902E4B00B86A54 /* FunctionMenuInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionMenuInteractorProtocol.swift; sourceTree = "<group>"; };
+		EA86522F2B902E4B00B86A54 /* FunctionMenuInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionMenuInteractor.swift; sourceTree = "<group>"; };
+		EA8652312B902E4B00B86A54 /* FunctionMenuRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionMenuRouter.swift; sourceTree = "<group>"; };
+		EA8652322B902E4B00B86A54 /* FunctionMenuRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionMenuRouterProtocol.swift; sourceTree = "<group>"; };
+		EA8652352B902E4B00B86A54 /* FunctionMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionMenuModel.swift; sourceTree = "<group>"; };
+		EA8652382B902E4B00B86A54 /* FunctionMenuRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionMenuRoute.swift; sourceTree = "<group>"; };
+		EA86523A2B902E4B00B86A54 /* FunctionMenuAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionMenuAssembler.swift; sourceTree = "<group>"; };
+		EA86523B2B902E4B00B86A54 /* FunctionMenuAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionMenuAssemblerProtocol.swift; sourceTree = "<group>"; };
 		EA890A282B61EDE500FC369B /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
 		EA8EF8CF2B67E12400136D1F /* UserSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionProtocol.swift; sourceTree = "<group>"; };
 		EA8EF8D22B67E14300136D1F /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
@@ -2060,8 +2060,8 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				EA8652202B902E2D00B86A54 /* FunctionMenu */,
 				EA20A5432B87D327006662FA /* ShareSheet */,
-				EA20A51C2B87D25A006662FA /* ScannerMenu */,
 				EA20A4F52B87C8FD006662FA /* Scan3DMenu */,
 				EA20A4CC2B87C35B006662FA /* Scan3DOnboarding */,
 				EA4A1C6E2B8799B400B5FC59 /* RuralDroneOnboarding */,
@@ -2745,104 +2745,6 @@
 			children = (
 				EA20A50F2B87C913006662FA /* Scan3DMenuRouterProtocol.swift */,
 				EA20A5102B87C913006662FA /* Scan3DMenuRouter.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		EA20A51C2B87D25A006662FA /* ScannerMenu */ = {
-			isa = PBXGroup;
-			children = (
-				EA20A5262B87D273006662FA /* Configuration */,
-				EA20A5232B87D273006662FA /* Domain */,
-				EA20A52C2B87D274006662FA /* Module */,
-			);
-			path = ScannerMenu;
-			sourceTree = "<group>";
-		};
-		EA20A5232B87D273006662FA /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				EA20A5242B87D273006662FA /* Model */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		EA20A5242B87D273006662FA /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				EA20A5252B87D273006662FA /* ScannerMenuModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		EA20A5262B87D273006662FA /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				EA20A5272B87D273006662FA /* Route */,
-				EA20A5292B87D273006662FA /* Assembler */,
-			);
-			path = Configuration;
-			sourceTree = "<group>";
-		};
-		EA20A5272B87D273006662FA /* Route */ = {
-			isa = PBXGroup;
-			children = (
-				EA20A5282B87D273006662FA /* ScannerMenuRoute.swift */,
-			);
-			path = Route;
-			sourceTree = "<group>";
-		};
-		EA20A5292B87D273006662FA /* Assembler */ = {
-			isa = PBXGroup;
-			children = (
-				EA20A52A2B87D273006662FA /* ScannerMenuAssemblerProtocol.swift */,
-				EA20A52B2B87D273006662FA /* ScannerMenuAssembler.swift */,
-			);
-			path = Assembler;
-			sourceTree = "<group>";
-		};
-		EA20A52C2B87D274006662FA /* Module */ = {
-			isa = PBXGroup;
-			children = (
-				EA20A52D2B87D274006662FA /* ViewModel */,
-				EA20A5302B87D274006662FA /* View */,
-				EA20A5322B87D274006662FA /* Interactor */,
-				EA20A5352B87D274006662FA /* Router */,
-			);
-			path = Module;
-			sourceTree = "<group>";
-		};
-		EA20A52D2B87D274006662FA /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				EA20A52E2B87D274006662FA /* ScannerMenuViewModel.swift */,
-				EA20A52F2B87D274006662FA /* ScannerMenuViewModelProtocol.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		EA20A5302B87D274006662FA /* View */ = {
-			isa = PBXGroup;
-			children = (
-				EA20A5312B87D274006662FA /* ScannerMenuView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		EA20A5322B87D274006662FA /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				EA20A5332B87D274006662FA /* ScannerMenuInteractor.swift */,
-				EA20A5342B87D274006662FA /* ScannerMenuInteractorProtocol.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		EA20A5352B87D274006662FA /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				EA20A5362B87D274006662FA /* ScannerMenuRouter.swift */,
-				EA20A5372B87D274006662FA /* ScannerMenuRouterProtocol.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -5098,6 +5000,104 @@
 				EA82DB522ADF605500E6B39A /* ReminderCardView.swift */,
 			);
 			path = Reminder;
+			sourceTree = "<group>";
+		};
+		EA8652202B902E2D00B86A54 /* FunctionMenu */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652362B902E4B00B86A54 /* Configuration */,
+				EA8652332B902E4B00B86A54 /* Domain */,
+				EA8652272B902E4B00B86A54 /* Module */,
+			);
+			path = FunctionMenu;
+			sourceTree = "<group>";
+		};
+		EA8652272B902E4B00B86A54 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652282B902E4B00B86A54 /* ViewModel */,
+				EA86522B2B902E4B00B86A54 /* View */,
+				EA86522D2B902E4B00B86A54 /* Interactor */,
+				EA8652302B902E4B00B86A54 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA8652282B902E4B00B86A54 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652292B902E4B00B86A54 /* FunctionMenuViewModel.swift */,
+				EA86522A2B902E4B00B86A54 /* FunctionMenuViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA86522B2B902E4B00B86A54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA86522C2B902E4B00B86A54 /* FunctionMenuView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA86522D2B902E4B00B86A54 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA86522E2B902E4B00B86A54 /* FunctionMenuInteractorProtocol.swift */,
+				EA86522F2B902E4B00B86A54 /* FunctionMenuInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EA8652302B902E4B00B86A54 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652312B902E4B00B86A54 /* FunctionMenuRouter.swift */,
+				EA8652322B902E4B00B86A54 /* FunctionMenuRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EA8652332B902E4B00B86A54 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652342B902E4B00B86A54 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA8652342B902E4B00B86A54 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652352B902E4B00B86A54 /* FunctionMenuModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA8652362B902E4B00B86A54 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652372B902E4B00B86A54 /* Route */,
+				EA8652392B902E4B00B86A54 /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA8652372B902E4B00B86A54 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652382B902E4B00B86A54 /* FunctionMenuRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA8652392B902E4B00B86A54 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA86523A2B902E4B00B86A54 /* FunctionMenuAssembler.swift */,
+				EA86523B2B902E4B00B86A54 /* FunctionMenuAssemblerProtocol.swift */,
+			);
+			path = Assembler;
 			sourceTree = "<group>";
 		};
 		EA890A272B61EDCE00FC369B /* DependencyStore */ = {
@@ -7377,7 +7377,6 @@
 				EADB5CAB2B190819005863E1 /* VideoCallInteractorProtocol.swift in Sources */,
 				56FEECF82B5C802C003FA686 /* SearchWalkyCammerRouter.swift in Sources */,
 				EA57A7D12B6C2C31006247DD /* AddPeopleTransmissionView.swift in Sources */,
-				EA20A53C2B87D274006662FA /* ScannerMenuViewModel.swift in Sources */,
 				561FC8BF2B5C67FB005B6006 /* AsyncData.swift in Sources */,
 				EAA1E63C2AFB03FD00A42174 /* CashTabAssembler.swift in Sources */,
 				EA91102D2ADDB91100584B98 /* URL+ImageLoadable.swift in Sources */,
@@ -7435,6 +7434,7 @@
 				EA172AF72AF06BDE00EB1514 /* ConfirmMailAssemblerProtocol.swift in Sources */,
 				EA282ED12AEB531100B90920 /* FunctionsModel.swift in Sources */,
 				EA4164EE2AE4B6F7008CE66A /* ComparePlansRoute.swift in Sources */,
+				EA8652412B902E4B00B86A54 /* FunctionMenuRouter.swift in Sources */,
 				EA910F912ADA06F500584B98 /* RegistrationView.swift in Sources */,
 				EA57A7D52B6C2C31006247DD /* AddPeopleTransmissionRouterProtocol.swift in Sources */,
 				EAF47BC52B8306E9003F8B86 /* TimeTabViewModel.swift in Sources */,
@@ -7457,11 +7457,9 @@
 				EAF47B7D2B82FCE8003F8B86 /* BookWalkycamerAssembler.swift in Sources */,
 				EAA1E63B2AFB03FD00A42174 /* CashTabRoute.swift in Sources */,
 				EA8EF8DE2B67E24400136D1F /* KeychainPersistenceProtocol.swift in Sources */,
-				EA20A53A2B87D274006662FA /* ScannerMenuAssemblerProtocol.swift in Sources */,
 				EA910FF02ADCBCC000584B98 /* MenuRoute.swift in Sources */,
 				EAF47BF12B83099F003F8B86 /* MapTabView.swift in Sources */,
 				EA6083452AFD58A900295069 /* CryptoTabRouter.swift in Sources */,
-				EA20A53B2B87D274006662FA /* ScannerMenuAssembler.swift in Sources */,
 				EAF47B522B82F7EA003F8B86 /* VideocallOnboardingInteractor.swift in Sources */,
 				EADB5CA92B190819005863E1 /* VideoCallView.swift in Sources */,
 				EA2C4C212B7E5C4300F1EE26 /* DroneOnboardingViewModel.swift in Sources */,
@@ -7471,7 +7469,6 @@
 				EA4A1C652B87909F00B5FC59 /* ExternalAssistantView.swift in Sources */,
 				EAF47BEB2B83099F003F8B86 /* MapTabModel.swift in Sources */,
 				EA50A08E2B0BC77F0042B238 /* PlansPagesAssemblerProtocol.swift in Sources */,
-				EA20A5402B87D274006662FA /* ScannerMenuInteractorProtocol.swift in Sources */,
 				EA57A7D42B6C2C31006247DD /* AddPeopleTransmissionRouter.swift in Sources */,
 				EA57A7AB2B6C1558006247DD /* CammerDetailsAssembler.swift in Sources */,
 				EA0E40BD2AF70E86002B7437 /* CashWalletView.swift in Sources */,
@@ -7544,7 +7541,6 @@
 				EAF47B4B2B82F7EA003F8B86 /* VideocallOnboardingRoute.swift in Sources */,
 				EA172B252AF06EF600EB1514 /* StartupInteractorProtocol.swift in Sources */,
 				EA6083E12B01DBE000295069 /* GalleryPhotosAssemblerProtocol.swift in Sources */,
-				EA20A53D2B87D274006662FA /* ScannerMenuViewModelProtocol.swift in Sources */,
 				EA5E1D742AD716A500738A8F /* ProjectFont.swift in Sources */,
 				EAA1E6402AFB03FD00A42174 /* CashTabView.swift in Sources */,
 				EA4A1C6C2B87909F00B5FC59 /* ExternalAssistantAssembler.swift in Sources */,
@@ -7573,7 +7569,6 @@
 				EA72199B2B05612900BE2D93 /* WalkyBotInteractor.swift in Sources */,
 				EA60836D2B01981800295069 /* CryptoDetailsAssembler.swift in Sources */,
 				EA72199D2B05612900BE2D93 /* WalkyBotRouterProtocol.swift in Sources */,
-				EA20A5382B87D274006662FA /* ScannerMenuModel.swift in Sources */,
 				EA20A5652B87D35B006662FA /* ShareSheetInteractorProtocol.swift in Sources */,
 				EA172B262AF06EF600EB1514 /* StartupRouter.swift in Sources */,
 				EA8EF8D32B67E14300136D1F /* UserSession.swift in Sources */,
@@ -7624,7 +7619,7 @@
 				EAF47B4C2B82F7EA003F8B86 /* VideocallOnboardingAssemblerProtocol.swift in Sources */,
 				EAD048722AE22C530096E6AB /* RegistrationPlansAssembler.swift in Sources */,
 				EA172AFD2AF06BDE00EB1514 /* ConfirmMailInteractorProtocol.swift in Sources */,
-				EA20A5392B87D274006662FA /* ScannerMenuRoute.swift in Sources */,
+				EA86523F2B902E4B00B86A54 /* FunctionMenuInteractorProtocol.swift in Sources */,
 				EA3E5C992B87692400158207 /* AssistantMenuRouter.swift in Sources */,
 				EA282EDD2AEB572700B90920 /* FunctionCell.swift in Sources */,
 				EA8EF8DD2B67E24400136D1F /* KeychainPersistence.swift in Sources */,
@@ -7652,6 +7647,7 @@
 				EAF47BC42B8306E9003F8B86 /* TimeTabModel.swift in Sources */,
 				EA910FFA2ADCBCC000584B98 /* MenuRouter.swift in Sources */,
 				EA57A7A62B6C1558006247DD /* CammerDetailsRouter.swift in Sources */,
+				EA8652432B902E4B00B86A54 /* FunctionMenuModel.swift in Sources */,
 				EA6083412AFD58A900295069 /* CryptoTabViewModelProtocol.swift in Sources */,
 				EAD0486D2AE22C530096E6AB /* RegistrationPlansInteractor.swift in Sources */,
 				EA5E1D782AD7170400738A8F /* LinkButton.swift in Sources */,
@@ -7664,6 +7660,7 @@
 				EA60838B2B01CD0A00295069 /* ShopTabAssemblerProtocol.swift in Sources */,
 				EAF47B772B82FCE8003F8B86 /* BookWalkycamerView.swift in Sources */,
 				EA282E5A2AE952F700B90920 /* ProfileRouter.swift in Sources */,
+				EA86523E2B902E4B00B86A54 /* FunctionMenuView.swift in Sources */,
 				EA282ECA2AEB531100B90920 /* FunctionsViewModel.swift in Sources */,
 				EA9110242ADDADE100584B98 /* HomeAssembler.swift in Sources */,
 				561FC8C62B5C6854005B6006 /* ExternalURL.swift in Sources */,
@@ -7682,7 +7679,6 @@
 				EA6083DA2B01DBDF00295069 /* GalleryPhotosViewModelProtocol.swift in Sources */,
 				EA4AE4882B75011B00B5A89F /* FetchUserConfigurationsUseCase.swift in Sources */,
 				EA910FD22ADC499500584B98 /* TabBarBuilder.swift in Sources */,
-				EA20A53E2B87D274006662FA /* ScannerMenuView.swift in Sources */,
 				EA5E1D762AD716D200738A8F /* ButtonStyleDescriptor.swift in Sources */,
 				EA4A1C6A2B87909F00B5FC59 /* ExternalAssistantModel.swift in Sources */,
 				56A552572B2F6E3D006B1B17 /* StreetCamMenuAssembler.swift in Sources */,
@@ -7691,6 +7687,7 @@
 				EA82DB532ADF605500E6B39A /* ReminderCardView.swift in Sources */,
 				EA9110262ADDAE6400584B98 /* ProfileHeaderView.swift in Sources */,
 				EA57A7A82B6C1558006247DD /* CammerDetailsModel.swift in Sources */,
+				EA8652452B902E4B00B86A54 /* FunctionMenuAssembler.swift in Sources */,
 				EAF47B7B2B82FCE8003F8B86 /* BookWalkycamerRouter.swift in Sources */,
 				EA20A5192B87C913006662FA /* Scan3DMenuInteractorProtocol.swift in Sources */,
 				EA282E602AE9A10600B90920 /* ImageMock.swift in Sources */,
@@ -7715,6 +7712,7 @@
 				EA9110332ADDBF7400584B98 /* WalkyBotItemView.swift in Sources */,
 				EA172AFC2AF06BDE00EB1514 /* ConfirmMailView.swift in Sources */,
 				561FC8B92B5C6787005B6006 /* WebViewRoute.swift in Sources */,
+				EA86523D2B902E4B00B86A54 /* FunctionMenuViewModelProtocol.swift in Sources */,
 				EADB5CAD2B190819005863E1 /* VideoCallRouter.swift in Sources */,
 				EA20A5622B87D35B006662FA /* ShareSheetViewModel.swift in Sources */,
 				EA57A7CB2B6C2C31006247DD /* AddPeopleTransmissionRoute.swift in Sources */,
@@ -7811,7 +7809,6 @@
 				EA50A08B2B0BC77F0042B238 /* PlansPagesRouter.swift in Sources */,
 				EA50A0872B0BC77F0042B238 /* PlansPagesView.swift in Sources */,
 				EA4A1C8A2B8799B400B5FC59 /* RuralDroneOnboardingView.swift in Sources */,
-				EA20A5422B87D274006662FA /* ScannerMenuRouterProtocol.swift in Sources */,
 				56A5522C2B2F6135006B1B17 /* WalkyCamerOnboardingRoute.swift in Sources */,
 				EAF47B4F2B82F7EA003F8B86 /* VideocallOnboardingViewModelProtocol.swift in Sources */,
 				EA0E40912AF69771002B7437 /* CashWalletOnboardingRouterProtocol.swift in Sources */,
@@ -7840,6 +7837,7 @@
 				EA6083632B01981800295069 /* CryptoDetailsViewModelProtocol.swift in Sources */,
 				EA7219952B05612900BE2D93 /* WalkyBotAssemblerProtocol.swift in Sources */,
 				EA4A1C8C2B8799B400B5FC59 /* RuralDroneOnboardingInteractor.swift in Sources */,
+				EA8652422B902E4B00B86A54 /* FunctionMenuRouterProtocol.swift in Sources */,
 				EAF47BC92B8306E9003F8B86 /* TimeTabInteractorProtocol.swift in Sources */,
 				EA7219772B0553C900BE2D93 /* GalleryItemView.swift in Sources */,
 				EA4A1C6B2B87909F00B5FC59 /* ExternalAssistantRoute.swift in Sources */,
@@ -7848,10 +7846,12 @@
 				56FEECF22B5C802C003FA686 /* SearchWalkyCammerModel.swift in Sources */,
 				EAB63BBD2B83D6390017BDA4 /* ARHandsMenuViewModel.swift in Sources */,
 				EA4A1C852B8799B400B5FC59 /* RuralDroneOnboardingRoute.swift in Sources */,
+				EA8652462B902E4B00B86A54 /* FunctionMenuAssemblerProtocol.swift in Sources */,
 				56A552342B2F6135006B1B17 /* WalkyCamerOnboardingRouter.swift in Sources */,
 				EA910F2E2AD8B14C00584B98 /* WCUIButton.swift in Sources */,
 				EA7219982B05612900BE2D93 /* WalkyBotViewModelProtocol.swift in Sources */,
 				EA0E408E2AF69771002B7437 /* CashWalletOnboardingView.swift in Sources */,
+				EA8652442B902E4B00B86A54 /* FunctionMenuRoute.swift in Sources */,
 				EA282E5B2AE952F700B90920 /* ProfileRouterProtocol.swift in Sources */,
 				EA20A5642B87D35B006662FA /* ShareSheetView.swift in Sources */,
 				EA4A1C892B8799B400B5FC59 /* RuralDroneOnboardingViewModel.swift in Sources */,
@@ -7863,6 +7863,7 @@
 				EA5E1D9D2AD8A3DA00738A8F /* Assets.swift in Sources */,
 				EA6083D82B01DBDF00295069 /* GalleryPhotosModel.swift in Sources */,
 				EA910FF62ADCBCC000584B98 /* MenuViewModel.swift in Sources */,
+				EA86523C2B902E4B00B86A54 /* FunctionMenuViewModel.swift in Sources */,
 				EAF47C882B839308003F8B86 /* FlightMenuInteractorProtocol.swift in Sources */,
 				EA6083422AFD58A900295069 /* CryptoTabView.swift in Sources */,
 				EAB63BC32B83D63A0017BDA4 /* ARHandsMenuRoute.swift in Sources */,
@@ -7905,7 +7906,6 @@
 				EAB63B922B83D2ED0017BDA4 /* ARHandsOnboardingRoute.swift in Sources */,
 				EA910F922ADA06F500584B98 /* RegistrationInteractor.swift in Sources */,
 				EA910FC52ADC495700584B98 /* TabBarAssembler.swift in Sources */,
-				EA20A53F2B87D274006662FA /* ScannerMenuInteractor.swift in Sources */,
 				EA82DB502ADF4DBB00E6B39A /* HomeSectionView.swift in Sources */,
 				EAF47BF32B83099F003F8B86 /* MapTabInteractorProtocol.swift in Sources */,
 				EADB5CA72B190819005863E1 /* VideoCallViewModelProtocol.swift in Sources */,
@@ -7958,7 +7958,6 @@
 				EA172AFB2AF06BDE00EB1514 /* ConfirmMailViewModelProtocol.swift in Sources */,
 				EA9110232ADDADE100584B98 /* HomeAssemblerProtocol.swift in Sources */,
 				56A552382B2F6168006B1B17 /* WalkyCamerOnboardingPageView.swift in Sources */,
-				EA20A5412B87D274006662FA /* ScannerMenuRouter.swift in Sources */,
 				EA15B5A22AD6E44D00C03407 /* LoginAssemblerProtocol.swift in Sources */,
 				EA8EF8DC2B67E24400136D1F /* Keychain.swift in Sources */,
 				EAB63B972B83D2ED0017BDA4 /* ARHandsOnboardingViewModel.swift in Sources */,
@@ -7981,6 +7980,7 @@
 				EA5E1D932AD71ABB00738A8F /* Tokens.swift in Sources */,
 				EA4165422AE706C6008CE66A /* NotificationsViewModel.swift in Sources */,
 				EA910FC92ADC495700584B98 /* TabBarViewModel.swift in Sources */,
+				EA8652402B902E4B00B86A54 /* FunctionMenuInteractor.swift in Sources */,
 				EA94A5362B7160EF00EC3037 /* ServiceDetailsModel.swift in Sources */,
 				56A5525B2B2F6E3D006B1B17 /* StreetCamMenuInteractorProtocol.swift in Sources */,
 				56A5525D2B2F6E3D006B1B17 /* StreetCamMenuRouterProtocol.swift in Sources */,

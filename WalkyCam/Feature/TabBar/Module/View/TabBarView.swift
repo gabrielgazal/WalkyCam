@@ -37,6 +37,7 @@ struct TabBarView<ViewModel: TabBarViewModelProtocol, Router: TabBarRouterProtoc
             Task {
                 await viewModel.getConfigurations()
             }
+            UserDefaults.standard.set("", forKey: "currentService")
         }
     }
 }

@@ -28,14 +28,17 @@ struct DroneMenuView<ViewModel:DroneMenuViewModelProtocol, Router: DroneMenuRout
                 }
                 droneCell(title: "Fotos y Videos", image: Asset.Icons.drone.name)
                     .onTapGesture {
+                        UserDefaults.standard.set(FunctionType.drone.rawValue, forKey: "currentService")
                         router.routeToDrone()
                     }
                 droneCell(title: "Gestión Agrícola", image: Asset.Icons.riego.name)
                     .onTapGesture {
+                        UserDefaults.standard.set(FunctionType.ruralDrone.rawValue, forKey: "currentService")
                         router.routeToRuralDrone()
                     }
                 droneCell(title: "LIDAR - Mapeo Laser", image: Asset.Icons.lidar.name, premium: true)
                     .onTapGesture {
+                        UserDefaults.standard.set(FunctionType.lidar.rawValue, forKey: "currentService")
                         router.routeToLidar()
                     }
             }

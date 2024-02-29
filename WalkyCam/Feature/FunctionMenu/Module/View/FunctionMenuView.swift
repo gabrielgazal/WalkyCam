@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct StreetCamMenuView<ViewModel: StreetCamMenuViewModelProtocol, Router: StreetCamMenuRouterProtocol>: View {
+struct FunctionMenuView<ViewModel:FunctionMenuViewModelProtocol, Router: FunctionMenuRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -20,11 +20,11 @@ struct StreetCamMenuView<ViewModel: StreetCamMenuViewModelProtocol, Router: Stre
     var body: some View {
         VStack(alignment: .center,
                spacing: Tokens.Size.Spacing.regular) {
-            Image(Asset.Icons.streetCam.name)
+            Image(viewModel.model.icon)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 100, height: 100)
-            Text("Conecta con cualquier lugar!")
+            Text(viewModel.model.title)
                 .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .bold))
                 .multilineTextAlignment(.center)
             Spacer()
@@ -42,19 +42,19 @@ struct StreetCamMenuView<ViewModel: StreetCamMenuViewModelProtocol, Router: Stre
                              buttonTitle: "Reservar",
                              icon: Asset.Icons.calendar.name,
                              action: {
-                    router.routeToBookCammer()
+                    router.routeToScheduleCammer()
                 })
             }
             horizontalCard(action: {})
         }
                .padding(Tokens.Size.Spacing.regular)
-               .background(Asset.Fondos.videocallFondo .swiftUIImage
+               .background(Image(viewModel.model.background)
                    .ignoresSafeArea())
                .navigation(router)
                .sheet(router)
                .environment(\.colorScheme, .dark)
                .onAppear {
-                   UserDefaults.standard.set(FunctionType.streetcam.rawValue, forKey: "currentService")
+                   UserDefaults.standard.set(viewModel.model.type.rawValue, forKey: "currentService")
                }
     }
 
@@ -122,11 +122,14 @@ struct StreetCamMenuView<ViewModel: StreetCamMenuViewModelProtocol, Router: Stre
     }
 }
 
-struct StreetCamMenuView_Previews: PreviewProvider {
+struct FunctionMenuView_Previews: PreviewProvider {
     static var previews: some View {
-    StreetCamMenuView(
-            viewModel: StreetCamMenuViewModel(),
-            router: StreetCamMenuRouter(isPresented: .constant(false))
+    FunctionMenuView(
+        viewModel: FunctionMenuViewModel(model: .init(type: .drone,
+                                                      title: "",
+                                                      icon: "",
+                                                      background: "")),
+            router: FunctionMenuRouter(isPresented: .constant(false))
         )
     }
 }

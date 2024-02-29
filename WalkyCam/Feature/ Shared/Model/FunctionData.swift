@@ -13,15 +13,17 @@ struct FunctionData: Hashable, Identifiable {
     let icon: String
 }
 
-enum FunctionType {
-    case videocall
-    case drone
-    case scan3d
-    case arhands
-    case digitalTwins
-    case streetcam
-    case iot
-    case print
+enum FunctionType: String {
+    case videocall = "videocall"
+    case drone = "drone"
+    case ruralDrone = "ruralDrone"
+    case lidar = "lidar"
+    case scan3d = "scan3d"
+    case arhands = "arhands"
+    case digitalTwins = "digitalTwins"
+    case streetcam = "streetcam"
+    case iot = "iot"
+    case print = "print"
 
     var convertedValue: FunctionData {
         switch self {
@@ -41,6 +43,10 @@ enum FunctionType {
             return .init(title: "IOT", icon: Asset.Icons.iot.name)
         case .print:
             return .init(title: "3D Print", icon: Asset.Icons._3dPrinting.name)
+        case .ruralDrone:
+            return .init(title: "Drone", icon: Asset.Icons.riego.name)
+        case .lidar:
+            return .init(title: "LIDAR", icon: Asset.Icons.lidar.name)
         }
     }
 }

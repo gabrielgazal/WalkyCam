@@ -19,7 +19,14 @@ final class Scan3DMenuRouter: Router, Scan3DMenuRouterProtocol {
 
     func routeToWalkCammer() {
         navigateTo(
-            ScannerMenuRoute(isPresented: isNavigating)
+            FunctionMenuRoute(
+                isPresented: isNavigating,
+                model: .init(
+                    type: .scan3d,
+                    title: "Scan 3D",
+                    icon: Asset.Icons.scan3D.name,
+                    background: Asset.Fondos.videocallFondo.name)
+            )
         )
     }
 

@@ -1,6 +1,6 @@
 import Combine
 
-final class ScannerMenuInteractor: ScannerMenuInteractorProtocol {
+final class FunctionMenuInteractor: FunctionMenuInteractorProtocol {
 
     // MARK: - Inner Types
 

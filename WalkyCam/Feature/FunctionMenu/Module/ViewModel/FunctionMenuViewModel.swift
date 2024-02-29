@@ -1,15 +1,18 @@
 import SwiftUI
 
-final class ScannerMenuViewModel: ScannerMenuViewModelProtocol {
+final class FunctionMenuViewModel: FunctionMenuViewModelProtocol {
 
     // MARK: - Dependencies
 
-    private let interactor: ScannerMenuInteractorProtocol
+    private let interactor: FunctionMenuInteractorProtocol
+    @Published var model: FunctionMenuModel
 
     // MARK: - Initialization
 
-    init(interactor: ScannerMenuInteractorProtocol = ScannerMenuInteractor()) {
+    init(interactor: FunctionMenuInteractorProtocol = FunctionMenuInteractor(),
+         model: FunctionMenuModel) {
         self.interactor = interactor
+        self.model = model
     }
 
     // MARK: - Public API

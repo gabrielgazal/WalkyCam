@@ -24,12 +24,13 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
                 headerView
                 Text("La invitación se enviará a los miembros de esta reunión al finalizar el proceso.")
                     .font(.projectFont(size: Tokens.Size.Font.regular))
+                    .isHidden(viewModel.service.title != "Video Call")
                 HStack(spacing: Tokens.Size.Spacing.regular) {
-                    Asset.Icons.streetCam.swiftUIImage
+                    Image(viewModel.service.icon)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 45, height: 60)
-                    Text("Street Cam")
+                    Text(viewModel.service.title)
                         .font(.projectFont(size: Tokens.Size.Font.large, weight: .bold))
                     Spacer()
                     Asset.Icons.accionesDetalle.swiftUIImage
