@@ -18,6 +18,11 @@ final class DroneMenuRouter: Router, DroneMenuRouterProtocol {
         )
     }
 
-    func routeToLidar() {}
+    func routeToLidar() {
+        let seenOnboarding: Bool = (try? UserSession().user().configurations?.drone) ?? false
+        navigateTo(
+            LidarOnboardingRoute(isPresented: isNavigating)
+        )
+    }
 }
 
