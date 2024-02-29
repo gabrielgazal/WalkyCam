@@ -1,0 +1,3 @@
+protocol PrintMenuInteractorProtocol {
+    func someFunction()
+}

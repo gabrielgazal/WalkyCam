@@ -76,6 +76,7 @@ internal enum Asset {
     internal static let smartHome = ImageAsset(name: "SmartHome")
     internal static let streetCam = ImageAsset(name: "Street Cam")
     internal static let tShirt = ImageAsset(name: "T-Shirt")
+    internal static let uploadFolder = ImageAsset(name: "Upload Folder")
     internal static let usd = ImageAsset(name: "Usd")
     internal static let videoCall = ImageAsset(name: "VideoCall")
     internal static let accionesDetalle = ImageAsset(name: "acciones detalle")
@@ -134,6 +135,7 @@ internal enum Asset {
     internal static let walkycamerHands = ImageAsset(name: "walkycamerHands")
   }
   internal enum Illustrations {
+    internal static let _3dModelingRafiki1 = ImageAsset(name: "3d modeling-rafiki 1")
     internal static let asistenteRemoto = ImageAsset(name: "Asistente Remoto")
     internal static let cropMonitoringViaMobileDevice = ImageAsset(name: "Crop monitoring via mobile device")
     internal static let farmerUsingSmartFarmApplication = ImageAsset(name: "Farmer using smart farm application")
@@ -148,6 +150,7 @@ internal enum Asset {
     internal static let onboarding1 = ImageAsset(name: "onboarding1")
     internal static let onboarding2 = ImageAsset(name: "onboarding2")
     internal static let onboarding3 = ImageAsset(name: "onboarding3")
+    internal static let online3dPrintingProcessIsometricVector287067061 = ImageAsset(name: "online-3d-printing-process-isometric-vector-28706706 1")
     internal static let ruralDrone = ImageAsset(name: "rural-drone")
     internal static let scan3dOnboarding1 = ImageAsset(name: "scan3d-onboarding1")
     internal static let scan3dOnboarding2 = ImageAsset(name: "scan3d-onboarding2")

@@ -69,8 +69,8 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
 //                                                router.routeToDrone()
                                         case "IOT applications & Data Analysis":
                                             router.routeToIOT()
-//                                            case "3D Printer":
-//                                            router.routeToDrone()
+                                        case "3D Printer":
+                                            router.routeTo3DPrinting()
 //                                            case "AI & Data Analysis":
 //                                            router.routeToDrone()
                                         case "Drone Fly":

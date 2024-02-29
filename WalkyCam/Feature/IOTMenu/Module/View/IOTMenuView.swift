@@ -78,6 +78,7 @@ struct IOTMenuView<ViewModel:IOTMenuViewModelProtocol, Router: IOTMenuRouterProt
                     Image(systemName: "arrow.backward")
                         .resizable()
                         .scaledToFit()
+                        .scaledToFit()
                         .fontWeight(.semibold)
                         .frame(width: 24, height: 24)
                         .onTapGesture {

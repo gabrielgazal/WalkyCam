@@ -46,5 +46,11 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
             IOTOnboardingRoute(isPresented: isNavigating)
         )
     }
+
+    func routeTo3DPrinting() {
+        navigateTo(
+            _DPrintOnboardingRoute(isPresented: isNavigating)
+        )
+    }
 }
 

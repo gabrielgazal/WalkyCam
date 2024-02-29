@@ -460,6 +460,28 @@
 		EA8652922B90ACC200B86A54 /* IOTOnboardingRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652852B90ACC200B86A54 /* IOTOnboardingRouterProtocol.swift */; };
 		EA8652932B90ACC200B86A54 /* IOTOnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652862B90ACC200B86A54 /* IOTOnboardingRouter.swift */; };
 		EA8652942B90ACC200B86A54 /* IOTOnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652892B90ACC200B86A54 /* IOTOnboardingModel.swift */; };
+		EA8652B12B90DA9600B86A54 /* 3DPrintOnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86529E2B90DA9600B86A54 /* 3DPrintOnboardingModel.swift */; };
+		EA8652B22B90DA9600B86A54 /* 3DPrintOnboardingRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652A12B90DA9600B86A54 /* 3DPrintOnboardingRoute.swift */; };
+		EA8652B32B90DA9600B86A54 /* 3DPrintOnboardingAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652A32B90DA9600B86A54 /* 3DPrintOnboardingAssembler.swift */; };
+		EA8652B42B90DA9600B86A54 /* 3DPrintOnboardingAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652A42B90DA9600B86A54 /* 3DPrintOnboardingAssemblerProtocol.swift */; };
+		EA8652B52B90DA9600B86A54 /* 3DPrintOnboardingViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652A72B90DA9600B86A54 /* 3DPrintOnboardingViewModelProtocol.swift */; };
+		EA8652B62B90DA9600B86A54 /* 3DPrintOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652A82B90DA9600B86A54 /* 3DPrintOnboardingViewModel.swift */; };
+		EA8652B72B90DA9600B86A54 /* 3DPrintOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652AA2B90DA9600B86A54 /* 3DPrintOnboardingView.swift */; };
+		EA8652B82B90DA9600B86A54 /* 3DPrintOnboardingInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652AC2B90DA9600B86A54 /* 3DPrintOnboardingInteractorProtocol.swift */; };
+		EA8652B92B90DA9600B86A54 /* 3DPrintOnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652AD2B90DA9600B86A54 /* 3DPrintOnboardingInteractor.swift */; };
+		EA8652BA2B90DA9600B86A54 /* 3DPrintOnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652AF2B90DA9600B86A54 /* 3DPrintOnboardingRouter.swift */; };
+		EA8652BB2B90DA9600B86A54 /* 3DPrintOnboardingRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652B02B90DA9600B86A54 /* 3DPrintOnboardingRouterProtocol.swift */; };
+		EA8652D82B90DCE900B86A54 /* PrintMenuRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652C52B90DCE900B86A54 /* PrintMenuRoute.swift */; };
+		EA8652D92B90DCE900B86A54 /* PrintMenuAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652C72B90DCE900B86A54 /* PrintMenuAssemblerProtocol.swift */; };
+		EA8652DA2B90DCE900B86A54 /* PrintMenuAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652C82B90DCE900B86A54 /* PrintMenuAssembler.swift */; };
+		EA8652DB2B90DCE900B86A54 /* PrintMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652CB2B90DCE900B86A54 /* PrintMenuModel.swift */; };
+		EA8652DC2B90DCE900B86A54 /* PrintMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652CE2B90DCE900B86A54 /* PrintMenuViewModel.swift */; };
+		EA8652DD2B90DCE900B86A54 /* PrintMenuViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652CF2B90DCE900B86A54 /* PrintMenuViewModelProtocol.swift */; };
+		EA8652DE2B90DCE900B86A54 /* PrintMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652D12B90DCE900B86A54 /* PrintMenuView.swift */; };
+		EA8652DF2B90DCE900B86A54 /* PrintMenuInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652D32B90DCE900B86A54 /* PrintMenuInteractorProtocol.swift */; };
+		EA8652E02B90DCE900B86A54 /* PrintMenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652D42B90DCE900B86A54 /* PrintMenuInteractor.swift */; };
+		EA8652E12B90DCE900B86A54 /* PrintMenuRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652D62B90DCE900B86A54 /* PrintMenuRouterProtocol.swift */; };
+		EA8652E22B90DCE900B86A54 /* PrintMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652D72B90DCE900B86A54 /* PrintMenuRouter.swift */; };
 		EA890A262B61ECFB00FC369B /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = EA890A252B61ECFB00FC369B /* Networking */; };
 		EA890A292B61EDE500FC369B /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA890A282B61EDE500FC369B /* Dependency.swift */; };
 		EA8EF8D02B67E12400136D1F /* UserSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8EF8CF2B67E12400136D1F /* UserSessionProtocol.swift */; };
@@ -1193,6 +1215,28 @@
 		EA8652852B90ACC200B86A54 /* IOTOnboardingRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOTOnboardingRouterProtocol.swift; sourceTree = "<group>"; };
 		EA8652862B90ACC200B86A54 /* IOTOnboardingRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOTOnboardingRouter.swift; sourceTree = "<group>"; };
 		EA8652892B90ACC200B86A54 /* IOTOnboardingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOTOnboardingModel.swift; sourceTree = "<group>"; };
+		EA86529E2B90DA9600B86A54 /* 3DPrintOnboardingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 3DPrintOnboardingModel.swift; sourceTree = "<group>"; };
+		EA8652A12B90DA9600B86A54 /* 3DPrintOnboardingRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 3DPrintOnboardingRoute.swift; sourceTree = "<group>"; };
+		EA8652A32B90DA9600B86A54 /* 3DPrintOnboardingAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 3DPrintOnboardingAssembler.swift; sourceTree = "<group>"; };
+		EA8652A42B90DA9600B86A54 /* 3DPrintOnboardingAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 3DPrintOnboardingAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA8652A72B90DA9600B86A54 /* 3DPrintOnboardingViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 3DPrintOnboardingViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA8652A82B90DA9600B86A54 /* 3DPrintOnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 3DPrintOnboardingViewModel.swift; sourceTree = "<group>"; };
+		EA8652AA2B90DA9600B86A54 /* 3DPrintOnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 3DPrintOnboardingView.swift; sourceTree = "<group>"; };
+		EA8652AC2B90DA9600B86A54 /* 3DPrintOnboardingInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 3DPrintOnboardingInteractorProtocol.swift; sourceTree = "<group>"; };
+		EA8652AD2B90DA9600B86A54 /* 3DPrintOnboardingInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 3DPrintOnboardingInteractor.swift; sourceTree = "<group>"; };
+		EA8652AF2B90DA9600B86A54 /* 3DPrintOnboardingRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 3DPrintOnboardingRouter.swift; sourceTree = "<group>"; };
+		EA8652B02B90DA9600B86A54 /* 3DPrintOnboardingRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 3DPrintOnboardingRouterProtocol.swift; sourceTree = "<group>"; };
+		EA8652C52B90DCE900B86A54 /* PrintMenuRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintMenuRoute.swift; sourceTree = "<group>"; };
+		EA8652C72B90DCE900B86A54 /* PrintMenuAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintMenuAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA8652C82B90DCE900B86A54 /* PrintMenuAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintMenuAssembler.swift; sourceTree = "<group>"; };
+		EA8652CB2B90DCE900B86A54 /* PrintMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintMenuModel.swift; sourceTree = "<group>"; };
+		EA8652CE2B90DCE900B86A54 /* PrintMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintMenuViewModel.swift; sourceTree = "<group>"; };
+		EA8652CF2B90DCE900B86A54 /* PrintMenuViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintMenuViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA8652D12B90DCE900B86A54 /* PrintMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintMenuView.swift; sourceTree = "<group>"; };
+		EA8652D32B90DCE900B86A54 /* PrintMenuInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintMenuInteractorProtocol.swift; sourceTree = "<group>"; };
+		EA8652D42B90DCE900B86A54 /* PrintMenuInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintMenuInteractor.swift; sourceTree = "<group>"; };
+		EA8652D62B90DCE900B86A54 /* PrintMenuRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintMenuRouterProtocol.swift; sourceTree = "<group>"; };
+		EA8652D72B90DCE900B86A54 /* PrintMenuRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintMenuRouter.swift; sourceTree = "<group>"; };
 		EA890A282B61EDE500FC369B /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
 		EA8EF8CF2B67E12400136D1F /* UserSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionProtocol.swift; sourceTree = "<group>"; };
 		EA8EF8D22B67E14300136D1F /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
@@ -2104,6 +2148,8 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				EA8652BC2B90DC9F00B86A54 /* PrintMenu */,
+				EA8652952B90DA7400B86A54 /* 3DPrintOnboarding */,
 				EA86526E2B90AC8900B86A54 /* IOTOnboarding */,
 				EA8652472B90ABD200B86A54 /* IOTMenu */,
 				EA8652202B902E2D00B86A54 /* FunctionMenu */,
@@ -5342,6 +5388,202 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		EA8652952B90DA7400B86A54 /* 3DPrintOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+				EA86529F2B90DA9600B86A54 /* Configuration */,
+				EA86529C2B90DA9600B86A54 /* Domain */,
+				EA8652A52B90DA9600B86A54 /* Module */,
+			);
+			path = 3DPrintOnboarding;
+			sourceTree = "<group>";
+		};
+		EA86529C2B90DA9600B86A54 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA86529D2B90DA9600B86A54 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA86529D2B90DA9600B86A54 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA86529E2B90DA9600B86A54 /* 3DPrintOnboardingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA86529F2B90DA9600B86A54 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652A02B90DA9600B86A54 /* Route */,
+				EA8652A22B90DA9600B86A54 /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA8652A02B90DA9600B86A54 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652A12B90DA9600B86A54 /* 3DPrintOnboardingRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA8652A22B90DA9600B86A54 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652A32B90DA9600B86A54 /* 3DPrintOnboardingAssembler.swift */,
+				EA8652A42B90DA9600B86A54 /* 3DPrintOnboardingAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EA8652A52B90DA9600B86A54 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652A62B90DA9600B86A54 /* ViewModel */,
+				EA8652A92B90DA9600B86A54 /* View */,
+				EA8652AB2B90DA9600B86A54 /* Interactor */,
+				EA8652AE2B90DA9600B86A54 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA8652A62B90DA9600B86A54 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652A72B90DA9600B86A54 /* 3DPrintOnboardingViewModelProtocol.swift */,
+				EA8652A82B90DA9600B86A54 /* 3DPrintOnboardingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA8652A92B90DA9600B86A54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652AA2B90DA9600B86A54 /* 3DPrintOnboardingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA8652AB2B90DA9600B86A54 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652AC2B90DA9600B86A54 /* 3DPrintOnboardingInteractorProtocol.swift */,
+				EA8652AD2B90DA9600B86A54 /* 3DPrintOnboardingInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EA8652AE2B90DA9600B86A54 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652AF2B90DA9600B86A54 /* 3DPrintOnboardingRouter.swift */,
+				EA8652B02B90DA9600B86A54 /* 3DPrintOnboardingRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EA8652BC2B90DC9F00B86A54 /* PrintMenu */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652C32B90DCE900B86A54 /* Configuration */,
+				EA8652C92B90DCE900B86A54 /* Domain */,
+				EA8652CC2B90DCE900B86A54 /* Module */,
+			);
+			path = PrintMenu;
+			sourceTree = "<group>";
+		};
+		EA8652C32B90DCE900B86A54 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652C42B90DCE900B86A54 /* Route */,
+				EA8652C62B90DCE900B86A54 /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA8652C42B90DCE900B86A54 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652C52B90DCE900B86A54 /* PrintMenuRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA8652C62B90DCE900B86A54 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652C72B90DCE900B86A54 /* PrintMenuAssemblerProtocol.swift */,
+				EA8652C82B90DCE900B86A54 /* PrintMenuAssembler.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EA8652C92B90DCE900B86A54 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652CA2B90DCE900B86A54 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA8652CA2B90DCE900B86A54 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652CB2B90DCE900B86A54 /* PrintMenuModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA8652CC2B90DCE900B86A54 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652CD2B90DCE900B86A54 /* ViewModel */,
+				EA8652D02B90DCE900B86A54 /* View */,
+				EA8652D22B90DCE900B86A54 /* Interactor */,
+				EA8652D52B90DCE900B86A54 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA8652CD2B90DCE900B86A54 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652CE2B90DCE900B86A54 /* PrintMenuViewModel.swift */,
+				EA8652CF2B90DCE900B86A54 /* PrintMenuViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA8652D02B90DCE900B86A54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652D12B90DCE900B86A54 /* PrintMenuView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA8652D22B90DCE900B86A54 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652D32B90DCE900B86A54 /* PrintMenuInteractorProtocol.swift */,
+				EA8652D42B90DCE900B86A54 /* PrintMenuInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EA8652D52B90DCE900B86A54 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652D62B90DCE900B86A54 /* PrintMenuRouterProtocol.swift */,
+				EA8652D72B90DCE900B86A54 /* PrintMenuRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		EA890A272B61EDCE00FC369B /* DependencyStore */ = {
 			isa = PBXGroup;
 			children = (
@@ -7587,6 +7829,7 @@
 				EA72199A2B05612900BE2D93 /* WalkyBotView.swift in Sources */,
 				EA7219992B05612900BE2D93 /* WalkyBotViewModel.swift in Sources */,
 				EA20A5612B87D35B006662FA /* ShareSheetAssemblerProtocol.swift in Sources */,
+				EA8652E02B90DCE900B86A54 /* PrintMenuInteractor.swift in Sources */,
 				EA57A7A22B6C1558006247DD /* CammerDetailsViewModelProtocol.swift in Sources */,
 				EA4A1C1E2B87799100B5FC59 /* AvailableAssistantsAssemblerProtocol.swift in Sources */,
 				EA94A5322B7160EF00EC3037 /* ServiceDetailsInteractorProtocol.swift in Sources */,
@@ -7619,10 +7862,13 @@
 				EAD0486C2AE22C530096E6AB /* RegistrationPlansView.swift in Sources */,
 				EAF47B572B82F7EA003F8B86 /* UpdateVideocallConfigurationUseCase.swift in Sources */,
 				EA20A5682B87D35B006662FA /* ShareSheetRouterProtocol.swift in Sources */,
+				EA8652DD2B90DCE900B86A54 /* PrintMenuViewModelProtocol.swift in Sources */,
 				EADB5CAB2B190819005863E1 /* VideoCallInteractorProtocol.swift in Sources */,
 				56FEECF82B5C802C003FA686 /* SearchWalkyCammerRouter.swift in Sources */,
+				EA8652DF2B90DCE900B86A54 /* PrintMenuInteractorProtocol.swift in Sources */,
 				EA86528C2B90ACC200B86A54 /* IOTOnboardingAssemblerProtocol.swift in Sources */,
 				EA57A7D12B6C2C31006247DD /* AddPeopleTransmissionView.swift in Sources */,
+				EA8652B72B90DA9600B86A54 /* 3DPrintOnboardingView.swift in Sources */,
 				561FC8BF2B5C67FB005B6006 /* AsyncData.swift in Sources */,
 				EAA1E63C2AFB03FD00A42174 /* CashTabAssembler.swift in Sources */,
 				EA91102D2ADDB91100584B98 /* URL+ImageLoadable.swift in Sources */,
@@ -7659,6 +7905,7 @@
 				EAF47B9F2B82FFF2003F8B86 /* CalendarTabInteractorProtocol.swift in Sources */,
 				EA282E542AE952F700B90920 /* ProfileModel.swift in Sources */,
 				EAF47B512B82F7EA003F8B86 /* VideocallOnboardingView.swift in Sources */,
+				EA8652E22B90DCE900B86A54 /* PrintMenuRouter.swift in Sources */,
 				EA91101E2ADDADE100584B98 /* HomeInteractorProtocol.swift in Sources */,
 				EAF47C132B830C80003F8B86 /* WalkyCammerListAssembler.swift in Sources */,
 				EAA1E6442AFB03FD00A42174 /* CashTabRouterProtocol.swift in Sources */,
@@ -7736,6 +7983,7 @@
 				56DADB222AD5EAA400710618 /* AppNavigator.swift in Sources */,
 				EA4A1C692B87909F00B5FC59 /* ExternalAssistantRouterProtocol.swift in Sources */,
 				EA15B5A92AD706AF00C03407 /* Route.swift in Sources */,
+				EA8652E12B90DCE900B86A54 /* PrintMenuRouterProtocol.swift in Sources */,
 				EA57A7A72B6C1558006247DD /* CammerDetailsRouterProtocol.swift in Sources */,
 				56FEECF12B5C802C003FA686 /* SearchWalkyCammerAssemblerProtocol.swift in Sources */,
 				EA94A5332B7160EF00EC3037 /* ServiceDetailsInteractor.swift in Sources */,
@@ -7753,6 +8001,7 @@
 				EAF47C8A2B839308003F8B86 /* FlightMenuRouterProtocol.swift in Sources */,
 				EAB63BBC2B83D6390017BDA4 /* ARHandsMenuViewModelProtocol.swift in Sources */,
 				56DADB202AD5EA7200710618 /* AppNavigatorProtocol.swift in Sources */,
+				EA8652B32B90DA9600B86A54 /* 3DPrintOnboardingAssembler.swift in Sources */,
 				EA50A0862B0BC77F0042B238 /* PlansPagesViewModelProtocol.swift in Sources */,
 				EA4A1C422B8788DB00B5FC59 /* SpecialistNotifiedInteractorProtocol.swift in Sources */,
 				EA86528D2B90ACC200B86A54 /* IOTOnboardingViewModelProtocol.swift in Sources */,
@@ -7796,9 +8045,11 @@
 				EAA1E6402AFB03FD00A42174 /* CashTabView.swift in Sources */,
 				EA4A1C6C2B87909F00B5FC59 /* ExternalAssistantAssembler.swift in Sources */,
 				EA5A87FC2B68002A00BBB7F9 /* RegistrationOutput.swift in Sources */,
+				EA8652B82B90DA9600B86A54 /* 3DPrintOnboardingInteractorProtocol.swift in Sources */,
 				EA4A1C192B87799100B5FC59 /* AvailableAssistantsInteractor.swift in Sources */,
 				EA0E40972AF697F0002B7437 /* CashWalletOnboardingPageView.swift in Sources */,
 				56FEECF52B5C802C003FA686 /* SearchWalkyCammerView.swift in Sources */,
+				EA8652D82B90DCE900B86A54 /* PrintMenuRoute.swift in Sources */,
 				EAB63BC52B83D63A0017BDA4 /* ARHandsMenuAssemblerProtocol.swift in Sources */,
 				EA2C4C292B7E5C4300F1EE26 /* DroneOnboardingAssemblerProtocol.swift in Sources */,
 				EAF47C402B838D74003F8B86 /* DroneMenuInteractorProtocol.swift in Sources */,
@@ -7851,6 +8102,7 @@
 				EA20A4EA2B87C3B4006662FA /* Scan3DOnboardingView.swift in Sources */,
 				EA910F8E2ADA06F500584B98 /* RegistrationViewModel.swift in Sources */,
 				EA6083462AFD58A900295069 /* CryptoTabRouterProtocol.swift in Sources */,
+				EA8652DC2B90DCE900B86A54 /* PrintMenuViewModel.swift in Sources */,
 				EA282ED02AEB531100B90920 /* FunctionsRouter.swift in Sources */,
 				EAB63B992B83D2ED0017BDA4 /* ARHandsOnboardingInteractor.swift in Sources */,
 				EAF47B7C2B82FCE8003F8B86 /* BookWalkycamerRoute.swift in Sources */,
@@ -7899,6 +8151,7 @@
 				EA20A55F2B87D35B006662FA /* ShareSheetRoute.swift in Sources */,
 				EA20A4F22B87C3B5006662FA /* Scan3DOnboardingModel.swift in Sources */,
 				EAF47BC42B8306E9003F8B86 /* TimeTabModel.swift in Sources */,
+				EA8652DE2B90DCE900B86A54 /* PrintMenuView.swift in Sources */,
 				EA910FFA2ADCBCC000584B98 /* MenuRouter.swift in Sources */,
 				EA57A7A62B6C1558006247DD /* CammerDetailsRouter.swift in Sources */,
 				EA8652432B902E4B00B86A54 /* FunctionMenuModel.swift in Sources */,
@@ -7910,6 +8163,7 @@
 				EA4A1C412B8788DB00B5FC59 /* SpecialistNotifiedView.swift in Sources */,
 				EA15B5B02AD7071300C03407 /* SheetModifier.swift in Sources */,
 				EA50A0902B0BCC940042B238 /* PlanPageView.swift in Sources */,
+				EA8652B92B90DA9600B86A54 /* 3DPrintOnboardingInteractor.swift in Sources */,
 				EAA1E6422AFB03FD00A42174 /* CashTabInteractor.swift in Sources */,
 				EA60838B2B01CD0A00295069 /* ShopTabAssemblerProtocol.swift in Sources */,
 				EAF47B772B82FCE8003F8B86 /* BookWalkycamerView.swift in Sources */,
@@ -7935,6 +8189,7 @@
 				EA4AE4882B75011B00B5A89F /* FetchUserConfigurationsUseCase.swift in Sources */,
 				EA910FD22ADC499500584B98 /* TabBarBuilder.swift in Sources */,
 				EA5E1D762AD716D200738A8F /* ButtonStyleDescriptor.swift in Sources */,
+				EA8652B22B90DA9600B86A54 /* 3DPrintOnboardingRoute.swift in Sources */,
 				EA4A1C6A2B87909F00B5FC59 /* ExternalAssistantModel.swift in Sources */,
 				56A552572B2F6E3D006B1B17 /* StreetCamMenuAssembler.swift in Sources */,
 				EA20A4EB2B87C3B4006662FA /* Scan3DOnboardingInteractor.swift in Sources */,
@@ -7996,6 +8251,7 @@
 				EAF47B7A2B82FCE8003F8B86 /* BookWalkycamerRouterProtocol.swift in Sources */,
 				EA7219A42B05863C00BE2D93 /* FavoriteItemView.swift in Sources */,
 				EA60833D2AFD58A900295069 /* CryptoTabRoute.swift in Sources */,
+				EA8652D92B90DCE900B86A54 /* PrintMenuAssemblerProtocol.swift in Sources */,
 				EA7219972B05612900BE2D93 /* WalkyBotModel.swift in Sources */,
 				EAF47C1A2B830C80003F8B86 /* WalkyCammerListRouter.swift in Sources */,
 				EAB63BC42B83D63A0017BDA4 /* ARHandsMenuAssembler.swift in Sources */,
@@ -8066,6 +8322,7 @@
 				EAB63BC22B83D63A0017BDA4 /* ARHandsMenuRouterProtocol.swift in Sources */,
 				EAF47B752B82FCE8003F8B86 /* BookWalkycamerViewModelProtocol.swift in Sources */,
 				EA50A08B2B0BC77F0042B238 /* PlansPagesRouter.swift in Sources */,
+				EA8652B42B90DA9600B86A54 /* 3DPrintOnboardingAssemblerProtocol.swift in Sources */,
 				EA50A0872B0BC77F0042B238 /* PlansPagesView.swift in Sources */,
 				EA4A1C8A2B8799B400B5FC59 /* RuralDroneOnboardingView.swift in Sources */,
 				56A5522C2B2F6135006B1B17 /* WalkyCamerOnboardingRoute.swift in Sources */,
@@ -8106,6 +8363,7 @@
 				56FEECF22B5C802C003FA686 /* SearchWalkyCammerModel.swift in Sources */,
 				EAB63BBD2B83D6390017BDA4 /* ARHandsMenuViewModel.swift in Sources */,
 				EA4A1C852B8799B400B5FC59 /* RuralDroneOnboardingRoute.swift in Sources */,
+				EA8652BA2B90DA9600B86A54 /* 3DPrintOnboardingRouter.swift in Sources */,
 				EA8652462B902E4B00B86A54 /* FunctionMenuAssemblerProtocol.swift in Sources */,
 				56A552342B2F6135006B1B17 /* WalkyCamerOnboardingRouter.swift in Sources */,
 				EA910F2E2AD8B14C00584B98 /* WCUIButton.swift in Sources */,
@@ -8135,6 +8393,7 @@
 				EAB63B962B83D2ED0017BDA4 /* ARHandsOnboardingViewModelProtocol.swift in Sources */,
 				EA910F3A2AD9782000584B98 /* SelectorModel.swift in Sources */,
 				EAD0486F2AE22C530096E6AB /* RegistrationPlansRouterProtocol.swift in Sources */,
+				EA8652DB2B90DCE900B86A54 /* PrintMenuModel.swift in Sources */,
 				56A5522E2B2F6135006B1B17 /* WalkyCamerOnboardingAssembler.swift in Sources */,
 				EA20A5162B87C913006662FA /* Scan3DMenuViewModelProtocol.swift in Sources */,
 				EAD048702AE22C530096E6AB /* RegistrationPlansRouter.swift in Sources */,
@@ -8165,6 +8424,7 @@
 				EA15B5982AD6E44D00C03407 /* LoginViewModelProtocol.swift in Sources */,
 				EA57A7822B6BFD09006247DD /* CammerData.swift in Sources */,
 				EAB63B922B83D2ED0017BDA4 /* ARHandsOnboardingRoute.swift in Sources */,
+				EA8652BB2B90DA9600B86A54 /* 3DPrintOnboardingRouterProtocol.swift in Sources */,
 				EA910F922ADA06F500584B98 /* RegistrationInteractor.swift in Sources */,
 				EA910FC52ADC495700584B98 /* TabBarAssembler.swift in Sources */,
 				EA82DB502ADF4DBB00E6B39A /* HomeSectionView.swift in Sources */,
@@ -8189,6 +8449,7 @@
 				EAF47C852B839308003F8B86 /* FlightMenuViewModel.swift in Sources */,
 				EA4165462AE706C6008CE66A /* NotificationsRouter.swift in Sources */,
 				56FEECEF2B5C802C003FA686 /* SearchWalkyCammerRoute.swift in Sources */,
+				EA8652DA2B90DCE900B86A54 /* PrintMenuAssembler.swift in Sources */,
 				EA0E40BE2AF70E86002B7437 /* CashWalletInteractorProtocol.swift in Sources */,
 				56FEECF32B5C802C003FA686 /* SearchWalkyCammerViewModel.swift in Sources */,
 				EA1FD1B92B1E932F000E583D /* VideoCallRoomViewModel.swift in Sources */,
@@ -8207,6 +8468,7 @@
 				56A5525F2B2F6E3D006B1B17 /* StreetCamMenuModel.swift in Sources */,
 				EA60838F2B01CD0A00295069 /* ShopTabViewModel.swift in Sources */,
 				EA0E40C52AF70E86002B7437 /* CashWalletAssembler.swift in Sources */,
+				EA8652B52B90DA9600B86A54 /* 3DPrintOnboardingViewModelProtocol.swift in Sources */,
 				EA1FD1BB2B1E932F000E583D /* VideoCallRoomView.swift in Sources */,
 				EA910F6B2AD9CCF500584B98 /* PageControl.swift in Sources */,
 				EA2C4C2B2B7E5C9500F1EE26 /* DroneOnboardingPageView.swift in Sources */,
@@ -8214,6 +8476,7 @@
 				EA282E572AE952F700B90920 /* ProfileView.swift in Sources */,
 				EA4164F52AE4B6F7008CE66A /* ComparePlansInteractor.swift in Sources */,
 				EAF47C872B839308003F8B86 /* FlightMenuInteractor.swift in Sources */,
+				EA8652B62B90DA9600B86A54 /* 3DPrintOnboardingViewModel.swift in Sources */,
 				EA20A4E82B87C3B4006662FA /* Scan3DOnboardingViewModelProtocol.swift in Sources */,
 				EA60836A2B01981800295069 /* CryptoDetailsModel.swift in Sources */,
 				EA172AFE2AF06BDE00EB1514 /* ConfirmMailInteractor.swift in Sources */,
@@ -8239,6 +8502,7 @@
 				EA0E40932AF69771002B7437 /* CashWalletOnboardingRoute.swift in Sources */,
 				EA4165482AE706C6008CE66A /* NotificationsRoute.swift in Sources */,
 				EAA1E61C2AFAFA7100A42174 /* WCTopBarView.swift in Sources */,
+				EA8652B12B90DA9600B86A54 /* 3DPrintOnboardingModel.swift in Sources */,
 				EA15B5BC2AD707A300C03407 /* NestedObservableObject.swift in Sources */,
 				EA5E1D932AD71ABB00738A8F /* Tokens.swift in Sources */,
 				EA4165422AE706C6008CE66A /* NotificationsViewModel.swift in Sources */,

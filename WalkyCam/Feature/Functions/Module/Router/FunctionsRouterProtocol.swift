@@ -8,4 +8,5 @@ protocol FunctionsRouterProtocol: Router {
     func routeToScan3D()
     func routeToCryptoWallet()
     func routeToIOT()
+    func routeTo3DPrinting()
 }
