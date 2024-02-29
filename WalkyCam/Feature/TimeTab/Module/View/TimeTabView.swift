@@ -6,8 +6,10 @@ struct TimeTabView<ViewModel:TimeTabViewModelProtocol, Router: TimeTabRouterProt
 
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
-    @State var startTimeSelected = Date()
-    @State var endTimeSelected = Date()
+    @State var startTimeSelected = Date.distantPast
+    @State var endTimeSelected = Date.now
+    @State var startPickerShowing = false
+    @State var endPickerShowing = false
 
     // MARK: - Initialization
 

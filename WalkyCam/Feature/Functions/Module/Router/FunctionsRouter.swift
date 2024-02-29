@@ -36,5 +36,9 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
             seenOnboarding ? Scan3DMenuRoute(isPresented: isNavigating) : Scan3DOnboardingRoute(isPresented: isNavigating)
         )
     }
+
+    func routeToCryptoWallet() {
+        navigateTo(CashWalletRoute(isPresented: isNavigating))
+    }
 }
 

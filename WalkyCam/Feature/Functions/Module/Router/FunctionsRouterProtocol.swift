@@ -6,4 +6,5 @@ protocol FunctionsRouterProtocol: Router {
     func routeToARHands()
     func routeToDrone()
     func routeToScan3D()
+    func routeToCryptoWallet()
 }

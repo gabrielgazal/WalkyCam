@@ -63,6 +63,27 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
                                   spacing: 16) {
                             ForEach(viewModel.otherFunctions, id: \.self) { item in
                                 FunctionCell(title: item.title, icon: item.icon, lastItem: false)
+                                    .onTapGesture {
+                                        switch item.title {
+//                                            case "Digital Twins":
+//                                                router.routeToDrone()
+//                                            case "IOT applications & Data Analysis":
+//                                            router.routeToDrone()
+//                                            case "3D Printer":
+//                                            router.routeToDrone()
+//                                            case "AI & Data Analysis":
+//                                            router.routeToDrone()
+                                        case "Drone Fly":
+                                            router.routeToDrone()
+//                                        case "Alcohol & Drug test":
+//                                            router.routeToDrone()
+                                        case "NFT platform":
+                                            router.routeToDrone()
+                                        case "Crypto Wallet":
+                                            router.routeToCryptoWallet()
+                                        default: break
+                                        }
+                                    }
                             }
                         }
                     }
