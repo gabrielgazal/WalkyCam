@@ -438,6 +438,28 @@
 		EA8652442B902E4B00B86A54 /* FunctionMenuRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652382B902E4B00B86A54 /* FunctionMenuRoute.swift */; };
 		EA8652452B902E4B00B86A54 /* FunctionMenuAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86523A2B902E4B00B86A54 /* FunctionMenuAssembler.swift */; };
 		EA8652462B902E4B00B86A54 /* FunctionMenuAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86523B2B902E4B00B86A54 /* FunctionMenuAssemblerProtocol.swift */; };
+		EA8652632B90AC8300B86A54 /* IOTMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652502B90AC8300B86A54 /* IOTMenuModel.swift */; };
+		EA8652642B90AC8300B86A54 /* IOTMenuRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652532B90AC8300B86A54 /* IOTMenuRoute.swift */; };
+		EA8652652B90AC8300B86A54 /* IOTMenuAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652552B90AC8300B86A54 /* IOTMenuAssembler.swift */; };
+		EA8652662B90AC8300B86A54 /* IOTMenuAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652562B90AC8300B86A54 /* IOTMenuAssemblerProtocol.swift */; };
+		EA8652672B90AC8300B86A54 /* IOTMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652592B90AC8300B86A54 /* IOTMenuViewModel.swift */; };
+		EA8652682B90AC8300B86A54 /* IOTMenuViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86525A2B90AC8300B86A54 /* IOTMenuViewModelProtocol.swift */; };
+		EA8652692B90AC8300B86A54 /* IOTMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86525C2B90AC8300B86A54 /* IOTMenuView.swift */; };
+		EA86526A2B90AC8300B86A54 /* IOTMenuInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86525E2B90AC8300B86A54 /* IOTMenuInteractorProtocol.swift */; };
+		EA86526B2B90AC8300B86A54 /* IOTMenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86525F2B90AC8300B86A54 /* IOTMenuInteractor.swift */; };
+		EA86526C2B90AC8300B86A54 /* IOTMenuRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652612B90AC8300B86A54 /* IOTMenuRouterProtocol.swift */; };
+		EA86526D2B90AC8300B86A54 /* IOTMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652622B90AC8300B86A54 /* IOTMenuRouter.swift */; };
+		EA86528A2B90ACC200B86A54 /* IOTOnboardingRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652772B90ACC200B86A54 /* IOTOnboardingRoute.swift */; };
+		EA86528B2B90ACC200B86A54 /* IOTOnboardingAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652792B90ACC200B86A54 /* IOTOnboardingAssembler.swift */; };
+		EA86528C2B90ACC200B86A54 /* IOTOnboardingAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86527A2B90ACC200B86A54 /* IOTOnboardingAssemblerProtocol.swift */; };
+		EA86528D2B90ACC200B86A54 /* IOTOnboardingViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86527D2B90ACC200B86A54 /* IOTOnboardingViewModelProtocol.swift */; };
+		EA86528E2B90ACC200B86A54 /* IOTOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86527E2B90ACC200B86A54 /* IOTOnboardingViewModel.swift */; };
+		EA86528F2B90ACC200B86A54 /* IOTOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652802B90ACC200B86A54 /* IOTOnboardingView.swift */; };
+		EA8652902B90ACC200B86A54 /* IOTOnboardingInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652822B90ACC200B86A54 /* IOTOnboardingInteractorProtocol.swift */; };
+		EA8652912B90ACC200B86A54 /* IOTOnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652832B90ACC200B86A54 /* IOTOnboardingInteractor.swift */; };
+		EA8652922B90ACC200B86A54 /* IOTOnboardingRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652852B90ACC200B86A54 /* IOTOnboardingRouterProtocol.swift */; };
+		EA8652932B90ACC200B86A54 /* IOTOnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652862B90ACC200B86A54 /* IOTOnboardingRouter.swift */; };
+		EA8652942B90ACC200B86A54 /* IOTOnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8652892B90ACC200B86A54 /* IOTOnboardingModel.swift */; };
 		EA890A262B61ECFB00FC369B /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = EA890A252B61ECFB00FC369B /* Networking */; };
 		EA890A292B61EDE500FC369B /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA890A282B61EDE500FC369B /* Dependency.swift */; };
 		EA8EF8D02B67E12400136D1F /* UserSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8EF8CF2B67E12400136D1F /* UserSessionProtocol.swift */; };
@@ -1149,6 +1171,28 @@
 		EA8652382B902E4B00B86A54 /* FunctionMenuRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionMenuRoute.swift; sourceTree = "<group>"; };
 		EA86523A2B902E4B00B86A54 /* FunctionMenuAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionMenuAssembler.swift; sourceTree = "<group>"; };
 		EA86523B2B902E4B00B86A54 /* FunctionMenuAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionMenuAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA8652502B90AC8300B86A54 /* IOTMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOTMenuModel.swift; sourceTree = "<group>"; };
+		EA8652532B90AC8300B86A54 /* IOTMenuRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOTMenuRoute.swift; sourceTree = "<group>"; };
+		EA8652552B90AC8300B86A54 /* IOTMenuAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOTMenuAssembler.swift; sourceTree = "<group>"; };
+		EA8652562B90AC8300B86A54 /* IOTMenuAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOTMenuAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA8652592B90AC8300B86A54 /* IOTMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOTMenuViewModel.swift; sourceTree = "<group>"; };
+		EA86525A2B90AC8300B86A54 /* IOTMenuViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOTMenuViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA86525C2B90AC8300B86A54 /* IOTMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOTMenuView.swift; sourceTree = "<group>"; };
+		EA86525E2B90AC8300B86A54 /* IOTMenuInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOTMenuInteractorProtocol.swift; sourceTree = "<group>"; };
+		EA86525F2B90AC8300B86A54 /* IOTMenuInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOTMenuInteractor.swift; sourceTree = "<group>"; };
+		EA8652612B90AC8300B86A54 /* IOTMenuRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOTMenuRouterProtocol.swift; sourceTree = "<group>"; };
+		EA8652622B90AC8300B86A54 /* IOTMenuRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOTMenuRouter.swift; sourceTree = "<group>"; };
+		EA8652772B90ACC200B86A54 /* IOTOnboardingRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOTOnboardingRoute.swift; sourceTree = "<group>"; };
+		EA8652792B90ACC200B86A54 /* IOTOnboardingAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOTOnboardingAssembler.swift; sourceTree = "<group>"; };
+		EA86527A2B90ACC200B86A54 /* IOTOnboardingAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOTOnboardingAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EA86527D2B90ACC200B86A54 /* IOTOnboardingViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOTOnboardingViewModelProtocol.swift; sourceTree = "<group>"; };
+		EA86527E2B90ACC200B86A54 /* IOTOnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOTOnboardingViewModel.swift; sourceTree = "<group>"; };
+		EA8652802B90ACC200B86A54 /* IOTOnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOTOnboardingView.swift; sourceTree = "<group>"; };
+		EA8652822B90ACC200B86A54 /* IOTOnboardingInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOTOnboardingInteractorProtocol.swift; sourceTree = "<group>"; };
+		EA8652832B90ACC200B86A54 /* IOTOnboardingInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOTOnboardingInteractor.swift; sourceTree = "<group>"; };
+		EA8652852B90ACC200B86A54 /* IOTOnboardingRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOTOnboardingRouterProtocol.swift; sourceTree = "<group>"; };
+		EA8652862B90ACC200B86A54 /* IOTOnboardingRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOTOnboardingRouter.swift; sourceTree = "<group>"; };
+		EA8652892B90ACC200B86A54 /* IOTOnboardingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOTOnboardingModel.swift; sourceTree = "<group>"; };
 		EA890A282B61EDE500FC369B /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
 		EA8EF8CF2B67E12400136D1F /* UserSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionProtocol.swift; sourceTree = "<group>"; };
 		EA8EF8D22B67E14300136D1F /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
@@ -2060,6 +2104,8 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				EA86526E2B90AC8900B86A54 /* IOTOnboarding */,
+				EA8652472B90ABD200B86A54 /* IOTMenu */,
 				EA8652202B902E2D00B86A54 /* FunctionMenu */,
 				EA20A5432B87D327006662FA /* ShareSheet */,
 				EA20A4F52B87C8FD006662FA /* Scan3DMenu */,
@@ -5100,6 +5146,202 @@
 			path = Assembler;
 			sourceTree = "<group>";
 		};
+		EA8652472B90ABD200B86A54 /* IOTMenu */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652512B90AC8300B86A54 /* Configuration */,
+				EA86524E2B90AC8300B86A54 /* Domain */,
+				EA8652572B90AC8300B86A54 /* Module */,
+			);
+			path = IOTMenu;
+			sourceTree = "<group>";
+		};
+		EA86524E2B90AC8300B86A54 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA86524F2B90AC8300B86A54 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA86524F2B90AC8300B86A54 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652502B90AC8300B86A54 /* IOTMenuModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA8652512B90AC8300B86A54 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652522B90AC8300B86A54 /* Route */,
+				EA8652542B90AC8300B86A54 /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA8652522B90AC8300B86A54 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652532B90AC8300B86A54 /* IOTMenuRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA8652542B90AC8300B86A54 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652552B90AC8300B86A54 /* IOTMenuAssembler.swift */,
+				EA8652562B90AC8300B86A54 /* IOTMenuAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EA8652572B90AC8300B86A54 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652582B90AC8300B86A54 /* ViewModel */,
+				EA86525B2B90AC8300B86A54 /* View */,
+				EA86525D2B90AC8300B86A54 /* Interactor */,
+				EA8652602B90AC8300B86A54 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA8652582B90AC8300B86A54 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652592B90AC8300B86A54 /* IOTMenuViewModel.swift */,
+				EA86525A2B90AC8300B86A54 /* IOTMenuViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA86525B2B90AC8300B86A54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA86525C2B90AC8300B86A54 /* IOTMenuView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA86525D2B90AC8300B86A54 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA86525E2B90AC8300B86A54 /* IOTMenuInteractorProtocol.swift */,
+				EA86525F2B90AC8300B86A54 /* IOTMenuInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EA8652602B90AC8300B86A54 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652612B90AC8300B86A54 /* IOTMenuRouterProtocol.swift */,
+				EA8652622B90AC8300B86A54 /* IOTMenuRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EA86526E2B90AC8900B86A54 /* IOTOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652752B90ACC200B86A54 /* Configuration */,
+				EA8652872B90ACC200B86A54 /* Domain */,
+				EA86527B2B90ACC200B86A54 /* Module */,
+			);
+			path = IOTOnboarding;
+			sourceTree = "<group>";
+		};
+		EA8652752B90ACC200B86A54 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652762B90ACC200B86A54 /* Route */,
+				EA8652782B90ACC200B86A54 /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EA8652762B90ACC200B86A54 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652772B90ACC200B86A54 /* IOTOnboardingRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EA8652782B90ACC200B86A54 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652792B90ACC200B86A54 /* IOTOnboardingAssembler.swift */,
+				EA86527A2B90ACC200B86A54 /* IOTOnboardingAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EA86527B2B90ACC200B86A54 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA86527C2B90ACC200B86A54 /* ViewModel */,
+				EA86527F2B90ACC200B86A54 /* View */,
+				EA8652812B90ACC200B86A54 /* Interactor */,
+				EA8652842B90ACC200B86A54 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA86527C2B90ACC200B86A54 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA86527D2B90ACC200B86A54 /* IOTOnboardingViewModelProtocol.swift */,
+				EA86527E2B90ACC200B86A54 /* IOTOnboardingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA86527F2B90ACC200B86A54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652802B90ACC200B86A54 /* IOTOnboardingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA8652812B90ACC200B86A54 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652822B90ACC200B86A54 /* IOTOnboardingInteractorProtocol.swift */,
+				EA8652832B90ACC200B86A54 /* IOTOnboardingInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EA8652842B90ACC200B86A54 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652852B90ACC200B86A54 /* IOTOnboardingRouterProtocol.swift */,
+				EA8652862B90ACC200B86A54 /* IOTOnboardingRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EA8652872B90ACC200B86A54 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652882B90ACC200B86A54 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EA8652882B90ACC200B86A54 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA8652892B90ACC200B86A54 /* IOTOnboardingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EA890A272B61EDCE00FC369B /* DependencyStore */ = {
 			isa = PBXGroup;
 			children = (
@@ -7354,11 +7596,13 @@
 				EAF47C842B839308003F8B86 /* FlightMenuViewModelProtocol.swift in Sources */,
 				EA60833C2AFD58A900295069 /* CryptoTabModel.swift in Sources */,
 				EA41654B2AE706C6008CE66A /* NotificationModel.swift in Sources */,
+				EA86526C2B90AC8300B86A54 /* IOTMenuRouterProtocol.swift in Sources */,
 				EA910FA22ADC466400584B98 /* WCTabBarItem.swift in Sources */,
 				EA910FCE2ADC495700584B98 /* TabBarRouter.swift in Sources */,
 				EA4165442AE706C6008CE66A /* NotificationsInteractorProtocol.swift in Sources */,
 				EA6083682B01981800295069 /* CryptoDetailsRouter.swift in Sources */,
 				EA15B5B22AD7072400C03407 /* SnackBarModifier.swift in Sources */,
+				EA8652902B90ACC200B86A54 /* IOTOnboardingInteractorProtocol.swift in Sources */,
 				EA20A4EE2B87C3B5006662FA /* Scan3DOnboardingRouterProtocol.swift in Sources */,
 				EAA1E6452AFB03FD00A42174 /* CashTabModel.swift in Sources */,
 				EA0E40952AF69771002B7437 /* CashWalletOnboardingAssembler.swift in Sources */,
@@ -7368,6 +7612,7 @@
 				EA50A0882B0BC77F0042B238 /* PlansPagesInteractorProtocol.swift in Sources */,
 				EADB5CA42B190819005863E1 /* VideoCallRoute.swift in Sources */,
 				EAF47BF42B83099F003F8B86 /* MapTabRouterProtocol.swift in Sources */,
+				EA86526A2B90AC8300B86A54 /* IOTMenuInteractorProtocol.swift in Sources */,
 				EA5E1D962AD725DF00738A8F /* ProjectColors.swift in Sources */,
 				EAF47B9E2B82FFF2003F8B86 /* CalendarTabView.swift in Sources */,
 				EA20A5672B87D35B006662FA /* ShareSheetRouter.swift in Sources */,
@@ -7376,6 +7621,7 @@
 				EA20A5682B87D35B006662FA /* ShareSheetRouterProtocol.swift in Sources */,
 				EADB5CAB2B190819005863E1 /* VideoCallInteractorProtocol.swift in Sources */,
 				56FEECF82B5C802C003FA686 /* SearchWalkyCammerRouter.swift in Sources */,
+				EA86528C2B90ACC200B86A54 /* IOTOnboardingAssemblerProtocol.swift in Sources */,
 				EA57A7D12B6C2C31006247DD /* AddPeopleTransmissionView.swift in Sources */,
 				561FC8BF2B5C67FB005B6006 /* AsyncData.swift in Sources */,
 				EAA1E63C2AFB03FD00A42174 /* CashTabAssembler.swift in Sources */,
@@ -7403,6 +7649,7 @@
 				EA5E1D712AD7167300738A8F /* LinkButtonStyle.swift in Sources */,
 				EAF47C1B2B830C80003F8B86 /* WalkyCammerListRouterProtocol.swift in Sources */,
 				EA2F93FA2B62CECD00E1C146 /* LoginInteractorProtocol.swift in Sources */,
+				EA8652942B90ACC200B86A54 /* IOTOnboardingModel.swift in Sources */,
 				EA94A5312B7160EF00EC3037 /* ServiceDetailsView.swift in Sources */,
 				EAF47BCA2B8306E9003F8B86 /* TimeTabRouterProtocol.swift in Sources */,
 				EA20A5602B87D35B006662FA /* ShareSheetAssembler.swift in Sources */,
@@ -7500,6 +7747,7 @@
 				EAF47BC82B8306E9003F8B86 /* TimeTabInteractor.swift in Sources */,
 				EA0E40C22AF70E86002B7437 /* CashWalletModel.swift in Sources */,
 				EAF47BCC2B8306E9003F8B86 /* TimeTabRoute.swift in Sources */,
+				EA86526B2B90AC8300B86A54 /* IOTMenuInteractor.swift in Sources */,
 				EAF47C832B839308003F8B86 /* FlightMenuAssembler.swift in Sources */,
 				EAB63B952B83D2ED0017BDA4 /* ARHandsOnboardingModel.swift in Sources */,
 				EAF47C8A2B839308003F8B86 /* FlightMenuRouterProtocol.swift in Sources */,
@@ -7507,7 +7755,9 @@
 				56DADB202AD5EA7200710618 /* AppNavigatorProtocol.swift in Sources */,
 				EA50A0862B0BC77F0042B238 /* PlansPagesViewModelProtocol.swift in Sources */,
 				EA4A1C422B8788DB00B5FC59 /* SpecialistNotifiedInteractorProtocol.swift in Sources */,
+				EA86528D2B90ACC200B86A54 /* IOTOnboardingViewModelProtocol.swift in Sources */,
 				EA20A5632B87D35B006662FA /* ShareSheetViewModelProtocol.swift in Sources */,
+				EA8652652B90AC8300B86A54 /* IOTMenuAssembler.swift in Sources */,
 				EA4A1C632B87909F00B5FC59 /* ExternalAssistantViewModelProtocol.swift in Sources */,
 				EA7219962B05612900BE2D93 /* WalkyBotAssembler.swift in Sources */,
 				EA0E408B2AF69771002B7437 /* CashWalletOnboardingModel.swift in Sources */,
@@ -7517,6 +7767,7 @@
 				56A5525C2B2F6E3D006B1B17 /* StreetCamMenuInteractor.swift in Sources */,
 				EA4A1C402B8788DB00B5FC59 /* SpecialistNotifiedViewModel.swift in Sources */,
 				EAF47BF22B83099F003F8B86 /* MapTabInteractor.swift in Sources */,
+				EA8652632B90AC8300B86A54 /* IOTMenuModel.swift in Sources */,
 				EA6083B32B01D9E100295069 /* GalleryAssembler.swift in Sources */,
 				EA94A5352B7160EF00EC3037 /* ServiceDetailsRouterProtocol.swift in Sources */,
 				EA2F93FC2B62CED700E1C146 /* LoginInteractor.swift in Sources */,
@@ -7585,6 +7836,7 @@
 				EA6083912B01CD0A00295069 /* ShopTabInteractor.swift in Sources */,
 				EAF47B502B82F7EA003F8B86 /* VideocallOnboardingPageView.swift in Sources */,
 				EA3E5C912B87692400158207 /* AssistantMenuAssembler.swift in Sources */,
+				EA8652672B90AC8300B86A54 /* IOTMenuViewModel.swift in Sources */,
 				EA172B1F2AF06EF600EB1514 /* StartupAssembler.swift in Sources */,
 				EA15B59A2AD6E44D00C03407 /* LoginViewModel.swift in Sources */,
 				EA3E5C942B87692400158207 /* AssistantMenuViewModelProtocol.swift in Sources */,
@@ -7593,6 +7845,7 @@
 				EA57A7A92B6C1558006247DD /* CammerDetailsRoute.swift in Sources */,
 				EAF47BED2B83099F003F8B86 /* MapTabAssemblerProtocol.swift in Sources */,
 				EA9110312ADDB95C00584B98 /* ImageCache.swift in Sources */,
+				EA86528B2B90ACC200B86A54 /* IOTOnboardingAssembler.swift in Sources */,
 				EA8EF8DA2B67E24400136D1F /* KeychainError.swift in Sources */,
 				EA910FC82ADC495700584B98 /* TabBarViewModelProtocol.swift in Sources */,
 				EA20A4EA2B87C3B4006662FA /* Scan3DOnboardingView.swift in Sources */,
@@ -7633,6 +7886,7 @@
 				EA3E5C982B87692400158207 /* AssistantMenuInteractorProtocol.swift in Sources */,
 				EA20A5122B87C913006662FA /* Scan3DMenuRoute.swift in Sources */,
 				EA4A1C1F2B87799100B5FC59 /* AvailableAssistantsAssembler.swift in Sources */,
+				EA8652682B90AC8300B86A54 /* IOTMenuViewModelProtocol.swift in Sources */,
 				EA910F652AD9B01300584B98 /* OnboardingRouterProtocol.swift in Sources */,
 				EAF47C182B830C80003F8B86 /* WalkyCammerListInteractorProtocol.swift in Sources */,
 				EA4A1C3E2B8788DB00B5FC59 /* SpecialistNotifiedAssembler.swift in Sources */,
@@ -7669,6 +7923,7 @@
 				56A552592B2F6E3D006B1B17 /* StreetCamMenuViewModelProtocol.swift in Sources */,
 				EA57A7A42B6C1558006247DD /* CammerDetailsInteractor.swift in Sources */,
 				EA57A7D02B6C2C31006247DD /* AddPeopleTransmissionViewModelProtocol.swift in Sources */,
+				EA8652692B90AC8300B86A54 /* IOTMenuView.swift in Sources */,
 				EAF47C822B839308003F8B86 /* FlightMenuAssemblerProtocol.swift in Sources */,
 				56A5525E2B2F6E3D006B1B17 /* StreetCamMenuRouter.swift in Sources */,
 				EA5E1D9A2AD883D800738A8F /* Text+Extension.swift in Sources */,
@@ -7696,6 +7951,8 @@
 				EA8EF8DB2B67E24400136D1F /* KeychainProtocol.swift in Sources */,
 				EAF47BEC2B83099F003F8B86 /* MapTabRoute.swift in Sources */,
 				EA6083E02B01DBE000295069 /* GalleryPhotosRoute.swift in Sources */,
+				EA8652642B90AC8300B86A54 /* IOTMenuRoute.swift in Sources */,
+				EA86528E2B90ACC200B86A54 /* IOTOnboardingViewModel.swift in Sources */,
 				EA910FF22ADCBCC000584B98 /* MenuAssembler.swift in Sources */,
 				EAF47BA12B82FFF2003F8B86 /* CalendarTabRouter.swift in Sources */,
 				EA15B5B62AD7075600C03407 /* Router.swift in Sources */,
@@ -7710,6 +7967,7 @@
 				EA0E40922AF69771002B7437 /* CashWalletOnboardingRouter.swift in Sources */,
 				EAF47B9B2B82FFF2003F8B86 /* CalendarTabModel.swift in Sources */,
 				EA9110332ADDBF7400584B98 /* WalkyBotItemView.swift in Sources */,
+				EA86528A2B90ACC200B86A54 /* IOTOnboardingRoute.swift in Sources */,
 				EA172AFC2AF06BDE00EB1514 /* ConfirmMailView.swift in Sources */,
 				561FC8B92B5C6787005B6006 /* WebViewRoute.swift in Sources */,
 				EA86523D2B902E4B00B86A54 /* FunctionMenuViewModelProtocol.swift in Sources */,
@@ -7769,6 +8027,7 @@
 				EA60836B2B01981800295069 /* CryptoDetailsRoute.swift in Sources */,
 				EAF47BC72B8306E9003F8B86 /* TimeTabView.swift in Sources */,
 				561FC8B62B5C66F7005B6006 /* WebViewModel.swift in Sources */,
+				EA8652932B90ACC200B86A54 /* IOTOnboardingRouter.swift in Sources */,
 				EAF47C3D2B838D74003F8B86 /* DroneMenuViewModel.swift in Sources */,
 				EA910FF52ADCBCC000584B98 /* MenuViewModelProtocol.swift in Sources */,
 				EA910F8C2ADA06F500584B98 /* RegistrationAssemblerProtocol.swift in Sources */,
@@ -7841,6 +8100,7 @@
 				EAF47BC92B8306E9003F8B86 /* TimeTabInteractorProtocol.swift in Sources */,
 				EA7219772B0553C900BE2D93 /* GalleryItemView.swift in Sources */,
 				EA4A1C6B2B87909F00B5FC59 /* ExternalAssistantRoute.swift in Sources */,
+				EA86528F2B90ACC200B86A54 /* IOTOnboardingView.swift in Sources */,
 				5637A8162AD5DD72000586DF /* WalkyCamApp.swift in Sources */,
 				EA15B5B42AD7074200C03407 /* RouterState.swift in Sources */,
 				56FEECF22B5C802C003FA686 /* SearchWalkyCammerModel.swift in Sources */,
@@ -7887,6 +8147,7 @@
 				EA60833F2AFD58A900295069 /* CryptoTabAssemblerProtocol.swift in Sources */,
 				EA91102F2ADDB93D00584B98 /* EnvironmentValues+ImageCache.swift in Sources */,
 				EA57A7D32B6C2C31006247DD /* AddPeopleTransmissionInteractor.swift in Sources */,
+				EA86526D2B90AC8300B86A54 /* IOTMenuRouter.swift in Sources */,
 				EA3E5C952B87692400158207 /* AssistantMenuViewModel.swift in Sources */,
 				EA20A5172B87C913006662FA /* Scan3DMenuView.swift in Sources */,
 				EAF47C3C2B838D74003F8B86 /* DroneMenuModel.swift in Sources */,
@@ -7941,6 +8202,7 @@
 				EA57A7CE2B6C2C31006247DD /* AddPeopleTransmissionModel.swift in Sources */,
 				EA4A1C3F2B8788DB00B5FC59 /* SpecialistNotifiedViewModelProtocol.swift in Sources */,
 				EA3E5C902B87692400158207 /* AssistantMenuRoute.swift in Sources */,
+				EA8652922B90ACC200B86A54 /* IOTOnboardingRouterProtocol.swift in Sources */,
 				EAF47B792B82FCE8003F8B86 /* BookWalkycamerInteractorProtocol.swift in Sources */,
 				56A5525F2B2F6E3D006B1B17 /* StreetCamMenuModel.swift in Sources */,
 				EA60838F2B01CD0A00295069 /* ShopTabViewModel.swift in Sources */,
@@ -7958,6 +8220,7 @@
 				EA172AFB2AF06BDE00EB1514 /* ConfirmMailViewModelProtocol.swift in Sources */,
 				EA9110232ADDADE100584B98 /* HomeAssemblerProtocol.swift in Sources */,
 				56A552382B2F6168006B1B17 /* WalkyCamerOnboardingPageView.swift in Sources */,
+				EA8652912B90ACC200B86A54 /* IOTOnboardingInteractor.swift in Sources */,
 				EA15B5A22AD6E44D00C03407 /* LoginAssemblerProtocol.swift in Sources */,
 				EA8EF8DC2B67E24400136D1F /* Keychain.swift in Sources */,
 				EAB63B972B83D2ED0017BDA4 /* ARHandsOnboardingViewModel.swift in Sources */,
@@ -7987,6 +8250,7 @@
 				EA72199E2B05612900BE2D93 /* WalkyBotRouter.swift in Sources */,
 				EA910F8F2ADA06F500584B98 /* RegistrationViewModelProtocol.swift in Sources */,
 				EA2C4C282B7E5C4300F1EE26 /* DroneOnboardingAssembler.swift in Sources */,
+				EA8652662B90AC8300B86A54 /* IOTMenuAssemblerProtocol.swift in Sources */,
 				EA20A4EF2B87C3B5006662FA /* Scan3DOnboardingRoute.swift in Sources */,
 				EAF47BA22B82FFF2003F8B86 /* CalendarTabRouterProtocol.swift in Sources */,
 				EA41654A2AE706C6008CE66A /* NotificationsAssembler.swift in Sources */,

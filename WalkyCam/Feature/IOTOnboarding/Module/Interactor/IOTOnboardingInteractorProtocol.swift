@@ -1,0 +1,3 @@
+protocol IOTOnboardingInteractorProtocol {
+    func someFunction()
+}
