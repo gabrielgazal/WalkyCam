@@ -707,6 +707,8 @@
 		EAE8EC582B9574840003AE96 /* ChatListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE8EC402B9574840003AE96 /* ChatListRouter.swift */; };
 		EAE8EC592B9574840003AE96 /* ChatListRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE8EC412B9574840003AE96 /* ChatListRouterProtocol.swift */; };
 		EAE8EC5A2B9574840003AE96 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE8EC442B9574840003AE96 /* ChatModel.swift */; };
+		EAE8EC5D2B9575AE0003AE96 /* SendbirdChatSDK in Frameworks */ = {isa = PBXBuildFile; productRef = EAE8EC5C2B9575AE0003AE96 /* SendbirdChatSDK */; };
+		EAE8EC5F2B9576E50003AE96 /* AppDelegate+Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE8EC5E2B9576E50003AE96 /* AppDelegate+Chat.swift */; };
 		EAF47B4B2B82F7EA003F8B86 /* VideocallOnboardingRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47B352B82F7E9003F8B86 /* VideocallOnboardingRoute.swift */; };
 		EAF47B4C2B82F7EA003F8B86 /* VideocallOnboardingAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47B372B82F7E9003F8B86 /* VideocallOnboardingAssemblerProtocol.swift */; };
 		EAF47B4D2B82F7EA003F8B86 /* VideocallOnboardingAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47B382B82F7E9003F8B86 /* VideocallOnboardingAssembler.swift */; };
@@ -1527,6 +1529,7 @@
 		EAE8EC402B9574840003AE96 /* ChatListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListRouter.swift; sourceTree = "<group>"; };
 		EAE8EC412B9574840003AE96 /* ChatListRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListRouterProtocol.swift; sourceTree = "<group>"; };
 		EAE8EC442B9574840003AE96 /* ChatModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		EAE8EC5E2B9576E50003AE96 /* AppDelegate+Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Chat.swift"; sourceTree = "<group>"; };
 		EAF47B352B82F7E9003F8B86 /* VideocallOnboardingRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideocallOnboardingRoute.swift; sourceTree = "<group>"; };
 		EAF47B372B82F7E9003F8B86 /* VideocallOnboardingAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideocallOnboardingAssemblerProtocol.swift; sourceTree = "<group>"; };
 		EAF47B382B82F7E9003F8B86 /* VideocallOnboardingAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideocallOnboardingAssembler.swift; sourceTree = "<group>"; };
@@ -1626,6 +1629,7 @@
 			files = (
 				EA890A262B61ECFB00FC369B /* Networking in Frameworks */,
 				DFD0945A60FA5B637D89BC1D /* Pods_WalkyCam.framework in Frameworks */,
+				EAE8EC5D2B9575AE0003AE96 /* SendbirdChatSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1955,6 +1959,7 @@
 			isa = PBXGroup;
 			children = (
 				56DADB262AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift */,
+				EAE8EC5E2B9576E50003AE96 /* AppDelegate+Chat.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -8306,6 +8311,7 @@
 			name = WalkyCam;
 			packageProductDependencies = (
 				EA890A252B61ECFB00FC369B /* Networking */,
+				EAE8EC5C2B9575AE0003AE96 /* SendbirdChatSDK */,
 			);
 			productName = WalkyCam;
 			productReference = 5637A8122AD5DD72000586DF /* WalkyCam.app */;
@@ -8381,6 +8387,9 @@
 				en,
 			);
 			mainGroup = 5637A8092AD5DD71000586DF;
+			packageReferences = (
+				EAE8EC5B2B9575AE0003AE96 /* XCRemoteSwiftPackageReference "sendbird-chat-sdk-ios" */,
+			);
 			productRefGroup = 5637A8132AD5DD72000586DF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -8989,6 +8998,7 @@
 				EAE8EC502B9574840003AE96 /* ChatListRoute.swift in Sources */,
 				561FC8B92B5C6787005B6006 /* WebViewRoute.swift in Sources */,
 				EA86523D2B902E4B00B86A54 /* FunctionMenuViewModelProtocol.swift in Sources */,
+				EAE8EC5F2B9576E50003AE96 /* AppDelegate+Chat.swift in Sources */,
 				EADB5CAD2B190819005863E1 /* VideoCallRouter.swift in Sources */,
 				EA20A5622B87D35B006662FA /* ShareSheetViewModel.swift in Sources */,
 				EA57A7CB2B6C2C31006247DD /* AddPeopleTransmissionRoute.swift in Sources */,
@@ -9661,10 +9671,26 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		EAE8EC5B2B9575AE0003AE96 /* XCRemoteSwiftPackageReference "sendbird-chat-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sendbird/sendbird-chat-sdk-ios";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		EA890A252B61ECFB00FC369B /* Networking */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Networking;
+		};
+		EAE8EC5C2B9575AE0003AE96 /* SendbirdChatSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EAE8EC5B2B9575AE0003AE96 /* XCRemoteSwiftPackageReference "sendbird-chat-sdk-ios" */;
+			productName = SendbirdChatSDK;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

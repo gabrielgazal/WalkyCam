@@ -14,6 +14,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
         registerDependencies()
+        initializeChatSDK()
         return true
     }
 }

@@ -37,35 +37,15 @@ final class ChatListViewModel: ChatListViewModelProtocol {
         }
     }
 
-    private func messageTest() {
-        let params = OpenChannelCreateParams()
-        params.name = "Mensageria Gazal"
-        OpenChannel.createChannel(params: params) { channel, error in
-            guard let canal = channel, error == nil else {
-                print("Teste")
-                return
-            }
-            canal.enter { error in
-                guard error == nil else { return }
-            }
-            canal.sendUserMessage("TESTEEE") { message, error in
-                guard let message = message, error == nil else { return }
-            }
-        }
-    }
-
     private func getGroupChannels() {
         GroupChannel.createMyGroupChannelListQuery().loadNextPage { channels, error in
             if let channels = channels {
                 let mappedChannels = channels.compactMap { channel in
-                    if channel.isHidden {
-
-                    }
-                    return ChannelModel(id: channel.id,
+                    return channel.isHidden ? nil : ChannelModel(id: channel.id,
                                         title: channel.name,
                                         image: channel.coverURL,
                                         timeStamp: String(channel.createdAt),
-                                        chatOpened: false,
+                                        chatOpened: channel.unreadMessageCount == 0,
                                         lastMessage: channel.lastMessage?.message ?? "",
                                         chatURL: channel.channelURL)
                 }

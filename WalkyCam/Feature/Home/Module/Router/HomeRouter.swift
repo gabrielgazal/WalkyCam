@@ -54,4 +54,10 @@ final class HomeRouter: Router, HomeRouterProtocol {
             seenOnboarding ? Scan3DMenuRoute(isPresented: isNavigating) : Scan3DOnboardingRoute(isPresented: isNavigating)
         )
     }
+
+    func routeToChat() {
+        navigateTo(
+            ChatListRoute(isPresented: isNavigating)
+        )
+    }
 }
