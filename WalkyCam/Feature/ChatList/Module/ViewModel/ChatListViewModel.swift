@@ -41,18 +41,23 @@ final class ChatListViewModel: ChatListViewModelProtocol {
         GroupChannel.createMyGroupChannelListQuery().loadNextPage { channels, error in
             if let channels = channels {
                 let mappedChannels = channels.compactMap { channel in
-                    return channel.isHidden ? nil : ChannelModel(id: channel.id,
-                                        title: channel.name,
-                                        image: channel.coverURL,
-                                        timeStamp: String(channel.createdAt),
-                                        chatOpened: channel.unreadMessageCount == 0,
-                                        lastMessage: channel.lastMessage?.message ?? "",
-                                        chatURL: channel.channelURL)
+                    return self.mapObjectToModel(channel)
                 }
                 self.channels = .loaded(mappedChannels)
             } else {
                 print("Erro nas mensagens")
             }
         }
+    }
+
+    private func mapObjectToModel(_ input: GroupChannel) -> ChannelModel? {
+        let member = input.members.first(where: { $0.id != "developer" })
+        return input.lastMessage == nil ? nil : ChannelModel(id: input.id,
+                                                             title: member?.nickname ?? "(No members)",
+                                                             image: input.coverURL ?? "",
+                                                             timeStamp: String(input.lastMessage?.createdAt ?? 0),
+                                                             chatOpened: input.unreadMessageCount == 0,
+                                                             lastMessage: input.lastMessage?.message ?? "",
+                                                             chatURL: input.channelURL)
     }
 }

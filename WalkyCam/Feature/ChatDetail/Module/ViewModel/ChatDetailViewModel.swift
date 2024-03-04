@@ -40,7 +40,7 @@ final class ChatDetailViewModel: ChatDetailViewModelProtocol {
     private func loadMessages(channel: GroupChannel) {
         let params = MessageListParams()
         params.reverse = false
-        params.nextResultSize = 20
+        params.nextResultSize = 50
         channel.getMessagesByTimestamp(0, params: params) { messages, error in
             guard let messages = messages else {
                 print("Erro nas mensagens")

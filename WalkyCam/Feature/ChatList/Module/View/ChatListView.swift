@@ -73,6 +73,7 @@ struct ChatListView<ViewModel:ChatListViewModelProtocol, Router: ChatListRouterP
                     }
                 }
                 .frame(width: 70, height: 70)
+                .background(Color.blancoGris)
                 .clipShape(Circle())
                 VStack(alignment: .leading,
                        spacing: Tokens.Size.Spacing.small) {
