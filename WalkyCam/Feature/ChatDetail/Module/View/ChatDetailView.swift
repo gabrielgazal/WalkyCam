@@ -176,7 +176,7 @@ extension ChannelModel {
             id: "id",
             title: "title",
             image: .imageMock,
-            timeStamp: Date().description,
+            timeStamp: 1678716422,
             chatOpened: false,
             lastMessage: "",
             chatURL: "sendbird_group_channel_344834546_34fed5d949575d21be89865869ee70c8b2252f00")

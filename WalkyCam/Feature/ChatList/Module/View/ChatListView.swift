@@ -18,97 +18,102 @@ struct ChatListView<ViewModel:ChatListViewModelProtocol, Router: ChatListRouterP
     // MARK: - View Body
 
     var body: some View {
-            ScrollView(showsIndicators: false) {
-                VStack {
-                    Group {
-                        HStack(spacing: Tokens.Size.Spacing.regular) {
-                            Text("Mensajes")
-                                .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
-                            Spacer()
-                            Asset.Icons.filter.swiftUIImage
-                            Image(systemName: "magnifyingglass")
-                                .resizable()
-                                .frame(width: 20, height: 20)
-                                .fontWeight(.semibold)
-                        }
-                        Divider()
+        ScrollView(showsIndicators: false) {
+            VStack {
+                Group {
+                    HStack(spacing: Tokens.Size.Spacing.regular) {
+                        Text("Mensajes")
+                            .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
+                        Spacer()
+                        Asset.Icons.filter.swiftUIImage
+                        Image(systemName: "magnifyingglass")
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                            .fontWeight(.semibold)
                     }
-                    .padding(.horizontal, Tokens.Size.Spacing.large)
-
-                    AsyncDataView(viewModel.channels) { channels in
-                        ForEach(channels, id: \.self) { item in
-                            channelItem(item)
-                                .background(item.chatOpened ?  Color.blanco : Color.blancoGris)
-                                .onTapGesture {
-                                    if let detailChannel = viewModel.handleChatSelection(item.id) {
-                                        router.routeToChatDetails(detailChannel)
-                                    }
-                                }
-                            Divider()
-                                .padding(.horizontal, Tokens.Size.Spacing.large)
-                        }
-                    } errorAction: {}
+                    Divider()
                 }
-            }
-            .navigation(router)
-        }
+                .padding(.horizontal, Tokens.Size.Spacing.large)
 
-        private func channelItem(_ channel: ChannelModel) -> some View {
-            return HStack(alignment: .center,
-                          spacing: Tokens.Size.Spacing.small) {
-                VStack {
-                    if let url = URL(string: channel.image ?? "") {
-                        AsyncImageView(imageLoadable: url) { status in
-                            Group {
-                                switch status {
-                                case .loading:
-                                    ProgressView()
-                                default:
-                                    placeholder
+                AsyncDataView(viewModel.channels) { channels in
+                    ForEach(channels, id: \.self) { item in
+                        channelItem(item)
+                            .background(item.chatOpened ?  Color.blanco : Color.blancoGris)
+                            .onTapGesture {
+                                if let detailChannel = viewModel.handleChatSelection(item.id) {
+                                    router.routeToChatDetails(detailChannel)
                                 }
                             }
-                        }
-                    } else {
-                        placeholder
+                        Divider()
+                            .padding(.horizontal, Tokens.Size.Spacing.large)
                     }
-                }
-                .frame(width: 70, height: 70)
-                .background(Color.blancoGris)
-                .clipShape(Circle())
-                VStack(alignment: .leading,
-                       spacing: Tokens.Size.Spacing.small) {
-                    HStack {
-                        Text(channel.title)
-                            .font(.projectFont(size: Tokens.Size.Font.large, weight: .bold))
-                        Spacer()
-                        if !channel.chatOpened {
-                            Circle()
-                                .fill(Color.naranja)
-                                .frame(width: 10, height: 10)
+                } errorAction: {}
+            }
+        }
+        .navigation(router)
+    }
+
+    private func channelItem(_ channel: ChannelModel) -> some View {
+        return HStack(alignment: .center,
+                      spacing: Tokens.Size.Spacing.small) {
+            VStack {
+                if let url = URL(string: channel.image ?? "") {
+                    AsyncImageView(imageLoadable: url) { status in
+                        Group {
+                            switch status {
+                            case .loading:
+                                ProgressView()
+                            default:
+                                placeholder
+                            }
                         }
                     }
-                    Text(channel.lastMessage)
-                        .font(.projectFont(size: Tokens.Size.Font.medium))
-                        .lineLimit(1)
-                    Text(channel.timeStamp)
-                        .font(.projectFont(size: Tokens.Size.Font.medium))
+                } else {
+                    placeholder
                 }
             }
-                          .padding(Tokens.Size.Spacing.large)
+            .frame(width: 70, height: 70)
+            .background(Color.blancoGris)
+            .clipShape(Circle())
+            VStack(alignment: .leading,
+                   spacing: Tokens.Size.Spacing.small) {
+                HStack {
+                    Text(channel.title)
+                        .font(.projectFont(size: Tokens.Size.Font.large, weight: .bold))
+                    Spacer()
+                    if !channel.chatOpened {
+                        Circle()
+                            .fill(Color.naranja)
+                            .frame(width: 10, height: 10)
+                    }
+                }
+                Text(channel.lastMessage)
+                    .font(.projectFont(size: Tokens.Size.Font.medium))
+                    .lineLimit(1)
+                Text(convertUnixTimeToDate(channel.timeStamp))
+                    .font(.projectFont(size: Tokens.Size.Font.medium))
+            }
         }
+                      .padding(Tokens.Size.Spacing.large)
+    }
 
-        private var placeholder: some View {
-            Image(systemName: "camera")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .padding(Tokens.Size.Spacing.large)
-                .cornerRadius(Tokens.Size.Border.Radius.medium)
-        }
+    private var placeholder: some View {
+        Image(systemName: "camera")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .padding(Tokens.Size.Spacing.large)
+            .cornerRadius(Tokens.Size.Border.Radius.medium)
+    }
+
+    private func convertUnixTimeToDate(_ time: Int64) -> String {
+        let date = Date(timeIntervalSince1970: TimeInterval(time/1000))
+        return date.relativeTimeFormatted(format: SharedDateFormat.standardDate)
+    }
 }
 
 struct ChatListView_Previews: PreviewProvider {
     static var previews: some View {
-    ChatListView(
+        ChatListView(
             viewModel: ChatListViewModel(),
             router: ChatListRouter(isPresented: .constant(false))
         )

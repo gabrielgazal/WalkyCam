@@ -55,7 +55,7 @@ final class ChatListViewModel: ChatListViewModelProtocol {
         return input.lastMessage == nil ? nil : ChannelModel(id: input.id,
                                                              title: member?.nickname ?? "(No members)",
                                                              image: input.coverURL ?? "",
-                                                             timeStamp: String(input.lastMessage?.createdAt ?? 0),
+                                                             timeStamp: input.lastMessage?.createdAt ?? 0,
                                                              chatOpened: input.unreadMessageCount == 0,
                                                              lastMessage: input.lastMessage?.message ?? "",
                                                              chatURL: input.channelURL)
