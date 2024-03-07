@@ -71,9 +71,7 @@ struct ChatDetailView<ViewModel:ChatDetailViewModelProtocol, Router: ChatDetailR
             viewModel.subscribeToChannelEvents()
         }
         .onReceive(viewModel.messageObserver.objectWillChange) { _ in
-            if let newMessage = viewModel.messageObserver.newMessage {
-                viewModel.loadNewTexts()
-            }
+            viewModel.loadNewTexts()
         }
     }
 
