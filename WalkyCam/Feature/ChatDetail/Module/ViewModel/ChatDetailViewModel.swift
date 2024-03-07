@@ -18,7 +18,6 @@ final class ChatDetailViewModel: ChatDetailViewModelProtocol {
     ) {
         self.interactor = interactor
         self.chatModel = chatModel
-        getChannelInformation()
     }
 
     // MARK: - Public API
@@ -27,31 +26,26 @@ final class ChatDetailViewModel: ChatDetailViewModelProtocol {
         print("Enviou")
     }
 
-    // MARK: - Private Methods
-
-    private func getChannelInformation() {
-        messages = .loading
+    func loadMessages() {
+        self.messages = .loading
+        let params = MessageListParams()
+        params.reverse = true
+        params.nextResultSize = 50
         GroupChannel.getChannel(url: chatModel.chatURL) { channel, error in
             guard let channel = channel else { return }
-            self.loadMessages(channel: channel)
-        }
-    }
-
-    private func loadMessages(channel: GroupChannel) {
-        let params = MessageListParams()
-        params.reverse = false
-        params.nextResultSize = 50
-        channel.getMessagesByTimestamp(0, params: params) { messages, error in
-            guard let messages = messages else {
-                print("Erro nas mensagens")
-                return
+            channel.getMessagesByTimestamp(0, params: params) { messages, error in
+                guard let messages = messages else {
+                    print("Erro nas mensagens")
+                    self.messages = .failed(GenericError())
+                    return
+                }
+                let mappedMessages = messages.compactMap { item in
+                    return MessageModel(id: item.messageId.description,
+                                        isSenderMessage: item.isOperatorMessage,
+                                        value: item.message)
+                }
+                self.messages = .loaded(mappedMessages)
             }
-            let mappedMessages = messages.compactMap { item in
-                return MessageModel(id: item.messageId.description,
-                                    isSenderMessage: item.isOperatorMessage,
-                                    value: item.message)
-            }
-            self.messages = .loaded(mappedMessages)
         }
     }
 }

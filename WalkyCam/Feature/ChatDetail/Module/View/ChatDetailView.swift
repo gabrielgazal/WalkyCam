@@ -1,4 +1,5 @@
 import SwiftUI
+import SendbirdChatSDK
 
 struct ChatDetailView<ViewModel:ChatDetailViewModelProtocol, Router: ChatDetailRouterProtocol>: View {
 
@@ -35,13 +36,16 @@ struct ChatDetailView<ViewModel:ChatDetailViewModelProtocol, Router: ChatDetailR
                     ForEach(messages, id: \.self) { message in
                         if message.isSenderMessage {
                             userMessage(message.value)
+                                .flippedUpsideDown()
                         } else {
                             channelMessage(message.value)
+                                .flippedUpsideDown()
                         }
                     }
                 } errorAction: {}
                     .padding(Tokens.Size.Spacing.regular)
             }
+            .flippedUpsideDown()
         }
         .padding(Tokens.Size.Spacing.large)
         .footer {
@@ -54,6 +58,9 @@ struct ChatDetailView<ViewModel:ChatDetailViewModelProtocol, Router: ChatDetailR
                 Spacer()
             }
             .padding(Tokens.Size.Spacing.regular)
+        }
+        .onAppear {
+            viewModel.loadMessages()
         }
     }
 

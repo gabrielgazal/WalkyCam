@@ -1,4 +1,5 @@
 import SwiftUI
+import SendbirdChatSDK
 
 protocol ChatDetailViewModelProtocol: ViewModelProtocol {
     var chatModel: ChannelModel { get set }
@@ -6,4 +7,5 @@ protocol ChatDetailViewModelProtocol: ViewModelProtocol {
     var currentMessage: String { get set }
 
     func sendMessage()
+    func loadMessages()
 }

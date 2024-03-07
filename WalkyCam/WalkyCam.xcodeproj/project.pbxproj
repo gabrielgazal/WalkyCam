@@ -84,6 +84,7 @@
 		EA0E40C32AF70E86002B7437 /* CashWalletRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E40B72AF70E86002B7437 /* CashWalletRoute.swift */; };
 		EA0E40C42AF70E86002B7437 /* CashWalletAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E40B92AF70E86002B7437 /* CashWalletAssemblerProtocol.swift */; };
 		EA0E40C52AF70E86002B7437 /* CashWalletAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E40BA2AF70E86002B7437 /* CashWalletAssembler.swift */; };
+		EA1235162B99FC1100443CF8 /* FlippedUpsideDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1235152B99FC1100443CF8 /* FlippedUpsideDown.swift */; };
 		EA15B5762AD6DF2C00C03407 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA15B5742AD6DF2C00C03407 /* Localizable.strings */; };
 		EA15B5982AD6E44D00C03407 /* LoginViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B5842AD6E44D00C03407 /* LoginViewModelProtocol.swift */; };
 		EA15B59A2AD6E44D00C03407 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B5862AD6E44D00C03407 /* LoginViewModel.swift */; };
@@ -905,6 +906,7 @@
 		EA0E40B72AF70E86002B7437 /* CashWalletRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashWalletRoute.swift; sourceTree = "<group>"; };
 		EA0E40B92AF70E86002B7437 /* CashWalletAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashWalletAssemblerProtocol.swift; sourceTree = "<group>"; };
 		EA0E40BA2AF70E86002B7437 /* CashWalletAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashWalletAssembler.swift; sourceTree = "<group>"; };
+		EA1235152B99FC1100443CF8 /* FlippedUpsideDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlippedUpsideDown.swift; sourceTree = "<group>"; };
 		EA15B5752AD6DF2C00C03407 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EA15B5842AD6E44D00C03407 /* LoginViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModelProtocol.swift; sourceTree = "<group>"; };
 		EA15B5862AD6E44D00C03407 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -6387,6 +6389,7 @@
 			children = (
 				EA910F9B2ADC437300584B98 /* AlertModifier.swift */,
 				EA910F9D2ADC43B200584B98 /* FullScreenWrapper.swift */,
+				EA1235152B99FC1100443CF8 /* FlippedUpsideDown.swift */,
 			);
 			path = Modifier;
 			sourceTree = "<group>";
@@ -9051,6 +9054,7 @@
 				EADBE1012AE823BA00FED579 /* NotificationItemView.swift in Sources */,
 				EAF47C812B839308003F8B86 /* FlightMenuRoute.swift in Sources */,
 				EAF47BA02B82FFF2003F8B86 /* CalendarTabInteractor.swift in Sources */,
+				EA1235162B99FC1100443CF8 /* FlippedUpsideDown.swift in Sources */,
 				EA6083B12B01D9E100295069 /* GalleryRoute.swift in Sources */,
 				EA20A4F12B87C3B5006662FA /* Scan3DOnboardingAssemblerProtocol.swift in Sources */,
 				EA6083432AFD58A900295069 /* CryptoTabInteractor.swift in Sources */,
