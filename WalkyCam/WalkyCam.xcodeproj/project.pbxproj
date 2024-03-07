@@ -85,6 +85,8 @@
 		EA0E40C42AF70E86002B7437 /* CashWalletAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E40B92AF70E86002B7437 /* CashWalletAssemblerProtocol.swift */; };
 		EA0E40C52AF70E86002B7437 /* CashWalletAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E40BA2AF70E86002B7437 /* CashWalletAssembler.swift */; };
 		EA1235162B99FC1100443CF8 /* FlippedUpsideDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1235152B99FC1100443CF8 /* FlippedUpsideDown.swift */; };
+		EA1235182B99FF8C00443CF8 /* MessageObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1235172B99FF8C00443CF8 /* MessageObserver.swift */; };
+		EA12351A2B9A2B6200443CF8 /* Int64+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1235192B9A2B6200443CF8 /* Int64+Extension.swift */; };
 		EA15B5762AD6DF2C00C03407 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA15B5742AD6DF2C00C03407 /* Localizable.strings */; };
 		EA15B5982AD6E44D00C03407 /* LoginViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B5842AD6E44D00C03407 /* LoginViewModelProtocol.swift */; };
 		EA15B59A2AD6E44D00C03407 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15B5862AD6E44D00C03407 /* LoginViewModel.swift */; };
@@ -907,6 +909,8 @@
 		EA0E40B92AF70E86002B7437 /* CashWalletAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashWalletAssemblerProtocol.swift; sourceTree = "<group>"; };
 		EA0E40BA2AF70E86002B7437 /* CashWalletAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashWalletAssembler.swift; sourceTree = "<group>"; };
 		EA1235152B99FC1100443CF8 /* FlippedUpsideDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlippedUpsideDown.swift; sourceTree = "<group>"; };
+		EA1235172B99FF8C00443CF8 /* MessageObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageObserver.swift; sourceTree = "<group>"; };
+		EA1235192B9A2B6200443CF8 /* Int64+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int64+Extension.swift"; sourceTree = "<group>"; };
 		EA15B5752AD6DF2C00C03407 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EA15B5842AD6E44D00C03407 /* LoginViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModelProtocol.swift; sourceTree = "<group>"; };
 		EA15B5862AD6E44D00C03407 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -4539,6 +4543,7 @@
 				EA91102C2ADDB91000584B98 /* URL+ImageLoadable.swift */,
 				EA282E102AE8327100B90920 /* DateFormat.swift */,
 				EA282E122AE832F100B90920 /* Date+Extension.swift */,
+				EA1235192B9A2B6200443CF8 /* Int64+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -7406,6 +7411,7 @@
 			isa = PBXGroup;
 			children = (
 				EAE8EC2E2B9574830003AE96 /* MessageModel.swift */,
+				EA1235172B99FF8C00443CF8 /* MessageObserver.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -8753,6 +8759,7 @@
 				56DADB202AD5EA7200710618 /* AppNavigatorProtocol.swift in Sources */,
 				EA8653782B90FA8800B86A54 /* AIMenuViewModel.swift in Sources */,
 				EA8652B32B90DA9600B86A54 /* 3DPrintOnboardingAssembler.swift in Sources */,
+				EA1235182B99FF8C00443CF8 /* MessageObserver.swift in Sources */,
 				EA50A0862B0BC77F0042B238 /* PlansPagesViewModelProtocol.swift in Sources */,
 				EA4A1C422B8788DB00B5FC59 /* SpecialistNotifiedInteractorProtocol.swift in Sources */,
 				EA86528D2B90ACC200B86A54 /* IOTOnboardingViewModelProtocol.swift in Sources */,
@@ -8919,6 +8926,7 @@
 				EA8652DE2B90DCE900B86A54 /* PrintMenuView.swift in Sources */,
 				EA910FFA2ADCBCC000584B98 /* MenuRouter.swift in Sources */,
 				EA57A7A62B6C1558006247DD /* CammerDetailsRouter.swift in Sources */,
+				EA12351A2B9A2B6200443CF8 /* Int64+Extension.swift in Sources */,
 				EA8652432B902E4B00B86A54 /* FunctionMenuModel.swift in Sources */,
 				EA6083412AFD58A900295069 /* CryptoTabViewModelProtocol.swift in Sources */,
 				EAD0486D2AE22C530096E6AB /* RegistrationPlansInteractor.swift in Sources */,

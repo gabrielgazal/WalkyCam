@@ -35,10 +35,10 @@ struct ChatDetailView<ViewModel:ChatDetailViewModelProtocol, Router: ChatDetailR
                 AsyncDataView(viewModel.messages) { messages in
                     ForEach(messages, id: \.self) { message in
                         if message.isSenderMessage {
-                            userMessage(message.value)
+                            userMessage(message.value, date: message.timeStamp.toTimeString())
                                 .flippedUpsideDown()
                         } else {
-                            channelMessage(message.value)
+                            channelMessage(message.value, date: message.timeStamp.toTimeString())
                                 .flippedUpsideDown()
                         }
                     }
@@ -49,18 +49,31 @@ struct ChatDetailView<ViewModel:ChatDetailViewModelProtocol, Router: ChatDetailR
         }
         .padding(Tokens.Size.Spacing.large)
         .footer {
-            HStack {
+            HStack(spacing: Tokens.Size.Spacing.regular) {
+                Asset.Icons.smileFace.swiftUIImage
                 TextInputView(text: $viewModel.currentMessage,
-                              leftIcon: Asset.Icons.smileFace.swiftUIImage,
-                              rightIcon: Asset.Icons.sendIcon.swiftUIImage,
                               placeholder: "Escribe aquí...",
                               backgroundColor: .clear)
+                Asset.Icons.sendIcon.swiftUIImage
+                    .renderingMode(.template)
+                    .foregroundColor(viewModel.currentMessage.isEmpty ? .grisOscuro : .naranja)
+                    .onTapGesture {
+                        if !viewModel.currentMessage.isEmpty  {
+                            viewModel.sendMessage()
+                        }
+                    }
                 Spacer()
             }
             .padding(Tokens.Size.Spacing.regular)
         }
         .onAppear {
             viewModel.loadMessages()
+            viewModel.subscribeToChannelEvents()
+        }
+        .onReceive(viewModel.messageObserver.objectWillChange) { _ in
+            if let newMessage = viewModel.messageObserver.newMessage {
+                viewModel.loadNewTexts()
+            }
         }
     }
 
@@ -105,13 +118,13 @@ struct ChatDetailView<ViewModel:ChatDetailViewModelProtocol, Router: ChatDetailR
             .cornerRadius(Tokens.Size.Border.Radius.medium)
     }
 
-    private func channelMessage(_ text: String) -> some View {
+    private func channelMessage(_ text: String, date: String) -> some View {
         HStack {
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.regular) {
                 Text(text)
                     .font(.projectFont(size: Tokens.Size.Font.regular))
-                Text(Date(), style: .time)
+                Text(date)
                     .font(.projectFont(size: Tokens.Size.Font.small))
             }
                    .padding(Tokens.Size.Spacing.regular)
@@ -127,14 +140,14 @@ struct ChatDetailView<ViewModel:ChatDetailViewModelProtocol, Router: ChatDetailR
         }
     }
 
-    private func userMessage(_ text: String) -> some View {
+    private func userMessage(_ text: String, date: String) -> some View {
         HStack {
             Spacer()
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.regular) {
                 Text(text)
                     .font(.projectFont(size: Tokens.Size.Font.regular))
-                Text(Date(), style: .time)
+                Text(date)
                     .font(.projectFont(size: Tokens.Size.Font.small))
             }
                    .padding(Tokens.Size.Spacing.regular)
