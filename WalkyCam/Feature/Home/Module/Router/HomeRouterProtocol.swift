@@ -9,4 +9,5 @@ protocol HomeRouterProtocol: Router {
     func routeToARHands()
     func routeToDrone()
     func routeToScan3D()
+    func routeToChat()
 }

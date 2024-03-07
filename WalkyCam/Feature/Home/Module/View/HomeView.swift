@@ -33,7 +33,8 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                        spacing: Tokens.Size.Spacing.large) {
                     ProfileHeaderView(name: viewModel.homeData.profileInfo.name,
                                       imageURL: URL(string: viewModel.homeData.profileInfo.imageURL),
-                                      actions: .init(notificationsAction: handleNotificationsAction,
+                                      actions: .init(chatAction: handleChatAction,
+                                                     notificationsAction: handleNotificationsAction,
                                                      profileAction: handleProfileAction))
                     .padding(.horizontal, Tokens.Size.Spacing.large)
                     WalkyBotItemView(action: {
@@ -194,6 +195,10 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
 
     private func handleProfileAction() {
         router.routeToProfile()
+    }
+
+    private func handleChatAction() {
+        router.routeToChat()
     }
 }
 
