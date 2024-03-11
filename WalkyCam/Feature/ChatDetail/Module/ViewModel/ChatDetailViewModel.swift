@@ -45,22 +45,27 @@ final class ChatDetailViewModel: ChatDetailViewModelProtocol {
         let params = MessageListParams()
         params.reverse = true
         params.nextResultSize = 200
-        params.previousResultSize = 200
+
         GroupChannel.getChannel(url: chatModel.chatURL) { channel, error in
             guard let channel = channel else { return }
-            channel.getMessagesByTimestamp(0, params: params) { messages, error in
-                guard let messages = messages else {
-                    print("Erro nas mensagens")
-                    self.messages = .failed(GenericError())
-                    return
-                }
-                let mappedMessages = messages.compactMap { item in
+            let timeStamp = Int64(Date().timeIntervalSince1970)
+            let collection = SendbirdChat.createMessageCollection(channel: channel,
+                                                                  startingPoint: timeStamp,
+                                                                  params: params)
+            collection.delegate = self
+            collection.startCollection(initPolicy: .cacheAndReplaceByApi) { messages, error in
+                // TESTE
+            } apiResultHandler: { messages, error in
+                //
+            }
+            collection.loadNext { messages, error in
+                let mappedMessages = messages?.compactMap { item in
                     return MessageModel(id: item.messageId.description,
                                         isSenderMessage: item.isOperatorMessage,
                                         value: item.message,
                                         timeStamp: item.createdAt)
-                }.sorted { $0.timeStamp > $1.timeStamp }
-                self.messages = .loaded(mappedMessages)
+                }
+                self.messages = .loaded(mappedMessages ?? [])
             }
         }
     }
@@ -69,22 +74,27 @@ final class ChatDetailViewModel: ChatDetailViewModelProtocol {
         let params = MessageListParams()
         params.reverse = true
         params.nextResultSize = 200
-        params.previousResultSize = 200
+
         GroupChannel.getChannel(url: chatModel.chatURL) { channel, error in
             guard let channel = channel else { return }
-            channel.getMessagesByTimestamp(0, params: params) { messages, error in
-                guard let messages = messages else {
-                    print("Erro nas mensagens")
-                    self.messages = .failed(GenericError())
-                    return
-                }
-                let mappedMessages = messages.compactMap { item in
+            let timeStamp = Int64(Date().timeIntervalSince1970)
+            let collection = SendbirdChat.createMessageCollection(channel: channel,
+                                                                  startingPoint: timeStamp,
+                                                                  params: params)
+            collection.delegate = self
+            collection.startCollection(initPolicy: .cacheAndReplaceByApi) { messages, error in
+                // TESTE
+            } apiResultHandler: { messages, error in
+                //
+            }
+            collection.loadNext { messages, error in
+                let mappedMessages = messages?.compactMap { item in
                     return MessageModel(id: item.messageId.description,
                                         isSenderMessage: item.isOperatorMessage,
                                         value: item.message,
                                         timeStamp: item.createdAt)
-                }.sorted { $0.timeStamp > $1.timeStamp }
-                self.messages = .loaded(mappedMessages)
+                }
+                self.messages = .loaded(mappedMessages ?? [])
             }
         }
     }
@@ -93,3 +103,5 @@ final class ChatDetailViewModel: ChatDetailViewModelProtocol {
         SendbirdChat.addChannelDelegate(self.messageObserver, identifier: "ChatMessageObserverId")
     }
 }
+
+extension ChatDetailViewModel: MessageCollectionDelegate {}
