@@ -23,26 +23,40 @@ struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouter
             VStack(spacing: Tokens.Size.Spacing.regular) {
                 header
                 ScrollView(showsIndicators: false) {
-                    VStack(spacing: Tokens.Size.Spacing.xlarge) {
-                        walkyBotMessage("Hola! Cómo puedo ayudarte?")
-                        userOption
-                        walkyBotMessage("Escribe tu consulta.")
-                        userMessage("Cómo grabar videollamada")
-                    }
+                    AsyncDataView(viewModel.messages) { messages in
+                        ForEach(messages, id: \.self) { message in
+                            if message.isSenderMessage {
+                                userMessage(message.value, date: message.timeStamp.toTimeString())
+                                    .flippedUpsideDown()
+                            } else {
+                                channelMessage(message.value, date: message.timeStamp.toTimeString())
+                                    .flippedUpsideDown()
+                            }
+                        }
+                    } errorAction: {}
+                        .padding(Tokens.Size.Spacing.regular)
                 }
-                .padding([.top], Tokens.Size.Spacing.large)
+                .flippedUpsideDown()
             }
-            .onAppear {
-                UserDefaults.standard.set(true, forKey: "isWalkyBotOnboardingDisabled")
+            .padding(Tokens.Size.Spacing.large)
+            .footer {
+                HStack(spacing: Tokens.Size.Spacing.regular) {
+                    Asset.Icons.smileFace.swiftUIImage
+                    TextInputView(text: $viewModel.currentMessage,
+                                  placeholder: "Escribe aquí...",
+                                  backgroundColor: .clear)
+                    Asset.Icons.sendIcon.swiftUIImage
+                        .renderingMode(.template)
+                        .foregroundColor(viewModel.currentMessage.isEmpty ? .grisOscuro : .naranja)
+                        .onTapGesture {
+                            if !viewModel.currentMessage.isEmpty  {
+                                viewModel.sendMessage()
+                            }
+                        }
+                    Spacer()
+                }
+                .padding(Tokens.Size.Spacing.regular)
             }
-            .padding([.top, .leading, .trailing], Tokens.Size.Spacing.regular)
-            .padding([.bottom], 50)
-            VStack {
-                Spacer()
-                messageView
-                    .frame(height: 90)
-            }
-            .ignoresSafeArea(edges: [.bottom])
         }
         .fullScreen(isPresented: $isWalkyBotOnboardingEnabled) {
             VStack(spacing: Tokens.Size.Spacing.regular) {
@@ -78,6 +92,14 @@ struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouter
             }
             .padding(Tokens.Size.Spacing.regular)
         }
+        .onAppear {
+            UserDefaults.standard.set(true, forKey: "isWalkyBotOnboardingDisabled")
+            viewModel.initializeUser()
+            viewModel.subscribeToChannelEvents()
+        }
+        .onReceive(viewModel.messageObserver.objectWillChange) { _ in
+            viewModel.loadNewTexts()
+        }
     }
 
     var header: some View {
@@ -107,13 +129,21 @@ struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouter
         }
     }
 
-    private func walkyBotMessage(_ text: String) -> some View {
+    private var placeholder: some View {
+        Image(systemName: "camera")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .padding(Tokens.Size.Spacing.large)
+            .cornerRadius(Tokens.Size.Border.Radius.medium)
+    }
+
+    private func channelMessage(_ text: String, date: String) -> some View {
         HStack {
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.regular) {
                 Text(text)
                     .font(.projectFont(size: Tokens.Size.Font.regular))
-                Text(Date(), style: .time)
+                Text(date)
                     .font(.projectFont(size: Tokens.Size.Font.small))
             }
                    .padding(Tokens.Size.Spacing.regular)
@@ -129,14 +159,14 @@ struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouter
         }
     }
 
-    private func userMessage(_ text: String) -> some View {
+    private func userMessage(_ text: String, date: String) -> some View {
         HStack {
             Spacer()
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.regular) {
                 Text(text)
                     .font(.projectFont(size: Tokens.Size.Font.regular))
-                Text(Date(), style: .time)
+                Text(date)
                     .font(.projectFont(size: Tokens.Size.Font.small))
             }
                    .padding(Tokens.Size.Spacing.regular)
@@ -149,54 +179,6 @@ struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouter
                     y: 2
                    )
         }
-    }
-
-    private var userOption: some View {
-        HStack {
-            Spacer()
-            VStack(alignment: .leading,
-                   spacing: Tokens.Size.Spacing.regular) {
-                WCUIButton(title: "Cómo scanear 3D",
-                           style: .outline,
-                           descriptor: OrangeButtonStyleDescriptor(),
-                           action: {})
-                WCUIButton(title: "Dashboards IOT",
-                           style: .outline,
-                           descriptor: OrangeButtonStyleDescriptor(),
-                           action: {})
-                WCUIButton(title: "Servicios WalkyCam",
-                           style: .outline,
-                           descriptor: OrangeButtonStyleDescriptor(),
-                           action: {})
-                WCUIButton(title: "Otro",
-                           style: .standard,
-                           descriptor: BlackButtonStyleDescriptor(),
-                           action: {})
-            }
-                   .frame(width: 250)
-        }
-    }
-
-    private var messageView: some View {
-        HStack(spacing: Tokens.Size.Spacing.regular) {
-            TextInputView(text: $viewModel.message,
-                          placeholder: "Escribe aquí...",
-                          backgroundColor: .blanco)
-            Image(systemName: "paperplane")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 24, height: 24)
-        }
-        .padding(Tokens.Size.Spacing.regular)
-        .background(
-            Color.blanco
-                .shadow(
-                    color: .black.opacity(0.2),
-                    radius: 8,
-                    x: 0,
-                    y: 2
-                )
-        )
     }
 }
 
