@@ -314,6 +314,7 @@
 		EA50A08E2B0BC77F0042B238 /* PlansPagesAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA50A0832B0BC77F0042B238 /* PlansPagesAssemblerProtocol.swift */; };
 		EA50A0902B0BCC940042B238 /* PlanPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA50A08F2B0BCC940042B238 /* PlanPageView.swift */; };
 		EA5103092BA7A9C900A2DE2E /* FetchAvailablePlansUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5103082BA7A9C900A2DE2E /* FetchAvailablePlansUseCase.swift */; };
+		EA51030D2BA7E90900A2DE2E /* StripePaymentSheet in Frameworks */ = {isa = PBXBuildFile; productRef = EA51030C2BA7E90900A2DE2E /* StripePaymentSheet */; };
 		EA57A7822B6BFD09006247DD /* CammerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57A7812B6BFD09006247DD /* CammerData.swift */; };
 		EA57A7842B6C0A75006247DD /* CammerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57A7832B6C0A75006247DD /* CammerItemView.swift */; };
 		EA57A7A12B6C1558006247DD /* CammerDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57A78E2B6C1558006247DD /* CammerDetailsViewModel.swift */; };
@@ -1635,6 +1636,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA51030D2BA7E90900A2DE2E /* StripePaymentSheet in Frameworks */,
 				EA890A262B61ECFB00FC369B /* Networking in Frameworks */,
 				DFD0945A60FA5B637D89BC1D /* Pods_WalkyCam.framework in Frameworks */,
 				EAE8EC5D2B9575AE0003AE96 /* SendbirdChatSDK in Frameworks */,
@@ -8332,6 +8334,7 @@
 			packageProductDependencies = (
 				EA890A252B61ECFB00FC369B /* Networking */,
 				EAE8EC5C2B9575AE0003AE96 /* SendbirdChatSDK */,
+				EA51030C2BA7E90900A2DE2E /* StripePaymentSheet */,
 			);
 			productName = WalkyCam;
 			productReference = 5637A8122AD5DD72000586DF /* WalkyCam.app */;
@@ -8409,6 +8412,7 @@
 			mainGroup = 5637A8092AD5DD71000586DF;
 			packageReferences = (
 				EAE8EC5B2B9575AE0003AE96 /* XCRemoteSwiftPackageReference "sendbird-chat-sdk-ios" */,
+				EA51030B2BA7E90900A2DE2E /* XCRemoteSwiftPackageReference "stripe-ios-spm" */,
 			);
 			productRefGroup = 5637A8132AD5DD72000586DF /* Products */;
 			projectDirPath = "";
@@ -9696,6 +9700,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		EA51030B2BA7E90900A2DE2E /* XCRemoteSwiftPackageReference "stripe-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stripe/stripe-ios-spm";
+			requirement = {
+				kind = exactVersion;
+				version = 23.25.0;
+			};
+		};
 		EAE8EC5B2B9575AE0003AE96 /* XCRemoteSwiftPackageReference "sendbird-chat-sdk-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sendbird/sendbird-chat-sdk-ios";
@@ -9707,6 +9719,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		EA51030C2BA7E90900A2DE2E /* StripePaymentSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA51030B2BA7E90900A2DE2E /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
+			productName = StripePaymentSheet;
+		};
 		EA890A252B61ECFB00FC369B /* Networking */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Networking;
