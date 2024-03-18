@@ -18,7 +18,7 @@ public struct ConfigurationIntentResponse: Codable, Hashable {
     private enum CodingKeys: String, CodingKey {
         case subscriptionId = "id_stripe_subscription"
         case paymentId = "id_stripe_payment"
-        case clientSecretId = "subscripcion_client_secret"
+        case clientSecretId = "subscription_client_secret"
         case ephemeralKey = "ephemeral_key"
         case customerId = "customer"
         case publishableKey = "publishable_key"

@@ -11,12 +11,12 @@ final class PlansPagesAssembler: PlansPagesAssemblerProtocol {
             useCases: .init(
                 createSubscriptionIntent: .static(
                     .init(
-                        subscriptionId: "",
-                        paymentId: "pi_3OvkRYLu5o3P18Zp1l0dH23F_secret_vwARJjKE7zdM1jCoy8WmA4VIq",
-                        clientSecretId: "",
-                        ephemeralKey: "ek_test_YWNjdF8xSHZUSTdMdTVvM1AxOFpwLDlFSlVNeXRBVUhnYWpmdll6Qk0zbEpEbktIZ0t4Mmg_00PN9hGwQU",
-                        customerId: "cus_PlGzKdidY8uExM",
-                        publishableKey: "pk_test_51HvTI7Lu5o3P18Zp6t5AgBSkMvWoTtA0nyA7pVYDqpfLkRtWun7qZTYCOHCReprfLM464yaBeF72UFfB7cY9WG4a00ZnDtiC2C"))
+                        subscriptionId: "sub_1OvlqsC7VBHgFZD8fkPOeNs3",
+                        paymentId: "pi_3OvlqsC7VBHgFZD813gZMVE2",
+                        clientSecretId: "pi_3OvlqsC7VBHgFZD813gZMVE2_secret_YO1lq1Sxwk8h0Ib1TAuk2b03W",
+                        ephemeralKey: "ek_test_YWNjdF8xT2ExcVBDN1ZCSGdGWkQ4LHlaTjJpZ0FqZUtOQ1BveXR3WFVnT3puS29zVEdiU2M_00cldbRPu0",
+                        customerId: "cus_PlIRvgnvQJtTPP",
+                        publishableKey: "pk_test_51Oa1qPC7VBHgFZD8VkiKL91qPF63BTifASyDKmbpthytBNKYFLOacGxgqwyzauB9tDixilxlFKcMoxtRtWwtrJqg00zqBs78PH"))
             )
         )
         let viewModel = PlansPagesViewModel(interactor: interactor, currentPage: route.currentPage)

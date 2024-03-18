@@ -7,6 +7,9 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
 
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
+    
+    @State var isPaymentSheetPresented = false
+    @State var clientSecret: String? = nil
 
     // MARK: - Initialization
 
@@ -19,65 +22,73 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
     // MARK: - View Body
 
     var body: some View {
-        VStack(alignment: .center,
-               spacing: Tokens.Size.Spacing.regular) {
-            HStack {
-                Image(Asset.logo.name)
-                    .resizable()
-                    .renderingMode(.template)
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 100)
-                    .foregroundColor(.naranja)
-                    .isHidden(viewModel.currentPage == 4)
-                Spacer()
-                WCUIButton(title: "Comparar",
-                           rightIcon: Asset.Icons.compare.name,
-                           style: .standard,
-                           descriptor: BlackButtonStyleDescriptor(),
-                           action: {})
-                .frame(width: 140)
-                .isHidden(viewModel.currentPage == 4)
-            }
-            TabView(selection: $viewModel.currentPage) {
-                ForEach(0..<viewModel.plans.count) { index in
-                    PlanPageView(planData: viewModel.plans[index], lastPlan: index == 0 ? nil : viewModel.plans[index - 1])
-                        .environment(\.colorScheme, .dark)
-                        .tag(index)
-                }
-                PlansComparisonPageView(plansData: viewModel.plans)
-                    .tag(4)
-            }
-            .accentColor(.naranja)
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+        VStack {
+            if let paymentSheet = viewModel.paymentSheet {
+                VStack(alignment: .center,
+                       spacing: Tokens.Size.Spacing.regular) {
+                    HStack {
+                        Image(Asset.logo.name)
+                            .resizable()
+                            .renderingMode(.template)
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 100)
+                            .foregroundColor(.naranja)
+                            .isHidden(viewModel.currentPage == 4)
+                        Spacer()
+                        WCUIButton(title: "Comparar",
+                                   rightIcon: Asset.Icons.compare.name,
+                                   style: .standard,
+                                   descriptor: BlackButtonStyleDescriptor(),
+                                   action: {})
+                        .frame(width: 140)
+                        .isHidden(viewModel.currentPage == 4)
+                    }
+                    TabView(selection: $viewModel.currentPage) {
+                        ForEach(0..<viewModel.plans.count) { index in
+                            PlanPageView(planData: viewModel.plans[index], lastPlan: index == 0 ? nil : viewModel.plans[index - 1])
+                                .environment(\.colorScheme, .dark)
+                                .tag(index)
+                        }
+                        PlansComparisonPageView(plansData: viewModel.plans)
+                            .tag(4)
+                    }
+                    .accentColor(.naranja)
+                    .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
 
-            if let title = currentPlan()?.title,
-               let paymentSheet = viewModel.paymentSheet {
-                PaymentSheet.PaymentButton(paymentSheet: paymentSheet,
-                                           onCompletion: viewModel.onPaymentCompletion) {
-                    WCUIButton(
-                        title: "Start \(title)",
-                        style: .standard,
-                        descriptor: getButtonDescriptor(),
-                        action: {}
-                    )
-                    .frame(maxWidth: .infinity)
+                    if let title = currentPlan()?.title {
+                        WCUIButton(
+                            title: "Start \(title)",
+                            style: .standard,
+                            descriptor: getButtonDescriptor(),
+                            action: {
+                                isPaymentSheetPresented = true
+                            }
+                        )
+                        .frame(maxWidth: .infinity)
+                    }
+                    PageControl(numberOfPages: viewModel.plans.count + 1, currentPage: $viewModel.currentPage)
                 }
+                       .background(
+                        Image(currentPlan()?.backgroundImage ?? "")
+                       )
+                       .onAppear {
+                           setupAppearence()
+                       }
+                       .navigation(router)
+                       .padding(.horizontal, Tokens.Size.Spacing.regular)
+                       .background(ignoresSafeAreaEdges: .all)
+                       .paymentSheet(isPresented: $isPaymentSheetPresented,
+                                     paymentSheet: paymentSheet,
+                                     onCompletion: viewModel.onPaymentCompletion)
 
+            } else {
+                Rectangle()
+                    .fill(Color.red)
             }
-            PageControl(numberOfPages: viewModel.plans.count + 1, currentPage: $viewModel.currentPage)
         }
-               .background(
-                Image(currentPlan()?.backgroundImage ?? "")
-               )
-               .onAppear {
-                   setupAppearence()
-               }
-               .navigation(router)
-               .padding(.horizontal, Tokens.Size.Spacing.regular)
-               .background(ignoresSafeAreaEdges: .all)
-               .task {
-                   await viewModel.preparePaymentSheet()
-               }
+        .task {
+            await viewModel.preparePaymentSheet()
+        }
     }
 
     private func setupAppearence() {
