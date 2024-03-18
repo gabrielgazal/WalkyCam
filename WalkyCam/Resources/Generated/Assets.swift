@@ -160,6 +160,7 @@ internal enum Asset {
     internal static let onboarding2 = ImageAsset(name: "onboarding2")
     internal static let onboarding3 = ImageAsset(name: "onboarding3")
     internal static let online3dPrintingProcessIsometricVector287067061 = ImageAsset(name: "online-3d-printing-process-isometric-vector-28706706 1")
+    internal static let preview = ImageAsset(name: "preview")
     internal static let ruralDrone = ImageAsset(name: "rural-drone")
     internal static let scan3dOnboarding1 = ImageAsset(name: "scan3d-onboarding1")
     internal static let scan3dOnboarding2 = ImageAsset(name: "scan3d-onboarding2")

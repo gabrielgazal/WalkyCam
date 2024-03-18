@@ -1,0 +1,3 @@
+protocol UnreleasedFeatureInteractorProtocol {
+    func someFunction()
+}
