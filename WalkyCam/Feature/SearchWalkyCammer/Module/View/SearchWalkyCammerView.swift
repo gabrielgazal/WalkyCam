@@ -7,6 +7,8 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
     
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
+    @StateObject var locationManager = LocationPermissionManager()
+
 
     // MARK: - Initialization
     
@@ -47,6 +49,9 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
                .padding([.top], Tokens.Size.Spacing.huge)
                .ignoresSafeArea()
                .navigation(router)
+               .onChange(of: locationManager.coordinates) { newValue in
+                   viewModel.updateUserViewPort(manager: locationManager)
+               }
     }
     
     private var headerView: some View {

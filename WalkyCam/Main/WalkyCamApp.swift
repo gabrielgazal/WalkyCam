@@ -13,6 +13,7 @@ struct WalkyCamApp: App {
     @ObservedObject var appNavigator = AppNavigator.shared
     @Environment(\.scenePhase) var scenePhase
     @State var isPresented = false
+    @StateObject var locationManager = LocationPermissionManager()
 
     init() {
         appDelegate.registerDependencies()
@@ -30,6 +31,9 @@ struct WalkyCamApp: App {
             .accentColor(Color.red)
             .navigationViewStyle(.stack)
             .environment(\.colorScheme, .light)
+            .onAppear {
+                locationManager.requestLocationPermission()
+            }
         }
         .onChange(of: scenePhase) { newPhase in
             isPresented = (newPhase == .active ? true : false)

@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need to access your location to enable app functions</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>We need to access your microphone to enable app functions</string>
 	<key>NSCameraUsageDescription</key>

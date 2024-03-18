@@ -10,4 +10,5 @@ protocol SearchWalkyCammerViewModelProtocol: ViewModelProtocol {
     var shouldDisplayCammerList: Bool { get set }
 
     func getUserRegion()
+    func updateUserViewPort(manager: LocationPermissionManager)
 }

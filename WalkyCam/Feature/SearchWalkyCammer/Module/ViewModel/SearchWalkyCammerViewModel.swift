@@ -7,6 +7,7 @@ final class SearchWalkyCammerViewModel: SearchWalkyCammerViewModelProtocol {
     // MARK: - Dependencies
 
     private let interactor: SearchWalkyCammerInteractorProtocol
+
     @Published var userLocation: Viewport = .idle
     @Published var locationText: String = ""
     @Published var currentStep: Int = 1
@@ -35,6 +36,16 @@ final class SearchWalkyCammerViewModel: SearchWalkyCammerViewModelProtocol {
                                             pitch: 0)
                 self.currentStep = 2
             }
+        }
+    }
+
+    func updateUserViewPort(manager: LocationPermissionManager) {
+        guard let location = manager.coordinates else { return }
+        getWalkyCammersOnLocation(coordinates: location) {
+            self.userLocation = Viewport.camera(center: location,
+                                        zoom: 15,
+                                        bearing: 0,
+                                        pitch: 0)
         }
     }
 
