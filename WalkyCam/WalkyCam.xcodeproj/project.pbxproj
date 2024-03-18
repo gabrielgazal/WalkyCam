@@ -676,6 +676,7 @@
 		EACFDF1D2BA7EF3E00B08990 /* UnreleasedFeatureRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACFDF112BA7EF3E00B08990 /* UnreleasedFeatureRoute.swift */; };
 		EACFDF1E2BA7EF3E00B08990 /* UnreleasedFeatureAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACFDF132BA7EF3E00B08990 /* UnreleasedFeatureAssemblerProtocol.swift */; };
 		EACFDF1F2BA7EF3E00B08990 /* UnreleasedFeatureAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACFDF142BA7EF3E00B08990 /* UnreleasedFeatureAssembler.swift */; };
+		EACFDF222BA85E9C00B08990 /* LocationPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACFDF212BA85E9C00B08990 /* LocationPermissionManager.swift */; };
 		EAD048682AE22C530096E6AB /* RegistrationPlansModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD048542AE22C530096E6AB /* RegistrationPlansModel.swift */; };
 		EAD048692AE22C530096E6AB /* RegistrationPlansViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD048572AE22C530096E6AB /* RegistrationPlansViewModelProtocol.swift */; };
 		EAD0486B2AE22C530096E6AB /* RegistrationPlansViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD048592AE22C530096E6AB /* RegistrationPlansViewModel.swift */; };
@@ -1512,6 +1513,7 @@
 		EACFDF112BA7EF3E00B08990 /* UnreleasedFeatureRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnreleasedFeatureRoute.swift; sourceTree = "<group>"; };
 		EACFDF132BA7EF3E00B08990 /* UnreleasedFeatureAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnreleasedFeatureAssemblerProtocol.swift; sourceTree = "<group>"; };
 		EACFDF142BA7EF3E00B08990 /* UnreleasedFeatureAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnreleasedFeatureAssembler.swift; sourceTree = "<group>"; };
+		EACFDF212BA85E9C00B08990 /* LocationPermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionManager.swift; sourceTree = "<group>"; };
 		EAD048542AE22C530096E6AB /* RegistrationPlansModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPlansModel.swift; sourceTree = "<group>"; };
 		EAD048572AE22C530096E6AB /* RegistrationPlansViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPlansViewModelProtocol.swift; sourceTree = "<group>"; };
 		EAD048592AE22C530096E6AB /* RegistrationPlansViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPlansViewModel.swift; sourceTree = "<group>"; };
@@ -1967,6 +1969,7 @@
 		56DADB1D2AD5EA3400710618 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				EACFDF202BA85E8A00B08990 /* Permission */,
 				5637A8152AD5DD72000586DF /* WalkyCamApp.swift */,
 				56DADB252AD5ECB900710618 /* Extension */,
 				56DADB1E2AD5EA6000710618 /* AppNavigator */,
@@ -7250,6 +7253,14 @@
 			path = Assembler;
 			sourceTree = "<group>";
 		};
+		EACFDF202BA85E8A00B08990 /* Permission */ = {
+			isa = PBXGroup;
+			children = (
+				EACFDF212BA85E9C00B08990 /* LocationPermissionManager.swift */,
+			);
+			path = Permission;
+			sourceTree = "<group>";
+		};
 		EAD0484B2AE22C0F0096E6AB /* RegistrationPlans */ = {
 			isa = PBXGroup;
 			children = (
@@ -9200,6 +9211,7 @@
 				EAF47C862B839308003F8B86 /* FlightMenuView.swift in Sources */,
 				EADBE1012AE823BA00FED579 /* NotificationItemView.swift in Sources */,
 				EAF47C812B839308003F8B86 /* FlightMenuRoute.swift in Sources */,
+				EACFDF222BA85E9C00B08990 /* LocationPermissionManager.swift in Sources */,
 				EAF47BA02B82FFF2003F8B86 /* CalendarTabInteractor.swift in Sources */,
 				EA1235162B99FC1100443CF8 /* FlippedUpsideDown.swift in Sources */,
 				EA6083B12B01D9E100295069 /* GalleryRoute.swift in Sources */,
