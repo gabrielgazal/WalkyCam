@@ -10,5 +10,5 @@ import Moya
 import Foundation
 
 protocol PaymentServiceProtocol {
-    func createUserPayment(userId: String, completion: @escaping Completion)
+    func createUserPayment(planName: String, planType: String, completion: @escaping Completion)
 }

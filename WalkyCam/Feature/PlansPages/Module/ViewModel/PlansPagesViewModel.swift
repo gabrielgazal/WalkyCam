@@ -1,4 +1,5 @@
 import SwiftUI
+import StripePaymentSheet
 
 final class PlansPagesViewModel: PlansPagesViewModelProtocol {
 
@@ -8,16 +9,51 @@ final class PlansPagesViewModel: PlansPagesViewModelProtocol {
     @Published var currentPage: Int
     @Published var plans: [PlansPagesModel] = []
 
+    // MARK: - Stripe Dependencies
+
+    @Published var paymentSheet: PaymentSheet?
+    @Published var paymentResult: PaymentSheetResult?
+
     // MARK: - Initialization
 
     init(
-        interactor: PlansPagesInteractorProtocol = PlansPagesInteractor(),
+        interactor: PlansPagesInteractorProtocol,
         currentPage: Int
     ) {
         self.interactor = interactor
         self.currentPage = currentPage
         initializePlans()
     }
+
+    // MARK: - Public API
+
+    @MainActor func preparePaymentSheet() async {
+       do {
+            let intent = try await interactor.createSubscriptionIntent(with: plans[currentPage].title)
+            STPAPIClient.shared.publishableKey = intent.publishableKey
+
+            var configuration = PaymentSheet.Configuration()
+            configuration.merchantDisplayName = "WalkyCam"
+            configuration.customer = .init(id: intent.customerId,
+                                           ephemeralKeySecret: intent.ephemeralKey)
+           self.paymentSheet = PaymentSheet(paymentIntentClientSecret: intent.clientSecretId,
+                                            configuration: configuration)
+       } catch {
+           print("Deu erro no pagamento")
+       }
+    }
+
+    func onPaymentCompletion(result: PaymentSheetResult) {
+        self.paymentResult = result
+        if case .completed = result {
+            self.paymentSheet = nil
+            Task {
+                await preparePaymentSheet()
+            }
+        }
+    }
+
+    // MARK: - Private Methods
 
     private func initializePlans() {
         plans = [

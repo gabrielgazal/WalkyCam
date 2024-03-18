@@ -26,8 +26,9 @@ final class PaymentRepository: PaymentRepositoryProtocol {
 
     // MARK: - Public API
 
-    func createUserPayment(userid: String, completion: @escaping (CreateResult) -> Void) {
-        service.createUserPayment(userId: userid) { result in
+    func createUserPayment(planName: String, planType: String, completion: @escaping (CreateResult) -> Void) {
+        service.createUserPayment(planName: planName,
+                                  planType: planType) { result in
             completion(result.mapToRepositoryResult(with: self.requestHandler))
         }
     }

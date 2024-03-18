@@ -26,8 +26,8 @@ final class PaymentService: PaymentServiceProtocol {
 
     // MARK: - Public API
 
-    func createUserPayment(userId: String, completion: @escaping Completion) {
-        provider.request(.createUserPayment(userId: userId),
+    func createUserPayment(planName: String, planType: String, completion: @escaping Completion) {
+        provider.request(.createUserPayment(planName: planName, planType: planType),
                          completion: completion)
     }
 }

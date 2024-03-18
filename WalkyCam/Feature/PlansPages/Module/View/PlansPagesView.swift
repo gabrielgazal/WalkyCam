@@ -1,4 +1,5 @@
 import SwiftUI
+import StripePaymentSheet
 
 struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPagesRouterProtocol>: View {
 
@@ -49,14 +50,19 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
             .accentColor(.naranja)
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
 
-            if let title = currentPlan()?.title {
-                WCUIButton(
-                    title: "Start \(title)",
-                    style: .standard,
-                    descriptor: getButtonDescriptor(),
-                    action: {}
-                )
-                .frame(maxWidth: .infinity)
+            if let title = currentPlan()?.title,
+               let paymentSheet = viewModel.paymentSheet {
+                PaymentSheet.PaymentButton(paymentSheet: paymentSheet,
+                                           onCompletion: viewModel.onPaymentCompletion) {
+                    WCUIButton(
+                        title: "Start \(title)",
+                        style: .standard,
+                        descriptor: getButtonDescriptor(),
+                        action: {}
+                    )
+                    .frame(maxWidth: .infinity)
+                }
+
             }
             PageControl(numberOfPages: viewModel.plans.count + 1, currentPage: $viewModel.currentPage)
         }
@@ -69,6 +75,9 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
                .navigation(router)
                .padding(.horizontal, Tokens.Size.Spacing.regular)
                .background(ignoresSafeAreaEdges: .all)
+               .task {
+                   await viewModel.preparePaymentSheet()
+               }
     }
 
     private func setupAppearence() {
@@ -103,7 +112,12 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
 struct PlansPagesView_Previews: PreviewProvider {
     static var previews: some View {
         PlansPagesView(
-            viewModel: PlansPagesViewModel(currentPage: 0),
+            viewModel: PlansPagesViewModel(
+                interactor: PlansPagesInteractor(
+                    useCases: .init(createSubscriptionIntent: .empty)
+                ),
+                currentPage: 0
+            ),
             router: PlansPagesRouter(isPresented: .constant(false))
         )
     }

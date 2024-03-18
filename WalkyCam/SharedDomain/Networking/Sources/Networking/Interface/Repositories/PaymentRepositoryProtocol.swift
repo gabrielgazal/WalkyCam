@@ -8,8 +8,9 @@
 import Combine
 
 public protocol PaymentRepositoryProtocol {
-    typealias CreateResult = Result<String, RepositoryError>
+    typealias CreateResult = Result<ConfigurationIntentResponse, RepositoryError>
 
-    func createUserPayment(userid: String,
+    func createUserPayment(planName: String,
+                           planType: String,
                            completion: @escaping (CreateResult) -> Void)
 }
