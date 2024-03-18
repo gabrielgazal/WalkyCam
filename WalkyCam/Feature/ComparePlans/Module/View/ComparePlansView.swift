@@ -20,26 +20,21 @@ struct ComparePlansView<ViewModel: ComparePlansViewModelProtocol, Router: Compar
     var body: some View {
         VStack(alignment: .center,
                spacing: Tokens.Size.Spacing.regular) {
-            TabView(selection: $viewModel.currentPage) {
-                ComparePlansPageView(title: "Free",
-                                     monthlyCost: 0.0,
-                                     accentColor: .plateado,
-                                     content: {}).tag(0)
-                ComparePlansPageView(title: "Basic",
-                                     monthlyCost: 30.0,
-                                     accentColor: .acentoFondoDark,
-                                     content: {}).tag(1)
-                ComparePlansPageView(title: "Standard",
-                                     monthlyCost: 60.0,
-                                     accentColor: .naranja,
-                                     content: {}).tag(2)
-                ComparePlansPageView(title: "Premium",
-                                     monthlyCost: 180.0,
-                                     accentColor: .premium,
-                                     content: {}).tag(3)
-            }
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-            PageControl(numberOfPages: 5, currentPage: $viewModel.currentPage)
+            AsyncDataView(viewModel.availablePlans) { plans in
+                TabView(selection: $viewModel.currentPage) {
+                    ForEach(plans, id: \.self) { plan in
+                        ComparePlansPageView(
+                            title: plan.name.capitalized,
+                            monthlyCost: plan.monthlyPrice,
+                            accentColor: planAccentColor(plan.name),
+                            content: {}
+                        )
+                        .tag(plan.order)
+                    }
+                }
+                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+                PageControl(numberOfPages: 5, currentPage: $viewModel.currentPage)
+            } errorAction: {}
         }
                .onAppear {
                    setupAppearence()
@@ -48,6 +43,9 @@ struct ComparePlansView<ViewModel: ComparePlansViewModelProtocol, Router: Compar
                    setupAppearence()
                }
                .navigation(router)
+               .task {
+                   await viewModel.fetchAvailablePlans()
+               }
     }
 
     private func setupAppearence() {
@@ -56,15 +54,35 @@ struct ComparePlansView<ViewModel: ComparePlansViewModelProtocol, Router: Compar
     }
 
     private func getCurrentAccentColor() -> Color {
-        guard viewModel.currentPage < viewModel.availablePlans.count else { return .naranja }
-        return viewModel.availablePlans[viewModel.currentPage].color
+        guard let plans = viewModel.availablePlans.loadedValue,
+              viewModel.currentPage < plans.count else { return .naranja }
+        return planAccentColor(plans[viewModel.currentPage].name)
+    }
+
+    private func planAccentColor(_ title: String) -> Color {
+        switch title {
+        case "free":
+            return .plateado
+        case "basic":
+            return .acentoFondoDark
+        case "standard":
+            return .naranja
+        case "premium":
+            return .premium
+        default:
+            return .clear
+        }
     }
 }
 
 struct ComparePlansView_Previews: PreviewProvider {
     static var previews: some View {
-    ComparePlansView(
-            viewModel: ComparePlansViewModel(),
+        ComparePlansView(
+            viewModel: ComparePlansViewModel(
+                interactor: ComparePlansInteractor(
+                    useCases: .init(fetchAllPlans: .empty)
+                )
+            ),
             router: ComparePlansRouter(isPresented: .constant(false))
         )
     }

@@ -33,11 +33,13 @@ struct RegistrationPlansView<ViewModel:RegistrationPlansViewModelProtocol, Route
                 Text(L10n.RegistrationPlans.description)
                     .font(.projectFont(size: Tokens.Size.Font.medium, weight: .medium))
                     .foregroundColor(Color.blanco)
-                ForEach(viewModel.availablePlans, id: \.self) { item in
-                    assemblePlanCard(item) {
-                        print(item.name)
+                AsyncDataView(viewModel.availablePlans) { plans in
+                    ForEach(plans, id: \.self) { item in
+                        assemblePlanCard(item) {
+                            print(item.name)
+                        }
                     }
-                }
+                } errorAction: {}
                 WCUIButton(title: L10n.RegistrationPlans.Button.title,
                            rightIcon: Asset.Icons.compare.name,
                            style: .standard,
@@ -51,6 +53,9 @@ struct RegistrationPlansView<ViewModel:RegistrationPlansViewModelProtocol, Route
         .background(Asset.Fondos.planFondo .swiftUIImage
             .ignoresSafeArea())
         .navigation(router)
+        .task {
+            await viewModel.fetchAvailablePlans()
+        }
     }
 
     private func assemblePlanCard(_ item: AvailablePlanData, action: (() -> Void)?) -> some View {
@@ -65,19 +70,19 @@ struct RegistrationPlansView<ViewModel:RegistrationPlansViewModelProtocol, Route
                    spacing: Tokens.Size.Spacing.regular) {
                 HStack(alignment: .center,
                        spacing: 0) {
-                    Text(item.name)
+                    Text(item.name.capitalized)
                         .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                         .foregroundColor(Color.blanco)
                     Spacer()
-                    Text(L10n.RegistrationPlans.value(item.value))
-                        .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
+                    Text(L10n.RegistrationPlans.value(item.monthlyPrice))
+                        .font(.projectFont(size: Tokens.Size.Font.larger, weight: .bold))
                         .foregroundColor(Color.blanco)
                 }
                 WCUIButton(title: L10n.RegistrationPlans.Plan.Button.title,
                            style: .outline,
                            descriptor: WhiteButtonStyleDescriptor(),
                            action: {
-                    handlePlanAction(getCurrentIndex(item.name))
+                    handlePlanAction(item.order)
                 })
                 .frame(width: 100, height: 32)
             }
@@ -88,16 +93,16 @@ struct RegistrationPlansView<ViewModel:RegistrationPlansViewModelProtocol, Route
     private func handlePlanAction(_ index: Int = 0) {
         router.routeToPlansPages(index)
     }
-
-    private func getCurrentIndex(_ title: String) -> Int {
-        return viewModel.availablePlans.firstIndex(where: { $0.name == title }) ?? 0
-    }
 }
 
 struct RegistrationPlansView_Previews: PreviewProvider {
     static var previews: some View {
         RegistrationPlansView(
-            viewModel: RegistrationPlansViewModel(),
+            viewModel: RegistrationPlansViewModel(
+                interactor: RegistrationPlansInteractor(
+                    useCases: .init(fetchAllPlans: .empty)
+                )
+            ),
             router: RegistrationPlansRouter(isPresented: .constant(false))
         )
     }

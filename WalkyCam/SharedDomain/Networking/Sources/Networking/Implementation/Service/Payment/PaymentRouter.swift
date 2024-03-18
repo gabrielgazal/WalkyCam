@@ -20,7 +20,7 @@ extension PaymentRouter: TargetType {
     var path: String {
         switch self {
         case .createUserPayment:
-            return "user-payment/create)"
+            return "payment/create-subscription-intent"
         }
     }
 

@@ -30,6 +30,7 @@ public struct Tokens {
             public static var medium: CGFloat { return CGFloat(18.00) }
             public static var large: CGFloat { return CGFloat(20.00) }
             public static var xlarge: CGFloat { return CGFloat(24.00) }
+            public static var larger: CGFloat { return CGFloat(30.00) }
             public static var big: CGFloat { return CGFloat(32.00) }
             public static var huge: CGFloat { return CGFloat(40.00) }
             public static var giant: CGFloat { return CGFloat(48.00) }

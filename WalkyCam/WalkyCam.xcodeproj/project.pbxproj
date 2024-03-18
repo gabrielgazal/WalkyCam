@@ -313,6 +313,7 @@
 		EA50A08D2B0BC77F0042B238 /* PlansPagesAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA50A0822B0BC77F0042B238 /* PlansPagesAssembler.swift */; };
 		EA50A08E2B0BC77F0042B238 /* PlansPagesAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA50A0832B0BC77F0042B238 /* PlansPagesAssemblerProtocol.swift */; };
 		EA50A0902B0BCC940042B238 /* PlanPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA50A08F2B0BCC940042B238 /* PlanPageView.swift */; };
+		EA5103092BA7A9C900A2DE2E /* FetchAvailablePlansUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5103082BA7A9C900A2DE2E /* FetchAvailablePlansUseCase.swift */; };
 		EA57A7822B6BFD09006247DD /* CammerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57A7812B6BFD09006247DD /* CammerData.swift */; };
 		EA57A7842B6C0A75006247DD /* CammerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57A7832B6C0A75006247DD /* CammerItemView.swift */; };
 		EA57A7A12B6C1558006247DD /* CammerDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57A78E2B6C1558006247DD /* CammerDetailsViewModel.swift */; };
@@ -1138,6 +1139,7 @@
 		EA50A0822B0BC77F0042B238 /* PlansPagesAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlansPagesAssembler.swift; sourceTree = "<group>"; };
 		EA50A0832B0BC77F0042B238 /* PlansPagesAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlansPagesAssemblerProtocol.swift; sourceTree = "<group>"; };
 		EA50A08F2B0BCC940042B238 /* PlanPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanPageView.swift; sourceTree = "<group>"; };
+		EA5103082BA7A9C900A2DE2E /* FetchAvailablePlansUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAvailablePlansUseCase.swift; sourceTree = "<group>"; };
 		EA57A77D2B6BE2F9006247DD /* MapboxMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MapboxMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA57A7812B6BFD09006247DD /* CammerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CammerData.swift; sourceTree = "<group>"; };
 		EA57A7832B6C0A75006247DD /* CammerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CammerItemView.swift; sourceTree = "<group>"; };
@@ -3304,6 +3306,7 @@
 		EA282ED72AEB569D00B90920 /*  Shared */ = {
 			isa = PBXGroup;
 			children = (
+				EA51030A2BA7E0E800A2DE2E /* UseCase */,
 				EA282EDB2AEB571400B90920 /* View */,
 				EA282ED82AEB56A400B90920 /* Model */,
 			);
@@ -4230,6 +4233,14 @@
 				EA50A0832B0BC77F0042B238 /* PlansPagesAssemblerProtocol.swift */,
 			);
 			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EA51030A2BA7E0E800A2DE2E /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				EA5103082BA7A9C900A2DE2E /* FetchAvailablePlansUseCase.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 		EA57A7852B6C1536006247DD /* CammerDetails */ = {
@@ -9041,6 +9052,7 @@
 				EA7219972B05612900BE2D93 /* WalkyBotModel.swift in Sources */,
 				EAF47C1A2B830C80003F8B86 /* WalkyCammerListRouter.swift in Sources */,
 				EAB63BC42B83D63A0017BDA4 /* ARHandsMenuAssembler.swift in Sources */,
+				EA5103092BA7A9C900A2DE2E /* FetchAvailablePlansUseCase.swift in Sources */,
 				56A552552B2F6E3D006B1B17 /* StreetCamMenuRoute.swift in Sources */,
 				EA6083E22B01DBE000295069 /* GalleryPhotosAssembler.swift in Sources */,
 				EA4164F42AE4B6F7008CE66A /* ComparePlansView.swift in Sources */,

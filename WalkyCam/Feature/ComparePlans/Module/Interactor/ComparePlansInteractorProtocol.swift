@@ -1,3 +1,3 @@
 protocol ComparePlansInteractorProtocol {
-    func someFunction()
+    func fetchAvailablePlans() async throws -> [AvailablePlanData]
 }

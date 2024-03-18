@@ -1,11 +1,9 @@
 import SwiftUI
 
-struct RegistrationPlansModel {
-
-}
-
 struct AvailablePlanData: Hashable {
+    let id: String
     let name: String
-    let value: String
+    let monthlyPrice: String
     let color: Color
+    let order: Int
 }

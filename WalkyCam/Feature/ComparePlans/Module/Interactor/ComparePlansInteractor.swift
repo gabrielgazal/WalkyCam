@@ -4,7 +4,9 @@ final class ComparePlansInteractor: ComparePlansInteractorProtocol {
 
     // MARK: - Inner Types
 
-    struct UseCases {}
+    struct UseCases {
+        let fetchAllPlans: FetchAvailablePlansUseCase
+    }
 
     // MARK: - Dependencies
 
@@ -13,14 +15,28 @@ final class ComparePlansInteractor: ComparePlansInteractorProtocol {
 
     // MARK: - Initialization
 
-    init(useCases: UseCases = UseCases()) {
+    init(useCases: UseCases) {
         self.useCases = useCases
     }
 
     // MARK: - Public API
 
-    #warning("Example function. Rename or remove it")
-    func someFunction() {
-
+    func fetchAvailablePlans() async throws -> [AvailablePlanData] {
+        return try await withCheckedThrowingContinuation { continuation in
+            useCases.fetchAllPlans()
+                .sink(
+                    receiveCompletion: { completion in
+                        switch completion {
+                        case let .failure(error):
+                            continuation.resume(throwing: error)
+                        case .finished: break
+                        }
+                    },
+                    receiveValue: { plans in
+                        continuation.resume(returning: plans)
+                    }
+                )
+                .store(in: &bag)
+        }
     }
 }

@@ -11,7 +11,8 @@ final class RegistrationAssembler: RegistrationAssemblerProtocol {
         let repository = route.retailRepository.resolve(AuthRepositoryProtocol.self)
 
         let interactor = RegistrationInteractor(
-            useCases: .init(registerUseCase: .live(repository: repository))
+//            useCases: .init(registerUseCase: .live(repository: repository))
+            useCases: .init(registerUseCase: .static(.init(id: "", userName: "", name: "", lastName: "", email: "", address: "")))
         )
         let viewModel = RegistrationViewModel(interactor: interactor)
         let view = RegistrationView(viewModel: viewModel, router: router)

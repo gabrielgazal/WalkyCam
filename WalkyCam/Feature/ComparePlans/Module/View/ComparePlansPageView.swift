@@ -11,12 +11,12 @@ import SwiftUI
 struct ComparePlansPageView<Content: View>: View {
 
     private let title: String
-    private let monthlyCost: Double
+    private let monthlyCost: String
     private let accentColor: Color
     private let content: Content
 
     public init(title: String,
-                monthlyCost: Double,
+                monthlyCost: String,
                 accentColor: Color,
                 @ViewBuilder content: () -> Content) {
         self.title = title
@@ -54,7 +54,7 @@ struct ComparePlansPageView<Content: View>: View {
 struct ComparePlansPageView_Previews: PreviewProvider {
     static var previews: some View {
         ComparePlansPageView(title: "Free",
-                             monthlyCost: 0.0,
+                             monthlyCost: "0.0",
                              accentColor: Color.plateado) {}
     }
 }
