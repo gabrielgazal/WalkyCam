@@ -27,6 +27,7 @@ struct UnreleasedFeatureView<ViewModel:UnreleasedFeatureViewModelProtocol, Route
                             .resizable()
                             .scaledToFill()
                             .frame(width: proxy.size.width)
+                            .clipped()
                     }
                 }
                 .accentColor(.naranja)
