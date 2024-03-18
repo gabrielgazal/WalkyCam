@@ -15,6 +15,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     ) -> Bool {
         registerDependencies()
         initializeChatSDK()
+        initializePaymentSDK()
         return true
     }
 }
