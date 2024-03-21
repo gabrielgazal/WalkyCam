@@ -18,7 +18,7 @@ final class PaymentRepository: PaymentRepositoryProtocol {
 
     init(
         service: PaymentServiceProtocol = PaymentService(),
-        requestHandler: DefaultRequestHandler = DefaultRequestHandler(at: "user")
+        requestHandler: DefaultRequestHandler = DefaultRequestHandler()
     ) {
         self.service = service
         self.requestHandler = requestHandler

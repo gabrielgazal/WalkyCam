@@ -5,6 +5,9 @@ struct AsyncDataView<Success, Content: View>: View {
     let content: (_ item: Success) -> Content
     let errorAction: (() -> Void)
 
+    @Environment(\.colorScheme) var colorScheme
+
+
     init(_ asyncData: AsyncData<Success, ErrorProtocol>,
          @ViewBuilder content: @escaping (_ item: Success) -> Content,
          errorAction: @escaping (() -> Void)) {
@@ -22,6 +25,7 @@ struct AsyncDataView<Success, Content: View>: View {
                 Spacer()
                 ProgressView()
                     .controlSize(.large)
+                    .tint(foregroundColor())
                 Spacer()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -30,5 +34,9 @@ struct AsyncDataView<Success, Content: View>: View {
         case let .failed(error):
             ErrorView(error: error, action: errorAction)
         }
+    }
+
+    private func foregroundColor() -> Color? {
+        return colorScheme == .dark ? Color.white : nil
     }
 }

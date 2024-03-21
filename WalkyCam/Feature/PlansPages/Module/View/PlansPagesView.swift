@@ -61,10 +61,13 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
                             style: .standard,
                             descriptor: getButtonDescriptor(),
                             action: {
-                                isPaymentSheetPresented = true
+                                if viewModel.currentPage > 0 {
+                                    isPaymentSheetPresented = true
+                                }
                             }
                         )
                         .frame(maxWidth: .infinity)
+                        .loading(viewModel.isPaymentSheetLoading)
                     }
                     PageControl(numberOfPages: viewModel.plans.count + 1, currentPage: $viewModel.currentPage)
                 }
@@ -82,12 +85,33 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
                                      onCompletion: viewModel.onPaymentCompletion)
 
             } else {
-                Rectangle()
-                    .fill(Color.red)
+                VStack {
+                    Spacer()
+                    ProgressView()
+                        .controlSize(.large)
+                        .tint(.white)
+                    Spacer()
+                }
+                .background(
+                 Image(currentPlan()?.backgroundImage ?? "")
+                )
+                .onAppear {
+                    setupAppearence()
+                }
+                .navigation(router)
+                .padding(.horizontal, Tokens.Size.Spacing.regular)
+                .background(ignoresSafeAreaEdges: .all)
             }
         }
         .task {
             await viewModel.preparePaymentSheet()
+        }
+        .onChange(of: viewModel.currentPage) { newValue in
+            if newValue > 0 && newValue < 4 {
+                Task {
+                    await viewModel.preparePaymentSheet()
+                }
+            }
         }
     }
 

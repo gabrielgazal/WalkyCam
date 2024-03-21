@@ -40,6 +40,7 @@ struct RegistrationPlansView<ViewModel:RegistrationPlansViewModelProtocol, Route
                         }
                     }
                 } errorAction: {}
+                    .preferredColorScheme(.dark)
                 WCUIButton(title: L10n.RegistrationPlans.Button.title,
                            rightIcon: Asset.Icons.compare.name,
                            style: .standard,
@@ -82,7 +83,7 @@ struct RegistrationPlansView<ViewModel:RegistrationPlansViewModelProtocol, Route
                            style: .outline,
                            descriptor: WhiteButtonStyleDescriptor(),
                            action: {
-                    handlePlanAction(item.order)
+                    handlePlanAction(item.order - 1)
                 })
                 .frame(width: 100, height: 32)
             }

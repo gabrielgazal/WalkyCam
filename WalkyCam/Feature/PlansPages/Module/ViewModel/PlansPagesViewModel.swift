@@ -8,6 +8,7 @@ final class PlansPagesViewModel: PlansPagesViewModelProtocol {
     private let interactor: PlansPagesInteractorProtocol
     @Published var currentPage: Int
     @Published var plans: [PlansPagesModel] = []
+    @Published var isPaymentSheetLoading: Bool = false
 
     // MARK: - Stripe Dependencies
 
@@ -28,6 +29,7 @@ final class PlansPagesViewModel: PlansPagesViewModelProtocol {
     // MARK: - Public API
 
     @MainActor func preparePaymentSheet() async {
+        isPaymentSheetLoading = true
        do {
             let intent = try await interactor.createSubscriptionIntent(with: plans[currentPage].title)
             STPAPIClient.shared.publishableKey = intent.publishableKey
@@ -38,7 +40,9 @@ final class PlansPagesViewModel: PlansPagesViewModelProtocol {
                                            ephemeralKeySecret: intent.ephemeralKey)
            self.paymentSheet = PaymentSheet(paymentIntentClientSecret: intent.clientSecretId,
                                             configuration: configuration)
+           isPaymentSheetLoading = false
        } catch {
+           isPaymentSheetLoading = false
            print("Deu erro no pagamento")
        }
     }
@@ -57,23 +61,23 @@ final class PlansPagesViewModel: PlansPagesViewModelProtocol {
 
     private func initializePlans() {
         plans = [
-            .init(title: "Free",
-                  monthlyPrice: 0.0,
+            .init(title: "free",
+                  monthlyPrice: UserDefaults.standard.string(forKey: "freePlanPrice") ?? "0.0",
                   backgroundImage: Asset.Fondos.planFondo.name,
                   accentColor: .plateado,
                   features: assembleFreePlanFeatures()),
-            .init(title: "Basic",
-                  monthlyPrice: 30.0,
+            .init(title: "basic",
+                  monthlyPrice: UserDefaults.standard.string(forKey: "basicPlanPrice") ?? "45.0",
                   backgroundImage: Asset.Fondos.planFondo.name,
                   accentColor: .acentoFondoDark,
                   features: assembleBasicPlanFeatures()),
-            .init(title: "Standard",
-                  monthlyPrice: 60.0,
+            .init(title: "standard",
+                  monthlyPrice: UserDefaults.standard.string(forKey: "standardPlanPrice") ?? "85.0",
                   backgroundImage: Asset.Fondos.planFondo.name,
                   accentColor: .naranja,
                   features: assembleStandardPlanFeatures()),
-            .init(title: "Premium",
-                  monthlyPrice: 180.0,
+            .init(title: "premium",
+                  monthlyPrice: UserDefaults.standard.string(forKey: "premiumPlanPrice") ?? "490.0",
                   backgroundImage: Asset.Fondos.planFondo.name,
                   accentColor: .premium,
                   features: assemblePremiumPlanFeatures())
