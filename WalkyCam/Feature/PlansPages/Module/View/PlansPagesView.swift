@@ -68,6 +68,7 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
                         )
                         .frame(maxWidth: .infinity)
                         .loading(viewModel.isPaymentSheetLoading)
+                        .disabled(viewModel.isPaymentSheetLoading)
                     }
                     PageControl(numberOfPages: viewModel.plans.count + 1, currentPage: $viewModel.currentPage)
                 }

@@ -73,7 +73,7 @@ struct PlansComparisonPageView: View {
             Text("Plan \(plan.title.capitalized)")
                 .font(.projectFont(size: Tokens.Size.Font.xsmall, weight: .bold))
                 .foregroundColor(plan.accentColor)
-            Text("\(String(format: "%.f", plan.monthlyPrice)) €/mo")
+            Text("\(plan.monthlyPrice) €/mo")
                 .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .bold))
             WCUIButton(title: "Start \(plan.title)",
                        style: .standard,
