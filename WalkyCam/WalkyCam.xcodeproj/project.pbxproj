@@ -216,6 +216,9 @@
 		EA2C4C282B7E5C4300F1EE26 /* DroneOnboardingAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C4C1D2B7E5C4300F1EE26 /* DroneOnboardingAssembler.swift */; };
 		EA2C4C292B7E5C4300F1EE26 /* DroneOnboardingAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C4C1E2B7E5C4300F1EE26 /* DroneOnboardingAssemblerProtocol.swift */; };
 		EA2C4C2B2B7E5C9500F1EE26 /* DroneOnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C4C2A2B7E5C9500F1EE26 /* DroneOnboardingPageView.swift */; };
+		EA2E651D2BA8ACF50092A135 /* CreateStripeSubscriptionIntentUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2E651C2BA8ACF50092A135 /* CreateStripeSubscriptionIntentUseCase.swift */; };
+		EA2E651F2BA8AE1C0092A135 /* SubscriptionIntentOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2E651E2BA8AE1C0092A135 /* SubscriptionIntentOutput.swift */; };
+		EA2E65212BA8AEB60092A135 /* SubscriptionIntentInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2E65202BA8AEB60092A135 /* SubscriptionIntentInput.swift */; };
 		EA2F93FA2B62CECD00E1C146 /* LoginInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F93F92B62CECD00E1C146 /* LoginInteractorProtocol.swift */; };
 		EA2F93FC2B62CED700E1C146 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F93FB2B62CED700E1C146 /* LoginInteractor.swift */; };
 		EA3E5C902B87692400158207 /* AssistantMenuRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3E5C7D2B87692300158207 /* AssistantMenuRoute.swift */; };
@@ -230,18 +233,6 @@
 		EA3E5C992B87692400158207 /* AssistantMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3E5C8E2B87692400158207 /* AssistantMenuRouter.swift */; };
 		EA3E5C9A2B87692400158207 /* AssistantMenuRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3E5C8F2B87692400158207 /* AssistantMenuRouterProtocol.swift */; };
 		EA3E5C9E2B876E1F00158207 /* ListInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3E5C9D2B876E1F00158207 /* ListInputView.swift */; };
-		EA4164EE2AE4B6F7008CE66A /* ComparePlansRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164DA2AE4B6F6008CE66A /* ComparePlansRoute.swift */; };
-		EA4164EF2AE4B6F7008CE66A /* ComparePlansAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164DC2AE4B6F6008CE66A /* ComparePlansAssembler.swift */; };
-		EA4164F02AE4B6F7008CE66A /* ComparePlansAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164DD2AE4B6F6008CE66A /* ComparePlansAssemblerProtocol.swift */; };
-		EA4164F12AE4B6F7008CE66A /* ComparePlansViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164E02AE4B6F7008CE66A /* ComparePlansViewModel.swift */; };
-		EA4164F32AE4B6F7008CE66A /* ComparePlansViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164E22AE4B6F7008CE66A /* ComparePlansViewModelProtocol.swift */; };
-		EA4164F42AE4B6F7008CE66A /* ComparePlansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164E42AE4B6F7008CE66A /* ComparePlansView.swift */; };
-		EA4164F52AE4B6F7008CE66A /* ComparePlansInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164E62AE4B6F7008CE66A /* ComparePlansInteractor.swift */; };
-		EA4164F62AE4B6F7008CE66A /* ComparePlansInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164E72AE4B6F7008CE66A /* ComparePlansInteractorProtocol.swift */; };
-		EA4164F72AE4B6F7008CE66A /* ComparePlansRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164E92AE4B6F7008CE66A /* ComparePlansRouter.swift */; };
-		EA4164F82AE4B6F7008CE66A /* ComparePlansRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164EA2AE4B6F7008CE66A /* ComparePlansRouterProtocol.swift */; };
-		EA4164F92AE4B6F7008CE66A /* ComparePlansModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164ED2AE4B6F7008CE66A /* ComparePlansModel.swift */; };
-		EA4164FB2AE4B805008CE66A /* ComparePlansPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4164FA2AE4B805008CE66A /* ComparePlansPageView.swift */; };
 		EA4165412AE706C6008CE66A /* NotificationsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA41652E2AE706C6008CE66A /* NotificationsViewModelProtocol.swift */; };
 		EA4165422AE706C6008CE66A /* NotificationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA41652F2AE706C6008CE66A /* NotificationsViewModel.swift */; };
 		EA4165432AE706C6008CE66A /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4165312AE706C6008CE66A /* NotificationsView.swift */; };
@@ -313,6 +304,16 @@
 		EA50A08D2B0BC77F0042B238 /* PlansPagesAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA50A0822B0BC77F0042B238 /* PlansPagesAssembler.swift */; };
 		EA50A08E2B0BC77F0042B238 /* PlansPagesAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA50A0832B0BC77F0042B238 /* PlansPagesAssemblerProtocol.swift */; };
 		EA50A0902B0BCC940042B238 /* PlanPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA50A08F2B0BCC940042B238 /* PlanPageView.swift */; };
+		EA5103092BA7A9C900A2DE2E /* FetchAvailablePlansUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5103082BA7A9C900A2DE2E /* FetchAvailablePlansUseCase.swift */; };
+		EA51030F2BA7E9DA00A2DE2E /* AppDelegate+Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA51030E2BA7E9DA00A2DE2E /* AppDelegate+Payment.swift */; };
+		EA5103122BA7EA3200A2DE2E /* Stripe in Frameworks */ = {isa = PBXBuildFile; productRef = EA5103112BA7EA3200A2DE2E /* Stripe */; };
+		EA5103142BA7EA3200A2DE2E /* StripeApplePay in Frameworks */ = {isa = PBXBuildFile; productRef = EA5103132BA7EA3200A2DE2E /* StripeApplePay */; };
+		EA5103162BA7EA3200A2DE2E /* StripeCardScan in Frameworks */ = {isa = PBXBuildFile; productRef = EA5103152BA7EA3200A2DE2E /* StripeCardScan */; };
+		EA5103182BA7EA3200A2DE2E /* StripeFinancialConnections in Frameworks */ = {isa = PBXBuildFile; productRef = EA5103172BA7EA3200A2DE2E /* StripeFinancialConnections */; };
+		EA51031A2BA7EA3200A2DE2E /* StripeIdentity in Frameworks */ = {isa = PBXBuildFile; productRef = EA5103192BA7EA3200A2DE2E /* StripeIdentity */; };
+		EA51031C2BA7EA3200A2DE2E /* StripePaymentSheet in Frameworks */ = {isa = PBXBuildFile; productRef = EA51031B2BA7EA3200A2DE2E /* StripePaymentSheet */; };
+		EA51031E2BA7EA3200A2DE2E /* StripePayments in Frameworks */ = {isa = PBXBuildFile; productRef = EA51031D2BA7EA3200A2DE2E /* StripePayments */; };
+		EA5103202BA7EA3200A2DE2E /* StripePaymentsUI in Frameworks */ = {isa = PBXBuildFile; productRef = EA51031F2BA7EA3200A2DE2E /* StripePaymentsUI */; };
 		EA57A7822B6BFD09006247DD /* CammerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57A7812B6BFD09006247DD /* CammerData.swift */; };
 		EA57A7842B6C0A75006247DD /* CammerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57A7832B6C0A75006247DD /* CammerItemView.swift */; };
 		EA57A7A12B6C1558006247DD /* CammerDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57A78E2B6C1558006247DD /* CammerDetailsViewModel.swift */; };
@@ -1053,6 +1054,9 @@
 		EA2C4C1D2B7E5C4300F1EE26 /* DroneOnboardingAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneOnboardingAssembler.swift; sourceTree = "<group>"; };
 		EA2C4C1E2B7E5C4300F1EE26 /* DroneOnboardingAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneOnboardingAssemblerProtocol.swift; sourceTree = "<group>"; };
 		EA2C4C2A2B7E5C9500F1EE26 /* DroneOnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneOnboardingPageView.swift; sourceTree = "<group>"; };
+		EA2E651C2BA8ACF50092A135 /* CreateStripeSubscriptionIntentUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStripeSubscriptionIntentUseCase.swift; sourceTree = "<group>"; };
+		EA2E651E2BA8AE1C0092A135 /* SubscriptionIntentOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionIntentOutput.swift; sourceTree = "<group>"; };
+		EA2E65202BA8AEB60092A135 /* SubscriptionIntentInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionIntentInput.swift; sourceTree = "<group>"; };
 		EA2F93F92B62CECD00E1C146 /* LoginInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorProtocol.swift; sourceTree = "<group>"; };
 		EA2F93FB2B62CED700E1C146 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		EA3E5C7D2B87692300158207 /* AssistantMenuRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssistantMenuRoute.swift; sourceTree = "<group>"; };
@@ -1067,18 +1071,6 @@
 		EA3E5C8E2B87692400158207 /* AssistantMenuRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssistantMenuRouter.swift; sourceTree = "<group>"; };
 		EA3E5C8F2B87692400158207 /* AssistantMenuRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssistantMenuRouterProtocol.swift; sourceTree = "<group>"; };
 		EA3E5C9D2B876E1F00158207 /* ListInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInputView.swift; sourceTree = "<group>"; };
-		EA4164DA2AE4B6F6008CE66A /* ComparePlansRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansRoute.swift; sourceTree = "<group>"; };
-		EA4164DC2AE4B6F6008CE66A /* ComparePlansAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansAssembler.swift; sourceTree = "<group>"; };
-		EA4164DD2AE4B6F6008CE66A /* ComparePlansAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansAssemblerProtocol.swift; sourceTree = "<group>"; };
-		EA4164E02AE4B6F7008CE66A /* ComparePlansViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansViewModel.swift; sourceTree = "<group>"; };
-		EA4164E22AE4B6F7008CE66A /* ComparePlansViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansViewModelProtocol.swift; sourceTree = "<group>"; };
-		EA4164E42AE4B6F7008CE66A /* ComparePlansView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansView.swift; sourceTree = "<group>"; };
-		EA4164E62AE4B6F7008CE66A /* ComparePlansInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansInteractor.swift; sourceTree = "<group>"; };
-		EA4164E72AE4B6F7008CE66A /* ComparePlansInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansInteractorProtocol.swift; sourceTree = "<group>"; };
-		EA4164E92AE4B6F7008CE66A /* ComparePlansRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansRouter.swift; sourceTree = "<group>"; };
-		EA4164EA2AE4B6F7008CE66A /* ComparePlansRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansRouterProtocol.swift; sourceTree = "<group>"; };
-		EA4164ED2AE4B6F7008CE66A /* ComparePlansModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePlansModel.swift; sourceTree = "<group>"; };
-		EA4164FA2AE4B805008CE66A /* ComparePlansPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparePlansPageView.swift; sourceTree = "<group>"; };
 		EA41652E2AE706C6008CE66A /* NotificationsViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewModelProtocol.swift; sourceTree = "<group>"; };
 		EA41652F2AE706C6008CE66A /* NotificationsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewModel.swift; sourceTree = "<group>"; };
 		EA4165312AE706C6008CE66A /* NotificationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
@@ -1150,6 +1142,8 @@
 		EA50A0822B0BC77F0042B238 /* PlansPagesAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlansPagesAssembler.swift; sourceTree = "<group>"; };
 		EA50A0832B0BC77F0042B238 /* PlansPagesAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlansPagesAssemblerProtocol.swift; sourceTree = "<group>"; };
 		EA50A08F2B0BCC940042B238 /* PlanPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanPageView.swift; sourceTree = "<group>"; };
+		EA5103082BA7A9C900A2DE2E /* FetchAvailablePlansUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAvailablePlansUseCase.swift; sourceTree = "<group>"; };
+		EA51030E2BA7E9DA00A2DE2E /* AppDelegate+Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Payment.swift"; sourceTree = "<group>"; };
 		EA57A77D2B6BE2F9006247DD /* MapboxMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MapboxMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA57A7812B6BFD09006247DD /* CammerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CammerData.swift; sourceTree = "<group>"; };
 		EA57A7832B6C0A75006247DD /* CammerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CammerItemView.swift; sourceTree = "<group>"; };
@@ -1657,9 +1651,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA51031E2BA7EA3200A2DE2E /* StripePayments in Frameworks */,
+				EA5103162BA7EA3200A2DE2E /* StripeCardScan in Frameworks */,
+				EA5103142BA7EA3200A2DE2E /* StripeApplePay in Frameworks */,
+				EA5103202BA7EA3200A2DE2E /* StripePaymentsUI in Frameworks */,
 				EA890A262B61ECFB00FC369B /* Networking in Frameworks */,
+				EA5103182BA7EA3200A2DE2E /* StripeFinancialConnections in Frameworks */,
+				EA5103122BA7EA3200A2DE2E /* Stripe in Frameworks */,
 				DFD0945A60FA5B637D89BC1D /* Pods_WalkyCam.framework in Frameworks */,
 				EAE8EC5D2B9575AE0003AE96 /* SendbirdChatSDK in Frameworks */,
+				EA51031C2BA7EA3200A2DE2E /* StripePaymentSheet in Frameworks */,
+				EA51031A2BA7EA3200A2DE2E /* StripeIdentity in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1992,6 +1994,7 @@
 			children = (
 				56DADB262AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift */,
 				EAE8EC5E2B9576E50003AE96 /* AppDelegate+Chat.swift */,
+				EA51030E2BA7E9DA00A2DE2E /* AppDelegate+Payment.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -2371,7 +2374,6 @@
 				EA282EA62AEB52D800B90920 /* Functions */,
 				EA282E142AE952CF00B90920 /* Profile */,
 				EA4165252AE706AD008CE66A /* Notifications */,
-				EA4164D12AE4B6D3008CE66A /* ComparePlans */,
 				EAD0484B2AE22C0F0096E6AB /* RegistrationPlans */,
 				EA910FFC2ADDADBE00584B98 /* Home */,
 				EA910FD32ADCBCA200584B98 /* Menu */,
@@ -3330,6 +3332,7 @@
 		EA282ED72AEB569D00B90920 /*  Shared */ = {
 			isa = PBXGroup;
 			children = (
+				EA51030A2BA7E0E800A2DE2E /* UseCase */,
 				EA282EDB2AEB571400B90920 /* View */,
 				EA282ED82AEB56A400B90920 /* Model */,
 			);
@@ -3453,6 +3456,14 @@
 			path = Assembler;
 			sourceTree = "<group>";
 		};
+		EA2E651B2BA8ACDB0092A135 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				EA2E651C2BA8ACF50092A135 /* CreateStripeSubscriptionIntentUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
 		EA2F93F82B62CEBF00E1C146 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -3558,105 +3569,6 @@
 				EA3E5C8F2B87692400158207 /* AssistantMenuRouterProtocol.swift */,
 			);
 			path = Router;
-			sourceTree = "<group>";
-		};
-		EA4164D12AE4B6D3008CE66A /* ComparePlans */ = {
-			isa = PBXGroup;
-			children = (
-				EA4164D82AE4B6F6008CE66A /* Configuration */,
-				EA4164EB2AE4B6F7008CE66A /* Domain */,
-				EA4164DE2AE4B6F7008CE66A /* Module */,
-			);
-			path = ComparePlans;
-			sourceTree = "<group>";
-		};
-		EA4164D82AE4B6F6008CE66A /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				EA4164D92AE4B6F6008CE66A /* Route */,
-				EA4164DB2AE4B6F6008CE66A /* Assembler */,
-			);
-			path = Configuration;
-			sourceTree = "<group>";
-		};
-		EA4164D92AE4B6F6008CE66A /* Route */ = {
-			isa = PBXGroup;
-			children = (
-				EA4164DA2AE4B6F6008CE66A /* ComparePlansRoute.swift */,
-			);
-			path = Route;
-			sourceTree = "<group>";
-		};
-		EA4164DB2AE4B6F6008CE66A /* Assembler */ = {
-			isa = PBXGroup;
-			children = (
-				EA4164DC2AE4B6F6008CE66A /* ComparePlansAssembler.swift */,
-				EA4164DD2AE4B6F6008CE66A /* ComparePlansAssemblerProtocol.swift */,
-			);
-			path = Assembler;
-			sourceTree = "<group>";
-		};
-		EA4164DE2AE4B6F7008CE66A /* Module */ = {
-			isa = PBXGroup;
-			children = (
-				EA4164DF2AE4B6F7008CE66A /* ViewModel */,
-				EA4164E32AE4B6F7008CE66A /* View */,
-				EA4164E52AE4B6F7008CE66A /* Interactor */,
-				EA4164E82AE4B6F7008CE66A /* Router */,
-			);
-			path = Module;
-			sourceTree = "<group>";
-		};
-		EA4164DF2AE4B6F7008CE66A /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				EA4164E02AE4B6F7008CE66A /* ComparePlansViewModel.swift */,
-				EA4164E22AE4B6F7008CE66A /* ComparePlansViewModelProtocol.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		EA4164E32AE4B6F7008CE66A /* View */ = {
-			isa = PBXGroup;
-			children = (
-				EA4164E42AE4B6F7008CE66A /* ComparePlansView.swift */,
-				EA4164FA2AE4B805008CE66A /* ComparePlansPageView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		EA4164E52AE4B6F7008CE66A /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				EA4164E62AE4B6F7008CE66A /* ComparePlansInteractor.swift */,
-				EA4164E72AE4B6F7008CE66A /* ComparePlansInteractorProtocol.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		EA4164E82AE4B6F7008CE66A /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				EA4164E92AE4B6F7008CE66A /* ComparePlansRouter.swift */,
-				EA4164EA2AE4B6F7008CE66A /* ComparePlansRouterProtocol.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		EA4164EB2AE4B6F7008CE66A /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				EA4164EC2AE4B6F7008CE66A /* Model */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		EA4164EC2AE4B6F7008CE66A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				EA4164ED2AE4B6F7008CE66A /* ComparePlansModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		EA4165252AE706AD008CE66A /* Notifications */ = {
@@ -4171,6 +4083,7 @@
 		EA50A06F2B0BC77F0042B238 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				EA2E651B2BA8ACDB0092A135 /* UseCase */,
 				EA50A0702B0BC77F0042B238 /* Model */,
 			);
 			path = Domain;
@@ -4180,6 +4093,8 @@
 			isa = PBXGroup;
 			children = (
 				EA50A0712B0BC77F0042B238 /* PlansPagesModel.swift */,
+				EA2E651E2BA8AE1C0092A135 /* SubscriptionIntentOutput.swift */,
+				EA2E65202BA8AEB60092A135 /* SubscriptionIntentInput.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -4256,6 +4171,14 @@
 				EA50A0832B0BC77F0042B238 /* PlansPagesAssemblerProtocol.swift */,
 			);
 			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EA51030A2BA7E0E800A2DE2E /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				EA5103082BA7A9C900A2DE2E /* FetchAvailablePlansUseCase.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 		EA57A7852B6C1536006247DD /* CammerDetails */ = {
@@ -8461,6 +8384,14 @@
 			packageProductDependencies = (
 				EA890A252B61ECFB00FC369B /* Networking */,
 				EAE8EC5C2B9575AE0003AE96 /* SendbirdChatSDK */,
+				EA5103112BA7EA3200A2DE2E /* Stripe */,
+				EA5103132BA7EA3200A2DE2E /* StripeApplePay */,
+				EA5103152BA7EA3200A2DE2E /* StripeCardScan */,
+				EA5103172BA7EA3200A2DE2E /* StripeFinancialConnections */,
+				EA5103192BA7EA3200A2DE2E /* StripeIdentity */,
+				EA51031B2BA7EA3200A2DE2E /* StripePaymentSheet */,
+				EA51031D2BA7EA3200A2DE2E /* StripePayments */,
+				EA51031F2BA7EA3200A2DE2E /* StripePaymentsUI */,
 			);
 			productName = WalkyCam;
 			productReference = 5637A8122AD5DD72000586DF /* WalkyCam.app */;
@@ -8538,6 +8469,7 @@
 			mainGroup = 5637A8092AD5DD71000586DF;
 			packageReferences = (
 				EAE8EC5B2B9575AE0003AE96 /* XCRemoteSwiftPackageReference "sendbird-chat-sdk-ios" */,
+				EA5103102BA7EA3200A2DE2E /* XCRemoteSwiftPackageReference "stripe-ios-spm" */,
 			);
 			productRefGroup = 5637A8132AD5DD72000586DF /* Products */;
 			projectDirPath = "";
@@ -8740,6 +8672,7 @@
 				EA0E40952AF69771002B7437 /* CashWalletOnboardingAssembler.swift in Sources */,
 				EA86532E2B90E9CA00B86A54 /* AIOnboardingAssemblerProtocol.swift in Sources */,
 				EAF47C412B838D74003F8B86 /* DroneMenuInteractor.swift in Sources */,
+				EA51030F2BA7E9DA00A2DE2E /* AppDelegate+Payment.swift in Sources */,
 				56A552362B2F6135006B1B17 /* WalkyCamerOnboardingModel.swift in Sources */,
 				EA2C4C222B7E5C4300F1EE26 /* DroneOnboardingView.swift in Sources */,
 				EA86534F2B90EBE800B86A54 /* ConfigureAccessView.swift in Sources */,
@@ -8781,7 +8714,6 @@
 				EA1FD19C2B1E8F91000E583D /* JitsiMeetView.swift in Sources */,
 				EA60838C2B01CD0A00295069 /* ShopTabAssembler.swift in Sources */,
 				EA50A08A2B0BC77F0042B238 /* PlansPagesRouterProtocol.swift in Sources */,
-				EA4164F72AE4B6F7008CE66A /* ComparePlansRouter.swift in Sources */,
 				EA20A4EC2B87C3B4006662FA /* Scan3DOnboardingInteractorProtocol.swift in Sources */,
 				EA94A5302B7160EF00EC3037 /* ServiceDetailsViewModelProtocol.swift in Sources */,
 				EA5E1D712AD7167300738A8F /* LinkButtonStyle.swift in Sources */,
@@ -8815,13 +8747,11 @@
 				EA890A292B61EDE500FC369B /* Dependency.swift in Sources */,
 				EAF47B782B82FCE8003F8B86 /* BookWalkycamerInteractor.swift in Sources */,
 				EA57A7AA2B6C1558006247DD /* CammerDetailsAssemblerProtocol.swift in Sources */,
-				EA4164EF2AE4B6F7008CE66A /* ComparePlansAssembler.swift in Sources */,
 				EA910FCF2ADC495700584B98 /* TabBarModel.swift in Sources */,
 				EAF47C432B838D74003F8B86 /* DroneMenuRouter.swift in Sources */,
 				EA910F8B2ADA06F500584B98 /* RegistrationRoute.swift in Sources */,
 				EA172AF72AF06BDE00EB1514 /* ConfirmMailAssemblerProtocol.swift in Sources */,
 				EA282ED12AEB531100B90920 /* FunctionsModel.swift in Sources */,
-				EA4164EE2AE4B6F7008CE66A /* ComparePlansRoute.swift in Sources */,
 				EA8652412B902E4B00B86A54 /* FunctionMenuRouter.swift in Sources */,
 				EA910F912ADA06F500584B98 /* RegistrationView.swift in Sources */,
 				EA57A7D52B6C2C31006247DD /* AddPeopleTransmissionRouterProtocol.swift in Sources */,
@@ -8835,7 +8765,6 @@
 				56A552322B2F6135006B1B17 /* WalkyCamerOnboardingInteractor.swift in Sources */,
 				EA20A5662B87D35B006662FA /* ShareSheetInteractor.swift in Sources */,
 				EA172AD92AF0335400EB1514 /* AdvertisementCard.swift in Sources */,
-				EA4164F12AE4B6F7008CE66A /* ComparePlansViewModel.swift in Sources */,
 				EADB5CAA2B190819005863E1 /* VideoCallInteractor.swift in Sources */,
 				EA20A5692B87D35B006662FA /* ShareSheetModel.swift in Sources */,
 				EA282ECB2AEB531100B90920 /* FunctionsViewModelProtocol.swift in Sources */,
@@ -8903,6 +8832,7 @@
 				EA8652B32B90DA9600B86A54 /* 3DPrintOnboardingAssembler.swift in Sources */,
 				EA1235182B99FF8C00443CF8 /* MessageObserver.swift in Sources */,
 				EA50A0862B0BC77F0042B238 /* PlansPagesViewModelProtocol.swift in Sources */,
+				EA2E651F2BA8AE1C0092A135 /* SubscriptionIntentOutput.swift in Sources */,
 				EA4A1C422B8788DB00B5FC59 /* SpecialistNotifiedInteractorProtocol.swift in Sources */,
 				EA86528D2B90ACC200B86A54 /* IOTOnboardingViewModelProtocol.swift in Sources */,
 				EA8653762B90FA8800B86A54 /* AIMenuAssemblerProtocol.swift in Sources */,
@@ -8959,7 +8889,6 @@
 				EAB63BC52B83D63A0017BDA4 /* ARHandsMenuAssemblerProtocol.swift in Sources */,
 				EA2C4C292B7E5C4300F1EE26 /* DroneOnboardingAssemblerProtocol.swift in Sources */,
 				EAF47C402B838D74003F8B86 /* DroneMenuInteractorProtocol.swift in Sources */,
-				EA4164F32AE4B6F7008CE66A /* ComparePlansViewModelProtocol.swift in Sources */,
 				EA6083B52B01D9E100295069 /* GalleryViewModel.swift in Sources */,
 				EAF47BCB2B8306E9003F8B86 /* TimeTabRouter.swift in Sources */,
 				EA5A88042B68039400BBB7F9 /* LoginOutput.swift in Sources */,
@@ -8969,7 +8898,6 @@
 				EA20A5112B87C913006662FA /* Scan3DMenuModel.swift in Sources */,
 				EA172B202AF06EF600EB1514 /* StartupAssemblerProtocol.swift in Sources */,
 				EA86537A2B90FA8800B86A54 /* AIMenuView.swift in Sources */,
-				EA4164FB2AE4B805008CE66A /* ComparePlansPageView.swift in Sources */,
 				EA5E1D7B2AD7174700738A8F /* Button+Extension.swift in Sources */,
 				EA50A08D2B0BC77F0042B238 /* PlansPagesAssembler.swift in Sources */,
 				EA2C4C232B7E5C4300F1EE26 /* DroneOnboardingInteractor.swift in Sources */,
@@ -9059,6 +8987,7 @@
 				EA910F652AD9B01300584B98 /* OnboardingRouterProtocol.swift in Sources */,
 				EAF47C182B830C80003F8B86 /* WalkyCammerListInteractorProtocol.swift in Sources */,
 				EA4A1C3E2B8788DB00B5FC59 /* SpecialistNotifiedAssembler.swift in Sources */,
+				EA2E65212BA8AEB60092A135 /* SubscriptionIntentInput.swift in Sources */,
 				EA6083B72B01D9E100295069 /* GalleryView.swift in Sources */,
 				EACFDF172BA7EF3E00B08990 /* UnreleasedFeatureViewModelProtocol.swift in Sources */,
 				EA4A1C882B8799B400B5FC59 /* RuralDroneOnboardingViewModelProtocol.swift in Sources */,
@@ -9097,7 +9026,6 @@
 				EA282ECA2AEB531100B90920 /* FunctionsViewModel.swift in Sources */,
 				EA9110242ADDADE100584B98 /* HomeAssembler.swift in Sources */,
 				561FC8C62B5C6854005B6006 /* ExternalURL.swift in Sources */,
-				EA4164F02AE4B6F7008CE66A /* ComparePlansAssemblerProtocol.swift in Sources */,
 				EA910F962ADA06F500584B98 /* RegistrationInput.swift in Sources */,
 				56A552592B2F6E3D006B1B17 /* StreetCamMenuViewModelProtocol.swift in Sources */,
 				EA57A7A42B6C1558006247DD /* CammerDetailsInteractor.swift in Sources */,
@@ -9191,14 +9119,13 @@
 				EA7219972B05612900BE2D93 /* WalkyBotModel.swift in Sources */,
 				EAF47C1A2B830C80003F8B86 /* WalkyCammerListRouter.swift in Sources */,
 				EAB63BC42B83D63A0017BDA4 /* ARHandsMenuAssembler.swift in Sources */,
+				EA5103092BA7A9C900A2DE2E /* FetchAvailablePlansUseCase.swift in Sources */,
 				56A552552B2F6E3D006B1B17 /* StreetCamMenuRoute.swift in Sources */,
 				EA6083E22B01DBE000295069 /* GalleryPhotosAssembler.swift in Sources */,
-				EA4164F42AE4B6F7008CE66A /* ComparePlansView.swift in Sources */,
 				EA910F932ADA06F500584B98 /* RegistrationInteractorProtocol.swift in Sources */,
 				EA1FD1BA2B1E932F000E583D /* VideoCallRoomViewModelProtocol.swift in Sources */,
 				EA5E1D842AD7183700738A8F /* RoundedCornerShape.swift in Sources */,
 				EA282EDA2AEB56B800B90920 /* FunctionData.swift in Sources */,
-				EA4164F92AE4B6F7008CE66A /* ComparePlansModel.swift in Sources */,
 				EA4AE48D2B75065300B5A89F /* TabBarInteractor.swift in Sources */,
 				EA172B1D2AF06EF600EB1514 /* StartupModel.swift in Sources */,
 				EA910F5B2AD9B01300584B98 /* OnboardingAssembler.swift in Sources */,
@@ -9253,7 +9180,6 @@
 				EA4A1C1B2B87799100B5FC59 /* AvailableAssistantsRouterProtocol.swift in Sources */,
 				EAF47C162B830C80003F8B86 /* WalkyCammerListViewModel.swift in Sources */,
 				EA6083B22B01D9E100295069 /* GalleryAssemblerProtocol.swift in Sources */,
-				EA4164F62AE4B6F7008CE66A /* ComparePlansInteractorProtocol.swift in Sources */,
 				EA3E5C962B87692400158207 /* AssistantMenuView.swift in Sources */,
 				EA8653072B90E0FB00B86A54 /* LidarOnboardingRoute.swift in Sources */,
 				EA57A7CC2B6C2C31006247DD /* AddPeopleTransmissionAssemblerProtocol.swift in Sources */,
@@ -9367,7 +9293,6 @@
 				EAF47C3C2B838D74003F8B86 /* DroneMenuModel.swift in Sources */,
 				EA910F9C2ADC437300584B98 /* AlertModifier.swift in Sources */,
 				EA910FFB2ADCBCC000584B98 /* MenuRouterProtocol.swift in Sources */,
-				EA4164F82AE4B6F7008CE66A /* ComparePlansRouterProtocol.swift in Sources */,
 				EAD0486E2AE22C530096E6AB /* RegistrationPlansInteractorProtocol.swift in Sources */,
 				EA910F612AD9B01300584B98 /* OnboardingView.swift in Sources */,
 				EAF47BF52B83099F003F8B86 /* MapTabRouter.swift in Sources */,
@@ -9436,7 +9361,6 @@
 				EA172B212AF06EF600EB1514 /* StartupViewModel.swift in Sources */,
 				EA282E572AE952F700B90920 /* ProfileView.swift in Sources */,
 				EA86534D2B90EBE800B86A54 /* ConfigureAccessViewModel.swift in Sources */,
-				EA4164F52AE4B6F7008CE66A /* ComparePlansInteractor.swift in Sources */,
 				EAF47C872B839308003F8B86 /* FlightMenuInteractor.swift in Sources */,
 				EAE8EC582B9574840003AE96 /* ChatListRouter.swift in Sources */,
 				EA8652B62B90DA9600B86A54 /* 3DPrintOnboardingViewModel.swift in Sources */,
@@ -9479,6 +9403,7 @@
 				56A5525D2B2F6E3D006B1B17 /* StreetCamMenuRouterProtocol.swift in Sources */,
 				EA72199E2B05612900BE2D93 /* WalkyBotRouter.swift in Sources */,
 				EA910F8F2ADA06F500584B98 /* RegistrationViewModelProtocol.swift in Sources */,
+				EA2E651D2BA8ACF50092A135 /* CreateStripeSubscriptionIntentUseCase.swift in Sources */,
 				EA2C4C282B7E5C4300F1EE26 /* DroneOnboardingAssembler.swift in Sources */,
 				EA8652662B90AC8300B86A54 /* IOTMenuAssemblerProtocol.swift in Sources */,
 				EA20A4EF2B87C3B5006662FA /* Scan3DOnboardingRoute.swift in Sources */,
@@ -9836,6 +9761,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		EA5103102BA7EA3200A2DE2E /* XCRemoteSwiftPackageReference "stripe-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stripe/stripe-ios-spm";
+			requirement = {
+				kind = exactVersion;
+				version = 23.25.0;
+			};
+		};
 		EAE8EC5B2B9575AE0003AE96 /* XCRemoteSwiftPackageReference "sendbird-chat-sdk-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sendbird/sendbird-chat-sdk-ios";
@@ -9847,6 +9780,46 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		EA5103112BA7EA3200A2DE2E /* Stripe */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA5103102BA7EA3200A2DE2E /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
+			productName = Stripe;
+		};
+		EA5103132BA7EA3200A2DE2E /* StripeApplePay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA5103102BA7EA3200A2DE2E /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
+			productName = StripeApplePay;
+		};
+		EA5103152BA7EA3200A2DE2E /* StripeCardScan */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA5103102BA7EA3200A2DE2E /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
+			productName = StripeCardScan;
+		};
+		EA5103172BA7EA3200A2DE2E /* StripeFinancialConnections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA5103102BA7EA3200A2DE2E /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
+			productName = StripeFinancialConnections;
+		};
+		EA5103192BA7EA3200A2DE2E /* StripeIdentity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA5103102BA7EA3200A2DE2E /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
+			productName = StripeIdentity;
+		};
+		EA51031B2BA7EA3200A2DE2E /* StripePaymentSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA5103102BA7EA3200A2DE2E /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
+			productName = StripePaymentSheet;
+		};
+		EA51031D2BA7EA3200A2DE2E /* StripePayments */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA5103102BA7EA3200A2DE2E /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
+			productName = StripePayments;
+		};
+		EA51031F2BA7EA3200A2DE2E /* StripePaymentsUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA5103102BA7EA3200A2DE2E /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
+			productName = StripePaymentsUI;
+		};
 		EA890A252B61ECFB00FC369B /* Networking */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Networking;

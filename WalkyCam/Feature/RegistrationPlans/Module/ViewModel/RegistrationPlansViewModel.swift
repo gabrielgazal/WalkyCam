@@ -4,22 +4,30 @@ final class RegistrationPlansViewModel: RegistrationPlansViewModelProtocol {
 
     // MARK: - Dependencies
 
-    @Published var availablePlans: [AvailablePlanData] = []
+    @Published var availablePlans: AsyncData<[AvailablePlanData], ErrorProtocol> = .idle
     private let interactor: RegistrationPlansInteractorProtocol
 
     // MARK: - Initialization
 
-    init(interactor: RegistrationPlansInteractorProtocol = RegistrationPlansInteractor()) {
+    init(interactor: RegistrationPlansInteractorProtocol) {
         self.interactor = interactor
-        fetchAvailablePlans()
     }
 
-    private func fetchAvailablePlans() {
-        availablePlans = [
-            .init(name: "Free", value: "0", color: Color(red: 0.71, green: 0.71, blue: 0.71, opacity: 0.4)),
-            .init(name: "Basic", value: "30", color: Color(red: 0.46, green: 0.21, blue: 0.6, opacity: 0.4)),
-            .init(name: "Standard", value: "60", color: Color(red: 0.91, green: 0.36, blue: 0.05, opacity: 0.4)),
-            .init(name: "Premium", value: "180", color: Color(red: 0.95, green: 0.79, blue: 0.3, opacity: 0.4))
-        ]
+    @MainActor func fetchAvailablePlans() async {
+        availablePlans = .loading
+        do {
+            let plans = try await interactor.fetchAvailablePlans()
+            availablePlans = .loaded(plans)
+            savePlansPricesToDefaults(plans)
+        } catch {
+            availablePlans = .failed(GenericError())
+        }
+    }
+
+    private func savePlansPricesToDefaults(_ plans: [AvailablePlanData]) {
+        UserDefaults.standard.set(plans.first(where: { $0.name == "free" })?.monthlyPrice, forKey: "freePlanPrice")
+        UserDefaults.standard.set(plans.first(where: { $0.name == "basic" })?.monthlyPrice, forKey: "basicPlanPrice")
+        UserDefaults.standard.set(plans.first(where: { $0.name == "standard" })?.monthlyPrice, forKey: "standardPlanPrice")
+        UserDefaults.standard.set(plans.first(where: { $0.name == "premium" })?.monthlyPrice, forKey: "premiumPlanPrice")
     }
 }

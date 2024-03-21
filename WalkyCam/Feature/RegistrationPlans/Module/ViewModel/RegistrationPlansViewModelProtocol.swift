@@ -1,5 +1,7 @@
 import SwiftUI
 
 protocol RegistrationPlansViewModelProtocol: ViewModelProtocol {
-    var availablePlans: [AvailablePlanData] { get set }
+    var availablePlans: AsyncData<[AvailablePlanData], ErrorProtocol> { get set }
+
+    func fetchAvailablePlans() async
 }

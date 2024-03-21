@@ -1,3 +1,3 @@
 protocol RegistrationPlansInteractorProtocol {
-    func someFunction()
+    func fetchAvailablePlans() async throws -> [AvailablePlanData]
 }

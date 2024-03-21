@@ -1,3 +1,0 @@
-protocol ComparePlansInteractorProtocol {
-    func someFunction()
-}

@@ -57,9 +57,13 @@ public final class RepositoryProvider: RepositoryRegistering, RepositoryResolvin
     private func registerDefaultRespositories() {
         let authRepositoryFactory = { AuthRepository(service: AuthService()) }
         let configurationRepositoryFactory = { ConfigurationRepository(service: ConfigurationService()) }
+        let plansRepositoryFactory = { PlansRepository(service: PlansService()) }
+        let paymentRepositoryFactory = { PaymentRepository(service: PaymentService()) }
 
         try? register(authRepositoryFactory, forType: AuthRepositoryProtocol.self)
         try? register(configurationRepositoryFactory, forType: ConfigurationRepositoryProtocol.self)
+        try? register(plansRepositoryFactory, forType: PlansRepositoryProtocol.self)
+        try? register(paymentRepositoryFactory, forType: PaymentRepositoryProtocol.self)
     }
 }
 

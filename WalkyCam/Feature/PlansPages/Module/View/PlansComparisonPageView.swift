@@ -32,7 +32,7 @@ struct PlansComparisonPageView: View {
                     Text("En todos los planes se incluyen funciones como: White Board, Share to, Chat, REC, etc.")
                         .font(.projectFont(size: Tokens.Size.Font.xsmall, weight: .semibold))
                     VStack(spacing: Tokens.Size.Spacing.small) {
-                        ForEach(plansData.first(where: { $0.title == "Premium"})?.features ?? []) { item in
+                        ForEach(plansData.first(where: { $0.title == "premium"})?.features ?? []) { item in
                             featureItem(item)
                                 .frame(height: 30)
                         }
@@ -70,10 +70,10 @@ struct PlansComparisonPageView: View {
     private func planItem(_ plan: PlansPagesModel) -> some View {
         VStack(alignment: .center,
                spacing: Tokens.Size.Spacing.xsmall) {
-            Text("Plan \(plan.title)")
+            Text("Plan \(plan.title.capitalized)")
                 .font(.projectFont(size: Tokens.Size.Font.xsmall, weight: .bold))
                 .foregroundColor(plan.accentColor)
-            Text("\(String(format: "%.f", plan.monthlyPrice)) €/mo")
+            Text("\(plan.monthlyPrice) €/mo")
                 .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .bold))
             WCUIButton(title: "Start \(plan.title)",
                        style: .standard,
@@ -82,7 +82,7 @@ struct PlansComparisonPageView: View {
             .frame(width: 130)
             VStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.small) {
-                ForEach(plansData.first(where: { $0.title == "Premium"})?.features ?? []) { feature in
+                ForEach(plansData.first(where: { $0.title == "premium"})?.features ?? []) { feature in
                     if plan.features.contains(where: { $0.title == feature.title }) {
                         Image(Asset.Icons.check.name)
                             .resizable()
@@ -101,13 +101,13 @@ struct PlansComparisonPageView: View {
 
     private func getButtonDescriptor(_ title: String) -> ButtonStyleDescriptorProtocol {
         switch title {
-        case "Free":
+        case "free":
             return GreyButtonStyleDescriptor()
-        case "Basic":
+        case "basic":
             return BlueButtonStyleDescriptor()
-        case "Standard":
+        case "standard":
             return OrangeButtonStyleDescriptor()
-        case "Premium":
+        case "premium":
             return YellowButtonStyleDescriptor()
         default:
             return OrangeButtonStyleDescriptor()
@@ -119,8 +119,8 @@ struct PlansComparisonPageView_Previews: PreviewProvider {
     static var previews: some View {
         PlansComparisonPageView(
             plansData: [
-                .init(title: "Free",
-                      monthlyPrice: 0.0,
+                .init(title: "free",
+                      monthlyPrice: "0.0",
                       backgroundImage: Asset.Fondos.planFondo.name,
                       accentColor: .plateado,
                       features: [
@@ -132,8 +132,8 @@ struct PlansComparisonPageView_Previews: PreviewProvider {
                         .init(title: "Se incluye funciones como: White board, Share to, Chat, REC, etc.", icon: ""),
                         .init(title: "Disfruta mas de 20 funciones adicionales", icon: "")
                     ]),
-                .init(title: "Basic",
-                      monthlyPrice: 30.0,
+                .init(title: "basic",
+                      monthlyPrice: "30.0",
                       backgroundImage: Asset.Fondos.planFondo.name,
                       accentColor: .acentoFondoDark,
                       features: [
@@ -148,8 +148,8 @@ struct PlansComparisonPageView_Previews: PreviewProvider {
                         .init(title: "Juegos y otros", icon: Asset.Icons.games.name),
                         .init(title: "Se incluye funciones como: White board, Share to, Chat, REC, etc.", icon: "")
                     ]),
-                .init(title: "Standard",
-                      monthlyPrice: 60.0,
+                .init(title: "standard",
+                      monthlyPrice: "60.0",
                       backgroundImage: Asset.Fondos.planFondo.name,
                       accentColor: .naranja,
                       features: [
@@ -170,8 +170,8 @@ struct PlansComparisonPageView_Previews: PreviewProvider {
                         .init(title: "Juegos y otros", icon: Asset.Icons.games.name),
                         .init(title: "Se incluye funciones como: White board, Share to, Chat, REC, etc.", icon: "")
                     ]),
-                .init(title: "Premium",
-                      monthlyPrice: 180.0,
+                .init(title: "premium",
+                      monthlyPrice: "180.0",
                       backgroundImage: Asset.Fondos.planFondo.name,
                       accentColor: .premium,
                       features: [

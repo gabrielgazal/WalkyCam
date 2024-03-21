@@ -1,4 +1,5 @@
 import SwiftUI
+import StripePaymentSheet
 
 struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPagesRouterProtocol>: View {
 
@@ -6,6 +7,9 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
 
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
+    
+    @State var isPaymentSheetPresented = false
+    @State var clientSecret: String? = nil
 
     // MARK: - Initialization
 
@@ -18,57 +22,98 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
     // MARK: - View Body
 
     var body: some View {
-        VStack(alignment: .center,
-               spacing: Tokens.Size.Spacing.regular) {
-            HStack {
-                Image(Asset.logo.name)
-                    .resizable()
-                    .renderingMode(.template)
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 100)
-                    .foregroundColor(.naranja)
-                    .isHidden(viewModel.currentPage == 4)
-                Spacer()
-                WCUIButton(title: "Comparar",
-                           rightIcon: Asset.Icons.compare.name,
-                           style: .standard,
-                           descriptor: BlackButtonStyleDescriptor(),
-                           action: {})
-                .frame(width: 140)
-                .isHidden(viewModel.currentPage == 4)
-            }
-            TabView(selection: $viewModel.currentPage) {
-                ForEach(0..<viewModel.plans.count) { index in
-                    PlanPageView(planData: viewModel.plans[index], lastPlan: index == 0 ? nil : viewModel.plans[index - 1])
-                        .environment(\.colorScheme, .dark)
-                        .tag(index)
-                }
-                PlansComparisonPageView(plansData: viewModel.plans)
-                    .tag(4)
-            }
-            .accentColor(.naranja)
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+        VStack {
+            if let paymentSheet = viewModel.paymentSheet {
+                VStack(alignment: .center,
+                       spacing: Tokens.Size.Spacing.regular) {
+                    HStack {
+                        Image(Asset.logo.name)
+                            .resizable()
+                            .renderingMode(.template)
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 100)
+                            .foregroundColor(.naranja)
+                            .isHidden(viewModel.currentPage == 4)
+                        Spacer()
+                        WCUIButton(title: "Comparar",
+                                   rightIcon: Asset.Icons.compare.name,
+                                   style: .standard,
+                                   descriptor: BlackButtonStyleDescriptor(),
+                                   action: {})
+                        .frame(width: 140)
+                        .isHidden(viewModel.currentPage == 4)
+                    }
+                    TabView(selection: $viewModel.currentPage) {
+                        ForEach(0..<viewModel.plans.count) { index in
+                            PlanPageView(planData: viewModel.plans[index], lastPlan: index == 0 ? nil : viewModel.plans[index - 1])
+                                .environment(\.colorScheme, .dark)
+                                .tag(index)
+                        }
+                        PlansComparisonPageView(plansData: viewModel.plans)
+                            .tag(4)
+                    }
+                    .accentColor(.naranja)
+                    .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
 
-            if let title = currentPlan()?.title {
-                WCUIButton(
-                    title: "Start \(title)",
-                    style: .standard,
-                    descriptor: getButtonDescriptor(),
-                    action: {}
+                    if let title = currentPlan()?.title {
+                        WCUIButton(
+                            title: "Start \(title)",
+                            style: .standard,
+                            descriptor: getButtonDescriptor(),
+                            action: {
+                                if viewModel.currentPage > 0 {
+                                    isPaymentSheetPresented = true
+                                }
+                            }
+                        )
+                        .frame(maxWidth: .infinity)
+                        .loading(viewModel.isPaymentSheetLoading)
+                        .disabled(viewModel.isPaymentSheetLoading)
+                    }
+                    PageControl(numberOfPages: viewModel.plans.count + 1, currentPage: $viewModel.currentPage)
+                }
+                       .background(
+                        Image(currentPlan()?.backgroundImage ?? "")
+                       )
+                       .onAppear {
+                           setupAppearence()
+                       }
+                       .navigation(router)
+                       .padding(.horizontal, Tokens.Size.Spacing.regular)
+                       .background(ignoresSafeAreaEdges: .all)
+                       .paymentSheet(isPresented: $isPaymentSheetPresented,
+                                     paymentSheet: paymentSheet,
+                                     onCompletion: viewModel.onPaymentCompletion)
+
+            } else {
+                VStack {
+                    Spacer()
+                    ProgressView()
+                        .controlSize(.large)
+                        .tint(.white)
+                    Spacer()
+                }
+                .background(
+                 Image(currentPlan()?.backgroundImage ?? "")
                 )
-                .frame(maxWidth: .infinity)
+                .onAppear {
+                    setupAppearence()
+                }
+                .navigation(router)
+                .padding(.horizontal, Tokens.Size.Spacing.regular)
+                .background(ignoresSafeAreaEdges: .all)
             }
-            PageControl(numberOfPages: viewModel.plans.count + 1, currentPage: $viewModel.currentPage)
         }
-               .background(
-                Image(currentPlan()?.backgroundImage ?? "")
-               )
-               .onAppear {
-                   setupAppearence()
-               }
-               .navigation(router)
-               .padding(.horizontal, Tokens.Size.Spacing.regular)
-               .background(ignoresSafeAreaEdges: .all)
+        .task {
+            await viewModel.preparePaymentSheet()
+        }
+        .onChange(of: viewModel.currentPage) { newValue in
+            if newValue > 0 && newValue < 4 {
+                Task {
+                    await viewModel.preparePaymentSheet()
+                }
+            }
+        }
     }
 
     private func setupAppearence() {
@@ -103,7 +148,12 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
 struct PlansPagesView_Previews: PreviewProvider {
     static var previews: some View {
         PlansPagesView(
-            viewModel: PlansPagesViewModel(currentPage: 0),
+            viewModel: PlansPagesViewModel(
+                interactor: PlansPagesInteractor(
+                    useCases: .init(createSubscriptionIntent: .empty)
+                ),
+                currentPage: 0
+            ),
             router: PlansPagesRouter(isPresented: .constant(false))
         )
     }

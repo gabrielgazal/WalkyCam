@@ -1,3 +1,3 @@
 protocol PlansPagesInteractorProtocol {
-    func someFunction()
+    func createSubscriptionIntent(with plan: String) async throws -> SubscriptionIntentOutput
 }

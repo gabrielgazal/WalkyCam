@@ -9,7 +9,7 @@ import Foundation
 import Moya
 
 enum PaymentRouter {
-    case createUserPayment(userId: String)
+    case createUserPayment(planName: String, planType: String)
 }
 
 extension PaymentRouter: TargetType {
@@ -20,7 +20,7 @@ extension PaymentRouter: TargetType {
     var path: String {
         switch self {
         case .createUserPayment:
-            return "user-payment/create)"
+            return "payment/create-subscription-intent"
         }
     }
 
@@ -33,16 +33,17 @@ extension PaymentRouter: TargetType {
 
     var task: Task {
         switch self {
-        case let .createUserPayment(userId):
-            return createUserPayment(userId)
+        case let .createUserPayment(planName, planType):
+            return createUserPayment(planName, planType)
         }
     }
 
     // MARK: - Private Methods
 
-    private func createUserPayment(_ userId: String) -> Task {
+    private func createUserPayment(_ planName: String, _ planType: String) -> Task {
         let parameters = [
-            "id_user": userId
+            "plan_name": planName,
+            "plan_type": planType
         ] as [String:Any]
 
         return .requestParameters(
