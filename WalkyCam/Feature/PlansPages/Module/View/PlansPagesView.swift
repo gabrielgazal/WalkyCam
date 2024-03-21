@@ -150,8 +150,10 @@ struct PlansPagesView_Previews: PreviewProvider {
         PlansPagesView(
             viewModel: PlansPagesViewModel(
                 interactor: PlansPagesInteractor(
-                    useCases: .init(createSubscriptionIntent: .empty)
+                    useCases: .init(createSubscriptionIntent: .empty,
+                                    createSubscription: .empty)
                 ),
+                router: PlansPagesRouter(isPresented: .constant(false)),
                 currentPage: 0
             ),
             router: PlansPagesRouter(isPresented: .constant(false))

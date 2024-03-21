@@ -530,6 +530,8 @@
 		EA86537C2B90FA8800B86A54 /* AIMenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8653702B90FA8800B86A54 /* AIMenuInteractor.swift */; };
 		EA86537D2B90FA8800B86A54 /* AIMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8653722B90FA8800B86A54 /* AIMenuRouter.swift */; };
 		EA86537E2B90FA8800B86A54 /* AIMenuRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8653732B90FA8800B86A54 /* AIMenuRouterProtocol.swift */; };
+		EA87DE222BACBAB1001CB5E6 /* CreateSubscriptionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA87DE212BACBAB1001CB5E6 /* CreateSubscriptionUseCase.swift */; };
+		EA87DE242BACBAF4001CB5E6 /* SubscriptionInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA87DE232BACBAF4001CB5E6 /* SubscriptionInput.swift */; };
 		EA890A262B61ECFB00FC369B /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = EA890A252B61ECFB00FC369B /* Networking */; };
 		EA890A292B61EDE500FC369B /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA890A282B61EDE500FC369B /* Dependency.swift */; };
 		EA8EF8D02B67E12400136D1F /* UserSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8EF8CF2B67E12400136D1F /* UserSessionProtocol.swift */; };
@@ -1361,6 +1363,8 @@
 		EA8653702B90FA8800B86A54 /* AIMenuInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIMenuInteractor.swift; sourceTree = "<group>"; };
 		EA8653722B90FA8800B86A54 /* AIMenuRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIMenuRouter.swift; sourceTree = "<group>"; };
 		EA8653732B90FA8800B86A54 /* AIMenuRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIMenuRouterProtocol.swift; sourceTree = "<group>"; };
+		EA87DE212BACBAB1001CB5E6 /* CreateSubscriptionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSubscriptionUseCase.swift; sourceTree = "<group>"; };
+		EA87DE232BACBAF4001CB5E6 /* SubscriptionInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionInput.swift; sourceTree = "<group>"; };
 		EA890A282B61EDE500FC369B /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
 		EA8EF8CF2B67E12400136D1F /* UserSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionProtocol.swift; sourceTree = "<group>"; };
 		EA8EF8D22B67E14300136D1F /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
@@ -3460,6 +3464,7 @@
 			isa = PBXGroup;
 			children = (
 				EA2E651C2BA8ACF50092A135 /* CreateStripeSubscriptionIntentUseCase.swift */,
+				EA87DE212BACBAB1001CB5E6 /* CreateSubscriptionUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -4095,6 +4100,7 @@
 				EA50A0712B0BC77F0042B238 /* PlansPagesModel.swift */,
 				EA2E651E2BA8AE1C0092A135 /* SubscriptionIntentOutput.swift */,
 				EA2E65202BA8AEB60092A135 /* SubscriptionIntentInput.swift */,
+				EA87DE232BACBAF4001CB5E6 /* SubscriptionInput.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -8704,6 +8710,7 @@
 				EA4165412AE706C6008CE66A /* NotificationsViewModelProtocol.swift in Sources */,
 				EAF47C142B830C80003F8B86 /* WalkyCammerListAssemblerProtocol.swift in Sources */,
 				EA1FD1BF2B1E932F000E583D /* VideoCallRoomRouterProtocol.swift in Sources */,
+				EA87DE242BACBAF4001CB5E6 /* SubscriptionInput.swift in Sources */,
 				EA15B5AC2AD706DB00C03407 /* BottomSheetModifier.swift in Sources */,
 				EA282E552AE952F700B90920 /* ProfileViewModelProtocol.swift in Sources */,
 				EA91101F2ADDADE100584B98 /* HomeRouter.swift in Sources */,
@@ -9338,6 +9345,7 @@
 				56FEECF32B5C802C003FA686 /* SearchWalkyCammerViewModel.swift in Sources */,
 				EA1FD1B92B1E932F000E583D /* VideoCallRoomViewModel.swift in Sources */,
 				EA15B5A12AD6E44D00C03407 /* LoginAssembler.swift in Sources */,
+				EA87DE222BACBAB1001CB5E6 /* CreateSubscriptionUseCase.swift in Sources */,
 				EA94A52E2B7160EF00EC3037 /* ServiceDetailsAssemblerProtocol.swift in Sources */,
 				EADB5CA52B190819005863E1 /* VideoCallAssembler.swift in Sources */,
 				EA6083672B01981800295069 /* CryptoDetailsInteractorProtocol.swift in Sources */,

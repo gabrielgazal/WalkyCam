@@ -14,7 +14,8 @@ typealias RegisterUserUseCase = GenericUseCase<RegistrationInput, RegistrationOu
 extension RegisterUserUseCase {
 
     static func live(
-        repository: AuthRepositoryProtocol
+        repository: AuthRepositoryProtocol,
+        userSession: UserSessionProtocol = UserSession()
     ) -> Self {
         Self.init { credentials in
             Deferred {
@@ -28,7 +29,15 @@ extension RegisterUserUseCase {
                         case let .failure(error):
                             promise(.failure(error))
                         case let .success(response):
-                            promise(.success(mapResponseToResult(response)))
+                            do {
+                                let output = try configure(
+                                    loginResponse: response,
+                                    in: userSession
+                                )
+                                promise(.success(output))
+                            } catch {
+                                promise(.failure(error))
+                            }
                         }
                         return
                     }
@@ -38,12 +47,36 @@ extension RegisterUserUseCase {
         }
     }
 
-    private static func mapResponseToResult(_ data: UserResponse) -> RegistrationOutput {
-        return .init(id: data.id,
-                     userName: data.userName,
-                     name: data.name,
-                     lastName: data.lastName,
-                     email: data.email,
-                     address: data.address)
+    private static func configure(
+        loginResponse: UserResponse,
+        in session: UserSessionProtocol
+    ) throws -> RegistrationOutput {
+        do {
+            let registrationOutput = RegistrationOutput(id: loginResponse.id,
+                                          userName: loginResponse.userName,
+                                          name: loginResponse.name,
+                                          lastName: loginResponse.lastName,
+                                          email: loginResponse.email,
+                                          address: loginResponse.address)
+
+            try session.save(user: registrationOutput.asUserSessionData())
+
+            return registrationOutput
+        } catch {
+            throw error
+        }
+    }
+}
+
+
+extension RegistrationOutput {
+    func asUserSessionData() -> UserSessionData {
+        return UserSessionData(id: id,
+                               userName: userName,
+                               name: name,
+                               lastName: lastName,
+                               email: email,
+                               address: address,
+                               configurations: nil)
     }
 }
