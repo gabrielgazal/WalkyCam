@@ -42,6 +42,7 @@ struct WalkyCamerOnboardingView<ViewModel: WalkyCamerOnboardingViewModelProtocol
                                color: .naranja,
                                action: handleProceedToStreetCam)
                     .frame(maxWidth: .infinity)
+                    .loading(viewModel.isUpdating)
                     WCUIButton(
                         title: L10n.CashWalletOnboardingView.Button.next,
                         style: .outline,
@@ -65,6 +66,7 @@ struct WalkyCamerOnboardingView<ViewModel: WalkyCamerOnboardingViewModelProtocol
                         action: handleProceedToStreetCam
                     )
                     .frame(maxWidth: .infinity)
+                    .loading(viewModel.isUpdating)
                     LinkButton(title: "Salir",
                                color: .naranja,
                                action: {

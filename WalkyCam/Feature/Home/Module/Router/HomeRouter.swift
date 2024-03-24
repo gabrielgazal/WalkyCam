@@ -23,7 +23,7 @@ final class HomeRouter: Router, HomeRouterProtocol {
     }
 
     func routeToVideoCall() {
-        let seenOnboarding: Bool = (try? UserSession().user().configurations?.streetCam) ?? false
+        let seenOnboarding: Bool = (try? UserSession().user().configurations.streetCam) ?? false
         navigateTo(
             seenOnboarding ? VideoCallRoute(isPresented: isNavigating) : VideocallOnboardingRoute(isPresented: isNavigating)
         )
@@ -36,7 +36,7 @@ final class HomeRouter: Router, HomeRouterProtocol {
     }
 
     func routeToARHands() {
-        let seenOnboarding: Bool = (try? UserSession().user().configurations?.ARHands) ?? false
+        let seenOnboarding: Bool = (try? UserSession().user().configurations.ARHands) ?? false
         navigateTo(
             seenOnboarding ? ARHandsMenuRoute(isPresented: isNavigating) : ARHandsOnboardingRoute(isPresented: isNavigating)
         )
@@ -49,7 +49,7 @@ final class HomeRouter: Router, HomeRouterProtocol {
     }
 
     func routeToScan3D() {
-        let seenOnboarding: Bool = (try? UserSession().user().configurations?.scan3D) ?? false
+        let seenOnboarding: Bool = (try? UserSession().user().configurations.scan3D) ?? false
         navigateTo(
             seenOnboarding ? Scan3DMenuRoute(isPresented: isNavigating) : Scan3DOnboardingRoute(isPresented: isNavigating)
         )

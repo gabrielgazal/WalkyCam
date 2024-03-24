@@ -6,6 +6,7 @@ final class WalkyCamerOnboardingViewModel: WalkyCamerOnboardingViewModelProtocol
 
     private let interactor: WalkyCamerOnboardingInteractorProtocol
     @Published var currentPage: Int = 0
+    @Published var isUpdating: Bool = false
 
     // MARK: - Initialization
 
@@ -16,9 +17,13 @@ final class WalkyCamerOnboardingViewModel: WalkyCamerOnboardingViewModelProtocol
     // MARK: - Public API
 
    @MainActor func updateUserConfiguration(completion: (() -> Void)?) async {
+       isUpdating = true
        do {
            _ = try await interactor.updateUserConfiguration()
-       } catch {}
+           isUpdating = false
+       } catch {
+           isUpdating = false
+       }
        completion?()
     }
 }

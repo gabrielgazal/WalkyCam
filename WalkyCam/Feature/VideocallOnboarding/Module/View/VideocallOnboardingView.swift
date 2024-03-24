@@ -39,6 +39,7 @@ struct VideocallOnboardingView<ViewModel: VideocallOnboardingViewModelProtocol, 
                     action: handleProceedToStreetCam
                 )
                 .frame(maxWidth: .infinity)
+                .loading(viewModel.isUpdating)
                 LinkButton(title: "Salir",
                            color: .naranja,
                            action: {
@@ -75,7 +76,7 @@ struct VideocallOnboardingView_Previews: PreviewProvider {
         viewModel: VideocallOnboardingViewModel(
             interactor: VideocallOnboardingInteractor(
                 useCases: .init(
-                    updateStreetcamConfiguration: .empty
+                    updateVideocallConfiguration: .empty
                 )
             )
         ),

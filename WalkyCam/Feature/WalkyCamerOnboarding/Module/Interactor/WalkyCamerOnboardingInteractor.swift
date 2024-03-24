@@ -23,7 +23,7 @@ final class WalkyCamerOnboardingInteractor: WalkyCamerOnboardingInteractorProtoc
 
      func updateUserConfiguration() async throws {
         return try await withCheckedThrowingContinuation { continuation in
-            useCases.updateStreetcamConfiguration("")
+            useCases.updateStreetcamConfiguration()
                 .sink(
                     receiveCompletion: { completion in
                         switch completion {

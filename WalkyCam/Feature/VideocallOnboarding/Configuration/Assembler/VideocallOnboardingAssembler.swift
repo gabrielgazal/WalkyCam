@@ -12,7 +12,7 @@ final class VideocallOnboardingAssembler: VideocallOnboardingAssemblerProtocol {
 
         let interactor = VideocallOnboardingInteractor(
             useCases: .init(
-                updateStreetcamConfiguration: .updateStreetCam(repository: repository)
+                updateVideocallConfiguration: .updateVideocall(repository: repository)
             )
         )
         let viewModel = VideocallOnboardingViewModel(interactor: interactor)

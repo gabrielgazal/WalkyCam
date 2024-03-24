@@ -9,7 +9,7 @@ import Foundation
 import Networking
 import Combine
 
-typealias UpdateStreetcamConfigurationUseCase = GenericUseCase<String, Void>
+typealias UpdateStreetcamConfigurationUseCase = GenericUseCase<Void, Void>
 
 extension UpdateStreetcamConfigurationUseCase {
 
@@ -17,11 +17,11 @@ extension UpdateStreetcamConfigurationUseCase {
         repository: ConfigurationRepositoryProtocol,
         userSession: UserSessionProtocol = UserSession()
     ) -> Self {
-        Self.init { input in
+        Self.init { _ in
             Deferred {
                 Future { promise in
-
-                    repository.getStreetCamConfiguration(userId: input) { result in
+                    let userId = try? userSession.user().id
+                    repository.updateStreetCamConfiguration(userId: userId ?? "") { result in
                         switch result {
                         case let .failure(error):
                             promise(.failure(error))
@@ -45,7 +45,7 @@ extension UpdateStreetcamConfigurationUseCase {
     ) throws -> Void {
         do {
             var user = try session.user()
-            user.configurations?.streetCam = true
+            user.configurations.streetCam = true
             try session.save(user: user)
             return
         } catch {

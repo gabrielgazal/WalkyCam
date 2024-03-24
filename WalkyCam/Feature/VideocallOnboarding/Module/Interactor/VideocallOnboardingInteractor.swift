@@ -5,7 +5,7 @@ final class VideocallOnboardingInteractor: VideocallOnboardingInteractorProtocol
     // MARK: - Inner Types
 
     struct UseCases {
-        let updateStreetcamConfiguration: UpdateStreetcamConfigurationUseCase
+        let updateVideocallConfiguration: UpdateVideocallConfigurationUseCase
     }
 
     // MARK: - Dependencies
@@ -23,7 +23,7 @@ final class VideocallOnboardingInteractor: VideocallOnboardingInteractorProtocol
 
      func updateUserConfiguration() async throws {
         return try await withCheckedThrowingContinuation { continuation in
-            useCases.updateStreetcamConfiguration("")
+            useCases.updateVideocallConfiguration()
                 .sink(
                     receiveCompletion: { completion in
                         switch completion {

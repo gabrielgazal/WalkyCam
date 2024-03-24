@@ -77,6 +77,6 @@ extension RegistrationOutput {
                                lastName: lastName,
                                email: email,
                                address: address,
-                               configurations: nil)
+                               configurations: .init())
     }
 }

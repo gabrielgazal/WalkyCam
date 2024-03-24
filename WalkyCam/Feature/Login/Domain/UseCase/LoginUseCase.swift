@@ -44,26 +44,27 @@ extension LoginUseCase {
         }
     }
 
-    private static func mapResponseToResult(_ data: UserResponse) -> LoginOutput {
-        return .init(id: data.id,
-                     userName: data.userName,
-                     name: data.name,
-                     lastName: data.lastName,
-                     email: data.email,
-                     address: data.address)
-    }
-
     private static func configure(
-        loginResponse: UserResponse,
+        loginResponse: UserDataResponse,
         in session: UserSessionProtocol
     ) throws -> LoginOutput {
         do {
-            let loginOutput = LoginOutput(id: loginResponse.id,
-                                          userName: loginResponse.userName,
-                                          name: loginResponse.name,
-                                          lastName: loginResponse.lastName,
-                                          email: loginResponse.email,
-                                          address: loginResponse.address)
+            let loginOutput = LoginOutput(
+                id: loginResponse.user.id,
+                userName: loginResponse.user.userName,
+                name: loginResponse.user.name,
+                lastName: loginResponse.user.lastName,
+                email: loginResponse.user.email,
+                address: loginResponse.user.address,
+                configurations: .init(
+                    streetCam: loginResponse.streetCamConfiguration.onboardingReaded,
+                    scan3D: loginResponse.scan3dConfiguration.onboardingReaded,
+                    videoCall: loginResponse.videoCallConfiguration.onboardingReaded,
+                    ARHands: loginResponse.arHandsConfiguration.onboardingReaded,
+                    digitalTwins: loginResponse.digitalTwinsConfiguration.onboardingReaded,
+                    drone: loginResponse.droneCamConfiguration.onboardingReaded
+                )
+            )
 
             try session.save(user: loginOutput.asUserSessionData())
 
@@ -76,12 +77,21 @@ extension LoginUseCase {
 
 extension LoginOutput {
     func asUserSessionData() -> UserSessionData {
-        return UserSessionData(id: id,
-                               userName: userName,
-                               name: name,
-                               lastName: lastName,
-                               email: email,
-                               address: address,
-                               configurations: nil)
+        return UserSessionData(
+            id: id,
+            userName: userName,
+            name: name,
+            lastName: lastName,
+            email: email,
+            address: address,
+            configurations: .init(
+                streetCam: configurations.streetCam,
+                scan3D: configurations.scan3D,
+                videoCall: configurations.videoCall,
+                ARHands: configurations.ARHands,
+                digitalTwins: configurations.digitalTwins,
+                drone: configurations.drone
+            )
+        )
     }
 }

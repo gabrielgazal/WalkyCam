@@ -9,7 +9,7 @@ import Foundation
 import Networking
 import Combine
 
-typealias UpdateVideocallConfigurationUseCase = GenericUseCase<String, Void>
+typealias UpdateVideocallConfigurationUseCase = GenericUseCase<Void, Void>
 
 extension UpdateVideocallConfigurationUseCase {
 
@@ -17,11 +17,11 @@ extension UpdateVideocallConfigurationUseCase {
         repository: ConfigurationRepositoryProtocol,
         userSession: UserSessionProtocol = UserSession()
     ) -> Self {
-        Self.init { input in
+        Self.init { _ in
             Deferred {
                 Future { promise in
-
-                    repository.updateVideoCallConfiguration(userId: input) { result in
+                    let userId = try? userSession.user().id
+                    repository.updateVideoCallConfiguration(userId: userId ?? "") { result in
                         switch result {
                         case let .failure(error):
                             promise(.failure(error))
@@ -45,7 +45,7 @@ extension UpdateVideocallConfigurationUseCase {
     ) throws -> Void {
         do {
             var user = try session.user()
-            user.configurations?.videoCall = true
+            user.configurations.videoCall = true
             try session.save(user: user)
             return
         } catch {

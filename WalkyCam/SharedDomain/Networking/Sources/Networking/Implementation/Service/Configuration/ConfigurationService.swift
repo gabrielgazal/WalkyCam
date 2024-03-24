@@ -57,7 +57,7 @@ final class ConfigurationService: ConfigurationServiceProtocol {
     }
 
     func updateStreetCamConfiguration(userId: String, completion: @escaping Completion) {
-        provider.request(.getStreetCamConfiguration(userId: userId),
+        provider.request(.updateStreetCamConfiguration(userId: userId),
                          completion: completion)
     }
 

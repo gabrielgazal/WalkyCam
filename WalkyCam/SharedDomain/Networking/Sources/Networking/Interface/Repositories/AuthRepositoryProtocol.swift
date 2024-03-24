@@ -8,7 +8,7 @@
 import Combine
 
 public protocol AuthRepositoryProtocol {
-    typealias LoginResult = Result<UserResponse, RepositoryError>
+    typealias LoginResult = Result<UserDataResponse, RepositoryError>
     typealias RegisterResult = Result<UserResponse, RepositoryError>
     typealias VerifyByEmailResult = Result<UserResponse, RepositoryError>
 
