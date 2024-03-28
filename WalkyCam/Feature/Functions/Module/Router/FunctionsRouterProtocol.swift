@@ -10,4 +10,8 @@ protocol FunctionsRouterProtocol: Router {
     func routeToIOT()
     func routeTo3DPrinting()
     func routeToAI()
+    func routeToNFT()
+
+    func routeToRadar()
+    func routeToROV()
 }

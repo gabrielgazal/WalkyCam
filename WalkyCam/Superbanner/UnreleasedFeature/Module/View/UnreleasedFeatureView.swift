@@ -25,19 +25,30 @@ struct UnreleasedFeatureView<ViewModel:UnreleasedFeatureViewModelProtocol, Route
                     ForEach(viewModel.banners, id: \.self) {
                         Image($0)
                             .resizable()
-                            .scaledToFill()
+                            .scaledToFit()
                             .frame(width: proxy.size.width)
                             .clipped()
                     }
                 }
                 .accentColor(.naranja)
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-                .padding(Tokens.Size.Spacing.regular)
+                .padding(.vertical, Tokens.Size.Spacing.regular)
                 Asset.Illustrations.preview.swiftUIImage
                     .resizable()
                     .scaledToFit()
                     .frame(width: 100)
             }
+            .shadow(
+                color: .black.opacity(0.2),
+                radius: 8,
+                x: 0,
+                y: 2
+            )
+            .cornerRadius(12, corners: [.bottomLeft, .bottomRight, .topRight])
+            .padding(Tokens.Size.Spacing.regular)
+            .background(
+                Color.blancoGris
+            )
         }
     }
 }

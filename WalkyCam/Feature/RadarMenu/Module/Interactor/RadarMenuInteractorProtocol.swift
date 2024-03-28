@@ -1,0 +1,3 @@
+protocol RadarMenuInteractorProtocol {
+    func someFunction()
+}
