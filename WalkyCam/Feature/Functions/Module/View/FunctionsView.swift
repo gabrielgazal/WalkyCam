@@ -78,7 +78,7 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
 //                                        case "Alcohol & Drug test":
 //                                            router.routeToDrone()
                                         case "NFT platform":
-                                            router.routeToDrone()
+                                            router.routeToNFT()
                                         case "Crypto Wallet":
                                             router.routeToCryptoWallet()
                                         default: break
@@ -103,6 +103,15 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
                                     .foregroundColor(Color.premium)
                                     .frame(width: 20)
                                     .padding(8)
+                            }
+                            .onTapGesture {
+                                switch item.title {
+                                case "Radar & Sensors":
+                                    router.routeToRadar()
+                                case "R.O.V. Underwater Drone":
+                                    router.routeToROV()
+                                default: break
+                                }
                             }
                         }
                     }
