@@ -45,7 +45,6 @@ struct UnreleasedFeatureView<ViewModel:UnreleasedFeatureViewModelProtocol, Route
                 y: 2
             )
             .cornerRadius(12, corners: [.bottomLeft, .bottomRight, .topRight])
-            .padding(Tokens.Size.Spacing.regular)
             .background(
                 Color.blancoGris
             )

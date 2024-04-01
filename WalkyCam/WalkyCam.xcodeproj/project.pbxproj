@@ -714,6 +714,29 @@
 		EADB5CAD2B190819005863E1 /* VideoCallRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB5CA02B190819005863E1 /* VideoCallRouter.swift */; };
 		EADB5CAE2B190819005863E1 /* VideoCallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB5CA32B190819005863E1 /* VideoCallModel.swift */; };
 		EADBE1012AE823BA00FED579 /* NotificationItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBE1002AE823BA00FED579 /* NotificationItemView.swift */; };
+		EAE401A82BBA3D6100B1311E /* DigitalTwinsOnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401952BBA3D6100B1311E /* DigitalTwinsOnboardingModel.swift */; };
+		EAE401A92BBA3D6100B1311E /* DigitalTwinsOnboardingRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401982BBA3D6100B1311E /* DigitalTwinsOnboardingRoute.swift */; };
+		EAE401AA2BBA3D6100B1311E /* DigitalTwinsOnboardingAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4019A2BBA3D6100B1311E /* DigitalTwinsOnboardingAssembler.swift */; };
+		EAE401AB2BBA3D6100B1311E /* DigitalTwinsOnboardingAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4019B2BBA3D6100B1311E /* DigitalTwinsOnboardingAssemblerProtocol.swift */; };
+		EAE401AC2BBA3D6100B1311E /* DigitalTwinsOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4019E2BBA3D6100B1311E /* DigitalTwinsOnboardingViewModel.swift */; };
+		EAE401AD2BBA3D6100B1311E /* DigitalTwinsOnboardingViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4019F2BBA3D6100B1311E /* DigitalTwinsOnboardingViewModelProtocol.swift */; };
+		EAE401AE2BBA3D6100B1311E /* DigitalTwinsOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401A12BBA3D6100B1311E /* DigitalTwinsOnboardingView.swift */; };
+		EAE401AF2BBA3D6100B1311E /* DigitalTwinsOnboardingInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401A32BBA3D6100B1311E /* DigitalTwinsOnboardingInteractorProtocol.swift */; };
+		EAE401B02BBA3D6100B1311E /* DigitalTwinsOnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401A42BBA3D6100B1311E /* DigitalTwinsOnboardingInteractor.swift */; };
+		EAE401B12BBA3D6100B1311E /* DigitalTwinsOnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401A62BBA3D6100B1311E /* DigitalTwinsOnboardingRouter.swift */; };
+		EAE401B22BBA3D6100B1311E /* DigitalTwinsOnboardingRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401A72BBA3D6100B1311E /* DigitalTwinsOnboardingRouterProtocol.swift */; };
+		EAE401B42BBA3F3C00B1311E /* DigitalTwinsPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401B32BBA3F3C00B1311E /* DigitalTwinsPageView.swift */; };
+		EAE401D12BBA452900B1311E /* DigitalTwinsMenuRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401BE2BBA452800B1311E /* DigitalTwinsMenuRoute.swift */; };
+		EAE401D22BBA452900B1311E /* DigitalTwinsMenuAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401C02BBA452800B1311E /* DigitalTwinsMenuAssembler.swift */; };
+		EAE401D32BBA452900B1311E /* DigitalTwinsMenuAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401C12BBA452800B1311E /* DigitalTwinsMenuAssemblerProtocol.swift */; };
+		EAE401D42BBA452900B1311E /* DigitalTwinsMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401C42BBA452800B1311E /* DigitalTwinsMenuModel.swift */; };
+		EAE401D52BBA452900B1311E /* DigitalTwinsMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401C72BBA452900B1311E /* DigitalTwinsMenuViewModel.swift */; };
+		EAE401D62BBA452900B1311E /* DigitalTwinsMenuViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401C82BBA452900B1311E /* DigitalTwinsMenuViewModelProtocol.swift */; };
+		EAE401D72BBA452900B1311E /* DigitalTwinsMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401CA2BBA452900B1311E /* DigitalTwinsMenuView.swift */; };
+		EAE401D82BBA452900B1311E /* DigitalTwinsMenuInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401CC2BBA452900B1311E /* DigitalTwinsMenuInteractorProtocol.swift */; };
+		EAE401D92BBA452900B1311E /* DigitalTwinsMenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401CD2BBA452900B1311E /* DigitalTwinsMenuInteractor.swift */; };
+		EAE401DA2BBA452900B1311E /* DigitalTwinsMenuRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401CF2BBA452900B1311E /* DigitalTwinsMenuRouterProtocol.swift */; };
+		EAE401DB2BBA452900B1311E /* DigitalTwinsMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401D02BBA452900B1311E /* DigitalTwinsMenuRouter.swift */; };
 		EAE8EC452B9574840003AE96 /* ChatDetailRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE8EC1C2B9574830003AE96 /* ChatDetailRoute.swift */; };
 		EAE8EC462B9574840003AE96 /* ChatDetailAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE8EC1E2B9574830003AE96 /* ChatDetailAssemblerProtocol.swift */; };
 		EAE8EC472B9574840003AE96 /* ChatDetailAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE8EC1F2B9574830003AE96 /* ChatDetailAssembler.swift */; };
@@ -1557,6 +1580,29 @@
 		EADB5CA02B190819005863E1 /* VideoCallRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallRouter.swift; sourceTree = "<group>"; };
 		EADB5CA32B190819005863E1 /* VideoCallModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallModel.swift; sourceTree = "<group>"; };
 		EADBE1002AE823BA00FED579 /* NotificationItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationItemView.swift; sourceTree = "<group>"; };
+		EAE401952BBA3D6100B1311E /* DigitalTwinsOnboardingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalTwinsOnboardingModel.swift; sourceTree = "<group>"; };
+		EAE401982BBA3D6100B1311E /* DigitalTwinsOnboardingRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalTwinsOnboardingRoute.swift; sourceTree = "<group>"; };
+		EAE4019A2BBA3D6100B1311E /* DigitalTwinsOnboardingAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalTwinsOnboardingAssembler.swift; sourceTree = "<group>"; };
+		EAE4019B2BBA3D6100B1311E /* DigitalTwinsOnboardingAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalTwinsOnboardingAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EAE4019E2BBA3D6100B1311E /* DigitalTwinsOnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalTwinsOnboardingViewModel.swift; sourceTree = "<group>"; };
+		EAE4019F2BBA3D6100B1311E /* DigitalTwinsOnboardingViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalTwinsOnboardingViewModelProtocol.swift; sourceTree = "<group>"; };
+		EAE401A12BBA3D6100B1311E /* DigitalTwinsOnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalTwinsOnboardingView.swift; sourceTree = "<group>"; };
+		EAE401A32BBA3D6100B1311E /* DigitalTwinsOnboardingInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalTwinsOnboardingInteractorProtocol.swift; sourceTree = "<group>"; };
+		EAE401A42BBA3D6100B1311E /* DigitalTwinsOnboardingInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalTwinsOnboardingInteractor.swift; sourceTree = "<group>"; };
+		EAE401A62BBA3D6100B1311E /* DigitalTwinsOnboardingRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalTwinsOnboardingRouter.swift; sourceTree = "<group>"; };
+		EAE401A72BBA3D6100B1311E /* DigitalTwinsOnboardingRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalTwinsOnboardingRouterProtocol.swift; sourceTree = "<group>"; };
+		EAE401B32BBA3F3C00B1311E /* DigitalTwinsPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalTwinsPageView.swift; sourceTree = "<group>"; };
+		EAE401BE2BBA452800B1311E /* DigitalTwinsMenuRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalTwinsMenuRoute.swift; sourceTree = "<group>"; };
+		EAE401C02BBA452800B1311E /* DigitalTwinsMenuAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalTwinsMenuAssembler.swift; sourceTree = "<group>"; };
+		EAE401C12BBA452800B1311E /* DigitalTwinsMenuAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalTwinsMenuAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EAE401C42BBA452800B1311E /* DigitalTwinsMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalTwinsMenuModel.swift; sourceTree = "<group>"; };
+		EAE401C72BBA452900B1311E /* DigitalTwinsMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalTwinsMenuViewModel.swift; sourceTree = "<group>"; };
+		EAE401C82BBA452900B1311E /* DigitalTwinsMenuViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalTwinsMenuViewModelProtocol.swift; sourceTree = "<group>"; };
+		EAE401CA2BBA452900B1311E /* DigitalTwinsMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalTwinsMenuView.swift; sourceTree = "<group>"; };
+		EAE401CC2BBA452900B1311E /* DigitalTwinsMenuInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalTwinsMenuInteractorProtocol.swift; sourceTree = "<group>"; };
+		EAE401CD2BBA452900B1311E /* DigitalTwinsMenuInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalTwinsMenuInteractor.swift; sourceTree = "<group>"; };
+		EAE401CF2BBA452900B1311E /* DigitalTwinsMenuRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalTwinsMenuRouterProtocol.swift; sourceTree = "<group>"; };
+		EAE401D02BBA452900B1311E /* DigitalTwinsMenuRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalTwinsMenuRouter.swift; sourceTree = "<group>"; };
 		EAE8EC1C2B9574830003AE96 /* ChatDetailRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatDetailRoute.swift; sourceTree = "<group>"; };
 		EAE8EC1E2B9574830003AE96 /* ChatDetailAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatDetailAssemblerProtocol.swift; sourceTree = "<group>"; };
 		EAE8EC1F2B9574830003AE96 /* ChatDetailAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatDetailAssembler.swift; sourceTree = "<group>"; };
@@ -2444,6 +2490,8 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				EAE401B52BBA451000B1311E /* DigitalTwinsMenu */,
+				EAE4018C2BBA3CB100B1311E /* DigitalTwinsOnboarding */,
 				EA06552B2BB5DA45006148E7 /* RadarMenu */,
 				EAE8EC192B9574830003AE96 /* ChatDetail */,
 				EAE8EC2F2B9574840003AE96 /* ChatList */,
@@ -7507,6 +7555,203 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		EAE4018C2BBA3CB100B1311E /* DigitalTwinsOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401962BBA3D6100B1311E /* Configuration */,
+				EAE401932BBA3D6100B1311E /* Domain */,
+				EAE4019C2BBA3D6100B1311E /* Module */,
+			);
+			path = DigitalTwinsOnboarding;
+			sourceTree = "<group>";
+		};
+		EAE401932BBA3D6100B1311E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401942BBA3D6100B1311E /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EAE401942BBA3D6100B1311E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401952BBA3D6100B1311E /* DigitalTwinsOnboardingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EAE401962BBA3D6100B1311E /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401972BBA3D6100B1311E /* Route */,
+				EAE401992BBA3D6100B1311E /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EAE401972BBA3D6100B1311E /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401982BBA3D6100B1311E /* DigitalTwinsOnboardingRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EAE401992BBA3D6100B1311E /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4019A2BBA3D6100B1311E /* DigitalTwinsOnboardingAssembler.swift */,
+				EAE4019B2BBA3D6100B1311E /* DigitalTwinsOnboardingAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EAE4019C2BBA3D6100B1311E /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4019D2BBA3D6100B1311E /* ViewModel */,
+				EAE401A02BBA3D6100B1311E /* View */,
+				EAE401A22BBA3D6100B1311E /* Interactor */,
+				EAE401A52BBA3D6100B1311E /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EAE4019D2BBA3D6100B1311E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4019E2BBA3D6100B1311E /* DigitalTwinsOnboardingViewModel.swift */,
+				EAE4019F2BBA3D6100B1311E /* DigitalTwinsOnboardingViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EAE401A02BBA3D6100B1311E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401A12BBA3D6100B1311E /* DigitalTwinsOnboardingView.swift */,
+				EAE401B32BBA3F3C00B1311E /* DigitalTwinsPageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EAE401A22BBA3D6100B1311E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401A32BBA3D6100B1311E /* DigitalTwinsOnboardingInteractorProtocol.swift */,
+				EAE401A42BBA3D6100B1311E /* DigitalTwinsOnboardingInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EAE401A52BBA3D6100B1311E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401A62BBA3D6100B1311E /* DigitalTwinsOnboardingRouter.swift */,
+				EAE401A72BBA3D6100B1311E /* DigitalTwinsOnboardingRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EAE401B52BBA451000B1311E /* DigitalTwinsMenu */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401BC2BBA452800B1311E /* Configuration */,
+				EAE401C22BBA452800B1311E /* Domain */,
+				EAE401C52BBA452900B1311E /* Module */,
+			);
+			path = DigitalTwinsMenu;
+			sourceTree = "<group>";
+		};
+		EAE401BC2BBA452800B1311E /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401BD2BBA452800B1311E /* Route */,
+				EAE401BF2BBA452800B1311E /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EAE401BD2BBA452800B1311E /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401BE2BBA452800B1311E /* DigitalTwinsMenuRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EAE401BF2BBA452800B1311E /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401C02BBA452800B1311E /* DigitalTwinsMenuAssembler.swift */,
+				EAE401C12BBA452800B1311E /* DigitalTwinsMenuAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		EAE401C22BBA452800B1311E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401C32BBA452800B1311E /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EAE401C32BBA452800B1311E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401C42BBA452800B1311E /* DigitalTwinsMenuModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EAE401C52BBA452900B1311E /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401C62BBA452900B1311E /* ViewModel */,
+				EAE401C92BBA452900B1311E /* View */,
+				EAE401CB2BBA452900B1311E /* Interactor */,
+				EAE401CE2BBA452900B1311E /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EAE401C62BBA452900B1311E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401C72BBA452900B1311E /* DigitalTwinsMenuViewModel.swift */,
+				EAE401C82BBA452900B1311E /* DigitalTwinsMenuViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EAE401C92BBA452900B1311E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401CA2BBA452900B1311E /* DigitalTwinsMenuView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EAE401CB2BBA452900B1311E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401CC2BBA452900B1311E /* DigitalTwinsMenuInteractorProtocol.swift */,
+				EAE401CD2BBA452900B1311E /* DigitalTwinsMenuInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EAE401CE2BBA452900B1311E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401CF2BBA452900B1311E /* DigitalTwinsMenuRouterProtocol.swift */,
+				EAE401D02BBA452900B1311E /* DigitalTwinsMenuRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		EAE8EC192B9574830003AE96 /* ChatDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -8763,6 +9008,7 @@
 				EAD048732AE22C530096E6AB /* RegistrationPlansAssemblerProtocol.swift in Sources */,
 				EAF47B4E2B82F7EA003F8B86 /* VideocallOnboardingViewModel.swift in Sources */,
 				EA86532C2B90E9CA00B86A54 /* AIOnboardingRouter.swift in Sources */,
+				EAE401AE2BBA3D6100B1311E /* DigitalTwinsOnboardingView.swift in Sources */,
 				EA6083DC2B01DBDF00295069 /* GalleryPhotosInteractor.swift in Sources */,
 				EA4A1C8F2B8799B400B5FC59 /* RuralDroneOnboardingRouter.swift in Sources */,
 				EA20A5142B87C913006662FA /* Scan3DMenuAssemblerProtocol.swift in Sources */,
@@ -8783,6 +9029,7 @@
 				EA4A1C1E2B87799100B5FC59 /* AvailableAssistantsAssemblerProtocol.swift in Sources */,
 				EA94A5322B7160EF00EC3037 /* ServiceDetailsInteractorProtocol.swift in Sources */,
 				EA910FC62ADC495700584B98 /* TabBarAssemblerProtocol.swift in Sources */,
+				EAE401AD2BBA3D6100B1311E /* DigitalTwinsOnboardingViewModelProtocol.swift in Sources */,
 				EA4A1C672B87909F00B5FC59 /* ExternalAssistantInteractorProtocol.swift in Sources */,
 				56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */,
 				EAF47C842B839308003F8B86 /* FlightMenuViewModelProtocol.swift in Sources */,
@@ -8791,6 +9038,7 @@
 				EA86526C2B90AC8300B86A54 /* IOTMenuRouterProtocol.swift in Sources */,
 				EA910FA22ADC466400584B98 /* WCTabBarItem.swift in Sources */,
 				EA910FCE2ADC495700584B98 /* TabBarRouter.swift in Sources */,
+				EAE401B22BBA3D6100B1311E /* DigitalTwinsOnboardingRouterProtocol.swift in Sources */,
 				EA4165442AE706C6008CE66A /* NotificationsInteractorProtocol.swift in Sources */,
 				EA6083682B01981800295069 /* CryptoDetailsRouter.swift in Sources */,
 				EA15B5B22AD7072400C03407 /* SnackBarModifier.swift in Sources */,
@@ -8829,6 +9077,7 @@
 				EA172AF62AF06BDE00EB1514 /* ConfirmMailRoute.swift in Sources */,
 				EA910F942ADA06F500584B98 /* RegistrationRouter.swift in Sources */,
 				EA60838D2B01CD0A00295069 /* ShopTabModel.swift in Sources */,
+				EAE401B02BBA3D6100B1311E /* DigitalTwinsOnboardingInteractor.swift in Sources */,
 				EA4165412AE706C6008CE66A /* NotificationsViewModelProtocol.swift in Sources */,
 				EAF47C142B830C80003F8B86 /* WalkyCammerListAssemblerProtocol.swift in Sources */,
 				EA1FD1BF2B1E932F000E583D /* VideoCallRoomRouterProtocol.swift in Sources */,
@@ -8855,6 +9104,7 @@
 				EA20A5602B87D35B006662FA /* ShareSheetAssembler.swift in Sources */,
 				EAB63BBE2B83D6390017BDA4 /* ARHandsMenuView.swift in Sources */,
 				56A552582B2F6E3D006B1B17 /* StreetCamMenuViewModel.swift in Sources */,
+				EAE401D22BBA452900B1311E /* DigitalTwinsMenuAssembler.swift in Sources */,
 				EA910F952ADA06F500584B98 /* RegistrationRouterProtocol.swift in Sources */,
 				EAF47B9F2B82FFF2003F8B86 /* CalendarTabInteractorProtocol.swift in Sources */,
 				EA282E542AE952F700B90920 /* ProfileModel.swift in Sources */,
@@ -9070,10 +9320,12 @@
 				EA86528B2B90ACC200B86A54 /* IOTOnboardingAssembler.swift in Sources */,
 				EA8EF8DA2B67E24400136D1F /* KeychainError.swift in Sources */,
 				EA910FC82ADC495700584B98 /* TabBarViewModelProtocol.swift in Sources */,
+				EAE401D82BBA452900B1311E /* DigitalTwinsMenuInteractorProtocol.swift in Sources */,
 				EA8653022B90E0FB00B86A54 /* LidarOnboardingView.swift in Sources */,
 				EA20A4EA2B87C3B4006662FA /* Scan3DOnboardingView.swift in Sources */,
 				EAE8EC542B9574840003AE96 /* ChatListViewModel.swift in Sources */,
 				EA910F8E2ADA06F500584B98 /* RegistrationViewModel.swift in Sources */,
+				EAE401D62BBA452900B1311E /* DigitalTwinsMenuViewModelProtocol.swift in Sources */,
 				EA6083462AFD58A900295069 /* CryptoTabRouterProtocol.swift in Sources */,
 				EA8652DC2B90DCE900B86A54 /* PrintMenuViewModel.swift in Sources */,
 				EA282ED02AEB531100B90920 /* FunctionsRouter.swift in Sources */,
@@ -9145,6 +9397,7 @@
 				EA282E7C2AE9F14B00B90920 /* WCToggleStyle.swift in Sources */,
 				EA4A1C412B8788DB00B5FC59 /* SpecialistNotifiedView.swift in Sources */,
 				EA15B5B02AD7071300C03407 /* SheetModifier.swift in Sources */,
+				EAE401AA2BBA3D6100B1311E /* DigitalTwinsOnboardingAssembler.swift in Sources */,
 				EA50A0902B0BCC940042B238 /* PlanPageView.swift in Sources */,
 				EA8652B92B90DA9600B86A54 /* 3DPrintOnboardingInteractor.swift in Sources */,
 				EAA1E6422AFB03FD00A42174 /* CashTabInteractor.swift in Sources */,
@@ -9168,6 +9421,7 @@
 				56A5525E2B2F6E3D006B1B17 /* StreetCamMenuRouter.swift in Sources */,
 				EA5E1D9A2AD883D800738A8F /* Text+Extension.swift in Sources */,
 				EA9110192ADDADE100584B98 /* HomeViewModelProtocol.swift in Sources */,
+				EAE401D32BBA452900B1311E /* DigitalTwinsMenuAssemblerProtocol.swift in Sources */,
 				56A552352B2F6135006B1B17 /* WalkyCamerOnboardingRouterProtocol.swift in Sources */,
 				561FC8C72B5C6854005B6006 /* ErrorProtocol.swift in Sources */,
 				EACFDF192BA7EF3E00B08990 /* UnreleasedFeatureInteractor.swift in Sources */,
@@ -9194,6 +9448,7 @@
 				EA282E602AE9A10600B90920 /* ImageMock.swift in Sources */,
 				EA1FD1C22B1E932F000E583D /* VideoCallRoomAssembler.swift in Sources */,
 				56A552332B2F6135006B1B17 /* WalkyCamerOnboardingInteractorProtocol.swift in Sources */,
+				EAE401D52BBA452900B1311E /* DigitalTwinsMenuViewModel.swift in Sources */,
 				EA8EF8DB2B67E24400136D1F /* KeychainProtocol.swift in Sources */,
 				EAF47BEC2B83099F003F8B86 /* MapTabRoute.swift in Sources */,
 				EA6083E02B01DBE000295069 /* GalleryPhotosRoute.swift in Sources */,
@@ -9222,6 +9477,7 @@
 				EA86523D2B902E4B00B86A54 /* FunctionMenuViewModelProtocol.swift in Sources */,
 				EAE8EC5F2B9576E50003AE96 /* AppDelegate+Chat.swift in Sources */,
 				EADB5CAD2B190819005863E1 /* VideoCallRouter.swift in Sources */,
+				EAE401B42BBA3F3C00B1311E /* DigitalTwinsPageView.swift in Sources */,
 				EA20A5622B87D35B006662FA /* ShareSheetViewModel.swift in Sources */,
 				EA57A7CB2B6C2C31006247DD /* AddPeopleTransmissionRoute.swift in Sources */,
 				EA57A7AE2B6C1C9B006247DD /* FooterView.swift in Sources */,
@@ -9229,6 +9485,7 @@
 				EA06554C2BB5DA5D006148E7 /* RadarMenuViewModel.swift in Sources */,
 				EA910F362AD976F600584B98 /* CheckboxToggle.swift in Sources */,
 				EA6083932B01CD0A00295069 /* ShopTabRouterProtocol.swift in Sources */,
+				EAE401D92BBA452900B1311E /* DigitalTwinsMenuInteractor.swift in Sources */,
 				EAA1E6412AFB03FD00A42174 /* CashTabInteractorProtocol.swift in Sources */,
 				EA0655472BB5DA5D006148E7 /* RadarMenuRoute.swift in Sources */,
 				EAB63B982B83D2ED0017BDA4 /* ARHandsOnboardingView.swift in Sources */,
@@ -9258,6 +9515,7 @@
 				56A552552B2F6E3D006B1B17 /* StreetCamMenuRoute.swift in Sources */,
 				EA6083E22B01DBE000295069 /* GalleryPhotosAssembler.swift in Sources */,
 				EA910F932ADA06F500584B98 /* RegistrationInteractorProtocol.swift in Sources */,
+				EAE401AB2BBA3D6100B1311E /* DigitalTwinsOnboardingAssemblerProtocol.swift in Sources */,
 				EA1FD1BA2B1E932F000E583D /* VideoCallRoomViewModelProtocol.swift in Sources */,
 				EA5E1D842AD7183700738A8F /* RoundedCornerShape.swift in Sources */,
 				EA282EDA2AEB56B800B90920 /* FunctionData.swift in Sources */,
@@ -9318,12 +9576,15 @@
 				EA3E5C962B87692400158207 /* AssistantMenuView.swift in Sources */,
 				EA0655502BB5DA5D006148E7 /* RadarMenuRouterProtocol.swift in Sources */,
 				EA8653072B90E0FB00B86A54 /* LidarOnboardingRoute.swift in Sources */,
+				EAE401B12BBA3D6100B1311E /* DigitalTwinsOnboardingRouter.swift in Sources */,
+				EAE401D42BBA452900B1311E /* DigitalTwinsMenuModel.swift in Sources */,
 				EA57A7CC2B6C2C31006247DD /* AddPeopleTransmissionAssemblerProtocol.swift in Sources */,
 				EA282E112AE8327100B90920 /* DateFormat.swift in Sources */,
 				EA4A1C172B87799100B5FC59 /* AvailableAssistantsView.swift in Sources */,
 				EA0E408F2AF69771002B7437 /* CashWalletOnboardingInteractor.swift in Sources */,
 				EA8653032B90E0FB00B86A54 /* LidarOnboardingInteractorProtocol.swift in Sources */,
 				EAB63BC22B83D63A0017BDA4 /* ARHandsMenuRouterProtocol.swift in Sources */,
+				EAE401D72BBA452900B1311E /* DigitalTwinsMenuView.swift in Sources */,
 				EAF47B752B82FCE8003F8B86 /* BookWalkycamerViewModelProtocol.swift in Sources */,
 				EA50A08B2B0BC77F0042B238 /* PlansPagesRouter.swift in Sources */,
 				EA8652B42B90DA9600B86A54 /* 3DPrintOnboardingAssemblerProtocol.swift in Sources */,
@@ -9347,8 +9608,10 @@
 				EA8EF8D02B67E12400136D1F /* UserSessionProtocol.swift in Sources */,
 				EAD048712AE22C530096E6AB /* RegistrationPlansRoute.swift in Sources */,
 				EA910F8D2ADA06F500584B98 /* RegistrationAssembler.swift in Sources */,
+				EAE401D12BBA452900B1311E /* DigitalTwinsMenuRoute.swift in Sources */,
 				EAE8EC492B9574840003AE96 /* ChatDetailViewModel.swift in Sources */,
 				EA4AE48B2B7505D100B5A89F /* TabBarInteractorProtocol.swift in Sources */,
+				EAE401AF2BBA3D6100B1311E /* DigitalTwinsOnboardingInteractorProtocol.swift in Sources */,
 				EAF47BCE2B8306E9003F8B86 /* TimeTabAssembler.swift in Sources */,
 				EA6083942B01CD0A00295069 /* ShopTabRouter.swift in Sources */,
 				56FEECF72B5C802C003FA686 /* SearchWalkyCammerInteractor.swift in Sources */,
@@ -9376,6 +9639,7 @@
 				EA8652462B902E4B00B86A54 /* FunctionMenuAssemblerProtocol.swift in Sources */,
 				56A552342B2F6135006B1B17 /* WalkyCamerOnboardingRouter.swift in Sources */,
 				EA910F2E2AD8B14C00584B98 /* WCUIButton.swift in Sources */,
+				EAE401DB2BBA452900B1311E /* DigitalTwinsMenuRouter.swift in Sources */,
 				EA7219982B05612900BE2D93 /* WalkyBotViewModelProtocol.swift in Sources */,
 				EA0E408E2AF69771002B7437 /* CashWalletOnboardingView.swift in Sources */,
 				EA8652442B902E4B00B86A54 /* FunctionMenuRoute.swift in Sources */,
@@ -9425,6 +9689,7 @@
 				EA86537E2B90FA8800B86A54 /* AIMenuRouterProtocol.swift in Sources */,
 				EA86526D2B90AC8300B86A54 /* IOTMenuRouter.swift in Sources */,
 				EA3E5C952B87692400158207 /* AssistantMenuViewModel.swift in Sources */,
+				EAE401A82BBA3D6100B1311E /* DigitalTwinsOnboardingModel.swift in Sources */,
 				EAE8EC522B9574840003AE96 /* ChatListAssemblerProtocol.swift in Sources */,
 				EA20A5172B87C913006662FA /* Scan3DMenuView.swift in Sources */,
 				EA86532B2B90E9CA00B86A54 /* AIOnboardingRouterProtocol.swift in Sources */,
@@ -9439,6 +9704,7 @@
 				EA4165432AE706C6008CE66A /* NotificationsView.swift in Sources */,
 				EAF47C192B830C80003F8B86 /* WalkyCammerListInteractor.swift in Sources */,
 				56FEECF92B5C802C003FA686 /* SearchWalkyCammerRouterProtocol.swift in Sources */,
+				EAE401AC2BBA3D6100B1311E /* DigitalTwinsOnboardingViewModel.swift in Sources */,
 				EA15B5982AD6E44D00C03407 /* LoginViewModelProtocol.swift in Sources */,
 				EA57A7822B6BFD09006247DD /* CammerData.swift in Sources */,
 				EAB63B922B83D2ED0017BDA4 /* ARHandsOnboardingRoute.swift in Sources */,
@@ -9473,6 +9739,7 @@
 				EA4165462AE706C6008CE66A /* NotificationsRouter.swift in Sources */,
 				56FEECEF2B5C802C003FA686 /* SearchWalkyCammerRoute.swift in Sources */,
 				EA8652DA2B90DCE900B86A54 /* PrintMenuAssembler.swift in Sources */,
+				EAE401DA2BBA452900B1311E /* DigitalTwinsMenuRouterProtocol.swift in Sources */,
 				EA0E40BE2AF70E86002B7437 /* CashWalletInteractorProtocol.swift in Sources */,
 				56FEECF32B5C802C003FA686 /* SearchWalkyCammerViewModel.swift in Sources */,
 				EA1FD1B92B1E932F000E583D /* VideoCallRoomViewModel.swift in Sources */,
@@ -9489,6 +9756,7 @@
 				EA3E5C902B87692400158207 /* AssistantMenuRoute.swift in Sources */,
 				EA86532A2B90E9CA00B86A54 /* AIOnboardingInteractorProtocol.swift in Sources */,
 				EA8652922B90ACC200B86A54 /* IOTOnboardingRouterProtocol.swift in Sources */,
+				EAE401A92BBA3D6100B1311E /* DigitalTwinsOnboardingRoute.swift in Sources */,
 				EAF47B792B82FCE8003F8B86 /* BookWalkycamerInteractorProtocol.swift in Sources */,
 				56A5525F2B2F6E3D006B1B17 /* StreetCamMenuModel.swift in Sources */,
 				EA60838F2B01CD0A00295069 /* ShopTabViewModel.swift in Sources */,

@@ -65,8 +65,8 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
                                 FunctionCell(title: item.title, icon: item.icon, lastItem: false)
                                     .onTapGesture {
                                         switch item.title {
-//                                            case "Digital Twins":
-//                                                router.routeToDrone()
+                                            case "Digital Twins":
+                                                router.routeToDigitalTwins()
                                         case "IOT applications & Data Analysis":
                                             router.routeToIOT()
                                         case "3D Printer":

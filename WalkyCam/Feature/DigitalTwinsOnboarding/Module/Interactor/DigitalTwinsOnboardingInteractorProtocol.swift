@@ -1,0 +1,3 @@
+protocol DigitalTwinsOnboardingInteractorProtocol {
+    func someFunction()
+}

@@ -59,6 +59,13 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
         )
     }
 
+    func routeToDigitalTwins() {
+        let seenOnboarding: Bool = (try? UserSession().user().configurations.digitalTwins) ?? false
+        navigateTo(
+            seenOnboarding ? DigitalTwinsMenuRoute(isPresented: isNavigating) : DigitalTwinsOnboardingRoute(isPresented: isNavigating)
+        )
+    }
+
     func routeToNFT() {
         navigateTo(
             UnreleasedFeatureRoute(

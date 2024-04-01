@@ -176,6 +176,7 @@ internal enum Asset {
     }
   }
   internal enum Fondos {
+    internal static let digitalTwinsfondo = ImageAsset(name: "digitalTwinsfondo")
     internal static let droneFondo = ImageAsset(name: "drone_fondo")
     internal static let loginFondo = ImageAsset(name: "login_fondo")
     internal static let planFondo = ImageAsset(name: "plan_fondo")
@@ -283,6 +284,8 @@ internal enum Asset {
     internal static let _3dModelingRafiki1 = ImageAsset(name: "3d modeling-rafiki 1")
     internal static let asistenteRemoto = ImageAsset(name: "Asistente Remoto")
     internal static let cropMonitoringViaMobileDevice = ImageAsset(name: "Crop monitoring via mobile device")
+    internal static let dt1Onboarding = ImageAsset(name: "DT1_onboarding")
+    internal static let dt2OnboardingPdf = ImageAsset(name: "DT2_onboarding.pdf")
     internal static let dataExtractionPana1 = ImageAsset(name: "Data extraction-pana 1")
     internal static let farmerUsingSmartFarmApplication = ImageAsset(name: "Farmer using smart farm application")
     internal static let farmingUsingAutonomousCultivator = ImageAsset(name: "Farming using autonomous Cultivator")

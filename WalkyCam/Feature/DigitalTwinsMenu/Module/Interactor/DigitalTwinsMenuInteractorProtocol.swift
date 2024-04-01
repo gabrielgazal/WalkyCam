@@ -1,0 +1,3 @@
+protocol DigitalTwinsMenuInteractorProtocol {
+    func someFunction()
+}

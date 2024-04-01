@@ -11,6 +11,7 @@ protocol FunctionsRouterProtocol: Router {
     func routeTo3DPrinting()
     func routeToAI()
     func routeToNFT()
+    func routeToDigitalTwins()
 
     func routeToRadar()
     func routeToROV()
