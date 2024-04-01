@@ -112,6 +112,20 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
                                     router.routeToROV()
                                 case "Backpack Screen Advertising":
                                     router.routeToScreenAd()
+                                case "Robótica":
+                                    router.routeToRobot()
+                                case "LIDAR Scan":
+                                    router.routeToLidar()
+                                case "Engineering (Consulting only)":
+                                    router.routeToConsulting()
+                                case "Lawyer (Consulting only)":
+                                    router.routeToLawConsulting()
+                                case "Link to CRM/ERP":
+                                    router.routeToCRM()
+                                case "Ecografia":
+                                    router.routeToEcografia()
+                                case "Detector de metales":
+                                    router.routeToDetectorMetales()
                                 default: break
                                 }
                             }

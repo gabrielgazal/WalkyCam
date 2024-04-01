@@ -1,0 +1,3 @@
+protocol RobotMenuInteractorProtocol {
+    func someFunction()
+}

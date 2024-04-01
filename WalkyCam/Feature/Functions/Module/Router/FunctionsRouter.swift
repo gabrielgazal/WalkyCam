@@ -66,6 +66,12 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
         )
     }
 
+    func routeToLidar() {
+        navigateTo(
+            LidarOnboardingRoute(isPresented: isNavigating)
+        )
+    }
+
     func routeToNFT() {
         navigateTo(
             UnreleasedFeatureRoute(
@@ -88,6 +94,12 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
     func routeToRadar() {
         navigateTo(
             RadarMenuRoute(isPresented: isNavigating)
+        )
+    }
+
+    func routeToRobot() {
+        navigateTo(
+            RobotMenuRoute(isPresented: isNavigating)
         )
     }
 
@@ -174,6 +186,183 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
                     Asset.Banners.DrugTest.drugTest15.name,
                     Asset.Banners.DrugTest.drugTest16.name,
                     Asset.Banners.DrugTest.drugTest17.name
+                ]
+            )
+        )
+    }
+
+    func routeToCamera360() {
+        navigateTo(
+            UnreleasedFeatureRoute(
+                isPresented: isNavigating,
+                banners: [
+                    Asset.Banners.Camera360.camera3601.name,
+                    Asset.Banners.Camera360.camera3602.name,
+                    Asset.Banners.Camera360.camera3603.name,
+                    Asset.Banners.Camera360.camera3604.name,
+                    Asset.Banners.Camera360.camera3605.name,
+                    Asset.Banners.Camera360.camera3606.name,
+                    Asset.Banners.Camera360.camera3607.name,
+                    Asset.Banners.Camera360.camera3608.name,
+                    Asset.Banners.Camera360.camera3609.name,
+                    Asset.Banners.Camera360.camera36010.name,
+                    Asset.Banners.Camera360.camera36011.name,
+                    Asset.Banners.Camera360.camera36012.name,
+                    Asset.Banners.Camera360.camera36013.name,
+                    Asset.Banners.Camera360.camera36014.name,
+                    Asset.Banners.Camera360.camera36015.name,
+                    Asset.Banners.Camera360.camera36016.name,
+                    Asset.Banners.Camera360.camera36017.name,
+                    Asset.Banners.Camera360.camera36018.name,
+                    Asset.Banners.Camera360.camera36019.name,
+                    Asset.Banners.Camera360.camera36020.name,
+                    Asset.Banners.Camera360.camera36021.name,
+                    Asset.Banners.Camera360.camera36022.name,
+                    Asset.Banners.Camera360.camera36023.name
+                ]
+            )
+        )
+    }
+
+    func routeToConsulting() {
+        navigateTo(
+            UnreleasedFeatureRoute(
+                isPresented: isNavigating,
+                banners: [
+                    Asset.Banners.Consulting.consulting1.name,
+                    Asset.Banners.Consulting.consulting2.name,
+                    Asset.Banners.Consulting.consulting3.name,
+                    Asset.Banners.Consulting.consulting4.name,
+                    Asset.Banners.Consulting.consulting5.name,
+                    Asset.Banners.Consulting.consulting6.name,
+                    Asset.Banners.Consulting.consulting7.name,
+                    Asset.Banners.Consulting.consulting8.name,
+                    Asset.Banners.Consulting.consulting9.name,
+                    Asset.Banners.Consulting.consulting10.name,
+                    Asset.Banners.Consulting.consulting11.name,
+                    Asset.Banners.Consulting.consulting12.name,
+                    Asset.Banners.Consulting.consulting13.name,
+                    Asset.Banners.Consulting.consulting14.name
+                ]
+            )
+        )
+    }
+
+    func routeToCRM() {
+        navigateTo(
+            UnreleasedFeatureRoute(
+                isPresented: isNavigating,
+                banners: [
+                    Asset.Banners.Crm.crm1.name,
+                    Asset.Banners.Crm.crm2.name,
+                    Asset.Banners.Crm.crm3.name,
+                    Asset.Banners.Crm.crm4.name,
+                    Asset.Banners.Crm.crm5.name,
+                    Asset.Banners.Crm.crm6.name
+                    ]
+            )
+        )
+    }
+
+    func routeToDetectorMetales() {
+        navigateTo(
+            UnreleasedFeatureRoute(
+                isPresented: isNavigating,
+                banners: [
+                    Asset.Banners.DetectorMetales.detectorMetales1.name,
+                    Asset.Banners.DetectorMetales.detectorMetales2.name,
+                    Asset.Banners.DetectorMetales.detectorMetales3.name,
+                    Asset.Banners.DetectorMetales.detectorMetales4.name,
+                    Asset.Banners.DetectorMetales.detectorMetales5.name,
+                    Asset.Banners.DetectorMetales.detectorMetales6.name,
+                    Asset.Banners.DetectorMetales.detectorMetales7.name,
+                    Asset.Banners.DetectorMetales.detectorMetales8.name,
+                    Asset.Banners.DetectorMetales.detectorMetales9.name,
+                    Asset.Banners.DetectorMetales.detectorMetales10.name,
+                    Asset.Banners.DetectorMetales.detectorMetales11.name,
+                    Asset.Banners.DetectorMetales.detectorMetales12.name,
+                    Asset.Banners.DetectorMetales.detectorMetales13.name,
+                    Asset.Banners.DetectorMetales.detectorMetales14.name,
+                    Asset.Banners.DetectorMetales.detectorMetales15.name,
+                    Asset.Banners.DetectorMetales.detectorMetales16.name,
+                    Asset.Banners.DetectorMetales.detectorMetales17.name
+                ]
+            )
+        )
+    }
+
+    func routeToEcografia() {
+        navigateTo(
+            UnreleasedFeatureRoute(
+                isPresented: isNavigating,
+                banners: [
+                    Asset.Banners.Ecografia.ecografia1.name,
+                    Asset.Banners.Ecografia.ecografia2.name,
+                    Asset.Banners.Ecografia.ecografia3.name,
+                    Asset.Banners.Ecografia.ecografia4.name,
+                    Asset.Banners.Ecografia.ecografia5.name,
+                    Asset.Banners.Ecografia.ecografia6.name,
+                    Asset.Banners.Ecografia.ecografia7.name,
+                    Asset.Banners.Ecografia.ecografia8.name,
+                    Asset.Banners.Ecografia.ecografia9.name,
+                    Asset.Banners.Ecografia.ecografia10.name,
+                    Asset.Banners.Ecografia.ecografia11.name,
+                    Asset.Banners.Ecografia.ecografia12.name,
+                    Asset.Banners.Ecografia.ecografia13.name,
+                    Asset.Banners.Ecografia.ecografia14.name,
+                    Asset.Banners.Ecografia.ecografia15.name,
+                    Asset.Banners.Ecografia.ecografia16.name
+                ]
+            )
+        )
+    }
+
+    func routeToRecording() {
+        navigateTo(
+            UnreleasedFeatureRoute(
+                isPresented: isNavigating,
+                banners: [
+                    Asset.Banners.Recording.recording1.name,
+                    Asset.Banners.Recording.recording2.name,
+                    Asset.Banners.Recording.recording3.name,
+                    Asset.Banners.Recording.recording4.name,
+                    Asset.Banners.Recording.recording5.name,
+                    Asset.Banners.Recording.recording6.name,
+                    Asset.Banners.Recording.recording7.name,
+                    Asset.Banners.Recording.recording8.name,
+                    Asset.Banners.Recording.recording9.name,
+                    Asset.Banners.Recording.recording10.name,
+                    Asset.Banners.Recording.recording11.name,
+                    Asset.Banners.Recording.recording12.name,
+                    Asset.Banners.Recording.recording13.name,
+                    Asset.Banners.Recording.recording14.name,
+                    Asset.Banners.Recording.recording15.name,
+                    Asset.Banners.Recording.recording16.name,
+                    Asset.Banners.Recording.recording17.name,
+                    Asset.Banners.Recording.recording18.name
+                ]
+            )
+        )
+    }
+
+    func routeToLawConsulting() {
+        navigateTo(
+            UnreleasedFeatureRoute(
+                isPresented: isNavigating,
+                banners: [
+                    Asset.Banners.LawConsulting.lawConsulting1.name,
+                    Asset.Banners.LawConsulting.lawConsulting2.name,
+                    Asset.Banners.LawConsulting.lawConsulting3.name,
+                    Asset.Banners.LawConsulting.lawConsulting4.name,
+                    Asset.Banners.LawConsulting.lawConsulting5.name,
+                    Asset.Banners.LawConsulting.lawConsulting6.name,
+                    Asset.Banners.LawConsulting.lawConsulting7.name,
+                    Asset.Banners.LawConsulting.lawConsulting8.name,
+                    Asset.Banners.LawConsulting.lawConsulting9.name,
+                    Asset.Banners.LawConsulting.lawConsulting10.name,
+                    Asset.Banners.LawConsulting.lawConsulting11.name,
+                    Asset.Banners.LawConsulting.lawConsulting12.name,
+                    Asset.Banners.LawConsulting.lawConsulting13.name
                 ]
             )
         )

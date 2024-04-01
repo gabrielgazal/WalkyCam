@@ -32,7 +32,7 @@ struct UnreleasedFeatureView<ViewModel:UnreleasedFeatureViewModelProtocol, Route
                 }
                 .accentColor(.naranja)
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-                .padding(.vertical, Tokens.Size.Spacing.regular)
+                .padding(.vertical, Tokens.Size.Spacing.small)
                 Asset.Illustrations.preview.swiftUIImage
                     .resizable()
                     .scaledToFit()

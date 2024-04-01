@@ -737,6 +737,17 @@
 		EAE401D92BBA452900B1311E /* DigitalTwinsMenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401CD2BBA452900B1311E /* DigitalTwinsMenuInteractor.swift */; };
 		EAE401DA2BBA452900B1311E /* DigitalTwinsMenuRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401CF2BBA452900B1311E /* DigitalTwinsMenuRouterProtocol.swift */; };
 		EAE401DB2BBA452900B1311E /* DigitalTwinsMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401D02BBA452900B1311E /* DigitalTwinsMenuRouter.swift */; };
+		EAE401F82BBAFB0900B1311E /* RobotMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401E52BBAFB0800B1311E /* RobotMenuModel.swift */; };
+		EAE401F92BBAFB0900B1311E /* RobotMenuViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401E82BBAFB0900B1311E /* RobotMenuViewModelProtocol.swift */; };
+		EAE401FA2BBAFB0900B1311E /* RobotMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401E92BBAFB0900B1311E /* RobotMenuViewModel.swift */; };
+		EAE401FB2BBAFB0900B1311E /* RobotMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401EB2BBAFB0900B1311E /* RobotMenuView.swift */; };
+		EAE401FC2BBAFB0900B1311E /* RobotMenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401ED2BBAFB0900B1311E /* RobotMenuInteractor.swift */; };
+		EAE401FD2BBAFB0900B1311E /* RobotMenuInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401EE2BBAFB0900B1311E /* RobotMenuInteractorProtocol.swift */; };
+		EAE401FE2BBAFB0900B1311E /* RobotMenuRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401F02BBAFB0900B1311E /* RobotMenuRouterProtocol.swift */; };
+		EAE401FF2BBAFB0900B1311E /* RobotMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401F12BBAFB0900B1311E /* RobotMenuRouter.swift */; };
+		EAE402002BBAFB0900B1311E /* RobotMenuRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401F42BBAFB0900B1311E /* RobotMenuRoute.swift */; };
+		EAE402012BBAFB0900B1311E /* RobotMenuAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401F62BBAFB0900B1311E /* RobotMenuAssemblerProtocol.swift */; };
+		EAE402022BBAFB0900B1311E /* RobotMenuAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE401F72BBAFB0900B1311E /* RobotMenuAssembler.swift */; };
 		EAE8EC452B9574840003AE96 /* ChatDetailRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE8EC1C2B9574830003AE96 /* ChatDetailRoute.swift */; };
 		EAE8EC462B9574840003AE96 /* ChatDetailAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE8EC1E2B9574830003AE96 /* ChatDetailAssemblerProtocol.swift */; };
 		EAE8EC472B9574840003AE96 /* ChatDetailAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE8EC1F2B9574830003AE96 /* ChatDetailAssembler.swift */; };
@@ -1603,6 +1614,17 @@
 		EAE401CD2BBA452900B1311E /* DigitalTwinsMenuInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalTwinsMenuInteractor.swift; sourceTree = "<group>"; };
 		EAE401CF2BBA452900B1311E /* DigitalTwinsMenuRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalTwinsMenuRouterProtocol.swift; sourceTree = "<group>"; };
 		EAE401D02BBA452900B1311E /* DigitalTwinsMenuRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalTwinsMenuRouter.swift; sourceTree = "<group>"; };
+		EAE401E52BBAFB0800B1311E /* RobotMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotMenuModel.swift; sourceTree = "<group>"; };
+		EAE401E82BBAFB0900B1311E /* RobotMenuViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotMenuViewModelProtocol.swift; sourceTree = "<group>"; };
+		EAE401E92BBAFB0900B1311E /* RobotMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotMenuViewModel.swift; sourceTree = "<group>"; };
+		EAE401EB2BBAFB0900B1311E /* RobotMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotMenuView.swift; sourceTree = "<group>"; };
+		EAE401ED2BBAFB0900B1311E /* RobotMenuInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotMenuInteractor.swift; sourceTree = "<group>"; };
+		EAE401EE2BBAFB0900B1311E /* RobotMenuInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotMenuInteractorProtocol.swift; sourceTree = "<group>"; };
+		EAE401F02BBAFB0900B1311E /* RobotMenuRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotMenuRouterProtocol.swift; sourceTree = "<group>"; };
+		EAE401F12BBAFB0900B1311E /* RobotMenuRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotMenuRouter.swift; sourceTree = "<group>"; };
+		EAE401F42BBAFB0900B1311E /* RobotMenuRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotMenuRoute.swift; sourceTree = "<group>"; };
+		EAE401F62BBAFB0900B1311E /* RobotMenuAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotMenuAssemblerProtocol.swift; sourceTree = "<group>"; };
+		EAE401F72BBAFB0900B1311E /* RobotMenuAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotMenuAssembler.swift; sourceTree = "<group>"; };
 		EAE8EC1C2B9574830003AE96 /* ChatDetailRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatDetailRoute.swift; sourceTree = "<group>"; };
 		EAE8EC1E2B9574830003AE96 /* ChatDetailAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatDetailAssemblerProtocol.swift; sourceTree = "<group>"; };
 		EAE8EC1F2B9574830003AE96 /* ChatDetailAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatDetailAssembler.swift; sourceTree = "<group>"; };
@@ -2490,6 +2512,7 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				EAE401DC2BBAFAC100B1311E /* RobotMenu */,
 				EAE401B52BBA451000B1311E /* DigitalTwinsMenu */,
 				EAE4018C2BBA3CB100B1311E /* DigitalTwinsOnboarding */,
 				EA06552B2BB5DA45006148E7 /* RadarMenu */,
@@ -7752,6 +7775,104 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		EAE401DC2BBAFAC100B1311E /* RobotMenu */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401F22BBAFB0900B1311E /* Configuration */,
+				EAE401E32BBAFB0800B1311E /* Domain */,
+				EAE401E62BBAFB0900B1311E /* Module */,
+			);
+			path = RobotMenu;
+			sourceTree = "<group>";
+		};
+		EAE401E32BBAFB0800B1311E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401E42BBAFB0800B1311E /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EAE401E42BBAFB0800B1311E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401E52BBAFB0800B1311E /* RobotMenuModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EAE401E62BBAFB0900B1311E /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401E72BBAFB0900B1311E /* ViewModel */,
+				EAE401EA2BBAFB0900B1311E /* View */,
+				EAE401EC2BBAFB0900B1311E /* Interactor */,
+				EAE401EF2BBAFB0900B1311E /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EAE401E72BBAFB0900B1311E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401E82BBAFB0900B1311E /* RobotMenuViewModelProtocol.swift */,
+				EAE401E92BBAFB0900B1311E /* RobotMenuViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EAE401EA2BBAFB0900B1311E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401EB2BBAFB0900B1311E /* RobotMenuView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EAE401EC2BBAFB0900B1311E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401ED2BBAFB0900B1311E /* RobotMenuInteractor.swift */,
+				EAE401EE2BBAFB0900B1311E /* RobotMenuInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EAE401EF2BBAFB0900B1311E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401F02BBAFB0900B1311E /* RobotMenuRouterProtocol.swift */,
+				EAE401F12BBAFB0900B1311E /* RobotMenuRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EAE401F22BBAFB0900B1311E /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401F32BBAFB0900B1311E /* Route */,
+				EAE401F52BBAFB0900B1311E /* Assembler */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EAE401F32BBAFB0900B1311E /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401F42BBAFB0900B1311E /* RobotMenuRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		EAE401F52BBAFB0900B1311E /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				EAE401F62BBAFB0900B1311E /* RobotMenuAssemblerProtocol.swift */,
+				EAE401F72BBAFB0900B1311E /* RobotMenuAssembler.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
 		EAE8EC192B9574830003AE96 /* ChatDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -8998,6 +9119,7 @@
 			files = (
 				EA06554F2BB5DA5D006148E7 /* RadarMenuInteractorProtocol.swift in Sources */,
 				EA0E40BC2AF70E86002B7437 /* CashWalletViewModel.swift in Sources */,
+				EAE401FC2BBAFB0900B1311E /* RobotMenuInteractor.swift in Sources */,
 				EA910FF72ADCBCC000584B98 /* MenuView.swift in Sources */,
 				EAD048682AE22C530096E6AB /* RegistrationPlansModel.swift in Sources */,
 				EAE8EC5A2B9574840003AE96 /* ChatModel.swift in Sources */,
@@ -9030,6 +9152,7 @@
 				EA94A5322B7160EF00EC3037 /* ServiceDetailsInteractorProtocol.swift in Sources */,
 				EA910FC62ADC495700584B98 /* TabBarAssemblerProtocol.swift in Sources */,
 				EAE401AD2BBA3D6100B1311E /* DigitalTwinsOnboardingViewModelProtocol.swift in Sources */,
+				EAE401FA2BBAFB0900B1311E /* RobotMenuViewModel.swift in Sources */,
 				EA4A1C672B87909F00B5FC59 /* ExternalAssistantInteractorProtocol.swift in Sources */,
 				56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */,
 				EAF47C842B839308003F8B86 /* FlightMenuViewModelProtocol.swift in Sources */,
@@ -9102,6 +9225,7 @@
 				EA94A5312B7160EF00EC3037 /* ServiceDetailsView.swift in Sources */,
 				EAF47BCA2B8306E9003F8B86 /* TimeTabRouterProtocol.swift in Sources */,
 				EA20A5602B87D35B006662FA /* ShareSheetAssembler.swift in Sources */,
+				EAE402022BBAFB0900B1311E /* RobotMenuAssembler.swift in Sources */,
 				EAB63BBE2B83D6390017BDA4 /* ARHandsMenuView.swift in Sources */,
 				56A552582B2F6E3D006B1B17 /* StreetCamMenuViewModel.swift in Sources */,
 				EAE401D22BBA452900B1311E /* DigitalTwinsMenuAssembler.swift in Sources */,
@@ -9156,6 +9280,7 @@
 				EAF47B7D2B82FCE8003F8B86 /* BookWalkycamerAssembler.swift in Sources */,
 				EAA1E63B2AFB03FD00A42174 /* CashTabRoute.swift in Sources */,
 				EA8EF8DE2B67E24400136D1F /* KeychainPersistenceProtocol.swift in Sources */,
+				EAE401FF2BBAFB0900B1311E /* RobotMenuRouter.swift in Sources */,
 				EA910FF02ADCBCC000584B98 /* MenuRoute.swift in Sources */,
 				EAF47BF12B83099F003F8B86 /* MapTabView.swift in Sources */,
 				EA86537D2B90FA8800B86A54 /* AIMenuRouter.swift in Sources */,
@@ -9192,7 +9317,9 @@
 				EA15B5A92AD706AF00C03407 /* Route.swift in Sources */,
 				EA8652E12B90DCE900B86A54 /* PrintMenuRouterProtocol.swift in Sources */,
 				EA57A7A72B6C1558006247DD /* CammerDetailsRouterProtocol.swift in Sources */,
+				EAE401FE2BBAFB0900B1311E /* RobotMenuRouterProtocol.swift in Sources */,
 				56FEECF12B5C802C003FA686 /* SearchWalkyCammerAssemblerProtocol.swift in Sources */,
+				EAE401F92BBAFB0900B1311E /* RobotMenuViewModelProtocol.swift in Sources */,
 				EA94A5332B7160EF00EC3037 /* ServiceDetailsInteractor.swift in Sources */,
 				EA910FA62ADC48DE00584B98 /* WCTabBarContainerView.swift in Sources */,
 				EA910F672AD9B20600584B98 /* NavigationController+Extension.swift in Sources */,
@@ -9212,6 +9339,7 @@
 				EA8652B32B90DA9600B86A54 /* 3DPrintOnboardingAssembler.swift in Sources */,
 				EA1235182B99FF8C00443CF8 /* MessageObserver.swift in Sources */,
 				EA50A0862B0BC77F0042B238 /* PlansPagesViewModelProtocol.swift in Sources */,
+				EAE402012BBAFB0900B1311E /* RobotMenuAssemblerProtocol.swift in Sources */,
 				EA2E651F2BA8AE1C0092A135 /* SubscriptionIntentOutput.swift in Sources */,
 				EA4A1C422B8788DB00B5FC59 /* SpecialistNotifiedInteractorProtocol.swift in Sources */,
 				EA86528D2B90ACC200B86A54 /* IOTOnboardingViewModelProtocol.swift in Sources */,
@@ -9313,6 +9441,7 @@
 				EA3E5C942B87692400158207 /* AssistantMenuViewModelProtocol.swift in Sources */,
 				EA6083902B01CD0A00295069 /* ShopTabView.swift in Sources */,
 				EA06554E2BB5DA5D006148E7 /* RadarMenuInteractor.swift in Sources */,
+				EAE401FB2BBAFB0900B1311E /* RobotMenuView.swift in Sources */,
 				EA91102B2ADDB05300584B98 /* ImageLoader.swift in Sources */,
 				EA57A7A92B6C1558006247DD /* CammerDetailsRoute.swift in Sources */,
 				EAF47BED2B83099F003F8B86 /* MapTabAssemblerProtocol.swift in Sources */,
@@ -9391,6 +9520,7 @@
 				EA6083412AFD58A900295069 /* CryptoTabViewModelProtocol.swift in Sources */,
 				EAD0486D2AE22C530096E6AB /* RegistrationPlansInteractor.swift in Sources */,
 				EA5E1D782AD7170400738A8F /* LinkButton.swift in Sources */,
+				EAE401F82BBAFB0900B1311E /* RobotMenuModel.swift in Sources */,
 				EA8653292B90E9CA00B86A54 /* AIOnboardingInteractor.swift in Sources */,
 				EA4A1C182B87799100B5FC59 /* AvailableAssistantsInteractorProtocol.swift in Sources */,
 				EACFDF162BA7EF3E00B08990 /* UnreleasedFeatureViewModel.swift in Sources */,
@@ -9660,6 +9790,7 @@
 				EA8653002B90E0FB00B86A54 /* LidarOnboardingViewModelProtocol.swift in Sources */,
 				EA8653792B90FA8800B86A54 /* AIMenuViewModelProtocol.swift in Sources */,
 				EA86523C2B902E4B00B86A54 /* FunctionMenuViewModel.swift in Sources */,
+				EAE402002BBAFB0900B1311E /* RobotMenuRoute.swift in Sources */,
 				EAF47C882B839308003F8B86 /* FlightMenuInteractorProtocol.swift in Sources */,
 				EA6083422AFD58A900295069 /* CryptoTabView.swift in Sources */,
 				EAB63BC32B83D63A0017BDA4 /* ARHandsMenuRoute.swift in Sources */,
@@ -9700,6 +9831,7 @@
 				EA910F612AD9B01300584B98 /* OnboardingView.swift in Sources */,
 				EAF47BF52B83099F003F8B86 /* MapTabRouter.swift in Sources */,
 				EAA1E63D2AFB03FD00A42174 /* CashTabAssemblerProtocol.swift in Sources */,
+				EAE401FD2BBAFB0900B1311E /* RobotMenuInteractorProtocol.swift in Sources */,
 				EA57A7CF2B6C2C31006247DD /* AddPeopleTransmissionViewModel.swift in Sources */,
 				EA4165432AE706C6008CE66A /* NotificationsView.swift in Sources */,
 				EAF47C192B830C80003F8B86 /* WalkyCammerListInteractor.swift in Sources */,

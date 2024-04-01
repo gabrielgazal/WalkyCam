@@ -12,9 +12,18 @@ protocol FunctionsRouterProtocol: Router {
     func routeToAI()
     func routeToNFT()
     func routeToDigitalTwins()
+    func routeToLidar()
 
     func routeToRadar()
     func routeToROV()
     func routeToScreenAd()
     func routeToDrugTest()
+    func routeToRobot()
+    func routeToCamera360()
+    func routeToConsulting()
+    func routeToCRM()
+    func routeToDetectorMetales()
+    func routeToEcografia()
+    func routeToRecording()
+    func routeToLawConsulting()
 }
