@@ -114,5 +114,62 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
             )
         )
     }
+
+    func routeToScreenAd() {
+        navigateTo(
+            UnreleasedFeatureRoute(
+                isPresented: isNavigating,
+                banners: [
+                    Asset.Banners.BackpackScreenAd.backpackScreenAd1.name,
+                    Asset.Banners.BackpackScreenAd.backpackScreenAd2.name,
+                    Asset.Banners.BackpackScreenAd.backpackScreenAd3.name,
+                    Asset.Banners.BackpackScreenAd.backpackScreenAd4.name,
+                    Asset.Banners.BackpackScreenAd.backpackScreenAd5.name,
+                    Asset.Banners.BackpackScreenAd.backpackScreenAd6.name,
+                    Asset.Banners.BackpackScreenAd.backpackScreenAd7.name,
+                    Asset.Banners.BackpackScreenAd.backpackScreenAd8.name,
+                    Asset.Banners.BackpackScreenAd.backpackScreenAd9.name,
+                    Asset.Banners.BackpackScreenAd.backpackScreenAd10.name,
+                    Asset.Banners.BackpackScreenAd.backpackScreenAd11.name,
+                    Asset.Banners.BackpackScreenAd.backpackScreenAd12.name,
+                    Asset.Banners.BackpackScreenAd.backpackScreenAd13.name,
+                    Asset.Banners.BackpackScreenAd.backpackScreenAd14.name,
+                    Asset.Banners.BackpackScreenAd.backpackScreenAd15.name,
+                    Asset.Banners.BackpackScreenAd.backpackScreenAd16.name,
+                    Asset.Banners.BackpackScreenAd.backpackScreenAd17.name,
+                    Asset.Banners.BackpackScreenAd.backpackScreenAd18.name,
+                    Asset.Banners.BackpackScreenAd.backpackScreenAd19.name,
+                    Asset.Banners.BackpackScreenAd.backpackScreenAd20.name
+                ]
+            )
+        )
+    }
+
+    func routeToDrugTest() {
+        navigateTo(
+            UnreleasedFeatureRoute(
+                isPresented: isNavigating,
+                banners: [
+                    Asset.Banners.DrugTest.drugTest1.name,
+                    Asset.Banners.DrugTest.drugTest2.name,
+                    Asset.Banners.DrugTest.drugTest3.name,
+                    Asset.Banners.DrugTest.drugTest4.name,
+                    Asset.Banners.DrugTest.drugTest5.name,
+                    Asset.Banners.DrugTest.drugTest6.name,
+                    Asset.Banners.DrugTest.drugTest7.name,
+                    Asset.Banners.DrugTest.drugTest8.name,
+                    Asset.Banners.DrugTest.drugTest9.name,
+                    Asset.Banners.DrugTest.drugTest10.name,
+                    Asset.Banners.DrugTest.drugTest11.name,
+                    Asset.Banners.DrugTest.drugTest12.name,
+                    Asset.Banners.DrugTest.drugTest13.name,
+                    Asset.Banners.DrugTest.drugTest14.name,
+                    Asset.Banners.DrugTest.drugTest15.name,
+                    Asset.Banners.DrugTest.drugTest16.name,
+                    Asset.Banners.DrugTest.drugTest17.name
+                ]
+            )
+        )
+    }
 }
 

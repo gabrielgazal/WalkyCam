@@ -14,4 +14,6 @@ protocol FunctionsRouterProtocol: Router {
 
     func routeToRadar()
     func routeToROV()
+    func routeToScreenAd()
+    func routeToDrugTest()
 }

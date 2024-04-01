@@ -75,8 +75,8 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
                                             router.routeToAI()
                                         case "Drone Fly":
                                             router.routeToDrone()
-//                                        case "Alcohol & Drug test":
-//                                            router.routeToDrone()
+                                        case "Alcohol & Drug test":
+                                            router.routeToDrugTest()
                                         case "NFT platform":
                                             router.routeToNFT()
                                         case "Crypto Wallet":
@@ -110,6 +110,8 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
                                     router.routeToRadar()
                                 case "R.O.V. Underwater Drone":
                                     router.routeToROV()
+                                case "Backpack Screen Advertising":
+                                    router.routeToScreenAd()
                                 default: break
                                 }
                             }
