@@ -58,6 +58,7 @@ struct NewsData: Hashable {
 struct FavoritesData: Hashable {
     let id: Int
     let name: String
+    let imageUrl: String
     let stars: Int
     let location: String
     let technologies: [FavoritesTechnology]

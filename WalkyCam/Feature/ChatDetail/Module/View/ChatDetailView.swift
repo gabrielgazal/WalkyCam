@@ -175,7 +175,7 @@ extension ChannelModel {
         return .init(
             id: "id",
             title: "title",
-            image: .imageMock,
+            image: .manMock1,
             timeStamp: 1678716422,
             chatOpened: false,
             lastMessage: "",

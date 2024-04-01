@@ -28,7 +28,7 @@ final class WalkyCammerListInteractor: WalkyCammerListInteractorProtocol {
                 name: "Camila Pérez",
                 stars: 5,
                 description: "*4 min* de distancia - Desde $6",
-                profileImage: .imageMock,
+                profileImage: .womanMock2,
                 technologies: [.scan, .smartphone, .video, .camera],
                 coordinates: .init(
                     latitude: -25.4300744,
@@ -40,7 +40,7 @@ final class WalkyCammerListInteractor: WalkyCammerListInteractorProtocol {
                 name: "Lali Espósito",
                 stars: 4,
                 description: "*16 min* de distancia - Desde $4",
-                profileImage: .imageMock,
+                profileImage: .womanMock2,
                 technologies: [.scan, .smartphone],
                 coordinates: .init(
                     latitude: -25.426678,
@@ -52,7 +52,7 @@ final class WalkyCammerListInteractor: WalkyCammerListInteractorProtocol {
                 name: "Diego Salas",
                 stars: 4,
                 description: "*4 min* de distancia - Desde %6",
-                profileImage: .imageMock,
+                profileImage: .manMock3,
                 technologies: [.drone, .smartphone],
                 coordinates: .init(
                     latitude: -25.431048,
@@ -64,7 +64,7 @@ final class WalkyCammerListInteractor: WalkyCammerListInteractorProtocol {
                 name: "Maria Casas",
                 stars: 5,
                 description: "*4 min* de distancia - Desde %6",
-                profileImage: .imageMock,
+                profileImage: .womanMock4,
                 technologies: [.scan, .smartphone, .video, .camera],
                 coordinates: .init(
                     latitude: -25.429866,
@@ -73,10 +73,10 @@ final class WalkyCammerListInteractor: WalkyCammerListInteractorProtocol {
             ),
             .init(id: 4,
 
-                  name: "Camila Pérez",
+                  name: "Gabriel Silva",
                   stars: 3,
                   description: "*4 min* de distancia - Desde %6",
-                  profileImage: .imageMock,
+                  profileImage: .manMock1,
                   technologies: [.drone],
                   coordinates: .init(
                     latitude: -25.430924,

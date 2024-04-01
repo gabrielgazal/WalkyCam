@@ -24,7 +24,7 @@ final class AvailableAssistantsViewModel: AvailableAssistantsViewModelProtocol {
                 name: "Camila Pérez",
                 stars: 5,
                 description: "*4 min* de distancia - Desde $6",
-                profileImage: .imageMock,
+                profileImage: .womanMock1,
                 technologies: [.scan, .smartphone, .video, .camera],
                 coordinates: .init(
                     latitude: -25.4300744,
@@ -36,7 +36,7 @@ final class AvailableAssistantsViewModel: AvailableAssistantsViewModelProtocol {
                 name: "Lali Espósito",
                 stars: 4,
                 description: "*16 min* de distancia - Desde $4",
-                profileImage: .imageMock,
+                profileImage: .womanMock3,
                 technologies: [.scan, .smartphone],
                 coordinates: .init(
                     latitude: -25.426678,
@@ -48,7 +48,7 @@ final class AvailableAssistantsViewModel: AvailableAssistantsViewModelProtocol {
                 name: "Diego Salas",
                 stars: 4,
                 description: "*4 min* de distancia - Desde %6",
-                profileImage: .imageMock,
+                profileImage: .manMock2,
                 technologies: [.drone, .smartphone],
                 coordinates: .init(
                     latitude: -25.431048,
@@ -60,7 +60,7 @@ final class AvailableAssistantsViewModel: AvailableAssistantsViewModelProtocol {
                 name: "Maria Casas",
                 stars: 5,
                 description: "*4 min* de distancia - Desde %6",
-                profileImage: .imageMock,
+                profileImage: .womanMock4,
                 technologies: [.scan, .smartphone, .video, .camera],
                 coordinates: .init(
                     latitude: -25.429866,
@@ -69,10 +69,10 @@ final class AvailableAssistantsViewModel: AvailableAssistantsViewModelProtocol {
             ),
             .init(id: 4,
 
-                  name: "Camila Pérez",
+                  name: "Gabriel Silva",
                   stars: 3,
                   description: "*4 min* de distancia - Desde %6",
-                  profileImage: .imageMock,
+                  profileImage: .manMock4,
                   technologies: [.drone],
                   coordinates: .init(
                     latitude: -25.430924,

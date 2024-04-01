@@ -139,7 +139,7 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                        spacing: Tokens.Size.Spacing.regular) {
                     ForEach(viewModel.homeData.favorites, id: \.self) { item in
                         FavoriteItemView(name: item.name,
-                                         photo: .imageMock,
+                                         photo: item.imageUrl,
                                          location: item.location,
                                          stars: item.stars,
                                          technologies: item.technologies)

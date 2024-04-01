@@ -128,7 +128,7 @@ struct CammerItemView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             CammerItemView(name: "Camila Pérez",
-                           photo: .imageMock,
+                           photo: .womanMock1,
                            description: "TEst",
                            stars: 3,
                            technologies: [.drone, .video])

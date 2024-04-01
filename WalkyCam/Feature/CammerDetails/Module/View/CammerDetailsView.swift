@@ -158,7 +158,7 @@ struct CammerDetailsView_Previews: PreviewProvider {
                               name: "Camila Perez",
                               stars: 5,
                               description: "",
-                              profileImage: .imageMock,
+                              profileImage: .womanMock1,
                               technologies: [],
                               coordinates: .init(latitude: -12.123123, longitude: -49.123)),
             specialistMode: false),

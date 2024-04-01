@@ -32,7 +32,7 @@ final class SearchWalkyCammerInteractor: SearchWalkyCammerInteractorProtocol {
                 name: "Camila Pérez",
                 stars: 5,
                 description: "*4 min* de distancia - Desde $6",
-                profileImage: .imageMock,
+                profileImage: .womanMock3,
                 technologies: [.scan, .smartphone, .video, .camera],
                 coordinates: coordinates[0]
             ),
@@ -41,7 +41,7 @@ final class SearchWalkyCammerInteractor: SearchWalkyCammerInteractorProtocol {
                 name: "Lali Espósito",
                 stars: 4,
                 description: "*16 min* de distancia - Desde $4",
-                profileImage: .imageMock,
+                profileImage: .womanMock2,
                 technologies: [.scan, .smartphone],
                 coordinates: coordinates[1]
             ),
@@ -50,7 +50,7 @@ final class SearchWalkyCammerInteractor: SearchWalkyCammerInteractorProtocol {
                 name: "Diego Salas",
                 stars: 4,
                 description: "*4 min* de distancia - Desde %6",
-                profileImage: .imageMock,
+                profileImage: .manMock2,
                 technologies: [.drone, .smartphone],
                 coordinates: coordinates[2]
             ),
@@ -59,16 +59,16 @@ final class SearchWalkyCammerInteractor: SearchWalkyCammerInteractorProtocol {
                 name: "Maria Casas",
                 stars: 5,
                 description: "*4 min* de distancia - Desde %6",
-                profileImage: .imageMock,
+                profileImage: .womanMock1,
                 technologies: [.scan, .smartphone, .video, .camera],
                 coordinates: coordinates[3]
             ),
             .init(id: 4,
 
-                  name: "Camila Pérez",
+                  name: "Gabriel Silva",
                   stars: 3,
                   description: "*4 min* de distancia - Desde %6",
-                  profileImage: .imageMock,
+                  profileImage: .manMock1,
                   technologies: [.drone],
                   coordinates: coordinates[4]
                  )

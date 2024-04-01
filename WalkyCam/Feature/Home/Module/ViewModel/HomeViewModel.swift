@@ -62,9 +62,9 @@ final class HomeViewModel: HomeViewModelProtocol {
 
     private func fetchFavorites() {
         homeData.favorites = [
-            .init(id: 0, name: "Lali Espósito", stars: 4, location: "Bogotá, Colombia", technologies: [.drone, .scan, .smartphone]),
-            .init(id: 0, name: "Diego Salas", stars: 4, location: "CDMX, México", technologies: [.drone, .smartphone]),
-            .init(id: 0, name: "Thiago Guirao", stars: 5, location: "Mar del Plata, Argentina", technologies: [.drone, .scan, .smartphone])
+            .init(id: 0, name: "Lali Espósito", imageUrl: .womanMock1, stars: 4, location: "Bogotá, Colombia", technologies: [.drone, .scan, .smartphone]),
+            .init(id: 0, name: "Diego Salas", imageUrl: .manMock1, stars: 4, location: "CDMX, México", technologies: [.drone, .smartphone]),
+            .init(id: 0, name: "Thiago Guirao", imageUrl: .manMock2, stars: 5, location: "Mar del Plata, Argentina", technologies: [.drone, .scan, .smartphone])
         ]
     }
 

@@ -53,23 +53,27 @@ struct FavoriteItemView: View {
                         placeholder
                     }
                 }
-                    .frame(height: 130)
+                .frame(height: 130)
                 VStack(alignment: .leading,
                        spacing: Tokens.Size.Spacing.regular) {
-                    Text(name)
-                        .font(.projectFont(size: Tokens.Size.Font.large, weight: .semibold))
-                    starsView
-                    HStack(spacing: Tokens.Size.Spacing.tiny) {
-                        Image(Asset.Icons.location.name)
-                            .resizable()
-                            .frame(width: Tokens.Size.Spacing.large, height: Tokens.Size.Spacing.large)
-                            .foregroundColor(.naranja)
-                        Text(location)
-                            .font(.projectFont(size: Tokens.Size.Font.regular))
+                    VStack(alignment: .leading,
+                           spacing: Tokens.Size.Spacing.regular) {
+                        Text(name)
+                            .font(.projectFont(size: Tokens.Size.Font.large, weight: .semibold))
+                        starsView
+                        HStack(spacing: Tokens.Size.Spacing.tiny) {
+                            Image(Asset.Icons.location.name)
+                                .resizable()
+                                .frame(width: Tokens.Size.Spacing.large, height: Tokens.Size.Spacing.large)
+                                .foregroundColor(.naranja)
+                            Text(location)
+                                .font(.projectFont(size: Tokens.Size.Font.regular))
+                        }
+                        functionsView
                     }
-                    functionsView
+                    .padding(Tokens.Size.Spacing.regular)
                 }
-                       .padding(Tokens.Size.Spacing.large)
+                       .background(Color.blanco)
             }
             VStack {
                 HStack {
@@ -86,17 +90,17 @@ struct FavoriteItemView: View {
             .padding(Tokens.Size.Spacing.regular)
         }
         .background(
-         Rectangle()
-             .fill(Color.blanco)
+            Rectangle()
+                .fill(Color.blanco)
         )
         .frame(maxWidth: 250, maxHeight: 310)
         .cornerRadius(Tokens.Size.Border.Radius.xlarge, corners: .allCorners)
         .shadow(
-         color: Color.negro.opacity(0.1),
-         radius: 10,
-         x: 0,
-         y: 2
-    )
+            color: Color.negro.opacity(0.1),
+            radius: 10,
+            x: 0,
+            y: 2
+        )
     }
 
     private var starsView: some View {
@@ -166,7 +170,7 @@ struct FavoriteItemView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             FavoriteItemView(name: "teste",
-                             photo: .imageMock,
+                             photo: .womanMock1,
                              location: "TEst",
                              stars: 3,
                              technologies: [.drone, .video])
