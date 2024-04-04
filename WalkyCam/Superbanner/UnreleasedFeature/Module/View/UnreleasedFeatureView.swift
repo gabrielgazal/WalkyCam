@@ -19,36 +19,57 @@ struct UnreleasedFeatureView<ViewModel:UnreleasedFeatureViewModelProtocol, Route
     // MARK: - View Body
 
     var body: some View {
-        GeometryReader { proxy in
-            ZStack(alignment: .topLeading) {
-                TabView(selection: $selection) {
-                    ForEach(viewModel.banners, id: \.self) {
-                        Image($0)
+        NavigationView {
+            ZStack {
+                GeometryReader { proxy in
+                    ZStack(alignment: .topLeading) {
+                        TabView(selection: $selection) {
+                            ForEach(viewModel.banners, id: \.self) {
+                                Image($0)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: proxy.size.width)
+                                    .clipped()
+                            }
+                        }
+                        .accentColor(.naranja)
+                        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+                        .padding(.vertical, Tokens.Size.Spacing.small)
+                        Asset.Illustrations.preview.swiftUIImage
                             .resizable()
                             .scaledToFit()
-                            .frame(width: proxy.size.width)
-                            .clipped()
+                            .frame(width: 100)
                     }
+                    .shadow(
+                        color: .black.opacity(0.2),
+                        radius: 8,
+                        x: 0,
+                        y: 2
+                    )
+                    .cornerRadius(12, corners: [.bottomLeft, .bottomRight, .topRight])
+                    .background(
+                        Color.blancoGris
+                    )
                 }
-                .accentColor(.naranja)
-                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-                .padding(.vertical, Tokens.Size.Spacing.small)
-                Asset.Illustrations.preview.swiftUIImage
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 100)
+                VStack {
+                    HStack {
+                        Image(systemName: "chevron.left")
+                            .resizable()
+                            .foregroundColor(.naranja)
+                            .scaledToFit()
+                            .frame(height: 20)
+                            .onTapGesture {
+                                router.dismiss()
+                            }
+
+                        Spacer()
+                    }
+                    Spacer()
+                }
             }
-            .shadow(
-                color: .black.opacity(0.2),
-                radius: 8,
-                x: 0,
-                y: 2
-            )
-            .cornerRadius(12, corners: [.bottomLeft, .bottomRight, .topRight])
-            .background(
-                Color.blancoGris
-            )
         }
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
