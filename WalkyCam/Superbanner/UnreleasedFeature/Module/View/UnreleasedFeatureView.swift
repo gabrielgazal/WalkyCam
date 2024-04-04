@@ -20,7 +20,20 @@ struct UnreleasedFeatureView<ViewModel:UnreleasedFeatureViewModelProtocol, Route
 
     var body: some View {
         NavigationView {
-            ZStack {
+            VStack {
+                HStack {
+                    Image(systemName: "chevron.left")
+                        .resizable()
+                        .foregroundColor(.naranja)
+                        .scaledToFit()
+                        .frame(height: 20)
+                        .onTapGesture {
+                            router.dismiss()
+                        }
+
+                    Spacer()
+                }
+                .padding(.horizontal, Tokens.Size.Spacing.regular)
                 GeometryReader { proxy in
                     ZStack(alignment: .topLeading) {
                         TabView(selection: $selection) {
@@ -50,21 +63,6 @@ struct UnreleasedFeatureView<ViewModel:UnreleasedFeatureViewModelProtocol, Route
                     .background(
                         Color.blancoGris
                     )
-                }
-                VStack {
-                    HStack {
-                        Image(systemName: "chevron.left")
-                            .resizable()
-                            .foregroundColor(.naranja)
-                            .scaledToFit()
-                            .frame(height: 20)
-                            .onTapGesture {
-                                router.dismiss()
-                            }
-
-                        Spacer()
-                    }
-                    Spacer()
                 }
             }
         }
