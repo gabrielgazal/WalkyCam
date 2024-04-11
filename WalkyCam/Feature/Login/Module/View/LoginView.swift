@@ -96,7 +96,7 @@ struct LoginView<ViewModel: LoginViewModelProtocol, Router: LoginRouterProtocol>
                 onSuccess: {
                     router.routeToHome()
                 },
-                onFailure: { print("Error")}
+                onFailure: { print("Error") }
             )
         }
     }

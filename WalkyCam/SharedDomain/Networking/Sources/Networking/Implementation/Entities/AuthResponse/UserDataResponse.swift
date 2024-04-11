@@ -9,7 +9,6 @@ import Foundation
 
 public struct UserDataResponse: Codable, Hashable {
     public let user: UserResponse
-    public let token: String
     public let streetCamConfiguration: UserConfiguration
     public let scan3dConfiguration: UserConfiguration
     public let videoCallConfiguration: UserConfiguration
@@ -19,7 +18,7 @@ public struct UserDataResponse: Codable, Hashable {
     public let print3dConfiguration: UserConfiguration
 
     private enum CodingKeys: String, CodingKey {
-        case user, token
+        case user
         case streetCamConfiguration = "streetcam_user_configuration"
         case scan3dConfiguration = "scan3d_user_configuration"
         case videoCallConfiguration = "videocall_user_configuration"

@@ -45,25 +45,18 @@ extension LoginUseCase {
     }
 
     private static func configure(
-        loginResponse: UserDataResponse,
+        loginResponse: UserResponse,
         in session: UserSessionProtocol
     ) throws -> LoginOutput {
         do {
             let loginOutput = LoginOutput(
-                id: loginResponse.user.id,
-                userName: loginResponse.user.userName,
-                name: loginResponse.user.name,
-                lastName: loginResponse.user.lastName,
-                email: loginResponse.user.email,
-                address: loginResponse.user.address,
-                configurations: .init(
-                    streetCam: loginResponse.streetCamConfiguration.onboardingReaded,
-                    scan3D: loginResponse.scan3dConfiguration.onboardingReaded,
-                    videoCall: loginResponse.videoCallConfiguration.onboardingReaded,
-                    ARHands: loginResponse.arHandsConfiguration.onboardingReaded,
-                    digitalTwins: loginResponse.digitalTwinsConfiguration.onboardingReaded,
-                    drone: loginResponse.droneCamConfiguration.onboardingReaded
-                )
+                id: loginResponse.id,
+                userName: loginResponse.userName,
+                name: loginResponse.name,
+                lastName: loginResponse.lastName,
+                email: loginResponse.email,
+                address: loginResponse.address
+//                configurations: .init(streetCam: <#T##Bool#>, scan3D: <#T##Bool#>, videoCall: <#T##Bool#>, ARHands: <#T##Bool#>, digitalTwins: <#T##Bool#>, drone: <#T##Bool#>)
             )
 
             try session.save(user: loginOutput.asUserSessionData())
@@ -84,14 +77,7 @@ extension LoginOutput {
             lastName: lastName,
             email: email,
             address: address,
-            configurations: .init(
-                streetCam: configurations.streetCam,
-                scan3D: configurations.scan3D,
-                videoCall: configurations.videoCall,
-                ARHands: configurations.ARHands,
-                digitalTwins: configurations.digitalTwins,
-                drone: configurations.drone
-            )
+            configurations: .init()
         )
     }
 }

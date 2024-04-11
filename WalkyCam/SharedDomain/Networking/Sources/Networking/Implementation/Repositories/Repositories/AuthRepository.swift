@@ -28,7 +28,7 @@ final class AuthRepository: AuthRepositoryProtocol {
 
     func login(userName: String, password: String, completion: @escaping (LoginResult) -> Void) {
         service.login(userName: userName, password: password) { result in
-            completion(result.mapToRepositoryResult(with: DefaultRequestHandler()))
+            completion(result.mapToRepositoryResult(with: self.requestHandler))
         }
     }
 
