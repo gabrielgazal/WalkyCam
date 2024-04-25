@@ -29,7 +29,7 @@ struct StartupView<ViewModel: StartupViewModelProtocol, Router: StartupRouterPro
                     .frame(height: 295)
                 VStack(alignment: .center,
                        spacing: Tokens.Size.Spacing.regular) {
-                    Text(L10n.StartupView.title("Andrea"))
+                    Text(L10n.StartupView.title(viewModel.userName))
                         .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .bold))
                         .foregroundColor(Color.blanco)
                         .multilineTextAlignment(.center)

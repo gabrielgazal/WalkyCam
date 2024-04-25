@@ -5,24 +5,21 @@ final class StartupViewModel: StartupViewModelProtocol {
     // MARK: - Dependencies
 
     private let interactor: StartupInteractorProtocol
-
+    @Published var userName: String = ""
+    
     // MARK: - Initialization
 
     init(interactor: StartupInteractorProtocol = StartupInteractor()) {
         self.interactor = interactor
-    }
-
-    // MARK: - Public API
-
-    #warning("Example function. Rename or remove it")
-    func someAction() {
-
+        self.getUserName()
     }
 
     // MARK: - Private Methods
 
-    #warning("Example function. Rename or remove it")
-    private func somePrivateMethod() {
-
+    private func getUserName() {
+        let name = try? UserSession().user().name
+        guard let name = name,
+              !name.isEmpty else { return }
+        userName = name
     }
 }
