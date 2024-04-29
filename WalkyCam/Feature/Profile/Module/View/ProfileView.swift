@@ -50,6 +50,7 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
                             Text(L10n.ProfileView.Toggle.walkycamer)
                         }
                         .toggleStyle(WCToggleStyle())
+                        .disabled(true)
                         Divider()
                     }
                     .isHidden(viewModel.isEditingModeEnabled)
@@ -72,8 +73,13 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: Tokens.Size.Spacing.large, height: Tokens.Size.Spacing.large)
-                                Text(L10n.ProfileView.Convert.walkycamer)
-                                    .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                                VStack(alignment: .leading,
+                                       spacing: Tokens.Size.Spacing.small) {
+                                    Text(L10n.ProfileView.Convert.walkycamer)
+                                        .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                                    Text("(genera ganacias con nosotros)")
+                                        .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                                }
                                 Spacer()
                             }
                             Divider()

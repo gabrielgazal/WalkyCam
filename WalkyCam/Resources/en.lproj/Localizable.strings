@@ -58,7 +58,7 @@
 "ProfileView.field.name" = "Nombre";
 "ProfileView.field.lastname" = "Apellido";
 "ProfileView.field.birthDate" = "Fecha de nacimiento";
-"ProfileView.convert.walkycamer" = "Convertime en WalkCamer";
+"ProfileView.convert.walkycamer" = "Quiero ser WalkCamer";
 "ProfileView.section.logout" = "Cerrar Sesión";
 "ProfileView.button.save" = "Guardar cambios";
 "ProfileView.button.cancel" = "Cancelar";

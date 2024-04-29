@@ -44,6 +44,17 @@
 		56A5525D2B2F6E3D006B1B17 /* StreetCamMenuRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552502B2F6E3D006B1B17 /* StreetCamMenuRouterProtocol.swift */; };
 		56A5525E2B2F6E3D006B1B17 /* StreetCamMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552512B2F6E3D006B1B17 /* StreetCamMenuRouter.swift */; };
 		56A5525F2B2F6E3D006B1B17 /* StreetCamMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552542B2F6E3D006B1B17 /* StreetCamMenuModel.swift */; };
+		56AF27552BDAE00800DADC29 /* RegisterWalkcamerAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF27402BDAE00700DADC29 /* RegisterWalkcamerAssembler.swift */; };
+		56AF27562BDAE00800DADC29 /* RegisterWalkcamerAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF27412BDAE00700DADC29 /* RegisterWalkcamerAssemblerProtocol.swift */; };
+		56AF27572BDAE00800DADC29 /* RegisterWalkcamerRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF27432BDAE00700DADC29 /* RegisterWalkcamerRoute.swift */; };
+		56AF27582BDAE00800DADC29 /* RegisterWalkcamerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF27462BDAE00800DADC29 /* RegisterWalkcamerModel.swift */; };
+		56AF27592BDAE00800DADC29 /* RegisterWalkcamerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF27492BDAE00800DADC29 /* RegisterWalkcamerInteractor.swift */; };
+		56AF275A2BDAE00800DADC29 /* RegisterWalkcamerInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF274A2BDAE00800DADC29 /* RegisterWalkcamerInteractorProtocol.swift */; };
+		56AF275B2BDAE00800DADC29 /* RegisterWalkcamerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF274C2BDAE00800DADC29 /* RegisterWalkcamerRouter.swift */; };
+		56AF275C2BDAE00800DADC29 /* RegisterWalkcamerRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF274D2BDAE00800DADC29 /* RegisterWalkcamerRouterProtocol.swift */; };
+		56AF275D2BDAE00800DADC29 /* RegisterWalkcamerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF274F2BDAE00800DADC29 /* RegisterWalkcamerView.swift */; };
+		56AF275E2BDAE00800DADC29 /* RegisterWalkcamerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF27512BDAE00800DADC29 /* RegisterWalkcamerViewModel.swift */; };
+		56AF275F2BDAE00800DADC29 /* RegisterWalkcamerViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF27522BDAE00800DADC29 /* RegisterWalkcamerViewModelProtocol.swift */; };
 		56DADB202AD5EA7200710618 /* AppNavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB1F2AD5EA7200710618 /* AppNavigatorProtocol.swift */; };
 		56DADB222AD5EAA400710618 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB212AD5EAA400710618 /* AppNavigator.swift */; };
 		56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB232AD5EB3800710618 /* AppDelegate.swift */; };
@@ -924,6 +935,17 @@
 		56A552502B2F6E3D006B1B17 /* StreetCamMenuRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetCamMenuRouterProtocol.swift; sourceTree = "<group>"; };
 		56A552512B2F6E3D006B1B17 /* StreetCamMenuRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetCamMenuRouter.swift; sourceTree = "<group>"; };
 		56A552542B2F6E3D006B1B17 /* StreetCamMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetCamMenuModel.swift; sourceTree = "<group>"; };
+		56AF27402BDAE00700DADC29 /* RegisterWalkcamerAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWalkcamerAssembler.swift; sourceTree = "<group>"; };
+		56AF27412BDAE00700DADC29 /* RegisterWalkcamerAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWalkcamerAssemblerProtocol.swift; sourceTree = "<group>"; };
+		56AF27432BDAE00700DADC29 /* RegisterWalkcamerRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWalkcamerRoute.swift; sourceTree = "<group>"; };
+		56AF27462BDAE00800DADC29 /* RegisterWalkcamerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWalkcamerModel.swift; sourceTree = "<group>"; };
+		56AF27492BDAE00800DADC29 /* RegisterWalkcamerInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWalkcamerInteractor.swift; sourceTree = "<group>"; };
+		56AF274A2BDAE00800DADC29 /* RegisterWalkcamerInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWalkcamerInteractorProtocol.swift; sourceTree = "<group>"; };
+		56AF274C2BDAE00800DADC29 /* RegisterWalkcamerRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWalkcamerRouter.swift; sourceTree = "<group>"; };
+		56AF274D2BDAE00800DADC29 /* RegisterWalkcamerRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWalkcamerRouterProtocol.swift; sourceTree = "<group>"; };
+		56AF274F2BDAE00800DADC29 /* RegisterWalkcamerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWalkcamerView.swift; sourceTree = "<group>"; };
+		56AF27512BDAE00800DADC29 /* RegisterWalkcamerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWalkcamerViewModel.swift; sourceTree = "<group>"; };
+		56AF27522BDAE00800DADC29 /* RegisterWalkcamerViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWalkcamerViewModelProtocol.swift; sourceTree = "<group>"; };
 		56DADB1F2AD5EA7200710618 /* AppNavigatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigatorProtocol.swift; sourceTree = "<group>"; };
 		56DADB212AD5EAA400710618 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		56DADB232AD5EB3800710618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -1864,6 +1886,16 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		5676004D2BDADEB80083B086 /* RegisterWalkcamer */ = {
+			isa = PBXGroup;
+			children = (
+				56AF27452BDAE00700DADC29 /* Configuration */,
+				56AF27482BDAE00800DADC29 /* Domain */,
+				56AF27542BDAE00800DADC29 /* Module */,
+			);
+			path = RegisterWalkcamer;
+			sourceTree = "<group>";
+		};
 		56A552102B2F5FE7006B1B17 /* WalkyCamerOnboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -2060,6 +2092,94 @@
 				56A552542B2F6E3D006B1B17 /* StreetCamMenuModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		56AF27422BDAE00700DADC29 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				56AF27402BDAE00700DADC29 /* RegisterWalkcamerAssembler.swift */,
+				56AF27412BDAE00700DADC29 /* RegisterWalkcamerAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		56AF27442BDAE00700DADC29 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				56AF27432BDAE00700DADC29 /* RegisterWalkcamerRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		56AF27452BDAE00700DADC29 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				56AF27422BDAE00700DADC29 /* Assembler */,
+				56AF27442BDAE00700DADC29 /* Route */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		56AF27472BDAE00800DADC29 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				56AF27462BDAE00800DADC29 /* RegisterWalkcamerModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		56AF27482BDAE00800DADC29 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				56AF27472BDAE00800DADC29 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		56AF274B2BDAE00800DADC29 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				56AF27492BDAE00800DADC29 /* RegisterWalkcamerInteractor.swift */,
+				56AF274A2BDAE00800DADC29 /* RegisterWalkcamerInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		56AF274E2BDAE00800DADC29 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				56AF274C2BDAE00800DADC29 /* RegisterWalkcamerRouter.swift */,
+				56AF274D2BDAE00800DADC29 /* RegisterWalkcamerRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		56AF27502BDAE00800DADC29 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				56AF274F2BDAE00800DADC29 /* RegisterWalkcamerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		56AF27532BDAE00800DADC29 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				56AF27512BDAE00800DADC29 /* RegisterWalkcamerViewModel.swift */,
+				56AF27522BDAE00800DADC29 /* RegisterWalkcamerViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		56AF27542BDAE00800DADC29 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				56AF274B2BDAE00800DADC29 /* Interactor */,
+				56AF274E2BDAE00800DADC29 /* Router */,
+				56AF27502BDAE00800DADC29 /* View */,
+				56AF27532BDAE00800DADC29 /* ViewModel */,
+			);
+			path = Module;
 			sourceTree = "<group>";
 		};
 		56DADB1D2AD5EA3400710618 /* Main */ = {
@@ -2512,6 +2632,7 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				5676004D2BDADEB80083B086 /* RegisterWalkcamer */,
 				EAE401DC2BBAFAC100B1311E /* RobotMenu */,
 				EAE401B52BBA451000B1311E /* DigitalTwinsMenu */,
 				EAE4018C2BBA3CB100B1311E /* DigitalTwinsOnboarding */,
@@ -9138,6 +9259,7 @@
 				EA282E582AE952F700B90920 /* ProfileInteractorProtocol.swift in Sources */,
 				56FEECF02B5C802C003FA686 /* SearchWalkyCammerAssembler.swift in Sources */,
 				EA3E5C932B87692400158207 /* AssistantMenuModel.swift in Sources */,
+				56AF275A2BDAE00800DADC29 /* RegisterWalkcamerInteractorProtocol.swift in Sources */,
 				EAF47BA32B82FFF2003F8B86 /* CalendarTabRoute.swift in Sources */,
 				EA9110212ADDADE100584B98 /* HomeModel.swift in Sources */,
 				EA6083922B01CD0A00295069 /* ShopTabInteractorProtocol.swift in Sources */,
@@ -9147,6 +9269,7 @@
 				EA86532D2B90E9CA00B86A54 /* AIOnboardingRoute.swift in Sources */,
 				EA8652E02B90DCE900B86A54 /* PrintMenuInteractor.swift in Sources */,
 				EA57A7A22B6C1558006247DD /* CammerDetailsViewModelProtocol.swift in Sources */,
+				56AF275F2BDAE00800DADC29 /* RegisterWalkcamerViewModelProtocol.swift in Sources */,
 				EACFDF1E2BA7EF3E00B08990 /* UnreleasedFeatureAssemblerProtocol.swift in Sources */,
 				EA4A1C1E2B87799100B5FC59 /* AvailableAssistantsAssemblerProtocol.swift in Sources */,
 				EA94A5322B7160EF00EC3037 /* ServiceDetailsInteractorProtocol.swift in Sources */,
@@ -9192,6 +9315,7 @@
 				EA86528C2B90ACC200B86A54 /* IOTOnboardingAssemblerProtocol.swift in Sources */,
 				EA57A7D12B6C2C31006247DD /* AddPeopleTransmissionView.swift in Sources */,
 				EA8652B72B90DA9600B86A54 /* 3DPrintOnboardingView.swift in Sources */,
+				56AF275D2BDAE00800DADC29 /* RegisterWalkcamerView.swift in Sources */,
 				561FC8BF2B5C67FB005B6006 /* AsyncData.swift in Sources */,
 				EAA1E63C2AFB03FD00A42174 /* CashTabAssembler.swift in Sources */,
 				EA91102D2ADDB91100584B98 /* URL+ImageLoadable.swift in Sources */,
@@ -9225,6 +9349,7 @@
 				EA94A5312B7160EF00EC3037 /* ServiceDetailsView.swift in Sources */,
 				EAF47BCA2B8306E9003F8B86 /* TimeTabRouterProtocol.swift in Sources */,
 				EA20A5602B87D35B006662FA /* ShareSheetAssembler.swift in Sources */,
+				56AF275B2BDAE00800DADC29 /* RegisterWalkcamerRouter.swift in Sources */,
 				EAE402022BBAFB0900B1311E /* RobotMenuAssembler.swift in Sources */,
 				EAB63BBE2B83D6390017BDA4 /* ARHandsMenuView.swift in Sources */,
 				56A552582B2F6E3D006B1B17 /* StreetCamMenuViewModel.swift in Sources */,
@@ -9340,6 +9465,7 @@
 				EA1235182B99FF8C00443CF8 /* MessageObserver.swift in Sources */,
 				EA50A0862B0BC77F0042B238 /* PlansPagesViewModelProtocol.swift in Sources */,
 				EAE402012BBAFB0900B1311E /* RobotMenuAssemblerProtocol.swift in Sources */,
+				56AF27562BDAE00800DADC29 /* RegisterWalkcamerAssemblerProtocol.swift in Sources */,
 				EA2E651F2BA8AE1C0092A135 /* SubscriptionIntentOutput.swift in Sources */,
 				EA4A1C422B8788DB00B5FC59 /* SpecialistNotifiedInteractorProtocol.swift in Sources */,
 				EA86528D2B90ACC200B86A54 /* IOTOnboardingViewModelProtocol.swift in Sources */,
@@ -9348,6 +9474,7 @@
 				EA8653542B90EBE800B86A54 /* ConfigureAccessModel.swift in Sources */,
 				EA20A5632B87D35B006662FA /* ShareSheetViewModelProtocol.swift in Sources */,
 				EA8652652B90AC8300B86A54 /* IOTMenuAssembler.swift in Sources */,
+				56AF27582BDAE00800DADC29 /* RegisterWalkcamerModel.swift in Sources */,
 				EA4A1C632B87909F00B5FC59 /* ExternalAssistantViewModelProtocol.swift in Sources */,
 				EA7219962B05612900BE2D93 /* WalkyBotAssembler.swift in Sources */,
 				EA0E408B2AF69771002B7437 /* CashWalletOnboardingModel.swift in Sources */,
@@ -9388,6 +9515,7 @@
 				EA6083E12B01DBE000295069 /* GalleryPhotosAssemblerProtocol.swift in Sources */,
 				EA5E1D742AD716A500738A8F /* ProjectFont.swift in Sources */,
 				EAA1E6402AFB03FD00A42174 /* CashTabView.swift in Sources */,
+				56AF27552BDAE00800DADC29 /* RegisterWalkcamerAssembler.swift in Sources */,
 				EA4A1C6C2B87909F00B5FC59 /* ExternalAssistantAssembler.swift in Sources */,
 				EA5A87FC2B68002A00BBB7F9 /* RegistrationOutput.swift in Sources */,
 				EA8652B82B90DA9600B86A54 /* 3DPrintOnboardingInteractorProtocol.swift in Sources */,
@@ -9466,6 +9594,7 @@
 				EA282E562AE952F700B90920 /* ProfileViewModel.swift in Sources */,
 				EA20A4F02B87C3B5006662FA /* Scan3DOnboardingAssembler.swift in Sources */,
 				EA910FCA2ADC495700584B98 /* TabBarView.swift in Sources */,
+				56AF27572BDAE00800DADC29 /* RegisterWalkcamerRoute.swift in Sources */,
 				EAB63BC12B83D6390017BDA4 /* ARHandsMenuRouter.swift in Sources */,
 				EA4165492AE706C6008CE66A /* NotificationsAssemblerProtocol.swift in Sources */,
 				EAA1E61D2AFAFA7100A42174 /* WCTopBarItem.swift in Sources */,
@@ -9489,6 +9618,7 @@
 				EA910F692AD9B57400584B98 /* OnboardingPageView.swift in Sources */,
 				EADB5CA62B190819005863E1 /* VideoCallAssemblerProtocol.swift in Sources */,
 				EAA1E63E2AFB03FD00A42174 /* CashTabViewModelProtocol.swift in Sources */,
+				56AF27592BDAE00800DADC29 /* RegisterWalkcamerInteractor.swift in Sources */,
 				EA6083662B01981800295069 /* CryptoDetailsInteractor.swift in Sources */,
 				EA3E5C982B87692400158207 /* AssistantMenuInteractorProtocol.swift in Sources */,
 				EA20A5122B87C913006662FA /* Scan3DMenuRoute.swift in Sources */,
@@ -9557,6 +9687,7 @@
 				EACFDF192BA7EF3E00B08990 /* UnreleasedFeatureInteractor.swift in Sources */,
 				EA910F5A2AD9B01300584B98 /* OnboardingRoute.swift in Sources */,
 				EA6083DA2B01DBDF00295069 /* GalleryPhotosViewModelProtocol.swift in Sources */,
+				56AF275C2BDAE00800DADC29 /* RegisterWalkcamerRouterProtocol.swift in Sources */,
 				EA8653272B90E9CA00B86A54 /* AIOnboardingViewModel.swift in Sources */,
 				EA4AE4882B75011B00B5A89F /* FetchUserConfigurationsUseCase.swift in Sources */,
 				EA910FD22ADC499500584B98 /* TabBarBuilder.swift in Sources */,
@@ -9784,6 +9915,7 @@
 				EA20A51A2B87C913006662FA /* Scan3DMenuRouterProtocol.swift in Sources */,
 				EAF47BEE2B83099F003F8B86 /* MapTabAssembler.swift in Sources */,
 				EAE8EC562B9574840003AE96 /* ChatListInteractor.swift in Sources */,
+				56AF275E2BDAE00800DADC29 /* RegisterWalkcamerViewModel.swift in Sources */,
 				EA5E1D9D2AD8A3DA00738A8F /* Assets.swift in Sources */,
 				EA6083D82B01DBDF00295069 /* GalleryPhotosModel.swift in Sources */,
 				EA910FF62ADCBCC000584B98 /* MenuViewModel.swift in Sources */,
