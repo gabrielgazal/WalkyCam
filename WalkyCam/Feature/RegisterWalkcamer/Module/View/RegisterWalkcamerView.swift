@@ -18,7 +18,58 @@ struct RegisterWalkcamerView<ViewModel: RegisterWalkcamerViewModelProtocol, Rout
     // MARK: - View Body
 
     var body: some View {
-        Text("Hello World!")
+        ScrollView {
+            VStack(alignment: .leading,
+                   spacing: Tokens.Size.Spacing.regular) {
+                Text("Genera ganancias, hazte WalkCamer")
+                    .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
+                    .foregroundStyle(Color.blanco)
+                Text("Registrate hoy!")
+                    .font(.projectFont(size: Tokens.Size.Font.small, weight: .regular))
+                    .foregroundStyle(Color.blanco)
+                registrationCard
+            }
+                   .padding(Tokens.Size.Spacing.regular)
+        }
+        .scrollIndicators(.hidden)
+        .background {
+            Asset.Fondos.loginFondo.swiftUIImage
+                .ignoresSafeArea()
+        }
+    }
+    
+    private var registrationCard: some View {
+        VStack(alignment: .leading,
+               spacing: Tokens.Size.Spacing.regular) {
+            TextInputView(text: $viewModel.email,
+                          topDescriptionText: "Email",
+                          placeholder: "nombre@email.com")
+            TextInputView(text: $viewModel.name,
+                          topDescriptionText: "Nombre",
+                          placeholder: "Nombre")
+            TextInputView(text: $viewModel.lastName,
+                          topDescriptionText: "Apellido",
+                          placeholder: "Apellido")
+            TextInputView(text: $viewModel.telephone,
+                          topDescriptionText: "Telefono",
+                          placeholder: "Telefono")
+        
+            CheckBoxToggle(model: viewModel.acceptedTerms,
+                           foregroundColor: .negro)
+                .onTapGesture {
+                    viewModel.acceptedTerms.isSelected.toggle()
+                }
+            WCUIButton(title: "Registrame",
+                       style: .standard,
+                       descriptor: OrangeButtonStyleDescriptor(),
+                       action: {})
+            .disabled(viewModel.isRegisterButtonDisabled())
+        }
+               .padding()
+               .background {
+                   RoundedRectangle(cornerRadius: 16)
+                       .fill(Color.blanco)
+               }
     }
 }
 

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C514EC9017EB5CE2902B79C /* Pods_WalkyCamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F44B040E9D3F5ADD523210 /* Pods_WalkyCamTests.framework */; };
 		561FC8B42B5C66F7005B6006 /* WebView+PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FC8B02B5C66F7005B6006 /* WebView+PullToRefresh.swift */; };
 		561FC8B52B5C66F7005B6006 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FC8B12B5C66F7005B6006 /* WebView.swift */; };
 		561FC8B62B5C66F7005B6006 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FC8B22B5C66F7005B6006 /* WebViewModel.swift */; };
@@ -70,7 +69,6 @@
 		56FEECF72B5C802C003FA686 /* SearchWalkyCammerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FEECEB2B5C802C003FA686 /* SearchWalkyCammerInteractor.swift */; };
 		56FEECF82B5C802C003FA686 /* SearchWalkyCammerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FEECED2B5C802C003FA686 /* SearchWalkyCammerRouter.swift */; };
 		56FEECF92B5C802C003FA686 /* SearchWalkyCammerRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FEECEE2B5C802C003FA686 /* SearchWalkyCammerRouterProtocol.swift */; };
-		B7B0489C6065260A6D3E707F /* Pods_WalkyCam_WalkyCamUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87CD54CA12591842BAA9CC6C /* Pods_WalkyCam_WalkyCamUITests.framework */; };
 		DFD0945A60FA5B637D89BC1D /* Pods_WalkyCam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB52C6CE8C2F9E62CBF861A7 /* Pods_WalkyCam.framework */; };
 		EA0655472BB5DA5D006148E7 /* RadarMenuRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0655342BB5DA5D006148E7 /* RadarMenuRoute.swift */; };
 		EA0655482BB5DA5D006148E7 /* RadarMenuAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0655362BB5DA5D006148E7 /* RadarMenuAssembler.swift */; };
@@ -875,23 +873,6 @@
 		EAF47C8B2B839308003F8B86 /* FlightMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47C802B839308003F8B86 /* FlightMenuModel.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		5637A8232AD5DD74000586DF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5637A80A2AD5DD72000586DF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5637A8112AD5DD72000586DF;
-			remoteInfo = WalkyCam;
-		};
-		5637A82D2AD5DD74000586DF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5637A80A2AD5DD72000586DF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5637A8112AD5DD72000586DF;
-			remoteInfo = WalkyCam;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		01210015DB17D27A5A6A4908 /* Pods-WalkyCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkyCam.debug.xcconfig"; path = "Target Support Files/Pods-WalkyCam/Pods-WalkyCam.debug.xcconfig"; sourceTree = "<group>"; };
 		1657E0E09B4F0512C50B8036 /* Pods-WalkyCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkyCam.release.xcconfig"; path = "Target Support Files/Pods-WalkyCam/Pods-WalkyCam.release.xcconfig"; sourceTree = "<group>"; };
@@ -910,8 +891,6 @@
 		5637A8122AD5DD72000586DF /* WalkyCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkyCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5637A8152AD5DD72000586DF /* WalkyCamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkyCamApp.swift; sourceTree = "<group>"; };
 		5637A8192AD5DD73000586DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5637A8222AD5DD74000586DF /* WalkyCamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalkyCamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5637A82C2AD5DD74000586DF /* WalkyCamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalkyCamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56A552192B2F6134006B1B17 /* WalkyCamerOnboardingRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingRoute.swift; sourceTree = "<group>"; };
 		56A5521B2B2F6134006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingAssemblerProtocol.swift; sourceTree = "<group>"; };
 		56A5521C2B2F6134006B1B17 /* WalkyCamerOnboardingAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingAssembler.swift; sourceTree = "<group>"; };
@@ -1781,22 +1760,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5637A81F2AD5DD74000586DF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3C514EC9017EB5CE2902B79C /* Pods_WalkyCamTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5637A8292AD5DD74000586DF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B7B0489C6065260A6D3E707F /* Pods_WalkyCam_WalkyCamUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -1869,8 +1832,6 @@
 			isa = PBXGroup;
 			children = (
 				5637A8122AD5DD72000586DF /* WalkyCam.app */,
-				5637A8222AD5DD74000586DF /* WalkyCamTests.xctest */,
-				5637A82C2AD5DD74000586DF /* WalkyCamUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -9011,45 +8972,6 @@
 			productReference = 5637A8122AD5DD72000586DF /* WalkyCam.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5637A8212AD5DD74000586DF /* WalkyCamTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5637A8392AD5DD74000586DF /* Build configuration list for PBXNativeTarget "WalkyCamTests" */;
-			buildPhases = (
-				B665DC98071E120FB831E057 /* [CP] Check Pods Manifest.lock */,
-				5637A81E2AD5DD74000586DF /* Sources */,
-				5637A81F2AD5DD74000586DF /* Frameworks */,
-				5637A8202AD5DD74000586DF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5637A8242AD5DD74000586DF /* PBXTargetDependency */,
-			);
-			name = WalkyCamTests;
-			productName = WalkyCamTests;
-			productReference = 5637A8222AD5DD74000586DF /* WalkyCamTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		5637A82B2AD5DD74000586DF /* WalkyCamUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5637A83C2AD5DD74000586DF /* Build configuration list for PBXNativeTarget "WalkyCamUITests" */;
-			buildPhases = (
-				1267E4C27402D9878C36BD44 /* [CP] Check Pods Manifest.lock */,
-				5637A8282AD5DD74000586DF /* Sources */,
-				5637A8292AD5DD74000586DF /* Frameworks */,
-				5637A82A2AD5DD74000586DF /* Resources */,
-				9F139B3B072C31920EA30305 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5637A82E2AD5DD74000586DF /* PBXTargetDependency */,
-			);
-			name = WalkyCamUITests;
-			productName = WalkyCamUITests;
-			productReference = 5637A82C2AD5DD74000586DF /* WalkyCamUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -9062,14 +8984,6 @@
 				TargetAttributes = {
 					5637A8112AD5DD72000586DF = {
 						CreatedOnToolsVersion = 14.3.1;
-					};
-					5637A8212AD5DD74000586DF = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = 5637A8112AD5DD72000586DF;
-					};
-					5637A82B2AD5DD74000586DF = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = 5637A8112AD5DD72000586DF;
 					};
 				};
 			};
@@ -9090,8 +9004,6 @@
 			projectRoot = "";
 			targets = (
 				5637A8112AD5DD72000586DF /* WalkyCam */,
-				5637A8212AD5DD74000586DF /* WalkyCamTests */,
-				5637A82B2AD5DD74000586DF /* WalkyCamUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -9114,45 +9026,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5637A8202AD5DD74000586DF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5637A82A2AD5DD74000586DF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1267E4C27402D9878C36BD44 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WalkyCam-WalkyCamUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2AD57F133F47F00769773B17 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -9186,45 +9062,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-WalkyCam-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9F139B3B072C31920EA30305 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WalkyCam-WalkyCamUITests/Pods-WalkyCam-WalkyCamUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WalkyCam-WalkyCamUITests/Pods-WalkyCam-WalkyCamUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WalkyCam-WalkyCamUITests/Pods-WalkyCam-WalkyCamUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B665DC98071E120FB831E057 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WalkyCamTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -10084,34 +9921,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5637A81E2AD5DD74000586DF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5637A8282AD5DD74000586DF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5637A8242AD5DD74000586DF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5637A8112AD5DD72000586DF /* WalkyCam */;
-			targetProxy = 5637A8232AD5DD74000586DF /* PBXContainerItemProxy */;
-		};
-		5637A82E2AD5DD74000586DF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5637A8112AD5DD72000586DF /* WalkyCam */;
-			targetProxy = 5637A82D2AD5DD74000586DF /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EA15B5742AD6DF2C00C03407 /* Localizable.strings */ = {
@@ -10249,6 +10059,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7994PXZY59;
 				ENABLE_PREVIEWS = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "WalkyCam-Info.plist";
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "Our application needs permission to access the calendar";
@@ -10264,6 +10075,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.walkycam.WalkyCam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -10300,6 +10112,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.walkycam.WalkyCam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -10308,86 +10121,6 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		5637A83A2AD5DD74000586DF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3892066162EC4092B81855CF /* Pods-WalkyCamTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7994PXZY59;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.walkycam.WalkyCamTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WalkyCam.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WalkyCam";
-			};
-			name = Debug;
-		};
-		5637A83B2AD5DD74000586DF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E54922207763AAC42EDA9C15 /* Pods-WalkyCamTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7994PXZY59;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.walkycam.WalkyCamTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WalkyCam.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WalkyCam";
-			};
-			name = Release;
-		};
-		5637A83D2AD5DD74000586DF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2D370A53D1B1D2B617F75CA /* Pods-WalkyCam-WalkyCamUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7994PXZY59;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.walkycam.WalkyCamUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WalkyCam;
-			};
-			name = Debug;
-		};
-		5637A83E2AD5DD74000586DF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE9BD1476FF351E995D11C31 /* Pods-WalkyCam-WalkyCamUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7994PXZY59;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.walkycam.WalkyCamUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WalkyCam;
 			};
 			name = Release;
 		};
@@ -10408,24 +10141,6 @@
 			buildConfigurations = (
 				5637A8372AD5DD74000586DF /* Debug */,
 				5637A8382AD5DD74000586DF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5637A8392AD5DD74000586DF /* Build configuration list for PBXNativeTarget "WalkyCamTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5637A83A2AD5DD74000586DF /* Debug */,
-				5637A83B2AD5DD74000586DF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5637A83C2AD5DD74000586DF /* Build configuration list for PBXNativeTarget "WalkyCamUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5637A83D2AD5DD74000586DF /* Debug */,
-				5637A83E2AD5DD74000586DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

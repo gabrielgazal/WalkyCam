@@ -74,13 +74,16 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: Tokens.Size.Spacing.large, height: Tokens.Size.Spacing.large)
                                 VStack(alignment: .leading,
-                                       spacing: Tokens.Size.Spacing.small) {
+                                       spacing: Tokens.Size.Spacing.tiny) {
                                     Text(L10n.ProfileView.Convert.walkycamer)
                                         .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
                                     Text("(genera ganacias con nosotros)")
-                                        .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                                        .font(.projectFont(size: Tokens.Size.Font.regular, weight: .regular))
                                 }
                                 Spacer()
+                            }
+                            .onTapGesture {
+                                router.routeToRegisterCamer()
                             }
                             Divider()
                             HStack(spacing: Tokens.Size.Spacing.regular) {
