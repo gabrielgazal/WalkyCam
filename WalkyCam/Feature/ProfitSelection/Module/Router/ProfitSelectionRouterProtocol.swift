@@ -1,6 +1,6 @@
 import SwiftUI
 
 protocol ProfitSelectionRouterProtocol: Router {
-    func routeToSomething()
+    func routeToIdentityUpload(data: CamerRegistrationData)
 }
 

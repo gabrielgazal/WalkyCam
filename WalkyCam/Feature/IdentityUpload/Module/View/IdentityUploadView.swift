@@ -22,7 +22,24 @@ struct IdentityUploadView<ViewModel: IdentityUploadViewModelProtocol, Router: Id
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.regular) {
                 headerView
+                Text("Asegúrate que el ID esté vigente y que todos los campos sean legibles y nítidos.")
+                    .font(.projectFont(size: Tokens.Size.Font.regular))
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(Color.red)
+                    .frame(height: 200)
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(Color.red)
+                    .frame(height: 200)
+                WCUIButton(title: "Subir fotos",
+                           leftIcon: Asset.Icons.camera.name,
+                           style: .standard,
+                           descriptor: OrangeButtonStyleDescriptor(),
+                           action: {})
+                LinkButton(title: "Cancelar Registro",
+                           color: .naranja,
+                           action: {})
             }
+                   .padding(.horizontal, Tokens.Size.Spacing.large)
         }
     }
     
@@ -31,16 +48,14 @@ struct IdentityUploadView<ViewModel: IdentityUploadViewModelProtocol, Router: Id
                spacing: Tokens.Size.Spacing.regular) {
             HStack {
                 Spacer()
-                headerCounterView(1, 4)
+                headerCounterView(0, 4)
             }
-            .padding(.horizontal, Tokens.Size.Spacing.large)
             HStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {
-                Text("Buscar zona")
+                Text("Carga tu documento de identidad")
                     .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                 Spacer()
             }
-                   .padding(.horizontal, Tokens.Size.Spacing.large)
         }
     }
     

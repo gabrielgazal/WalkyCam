@@ -4,9 +4,10 @@ final class ProfitSelectionRouter: Router, ProfitSelectionRouterProtocol {
 
     // MARK: - Public API
 
-    #warning("Example function. Rename or remove it")
-    func routeToSomething() { 
-
+    func routeToIdentityUpload(data: CamerRegistrationData) {
+        navigateTo(
+            IdentityUploadRoute(isPresented: isNavigating, data: data)
+        )
     }
 }
 

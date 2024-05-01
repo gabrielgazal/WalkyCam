@@ -49,7 +49,7 @@ struct ProfitSelectionView<ViewModel: ProfitSelectionViewModelProtocol, Router: 
                         viewModel.registrationData.earningType = "partner"
                     default: break
                     }
-                    
+                    router.routeToIdentityUpload(data: viewModel.registrationData)
                 })
                 .isHidden(selectedIndex == 0)
                 WCUIButton(title: "Cancelar",
