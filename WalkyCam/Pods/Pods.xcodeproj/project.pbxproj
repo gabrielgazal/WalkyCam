@@ -138,7 +138,6 @@
 		1D95EEE7F2F0DD9010A9ED4D51FE5282 /* upsampling_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = EE763671CAC99B3C7B394CC849C301FC /* upsampling_msa.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
 		1ED6665659AB24A263CE36081A5D7601 /* enc_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = 987A031E27E0FFF2DF5B03DC4F27A4EF /* enc_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
 		1F282E2232C7683F08CF444D2BB6306E /* Viewport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C054D754B0825C89A777C56C18E819 /* Viewport.swift */; };
-		200883A01F05C1A687B9194360E1E17E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258C9F4C872E3DCF4952859496043CE7 /* Foundation.framework */; };
 		20DCCD45D7976E012612939EC700FE03 /* MapContentBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331CA6551EE29019FD7E001654848C28 /* MapContentBuilder.swift */; };
 		21D1F9ADCD9F6A1E874847DCBBEF156D /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BD25626E7C239FA2A87A3419B84056 /* Logger.swift */; };
 		223E32B7587D01FA92B11BA4537EE4EA /* ForwardingDispalyLinkTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1A3EE2851650567E7D1DFD3991BCF1 /* ForwardingDispalyLinkTarget.swift */; };
@@ -310,11 +309,9 @@
 		6CB0D66875431B7924BF84D0AFC42225 /* rescaler_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F1E1B081CAA69C9E4B4BE25AA994A7BC /* rescaler_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6CFE3E65E635448423466BD7CA6E0E37 /* DefaultViewportTransitionAnimationSpecProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B855AD08A8632E73C0B7764F8E619762 /* DefaultViewportTransitionAnimationSpecProvider.swift */; };
 		6D558551F59AC6322E812AFDDF67F5A8 /* quant_levels_dec_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = B789709AC5D7C84233ACDEB849AC144E /* quant_levels_dec_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6DCA9163B91BD5BDE5EC599330CC31AE /* Pods-WalkyCamTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 37B76A56C5FDFE6EA1066C5E54EE0A4F /* Pods-WalkyCamTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E0CB3581AFCE631C78B97EBB3C64179 /* FollowPuckViewportStateBearing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3762866FFB2F57C7F8D7BC907BCEA7B /* FollowPuckViewportStateBearing.swift */; };
 		6E8CF0928D319B2262793B7AAE211511 /* anim_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = 54DB92C45AC92A560A955D8AAACFFFB9 /* anim_encode.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
 		6E9C43DC05389CCF85B6CD8CD4A806A5 /* sharpyuv.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CEB44AC3F02893F47EE0490523D2AB3 /* sharpyuv.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6ED4648ED098BDC10AE323B62FD53B5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258C9F4C872E3DCF4952859496043CE7 /* Foundation.framework */; };
 		6EEFAAF30D92C1DF851FB491971CB0F4 /* FeatureIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97669C3B51458A772D1D953048F62C4 /* FeatureIdentifier.swift */; };
 		6F1D429E2CC1B0F595B020682F14B402 /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D6A4665F62C65BB1BDAC4DBE649088 /* UIEdgeInsets.swift */; };
 		6F731BB1A4324A822C5DED782B07DE05 /* InterruptDecelerationGestureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63ACD47379E47E62BF36CD4E413F1CA /* InterruptDecelerationGestureHandler.swift */; };
@@ -356,7 +353,6 @@
 		84D979D2B1C860A68E3699EF2492AADB /* sharpyuv_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 6260B3B9539E239A269F91B8C0E50746 /* sharpyuv_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
 		865843C6B9C6E8F83891104E5F9E3757 /* StyleEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459FADAF8B3D2B9EE8807D651196E1D /* StyleEncodable.swift */; };
 		869C3D63E6781D322A8329DCF8FFFD5F /* GeoJSONSourceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A9294FCB7143ED0EF7A612BD388ABE /* GeoJSONSourceData.swift */; };
-		8708927A3271A4B680A1DF7EFE00E57E /* Pods-WalkyCam-WalkyCamUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0770ACB28B1755413A17C7FCBCCFA5F2 /* Pods-WalkyCam-WalkyCamUITests-dummy.m */; };
 		87B83C989F4CDCC947DD22633B2BDC96 /* Puck2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5653A4637204C2DCE2F693C5D72245A8 /* Puck2D.swift */; };
 		8817892F2A293F70145AD7C744A5C3A1 /* common_sse2.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C0A00DCFBEE25962352DE9A3992C3C2 /* common_sse2.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8867AD89DF9D2EF11D7F5900D12C23D2 /* alpha_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 374E6BF66DFCB3708926986DF7D8A82F /* alpha_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
@@ -369,7 +365,7 @@
 		8BC46568BBF2E782D65DDB65404D6E2F /* OverviewViewportStateOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED69E66523176B2B7C4AC39EB39C65 /* OverviewViewportStateOptions.swift */; };
 		8CD29730435FAF326B238D0EEAEE0FD6 /* LocationPermissionsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34462B70802BB50C30556531B545FE1 /* LocationPermissionsDelegate.swift */; };
 		8D3A8A7EDA052CC3314AB708ADFD7A37 /* OfflineSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD1EBAADAF8EEE3DB6A6B9DC072F603 /* OfflineSwitch.swift */; };
-		8D460DF685FCF15AE30EB085AFF37A61 /* Pods-WalkyCam-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DEC948CCEFC3C5709A1FA1926892CBC /* Pods-WalkyCam-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D460DF685FCF15AE30EB085AFF37A61 /* Pods-WalkyCam-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 48BB72EC7C8EB48E7418C106F9057FBF /* Pods-WalkyCam-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DA88050B788CB5F9E67CD1C5CB93151 /* vp8l_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = A3A770887A604D237B8D82604CEF8CFD /* vp8l_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
 		8DAFDF5F0F982DA081B2772980DB9B90 /* RasterSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675CCD5F8BC4EDCFB6CE665354FFD4B8 /* RasterSource.swift */; };
 		8DC6BF64927F81B3A5DB88DC13AAB625 /* CameraAnimationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A9DA77A5E469923CF0DA7981B17DA /* CameraAnimationsManager.swift */; };
@@ -383,7 +379,6 @@
 		906DCE72B22F4A9869AC4DDC534D87C8 /* MapSnapshotOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14931E2EF4EDD46521487CE92D740D /* MapSnapshotOptions.swift */; };
 		9320735B171DAC0A2526238F0C606A14 /* AttributionDialogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54634EFC9B6CC8510271E31EF472426F /* AttributionDialogManager.swift */; };
 		94F7BA8EAD92AE90B8354FE4D14091D2 /* MapView+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAEF371445F265BAB1CF2B290D41059 /* MapView+Snapshot.swift */; };
-		960ED409DAFED0EFD4EF47B08E8F607B /* Pods-WalkyCam-WalkyCamUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 86885ADA346C52FD58482151B39EB87B /* Pods-WalkyCam-WalkyCamUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96779026803305C55DB20B1C87EA5DFE /* HeatmapLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F03CFC059BC310499D553ED4BE00CE /* HeatmapLayer.swift */; };
 		970A82E09AE506E444239BF9DA4E8A35 /* DefaultViewportTransitionAnimationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE62B6D0C22C14B87FBAE550C8F6B7E /* DefaultViewportTransitionAnimationSpec.swift */; };
 		97A57DEFAD87EAAE637CAE5461C72334 /* lossless_enc_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = 1E83EEDFD4874DC8F488D7006A1C799F /* lossless_enc_msa.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
@@ -504,7 +499,6 @@
 		CCCCFDB7A1B04C246E20C7EA8415E899 /* bit_reader_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F9801933CE22A110A7E1925C59DF78F /* bit_reader_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
 		CCE755854A95BB15D92555716B9B53A3 /* dec_mips32.c in Sources */ = {isa = PBXBuildFile; fileRef = F68B1EE361124B3E9F3EAFCDE327D918 /* dec_mips32.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
 		CD099A4A6CDE47933585C0B4BFEC20FC /* FeatureExtensionValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BBCC4CD8C2473EEAF650266072CC2A /* FeatureExtensionValue.swift */; };
-		CD120E6A0F6F0B0B14D91478AAA95814 /* Pods-WalkyCamTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F89BE0E18BC9477E99455DC055C72B83 /* Pods-WalkyCamTests-dummy.m */; };
 		CD944026218FD45E9A1A725C7372DD6E /* Bundle+MapboxMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B6A0C263C6E6EFECFF31FA2C8D3B67 /* Bundle+MapboxMaps.swift */; };
 		CDC497EE6F64BED01FFB632D7F7CD44A /* Slot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D298C65945DDDBE177807620345E46 /* Slot.swift */; };
 		CE32AB9D59D863EECEF4CC6D4BE57DA4 /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 7E56AF286042A75F3DAA9C293B1DBAFC /* utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
@@ -586,7 +580,7 @@
 		F127722BD823547391507785A7373561 /* MapView+Attribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51F39292228B508BC1376201FBF4E9 /* MapView+Attribution.swift */; };
 		F1A99A77E1D4E8FD93E0A54888F2A803 /* ImageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C352D698558F6FEC0E7F0B7065858249 /* ImageSource.swift */; };
 		F20A1D45BC2A65E16ABD5A5F4701888B /* Turf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60226D2CCA912BF747041326843AB3D3 /* Turf.swift */; };
-		F33C189EC632C0DDAEC3EDCC9E9E94F0 /* Pods-WalkyCam-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1B677CBA2A28989B990F164F4EF480 /* Pods-WalkyCam-dummy.m */; };
+		F33C189EC632C0DDAEC3EDCC9E9E94F0 /* Pods-WalkyCam-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FEC625CECBC4490BB6ED0B5D386A86B /* Pods-WalkyCam-dummy.m */; };
 		F447C5FA41B4136CAF3C50D6BACBD923 /* Consumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAF9242798A07997DB5128C7A85242 /* Consumer.swift */; };
 		F522FA67A3C83A085616986DDAEE7C30 /* thread_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CE516E0BFFB4716843D85DB82F512B6 /* thread_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
 		F61500017882A56C9650D58B3FC7C122 /* token_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 0FC4650388214917ABDFC6C21BD66CAA /* token_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
@@ -637,20 +631,6 @@
 			remoteGlobalIDString = 82A6C390665C31A279D93485A297F9AA;
 			remoteInfo = JitsiWebRTC;
 		};
-		0AF4607AE6E6DB2861269EB76CE81180 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A2800F9E39A87D3C362D7B4C88D40B83;
-			remoteInfo = Giphy;
-		};
-		13BADCAF10B4F089AB8D902CDAF21AB6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 82A6C390665C31A279D93485A297F9AA;
-			remoteInfo = JitsiWebRTC;
-		};
 		2C237FF5D0B9BB9C72D86D74AEB46CDD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -680,20 +660,6 @@
 			remoteInfo = JitsiWebRTC;
 		};
 		68768E2B4EAAD9F68BFAB3CD2F66B366 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5B40FBDAD0AB75D17C4760F4054BFF71;
-			remoteInfo = JitsiMeetSDK;
-		};
-		6FF395444C834FE52AAD11810B94FAA1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 61F4FF1C37CE7F9B4CBD9630D28B5EE5;
-			remoteInfo = "Pods-WalkyCam";
-		};
-		82C5C2304A1D3852B72814C1DBEDEE4B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -756,47 +722,12 @@
 			remoteGlobalIDString = 5638B5E625AB73DE90E61BF1C58289AD;
 			remoteInfo = MapboxCommon;
 		};
-		BBA69A61E83BF1F93A101E4259CE0B7F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 47D2E85A78C25869BB13521D8561A638;
-			remoteInfo = libwebp;
-		};
-		C450A611625CC0191B297CD94E4129DF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 65241501A90844E924E6FEC62E9C051D;
-			remoteInfo = Turf;
-		};
 		CCEAB4C39AD92B51B695D62DA4DA11E7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5C3D7074D979311BD41B13DF134C8433;
 			remoteInfo = "MapboxMaps-MapboxMapsResources";
-		};
-		DC77FB40E59BFB0D8FC16396C24DDB97 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 399389D79BAFE0E8DA3B37ECBFE558A6;
-			remoteInfo = MapboxCoreMaps;
-		};
-		EC5BCB979DABA5626B9B8224017C09FF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 462E1A68F880507D7481B0EA92B399E1;
-			remoteInfo = MapboxMaps;
-		};
-		EF0EA9A80367F8DD228D5F0FE64BDAD9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5638B5E625AB73DE90E61BF1C58289AD;
-			remoteInfo = MapboxCommon;
 		};
 		F94FDF6B34DBE27151D394128627D26C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -809,7 +740,6 @@
 
 /* Begin PBXFileReference section */
 		00A24A8A0DA525307DD19237CAA3E882 /* UIDeviceProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIDeviceProtocol.swift; path = Sources/MapboxMaps/Foundation/RetroactiveConformances/UIDeviceProtocol.swift; sourceTree = "<group>"; };
-		00A994E7F2FE8A351145D69267A87F53 /* Pods-WalkyCam-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WalkyCam-Info.plist"; sourceTree = "<group>"; };
 		01397805A2EAFFB84543ECE6C77B69B8 /* OfflineRegion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OfflineRegion.swift; path = Sources/MapboxMaps/Foundation/Extensions/Core/OfflineRegion.swift; sourceTree = "<group>"; };
 		015070EC51575A67F52C5C67BFAE3893 /* TileStoreObserverWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TileStoreObserverWrapper.swift; path = Sources/MapboxMaps/Offline/TileStoreObserverWrapper.swift; sourceTree = "<group>"; };
 		0172451AF6FB216D4A569CAA8D029C3F /* CompassDirectionShort.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = CompassDirectionShort.strings; path = en.lproj/CompassDirectionShort.strings; sourceTree = "<group>"; };
@@ -824,8 +754,6 @@
 		06D298C65945DDDBE177807620345E46 /* Slot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Slot.swift; path = Sources/MapboxMaps/Foundation/Extensions/Core/Slot.swift; sourceTree = "<group>"; };
 		06DF4523E9EA0A034BCA66C875849837 /* ViewportManagerImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewportManagerImpl.swift; path = Sources/MapboxMaps/Viewport/ViewportManagerImpl.swift; sourceTree = "<group>"; };
 		06E05EF2203523C82A71718C5F2372FA /* CompassDirectionLong.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = CompassDirectionLong.strings; path = vi.lproj/CompassDirectionLong.strings; sourceTree = "<group>"; };
-		074F79BB3FCC7EE9DECF2663182F4FFA /* Pods-WalkyCam-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WalkyCam-acknowledgements.plist"; sourceTree = "<group>"; };
-		0770ACB28B1755413A17C7FCBCCFA5F2 /* Pods-WalkyCam-WalkyCamUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WalkyCam-WalkyCamUITests-dummy.m"; sourceTree = "<group>"; };
 		07E68D29ADB0F5970080586A6F25ECAE /* backward_references_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = backward_references_enc.c; path = src/enc/backward_references_enc.c; sourceTree = "<group>"; };
 		0806BE21FB7DB8866A1FA12F1DF474B3 /* Style+Localization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Style+Localization.swift"; path = "Sources/MapboxMaps/Style/Style+Localization.swift"; sourceTree = "<group>"; };
 		08238DBDF678C131A834A5865826163D /* HeadingProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeadingProvider.swift; path = Sources/MapboxMaps/Location/HeadingProvider.swift; sourceTree = "<group>"; };
@@ -842,6 +770,7 @@
 		0D40C7F5BCF3460361D0AE210E316697 /* Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Size.swift; path = Sources/MapboxMaps/Foundation/Extensions/Core/Size.swift; sourceTree = "<group>"; };
 		0D7A199901A2F490DFF3C1AE7A507468 /* yuv_sse41.c */ = {isa = PBXFileReference; includeInIndex = 1; name = yuv_sse41.c; path = src/dsp/yuv_sse41.c; sourceTree = "<group>"; };
 		0DE50C16741D5227B51677BB90BCD6C4 /* MapViewDependencyProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MapViewDependencyProvider.swift; path = Sources/MapboxMaps/Foundation/MapViewDependencyProvider.swift; sourceTree = "<group>"; };
+		0E70D725A87D2BBF1EB8A3EEA4237FC4 /* Pods-WalkyCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WalkyCam.debug.xcconfig"; sourceTree = "<group>"; };
 		0E870F8B126A58DF193275E56FC35BD4 /* Heading.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Heading.swift; path = Sources/MapboxMaps/Location/Heading.swift; sourceTree = "<group>"; };
 		0EFA7A223A481CF8AB2741F8B36B73FC /* TouchBeganGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TouchBeganGestureRecognizer.swift; path = Sources/MapboxMaps/Gestures/GestureRecognizers/TouchBeganGestureRecognizer.swift; sourceTree = "<group>"; };
 		0FB497035CB5F60DB5C6234C111FFF92 /* Turf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Turf.release.xcconfig; sourceTree = "<group>"; };
@@ -887,7 +816,6 @@
 		22440EF83A2FA2D9A13D23D29A8653CC /* MapboxMaps.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MapboxMaps.h; path = Sources/MapboxMaps/MapboxMaps.h; sourceTree = "<group>"; };
 		22B1FBD20269742F7FA1BF75D843032B /* color_cache_utils.c */ = {isa = PBXFileReference; includeInIndex = 1; name = color_cache_utils.c; path = src/utils/color_cache_utils.c; sourceTree = "<group>"; };
 		23767746EC54DC960BE232311504B9B9 /* cost_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = cost_enc.c; path = src/enc/cost_enc.c; sourceTree = "<group>"; };
-		23D86E72AACFCE88F1A22164A5E23114 /* Pods-WalkyCam-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WalkyCam-acknowledgements.markdown"; sourceTree = "<group>"; };
 		23E47C97CD4916882070EAF2D7EA6663 /* Feature.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Feature.swift; path = Sources/MapboxMaps/Foundation/Extensions/Turf/Feature.swift; sourceTree = "<group>"; };
 		2411104765CCF9AECA03860BB5333FE7 /* View+OnSizeChange.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "View+OnSizeChange.swift"; path = "Sources/MapboxMaps/SwiftUI/Util/View+OnSizeChange.swift"; sourceTree = "<group>"; };
 		241ED55FD7972F5440E33224F620CE09 /* dec_neon.c */ = {isa = PBXFileReference; includeInIndex = 1; name = dec_neon.c; path = src/dsp/dec_neon.c; sourceTree = "<group>"; };
@@ -896,7 +824,6 @@
 		247C55ACB61087BCAF6FE12077A095C9 /* cost_enc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cost_enc.h; path = src/enc/cost_enc.h; sourceTree = "<group>"; };
 		24BE140A4E5C150A78FF5162320F6AD5 /* FreeCameraOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FreeCameraOptions.swift; path = Sources/MapboxMaps/Foundation/Extensions/Core/FreeCameraOptions.swift; sourceTree = "<group>"; };
 		256BDCF834E0BCCB63C2AB85105FEAF8 /* IndicatorAssets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = IndicatorAssets.xcassets; path = Sources/MapboxMaps/Location/Puck/IndicatorAssets.xcassets; sourceTree = "<group>"; };
-		25798567301E169BC285583DBF6C96C5 /* Pods-WalkyCam.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WalkyCam.modulemap"; sourceTree = "<group>"; };
 		258C9F4C872E3DCF4952859496043CE7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		25F288F08AEFD9E8218A4404374C8857 /* GeoJSONSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GeoJSONSource.swift; path = Sources/MapboxMaps/Style/Generated/Sources/GeoJSONSource.swift; sourceTree = "<group>"; };
 		26642669BA00B590B1EB5E80CE268ECE /* MapboxScaleBarLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MapboxScaleBarLabel.swift; path = Sources/MapboxMaps/Ornaments/ScaleBar/MapboxScaleBarLabel.swift; sourceTree = "<group>"; };
@@ -921,6 +848,8 @@
 		2E85F0B629AA7CB5D80A5363FC7F8125 /* ViewAnnotationsContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewAnnotationsContainer.swift; path = Sources/MapboxMaps/Foundation/ViewAnnotationsContainer.swift; sourceTree = "<group>"; };
 		2EEF272E6DBF69B96C295E21A846DCCD /* bit_writer_utils.c */ = {isa = PBXFileReference; includeInIndex = 1; name = bit_writer_utils.c; path = src/utils/bit_writer_utils.c; sourceTree = "<group>"; };
 		2F53497EAC0D764F9045ABA2EAC8786B /* PinchGestureHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PinchGestureHandler.swift; path = Sources/MapboxMaps/Gestures/GestureHandlers/PinchGestureHandler.swift; sourceTree = "<group>"; };
+		2FEC625CECBC4490BB6ED0B5D386A86B /* Pods-WalkyCam-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WalkyCam-dummy.m"; sourceTree = "<group>"; };
+		308DA16A94F4F22CF4FBFD312C5FDC3A /* Pods-WalkyCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WalkyCam.release.xcconfig"; sourceTree = "<group>"; };
 		317CC3B10A87FD4249A2B97FF69D31EC /* OfflineManager+MapboxMaps.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OfflineManager+MapboxMaps.swift"; path = "Sources/MapboxMaps/Offline/OfflineManager+MapboxMaps.swift"; sourceTree = "<group>"; };
 		319B1D3F5B9702E5B028E781583BAAA2 /* MapboxMaps.json */ = {isa = PBXFileReference; includeInIndex = 1; name = MapboxMaps.json; path = Sources/MapboxMaps/MapboxMaps.json; sourceTree = "<group>"; };
 		31E4D9F6A007C32C17DADF140E2889FF /* OfflineRegionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OfflineRegionManager.swift; path = Sources/MapboxMaps/Foundation/Extensions/Core/OfflineRegionManager.swift; sourceTree = "<group>"; };
@@ -945,12 +874,9 @@
 		36D593A1FB89B6F0D19056BF6C39DD4B /* OffsetGeometryCalculator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OffsetGeometryCalculator.swift; path = Sources/MapboxMaps/Annotations/OffsetGeometryCalculator.swift; sourceTree = "<group>"; };
 		374E6BF66DFCB3708926986DF7D8A82F /* alpha_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = alpha_enc.c; path = src/enc/alpha_enc.c; sourceTree = "<group>"; };
 		3773B4F5E8317ACCE646445E744AC456 /* AppleLocationProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppleLocationProvider.swift; path = Sources/MapboxMaps/Location/AppleLocationProvider.swift; sourceTree = "<group>"; };
-		37B76A56C5FDFE6EA1066C5E54EE0A4F /* Pods-WalkyCamTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WalkyCamTests-umbrella.h"; sourceTree = "<group>"; };
 		37D6A4665F62C65BB1BDAC4DBE649088 /* UIEdgeInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIEdgeInsets.swift; path = Sources/MapboxMaps/Foundation/Extensions/UIEdgeInsets.swift; sourceTree = "<group>"; };
 		38D369F4D0BC588B7066BB3E9BF7F2B7 /* sharpyuv_csp.c */ = {isa = PBXFileReference; includeInIndex = 1; name = sharpyuv_csp.c; path = sharpyuv/sharpyuv_csp.c; sourceTree = "<group>"; };
 		395D0736345CD27E84CD40491009272B /* bit_reader_inl_utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = bit_reader_inl_utils.h; path = src/utils/bit_reader_inl_utils.h; sourceTree = "<group>"; };
-		3A0B7274054BD0259CC6DE3935AB76B9 /* Pods-WalkyCamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WalkyCamTests.debug.xcconfig"; sourceTree = "<group>"; };
-		3A64E3A658F186FAD99E7A63330A81BE /* Pods-WalkyCamTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WalkyCamTests"; path = Pods_WalkyCamTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B38FCB5BE105E1CEEA08D61C8E3CA35 /* muxread.c */ = {isa = PBXFileReference; includeInIndex = 1; name = muxread.c; path = src/mux/muxread.c; sourceTree = "<group>"; };
 		3BDE270C8C6948D218BA28C8B55704A1 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extensions.swift"; path = "Sources/MapboxMaps/Foundation/Extensions/UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		3C0A00DCFBEE25962352DE9A3992C3C2 /* common_sse2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = common_sse2.h; path = src/dsp/common_sse2.h; sourceTree = "<group>"; };
@@ -958,7 +884,6 @@
 		3C88E60DDCA4D2F360222C2B5DA5885F /* Map+URLOpener.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Map+URLOpener.swift"; path = "Sources/MapboxMaps/SwiftUI/Map+URLOpener.swift"; sourceTree = "<group>"; };
 		3D47DCDE23013DE472BE7B91942951E9 /* ResolvedImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResolvedImage.swift; path = Sources/MapboxMaps/Style/Types/ResolvedImage.swift; sourceTree = "<group>"; };
 		3D596CA4B82441C6C5E98C58F97C0B5E /* JitsiMeetSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "JitsiMeetSDK-xcframeworks.sh"; sourceTree = "<group>"; };
-		3DEC948CCEFC3C5709A1FA1926892CBC /* Pods-WalkyCam-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WalkyCam-umbrella.h"; sourceTree = "<group>"; };
 		3E46AF18DCDE91214124E99BE6B8A862 /* MapboxCommon.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = MapboxCommon.xcframework; sourceTree = "<group>"; };
 		3E4F14E11BCD98E3C5AE85B1A6804CFD /* cost_sse2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = cost_sse2.c; path = src/dsp/cost_sse2.c; sourceTree = "<group>"; };
 		3E754A233360E843C384ED721850FEDE /* filters_msa.c */ = {isa = PBXFileReference; includeInIndex = 1; name = filters_msa.c; path = src/dsp/filters_msa.c; sourceTree = "<group>"; };
@@ -968,7 +893,6 @@
 		3F3FBC460DD1CF6C2D54F4DF5B41BA55 /* filters_utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = filters_utils.h; path = src/utils/filters_utils.h; sourceTree = "<group>"; };
 		3F40682B9BA618B29F0CC4A9CA34B3E0 /* cpu.c */ = {isa = PBXFileReference; includeInIndex = 1; name = cpu.c; path = src/dsp/cpu.c; sourceTree = "<group>"; };
 		3F7D6D4E651A1DBEACEC5CE585A4349D /* MapboxMaps-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MapboxMaps-umbrella.h"; sourceTree = "<group>"; };
-		3FF24C46C695B5C588FEEFDAB9AE3F68 /* Pods-WalkyCamTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WalkyCamTests.modulemap"; sourceTree = "<group>"; };
 		4010125F3EC44812CD47D2F96FF1E140 /* anim_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; name = anim_decode.c; path = src/demux/anim_decode.c; sourceTree = "<group>"; };
 		40415F0B7C28CC15826AA7368E5704B5 /* rescaler_msa.c */ = {isa = PBXFileReference; includeInIndex = 1; name = rescaler_msa.c; path = src/dsp/rescaler_msa.c; sourceTree = "<group>"; };
 		4214476FCEDE18B109623F8D2D081114 /* enc_msa.c */ = {isa = PBXFileReference; includeInIndex = 1; name = enc_msa.c; path = src/dsp/enc_msa.c; sourceTree = "<group>"; };
@@ -979,13 +903,13 @@
 		4466F1B0532F3C7A9856016CEDF4E976 /* PolygonAnnotationGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PolygonAnnotationGroup.swift; path = Sources/MapboxMaps/SwiftUI/Annotations/Generated/PolygonAnnotationGroup.swift; sourceTree = "<group>"; };
 		44EA416C3875960F23B5F9279DD89CD3 /* QueriedFeature.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QueriedFeature.swift; path = Sources/MapboxMaps/Foundation/Extensions/Core/QueriedFeature.swift; sourceTree = "<group>"; };
 		4670F7DD6C60F072967220880E47CC76 /* ForEvery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ForEvery.swift; path = Sources/MapboxMaps/SwiftUI/Builders/ForEvery.swift; sourceTree = "<group>"; };
-		470FD69AC7E877EC0C274EB2FB21E27D /* Pods-WalkyCam-WalkyCamUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WalkyCam-WalkyCamUITests"; path = Pods_WalkyCam_WalkyCamUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4737D6A905F8373A171E3F829502D60B /* Encodable+ToJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Encodable+ToJSON.swift"; path = "Sources/MapboxMaps/Foundation/Extensions/Encodable+ToJSON.swift"; sourceTree = "<group>"; };
 		474CEDC54191A561EAE2899428C2EF1E /* DefaultViewportTransitionOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultViewportTransitionOptions.swift; path = Sources/MapboxMaps/Viewport/Transitions/Default/DefaultViewportTransitionOptions.swift; sourceTree = "<group>"; };
 		4778EA28D980CB41D1E5010120ED0BAF /* Util.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Util.swift; path = Sources/MapboxMaps/SwiftUI/Util/Util.swift; sourceTree = "<group>"; };
 		48845D569AA7908650434E3251E3226C /* MapboxMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MapboxMap.swift; path = Sources/MapboxMaps/Foundation/MapboxMap.swift; sourceTree = "<group>"; };
 		488E9F48B6831107B1EFD25BE45DE87D /* neon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = neon.h; path = src/dsp/neon.h; sourceTree = "<group>"; };
 		48AB568F46D5D53A0E52AB4D15C608DD /* analysis_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = analysis_enc.c; path = src/enc/analysis_enc.c; sourceTree = "<group>"; };
+		48BB72EC7C8EB48E7418C106F9057FBF /* Pods-WalkyCam-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WalkyCam-umbrella.h"; sourceTree = "<group>"; };
 		48DA343AC7E6964E2D4681AF168CDB80 /* rescaler_neon.c */ = {isa = PBXFileReference; includeInIndex = 1; name = rescaler_neon.c; path = src/dsp/rescaler_neon.c; sourceTree = "<group>"; };
 		48F632BB6D802093FD513F7F11BAE72E /* Once.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Once.swift; path = Sources/MapboxMaps/Foundation/Utils/Once.swift; sourceTree = "<group>"; };
 		48FD3269D5DBD1DAFFC9EA98B8265B4F /* PanGestureHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PanGestureHandler.swift; path = Sources/MapboxMaps/Gestures/GestureHandlers/PanGestureHandler.swift; sourceTree = "<group>"; };
@@ -1007,6 +931,7 @@
 		4E2CA94281F97583229C2E1B16ED6082 /* thread_utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = thread_utils.h; path = src/utils/thread_utils.h; sourceTree = "<group>"; };
 		4E954FC13E86FD46C6B9AFA56EB4BF0A /* CircleAnnotation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircleAnnotation.swift; path = Sources/MapboxMaps/Annotations/Generated/CircleAnnotation.swift; sourceTree = "<group>"; };
 		4EB51B577297AB3FA74D89F71AAF1639 /* Turf-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Turf-prefix.pch"; sourceTree = "<group>"; };
+		4ED44A045158FF290B933CE9C00B071D /* Pods-WalkyCam.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WalkyCam.modulemap"; sourceTree = "<group>"; };
 		4F7C412AA468880B0270E8AB36D726C0 /* ViewportStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewportStatus.swift; path = Sources/MapboxMaps/Viewport/ViewportStatus.swift; sourceTree = "<group>"; };
 		4F9801933CE22A110A7E1925C59DF78F /* bit_reader_utils.c */ = {isa = PBXFileReference; includeInIndex = 1; name = bit_reader_utils.c; path = src/utils/bit_reader_utils.c; sourceTree = "<group>"; };
 		504CE9473CDB9F0B95C72BA4BF8F4273 /* Turf */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Turf; path = Turf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1015,7 +940,6 @@
 		50FD161291F9AB38B8DAF643DB2D1A44 /* StyleSourceManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StyleSourceManager.swift; path = Sources/MapboxMaps/Style/StyleSourceManager.swift; sourceTree = "<group>"; };
 		51463DDCA9041C154ABBB94F49B27019 /* CameraOptionsComponent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraOptionsComponent.swift; path = Sources/MapboxMaps/Viewport/Transitions/Default/CameraOptionsComponent.swift; sourceTree = "<group>"; };
 		51B9B626C20418391928BC6685B2C3EE /* filters_neon.c */ = {isa = PBXFileReference; includeInIndex = 1; name = filters_neon.c; path = src/dsp/filters_neon.c; sourceTree = "<group>"; };
-		52EE7A7BEDAB056F0795B3028E450E93 /* Pods-WalkyCam-WalkyCamUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WalkyCam-WalkyCamUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5387B3446455CC998D25334FF93EB7B1 /* endian_inl_utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = endian_inl_utils.h; path = src/utils/endian_inl_utils.h; sourceTree = "<group>"; };
 		5443041F2DF0878A3B9637DDA17F77F2 /* JitsiMeetSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = JitsiMeetSDK.xcframework; path = Frameworks/JitsiMeetSDK.xcframework; sourceTree = "<group>"; };
 		54634EFC9B6CC8510271E31EF472426F /* AttributionDialogManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AttributionDialogManager.swift; path = Sources/MapboxMaps/Style/AttributionDialogManager.swift; sourceTree = "<group>"; };
@@ -1045,7 +969,6 @@
 		609B849485DAA862794D1C1AEAE1017C /* backward_references_cost_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = backward_references_cost_enc.c; path = src/enc/backward_references_cost_enc.c; sourceTree = "<group>"; };
 		61A226F31242D9227484B696A735F5F0 /* CompassDirectionShort.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = CompassDirectionShort.strings; path = ja.lproj/CompassDirectionShort.strings; sourceTree = "<group>"; };
 		61F7113CC609F50E3B549A28D257CB85 /* mux.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mux.h; path = src/webp/mux.h; sourceTree = "<group>"; };
-		62015E9786287253F4E61B0635FAA1C2 /* Pods-WalkyCam-WalkyCamUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WalkyCam-WalkyCamUITests.modulemap"; sourceTree = "<group>"; };
 		623E7061FF21814BEBAA3227849F921C /* picture_csp_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = picture_csp_enc.c; path = src/enc/picture_csp_enc.c; sourceTree = "<group>"; };
 		6260B3B9539E239A269F91B8C0E50746 /* sharpyuv_sse2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = sharpyuv_sse2.c; path = sharpyuv/sharpyuv_sse2.c; sourceTree = "<group>"; };
 		628B20FC08A8362084824AC9DD1FE1EA /* CompassDirectionLong.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = CompassDirectionLong.strings; path = gl.lproj/CompassDirectionLong.strings; sourceTree = "<group>"; };
@@ -1068,7 +991,6 @@
 		68FE4FBC4B43154D1802948D95E5DB6A /* StylePackLoadOptions+MapboxMaps.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "StylePackLoadOptions+MapboxMaps.swift"; path = "Sources/MapboxMaps/Offline/StylePackLoadOptions+MapboxMaps.swift"; sourceTree = "<group>"; };
 		69026ED4E54BD001D60BDB7054BCF4EC /* PuckType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PuckType.swift; path = Sources/MapboxMaps/Location/Puck/PuckType.swift; sourceTree = "<group>"; };
 		69A8EB601B4746EB4DCEB446530A6DD8 /* LightInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LightInfo.swift; path = Sources/MapboxMaps/Style/LightInfo.swift; sourceTree = "<group>"; };
-		6A06C2A4790C8F83636741D85664F143 /* Pods-WalkyCam-WalkyCamUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WalkyCam-WalkyCamUITests-Info.plist"; sourceTree = "<group>"; };
 		6A58ED0A11D928001485988DB401D5B9 /* vp8l_dec.c */ = {isa = PBXFileReference; includeInIndex = 1; name = vp8l_dec.c; path = src/dec/vp8l_dec.c; sourceTree = "<group>"; };
 		6B33B77122CA8DB72DF2B8C159E43565 /* InfoButtonOrnament.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InfoButtonOrnament.swift; path = Sources/MapboxMaps/Ornaments/InfoButtonOrnament.swift; sourceTree = "<group>"; };
 		6B37CA1535DD48F43B50AD7C188F9AC2 /* decode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = decode.h; path = src/webp/decode.h; sourceTree = "<group>"; };
@@ -1119,7 +1041,6 @@
 		7ADED6628D7AD11262FDC096C79E505F /* quant.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = quant.h; path = src/dsp/quant.h; sourceTree = "<group>"; };
 		7AFF7318224F7D517F6B39B629FA3FFA /* BackgroundLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BackgroundLayer.swift; path = Sources/MapboxMaps/Style/Generated/Layers/BackgroundLayer.swift; sourceTree = "<group>"; };
 		7B5E14F1678D611578EF242FF3BC2596 /* CompassDirectionShort.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = CompassDirectionShort.strings; path = ru.lproj/CompassDirectionShort.strings; sourceTree = "<group>"; };
-		7B5E825F0B983583956CBEAC481404D2 /* Pods-WalkyCam-WalkyCamUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WalkyCam-WalkyCamUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		7C3F248FB19CB020BDC73361E3949573 /* AlwayEqual.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlwayEqual.swift; path = Sources/MapboxMaps/Foundation/AlwayEqual.swift; sourceTree = "<group>"; };
 		7C415541E777C259E8C9464C45EAD288 /* Geometry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Geometry.swift; path = Sources/MapboxMaps/Foundation/Extensions/Turf/Geometry.swift; sourceTree = "<group>"; };
 		7C7AA337850E3FE6D3E8712E1729B7CC /* LayerInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerInfo.swift; path = Sources/MapboxMaps/Style/LayerInfo.swift; sourceTree = "<group>"; };
@@ -1148,7 +1069,6 @@
 		855A66A39FB945F5596FFD42B18F86ED /* AmbientLight.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AmbientLight.swift; path = Sources/MapboxMaps/Style/Generated/Light/AmbientLight.swift; sourceTree = "<group>"; };
 		86189AF6289A456DD70EF92C731424D3 /* PuckRenderingData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PuckRenderingData.swift; path = Sources/MapboxMaps/Location/Puck/PuckRenderingData.swift; sourceTree = "<group>"; };
 		86355036E8A122717EC2265A540117B2 /* AnyCancelable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyCancelable.swift; path = Sources/MapboxMaps/Foundation/AnyCancelable.swift; sourceTree = "<group>"; };
-		86885ADA346C52FD58482151B39EB87B /* Pods-WalkyCam-WalkyCamUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WalkyCam-WalkyCamUITests-umbrella.h"; sourceTree = "<group>"; };
 		86F12037C75B5D3BA7A36E5C63142586 /* Array+CodingKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+CodingKey.swift"; path = "Sources/MapboxMaps/Foundation/DictionaryCoding/Array+CodingKey.swift"; sourceTree = "<group>"; };
 		87E43B2B8A26E3D6AA6102A890D1B779 /* PuckRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PuckRenderer.swift; path = Sources/MapboxMaps/Location/Puck/PuckRenderer.swift; sourceTree = "<group>"; };
 		881D35ED809F376D7E5F660704D35F91 /* Deps.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deps.swift; path = Sources/MapboxMaps/SwiftUI/Deps.swift; sourceTree = "<group>"; };
@@ -1156,6 +1076,7 @@
 		88929F9C10ABB8422AE2BC63DA6482DA /* LogoView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LogoView.swift; path = Sources/MapboxMaps/Ornaments/LogoView.swift; sourceTree = "<group>"; };
 		88B6A0C263C6E6EFECFF31FA2C8D3B67 /* Bundle+MapboxMaps.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+MapboxMaps.swift"; path = "Sources/MapboxMaps/Foundation/Extensions/Bundle+MapboxMaps.swift"; sourceTree = "<group>"; };
 		88F840714B126817299B5E4C8BAB0976 /* tree_dec.c */ = {isa = PBXFileReference; includeInIndex = 1; name = tree_dec.c; path = src/dec/tree_dec.c; sourceTree = "<group>"; };
+		88F877902293C1FC42B5E6F1F872EBEF /* Pods-WalkyCam-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WalkyCam-acknowledgements.markdown"; sourceTree = "<group>"; };
 		892558238BA15858D0AF4B60FB8B1A2D /* UIApplicationProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIApplicationProtocol.swift; path = Sources/MapboxMaps/Foundation/RetroactiveConformances/UIApplicationProtocol.swift; sourceTree = "<group>"; };
 		892FB1662603E562234EC94932A29143 /* CameraAnimationsManagerImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraAnimationsManagerImpl.swift; path = Sources/MapboxMaps/Camera/CameraAnimationsManagerImpl.swift; sourceTree = "<group>"; };
 		8961FE540D94EAF9752EC879C1B4E38A /* libwebp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = libwebp.release.xcconfig; sourceTree = "<group>"; };
@@ -1176,7 +1097,6 @@
 		8D13640F5E350DA724A8F6468E5DB1DE /* ModelAdapters.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModelAdapters.swift; path = Sources/MapboxMaps/Location/ModelAdapters.swift; sourceTree = "<group>"; };
 		8DE5AE88E30D491F84FEEB0BA37170A6 /* SingleTapGestureHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SingleTapGestureHandler.swift; path = Sources/MapboxMaps/Gestures/GestureHandlers/SingleTapGestureHandler.swift; sourceTree = "<group>"; };
 		8F1AF629BCD5B21671E60A48756AC79A /* libwebp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = libwebp.modulemap; sourceTree = "<group>"; };
-		8F2AF8E244E625FD2DA89D152D668408 /* Pods-WalkyCam-WalkyCamUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WalkyCam-WalkyCamUITests-frameworks.sh"; sourceTree = "<group>"; };
 		8F5F523790A77F139B2F2D78EB77051A /* Turf-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Turf-umbrella.h"; sourceTree = "<group>"; };
 		904F6E3F18076D1765C69E31FEBDC473 /* TileStoreObserverCancelable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TileStoreObserverCancelable.swift; path = Sources/MapboxMaps/Offline/TileStoreObserverCancelable.swift; sourceTree = "<group>"; };
 		90A988077B943E0AD40B126B22B50615 /* mux_types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mux_types.h; path = src/webp/mux_types.h; sourceTree = "<group>"; };
@@ -1186,6 +1106,7 @@
 		92012018C738348DF6C61990F4F28194 /* DictionaryEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DictionaryEncoder.swift; path = Sources/MapboxMaps/Foundation/DictionaryCoding/DictionaryEncoder.swift; sourceTree = "<group>"; };
 		9220B5A307475E84A4DA4B98D2784481 /* quant_levels_dec_utils.c */ = {isa = PBXFileReference; includeInIndex = 1; name = quant_levels_dec_utils.c; path = src/utils/quant_levels_dec_utils.c; sourceTree = "<group>"; };
 		923917A712C2E0A50E3F27EFAFE1B93C /* lossless_enc_neon.c */ = {isa = PBXFileReference; includeInIndex = 1; name = lossless_enc_neon.c; path = src/dsp/lossless_enc_neon.c; sourceTree = "<group>"; };
+		92F269660613CE086603655E5662188E /* Pods-WalkyCam-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WalkyCam-frameworks.sh"; sourceTree = "<group>"; };
 		9352EA533595D3E8B6C0B11E854A7F8A /* cpu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cpu.h; path = src/dsp/cpu.h; sourceTree = "<group>"; };
 		93B15825E6DCE443871FA30131735A90 /* AnnotationOrchestratorImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnnotationOrchestratorImpl.swift; path = Sources/MapboxMaps/Annotations/AnnotationOrchestratorImpl.swift; sourceTree = "<group>"; };
 		93DD1DD7493C69CDCFB9B305B618AB72 /* lossless_enc_sse2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = lossless_enc_sse2.c; path = src/dsp/lossless_enc_sse2.c; sourceTree = "<group>"; };
@@ -1196,7 +1117,6 @@
 		95F02CB076676CC36FEE2EBA12DF4B5C /* alpha_processing_sse41.c */ = {isa = PBXFileReference; includeInIndex = 1; name = alpha_processing_sse41.c; path = src/dsp/alpha_processing_sse41.c; sourceTree = "<group>"; };
 		96761777E5E139756CDFF4A4270197AE /* Projection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Projection.swift; path = Sources/MapboxMaps/Foundation/Projection.swift; sourceTree = "<group>"; };
 		9690E1765F8941C2EC4EEF2720AD480C /* CircleLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircleLayer.swift; path = Sources/MapboxMaps/Style/Generated/Layers/CircleLayer.swift; sourceTree = "<group>"; };
-		978C1B2AEAFB7226487D54E875B9046F /* Pods-WalkyCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WalkyCam.release.xcconfig"; sourceTree = "<group>"; };
 		987A031E27E0FFF2DF5B03DC4F27A4EF /* enc_mips_dsp_r2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = enc_mips_dsp_r2.c; path = src/dsp/enc_mips_dsp_r2.c; sourceTree = "<group>"; };
 		9923B978F71F41A2997B797A207439C6 /* LayerAnnotationCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerAnnotationCoordinator.swift; path = Sources/MapboxMaps/SwiftUI/Annotations/LayerAnnotationCoordinator.swift; sourceTree = "<group>"; };
 		995282B0C4B7EAD67C67786510AB8564 /* frame_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = frame_enc.c; path = src/enc/frame_enc.c; sourceTree = "<group>"; };
@@ -1220,7 +1140,6 @@
 		9F492E10FD7C3A1A6406D9990E87659F /* LowZoomToHighZoomAnimationSpecProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LowZoomToHighZoomAnimationSpecProvider.swift; path = Sources/MapboxMaps/Viewport/Transitions/Default/LowZoomToHighZoomAnimationSpecProvider.swift; sourceTree = "<group>"; };
 		9F7459DFAE12BB7732720E1283409173 /* enc_neon.c */ = {isa = PBXFileReference; includeInIndex = 1; name = enc_neon.c; path = src/dsp/enc_neon.c; sourceTree = "<group>"; };
 		9FA9C67B86FFEF3DBBB83E5E4375145F /* LightType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LightType.swift; path = Sources/MapboxMaps/Style/LightType.swift; sourceTree = "<group>"; };
-		9FB6302B9922EAC4D497F0A1152194AD /* Pods-WalkyCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WalkyCam.debug.xcconfig"; sourceTree = "<group>"; };
 		A079107CA17BFA1CB4C61F75D4640414 /* yuv.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = yuv.h; path = src/dsp/yuv.h; sourceTree = "<group>"; };
 		A0E8C070CE676A45890ADED6BA85499A /* StyleProjection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StyleProjection.swift; path = Sources/MapboxMaps/Style/StyleProjection.swift; sourceTree = "<group>"; };
 		A10AB2E6869728186DB66B61D27584A4 /* MapViewDebugOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MapViewDebugOptions.swift; path = Sources/MapboxMaps/Foundation/Utils/MapViewDebugOptions.swift; sourceTree = "<group>"; };
@@ -1234,7 +1153,6 @@
 		A3F1C15D0852CC3098BF97795BC8FA17 /* PuckManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PuckManager.swift; path = Sources/MapboxMaps/Location/Puck/PuckManager.swift; sourceTree = "<group>"; };
 		A60836FC9E47005610D8454F5A5F1D55 /* dsp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dsp.h; path = src/dsp/dsp.h; sourceTree = "<group>"; };
 		A62B08DCCDE904FAD42C6E6C4A194F9B /* MapboxMaps-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MapboxMaps-Info.plist"; sourceTree = "<group>"; };
-		A67DD0B1713091B9A4DCFBF297ED96F4 /* Pods-WalkyCamTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WalkyCamTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		A6F45B6A51AE764112F4BC19EDBDB17D /* filters_mips_dsp_r2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = filters_mips_dsp_r2.c; path = src/dsp/filters_mips_dsp_r2.c; sourceTree = "<group>"; };
 		A6F6737AF8A6783A4EB040DAA445514E /* alpha_dec.c */ = {isa = PBXFileReference; includeInIndex = 1; name = alpha_dec.c; path = src/dec/alpha_dec.c; sourceTree = "<group>"; };
 		A70E04052B16A7983AE722EDE4684805 /* CompassDirectionShort.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = CompassDirectionShort.strings; path = "zh-Hans.lproj/CompassDirectionShort.strings"; sourceTree = "<group>"; };
@@ -1261,6 +1179,7 @@
 		B31F107D5882DA180607AE083E12EB81 /* LineString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineString.swift; path = Sources/Turf/Geometries/LineString.swift; sourceTree = "<group>"; };
 		B3BBCC4CD8C2473EEAF650266072CC2A /* FeatureExtensionValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FeatureExtensionValue.swift; path = Sources/MapboxMaps/Foundation/Extensions/Core/FeatureExtensionValue.swift; sourceTree = "<group>"; };
 		B3F74722973C70DEBD78BA58B6AE00BE /* StyleManager+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "StyleManager+Extensions.swift"; path = "Sources/MapboxMaps/Annotations/StyleManager+Extensions.swift"; sourceTree = "<group>"; };
+		B57140F2EE2C01F0480ACC957AB55493 /* Pods-WalkyCam-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WalkyCam-acknowledgements.plist"; sourceTree = "<group>"; };
 		B589D61C357C5882749395EACD4C953F /* dec_sse2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = dec_sse2.c; path = src/dsp/dec_sse2.c; sourceTree = "<group>"; };
 		B6B35E42E64453C2A72A085C9BAD4635 /* Feature.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Feature.swift; path = Sources/Turf/Feature.swift; sourceTree = "<group>"; };
 		B6FC8E73D8A3F662885D02BB5D21D861 /* sharpyuv_cpu.c */ = {isa = PBXFileReference; includeInIndex = 1; name = sharpyuv_cpu.c; path = sharpyuv/sharpyuv_cpu.c; sourceTree = "<group>"; };
@@ -1279,7 +1198,6 @@
 		BB5C05172130531C9FB252C506F365B2 /* MultiPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultiPoint.swift; path = Sources/Turf/Geometries/MultiPoint.swift; sourceTree = "<group>"; };
 		BBC5CBB01B0182CAA8274FBEABB9DCDE /* quant_dec.c */ = {isa = PBXFileReference; includeInIndex = 1; name = quant_dec.c; path = src/dec/quant_dec.c; sourceTree = "<group>"; };
 		BCE62B6D0C22C14B87FBAE550C8F6B7E /* DefaultViewportTransitionAnimationSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultViewportTransitionAnimationSpec.swift; path = Sources/MapboxMaps/Viewport/Transitions/Default/DefaultViewportTransitionAnimationSpec.swift; sourceTree = "<group>"; };
-		BD1B677CBA2A28989B990F164F4EF480 /* Pods-WalkyCam-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WalkyCam-dummy.m"; sourceTree = "<group>"; };
 		BEE11F8009DE5908C49CD40E806F66B8 /* libwebp-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "libwebp-prefix.pch"; sourceTree = "<group>"; };
 		BF002F4D618618C418422FE9C2E516CC /* ViewportOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewportOptions.swift; path = Sources/MapboxMaps/Viewport/ViewportOptions.swift; sourceTree = "<group>"; };
 		C027B69BD1357F8C624BB47B0E3DD973 /* CameraAnimatorsRunner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraAnimatorsRunner.swift; path = Sources/MapboxMaps/Camera/CameraAnimatorsRunner.swift; sourceTree = "<group>"; };
@@ -1346,16 +1264,13 @@
 		D53A2E3EAE000AE2AE83455C26571D85 /* libwebp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "libwebp-dummy.m"; sourceTree = "<group>"; };
 		D5BBF3380CE37E55AEB2B6ACE1A36168 /* KebabCaseKeyDecodingStrategy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KebabCaseKeyDecodingStrategy.swift; path = Sources/MapboxMaps/Foundation/Extensions/KebabCaseKeyDecodingStrategy.swift; sourceTree = "<group>"; };
 		D5C2252ECB39A74F54739FF1AB3F5D41 /* MapboxMapsOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MapboxMapsOptions.swift; path = Sources/MapboxMaps/Foundation/MapboxMapsOptions.swift; sourceTree = "<group>"; };
-		D6D012435DF07F385645D18472314EEF /* Pods-WalkyCam-WalkyCamUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WalkyCam-WalkyCamUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D6FD0EC1A3BEF231AF89A6AD8C4D208D /* CompassDirectionLong.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = CompassDirectionLong.strings; path = es.lproj/CompassDirectionLong.strings; sourceTree = "<group>"; };
 		D727CAD29E0C11A700C6DB99D008599E /* PointAnnotationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PointAnnotationManager.swift; path = Sources/MapboxMaps/Annotations/Generated/PointAnnotationManager.swift; sourceTree = "<group>"; };
 		D7F34A7E8E13C9EF22B43350AB4CFFDF /* MultiLineString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultiLineString.swift; path = Sources/Turf/Geometries/MultiLineString.swift; sourceTree = "<group>"; };
 		D836C15BD81385714FD2B99BC5091376 /* MapPlayerOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MapPlayerOptions.swift; path = Sources/MapboxMaps/Foundation/MapPlayerOptions.swift; sourceTree = "<group>"; };
 		D850B2DBBB72E28D992AD83C986C010A /* rescaler.c */ = {isa = PBXFileReference; includeInIndex = 1; name = rescaler.c; path = src/dsp/rescaler.c; sourceTree = "<group>"; };
 		D93EBFFAF55AAE5502A5CCFF03D6D89B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
-		D9E18912F3998DAE41DAA802C67F2DA8 /* Pods-WalkyCamTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WalkyCamTests-Info.plist"; sourceTree = "<group>"; };
 		DA2286691190A1072E05DF85FE66270C /* MapEvents+Deprecated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MapEvents+Deprecated.swift"; path = "Sources/MapboxMaps/MapEvents/MapEvents+Deprecated.swift"; sourceTree = "<group>"; };
-		DBBE7484683F24C05304EDF1302F2143 /* Pods-WalkyCam-WalkyCamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WalkyCam-WalkyCamUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DBF4D7962D2E90D53477B66803AE0876 /* CompassDirectionLong.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = CompassDirectionLong.strings; path = ja.lproj/CompassDirectionLong.strings; sourceTree = "<group>"; };
 		DC3B73487472C43B048AFBB4C923E5F1 /* ValueAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValueAnimator.swift; path = Sources/MapboxMaps/Foundation/ValueAnimator.swift; sourceTree = "<group>"; };
 		DCB3B63684CD6D51D3A5FB35E2B7CA1A /* rescaler_mips32.c */ = {isa = PBXFileReference; includeInIndex = 1; name = rescaler_mips32.c; path = src/dsp/rescaler_mips32.c; sourceTree = "<group>"; };
@@ -1374,17 +1289,16 @@
 		E167AAF7383DD2A5B268C6D333F91117 /* alpha_processing_mips_dsp_r2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = alpha_processing_mips_dsp_r2.c; path = src/dsp/alpha_processing_mips_dsp_r2.c; sourceTree = "<group>"; };
 		E17B8FFD8CE98AD0D5F9B9E52CAC6F4B /* MapRecorder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MapRecorder.swift; path = Sources/MapboxMaps/Foundation/MapRecorder.swift; sourceTree = "<group>"; };
 		E1EDB3A7C1191D0DD7DBECE95C63A523 /* filters.c */ = {isa = PBXFileReference; includeInIndex = 1; name = filters.c; path = src/dsp/filters.c; sourceTree = "<group>"; };
-		E2284E561E5D32C235CE47257B9FF4A4 /* Pods-WalkyCam-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WalkyCam-frameworks.sh"; sourceTree = "<group>"; };
 		E289C8E7F4A5ABB2B56FCABAA8350A75 /* TileStoreObserver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TileStoreObserver.swift; path = Sources/MapboxMaps/Offline/TileStoreObserver.swift; sourceTree = "<group>"; };
 		E2DDB56ACCF6E8C6A197FD881B87971D /* Ring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Ring.swift; path = Sources/Turf/Ring.swift; sourceTree = "<group>"; };
 		E33156C914026E09F133FF1F302F43B3 /* vp8_dec.c */ = {isa = PBXFileReference; includeInIndex = 1; name = vp8_dec.c; path = src/dec/vp8_dec.c; sourceTree = "<group>"; };
 		E33FD266E6DE8A2BE573536C0D1B3352 /* rescaler_utils.c */ = {isa = PBXFileReference; includeInIndex = 1; name = rescaler_utils.c; path = src/utils/rescaler_utils.c; sourceTree = "<group>"; };
 		E34462B70802BB50C30556531B545FE1 /* LocationPermissionsDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocationPermissionsDelegate.swift; path = Sources/MapboxMaps/Location/LocationPermissionsDelegate.swift; sourceTree = "<group>"; };
-		E3A7AB8C31D44211F4E7560522E0B3D8 /* Pods-WalkyCamTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WalkyCamTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E45EA619CF5BA653719DCD04D576E70F /* CameraDebugView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraDebugView.swift; path = Sources/MapboxMaps/Foundation/Utils/CameraDebugView.swift; sourceTree = "<group>"; };
 		E47008676BCF69DC1882DE68FF666C0C /* MapboxMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MapboxMaps.debug.xcconfig; sourceTree = "<group>"; };
 		E4F7E80AD2BBAB4B34564751E4A514A8 /* CompassDirectionShort.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = CompassDirectionShort.strings; path = es.lproj/CompassDirectionShort.strings; sourceTree = "<group>"; };
 		E51599F6580278CF0729AC3942712A98 /* TileRegionLoadOptions+MapboxMaps.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TileRegionLoadOptions+MapboxMaps.swift"; path = "Sources/MapboxMaps/Offline/TileRegionLoadOptions+MapboxMaps.swift"; sourceTree = "<group>"; };
+		E6D421DAA63C48DC374982508985347A /* Pods-WalkyCam-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WalkyCam-Info.plist"; sourceTree = "<group>"; };
 		E729C8AB737CD81C5BBDD04C5EC60394 /* lossless_neon.c */ = {isa = PBXFileReference; includeInIndex = 1; name = lossless_neon.c; path = src/dsp/lossless_neon.c; sourceTree = "<group>"; };
 		E740AD23FDD13A317E8483A14274CB74 /* CameraAnimatorsFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraAnimatorsFactory.swift; path = Sources/MapboxMaps/Camera/CameraAnimatorsFactory.swift; sourceTree = "<group>"; };
 		E7C054D754B0825C89A777C56C18E819 /* Viewport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Viewport.swift; path = Sources/MapboxMaps/SwiftUI/Viewport/Viewport.swift; sourceTree = "<group>"; };
@@ -1445,7 +1359,6 @@
 		F81AADF9C62394312827258383595623 /* lossless_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = lossless_enc.c; path = src/dsp/lossless_enc.c; sourceTree = "<group>"; };
 		F840891D99ACF70621A87FDBE8ABD70F /* LayerPosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerPosition.swift; path = Sources/MapboxMaps/Foundation/Extensions/Core/LayerPosition.swift; sourceTree = "<group>"; };
 		F8876E8B750F14B404E0903952C8B5A0 /* Signal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Signal.swift; path = Sources/MapboxMaps/Foundation/Signal/Signal.swift; sourceTree = "<group>"; };
-		F89BE0E18BC9477E99455DC055C72B83 /* Pods-WalkyCamTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WalkyCamTests-dummy.m"; sourceTree = "<group>"; };
 		F8A15B04CC1ACA7BC2FAA5661FC47685 /* sharpyuv_dsp.c */ = {isa = PBXFileReference; includeInIndex = 1; name = sharpyuv_dsp.c; path = sharpyuv/sharpyuv_dsp.c; sourceTree = "<group>"; };
 		F8FBACE555849CC22F26CA9E088210A4 /* OrnamentsManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OrnamentsManager.swift; path = Sources/MapboxMaps/Ornaments/OrnamentsManager.swift; sourceTree = "<group>"; };
 		F93A433B9CC5B071CDA9D0DBFB10E749 /* StyleErrors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StyleErrors.swift; path = Sources/MapboxMaps/Style/StyleErrors.swift; sourceTree = "<group>"; };
@@ -1459,7 +1372,6 @@
 		FC4D0B84CF1A7C214198CEA2FB9F1D26 /* NotificationCenterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NotificationCenterProtocol.swift; path = Sources/MapboxMaps/Foundation/RetroactiveConformances/NotificationCenterProtocol.swift; sourceTree = "<group>"; };
 		FC5F9A34464262C70A7F3BE1477D62F0 /* AnnotatedFeature.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnnotatedFeature.swift; path = Sources/MapboxMaps/Annotations/AnnotatedFeature.swift; sourceTree = "<group>"; };
 		FC7F3D3A241EEDDD4E67520EC3936781 /* InterfaceOrientationProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InterfaceOrientationProvider.swift; path = Sources/MapboxMaps/Foundation/InterfaceOrientationProvider.swift; sourceTree = "<group>"; };
-		FD0B012A9262D9A1EF9FEDC30674A732 /* Pods-WalkyCamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WalkyCamTests.release.xcconfig"; sourceTree = "<group>"; };
 		FD7C589670648968766E562DB03E74C6 /* WKT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WKT.swift; path = Sources/Turf/WKT.swift; sourceTree = "<group>"; };
 		FDAEF371445F265BAB1CF2B290D41059 /* MapView+Snapshot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MapView+Snapshot.swift"; path = "Sources/MapboxMaps/Foundation/MapView+Snapshot.swift"; sourceTree = "<group>"; };
 		FF22C935BDD874C9C2167E7E08D4F6C1 /* libwebp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "libwebp-Info.plist"; sourceTree = "<group>"; };
@@ -1495,27 +1407,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4307D47A9C66623D467A490266BEA4B7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6ED4648ED098BDC10AE323B62FD53B5D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		71BD1B2A8DBF1A75DD932512E36774A6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BD3242E8F32E6CD4A874F290269201A9 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		79B0FA2C0BEA08F0FBC05F183E6ABE5E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				200883A01F05C1A687B9194360E1E17E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1776,6 +1672,23 @@
 			path = "../Target Support Files/libwebp";
 			sourceTree = "<group>";
 		};
+		295E4B69D5CC43F619F8722AEC7940FB /* Pods-WalkyCam */ = {
+			isa = PBXGroup;
+			children = (
+				4ED44A045158FF290B933CE9C00B071D /* Pods-WalkyCam.modulemap */,
+				88F877902293C1FC42B5E6F1F872EBEF /* Pods-WalkyCam-acknowledgements.markdown */,
+				B57140F2EE2C01F0480ACC957AB55493 /* Pods-WalkyCam-acknowledgements.plist */,
+				2FEC625CECBC4490BB6ED0B5D386A86B /* Pods-WalkyCam-dummy.m */,
+				92F269660613CE086603655E5662188E /* Pods-WalkyCam-frameworks.sh */,
+				E6D421DAA63C48DC374982508985347A /* Pods-WalkyCam-Info.plist */,
+				48BB72EC7C8EB48E7418C106F9057FBF /* Pods-WalkyCam-umbrella.h */,
+				0E70D725A87D2BBF1EB8A3EEA4237FC4 /* Pods-WalkyCam.debug.xcconfig */,
+				308DA16A94F4F22CF4FBFD312C5FDC3A /* Pods-WalkyCam.release.xcconfig */,
+			);
+			name = "Pods-WalkyCam";
+			path = "Target Support Files/Pods-WalkyCam";
+			sourceTree = "<group>";
+		};
 		2BAFBDB83E3D6316966EB82364FA2F7B /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -1924,23 +1837,6 @@
 			path = "../Target Support Files/MapboxCommon";
 			sourceTree = "<group>";
 		};
-		83F93BED7D81CFF37273AD4789ACEBA7 /* Pods-WalkyCam-WalkyCamUITests */ = {
-			isa = PBXGroup;
-			children = (
-				62015E9786287253F4E61B0635FAA1C2 /* Pods-WalkyCam-WalkyCamUITests.modulemap */,
-				52EE7A7BEDAB056F0795B3028E450E93 /* Pods-WalkyCam-WalkyCamUITests-acknowledgements.markdown */,
-				7B5E825F0B983583956CBEAC481404D2 /* Pods-WalkyCam-WalkyCamUITests-acknowledgements.plist */,
-				0770ACB28B1755413A17C7FCBCCFA5F2 /* Pods-WalkyCam-WalkyCamUITests-dummy.m */,
-				8F2AF8E244E625FD2DA89D152D668408 /* Pods-WalkyCam-WalkyCamUITests-frameworks.sh */,
-				6A06C2A4790C8F83636741D85664F143 /* Pods-WalkyCam-WalkyCamUITests-Info.plist */,
-				86885ADA346C52FD58482151B39EB87B /* Pods-WalkyCam-WalkyCamUITests-umbrella.h */,
-				DBBE7484683F24C05304EDF1302F2143 /* Pods-WalkyCam-WalkyCamUITests.debug.xcconfig */,
-				D6D012435DF07F385645D18472314EEF /* Pods-WalkyCam-WalkyCamUITests.release.xcconfig */,
-			);
-			name = "Pods-WalkyCam-WalkyCamUITests";
-			path = "Target Support Files/Pods-WalkyCam-WalkyCamUITests";
-			sourceTree = "<group>";
-		};
 		92C14EE7FA115E10AAB6953B6006784F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1966,30 +1862,12 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		9F36DDDF9CD192CDE540BAB82DC02E10 /* Targets Support Files */ = {
+		A8874A0388B4D9FFE4FBBD712A805B1E /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				FCE46BCD17C952AC8D6B085CAB64FF1C /* Pods-WalkyCam */,
-				83F93BED7D81CFF37273AD4789ACEBA7 /* Pods-WalkyCam-WalkyCamUITests */,
-				B7E39FAB609E28B9DE405CE25FF4E0B9 /* Pods-WalkyCamTests */,
+				295E4B69D5CC43F619F8722AEC7940FB /* Pods-WalkyCam */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		B7E39FAB609E28B9DE405CE25FF4E0B9 /* Pods-WalkyCamTests */ = {
-			isa = PBXGroup;
-			children = (
-				3FF24C46C695B5C588FEEFDAB9AE3F68 /* Pods-WalkyCamTests.modulemap */,
-				E3A7AB8C31D44211F4E7560522E0B3D8 /* Pods-WalkyCamTests-acknowledgements.markdown */,
-				A67DD0B1713091B9A4DCFBF297ED96F4 /* Pods-WalkyCamTests-acknowledgements.plist */,
-				F89BE0E18BC9477E99455DC055C72B83 /* Pods-WalkyCamTests-dummy.m */,
-				D9E18912F3998DAE41DAA802C67F2DA8 /* Pods-WalkyCamTests-Info.plist */,
-				37B76A56C5FDFE6EA1066C5E54EE0A4F /* Pods-WalkyCamTests-umbrella.h */,
-				3A0B7274054BD0259CC6DE3935AB76B9 /* Pods-WalkyCamTests.debug.xcconfig */,
-				FD0B012A9262D9A1EF9FEDC30674A732 /* Pods-WalkyCamTests.release.xcconfig */,
-			);
-			name = "Pods-WalkyCamTests";
-			path = "Target Support Files/Pods-WalkyCamTests";
 			sourceTree = "<group>";
 		};
 		B869C2A88FAC20FED4FBBCB2B80FAFA5 /* sharpyuv */ = {
@@ -2041,9 +1919,21 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
 				1BF9B3D5354767022B80E06FB8DC5FCA /* Pods */,
-				EC674F52E6212DE37674BFF08A06260A /* Products */,
-				9F36DDDF9CD192CDE540BAB82DC02E10 /* Targets Support Files */,
+				CF9944EC99123F8CEA5D4869E7B55443 /* Products */,
+				A8874A0388B4D9FFE4FBBD712A805B1E /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		CF9944EC99123F8CEA5D4869E7B55443 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E4674603A5D5B9215FFA0F8E69F8B71 /* libwebp */,
+				6E6CD80661687B39BD2D45E45AA724F7 /* MapboxMaps */,
+				78E842809B0D2FC3FFAEF6BA28FD31EF /* MapboxMaps-MapboxMapsResources */,
+				EDC595E10EEAEDBD9D933D41D76ED56E /* Pods-WalkyCam */,
+				504CE9473CDB9F0B95C72BA4BF8F4273 /* Turf */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		D0DDEDFF59715FBB3CA6E6B6D0408422 /* MapboxMaps */ = {
@@ -2406,20 +2296,6 @@
 			path = "../Target Support Files/Giphy";
 			sourceTree = "<group>";
 		};
-		EC674F52E6212DE37674BFF08A06260A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5E4674603A5D5B9215FFA0F8E69F8B71 /* libwebp */,
-				6E6CD80661687B39BD2D45E45AA724F7 /* MapboxMaps */,
-				78E842809B0D2FC3FFAEF6BA28FD31EF /* MapboxMaps-MapboxMapsResources */,
-				EDC595E10EEAEDBD9D933D41D76ED56E /* Pods-WalkyCam */,
-				470FD69AC7E877EC0C274EB2FB21E27D /* Pods-WalkyCam-WalkyCamUITests */,
-				3A64E3A658F186FAD99E7A63330A81BE /* Pods-WalkyCamTests */,
-				504CE9473CDB9F0B95C72BA4BF8F4273 /* Turf */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		F81043B455815CEB6C64618663CEFB1B /* JitsiWebRTC */ = {
 			isa = PBXGroup;
 			children = (
@@ -2428,23 +2304,6 @@
 			);
 			name = JitsiWebRTC;
 			path = JitsiWebRTC;
-			sourceTree = "<group>";
-		};
-		FCE46BCD17C952AC8D6B085CAB64FF1C /* Pods-WalkyCam */ = {
-			isa = PBXGroup;
-			children = (
-				25798567301E169BC285583DBF6C96C5 /* Pods-WalkyCam.modulemap */,
-				23D86E72AACFCE88F1A22164A5E23114 /* Pods-WalkyCam-acknowledgements.markdown */,
-				074F79BB3FCC7EE9DECF2663182F4FFA /* Pods-WalkyCam-acknowledgements.plist */,
-				BD1B677CBA2A28989B990F164F4EF480 /* Pods-WalkyCam-dummy.m */,
-				E2284E561E5D32C235CE47257B9FF4A4 /* Pods-WalkyCam-frameworks.sh */,
-				00A994E7F2FE8A351145D69267A87F53 /* Pods-WalkyCam-Info.plist */,
-				3DEC948CCEFC3C5709A1FA1926892CBC /* Pods-WalkyCam-umbrella.h */,
-				9FB6302B9922EAC4D497F0A1152194AD /* Pods-WalkyCam.debug.xcconfig */,
-				978C1B2AEAFB7226487D54E875B9046F /* Pods-WalkyCam.release.xcconfig */,
-			);
-			name = "Pods-WalkyCam";
-			path = "Target Support Files/Pods-WalkyCam";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2525,14 +2384,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		59505A18F2D88EC3A56614DA02C48068 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6DCA9163B91BD5BDE5EC599330CC31AE /* Pods-WalkyCamTests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B82386106DB6EA6FF65B17D5FA53DDA3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -2542,43 +2393,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C6CCDABDAF123735DDCE6BE3024FF60F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				960ED409DAFED0EFD4EF47B08E8F607B /* Pods-WalkyCam-WalkyCamUITests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0C5E270AE9A821A25A29314EE8956923 /* Pods-WalkyCam-WalkyCamUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 63B99A8B9427B391712B85319F6EFC6E /* Build configuration list for PBXNativeTarget "Pods-WalkyCam-WalkyCamUITests" */;
-			buildPhases = (
-				C6CCDABDAF123735DDCE6BE3024FF60F /* Headers */,
-				8489196CAA22437D9DFF48DAC41DA9E8 /* Sources */,
-				4307D47A9C66623D467A490266BEA4B7 /* Frameworks */,
-				1F9EAAA01EA3B5DC9A0BDE44C49964FA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				435A4892DFE8D4EC32EE92EFF1FAAC00 /* PBXTargetDependency */,
-				62BA42CD5EDC3411274EC31B695C2CD1 /* PBXTargetDependency */,
-				64AAF42C25084B4342C85E01E2D5D906 /* PBXTargetDependency */,
-				6B64C9B3158120CBAF4CE2161FEA8DB5 /* PBXTargetDependency */,
-				1FC0A426837AF9C121E2C721F306B521 /* PBXTargetDependency */,
-				CD233C570CCF5A00F860323FA5FE6438 /* PBXTargetDependency */,
-				43996CDB730FDE94C706C9A498B013D1 /* PBXTargetDependency */,
-				A757C33B483509D03E185346760DBD9C /* PBXTargetDependency */,
-			);
-			name = "Pods-WalkyCam-WalkyCamUITests";
-			productName = Pods_WalkyCam_WalkyCamUITests;
-			productReference = 470FD69AC7E877EC0C274EB2FB21E27D /* Pods-WalkyCam-WalkyCamUITests */;
-			productType = "com.apple.product-type.framework";
-		};
 		462E1A68F880507D7481B0EA92B399E1 /* MapboxMaps */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A779249721277A80905B2D24F9DB6064 /* Build configuration list for PBXNativeTarget "MapboxMaps" */;
@@ -2680,25 +2497,6 @@
 			productReference = 504CE9473CDB9F0B95C72BA4BF8F4273 /* Turf */;
 			productType = "com.apple.product-type.framework";
 		};
-		68E7ADDC1E90A2C878041F96E0CBC477 /* Pods-WalkyCamTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 526C1A23462EC96003EB232F7A22EE33 /* Build configuration list for PBXNativeTarget "Pods-WalkyCamTests" */;
-			buildPhases = (
-				59505A18F2D88EC3A56614DA02C48068 /* Headers */,
-				0047685782E65A5430C8B69793AB5F6D /* Sources */,
-				79B0FA2C0BEA08F0FBC05F183E6ABE5E /* Frameworks */,
-				79AABAB2ABF976F3CF2AFFC31D8DB2DA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				210E86296EFF3235BF6519800B4589DF /* PBXTargetDependency */,
-			);
-			name = "Pods-WalkyCamTests";
-			productName = Pods_WalkyCamTests;
-			productReference = 3A64E3A658F186FAD99E7A63330A81BE /* Pods-WalkyCamTests */;
-			productType = "com.apple.product-type.framework";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -2736,7 +2534,7 @@
 				"zh-Hant",
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = EC674F52E6212DE37674BFF08A06260A /* Products */;
+			productRefGroup = CF9944EC99123F8CEA5D4869E7B55443 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -2749,8 +2547,6 @@
 				462E1A68F880507D7481B0EA92B399E1 /* MapboxMaps */,
 				5C3D7074D979311BD41B13DF134C8433 /* MapboxMaps-MapboxMapsResources */,
 				61F4FF1C37CE7F9B4CBD9630D28B5EE5 /* Pods-WalkyCam */,
-				0C5E270AE9A821A25A29314EE8956923 /* Pods-WalkyCam-WalkyCamUITests */,
-				68E7ADDC1E90A2C878041F96E0CBC477 /* Pods-WalkyCamTests */,
 				65241501A90844E924E6FEC62E9C051D /* Turf */,
 			);
 		};
@@ -2778,13 +2574,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1F9EAAA01EA3B5DC9A0BDE44C49964FA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5E61467EC3E3CC8451D5DEF12110816C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2793,13 +2582,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		61F40E255D2158260819AF8C2176FC11 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		79AABAB2ABF976F3CF2AFFC31D8DB2DA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2905,14 +2687,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0047685782E65A5430C8B69793AB5F6D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CD120E6A0F6F0B0B14D91478AAA95814 /* Pods-WalkyCamTests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		05B99C030B04FDF3E38EF1298AF1C6D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3429,14 +3203,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8489196CAA22437D9DFF48DAC41DA9E8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8708927A3271A4B680A1DF7EFE00E57E /* Pods-WalkyCam-WalkyCamUITests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B2FB36D598ACFDD7660E0545285C3084 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3452,18 +3218,6 @@
 			name = JitsiWebRTC;
 			target = 82A6C390665C31A279D93485A297F9AA /* JitsiWebRTC */;
 			targetProxy = 5C0C47AB7E20EEFE5DD204ED48D64488 /* PBXContainerItemProxy */;
-		};
-		1FC0A426837AF9C121E2C721F306B521 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MapboxCoreMaps;
-			target = 399389D79BAFE0E8DA3B37ECBFE558A6 /* MapboxCoreMaps */;
-			targetProxy = DC77FB40E59BFB0D8FC16396C24DDB97 /* PBXContainerItemProxy */;
-		};
-		210E86296EFF3235BF6519800B4589DF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-WalkyCam";
-			target = 61F4FF1C37CE7F9B4CBD9630D28B5EE5 /* Pods-WalkyCam */;
-			targetProxy = 6FF395444C834FE52AAD11810B94FAA1 /* PBXContainerItemProxy */;
 		};
 		2DD2F9155E08A81ED0783AC432A5229E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3489,41 +3243,11 @@
 			target = 5638B5E625AB73DE90E61BF1C58289AD /* MapboxCommon */;
 			targetProxy = A91C24E498C65394D0AF1531A2AA64C8 /* PBXContainerItemProxy */;
 		};
-		435A4892DFE8D4EC32EE92EFF1FAAC00 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Giphy;
-			target = A2800F9E39A87D3C362D7B4C88D40B83 /* Giphy */;
-			targetProxy = 0AF4607AE6E6DB2861269EB76CE81180 /* PBXContainerItemProxy */;
-		};
-		43996CDB730FDE94C706C9A498B013D1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Turf;
-			target = 65241501A90844E924E6FEC62E9C051D /* Turf */;
-			targetProxy = C450A611625CC0191B297CD94E4129DF /* PBXContainerItemProxy */;
-		};
 		60C13216A5F8D859BEDF2C3AF5663D1B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Turf;
 			target = 65241501A90844E924E6FEC62E9C051D /* Turf */;
 			targetProxy = 85C5F29A4F9099E8ABC69E58E8D555BD /* PBXContainerItemProxy */;
-		};
-		62BA42CD5EDC3411274EC31B695C2CD1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = JitsiMeetSDK;
-			target = 5B40FBDAD0AB75D17C4760F4054BFF71 /* JitsiMeetSDK */;
-			targetProxy = 82C5C2304A1D3852B72814C1DBEDEE4B /* PBXContainerItemProxy */;
-		};
-		64AAF42C25084B4342C85E01E2D5D906 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = JitsiWebRTC;
-			target = 82A6C390665C31A279D93485A297F9AA /* JitsiWebRTC */;
-			targetProxy = 13BADCAF10B4F089AB8D902CDAF21AB6 /* PBXContainerItemProxy */;
-		};
-		6B64C9B3158120CBAF4CE2161FEA8DB5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MapboxCommon;
-			target = 5638B5E625AB73DE90E61BF1C58289AD /* MapboxCommon */;
-			targetProxy = EF0EA9A80367F8DD228D5F0FE64BDAD9 /* PBXContainerItemProxy */;
 		};
 		761726E988F661D238B7BD008F29A054 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3543,12 +3267,6 @@
 			target = 399389D79BAFE0E8DA3B37ECBFE558A6 /* MapboxCoreMaps */;
 			targetProxy = 5631519ADBD4BA8267B166B1C7FEDF34 /* PBXContainerItemProxy */;
 		};
-		A757C33B483509D03E185346760DBD9C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = libwebp;
-			target = 47D2E85A78C25869BB13521D8561A638 /* libwebp */;
-			targetProxy = BBA69A61E83BF1F93A101E4259CE0B7F /* PBXContainerItemProxy */;
-		};
 		ABC8BBC8082A2388A3128162A4F68B83 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MapboxCoreMaps;
@@ -3566,12 +3284,6 @@
 			name = Giphy;
 			target = A2800F9E39A87D3C362D7B4C88D40B83 /* Giphy */;
 			targetProxy = A2013BFF39392F0E03EFD7FE294E7802 /* PBXContainerItemProxy */;
-		};
-		CD233C570CCF5A00F860323FA5FE6438 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MapboxMaps;
-			target = 462E1A68F880507D7481B0EA92B399E1 /* MapboxMaps */;
-			targetProxy = EC5BCB979DABA5626B9B8224017C09FF /* PBXContainerItemProxy */;
 		};
 		CDA84F474B2635338BCF68C43E78A70F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3670,7 +3382,7 @@
 /* Begin XCBuildConfiguration section */
 		09F55A4CEE070113ADD18E5BDE2DCC55 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 978C1B2AEAFB7226487D54E875B9046F /* Pods-WalkyCam.release.xcconfig */;
+			baseConfigurationReference = 308DA16A94F4F22CF4FBFD312C5FDC3A /* Pods-WalkyCam.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -3859,81 +3571,6 @@
 			};
 			name = Debug;
 		};
-		5A95A393AAFC1D93438B8F50D83E852C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD0B012A9262D9A1EF9FEDC30674A732 /* Pods-WalkyCamTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-WalkyCamTests/Pods-WalkyCamTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-WalkyCamTests/Pods-WalkyCamTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		5F13E9A215ACA026CE592AAB6E9DC95C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBBE7484683F24C05304EDF1302F2143 /* Pods-WalkyCam-WalkyCamUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-WalkyCam-WalkyCamUITests/Pods-WalkyCam-WalkyCamUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-WalkyCam-WalkyCamUITests/Pods-WalkyCam-WalkyCamUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		61F30FFFAB5FCB77B6D48E4B1EC7661E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E47008676BCF69DC1882DE68FF666C0C /* MapboxMaps.debug.xcconfig */;
@@ -4086,7 +3723,7 @@
 		};
 		69EC376B7FF0CE73355D83BAA156C722 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9FB6302B9922EAC4D497F0A1152194AD /* Pods-WalkyCam.debug.xcconfig */;
+			baseConfigurationReference = 0E70D725A87D2BBF1EB8A3EEA4237FC4 /* Pods-WalkyCam.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -4169,44 +3806,6 @@
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		82C80CFB3B31BB90E961320DFAE11137 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D6D012435DF07F385645D18472314EEF /* Pods-WalkyCam-WalkyCamUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-WalkyCam-WalkyCamUITests/Pods-WalkyCam-WalkyCamUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-WalkyCam-WalkyCamUITests/Pods-WalkyCam-WalkyCamUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -4351,43 +3950,6 @@
 			};
 			name = Release;
 		};
-		E56D85319FB93CB0340287A1F9D9772F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A0B7274054BD0259CC6DE3935AB76B9 /* Pods-WalkyCamTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-WalkyCamTests/Pods-WalkyCamTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-WalkyCamTests/Pods-WalkyCamTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		EEE00DAEA6E69B9D0389B165C01741E9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0FB497035CB5F60DB5C6234C111FFF92 /* Turf.release.xcconfig */;
@@ -4462,29 +4024,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		526C1A23462EC96003EB232F7A22EE33 /* Build configuration list for PBXNativeTarget "Pods-WalkyCamTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E56D85319FB93CB0340287A1F9D9772F /* Debug */,
-				5A95A393AAFC1D93438B8F50D83E852C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		5B32F0E7E407EFBC5937FA05B874EA92 /* Build configuration list for PBXAggregateTarget "MapboxCommon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EF91FA441785AA708A0F79FA5A062D27 /* Debug */,
 				8BC3FF70C25BF13609D79C11A099679E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		63B99A8B9427B391712B85319F6EFC6E /* Build configuration list for PBXNativeTarget "Pods-WalkyCam-WalkyCamUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5F13E9A215ACA026CE592AAB6E9DC95C /* Debug */,
-				82C80CFB3B31BB90E961320DFAE11137 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

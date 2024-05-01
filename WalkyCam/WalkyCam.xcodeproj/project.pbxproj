@@ -899,7 +899,6 @@
 /* Begin PBXFileReference section */
 		01210015DB17D27A5A6A4908 /* Pods-WalkyCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkyCam.debug.xcconfig"; path = "Target Support Files/Pods-WalkyCam/Pods-WalkyCam.debug.xcconfig"; sourceTree = "<group>"; };
 		1657E0E09B4F0512C50B8036 /* Pods-WalkyCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkyCam.release.xcconfig"; path = "Target Support Files/Pods-WalkyCam/Pods-WalkyCam.release.xcconfig"; sourceTree = "<group>"; };
-		3892066162EC4092B81855CF /* Pods-WalkyCamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkyCamTests.debug.xcconfig"; path = "Target Support Files/Pods-WalkyCamTests/Pods-WalkyCamTests.debug.xcconfig"; sourceTree = "<group>"; };
 		561FC8B02B5C66F7005B6006 /* WebView+PullToRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebView+PullToRefresh.swift"; sourceTree = "<group>"; };
 		561FC8B12B5C66F7005B6006 /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		561FC8B22B5C66F7005B6006 /* WebViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
@@ -988,10 +987,7 @@
 		56FEECEE2B5C802C003FA686 /* SearchWalkyCammerRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchWalkyCammerRouterProtocol.swift; sourceTree = "<group>"; };
 		87CD54CA12591842BAA9CC6C /* Pods_WalkyCam_WalkyCamUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalkyCam_WalkyCamUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB52C6CE8C2F9E62CBF861A7 /* Pods_WalkyCam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalkyCam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2D370A53D1B1D2B617F75CA /* Pods-WalkyCam-WalkyCamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkyCam-WalkyCamUITests.debug.xcconfig"; path = "Target Support Files/Pods-WalkyCam-WalkyCamUITests/Pods-WalkyCam-WalkyCamUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		CE9BD1476FF351E995D11C31 /* Pods-WalkyCam-WalkyCamUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkyCam-WalkyCamUITests.release.xcconfig"; path = "Target Support Files/Pods-WalkyCam-WalkyCamUITests/Pods-WalkyCam-WalkyCamUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E0F44B040E9D3F5ADD523210 /* Pods_WalkyCamTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalkyCamTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E54922207763AAC42EDA9C15 /* Pods-WalkyCamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkyCamTests.release.xcconfig"; path = "Target Support Files/Pods-WalkyCamTests/Pods-WalkyCamTests.release.xcconfig"; sourceTree = "<group>"; };
 		EA0655342BB5DA5D006148E7 /* RadarMenuRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarMenuRoute.swift; sourceTree = "<group>"; };
 		EA0655362BB5DA5D006148E7 /* RadarMenuAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarMenuAssembler.swift; sourceTree = "<group>"; };
 		EA0655372BB5DA5D006148E7 /* RadarMenuAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarMenuAssemblerProtocol.swift; sourceTree = "<group>"; };
@@ -2520,10 +2516,6 @@
 			children = (
 				01210015DB17D27A5A6A4908 /* Pods-WalkyCam.debug.xcconfig */,
 				1657E0E09B4F0512C50B8036 /* Pods-WalkyCam.release.xcconfig */,
-				C2D370A53D1B1D2B617F75CA /* Pods-WalkyCam-WalkyCamUITests.debug.xcconfig */,
-				CE9BD1476FF351E995D11C31 /* Pods-WalkyCam-WalkyCamUITests.release.xcconfig */,
-				3892066162EC4092B81855CF /* Pods-WalkyCamTests.debug.xcconfig */,
-				E54922207763AAC42EDA9C15 /* Pods-WalkyCamTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";

@@ -1,5 +1,6 @@
 import SwiftUI
 
 protocol IdentityUploadViewModelProtocol: ViewModelProtocol {
-    func someAction()
+    var frontUploaded: Bool { get set }
+    var backUploaded: Bool { get set }
 }
