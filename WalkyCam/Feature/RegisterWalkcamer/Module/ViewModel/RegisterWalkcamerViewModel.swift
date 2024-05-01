@@ -5,10 +5,7 @@ final class RegisterWalkcamerViewModel: RegisterWalkcamerViewModelProtocol {
     // MARK: - Dependencies
 
     private let interactor: RegisterWalkcamerInteractorProtocol
-    @Published var name: String = ""
-    @Published var lastName: String = ""
-    @Published var telephone: String = ""
-    @Published var email: String = ""
+    @Published var registrationData: CamerRegistrationData = .init()
     @Published var acceptedTerms: SelectorModel = .init(value: "Acepto los Términos y Condiciones de WalkyCam")
     
     // MARK: - Initialization
@@ -20,6 +17,6 @@ final class RegisterWalkcamerViewModel: RegisterWalkcamerViewModelProtocol {
     // MARK: - Public API
 
     func isRegisterButtonDisabled() -> Bool {
-        return name.isEmpty || lastName.isEmpty || telephone.isEmpty || email.isEmpty || !acceptedTerms.isSelected
+        return registrationData.name.isEmpty || registrationData.lastName.isEmpty || registrationData.phoneNumber.isEmpty || registrationData.email.isEmpty || !acceptedTerms.isSelected
     }
 }

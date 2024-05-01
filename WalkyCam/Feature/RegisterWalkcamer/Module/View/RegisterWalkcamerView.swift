@@ -36,21 +36,22 @@ struct RegisterWalkcamerView<ViewModel: RegisterWalkcamerViewModelProtocol, Rout
             Asset.Fondos.loginFondo.swiftUIImage
                 .ignoresSafeArea()
         }
+        .navigation(router)
     }
     
     private var registrationCard: some View {
         VStack(alignment: .leading,
                spacing: Tokens.Size.Spacing.regular) {
-            TextInputView(text: $viewModel.email,
+            TextInputView(text: $viewModel.registrationData.email,
                           topDescriptionText: "Email",
                           placeholder: "nombre@email.com")
-            TextInputView(text: $viewModel.name,
+            TextInputView(text: $viewModel.registrationData.name,
                           topDescriptionText: "Nombre",
                           placeholder: "Nombre")
-            TextInputView(text: $viewModel.lastName,
+            TextInputView(text: $viewModel.registrationData.lastName,
                           topDescriptionText: "Apellido",
                           placeholder: "Apellido")
-            TextInputView(text: $viewModel.telephone,
+            TextInputView(text: $viewModel.registrationData.phoneNumber,
                           topDescriptionText: "Telefono",
                           placeholder: "Telefono")
         
@@ -62,7 +63,9 @@ struct RegisterWalkcamerView<ViewModel: RegisterWalkcamerViewModelProtocol, Rout
             WCUIButton(title: "Registrame",
                        style: .standard,
                        descriptor: OrangeButtonStyleDescriptor(),
-                       action: {})
+                       action: {
+                router.routeToProfit(registrationData: viewModel.registrationData)
+            })
             .disabled(viewModel.isRegisterButtonDisabled())
         }
                .padding()

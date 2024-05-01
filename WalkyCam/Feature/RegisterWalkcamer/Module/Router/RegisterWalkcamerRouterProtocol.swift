@@ -1,6 +1,6 @@
 import SwiftUI
 
 protocol RegisterWalkcamerRouterProtocol: Router {
-    func routeToSomething()
+    func routeToProfit(registrationData: CamerRegistrationData)
 }
 

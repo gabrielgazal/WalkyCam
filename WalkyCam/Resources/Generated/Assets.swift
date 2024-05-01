@@ -350,6 +350,7 @@ internal enum Asset {
     internal static let files = ImageAsset(name: "Files")
     internal static let filter = ImageAsset(name: "Filter")
     internal static let fleet = ImageAsset(name: "Fleet")
+    internal static let frame1584 = ImageAsset(name: "Frame 1584")
     internal static let health = ImageAsset(name: "Health")
     internal static let industrial = ImageAsset(name: "Industrial")
     internal static let industry = ImageAsset(name: "Industry")
@@ -415,6 +416,7 @@ internal enum Asset {
     internal static let plane = ImageAsset(name: "plane")
     internal static let radar = ImageAsset(name: "radar")
     internal static let rc2 = ImageAsset(name: "rc2")
+    internal static let reload = ImageAsset(name: "reload")
     internal static let rgb = ImageAsset(name: "rgb")
     internal static let robotW = ImageAsset(name: "robot-w")
     internal static let robotDog = ImageAsset(name: "robotDog")
@@ -431,6 +433,7 @@ internal enum Asset {
     internal static let wIcon = ImageAsset(name: "wIcon")
     internal static let walkybot = ImageAsset(name: "walkybot")
     internal static let walkycamerHands = ImageAsset(name: "walkycamerHands")
+    internal static let workFromHome = ImageAsset(name: "work from home")
   }
   internal enum Illustrations {
     internal static let _3dModelingRafiki1 = ImageAsset(name: "3d modeling-rafiki 1")
