@@ -19,6 +19,17 @@
 		561AA6CB2BE30A9900393CEF /* FeatureSelectionRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6BC2BE30A9800393CEF /* FeatureSelectionRoute.swift */; };
 		561AA6CC2BE30A9900393CEF /* FeatureSelectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6BF2BE30A9800393CEF /* FeatureSelectionModel.swift */; };
 		561AA6CE2BE3115800393CEF /* WrappingHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6CD2BE3115800393CEF /* WrappingHStack.swift */; };
+		561AA6EB2BE3A6B500393CEF /* FeatureInformationAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6D62BE3A6B400393CEF /* FeatureInformationAssembler.swift */; };
+		561AA6EC2BE3A6B500393CEF /* FeatureInformationAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6D72BE3A6B400393CEF /* FeatureInformationAssemblerProtocol.swift */; };
+		561AA6ED2BE3A6B500393CEF /* FeatureInformationRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6D92BE3A6B400393CEF /* FeatureInformationRoute.swift */; };
+		561AA6EE2BE3A6B500393CEF /* FeatureInformationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6DC2BE3A6B500393CEF /* FeatureInformationInteractor.swift */; };
+		561AA6EF2BE3A6B500393CEF /* FeatureInformationInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6DD2BE3A6B500393CEF /* FeatureInformationInteractorProtocol.swift */; };
+		561AA6F02BE3A6B500393CEF /* FeatureInformationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6DF2BE3A6B500393CEF /* FeatureInformationRouter.swift */; };
+		561AA6F12BE3A6B500393CEF /* FeatureInformationRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6E02BE3A6B500393CEF /* FeatureInformationRouterProtocol.swift */; };
+		561AA6F22BE3A6B500393CEF /* FeatureInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6E22BE3A6B500393CEF /* FeatureInformationView.swift */; };
+		561AA6F32BE3A6B500393CEF /* FeatureInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6E42BE3A6B500393CEF /* FeatureInformationViewModel.swift */; };
+		561AA6F42BE3A6B500393CEF /* FeatureInformationViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6E52BE3A6B500393CEF /* FeatureInformationViewModelProtocol.swift */; };
+		561AA6F52BE3A6B500393CEF /* FeatureInformationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6E82BE3A6B500393CEF /* FeatureInformationModel.swift */; };
 		561FC8B42B5C66F7005B6006 /* WebView+PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FC8B02B5C66F7005B6006 /* WebView+PullToRefresh.swift */; };
 		561FC8B52B5C66F7005B6006 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FC8B12B5C66F7005B6006 /* WebView.swift */; };
 		561FC8B62B5C66F7005B6006 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FC8B22B5C66F7005B6006 /* WebViewModel.swift */; };
@@ -923,6 +934,17 @@
 		561AA6BC2BE30A9800393CEF /* FeatureSelectionRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureSelectionRoute.swift; sourceTree = "<group>"; };
 		561AA6BF2BE30A9800393CEF /* FeatureSelectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureSelectionModel.swift; sourceTree = "<group>"; };
 		561AA6CD2BE3115800393CEF /* WrappingHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappingHStack.swift; sourceTree = "<group>"; };
+		561AA6D62BE3A6B400393CEF /* FeatureInformationAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureInformationAssembler.swift; sourceTree = "<group>"; };
+		561AA6D72BE3A6B400393CEF /* FeatureInformationAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureInformationAssemblerProtocol.swift; sourceTree = "<group>"; };
+		561AA6D92BE3A6B400393CEF /* FeatureInformationRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureInformationRoute.swift; sourceTree = "<group>"; };
+		561AA6DC2BE3A6B500393CEF /* FeatureInformationInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureInformationInteractor.swift; sourceTree = "<group>"; };
+		561AA6DD2BE3A6B500393CEF /* FeatureInformationInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureInformationInteractorProtocol.swift; sourceTree = "<group>"; };
+		561AA6DF2BE3A6B500393CEF /* FeatureInformationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureInformationRouter.swift; sourceTree = "<group>"; };
+		561AA6E02BE3A6B500393CEF /* FeatureInformationRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureInformationRouterProtocol.swift; sourceTree = "<group>"; };
+		561AA6E22BE3A6B500393CEF /* FeatureInformationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureInformationView.swift; sourceTree = "<group>"; };
+		561AA6E42BE3A6B500393CEF /* FeatureInformationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureInformationViewModel.swift; sourceTree = "<group>"; };
+		561AA6E52BE3A6B500393CEF /* FeatureInformationViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureInformationViewModelProtocol.swift; sourceTree = "<group>"; };
+		561AA6E82BE3A6B500393CEF /* FeatureInformationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureInformationModel.swift; sourceTree = "<group>"; };
 		561FC8B02B5C66F7005B6006 /* WebView+PullToRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebView+PullToRefresh.swift"; sourceTree = "<group>"; };
 		561FC8B12B5C66F7005B6006 /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		561FC8B22B5C66F7005B6006 /* WebViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
@@ -1938,6 +1960,104 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		561AA6CF2BE3A61700393CEF /* FeatureInformation */ = {
+			isa = PBXGroup;
+			children = (
+				561AA6DB2BE3A6B400393CEF /* Configuration */,
+				561AA6EA2BE3A6B500393CEF /* Domain */,
+				561AA6E72BE3A6B500393CEF /* Module */,
+			);
+			path = FeatureInformation;
+			sourceTree = "<group>";
+		};
+		561AA6D82BE3A6B400393CEF /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				561AA6D62BE3A6B400393CEF /* FeatureInformationAssembler.swift */,
+				561AA6D72BE3A6B400393CEF /* FeatureInformationAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		561AA6DA2BE3A6B400393CEF /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				561AA6D92BE3A6B400393CEF /* FeatureInformationRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		561AA6DB2BE3A6B400393CEF /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				561AA6D82BE3A6B400393CEF /* Assembler */,
+				561AA6DA2BE3A6B400393CEF /* Route */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		561AA6DE2BE3A6B500393CEF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				561AA6DC2BE3A6B500393CEF /* FeatureInformationInteractor.swift */,
+				561AA6DD2BE3A6B500393CEF /* FeatureInformationInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		561AA6E12BE3A6B500393CEF /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				561AA6DF2BE3A6B500393CEF /* FeatureInformationRouter.swift */,
+				561AA6E02BE3A6B500393CEF /* FeatureInformationRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		561AA6E32BE3A6B500393CEF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				561AA6E22BE3A6B500393CEF /* FeatureInformationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		561AA6E62BE3A6B500393CEF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				561AA6E42BE3A6B500393CEF /* FeatureInformationViewModel.swift */,
+				561AA6E52BE3A6B500393CEF /* FeatureInformationViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		561AA6E72BE3A6B500393CEF /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				561AA6DE2BE3A6B500393CEF /* Interactor */,
+				561AA6E12BE3A6B500393CEF /* Router */,
+				561AA6E32BE3A6B500393CEF /* View */,
+				561AA6E62BE3A6B500393CEF /* ViewModel */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		561AA6E92BE3A6B500393CEF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				561AA6E82BE3A6B500393CEF /* FeatureInformationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		561AA6EA2BE3A6B500393CEF /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				561AA6E92BE3A6B500393CEF /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		561FC8AF2B5C66F7005B6006 /* WebView */ = {
 			isa = PBXGroup;
 			children = (
@@ -2949,6 +3069,7 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				561AA6CF2BE3A61700393CEF /* FeatureInformation */,
 				561AA6A62BE30A7700393CEF /* FeatureSelection */,
 				56A6BE782BE2EF97007EBF13 /* IdentityUpload */,
 				5668BB172BDFD49B00A6E05D /* ProfitSelection */,
@@ -9548,6 +9669,7 @@
 				EAF47C1B2B830C80003F8B86 /* WalkyCammerListRouterProtocol.swift in Sources */,
 				EA2F93FA2B62CECD00E1C146 /* LoginInteractorProtocol.swift in Sources */,
 				EAE8EC472B9574840003AE96 /* ChatDetailAssembler.swift in Sources */,
+				561AA6F02BE3A6B500393CEF /* FeatureInformationRouter.swift in Sources */,
 				EA8652942B90ACC200B86A54 /* IOTOnboardingModel.swift in Sources */,
 				EA94A5312B7160EF00EC3037 /* ServiceDetailsView.swift in Sources */,
 				EAF47BCA2B8306E9003F8B86 /* TimeTabRouterProtocol.swift in Sources */,
@@ -9671,6 +9793,7 @@
 				EAE402012BBAFB0900B1311E /* RobotMenuAssemblerProtocol.swift in Sources */,
 				56AF27562BDAE00800DADC29 /* RegisterWalkcamerAssemblerProtocol.swift in Sources */,
 				EA2E651F2BA8AE1C0092A135 /* SubscriptionIntentOutput.swift in Sources */,
+				561AA6F42BE3A6B500393CEF /* FeatureInformationViewModelProtocol.swift in Sources */,
 				EA4A1C422B8788DB00B5FC59 /* SpecialistNotifiedInteractorProtocol.swift in Sources */,
 				EA86528D2B90ACC200B86A54 /* IOTOnboardingViewModelProtocol.swift in Sources */,
 				EA8653762B90FA8800B86A54 /* AIMenuAssemblerProtocol.swift in Sources */,
@@ -9680,6 +9803,7 @@
 				EA8652652B90AC8300B86A54 /* IOTMenuAssembler.swift in Sources */,
 				56AF27582BDAE00800DADC29 /* RegisterWalkcamerModel.swift in Sources */,
 				EA4A1C632B87909F00B5FC59 /* ExternalAssistantViewModelProtocol.swift in Sources */,
+				561AA6ED2BE3A6B500393CEF /* FeatureInformationRoute.swift in Sources */,
 				EA7219962B05612900BE2D93 /* WalkyBotAssembler.swift in Sources */,
 				EA0E408B2AF69771002B7437 /* CashWalletOnboardingModel.swift in Sources */,
 				EA5A88052B68039400BBB7F9 /* LoginInput.swift in Sources */,
@@ -9816,6 +9940,7 @@
 				EAF47B4C2B82F7EA003F8B86 /* VideocallOnboardingAssemblerProtocol.swift in Sources */,
 				EAD048722AE22C530096E6AB /* RegistrationPlansAssembler.swift in Sources */,
 				EA172AFD2AF06BDE00EB1514 /* ConfirmMailInteractorProtocol.swift in Sources */,
+				561AA6F22BE3A6B500393CEF /* FeatureInformationView.swift in Sources */,
 				EA86523F2B902E4B00B86A54 /* FunctionMenuInteractorProtocol.swift in Sources */,
 				EA3E5C992B87692400158207 /* AssistantMenuRouter.swift in Sources */,
 				EA282EDD2AEB572700B90920 /* FunctionCell.swift in Sources */,
@@ -9856,6 +9981,7 @@
 				EAF47BC42B8306E9003F8B86 /* TimeTabModel.swift in Sources */,
 				EA8652DE2B90DCE900B86A54 /* PrintMenuView.swift in Sources */,
 				EA910FFA2ADCBCC000584B98 /* MenuRouter.swift in Sources */,
+				561AA6EF2BE3A6B500393CEF /* FeatureInformationInteractorProtocol.swift in Sources */,
 				EA57A7A62B6C1558006247DD /* CammerDetailsRouter.swift in Sources */,
 				EA12351A2B9A2B6200443CF8 /* Int64+Extension.swift in Sources */,
 				EA8652432B902E4B00B86A54 /* FunctionMenuModel.swift in Sources */,
@@ -10015,6 +10141,7 @@
 				EA20A4F12B87C3B5006662FA /* Scan3DOnboardingAssemblerProtocol.swift in Sources */,
 				EA6083432AFD58A900295069 /* CryptoTabInteractor.swift in Sources */,
 				EAF47C152B830C80003F8B86 /* WalkyCammerListViewModelProtocol.swift in Sources */,
+				561AA6F12BE3A6B500393CEF /* FeatureInformationRouterProtocol.swift in Sources */,
 				5668BB3F2BE0233200A6E05D /* CamerRegistrationData.swift in Sources */,
 				EA8653512B90EBE800B86A54 /* ConfigureAccessInteractorProtocol.swift in Sources */,
 				EA60836B2B01981800295069 /* CryptoDetailsRoute.swift in Sources */,
@@ -10196,9 +10323,11 @@
 				56FEECF92B5C802C003FA686 /* SearchWalkyCammerRouterProtocol.swift in Sources */,
 				EAE401AC2BBA3D6100B1311E /* DigitalTwinsOnboardingViewModel.swift in Sources */,
 				EA15B5982AD6E44D00C03407 /* LoginViewModelProtocol.swift in Sources */,
+				561AA6F52BE3A6B500393CEF /* FeatureInformationModel.swift in Sources */,
 				EA57A7822B6BFD09006247DD /* CammerData.swift in Sources */,
 				EAB63B922B83D2ED0017BDA4 /* ARHandsOnboardingRoute.swift in Sources */,
 				EA8652BB2B90DA9600B86A54 /* 3DPrintOnboardingRouterProtocol.swift in Sources */,
+				561AA6EE2BE3A6B500393CEF /* FeatureInformationInteractor.swift in Sources */,
 				EA910F922ADA06F500584B98 /* RegistrationInteractor.swift in Sources */,
 				EA86537B2B90FA8800B86A54 /* AIMenuInteractorProtocol.swift in Sources */,
 				EA910FC52ADC495700584B98 /* TabBarAssembler.swift in Sources */,
@@ -10210,6 +10339,7 @@
 				EA282E132AE832F100B90920 /* Date+Extension.swift in Sources */,
 				EA6083B42B01D9E100295069 /* GalleryModel.swift in Sources */,
 				561AA6C42BE30A9900393CEF /* FeatureSelectionRouter.swift in Sources */,
+				561AA6EC2BE3A6B500393CEF /* FeatureInformationAssemblerProtocol.swift in Sources */,
 				EA8653552B90EBE800B86A54 /* ConfigureAccessRoute.swift in Sources */,
 				56FEECF42B5C802C003FA686 /* SearchWalkyCammerViewModelProtocol.swift in Sources */,
 				EA8653772B90FA8800B86A54 /* AIMenuModel.swift in Sources */,
@@ -10234,6 +10364,7 @@
 				EAE401DA2BBA452900B1311E /* DigitalTwinsMenuRouterProtocol.swift in Sources */,
 				EA0E40BE2AF70E86002B7437 /* CashWalletInteractorProtocol.swift in Sources */,
 				56FEECF32B5C802C003FA686 /* SearchWalkyCammerViewModel.swift in Sources */,
+				561AA6EB2BE3A6B500393CEF /* FeatureInformationAssembler.swift in Sources */,
 				EA1FD1B92B1E932F000E583D /* VideoCallRoomViewModel.swift in Sources */,
 				EA15B5A12AD6E44D00C03407 /* LoginAssembler.swift in Sources */,
 				EA87DE222BACBAB1001CB5E6 /* CreateSubscriptionUseCase.swift in Sources */,
@@ -10244,6 +10375,7 @@
 				EA6083672B01981800295069 /* CryptoDetailsInteractorProtocol.swift in Sources */,
 				EA4A1C6D2B87909F00B5FC59 /* ExternalAssistantAssemblerProtocol.swift in Sources */,
 				EA1FD1C32B1E932F000E583D /* VideoCallRoomModel.swift in Sources */,
+				561AA6F32BE3A6B500393CEF /* FeatureInformationViewModel.swift in Sources */,
 				EA57A7A32B6C1558006247DD /* CammerDetailsView.swift in Sources */,
 				EA57A7CE2B6C2C31006247DD /* AddPeopleTransmissionModel.swift in Sources */,
 				EA4A1C3F2B8788DB00B5FC59 /* SpecialistNotifiedViewModelProtocol.swift in Sources */,

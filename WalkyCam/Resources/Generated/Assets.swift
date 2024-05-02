@@ -339,6 +339,7 @@ internal enum Asset {
     internal static let _3dPrinting = ImageAsset(name: "3dPrinting")
     internal static let aiAnalysis = ImageAsset(name: "AIAnalysis")
     internal static let ar = ImageAsset(name: "AR")
+    internal static let add = ImageAsset(name: "Add")
     internal static let agriculture = ImageAsset(name: "Agriculture")
     internal static let art = ImageAsset(name: "Art")
     internal static let building = ImageAsset(name: "Building")

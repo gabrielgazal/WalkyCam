@@ -1,0 +1,3 @@
+protocol FeatureInformationInteractorProtocol {
+    func someFunction()
+}
