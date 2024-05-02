@@ -56,8 +56,11 @@ struct FeatureSelectionView<ViewModel: FeatureSelectionViewModelProtocol, Router
                 .font(.projectFont(size: Tokens.Size.Font.large))
             LazyVGrid(columns: columns,
                       spacing: Tokens.Size.Spacing.large) {
-                ForEach(viewModel.devicesModel, id: \.self) { item in
-                        deviceItemCell(item)
+                ForEach(0..<viewModel.devicesModel.count, id: \.self) { index in
+                    deviceItemCell(viewModel.devicesModel[index])
+                        .onTapGesture {
+                            viewModel.devicesModel[index].isSelected.toggle()
+                        }
                 }
             }
         }
@@ -68,6 +71,10 @@ struct FeatureSelectionView<ViewModel: FeatureSelectionViewModelProtocol, Router
             Rectangle()
                 .fill(Color.blanco)
                 .cornerRadius(38, corners: .allCorners)
+            if model.isSelected {
+                RoundedRectangle(cornerRadius: 38)
+                    .stroke(Color.acentoFondoDark, lineWidth: 2)
+            }
             VStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.small) {
                 Image(model.key)
@@ -79,6 +86,16 @@ struct FeatureSelectionView<ViewModel: FeatureSelectionViewModelProtocol, Router
                     .multilineTextAlignment(.center)
             }
                    .padding(Tokens.Size.Spacing.regular)
+            if model.isSelected {
+                VStack {
+                    HStack {
+                        Spacer()
+                        Asset.Icons.blueCheckmark.swiftUIImage
+                    }
+                    Spacer()
+                }
+                .padding(Tokens.Size.Spacing.regular)
+            }
         }
         .frame(minWidth: 135)
         .shadow(color: .black.opacity(0.16), radius: 8, x: 0, y: 2)
@@ -107,8 +124,11 @@ struct FeatureSelectionView<ViewModel: FeatureSelectionViewModelProtocol, Router
             Text("Capacidades")
                 .font(.projectFont(size: Tokens.Size.Font.large))
             WrappingHStack(horizontalSpacing: Tokens.Size.Spacing.regular, verticalSpacing: Tokens.Size.Spacing.regular) {
-                ForEach(viewModel.abilitiesModel, id: \.self) { item in
-                    abilityItemCell(item)
+                ForEach(0..<viewModel.abilitiesModel.count, id: \.self) { index in
+                    abilityItemCell(viewModel.abilitiesModel[index])
+                        .onTapGesture {
+                            viewModel.abilitiesModel[index].isSelected.toggle()
+                        }
                 }
             }
         }

@@ -380,6 +380,7 @@ internal enum Asset {
     internal static let alcohol = ImageAsset(name: "alcohol")
     internal static let analisadorRedes = ImageAsset(name: "analisadorRedes")
     internal static let backpack = ImageAsset(name: "backpack")
+    internal static let blueCheckmark = ImageAsset(name: "blueCheckmark")
     internal static let cables = ImageAsset(name: "cables")
     internal static let calendar = ImageAsset(name: "calendar")
     internal static let cash = ImageAsset(name: "cash")
