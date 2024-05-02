@@ -67,7 +67,7 @@ struct IdentityUploadView<ViewModel: IdentityUploadViewModelProtocol, Router: Id
                spacing: Tokens.Size.Spacing.regular) {
             HStack {
                 Spacer()
-                headerCounterView(0, 4)
+                headerCounterView(1, 4)
             }
             HStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {

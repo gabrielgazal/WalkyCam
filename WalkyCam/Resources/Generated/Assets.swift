@@ -427,6 +427,7 @@ internal enum Asset {
     internal static let rov = ImageAsset(name: "rov")
     internal static let sendIcon = ImageAsset(name: "sendIcon")
     internal static let shareGrid = ImageAsset(name: "shareGrid")
+    internal static let smartphone = ImageAsset(name: "smartphone")
     internal static let smileFace = ImageAsset(name: "smileFace")
     internal static let socialsGrid = ImageAsset(name: "socialsGrid")
     internal static let telepresencia = ImageAsset(name: "telepresencia")
