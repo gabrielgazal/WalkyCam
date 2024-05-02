@@ -33,11 +33,12 @@ struct FeatureInformationView<ViewModel: FeatureInformationViewModelProtocol, Ro
                 }
                 Group {
                     smartphoneInformationView()
-                    LinkButton(title: "Agregar otro ROV Submarino",
+                    LinkButton(title: "Agregar otro Smartphone",
                                icon: Asset.Icons.add.name,
                                color: .naranja,
                                action: {})
                 }
+                licenseInformationView()
             }
                    .padding(Tokens.Size.Spacing.regular)
         }
@@ -114,6 +115,26 @@ struct FeatureInformationView<ViewModel: FeatureInformationViewModelProtocol, Ro
                           topDescriptionText: "N de serie",
                           placeholder: "N de serie",
                           backgroundColor: .blancoGris)
+        }
+                      .padding(Tokens.Size.Spacing.regular)
+                      .background {
+                          RoundedRectangle(cornerRadius: 24)
+                              .fill(Color.blanco)
+                              .shadow(color: .black.opacity(0.16), radius: 8, x: 0, y: 2)
+
+                      }
+    }
+    
+    private func licenseInformationView() -> some View {
+        return VStack(alignment: .leading,
+                      spacing: Tokens.Size.Spacing.regular) {
+            Text("Con qué vehículo propio cuentas?")
+                .font(.projectFont(size: Tokens.Size.Font.regular,
+                                   weight: .bold))
+            WCUIButton(title: "Subir licencia de conducir",
+                       style: .outline,
+                       descriptor: OrangeButtonStyleDescriptor(),
+                       action: {})
         }
                       .padding(Tokens.Size.Spacing.regular)
                       .background {
