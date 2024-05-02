@@ -4,9 +4,10 @@ final class IdentityUploadRouter: Router, IdentityUploadRouterProtocol {
 
     // MARK: - Public API
 
-    #warning("Example function. Rename or remove it")
-    func routeToSomething() { 
-
+    func routeToFeatures() {
+        navigateTo(
+            FeatureSelectionRoute(isPresented: isNavigating)
+        )
     }
 }
 

@@ -47,7 +47,8 @@ struct ProfitSelectionView<ViewModel: ProfitSelectionViewModelProtocol, Router: 
                         viewModel.registrationData.earningType = "emplyee"
                     case 3:
                         viewModel.registrationData.earningType = "partner"
-                    default: break
+                    default:
+                        viewModel.registrationData.earningType = ""
                     }
                     router.routeToIdentityUpload(data: viewModel.registrationData)
                 })
@@ -63,6 +64,7 @@ struct ProfitSelectionView<ViewModel: ProfitSelectionViewModelProtocol, Router: 
                    .padding(Tokens.Size.Spacing.regular)
         }
         .scrollIndicators(.hidden)
+        .navigation(router)
     }
     
     private func profitCell(title: String, description: String, icon: String, index: Int) -> some View {

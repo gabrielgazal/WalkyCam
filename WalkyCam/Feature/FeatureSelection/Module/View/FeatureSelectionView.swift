@@ -31,6 +31,22 @@ struct FeatureSelectionView<ViewModel: FeatureSelectionViewModelProtocol, Router
             }
                    .padding(Tokens.Size.Spacing.regular)
         }
+        .footer {
+            HStack(alignment: .center,
+                   spacing: Tokens.Size.Spacing.regular) {
+                WCUIButton(title: "Cancelar",
+                           style: .outline,
+                           descriptor: OrangeButtonStyleDescriptor(),
+                           action: {
+                    router.dismiss()
+                })
+                WCUIButton(title: "Siguiente",
+                           style: .standard,
+                           descriptor: BlackButtonStyleDescriptor(),
+                           action: {})
+            }
+                   .padding(Tokens.Size.Spacing.regular)
+        }
     }
     
     private var devicesView: some View {

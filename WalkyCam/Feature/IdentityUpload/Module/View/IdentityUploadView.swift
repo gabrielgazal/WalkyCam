@@ -54,12 +54,15 @@ struct IdentityUploadView<ViewModel: IdentityUploadViewModelProtocol, Router: Id
                     WCUIButton(title: "Siguiente",
                                style: .standard,
                                descriptor: BlackButtonStyleDescriptor(),
-                               action: {})
+                               action: {
+                        router.routeToFeatures()
+                    })
                 }
                 .isHidden(!viewModel.frontUploaded && !viewModel.backUploaded)
             }
                    .padding(.horizontal, Tokens.Size.Spacing.large)
         }
+        .navigation(router)
     }
     
     private var headerView: some View {
