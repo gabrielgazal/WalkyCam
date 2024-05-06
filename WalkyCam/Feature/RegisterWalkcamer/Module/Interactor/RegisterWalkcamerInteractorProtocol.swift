@@ -1,0 +1,3 @@
+protocol RegisterWalkcamerInteractorProtocol {
+    func someFunction()
+}

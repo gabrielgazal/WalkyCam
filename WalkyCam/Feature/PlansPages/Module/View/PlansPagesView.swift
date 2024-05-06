@@ -63,6 +63,8 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
                             action: {
                                 if viewModel.currentPage > 0 {
                                     isPaymentSheetPresented = true
+                                } else {
+                                    router.routeToHome()
                                 }
                             }
                         )

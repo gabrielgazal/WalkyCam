@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct SelectorModel: Identifiable, Equatable, SelectorItem {
+public struct SelectorModel: Identifiable, Equatable, SelectorItem, Hashable {
     public let id = UUID()
     var key: String
     var value: String

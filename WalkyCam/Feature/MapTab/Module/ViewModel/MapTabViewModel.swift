@@ -10,11 +10,13 @@ final class MapTabViewModel: MapTabViewModelProtocol {
     @Published var userLocation: Viewport = .idle
     @Published var locationText: String = ""
     @State var coordinates: CLLocationCoordinate2D = .init()
+    @StateObject var locationManager = LocationPermissionManager()
 
     // MARK: - Initialization
 
     init(interactor: MapTabInteractorProtocol = MapTabInteractor()) {
         self.interactor = interactor
+        updateUserViewPort(manager: locationManager)
     }
 
     // MARK: - Public API
@@ -33,5 +35,13 @@ final class MapTabViewModel: MapTabViewModelProtocol {
                                         bearing: 0,
                                         pitch: 0)
         }
+    }
+    
+    func updateUserViewPort(manager: LocationPermissionManager) {
+        guard let location = manager.coordinates else { return }
+        self.userLocation = Viewport.camera(center: location,
+                                    zoom: 15,
+                                    bearing: 0,
+                                    pitch: 0)
     }
 }

@@ -1,0 +1,3 @@
+protocol AvailabilityTabInteractorProtocol {
+    func someFunction()
+}

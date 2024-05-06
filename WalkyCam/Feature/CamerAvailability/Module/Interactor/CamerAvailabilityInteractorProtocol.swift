@@ -1,0 +1,3 @@
+protocol CamerAvailabilityInteractorProtocol {
+    func someFunction()
+}

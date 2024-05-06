@@ -1,9 +1,0 @@
-${PODS_ROOT}/Target Support Files/Pods-WalkyCam-WalkyCamUITests/Pods-WalkyCam-WalkyCamUITests-frameworks.sh
-${BUILT_PRODUCTS_DIR}/MapboxMaps/MapboxMaps.framework
-${BUILT_PRODUCTS_DIR}/Turf/Turf.framework
-${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework
-${PODS_XCFRAMEWORKS_BUILD_DIR}/Giphy/GiphyUISDK.framework/GiphyUISDK
-${PODS_XCFRAMEWORKS_BUILD_DIR}/JitsiMeetSDK/JitsiMeetSDK.framework/JitsiMeetSDK
-${PODS_XCFRAMEWORKS_BUILD_DIR}/JitsiWebRTC/WebRTC.framework/WebRTC
-${PODS_XCFRAMEWORKS_BUILD_DIR}/MapboxCommon/MapboxCommon.framework/MapboxCommon
-${PODS_XCFRAMEWORKS_BUILD_DIR}/MapboxCoreMaps/MapboxCoreMaps.framework/MapboxCoreMaps

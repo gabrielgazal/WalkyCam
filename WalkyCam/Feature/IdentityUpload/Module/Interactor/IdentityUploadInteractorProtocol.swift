@@ -1,0 +1,3 @@
+protocol IdentityUploadInteractorProtocol {
+    func someFunction()
+}

@@ -1,0 +1,3 @@
+protocol ProfitSelectionInteractorProtocol {
+    func someFunction()
+}

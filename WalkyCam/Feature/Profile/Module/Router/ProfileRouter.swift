@@ -15,4 +15,10 @@ final class ProfileRouter: Router, ProfileRouterProtocol {
     func routeToLogin() {
         appNavigator.view = LoginRoute(isPresented: .constant(false)).build()
     }
+    
+    func routeToRegisterCamer() {
+        navigateTo(
+            RegisterWalkcamerRoute(isPresented: isNavigating)
+        )
+    }
 }

@@ -129,8 +129,8 @@ internal enum L10n {
       internal static let save = L10n.tr("Localizable", "ProfileView.button.save", fallback: "Guardar cambios")
     }
     internal enum Convert {
-      /// Convertime en WalkCamer
-      internal static let walkycamer = L10n.tr("Localizable", "ProfileView.convert.walkycamer", fallback: "Convertime en WalkCamer")
+      /// Quiero ser WalkCamer
+      internal static let walkycamer = L10n.tr("Localizable", "ProfileView.convert.walkycamer", fallback: "Quiero ser WalkCamer")
     }
     internal enum Field {
       /// Fecha de nacimiento

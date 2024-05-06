@@ -1,0 +1,3 @@
+protocol FeatureSelectionInteractorProtocol {
+    func someFunction()
+}

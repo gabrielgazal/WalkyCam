@@ -1,5 +1,5 @@
 import SwiftUI
 
 protocol StartupViewModelProtocol: ViewModelProtocol {
-    func someAction()
+    var userName: String { get set }
 }

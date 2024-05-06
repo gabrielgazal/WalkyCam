@@ -48,6 +48,7 @@ struct LinkButton: View {
         if let icon = icon {
             return Image(icon)
                 .renderingMode(.template)
+                .foregroundColor(color)
                 .eraseToAnyView()
         }
         return EmptyView()
