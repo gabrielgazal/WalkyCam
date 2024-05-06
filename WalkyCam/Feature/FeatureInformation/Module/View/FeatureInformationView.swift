@@ -64,12 +64,15 @@ struct FeatureInformationView<ViewModel: FeatureInformationViewModelProtocol, Ro
                     title: "Siguiente",
                     style: .standard,
                     descriptor: BlackButtonStyleDescriptor(),
-                    action: {}
+                    action: {
+                        router.routeToAvailability()
+                    }
                 )
             }
                    .padding()
         }
         .scrollIndicators(.hidden)
+        .navigation(router)
     }
     
     private func rovInformationView() -> some View {

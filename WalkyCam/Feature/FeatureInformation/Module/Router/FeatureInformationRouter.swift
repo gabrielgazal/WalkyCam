@@ -4,9 +4,10 @@ final class FeatureInformationRouter: Router, FeatureInformationRouterProtocol {
 
     // MARK: - Public API
 
-    #warning("Example function. Rename or remove it")
-    func routeToSomething() { 
-
+    func routeToAvailability() {
+        navigateTo(
+            CamerAvailabilityRoute(isPresented: isNavigating)
+        )
     }
 }
 

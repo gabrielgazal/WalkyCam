@@ -30,6 +30,28 @@
 		561AA6F32BE3A6B500393CEF /* FeatureInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6E42BE3A6B500393CEF /* FeatureInformationViewModel.swift */; };
 		561AA6F42BE3A6B500393CEF /* FeatureInformationViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6E52BE3A6B500393CEF /* FeatureInformationViewModelProtocol.swift */; };
 		561AA6F52BE3A6B500393CEF /* FeatureInformationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6E82BE3A6B500393CEF /* FeatureInformationModel.swift */; };
+		561D83982BE90D930045C540 /* CamerAvailabilityAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D83832BE90D930045C540 /* CamerAvailabilityAssembler.swift */; };
+		561D83992BE90D930045C540 /* CamerAvailabilityAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D83842BE90D930045C540 /* CamerAvailabilityAssemblerProtocol.swift */; };
+		561D839A2BE90D930045C540 /* CamerAvailabilityRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D83862BE90D930045C540 /* CamerAvailabilityRoute.swift */; };
+		561D839B2BE90D930045C540 /* CamerAvailabilityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D83892BE90D930045C540 /* CamerAvailabilityModel.swift */; };
+		561D839C2BE90D930045C540 /* CamerAvailabilityInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D838C2BE90D930045C540 /* CamerAvailabilityInteractor.swift */; };
+		561D839D2BE90D930045C540 /* CamerAvailabilityInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D838D2BE90D930045C540 /* CamerAvailabilityInteractorProtocol.swift */; };
+		561D839E2BE90D930045C540 /* CamerAvailabilityRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D838F2BE90D930045C540 /* CamerAvailabilityRouter.swift */; };
+		561D839F2BE90D930045C540 /* CamerAvailabilityRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D83902BE90D930045C540 /* CamerAvailabilityRouterProtocol.swift */; };
+		561D83A02BE90D930045C540 /* CamerAvailabilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D83922BE90D930045C540 /* CamerAvailabilityView.swift */; };
+		561D83A12BE90D930045C540 /* CamerAvailabilityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D83942BE90D930045C540 /* CamerAvailabilityViewModel.swift */; };
+		561D83A22BE90D930045C540 /* CamerAvailabilityViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D83952BE90D930045C540 /* CamerAvailabilityViewModelProtocol.swift */; };
+		561D83BF2BE916D70045C540 /* AvailabilityTabInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D83AA2BE916D70045C540 /* AvailabilityTabInteractor.swift */; };
+		561D83C02BE916D70045C540 /* AvailabilityTabInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D83AB2BE916D70045C540 /* AvailabilityTabInteractorProtocol.swift */; };
+		561D83C12BE916D70045C540 /* AvailabilityTabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D83AD2BE916D70045C540 /* AvailabilityTabRouter.swift */; };
+		561D83C22BE916D70045C540 /* AvailabilityTabRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D83AE2BE916D70045C540 /* AvailabilityTabRouterProtocol.swift */; };
+		561D83C32BE916D70045C540 /* AvailabilityTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D83B02BE916D70045C540 /* AvailabilityTabView.swift */; };
+		561D83C42BE916D70045C540 /* AvailabilityTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D83B22BE916D70045C540 /* AvailabilityTabViewModel.swift */; };
+		561D83C52BE916D70045C540 /* AvailabilityTabViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D83B32BE916D70045C540 /* AvailabilityTabViewModelProtocol.swift */; };
+		561D83C62BE916D70045C540 /* AvailabilityTabAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D83B62BE916D70045C540 /* AvailabilityTabAssembler.swift */; };
+		561D83C72BE916D70045C540 /* AvailabilityTabAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D83B72BE916D70045C540 /* AvailabilityTabAssemblerProtocol.swift */; };
+		561D83C82BE916D70045C540 /* AvailabilityTabRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D83B92BE916D70045C540 /* AvailabilityTabRoute.swift */; };
+		561D83C92BE916D70045C540 /* AvailabilityTabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D83BC2BE916D70045C540 /* AvailabilityTabModel.swift */; };
 		561FC8B42B5C66F7005B6006 /* WebView+PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FC8B02B5C66F7005B6006 /* WebView+PullToRefresh.swift */; };
 		561FC8B52B5C66F7005B6006 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FC8B12B5C66F7005B6006 /* WebView.swift */; };
 		561FC8B62B5C66F7005B6006 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FC8B22B5C66F7005B6006 /* WebViewModel.swift */; };
@@ -945,6 +967,28 @@
 		561AA6E42BE3A6B500393CEF /* FeatureInformationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureInformationViewModel.swift; sourceTree = "<group>"; };
 		561AA6E52BE3A6B500393CEF /* FeatureInformationViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureInformationViewModelProtocol.swift; sourceTree = "<group>"; };
 		561AA6E82BE3A6B500393CEF /* FeatureInformationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureInformationModel.swift; sourceTree = "<group>"; };
+		561D83832BE90D930045C540 /* CamerAvailabilityAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamerAvailabilityAssembler.swift; sourceTree = "<group>"; };
+		561D83842BE90D930045C540 /* CamerAvailabilityAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamerAvailabilityAssemblerProtocol.swift; sourceTree = "<group>"; };
+		561D83862BE90D930045C540 /* CamerAvailabilityRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamerAvailabilityRoute.swift; sourceTree = "<group>"; };
+		561D83892BE90D930045C540 /* CamerAvailabilityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamerAvailabilityModel.swift; sourceTree = "<group>"; };
+		561D838C2BE90D930045C540 /* CamerAvailabilityInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamerAvailabilityInteractor.swift; sourceTree = "<group>"; };
+		561D838D2BE90D930045C540 /* CamerAvailabilityInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamerAvailabilityInteractorProtocol.swift; sourceTree = "<group>"; };
+		561D838F2BE90D930045C540 /* CamerAvailabilityRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamerAvailabilityRouter.swift; sourceTree = "<group>"; };
+		561D83902BE90D930045C540 /* CamerAvailabilityRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamerAvailabilityRouterProtocol.swift; sourceTree = "<group>"; };
+		561D83922BE90D930045C540 /* CamerAvailabilityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamerAvailabilityView.swift; sourceTree = "<group>"; };
+		561D83942BE90D930045C540 /* CamerAvailabilityViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamerAvailabilityViewModel.swift; sourceTree = "<group>"; };
+		561D83952BE90D930045C540 /* CamerAvailabilityViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamerAvailabilityViewModelProtocol.swift; sourceTree = "<group>"; };
+		561D83AA2BE916D70045C540 /* AvailabilityTabInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailabilityTabInteractor.swift; sourceTree = "<group>"; };
+		561D83AB2BE916D70045C540 /* AvailabilityTabInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailabilityTabInteractorProtocol.swift; sourceTree = "<group>"; };
+		561D83AD2BE916D70045C540 /* AvailabilityTabRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailabilityTabRouter.swift; sourceTree = "<group>"; };
+		561D83AE2BE916D70045C540 /* AvailabilityTabRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailabilityTabRouterProtocol.swift; sourceTree = "<group>"; };
+		561D83B02BE916D70045C540 /* AvailabilityTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailabilityTabView.swift; sourceTree = "<group>"; };
+		561D83B22BE916D70045C540 /* AvailabilityTabViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailabilityTabViewModel.swift; sourceTree = "<group>"; };
+		561D83B32BE916D70045C540 /* AvailabilityTabViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailabilityTabViewModelProtocol.swift; sourceTree = "<group>"; };
+		561D83B62BE916D70045C540 /* AvailabilityTabAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailabilityTabAssembler.swift; sourceTree = "<group>"; };
+		561D83B72BE916D70045C540 /* AvailabilityTabAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailabilityTabAssemblerProtocol.swift; sourceTree = "<group>"; };
+		561D83B92BE916D70045C540 /* AvailabilityTabRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailabilityTabRoute.swift; sourceTree = "<group>"; };
+		561D83BC2BE916D70045C540 /* AvailabilityTabModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailabilityTabModel.swift; sourceTree = "<group>"; };
 		561FC8B02B5C66F7005B6006 /* WebView+PullToRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebView+PullToRefresh.swift"; sourceTree = "<group>"; };
 		561FC8B12B5C66F7005B6006 /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		561FC8B22B5C66F7005B6006 /* WebViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
@@ -2058,6 +2102,202 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		561D837C2BE90D6E0045C540 /* CamerAvailability */ = {
+			isa = PBXGroup;
+			children = (
+				561D83882BE90D930045C540 /* Configuration */,
+				561D838B2BE90D930045C540 /* Domain */,
+				561D83972BE90D930045C540 /* Module */,
+			);
+			path = CamerAvailability;
+			sourceTree = "<group>";
+		};
+		561D83852BE90D930045C540 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				561D83832BE90D930045C540 /* CamerAvailabilityAssembler.swift */,
+				561D83842BE90D930045C540 /* CamerAvailabilityAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		561D83872BE90D930045C540 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				561D83862BE90D930045C540 /* CamerAvailabilityRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		561D83882BE90D930045C540 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				561D83852BE90D930045C540 /* Assembler */,
+				561D83872BE90D930045C540 /* Route */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		561D838A2BE90D930045C540 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				561D83892BE90D930045C540 /* CamerAvailabilityModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		561D838B2BE90D930045C540 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				561D838A2BE90D930045C540 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		561D838E2BE90D930045C540 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				561D838C2BE90D930045C540 /* CamerAvailabilityInteractor.swift */,
+				561D838D2BE90D930045C540 /* CamerAvailabilityInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		561D83912BE90D930045C540 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				561D838F2BE90D930045C540 /* CamerAvailabilityRouter.swift */,
+				561D83902BE90D930045C540 /* CamerAvailabilityRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		561D83932BE90D930045C540 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				561D83922BE90D930045C540 /* CamerAvailabilityView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		561D83962BE90D930045C540 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				561D83942BE90D930045C540 /* CamerAvailabilityViewModel.swift */,
+				561D83952BE90D930045C540 /* CamerAvailabilityViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		561D83972BE90D930045C540 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				561D838E2BE90D930045C540 /* Interactor */,
+				561D83912BE90D930045C540 /* Router */,
+				561D83932BE90D930045C540 /* View */,
+				561D83962BE90D930045C540 /* ViewModel */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		561D83A32BE9165A0045C540 /* AvailabilityTab */ = {
+			isa = PBXGroup;
+			children = (
+				561D83BB2BE916D70045C540 /* Configuration */,
+				561D83BE2BE916D70045C540 /* Domain */,
+				561D83B52BE916D70045C540 /* Module */,
+			);
+			path = AvailabilityTab;
+			sourceTree = "<group>";
+		};
+		561D83AC2BE916D70045C540 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				561D83AA2BE916D70045C540 /* AvailabilityTabInteractor.swift */,
+				561D83AB2BE916D70045C540 /* AvailabilityTabInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		561D83AF2BE916D70045C540 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				561D83AD2BE916D70045C540 /* AvailabilityTabRouter.swift */,
+				561D83AE2BE916D70045C540 /* AvailabilityTabRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		561D83B12BE916D70045C540 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				561D83B02BE916D70045C540 /* AvailabilityTabView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		561D83B42BE916D70045C540 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				561D83B22BE916D70045C540 /* AvailabilityTabViewModel.swift */,
+				561D83B32BE916D70045C540 /* AvailabilityTabViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		561D83B52BE916D70045C540 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				561D83AC2BE916D70045C540 /* Interactor */,
+				561D83AF2BE916D70045C540 /* Router */,
+				561D83B12BE916D70045C540 /* View */,
+				561D83B42BE916D70045C540 /* ViewModel */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		561D83B82BE916D70045C540 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				561D83B62BE916D70045C540 /* AvailabilityTabAssembler.swift */,
+				561D83B72BE916D70045C540 /* AvailabilityTabAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		561D83BA2BE916D70045C540 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				561D83B92BE916D70045C540 /* AvailabilityTabRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		561D83BB2BE916D70045C540 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				561D83B82BE916D70045C540 /* Assembler */,
+				561D83BA2BE916D70045C540 /* Route */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		561D83BD2BE916D70045C540 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				561D83BC2BE916D70045C540 /* AvailabilityTabModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		561D83BE2BE916D70045C540 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				561D83BD2BE916D70045C540 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		561FC8AF2B5C66F7005B6006 /* WebView */ = {
 			isa = PBXGroup;
 			children = (
@@ -3069,6 +3309,8 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				561D83A32BE9165A0045C540 /* AvailabilityTab */,
+				561D837C2BE90D6E0045C540 /* CamerAvailability */,
 				561AA6CF2BE3A61700393CEF /* FeatureInformation */,
 				561AA6A62BE30A7700393CEF /* FeatureSelection */,
 				56A6BE782BE2EF97007EBF13 /* IdentityUpload */,
@@ -9562,8 +9804,10 @@
 				EAE401FC2BBAFB0900B1311E /* RobotMenuInteractor.swift in Sources */,
 				EA910FF72ADCBCC000584B98 /* MenuView.swift in Sources */,
 				EAD048682AE22C530096E6AB /* RegistrationPlansModel.swift in Sources */,
+				561D83C62BE916D70045C540 /* AvailabilityTabAssembler.swift in Sources */,
 				EAE8EC5A2B9574840003AE96 /* ChatModel.swift in Sources */,
 				EA172AFF2AF06BDE00EB1514 /* ConfirmMailRouterProtocol.swift in Sources */,
+				561D83A12BE90D930045C540 /* CamerAvailabilityViewModel.swift in Sources */,
 				EA910FCD2ADC495700584B98 /* TabBarRouterProtocol.swift in Sources */,
 				EA4A1C162B87799100B5FC59 /* AvailableAssistantsViewModelProtocol.swift in Sources */,
 				EA172B002AF06BDE00EB1514 /* ConfirmMailRouter.swift in Sources */,
@@ -9575,6 +9819,7 @@
 				EA4A1C8F2B8799B400B5FC59 /* RuralDroneOnboardingRouter.swift in Sources */,
 				EA20A5142B87C913006662FA /* Scan3DMenuAssemblerProtocol.swift in Sources */,
 				EA8653752B90FA8800B86A54 /* AIMenuAssembler.swift in Sources */,
+				561D83C82BE916D70045C540 /* AvailabilityTabRoute.swift in Sources */,
 				EA282E582AE952F700B90920 /* ProfileInteractorProtocol.swift in Sources */,
 				56FEECF02B5C802C003FA686 /* SearchWalkyCammerAssembler.swift in Sources */,
 				EA3E5C932B87692400158207 /* AssistantMenuModel.swift in Sources */,
@@ -9617,6 +9862,7 @@
 				EA86532E2B90E9CA00B86A54 /* AIOnboardingAssemblerProtocol.swift in Sources */,
 				EAF47C412B838D74003F8B86 /* DroneMenuInteractor.swift in Sources */,
 				EA51030F2BA7E9DA00A2DE2E /* AppDelegate+Payment.swift in Sources */,
+				561D839E2BE90D930045C540 /* CamerAvailabilityRouter.swift in Sources */,
 				56A552362B2F6135006B1B17 /* WalkyCamerOnboardingModel.swift in Sources */,
 				EA2C4C222B7E5C4300F1EE26 /* DroneOnboardingView.swift in Sources */,
 				EA86534F2B90EBE800B86A54 /* ConfigureAccessView.swift in Sources */,
@@ -9626,6 +9872,7 @@
 				EA86526A2B90AC8300B86A54 /* IOTMenuInteractorProtocol.swift in Sources */,
 				EA5E1D962AD725DF00738A8F /* ProjectColors.swift in Sources */,
 				EAF47B9E2B82FFF2003F8B86 /* CalendarTabView.swift in Sources */,
+				561D839A2BE90D930045C540 /* CamerAvailabilityRoute.swift in Sources */,
 				EA20A5672B87D35B006662FA /* ShareSheetRouter.swift in Sources */,
 				EAD0486C2AE22C530096E6AB /* RegistrationPlansView.swift in Sources */,
 				EAF47B572B82F7EA003F8B86 /* UpdateVideocallConfigurationUseCase.swift in Sources */,
@@ -9634,8 +9881,10 @@
 				EADB5CAB2B190819005863E1 /* VideoCallInteractorProtocol.swift in Sources */,
 				56FEECF82B5C802C003FA686 /* SearchWalkyCammerRouter.swift in Sources */,
 				EA8652DF2B90DCE900B86A54 /* PrintMenuInteractorProtocol.swift in Sources */,
+				561D83A22BE90D930045C540 /* CamerAvailabilityViewModelProtocol.swift in Sources */,
 				EA86528C2B90ACC200B86A54 /* IOTOnboardingAssemblerProtocol.swift in Sources */,
 				561AA6CC2BE30A9900393CEF /* FeatureSelectionModel.swift in Sources */,
+				561D83BF2BE916D70045C540 /* AvailabilityTabInteractor.swift in Sources */,
 				EA57A7D12B6C2C31006247DD /* AddPeopleTransmissionView.swift in Sources */,
 				EA8652B72B90DA9600B86A54 /* 3DPrintOnboardingView.swift in Sources */,
 				56AF275D2BDAE00800DADC29 /* RegisterWalkcamerView.swift in Sources */,
@@ -9683,6 +9932,7 @@
 				EAF47B9F2B82FFF2003F8B86 /* CalendarTabInteractorProtocol.swift in Sources */,
 				EA282E542AE952F700B90920 /* ProfileModel.swift in Sources */,
 				EAF47B512B82F7EA003F8B86 /* VideocallOnboardingView.swift in Sources */,
+				561D839F2BE90D930045C540 /* CamerAvailabilityRouterProtocol.swift in Sources */,
 				EA8652E22B90DCE900B86A54 /* PrintMenuRouter.swift in Sources */,
 				EA91101E2ADDADE100584B98 /* HomeInteractorProtocol.swift in Sources */,
 				EAE8EC482B9574840003AE96 /* ChatDetailViewModelProtocol.swift in Sources */,
@@ -9726,6 +9976,7 @@
 				EAF47C892B839308003F8B86 /* FlightMenuRouter.swift in Sources */,
 				561FC8B72B5C66F7005B6006 /* WebViewSwiftUI.swift in Sources */,
 				EA172AF92AF06BDE00EB1514 /* ConfirmMailModel.swift in Sources */,
+				561D83A02BE90D930045C540 /* CamerAvailabilityView.swift in Sources */,
 				EAD048692AE22C530096E6AB /* RegistrationPlansViewModelProtocol.swift in Sources */,
 				EA5A87F72B67FD7C00BBB7F9 /* FetchUserDataUseCase.swift in Sources */,
 				EAF47B7D2B82FCE8003F8B86 /* BookWalkycamerAssembler.swift in Sources */,
@@ -9759,6 +10010,7 @@
 				EA4165452AE706C6008CE66A /* NotificationsInteractor.swift in Sources */,
 				EAB63BBF2B83D6390017BDA4 /* ARHandsMenuInteractor.swift in Sources */,
 				EA282ECD2AEB531100B90920 /* FunctionsInteractorProtocol.swift in Sources */,
+				561D83C72BE916D70045C540 /* AvailabilityTabAssemblerProtocol.swift in Sources */,
 				EAF47C392B838D74003F8B86 /* DroneMenuRoute.swift in Sources */,
 				EA57A7A52B6C1558006247DD /* CammerDetailsInteractorProtocol.swift in Sources */,
 				EA282ED42AEB531100B90920 /* FunctionsAssemblerProtocol.swift in Sources */,
@@ -9844,6 +10096,7 @@
 				EA8652FF2B90E0FB00B86A54 /* LidarOnboardingModel.swift in Sources */,
 				561AA6C72BE30A9900393CEF /* FeatureSelectionViewModel.swift in Sources */,
 				EA6083E12B01DBE000295069 /* GalleryPhotosAssemblerProtocol.swift in Sources */,
+				561D83C12BE916D70045C540 /* AvailabilityTabRouter.swift in Sources */,
 				EA5E1D742AD716A500738A8F /* ProjectFont.swift in Sources */,
 				EAA1E6402AFB03FD00A42174 /* CashTabView.swift in Sources */,
 				56AF27552BDAE00800DADC29 /* RegisterWalkcamerAssembler.swift in Sources */,
@@ -9876,6 +10129,7 @@
 				EA72199B2B05612900BE2D93 /* WalkyBotInteractor.swift in Sources */,
 				EA60836D2B01981800295069 /* CryptoDetailsAssembler.swift in Sources */,
 				EA72199D2B05612900BE2D93 /* WalkyBotRouterProtocol.swift in Sources */,
+				561D839C2BE90D930045C540 /* CamerAvailabilityInteractor.swift in Sources */,
 				EA20A5652B87D35B006662FA /* ShareSheetInteractorProtocol.swift in Sources */,
 				EA172B262AF06EF600EB1514 /* StartupRouter.swift in Sources */,
 				EA8EF8D32B67E14300136D1F /* UserSession.swift in Sources */,
@@ -9918,6 +10172,7 @@
 				EA6083462AFD58A900295069 /* CryptoTabRouterProtocol.swift in Sources */,
 				EA8652DC2B90DCE900B86A54 /* PrintMenuViewModel.swift in Sources */,
 				EA282ED02AEB531100B90920 /* FunctionsRouter.swift in Sources */,
+				561D839D2BE90D930045C540 /* CamerAvailabilityInteractorProtocol.swift in Sources */,
 				EAB63B992B83D2ED0017BDA4 /* ARHandsOnboardingInteractor.swift in Sources */,
 				EAF47B7C2B82FCE8003F8B86 /* BookWalkycamerRoute.swift in Sources */,
 				56A552562B2F6E3D006B1B17 /* StreetCamMenuAssemblerProtocol.swift in Sources */,
@@ -9933,6 +10188,7 @@
 				EA4A1C1C2B87799100B5FC59 /* AvailableAssistantsModel.swift in Sources */,
 				EAF47C3B2B838D74003F8B86 /* DroneMenuAssembler.swift in Sources */,
 				EAA1E61E2AFAFA7100A42174 /* WCTopBarContainerView.swift in Sources */,
+				561D83982BE90D930045C540 /* CamerAvailabilityAssembler.swift in Sources */,
 				EA910F312AD8B55200584B98 /* Divider.swift in Sources */,
 				56A552302B2F6135006B1B17 /* WalkyCamerOnboardingViewModelProtocol.swift in Sources */,
 				EA8653052B90E0FB00B86A54 /* LidarOnboardingRouter.swift in Sources */,
@@ -9956,6 +10212,7 @@
 				EA6083662B01981800295069 /* CryptoDetailsInteractor.swift in Sources */,
 				56A6BE9C2BE2EFC7007EBF13 /* IdentityUploadAssembler.swift in Sources */,
 				EA3E5C982B87692400158207 /* AssistantMenuInteractorProtocol.swift in Sources */,
+				561D83C32BE916D70045C540 /* AvailabilityTabView.swift in Sources */,
 				5668BB372BDFD5FB00A6E05D /* ProfitSelectionInteractor.swift in Sources */,
 				EA20A5122B87C913006662FA /* Scan3DMenuRoute.swift in Sources */,
 				EA4A1C1F2B87799100B5FC59 /* AvailableAssistantsAssembler.swift in Sources */,
@@ -9972,6 +10229,7 @@
 				EACFDF172BA7EF3E00B08990 /* UnreleasedFeatureViewModelProtocol.swift in Sources */,
 				5668BB392BDFD5FB00A6E05D /* ProfitSelectionRouter.swift in Sources */,
 				EA4A1C882B8799B400B5FC59 /* RuralDroneOnboardingViewModelProtocol.swift in Sources */,
+				561D839B2BE90D930045C540 /* CamerAvailabilityModel.swift in Sources */,
 				EA4A1C642B87909F00B5FC59 /* ExternalAssistantViewModel.swift in Sources */,
 				EA282E592AE952F700B90920 /* ProfileInteractor.swift in Sources */,
 				EA1FD1BC2B1E932F000E583D /* VideoCallRoomInteractor.swift in Sources */,
@@ -10162,6 +10420,7 @@
 				EAE8EC4F2B9574840003AE96 /* MessageModel.swift in Sources */,
 				EA20A51B2B87C913006662FA /* Scan3DMenuRouter.swift in Sources */,
 				561FC8BE2B5C67FB005B6006 /* AsyncDataError.swift in Sources */,
+				561D83C92BE916D70045C540 /* AvailabilityTabModel.swift in Sources */,
 				EA94A52F2B7160EF00EC3037 /* ServiceDetailsViewModel.swift in Sources */,
 				EA4A1C662B87909F00B5FC59 /* ExternalAssistantInteractor.swift in Sources */,
 				EAF47BEF2B83099F003F8B86 /* MapTabViewModel.swift in Sources */,
@@ -10212,6 +10471,7 @@
 				EA86532F2B90E9CA00B86A54 /* AIOnboardingAssembler.swift in Sources */,
 				EA0E40C42AF70E86002B7437 /* CashWalletAssemblerProtocol.swift in Sources */,
 				EA60833E2AFD58A900295069 /* CryptoTabAssembler.swift in Sources */,
+				561D83C22BE916D70045C540 /* AvailabilityTabRouterProtocol.swift in Sources */,
 				561AA6C82BE30A9900393CEF /* FeatureSelectionViewModelProtocol.swift in Sources */,
 				EADB5CAC2B190819005863E1 /* VideoCallRouterProtocol.swift in Sources */,
 				EA8EF8D02B67E12400136D1F /* UserSessionProtocol.swift in Sources */,
@@ -10239,6 +10499,7 @@
 				EAF47BC92B8306E9003F8B86 /* TimeTabInteractorProtocol.swift in Sources */,
 				561AA6C92BE30A9900393CEF /* FeatureSelectionAssembler.swift in Sources */,
 				EA7219772B0553C900BE2D93 /* GalleryItemView.swift in Sources */,
+				561D83992BE90D930045C540 /* CamerAvailabilityAssemblerProtocol.swift in Sources */,
 				EA4A1C6B2B87909F00B5FC59 /* ExternalAssistantRoute.swift in Sources */,
 				EA86528F2B90ACC200B86A54 /* IOTOnboardingView.swift in Sources */,
 				5637A8162AD5DD72000586DF /* WalkyCamApp.swift in Sources */,
@@ -10320,6 +10581,7 @@
 				56A6BE9E2BE2EFC7007EBF13 /* IdentityUploadRoute.swift in Sources */,
 				EA4165432AE706C6008CE66A /* NotificationsView.swift in Sources */,
 				EAF47C192B830C80003F8B86 /* WalkyCammerListInteractor.swift in Sources */,
+				561D83C52BE916D70045C540 /* AvailabilityTabViewModelProtocol.swift in Sources */,
 				56FEECF92B5C802C003FA686 /* SearchWalkyCammerRouterProtocol.swift in Sources */,
 				EAE401AC2BBA3D6100B1311E /* DigitalTwinsOnboardingViewModel.swift in Sources */,
 				EA15B5982AD6E44D00C03407 /* LoginViewModelProtocol.swift in Sources */,
@@ -10340,6 +10602,7 @@
 				EA6083B42B01D9E100295069 /* GalleryModel.swift in Sources */,
 				561AA6C42BE30A9900393CEF /* FeatureSelectionRouter.swift in Sources */,
 				561AA6EC2BE3A6B500393CEF /* FeatureInformationAssemblerProtocol.swift in Sources */,
+				561D83C02BE916D70045C540 /* AvailabilityTabInteractorProtocol.swift in Sources */,
 				EA8653552B90EBE800B86A54 /* ConfigureAccessRoute.swift in Sources */,
 				56FEECF42B5C802C003FA686 /* SearchWalkyCammerViewModelProtocol.swift in Sources */,
 				EA8653772B90FA8800B86A54 /* AIMenuModel.swift in Sources */,
@@ -10368,6 +10631,7 @@
 				EA1FD1B92B1E932F000E583D /* VideoCallRoomViewModel.swift in Sources */,
 				EA15B5A12AD6E44D00C03407 /* LoginAssembler.swift in Sources */,
 				EA87DE222BACBAB1001CB5E6 /* CreateSubscriptionUseCase.swift in Sources */,
+				561D83C42BE916D70045C540 /* AvailabilityTabViewModel.swift in Sources */,
 				561AA6CE2BE3115800393CEF /* WrappingHStack.swift in Sources */,
 				5668BB362BDFD5FB00A6E05D /* ProfitSelectionModel.swift in Sources */,
 				EA94A52E2B7160EF00EC3037 /* ServiceDetailsAssemblerProtocol.swift in Sources */,

@@ -43,10 +43,13 @@ struct FeatureSelectionView<ViewModel: FeatureSelectionViewModelProtocol, Router
                 WCUIButton(title: "Siguiente",
                            style: .standard,
                            descriptor: BlackButtonStyleDescriptor(),
-                           action: {})
+                           action: {
+                    router.routeToFeatureInformation()
+                })
             }
                    .padding(Tokens.Size.Spacing.regular)
         }
+        .navigation(router)
     }
     
     private var devicesView: some View {
