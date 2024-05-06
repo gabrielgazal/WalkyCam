@@ -1,5 +1,6 @@
 import SwiftUI
 
 protocol FeatureInformationViewModelProtocol: ViewModelProtocol {
-    func someAction()
+    var vehicleModel: [SelectorModel] { get set }
+    var deepnessModel: [SelectorModel] { get set }
 }
