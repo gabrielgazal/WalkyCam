@@ -33,6 +33,24 @@ struct CamerAvailabilityView<ViewModel: CamerAvailabilityViewModelProtocol, Rout
                .padding([.top], Tokens.Size.Spacing.huge)
                .ignoresSafeArea()
                .navigation(router)
+               .footer {
+                   HStack(alignment: .center,
+                          spacing: Tokens.Size.Spacing.regular) {
+                       WCUIButton(
+                        title: "Cancelar",
+                        style: .outline,
+                        descriptor: OrangeButtonStyleDescriptor(),
+                        action: {}
+                       )
+                       WCUIButton(
+                        title: "Finalizar",
+                        style: .standard,
+                        descriptor: OrangeButtonStyleDescriptor(),
+                        action: {}
+                       )
+                   }
+                          .padding()
+               }
     }
     
     private var headerView: some View {

@@ -18,18 +18,21 @@ struct AvailabilityTabView<ViewModel: AvailabilityTabViewModelProtocol, Router: 
     // MARK: - View Body
 
     var body: some View {
-        VStack(alignment: .center,
-               spacing: Tokens.Size.Spacing.regular) {
-            dayItemCell(title: "Todos los dias")
-            dayItemCell(title: "Domingo")
-            dayItemCell(title: "Lunes")
-            dayItemCell(title: "Martes")
-            dayItemCell(title: "Miercoles")
-            dayItemCell(title: "Jueves")
-            dayItemCell(title: "Viernes")
-            dayItemCell(title: "Sabado")
+        ScrollView {
+            VStack(alignment: .center,
+                   spacing: Tokens.Size.Spacing.regular) {
+                dayItemCell(title: "Todos los dias")
+                dayItemCell(title: "Domingo")
+                dayItemCell(title: "Lunes")
+                dayItemCell(title: "Martes")
+                dayItemCell(title: "Miercoles")
+                dayItemCell(title: "Jueves")
+                dayItemCell(title: "Viernes")
+                dayItemCell(title: "Sabado")
+            }
+                   .padding(Tokens.Size.Spacing.regular)
         }
-               .padding(Tokens.Size.Spacing.regular)
+        .scrollIndicators(.hidden)
     }
     
     private func dayItemCell(title: String) -> some View {
