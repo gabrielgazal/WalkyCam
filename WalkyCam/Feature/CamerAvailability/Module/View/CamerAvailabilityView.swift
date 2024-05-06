@@ -46,11 +46,14 @@ struct CamerAvailabilityView<ViewModel: CamerAvailabilityViewModelProtocol, Rout
                         title: "Finalizar",
                         style: .standard,
                         descriptor: OrangeButtonStyleDescriptor(),
-                        action: {}
+                        action: {
+                            router.routeToLegalDoc()
+                        }
                        )
                    }
                           .padding()
                }
+               .navigation(router)
     }
     
     private var headerView: some View {

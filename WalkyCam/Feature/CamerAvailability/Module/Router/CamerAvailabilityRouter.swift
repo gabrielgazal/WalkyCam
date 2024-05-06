@@ -4,9 +4,10 @@ final class CamerAvailabilityRouter: Router, CamerAvailabilityRouterProtocol {
 
     // MARK: - Public API
 
-    #warning("Example function. Rename or remove it")
-    func routeToSomething() { 
-
+    func routeToLegalDoc() {
+        navigateTo(
+            LegalDocumentationRoute(isPresented: isNavigating)
+        )
     }
 }
 
