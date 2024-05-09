@@ -93,6 +93,9 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                        spacing: Tokens.Size.Spacing.regular) {
                     Asset.Ads.premium1.swiftUIImage
                         .cornerRadius(Tokens.Size.Border.Radius.large)
+                        .onTapGesture {
+                            router.routeToRegistrationPlans()
+                        }
                     ForEach(viewModel.homeData.reminders, id: \.self) { item in
                         ReminderCardView(date: item.date, camerName: item.camerName)
                             .shadow(
@@ -105,6 +108,7 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                 }
                        .padding()
             }
+            .navigation(router)
         }
     }
 
@@ -124,6 +128,10 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                     }
                     Asset.Ads.premium1.swiftUIImage
                         .cornerRadius(Tokens.Size.Border.Radius.large)
+                        .onTapGesture {
+                            router.routeToRegistrationPlans()
+                        }
+                        .navigation(router)
                 }
                        .padding()
             }

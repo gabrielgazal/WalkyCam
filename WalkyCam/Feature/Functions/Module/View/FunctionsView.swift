@@ -58,6 +58,10 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
                     Asset.Ads.premium2.swiftUIImage
                         .scaledToFit()
                         .frame(width: proxy.size.width)
+                        .onTapGesture {
+                            router.routeToRegistrationPlans()
+                        }
+                        .navigation(router)
                     HomeSectionView(title: "Descubre más") {
                         LazyVGrid(columns: otherFunctionsColumns,
                                   spacing: 16) {
@@ -91,6 +95,10 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
                     Asset.Ads.premium3.swiftUIImage
                         .scaledToFit()
                         .frame(width: proxy.size.width)
+                        .onTapGesture {
+                            router.routeToRegistrationPlans()
+                        }
+                        .navigation(router)
                     LazyVGrid(columns: otherFunctionsColumns,
                               spacing: 16) {
                         ForEach(viewModel.premiumFunctions, id: \.self) { item in

@@ -1,23 +1,23 @@
 import SwiftUI
 
 struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouterProtocol>: View {
-
+    
     // MARK: - Dependencies
-
+    
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
-        @State var isWalkyBotOnboardingEnabled: Bool = !UserDefaults.standard.bool(forKey: "isWalkyBotOnboardingDisabled")
-
+    @State var isWalkyBotOnboardingEnabled: Bool = !UserDefaults.standard.bool(forKey: "isWalkyBotOnboardingDisabled")
+    
     // MARK: - Initialization
-
+    
     init(viewModel: ViewModel,
          router: Router) {
         self.viewModel = viewModel
         self.router = router
     }
-
+    
     // MARK: - View Body
-
+    
     var body: some View {
         ZStack {
             VStack(spacing: Tokens.Size.Spacing.regular) {
@@ -82,6 +82,7 @@ struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouter
                            descriptor: OrangeButtonStyleDescriptor(),
                            action: {
                     UserDefaults.standard.set(true, forKey: "isWalkyBotOnboardingDisabled")
+                    self.isWalkyBotOnboardingEnabled = false
                 })
                 WCUIButton(title: "Salir",
                            style: .outline,
@@ -101,7 +102,7 @@ struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouter
             viewModel.loadNewTexts()
         }
     }
-
+    
     var header: some View {
         HStack(spacing: Tokens.Size.Spacing.small) {
             Image(Asset.Menu.bot.name)
@@ -128,7 +129,7 @@ struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouter
                 .rotationEffect(.degrees(90))
         }
     }
-
+    
     private var placeholder: some View {
         Image(systemName: "camera")
             .resizable()
@@ -136,7 +137,7 @@ struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouter
             .padding(Tokens.Size.Spacing.large)
             .cornerRadius(Tokens.Size.Border.Radius.medium)
     }
-
+    
     private func channelMessage(_ text: String, date: String) -> some View {
         HStack {
             VStack(alignment: .leading,
@@ -158,7 +159,7 @@ struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouter
             Spacer()
         }
     }
-
+    
     private func userMessage(_ text: String, date: String) -> some View {
         HStack {
             Spacer()

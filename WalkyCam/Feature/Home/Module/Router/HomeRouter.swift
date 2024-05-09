@@ -60,4 +60,10 @@ final class HomeRouter: Router, HomeRouterProtocol {
             ChatListRoute(isPresented: isNavigating)
         )
     }
+    
+    func routeToRegistrationPlans() {
+        navigateTo(
+            RegistrationPlansRoute(isPresented: isNavigating)
+        )
+    }
 }

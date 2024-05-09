@@ -367,5 +367,11 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
             )
         )
     }
+    
+    func routeToRegistrationPlans() {
+        navigateTo(
+            RegistrationPlansRoute(isPresented: isNavigating)
+        )
+    }
 }
 

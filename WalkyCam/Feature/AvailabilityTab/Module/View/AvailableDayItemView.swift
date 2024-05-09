@@ -32,7 +32,7 @@ struct AvailableDayItemView: View {
                            action: {
                     data.secondTime = .init()
                 })
-                .isHidden(!data.active)
+                .isHidden(!data.active || data.secondTime != nil)
             }
             Spacer()
             VStack(alignment: .trailing,

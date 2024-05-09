@@ -27,11 +27,11 @@ struct TimeTabView<ViewModel:TimeTabViewModelProtocol, Router: TimeTabRouterProt
             Group {
                 HStack {
                     Spacer()
-                    VStack(alignment: .leading) {
+                    VStack(alignment: .center) {
                         Text("Desde")
                             .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .medium))
-                        Text(startTimeSelected, style: .time)
-                            .font(.projectFont(size: Tokens.Size.Font.giant, weight: .bold))
+                        TimePicker(viewModel: .init(selectedTime: startTimeSelected),
+                                   timePickerStyle: .expanded)
                     }
                     Spacer()
                 }
@@ -41,11 +41,11 @@ struct TimeTabView<ViewModel:TimeTabViewModelProtocol, Router: TimeTabRouterProt
             Group {
                 HStack {
                     Spacer()
-                    VStack(alignment: .leading) {
+                    VStack(alignment: .center) {
                         Text("Hasta")
                             .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .medium))
-                        Text(endTimeSelected, style: .time)
-                            .font(.projectFont(size: Tokens.Size.Font.giant, weight: .bold))
+                        TimePicker(viewModel: .init(selectedTime: endTimeSelected),
+                                   timePickerStyle: .expanded)
                     }
                     Spacer()
                 }
