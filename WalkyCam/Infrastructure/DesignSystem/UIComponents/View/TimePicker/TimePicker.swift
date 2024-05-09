@@ -20,6 +20,7 @@ struct TimePicker: View {
         case `default`, expanded
     }
     
+    @Environment(\.isEnabled) var isEnabled
     @ObservedObject var viewModel: TimePickerViewModel
     private var timePickerStyle: TimePickerStyle
     @State private var isPickerPresented = false
@@ -39,7 +40,7 @@ struct TimePicker: View {
                 case .default:
                     Text("\(timeFormat(date: viewModel.selectedTime))")
                         .padding()
-                        .font(.projectFont(size: Tokens.Size.Font.xlarge))
+                        .font(.projectFont(size: Tokens.Size.Font.regular))
                         .background {
                             Capsule()
                                 .fill(Color.blancoGris)
@@ -51,7 +52,7 @@ struct TimePicker: View {
                 }
             }
             .buttonStyle(.plain)
-            .popover(isPresented: $isPickerPresented, attachmentAnchor: .point(.topLeading)) {
+            .popover(isPresented: $isPickerPresented, attachmentAnchor: .point(.top)) {
                 TimeSelector(viewModel: viewModel)
                     .presentationCompactAdaptation(.popover)
             }
@@ -61,7 +62,7 @@ struct TimePicker: View {
     private func timeFormat(date: Date) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"
-        return formatter.string(from: date)
+        return isEnabled ? formatter.string(from: date) : "    -    "
     }
 }
 

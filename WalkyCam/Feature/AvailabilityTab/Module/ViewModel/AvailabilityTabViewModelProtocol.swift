@@ -1,5 +1,5 @@
 import SwiftUI
 
 protocol AvailabilityTabViewModelProtocol: ViewModelProtocol {
-    func someAction()
+    var availableOptions: [AvailabilityTabModel] { get set }
 }

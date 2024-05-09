@@ -21,46 +21,21 @@ struct AvailabilityTabView<ViewModel: AvailabilityTabViewModelProtocol, Router: 
         ScrollView {
             VStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {
-                dayItemCell(title: "Todos los dias")
-                dayItemCell(title: "Domingo")
-                dayItemCell(title: "Lunes")
-                dayItemCell(title: "Martes")
-                dayItemCell(title: "Miercoles")
-                dayItemCell(title: "Jueves")
-                dayItemCell(title: "Viernes")
-                dayItemCell(title: "Sabado")
+                ForEach($viewModel.availableOptions, id: \.self) { $item in
+                    AvailableDayItemView(data: $item)
+                }
             }
                    .padding(Tokens.Size.Spacing.regular)
         }
         .scrollIndicators(.hidden)
-    }
-    
-    private func dayItemCell(title: String) -> some View {
-        HStack(alignment: .center,
-               spacing: Tokens.Size.Spacing.regular) {
-            VStack(alignment: .leading,
-                   spacing: Tokens.Size.Spacing.small) {
-                Text(title)
-                    .font(.projectFont(size: Tokens.Size.Font.regular))
-                Toggle(isOn: .constant(false)) {
-                    EmptyView()
+        .onChange(of: viewModel.availableOptions) { newValue in
+            if let allDaysActive = viewModel.availableOptions.first(where: { $0.title == "Todos los dias"} )?.active,
+            allDaysActive {
+                for index in 0..<viewModel.availableOptions.count {
+                    viewModel.availableOptions[index].active = true
                 }
-                .toggleStyle(WCNamelessToggleStyle())
             }
-            Spacer()
-            timeView(time: "-")
-            timeView(time: "-")
         }
-    }
-    private func timeView(time: String) -> some View {
-        return Text(time)
-            .font(.projectFont(size: Tokens.Size.Font.regular))
-            .padding(.vertical, Tokens.Size.Spacing.regular)
-            .padding(.horizontal, Tokens.Size.Spacing.xlarge)
-            .background {
-                Capsule()
-                    .fill(Color.blancoGris)
-            }
     }
 }
 
