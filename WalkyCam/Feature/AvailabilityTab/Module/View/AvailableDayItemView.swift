@@ -30,8 +30,9 @@ struct AvailableDayItemView: View {
                            icon: Asset.Icons.add.name,
                            color: .naranja,
                            action: {
+                    data.secondTime = .init()
                 })
-                .isHidden(data.secondTime != nil)
+                .isHidden(!data.active)
             }
             Spacer()
             VStack(alignment: .trailing,
