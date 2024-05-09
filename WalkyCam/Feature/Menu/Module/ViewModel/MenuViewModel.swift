@@ -28,6 +28,9 @@ final class MenuViewModel: MenuViewModelProtocol {
             .init(icon: Asset.Menu.help.name,
                   title: L10n.MenuViewModel.Item.help,
                   routeToNavigate: nil),
+            .init(icon: Asset.Menu.usd.name,
+                  title: "Planes y Precios",
+                  routeToNavigate: RegistrationPlansRoute(isPresented: .constant(false))),
             .init(icon: Asset.Menu.bot.name,
                   title: L10n.MenuViewModel.Item.bot,
                   routeToNavigate: WalkyBotRoute(isPresented: .constant(false)))
