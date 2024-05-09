@@ -137,6 +137,7 @@
 		56DADB222AD5EAA400710618 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB212AD5EAA400710618 /* AppNavigator.swift */; };
 		56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB232AD5EB3800710618 /* AppDelegate.swift */; };
 		56DADB272AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB262AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift */; };
+		56F2AF8E2BEC7A2F00C458DE /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F2AF8D2BEC7A2F00C458DE /* TimePicker.swift */; };
 		56FEECEF2B5C802C003FA686 /* SearchWalkyCammerRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FEECDC2B5C802C003FA686 /* SearchWalkyCammerRoute.swift */; };
 		56FEECF02B5C802C003FA686 /* SearchWalkyCammerAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FEECDE2B5C802C003FA686 /* SearchWalkyCammerAssembler.swift */; };
 		56FEECF12B5C802C003FA686 /* SearchWalkyCammerAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FEECDF2B5C802C003FA686 /* SearchWalkyCammerAssemblerProtocol.swift */; };
@@ -1086,6 +1087,7 @@
 		56DADB212AD5EAA400710618 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		56DADB232AD5EB3800710618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56DADB262AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+DependencyRegistration.swift"; sourceTree = "<group>"; };
+		56F2AF8D2BEC7A2F00C458DE /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
 		56FEECDC2B5C802C003FA686 /* SearchWalkyCammerRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchWalkyCammerRoute.swift; sourceTree = "<group>"; };
 		56FEECDE2B5C802C003FA686 /* SearchWalkyCammerAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchWalkyCammerAssembler.swift; sourceTree = "<group>"; };
 		56FEECDF2B5C802C003FA686 /* SearchWalkyCammerAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchWalkyCammerAssemblerProtocol.swift; sourceTree = "<group>"; };
@@ -3012,6 +3014,14 @@
 				EA51030E2BA7E9DA00A2DE2E /* AppDelegate+Payment.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		56F2AF8C2BEC7A1800C458DE /* TimePicker */ = {
+			isa = PBXGroup;
+			children = (
+				56F2AF8D2BEC7A2F00C458DE /* TimePicker.swift */,
+			);
+			path = TimePicker;
 			sourceTree = "<group>";
 		};
 		56FEECD32B5C7FEA003FA686 /* SearchWalkyCammer */ = {
@@ -7475,6 +7485,7 @@
 		EA910F9F2ADC464400584B98 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				56F2AF8C2BEC7A1800C458DE /* TimePicker */,
 				EAA1E6182AFAFA7100A42174 /* TopBar */,
 				EA282E7A2AE9F13000B90920 /* WCToggle */,
 				EA9110272ADDB02500584B98 /* AsyncImageView */,
@@ -10060,6 +10071,7 @@
 				EA91101E2ADDADE100584B98 /* HomeInteractorProtocol.swift in Sources */,
 				EAE8EC482B9574840003AE96 /* ChatDetailViewModelProtocol.swift in Sources */,
 				EAF47C132B830C80003F8B86 /* WalkyCammerListAssembler.swift in Sources */,
+				56F2AF8E2BEC7A2F00C458DE /* TimePicker.swift in Sources */,
 				EAA1E6442AFB03FD00A42174 /* CashTabRouterProtocol.swift in Sources */,
 				EA20A5152B87C913006662FA /* Scan3DMenuViewModel.swift in Sources */,
 				EA172B242AF06EF600EB1514 /* StartupInteractor.swift in Sources */,

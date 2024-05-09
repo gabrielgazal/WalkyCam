@@ -2,22 +2,23 @@ import SwiftUI
 @_spi(Experimental) import MapboxMaps
 
 struct MapTabView<ViewModel:MapTabViewModelProtocol, Router: MapTabRouterProtocol>: View {
-
+    
     // MARK: - Dependencies
-
+    
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
+    @StateObject var locationManager = LocationPermissionManager()
 
     // MARK: - Initialization
-
+    
     init(viewModel: ViewModel,
          router: Router) {
         self.viewModel = viewModel
         self.router = router
     }
-
+    
     // MARK: - View Body
-
+    
     var body: some View {
         ZStack {
             Map(
@@ -40,7 +41,7 @@ struct MapTabView<ViewModel:MapTabViewModelProtocol, Router: MapTabRouterProtoco
                 Spacer()
             }
             .padding(Tokens.Size.Spacing.large)
-
+            
             ZStack {
                 Circle()
                     .fill(Color.naranja.opacity(0.3))
@@ -54,12 +55,15 @@ struct MapTabView<ViewModel:MapTabViewModelProtocol, Router: MapTabRouterProtoco
             .padding(Tokens.Size.Spacing.huge)
         }
         .ignoresSafeArea()
+        .onChange(of: locationManager.coordinates) { newValue in
+            viewModel.updateUserViewPort(manager: locationManager)
+        }
     }
 }
 
 struct MapTabView_Previews: PreviewProvider {
     static var previews: some View {
-    MapTabView(
+        MapTabView(
             viewModel: MapTabViewModel(),
             router: MapTabRouter(isPresented: .constant(false))
         )

@@ -58,7 +58,7 @@ struct IdentityUploadView<ViewModel: IdentityUploadViewModelProtocol, Router: Id
                         router.routeToFeatures()
                     })
                 }
-                .isHidden(!viewModel.frontUploaded && !viewModel.backUploaded)
+                .isHidden(!viewModel.frontUploaded || !viewModel.backUploaded)
             }
                    .padding(.horizontal, Tokens.Size.Spacing.large)
         }

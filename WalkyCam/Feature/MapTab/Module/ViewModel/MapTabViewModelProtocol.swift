@@ -6,4 +6,5 @@ protocol MapTabViewModelProtocol: ViewModelProtocol {
     var locationText: String { get set }
 
     func getUserRegion()
+    func updateUserViewPort(manager: LocationPermissionManager)
 }

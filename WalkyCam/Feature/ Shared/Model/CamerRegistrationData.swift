@@ -9,7 +9,7 @@ import Foundation
 import MapKit
 
 struct CamerRegistrationData: Hashable {
-    var id: Int
+    var id: String
     var name: String
     var lastName: String
     var phoneNumber: String
@@ -23,7 +23,7 @@ struct CamerRegistrationData: Hashable {
     var days: [AvailableDayInfo]
     
     public init(
-        id: Int = 0,
+        id: String = "",
         name: String = "",
         lastName: String = "",
         phoneNumber: String = "",
