@@ -7,6 +7,7 @@
 #import <MapboxCoreMaps/MBMMapCenterAltitudeMode.h>
 #import <MapboxCoreMaps/MBMMapDebugOptions.h>
 #import <MapboxCoreMaps/MBMNorthOrientation.h>
+#import <MapboxCoreMaps/MBMPerformanceStatisticsCallback.h>
 #import <MapboxCoreMaps/MBMQueryFeatureExtensionCallback_Internal.h>
 #import <MapboxCoreMaps/MBMQueryFeatureStateCallback_Internal.h>
 #import <MapboxCoreMaps/MBMQueryRenderedFeaturesCallback_Internal.h>
@@ -17,7 +18,7 @@
 #import <MapboxCoreMaps/MBMCameraManager_Internal.h>
 
 @class MBMMapOptions;
-@class MBMPerfStatsCollectionOptions;
+@class MBMPerformanceStatisticsOptions;
 @class MBMRenderedQueryGeometry;
 @class MBMRenderedQueryOptions;
 @class MBMSize;
@@ -194,21 +195,38 @@ __attribute__((visibility ("default")))
 - (nonnull MBXExpected<NSNull *, NSString *> *)removeViewAnnotationForIdentifier:(nonnull NSString *)identifier __attribute((ns_returns_retained));
 - (nonnull MBXExpected<MBMViewAnnotationOptions *, NSString *> *)getViewAnnotationOptionsForIdentifier:(nonnull NSString *)identifier __attribute((ns_returns_retained));
 /**
- * Configure the performance statistics collection preferences.
+ * Enable real-time collection of map rendering performance statistics, for development purposes. Use after `render()` has
+ * been called for the first time.
  *
- * If a non-empty `samplerOptions` array gets passed in `PerfStatsCollectionOptions` it enables statistics collection.
- * To disable it, call `setPerfStatsCollection` again with an empty `samplerOptions` array.
+ * Collects CPU, GPU resource usage and timings of layers and rendering groups over a user-configurable sampling duration.
+ * Use the collected information to find which layers or rendering groups might be performing poorly. Use
+ * `PerformanceStatisticsOptions` to configure the following statistics collection behaviors:
+ * <ul>
+ *     <li>Specify the types of sampling: cumulative, per-frame, or both.</li>
+ *     <li>Define the minimum amount of time over which to perform sampling.</li>
+ * </ul>
  *
- * The resulting stats will be included in a `PerfStatsCollected` event which can be observed through the map instance.
- * Turning the sampling on and off does not require resubscription to the event.
- * However, canceling the subscription does not turn off the statistics collection.
+ * Utilize `PerformanceStatisticsCallback` to observe the collected performance statistics. The callback function is invoked
+ * after the configured sampling duration has elapsed. The callback is invoked on the main thread. The collection process is
+ * continuous; without user-input, it restarts after each callback invocation. Note: Specifying a negative sampling duration
+ * or omitting the callback function will result in no operation, which will be logged for visibility.
  *
- * By default all samplers are disabled. Using this API might affect the runtime performance of the map,
- * therefore it's not recommended to enable it in production.
+ * In order to stop the collection process, call `stopPerformanceStatisticsCollection.`
  *
- * @param options The configuration options to be set.
+ * @param options Statistics collection options
+ * @param callback The callback to be invoked when statistics are available after the configured amount of
+ * time.
  */
-- (void)setPerfStatsCollectionForOptions:(nonnull MBMPerfStatsCollectionOptions *)options;
+- (void)startPerformanceStatisticsCollectionForOptions:(nonnull MBMPerformanceStatisticsOptions *)options
+                                              callback:(nonnull MBMPerformanceStatisticsCallback)callback;
+/**
+ * Disable performance statistics collection.
+ *
+ * Calling `stopPerformanceStatisticsCollection` when no collection is enabled is a no-op. After calling
+ * `startPerformanceStatisticsCollection`, `stopPerformanceStatisticsCollection` must be called before collection can be
+ * restarted.
+ */
+- (void)stopPerformanceStatisticsCollection;
 /**
  * Returns attributions for the data used by the Map's style.
  *

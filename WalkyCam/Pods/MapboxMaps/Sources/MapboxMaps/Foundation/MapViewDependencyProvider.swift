@@ -1,9 +1,9 @@
 import MetalKit
 
-internal protocol MapViewDependencyProviderProtocol: AnyObject {
+protocol MapViewDependencyProviderProtocol: AnyObject {
     var notificationCenter: NotificationCenterProtocol { get }
     var bundle: BundleProtocol { get }
-    func makeMetalView(frame: CGRect, device: MTLDevice?) -> MTKView
+    func makeMetalView(frame: CGRect, device: MTLDevice?) -> MetalView
     func makeDisplayLink(window: UIWindow, target: Any, selector: Selector) -> DisplayLinkProtocol?
     func makeCameraAnimatorsRunner(mapboxMap: MapboxMapProtocol) -> CameraAnimatorsRunnerProtocol
     func makeCameraAnimationsManagerImpl(cameraViewContainerView: UIView,
@@ -31,19 +31,23 @@ internal protocol MapViewDependencyProviderProtocol: AnyObject {
     func makeEventsManager() -> EventsManagerProtocol
 }
 
-internal final class MapViewDependencyProvider: MapViewDependencyProviderProtocol {
+final class MapViewDependencyProvider: MapViewDependencyProviderProtocol {
     internal let notificationCenter: NotificationCenterProtocol = NotificationCenter.default
 
     internal let bundle: BundleProtocol = Bundle.main
 
     private let mainQueue: MainQueueProtocol = MainQueueWrapper()
 
-    internal func makeMetalView(frame: CGRect, device: MTLDevice?) -> MTKView {
-        MTKView(frame: frame, device: device)
+    internal func makeMetalView(frame: CGRect, device: MTLDevice?) -> MetalView {
+        MetalView(frame: frame, device: device)
     }
 
     internal func makeDisplayLink(window: UIWindow, target: Any, selector: Selector) -> DisplayLinkProtocol? {
+#if swift(>=5.9) && os(visionOS)
+        return CADisplayLink(target: target, selector: selector)
+#else
         window.screen.displayLink(withTarget: target, selector: selector)
+#endif
     }
 
     internal func makeCameraAnimatorsRunner(mapboxMap: MapboxMapProtocol) -> CameraAnimatorsRunnerProtocol {
@@ -175,11 +179,13 @@ internal final class MapViewDependencyProvider: MapViewDependencyProviderProtoco
                                                    cameraAnimationsManager: cameraAnimationsManager)
     }
 
-    internal func makeGestureManager(view: UIView,
-                                     mapboxMap: MapboxMapProtocol,
-                                     mapFeatureQueryable: MapFeatureQueryable,
-                                     annotations: AnnotationOrchestratorImplProtocol,
-                                     cameraAnimationsManager: CameraAnimationsManagerProtocol) -> GestureManager {
+    func makeGestureManager(
+        view: UIView,
+        mapboxMap: MapboxMapProtocol,
+        mapFeatureQueryable: MapFeatureQueryable,
+        annotations: AnnotationOrchestratorImplProtocol,
+        cameraAnimationsManager: CameraAnimationsManagerProtocol
+    ) -> GestureManager {
         let singleTap = makeSingleTapGestureHandler(
             view: view,
             cameraAnimationsManager: cameraAnimationsManager)
@@ -240,10 +246,9 @@ internal final class MapViewDependencyProvider: MapViewDependencyProviderProtoco
             displayLink: displayLink,
             offsetPointCalculator: offsetPointCalculator,
             offsetPolygonCalculator: offsetPolygonCalculator,
-            offsetLineStringCalculator: offsetLineStringCalculator)
-        return AnnotationOrchestratorImpl(
-            mapFeatureQueryable: mapFeatureQueryable,
-            factory: factory)
+            offsetLineStringCalculator: offsetLineStringCalculator,
+            mapFeatureQueryable: mapFeatureQueryable)
+        return AnnotationOrchestratorImpl(factory: factory)
     }
 
     // swiftlint:disable:next function_parameter_count

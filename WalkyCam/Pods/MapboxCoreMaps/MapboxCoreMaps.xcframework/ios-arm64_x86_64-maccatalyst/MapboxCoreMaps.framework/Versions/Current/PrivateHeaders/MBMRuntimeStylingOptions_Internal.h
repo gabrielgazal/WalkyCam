@@ -2,6 +2,7 @@
 
 #import <Foundation/Foundation.h>
 #import <MapboxCoreMaps/MBMStyleManagerCallback_Internal.h>
+#import <MapboxCoreMaps/MBMStyleManagerErrorCallback_Internal.h>
 
 NS_SWIFT_NAME(RuntimeStylingOptions)
 __attribute__((visibility ("default")))
@@ -17,12 +18,14 @@ __attribute__((visibility ("default")))
                                  layersCallback:(nullable MBMStyleManagerCallback)layersCallback
                                  imagesCallback:(nullable MBMStyleManagerCallback)imagesCallback
                               completedCallback:(nullable MBMStyleManagerCallback)completedCallback
-                               canceledCallback:(nullable MBMStyleManagerCallback)canceledCallback;
+                               canceledCallback:(nullable MBMStyleManagerCallback)canceledCallback
+                                  errorCallback:(nullable MBMStyleManagerErrorCallback)errorCallback;
 
 @property (nonatomic, readonly, nullable) MBMStyleManagerCallback sourcesCallback;
 @property (nonatomic, readonly, nullable) MBMStyleManagerCallback layersCallback;
 @property (nonatomic, readonly, nullable) MBMStyleManagerCallback imagesCallback;
 @property (nonatomic, readonly, nullable) MBMStyleManagerCallback completedCallback;
 @property (nonatomic, readonly, nullable) MBMStyleManagerCallback canceledCallback;
+@property (nonatomic, readonly, nullable) MBMStyleManagerErrorCallback errorCallback;
 
 @end

@@ -2,10 +2,12 @@
 
 #import <Foundation/Foundation.h>
 #import <MapboxCommon/MBXTileDataDomain.h>
+#import <MapboxCommon/MBXTileRegionEstimateProgressCallback.h>
 #import <MapboxCommon/MBXTileRegionLoadProgressCallback.h>
 
 @class MBXResourceDescription;
 @class MBXResourceLoadOptions;
+@class MBXTileRegionEstimateOptions;
 @class MBXTileRegionLoadOptions;
 @class MBXTilesetDescriptor;
 @protocol MBXCancelable;

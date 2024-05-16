@@ -185,6 +185,7 @@ __attribute__((visibility ("default")))
 - (nonnull MBXExpected<NSNull *, NSString *> *)updateStyleImageSourceImageForSourceId:(nonnull NSString *)sourceId
                                                                                 image:(nonnull MBMImage *)image __attribute((ns_returns_retained));
 - (nonnull MBXExpected<NSNull *, NSString *> *)removeStyleSourceForSourceId:(nonnull NSString *)sourceId __attribute((ns_returns_retained));
+- (nonnull MBXExpected<NSNull *, NSString *> *)removeStyleSourceUncheckedForSourceId:(nonnull NSString *)sourceId __attribute((ns_returns_retained));
 /**
  * Checks whether a given style source exists.
  *
@@ -292,5 +293,7 @@ __attribute__((visibility ("default")))
  *
  */
 - (BOOL)isStyleLoaded;
+- (void)cancelStyleLoading;
+- (BOOL)isStyleLoadingFinished;
 
 @end

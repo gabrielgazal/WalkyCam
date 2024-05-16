@@ -1,19 +1,5 @@
 import UIKit
 
-/// A top-level interface for annotations.
-public protocol Annotation {
-
-    /// The unique identifier of the annotation.
-    var id: String { get }
-
-    /// The geometry that is backing this annotation.
-    var geometry: Geometry { get }
-
-    /// Properties associated with the annotation.
-    @available(*, deprecated, message: "Will be deleted in future, for Mapbox-provided annotations see customData instead.")
-    var userInfo: [String: Any]? { get set }
-}
-
 public protocol AnnotationManager: AnyObject {
 
     /// The id of this annotation manager.
@@ -32,25 +18,28 @@ public protocol AnnotationManager: AnyObject {
     var slot: String? { get set }
 }
 
-internal protocol AnnotationManagerInternal: AnnotationManager {
+protocol AnnotationManagerInternal: AnnotationManager {
     var allLayerIds: [String] { get }
 
     func destroy()
 
-    func handleTap(with featureId: String, context: MapContentGestureContext) -> Bool
+    func handleTap(layerId: String, feature: Feature, context: MapContentGestureContext) -> Bool
 
-    func handleLongPress(with featureId: String, context: MapContentGestureContext) -> Bool
+    func handleLongPress(layerId: String, feature: Feature, context: MapContentGestureContext) -> Bool
 
     func handleDragBegin(with featureId: String, context: MapContentGestureContext) -> Bool
 
-    func handleDragChanged(with translation: CGPoint)
+    func handleDragChange(with translation: CGPoint, context: MapContentGestureContext)
 
-    func handleDragEnded()
+    func handleDragEnd(context: MapContentGestureContext)
 }
 
-struct AnnotationGestureHandlers {
+struct AnnotationGestureHandlers<T: Annotation> {
     var tap: ((MapContentGestureContext) -> Bool)?
     var longPress: ((MapContentGestureContext) -> Bool)?
+    var dragBegin: ((inout T, MapContentGestureContext) -> Bool)?
+    var dragChange: ((inout T, MapContentGestureContext) -> Void)?
+    var dragEnd: ((inout T, MapContentGestureContext) -> Void)?
 }
 
 /// A delegate that is called when a tap is detected on an annotation (or on several of them).
@@ -71,7 +60,7 @@ public protocol AnnotationInteractionDelegate: AnyObject {
 public final class AnnotationOrchestrator {
     private let impl: AnnotationOrchestratorImplProtocol
 
-    internal init(impl: AnnotationOrchestratorImplProtocol) {
+    init(impl: AnnotationOrchestratorImplProtocol) {
         self.impl = impl
     }
 
@@ -88,9 +77,13 @@ public final class AnnotationOrchestrator {
     ///   - layerPosition: Optionally set the `LayerPosition` of the layer managed.
     ///   - clusterOptions: Optionally set the `ClusterOptions` to cluster the Point Annotations
     /// - Returns: An instance of `PointAnnotationManager`
-    public func makePointAnnotationManager(id: String = String(UUID().uuidString.prefix(5)),
-                                           layerPosition: LayerPosition? = nil,
-                                           clusterOptions: ClusterOptions? = nil) -> PointAnnotationManager {
+    public func makePointAnnotationManager(
+        id: String = String(UUID().uuidString.prefix(5)),
+        layerPosition: LayerPosition? = nil,
+        clusterOptions: ClusterOptions? = nil,
+        onClusterTap: ((AnnotationClusterGestureContext) -> Void)? = nil,
+        onClusterLongPress: ((AnnotationClusterGestureContext) -> Void)? = nil
+    ) -> PointAnnotationManager {
         // swiftlint:disable:next force_cast
         return impl.makePointAnnotationManager(id: id, layerPosition: layerPosition, clusterOptions: clusterOptions) as! PointAnnotationManager
     }

@@ -38,5 +38,9 @@ __attribute__((visibility ("default")))
     @property (nonatomic, class, readonly) NSString * XRateLimitReset;
     /** Custom token restriction header. */
     @property (nonatomic, class, readonly) NSString * XAppInfo;
+    /** Custom header which lists short names and versions of all known registered SDKs */
+    @property (nonatomic, class, readonly) NSString * XMapboxSDKs;
+    /** Custom temporarily header to pass custom user agent fragment. */
+    @property (nonatomic, class, readonly) NSString * XTmpCustomUserAgentFragment;
 
 @end

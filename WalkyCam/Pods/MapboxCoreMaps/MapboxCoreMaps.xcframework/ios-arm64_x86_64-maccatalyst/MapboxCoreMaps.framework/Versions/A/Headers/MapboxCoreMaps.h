@@ -9,6 +9,7 @@
 #import <MapboxCoreMaps/Observable.h>
 #import <MapboxCoreMaps/OfflineManager.h>
 #import <MapboxCoreMaps/OfflineRegionManager.h>
+#import <MapboxCoreMaps/PerformanceStatistics.h>
 #import <MapboxCoreMaps/Projection.h>
 #import <MapboxCoreMaps/MapsResourceOptions.h>
 #import <MapboxCoreMaps/StyleManager.h>

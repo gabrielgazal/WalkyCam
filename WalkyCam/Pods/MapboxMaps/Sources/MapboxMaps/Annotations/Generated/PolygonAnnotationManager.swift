@@ -11,13 +11,18 @@ public class PolygonAnnotationManager: AnnotationManagerInternal {
 
     public var layerId: String { id }
 
+    private var dragId: String { "\(id)_drag" }
+
     public let id: String
 
     /// The collection of ``PolygonAnnotation`` being managed.
+    ///
+    /// Each annotation must have a unique identifier. Duplicate IDs will cause only the first annotation to be displayed, while the rest will be ignored.
     public var annotations: [PolygonAnnotation] {
         get { mainAnnotations + draggedAnnotations }
         set {
             mainAnnotations = newValue
+            mainAnnotations.removeDuplicates()
             draggedAnnotations.removeAll(keepingCapacity: true)
             draggedAnnotationIndex = nil
         }
@@ -57,7 +62,7 @@ public class PolygonAnnotationManager: AnnotationManagerInternal {
     }
 
     /// Storage for common layer properties
-    internal var layerProperties: [String: Any] = [:] {
+    var layerProperties: [String: Any] = [:] {
         didSet {
             syncLayerOnce.reset()
         }
@@ -74,7 +79,6 @@ public class PolygonAnnotationManager: AnnotationManagerInternal {
     private var syncDragSourceOnce = Once(happened: true)
     private var syncLayerOnce = Once(happened: true)
     private var insertDraggedLayerAndSourceOnce = Once()
-    private var dragId: String { id + "_drag" }
     private var displayLinkToken: AnyCancelable?
 
     var allLayerIds: [String] { [layerId, dragId] }
@@ -82,11 +86,12 @@ public class PolygonAnnotationManager: AnnotationManagerInternal {
     /// In SwiftUI isDraggable and isSelected are disabled.
     var isSwiftUI = false
 
-    internal init(id: String,
-                  style: StyleProtocol,
-                  layerPosition: LayerPosition?,
-                  displayLink: Signal<Void>,
-                  offsetCalculator: OffsetCalculatorType) {
+    init(id: String,
+         style: StyleProtocol,
+         layerPosition: LayerPosition?,
+         displayLink: Signal<Void>,
+         offsetCalculator: OffsetCalculatorType
+    ) {
         self.id = id
         self.style = style
         self.offsetCalculator = offsetCalculator
@@ -267,10 +272,15 @@ public class PolygonAnnotationManager: AnnotationManagerInternal {
 
     // MARK: - User interaction handling
 
-    internal func handleTap(with featureId: String, context: MapContentGestureContext) -> Bool {
+
+    func handleTap(layerId: String, feature: Feature, context: MapContentGestureContext) -> Bool {
+
+        guard let featureId = feature.identifier?.string else { return false }
+
         let tappedIndex = annotations.firstIndex { $0.id == featureId }
         guard let tappedIndex else { return false }
         var tappedAnnotation = annotations[tappedIndex]
+
         tappedAnnotation.isSelected.toggle()
 
         if !isSwiftUI {
@@ -286,45 +296,70 @@ public class PolygonAnnotationManager: AnnotationManagerInternal {
         return tappedAnnotation.tapHandler?(context) ?? false
     }
 
-    func handleLongPress(with featureId: String, context: MapContentGestureContext) -> Bool {
-        annotations.first {
-            $0.id == featureId
-        }?.longPressHandler?(context) ?? false
+    func handleLongPress(layerId: String, feature: Feature, context: MapContentGestureContext) -> Bool {
+        guard let featureId = feature.identifier?.string else { return false }
+
+        return annotations.first { $0.id == featureId }?.longPressHandler?(context) ?? false
     }
 
-    internal func handleDragBegin(with featureIdentifier: String, context: MapContentGestureContext) -> Bool {
+    func handleDragBegin(with featureId: String, context: MapContentGestureContext) -> Bool {
         guard !isSwiftUI else { return false }
 
-        let predicate = { (annotation: PolygonAnnotation) -> Bool in
-            annotation.id == featureIdentifier && annotation.isDraggable
+        func predicate(annotation: PolygonAnnotation) -> Bool {
+            annotation.id == featureId && annotation.isDraggable
         }
 
+        func tryBeginDragging(_ annotations: inout [PolygonAnnotation], idx: Int) -> Bool  {
+            var annotation = annotations[idx]
+            // If no drag handler set, the dragging is allowed
+            let dragAllowed = annotation.dragBeginHandler?(&annotation, context) ?? true
+            annotations[idx] = annotation
+            return dragAllowed
+        }
+
+        /// First, try to drag annotations that are already on the dragging layer.
         if let idx = draggedAnnotations.firstIndex(where: predicate) {
+            let dragAllowed = tryBeginDragging(&draggedAnnotations, idx: idx)
+            guard dragAllowed else {
+                return false
+            }
+
             draggedAnnotationIndex = idx
             return true
         }
 
+        /// Then, try to start dragging from the main set of annotations.
         if let idx = mainAnnotations.lastIndex(where: predicate) {
-            insertDraggedLayerAndSourceOnce {
-                let source = GeoJSONSource(id: dragId)
-                let layer = FillLayer(id: dragId, source: dragId)
-                do {
-                    try style.addSource(source)
-                    try style.addPersistentLayer(layer, layerPosition: .above(layerId))
-                } catch {
-                    Log.error(forMessage: "Add drag source/layer \(error)", category: "Annotations")
-                }
+            let dragAllowed = tryBeginDragging(&mainAnnotations, idx: idx)
+            guard dragAllowed else {
+                return false
             }
+
+            insertDraggedLayerAndSource()
 
             let annotation = mainAnnotations.remove(at: idx)
             draggedAnnotations.append(annotation)
             draggedAnnotationIndex = draggedAnnotations.endIndex - 1
             return true
         }
+
         return false
     }
 
-    internal func handleDragChanged(with translation: CGPoint) {
+    private func insertDraggedLayerAndSource() {
+        insertDraggedLayerAndSourceOnce {
+            let source = GeoJSONSource(id: dragId)
+            let layer = FillLayer(id: dragId, source: dragId)
+            do {
+                try style.addSource(source)
+                try style.addPersistentLayer(layer, layerPosition: .above(layerId))
+            } catch {
+                Log.error(forMessage: "Add drag source/layer \(error)", category: "Annotations")
+            }
+        }
+    }
+
+    func handleDragChange(with translation: CGPoint, context: MapContentGestureContext) {
         guard !isSwiftUI,
               let draggedAnnotationIndex,
               draggedAnnotationIndex < draggedAnnotations.endIndex,
@@ -333,12 +368,31 @@ public class PolygonAnnotationManager: AnnotationManagerInternal {
         }
 
         draggedAnnotations[draggedAnnotationIndex].polygon = polygon
+
+        callDragHandler(\.dragChangeHandler, context: context)
     }
 
-    internal func handleDragEnded() {
+    func handleDragEnd(context: MapContentGestureContext) {
         guard !isSwiftUI else { return }
+        callDragHandler(\.dragEndHandler, context: context)
         draggedAnnotationIndex = nil
     }
+
+    private func callDragHandler(
+        _ keyPath: KeyPath<PolygonAnnotation, ((inout PolygonAnnotation, MapContentGestureContext) -> Void)?>,
+        context: MapContentGestureContext
+    ) {
+        guard let draggedAnnotationIndex, draggedAnnotationIndex < draggedAnnotations.endIndex else {
+            return
+        }
+
+        if let handler = draggedAnnotations[draggedAnnotationIndex][keyPath: keyPath] {
+            var copy = draggedAnnotations[draggedAnnotationIndex]
+            handler(&copy, context)
+            draggedAnnotations[draggedAnnotationIndex] = copy
+        }
+    }
 }
+
 
 // End of generated file.

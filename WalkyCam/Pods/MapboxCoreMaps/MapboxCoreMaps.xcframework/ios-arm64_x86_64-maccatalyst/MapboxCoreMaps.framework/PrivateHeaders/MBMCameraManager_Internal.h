@@ -99,5 +99,6 @@ __attribute__((visibility ("default")))
                                                 endCoordinate:(nonnull MBMScreenCoordinate *)endCoordinate __attribute((ns_returns_retained));
 - (nonnull NSArray<MBMCanonicalTileID *> *)tileCoverForTileCoverOptions:(nonnull MBMTileCoverOptions *)tileCoverOptions
                                                           cameraOptions:(nullable MBMCameraOptions *)cameraOptions __attribute((ns_returns_retained)) NS_REFINED_FOR_SWIFT;
+- (BOOL)isPixelAboveHorizonForPixel:(nonnull MBMScreenCoordinate *)pixel;
 
 @end

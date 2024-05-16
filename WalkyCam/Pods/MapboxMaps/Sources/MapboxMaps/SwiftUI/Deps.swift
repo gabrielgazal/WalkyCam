@@ -13,12 +13,13 @@ struct MapDependencies {
     var eventsSubscriptions = [AnyEventSubscription]()
     var cameraChangeHandlers = [(CameraChanged) -> Void]()
     var ornamentOptions = OrnamentOptions()
+    var frameRate = Map.FrameRate()
     var debugOptions = MapViewDebugOptions()
+    var isOpaque = true
     var presentsWithTransaction = false
     var additionalSafeArea = SwiftUI.EdgeInsets()
-    var viewportOptions = ViewportOptions(
-        transitionsToIdleUponUserInteraction: true,
-        usesSafeAreaInsetsAsPadding: true)
+    var viewportOptions = ViewportOptions(transitionsToIdleUponUserInteraction: true, usesSafeAreaInsetsAsPadding: true)
+    var performanceStatisticsParameters: Map.PerformanceStatisticsParameters?
 
     var onMapTap: ((MapContentGestureContext) -> Void)?
     var onMapLongPress: ((MapContentGestureContext) -> Void)?
@@ -38,5 +39,21 @@ struct AnyEventSubscription {
                 action(payload)
             }
         }
+    }
+}
+
+@available(iOS 13.0, *)
+extension Map {
+    struct PerformanceStatisticsParameters {
+        var options: PerformanceStatisticsOptions
+        var callback: (PerformanceStatistics) -> Void
+    }
+}
+
+@available(iOS 13.0, *)
+extension Map {
+    struct FrameRate: Equatable {
+        var range: ClosedRange<Float>?
+        var preferred: Float?
     }
 }

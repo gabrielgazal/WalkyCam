@@ -5,7 +5,9 @@ import os
 import MetalKit
 
 // swiftlint:disable:next type_body_length
-open class MapView: UIView {
+open class MapView: UIView, SizeTrackingLayerDelegate {
+
+    open override class var layerClass: AnyClass { SizeTrackingLayer.self }
 
     // `mapboxMap` depends on `MapInitOptions`, which is not available until
     // awakeFromNib() when instantiating MapView from a xib or storyboard.
@@ -73,7 +75,7 @@ open class MapView: UIView {
     }
 
     /// The underlying metal view that is used to render the map
-    internal private(set) var metalView: MTKView?
+    private(set) var metalView: MetalView?
 
     private let cameraViewContainerView = UIView()
 
@@ -562,13 +564,35 @@ open class MapView: UIView {
     open override func layoutSubviews() {
         super.layoutSubviews()
 
-        // metal view is created by invoking `MapboxMap.createRenderer()`
-        // which is currently invoked in the init of the `MapboxMap`
-        // making metal view always available here
-        if let metalView = metalView {
-            mapboxMap.size = metalView.bounds.size
-        }
+        metalView?.center = CGPoint(x: bounds.midX, y: bounds.midY)
         safeAreaSignalSubject.value = self.safeAreaInsets
+    }
+
+    /// Synchronize size updates with GL-Native and UIKit
+    ///
+    /// To provide nice custom resizing behavior SDK rely on custom `drawableSize` updates
+    /// That values is measured in pixels (not points) and has impact on the framebufferSize in GL-Native context.
+    /// The method would make a convertion to pixels based on the `pixelRatio` parameter
+    ///
+    /// - Important: Size argument can be bigger than MapView bounds. That might happen when we are increase map size and
+    /// to have a smooth transition we need to draw map in final sizes before animation begins.
+    /// - Parameter size: new size in points (as reported by `bounds.size`)
+    func updateDrawableSize(to size: CGSize) {
+        guard let metalView, !metalView.autoResizeDrawable else { return }
+
+        metalView.bounds.size = size
+        mapboxMap.size = size
+
+        metalView.drawableSize = CGSize(width: size.width * pixelRatio, height: size.height * pixelRatio)
+        if metalView.contentScaleFactor != pixelRatio {
+            // DrawableSize setter will recalculate `contentScaleFactor` if the new drawableSize doesn't fit into
+            // the current bounds.size and scale.
+            Log.error(forMessage: "MetalView content scale factor \(metalView.contentScaleFactor) is not equal to pixel ratio \(pixelRatio)")
+        }
+
+        // GL-Native will trigger update on `mapboxMap.size` update but it will come in the next frame.
+        // To reduce glitches we can schedule repaint in the next frame to resize map texture.
+        scheduleRepaint()
     }
 
     @_spi(Metrics) public var metricsReporter: MapViewMetricsReporter?
@@ -601,9 +625,9 @@ open class MapView: UIView {
             defer {
                 drawTrace?.end()
             }
-            metricsReporter?.beforeMetalViewDrawCallback(metalView: metalView)
+            metricsReporter?.beforeMetalViewDrawCallback()
             metalView?.draw()
-            metricsReporter?.afterMetalViewDrawCallback(metalView: metalView)
+            metricsReporter?.afterMetalViewDrawCallback()
         }
     }
 
@@ -670,6 +694,16 @@ open class MapView: UIView {
 
         return false
     }
+
+    // MARK: SizeTrackingLayerDelegate
+
+    func sizeTrackingLayer(layer: SizeTrackingLayer, willAnimateResizingFrom from: CGSize, to: CGSize) {
+        updateDrawableSize(to: CGSize(width: max(from.width, to.width),
+                                  height: max(from.height, to.height)))
+    }
+    func sizeTrackingLayer(layer: SizeTrackingLayer, completeResizingFrom: CGSize, to: CGSize) {
+        updateDrawableSize(to: to)
+    }
 }
 
 extension MapView: DelegatingMapClientDelegate {
@@ -682,43 +716,21 @@ extension MapView: DelegatingMapClientDelegate {
         OSLog.platform.signpostEvent("Set needs redraw")
     }
 
-    internal func getMetalView(for metalDevice: MTLDevice?) -> MTKView? {
+    func getMetalView(for metalDevice: MTLDevice?) -> MetalView? {
         let minSize = CGRect(x: 0, y: 0, width: 1, height: 1)
         let metalView = dependencyProvider.makeMetalView(frame: minSize.union(bounds), device: metalDevice)
 
         metalView.translatesAutoresizingMaskIntoConstraints = false
-        metalView.autoResizeDrawable = true
         metalView.contentScaleFactor = pixelRatio
         metalView.contentMode = .center
         metalView.isOpaque = isOpaque
         metalView.layer.isOpaque = isOpaque
-        metalView.isPaused = true
-        metalView.enableSetNeedsDisplay = false
         metalView.presentsWithTransaction = false
         metalView.sampleCount = antialiasingSampleCount
 
+        // MapView should clip bounds to hide MTKView oversizing during the expand resizing animations
+        clipsToBounds = true
         insertSubview(metalView, at: 0)
-
-        let sameHeightConstraint = metalView.heightAnchor.constraint(equalTo: heightAnchor)
-        sameHeightConstraint.priority = .defaultHigh
-
-        let minHeightConstraint = metalView.heightAnchor.constraint(greaterThanOrEqualToConstant: minSize.height)
-        minHeightConstraint.priority = .required
-
-        let sameWidthConstraint = metalView.widthAnchor.constraint(equalTo: widthAnchor)
-        sameWidthConstraint.priority = .defaultHigh
-
-        let minWidthConstraint = metalView.widthAnchor.constraint(greaterThanOrEqualToConstant: minSize.width)
-        minWidthConstraint.priority = .required
-
-        NSLayoutConstraint.activate([
-            metalView.topAnchor.constraint(equalTo: topAnchor),
-            sameHeightConstraint,
-            minHeightConstraint,
-            metalView.leftAnchor.constraint(equalTo: leftAnchor),
-            sameWidthConstraint,
-            minWidthConstraint
-        ])
 
         self.metalView = metalView
 

@@ -43,9 +43,7 @@ import SwiftUI
 /// ```
 ///
 /// Check out the <doc:SwiftUI-User-Guide> for more information about ``Map`` capabilities, and the <doc:Map-Content-Gestures-User-Guide> for more information about gesture handling.
-#if swift(>=5.8)
-    @_documentation(visibility: public)
-#endif
+@_documentation(visibility: public)
 @_spi(Experimental)
 @available(iOS 13.0, *)
 public struct Map: UIViewControllerRepresentable {
@@ -61,9 +59,7 @@ public struct Map: UIViewControllerRepresentable {
     /// - Parameters:
     ///     - viewport: The camera viewport to display.
     ///     - content: A map content building closure.
-#if swift(>=5.8)
     @_documentation(visibility: public)
-#endif
     @available(iOSApplicationExtension, unavailable)
     public init(
         viewport: Binding<Viewport>,
@@ -80,9 +76,7 @@ public struct Map: UIViewControllerRepresentable {
     /// - Parameters:
     ///     - initialViewport: The camera viewport to display.
     ///     - content: A map content building closure.
-#if swift(>=5.8)
     @_documentation(visibility: public)
-#endif
     @available(iOSApplicationExtension, unavailable)
     public init(
         initialViewport: Viewport = .styleDefault,
@@ -101,7 +95,8 @@ public struct Map: UIViewControllerRepresentable {
     ) {
         self.viewport = _viewport
         self.urlOpenerProvider = urlOpenerProvider
-        content?().visit(mapContentVisitor)
+        content?()
+            .visit(mapContentVisitor)
     }
 
     public func makeCoordinator() -> Coordinator {
@@ -155,9 +150,7 @@ public struct Map: UIViewControllerRepresentable {
     }
 }
 
-#if swift(>=5.8)
-    @_documentation(visibility: public)
-#endif
+@_documentation(visibility: public)
 @available(iOS 13.0, *)
 extension Map {
 
@@ -165,9 +158,7 @@ extension Map {
     ///
     /// - Parameters:
     ///     - viewport: The camera viewport to display.
-#if swift(>=5.8)
     @_documentation(visibility: public)
-#endif
     @available(iOSApplicationExtension, unavailable)
     public init(
         viewport: Binding<Viewport>
@@ -182,9 +173,7 @@ extension Map {
     ///
     /// - Parameters:
     ///     - initialViewport: Initial camera viewport.
-#if swift(>=5.8)
     @_documentation(visibility: public)
-#endif
     @available(iOSApplicationExtension, unavailable)
     public init(
         initialViewport: Viewport = .styleDefault
@@ -206,9 +195,7 @@ extension Map {
     ///     - viewport: The camera viewport to display.
     ///     - urlOpener: A closure that handles attribution url opening.
     ///     - content: A map content building closure.
-#if swift(>=5.8)
     @_documentation(visibility: public)
-#endif
     public init(
         viewport: Binding<Viewport>,
         urlOpener: @escaping MapURLOpener,
@@ -231,9 +218,7 @@ extension Map {
     ///     - initialViewport: The camera viewport to display.
     ///     - urlOpener: A closure that handles attribution url opening.
     ///     - content: A map content building closure.
-#if swift(>=5.8)
     @_documentation(visibility: public)
-#endif
     public init(
         initialViewport: Viewport = .styleDefault,
         urlOpener: @escaping MapURLOpener,
@@ -246,15 +231,11 @@ extension Map {
     }
 }
 
-#if swift(>=5.8)
-    @_documentation(visibility: public)
-#endif
+@_documentation(visibility: public)
 @available(iOS 13.0, *)
 public extension Map {
     /// Sets camera bounds.
-#if swift(>=5.8)
     @_documentation(visibility: public)
-#endif
     func cameraBounds(_ cameraBounds: CameraBoundsOptions) -> Self {
         copyAssigned(self, \.mapDependencies.cameraBounds, cameraBounds)
     }
@@ -263,60 +244,67 @@ public extension Map {
     ///
     /// - Parameters:
     ///     - mapStyle: A map style configuration.
-#if swift(>=5.8)
     @_documentation(visibility: public)
-#endif
     func mapStyle(_ mapStyle: MapStyle) -> Self {
         copyAssigned(self, \.mapDependencies.mapStyle, mapStyle)
     }
 
     /// Sets constraint mode to the map. If not set, `heightOnly` will be in use.
-#if swift(>=5.8)
     @_documentation(visibility: public)
-#endif
     func constrainMode(_ constrainMode: ConstrainMode) -> Self {
         copyAssigned(self, \.mapDependencies.constrainMode, constrainMode)
     }
 
     /// Sets viewport mode to the map.
-#if swift(>=5.8)
     @_documentation(visibility: public)
-#endif
     func viewportMode(_ viewportMode: ViewportMode) -> Self {
         copyAssigned(self, \.mapDependencies.viewportMode, viewportMode)
     }
 
     /// Sets ``NorthOrientation`` to the map. If not set, `upwards` will be in use.
-#if swift(>=5.8)
     @_documentation(visibility: public)
-#endif
     func northOrientation(_ northOrientation: NorthOrientation) -> Self {
         copyAssigned(self, \.mapDependencies.orientation, northOrientation)
     }
 
     /// Sets ``OrnamentOptions`` to the map.
-#if swift(>=5.8)
     @_documentation(visibility: public)
-#endif
     func ornamentOptions(_ options: OrnamentOptions) -> Self {
         copyAssigned(self, \.mapDependencies.ornamentOptions, options)
     }
 
     /// Sets ``MapViewDebugOptions`` to the map.
-#if swift(>=5.8)
     @_documentation(visibility: public)
-#endif
     func debugOptions(_ debugOptions: MapViewDebugOptions) -> Self {
         copyAssigned(self, \.mapDependencies.debugOptions, debugOptions)
+    }
+
+    /// A boolean value that determines whether the view is opaque. Default is true.
+    @_documentation(visibility: public)
+    func opaque(_ value: Bool) -> Self {
+        copyAssigned(self, \.mapDependencies.isOpaque, value)
+    }
+
+    /// The preferred frames per second used for map rendering.
+    /// The system can change the available range of frame rates because of factors in system policies and a person’s preferences.
+    /// Changing this setting maybe beneficial to get smoother experience on devices which support 120 FPS.
+    ///
+    /// - Note: `range` values  have effect only on iOS 15.0 and newer. Value`nil` in any of the parameters is interpreted as using system default value.
+    ///
+    /// - Parameters:
+    ///    - range: Allowed frame rate range. Negative and values less than 1 will be clamped to 1.
+    ///    - preferred: Preferred frame rate.  Negative and values less than 1 will be clamped to 1, while too large values will be clamped to Int.max.
+    @_documentation(visibility: public)
+    func frameRate(range: ClosedRange<Float>? = nil, preferred: Float? = nil) -> Self {
+        copyAssigned(
+            self, \.mapDependencies.frameRate, FrameRate(range: range, preferred: preferred))
     }
 
     /// A Boolean value that indicates whether the underlying `CAMetalLayer` of the `MapView`
     /// presents its content using a CoreAnimation transaction
     ///
     /// See ``MapView/presentsWithTransaction``.
-#if swift(>=5.8)
     @_documentation(visibility: public)
-#endif
     func presentsWithTransaction(_ value: Bool) -> Self {
         copyAssigned(self, \.mapDependencies.presentsWithTransaction, value)
     }
@@ -324,9 +312,7 @@ public extension Map {
     /// Indicates whether the ``Viewport`` should idle when map receives pan touch input.
     ///
     /// Defaults to `true`.
-#if swift(>=5.8)
     @_documentation(visibility: public)
-#endif
     func transitionsToIdleUponUserInteraction(_ value: Bool) -> Self {
         copyAssigned(self, \.mapDependencies.viewportOptions.transitionsToIdleUponUserInteraction, value)
     }
@@ -345,9 +331,7 @@ public extension Map {
     /// - Note: ``MapViewAnnotation`` will respect the padding area and will be placed outside of it.
     ///
     /// Defaults to `true`.
-#if swift(>=5.8)
     @_documentation(visibility: public)
-#endif
     func usesSafeAreaInsetsAsPadding(_ value: Bool) -> Self {
         copyAssigned(self, \.mapDependencies.viewportOptions.usesSafeAreaInsetsAsPadding, value)
     }
@@ -358,11 +342,32 @@ public extension Map {
     /// `UIViewController.additionalSafeAreaInsets`.
     ///
     /// - Note: This property cannot be animated.
-#if swift(>=5.8)
     @_documentation(visibility: public)
-#endif
     func additionalSafeAreaInsets(_ insets: SwiftUI.EdgeInsets) -> Self {
         copyAssigned(self, \.mapDependencies.additionalSafeArea, insets)
+    }
+
+    /// Collects CPU, GPU resource usage and timings of layers and rendering groups over a user-configurable sampling duration.
+    /// Use the collected information to find which layers or rendering groups might be performing poorly.
+    ///
+    /// Use ``PerformanceStatisticsOptions`` to configure the following collection behaviours:
+    ///     - Which types of sampling to perform, whether cumulative, per-frame, or both.
+    ///     - Duration of sampling in milliseconds. Value 0 forces the collection of performance statistics every frame.
+    ///
+    /// Utilize ``PerformanceStatisticsCallback`` to observe the collected performance statistics. The callback function is invoked
+    /// after the configured sampling duration has elapsed. The callback is invoked on the main thread. The collection process is
+    /// continuous; without user-input, it restarts after each callback invocation.
+    /// - Note: Specifying a negative sampling duration or omitting the callback function will result in no operation, which will be logged for visibility.
+    /// - Note: The statistics collection can be canceled by setting `nil` to the options parameter.
+    /// The callback function will be called every time the configured sampling duration ``PerformanceStatisticsOptions/sasamplingDurationMillis has elapsed.
+    ///
+    /// - Parameters:
+    ///   - options The statistics collection options to collect.
+    ///   - callback The callback to be invoked when performance statistics are available.
+    /// - Returns:  An ``AnyCancelable`` object that can be used to cancel performance statistics collection.
+    @_documentation(visibility: public)
+    func collectPerformanceStatistics(_ options: PerformanceStatisticsOptions?, callback: @escaping (PerformanceStatistics) -> Void) -> Self {
+        copyAssigned(self, \.mapDependencies.performanceStatisticsParameters, options.map { PerformanceStatisticsParameters(options: $0, callback: callback) })
     }
 
     /// Sets the amount of additional safe area insets for the given edges.
@@ -371,9 +376,7 @@ public extension Map {
     /// `UIViewController.additionalSafeAreaInsets`.
     ///
     /// - Note: This property cannot be animated.
-#if swift(>=5.8)
     @_documentation(visibility: public)
-#endif
     func additionalSafeAreaInsets(_ edges: Edge.Set = .all, _ length: CGFloat) -> Self {
         var copy = self
         copy.mapDependencies.additionalSafeArea.updateEdges(edges, length)

@@ -76,6 +76,7 @@
 		561FC8C82B5C6854005B6006 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FC8C52B5C6854005B6006 /* ErrorView.swift */; };
 		5637A8162AD5DD72000586DF /* WalkyCamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5637A8152AD5DD72000586DF /* WalkyCamApp.swift */; };
 		5637A81A2AD5DD73000586DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5637A8192AD5DD73000586DF /* Assets.xcassets */; };
+		565909642BF2A016002FD2B5 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 565909632BF2A016002FD2B5 /* PrivacyInfo.xcprivacy */; };
 		5668BB332BDFD5FB00A6E05D /* ProfitSelectionAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668BB1E2BDFD5FA00A6E05D /* ProfitSelectionAssembler.swift */; };
 		5668BB342BDFD5FB00A6E05D /* ProfitSelectionAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668BB1F2BDFD5FA00A6E05D /* ProfitSelectionAssemblerProtocol.swift */; };
 		5668BB352BDFD5FB00A6E05D /* ProfitSelectionRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668BB212BDFD5FA00A6E05D /* ProfitSelectionRoute.swift */; };
@@ -1027,6 +1028,7 @@
 		5637A8122AD5DD72000586DF /* WalkyCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkyCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5637A8152AD5DD72000586DF /* WalkyCamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkyCamApp.swift; sourceTree = "<group>"; };
 		5637A8192AD5DD73000586DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		565909632BF2A016002FD2B5 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		5668BB1E2BDFD5FA00A6E05D /* ProfitSelectionAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfitSelectionAssembler.swift; sourceTree = "<group>"; };
 		5668BB1F2BDFD5FA00A6E05D /* ProfitSelectionAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfitSelectionAssemblerProtocol.swift; sourceTree = "<group>"; };
 		5668BB212BDFD5FA00A6E05D /* ProfitSelectionRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfitSelectionRoute.swift; sourceTree = "<group>"; };
@@ -2465,6 +2467,7 @@
 		5637A8092AD5DD71000586DF = {
 			isa = PBXGroup;
 			children = (
+				565909632BF2A016002FD2B5 /* PrivacyInfo.xcprivacy */,
 				EA15B5BF2AD709B000C03407 /* WalkyCam-Info.plist */,
 				EA15B5A52AD7067400C03407 /* Infrastructure */,
 				EACFDEF82BA7EF1000B08990 /* Superbanner */,
@@ -9873,6 +9876,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA910F242AD8AA8500584B98 /* Mulish-ExtraLight.ttf in Resources */,
+				565909642BF2A016002FD2B5 /* PrivacyInfo.xcprivacy in Resources */,
 				EA910F1C2AD8AA6400584B98 /* Mulish-Black.ttf in Resources */,
 				5637A81A2AD5DD73000586DF /* Assets.xcassets in Resources */,
 				EA910F282AD8AA8500584B98 /* Mulish-Bold.ttf in Resources */,

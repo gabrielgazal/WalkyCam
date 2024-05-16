@@ -6,7 +6,6 @@
 #import <MapboxCoreMaps/MBMMapIdleCallback.h>
 #import <MapboxCoreMaps/MBMMapLoadedCallback.h>
 #import <MapboxCoreMaps/MBMMapLoadingErrorCallback.h>
-#import <MapboxCoreMaps/MBMPerfStatsCollectedCallback.h>
 #import <MapboxCoreMaps/MBMRenderFrameFinishedCallback.h>
 #import <MapboxCoreMaps/MBMRenderFrameStartedCallback.h>
 #import <MapboxCoreMaps/MBMResourceRequestCallback.h>
@@ -128,14 +127,6 @@ __attribute__((visibility ("default")))
  * @see RenderFrameFinishedCallback
  */
 - (nonnull id<MBXCancelable>)subscribeForRenderFrameFinished:(nonnull MBMRenderFrameFinishedCallback)renderFrameFinished __attribute((ns_returns_retained));
-/**
- * Subscribes to `PerfStatsCollected` event.
- *
- * @return cancellation object.
- *
- * @see PerfStatsCollectedCallback
- */
-- (nonnull id<MBXCancelable>)subscribeForPerfStatsCollected:(nonnull MBMPerfStatsCollectedCallback)perfStatsCollected __attribute((ns_returns_retained));
 /**
  * Subscribes to `ResourceRequest` event.
  *

@@ -26,6 +26,12 @@ variant_for_slice()
   "MapboxCommon.xcframework/ios-arm64_x86_64-simulator")
     echo "simulator"
     ;;
+  "MapboxCommon.xcframework/xros-arm64")
+    echo ""
+    ;;
+  "MapboxCommon.xcframework/xros-arm64_x86_64-simulator")
+    echo "simulator"
+    ;;
   esac
 }
 
@@ -39,6 +45,12 @@ archs_for_slice()
     echo "arm64 x86_64"
     ;;
   "MapboxCommon.xcframework/ios-arm64_x86_64-simulator")
+    echo "arm64 x86_64"
+    ;;
+  "MapboxCommon.xcframework/xros-arm64")
+    echo "arm64"
+    ;;
+  "MapboxCommon.xcframework/xros-arm64_x86_64-simulator")
     echo "arm64 x86_64"
     ;;
   esac

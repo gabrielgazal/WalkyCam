@@ -2276,6 +2276,48 @@
   },
   "ConstValues": [
     {
+      "filePath": "\/Users\/distiller\/project\/components\/location\/platform\/darwin\/Location.swift",
+      "kind": "IntegerLiteral",
+      "offset": 925,
+      "length": 4,
+      "value": "1000"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/components\/location\/platform\/darwin\/Location.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1776,
+      "length": 4,
+      "value": "1000"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/components\/settings\/platform\/darwin\/SettingsService.swift",
+      "kind": "StringLiteral",
+      "offset": 707,
+      "length": 18,
+      "value": "\"Unexpected error\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/components\/settings\/platform\/darwin\/SettingsService.swift",
+      "kind": "StringLiteral",
+      "offset": 1469,
+      "length": 24,
+      "value": "\"Internal casting error\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/components\/settings\/platform\/darwin\/SettingsService.swift",
+      "kind": "StringLiteral",
+      "offset": 1948,
+      "length": 24,
+      "value": "\"Internal casting error\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/components\/settings\/platform\/darwin\/SettingsService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2516,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/distiller\/project\/vendor\/mapbox-bindgen\/src\/support\/mapbox\/bindgen\/swift\/DataRef.swift",
       "kind": "StringLiteral",
       "offset": 63,

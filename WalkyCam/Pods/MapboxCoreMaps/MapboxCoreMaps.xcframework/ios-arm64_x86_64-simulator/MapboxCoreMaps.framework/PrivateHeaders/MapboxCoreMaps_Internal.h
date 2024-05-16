@@ -7,6 +7,7 @@
 #import <MapboxCoreMaps/Observable_Internal.h>
 #import <MapboxCoreMaps/OfflineManager_Internal.h>
 #import <MapboxCoreMaps/OfflineRegionManager_Internal.h>
+#import <MapboxCoreMaps/PerformanceStatistics_Internal.h>
 #import <MapboxCoreMaps/Projection_Internal.h>
 #import <MapboxCoreMaps/MapsResourceOptions_Internal.h>
 #import <MapboxCoreMaps/Snapshotter_Internal.h>

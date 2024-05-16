@@ -9,12 +9,12 @@
 #import <MapboxCommon/MapboxFeatureTelemetry_Internal.h>
 #import <MapboxCommon/MapboxHttp_Internal.h>
 #import <MapboxCommon/MapboxHttpBackend_Internal.h>
+#import <MapboxCommon/MapboxMapboxOptions_Internal.h>
 #import <MapboxCommon/MapboxMeter_Internal.h>
 #import <MapboxCommon/MapboxLogging_Internal.h>
 #import <MapboxCommon/MapboxOfflineSwitch_Internal.h>
 #import <MapboxCommon/MapboxReachability_Internal.h>
 #import <MapboxCommon/MapboxSdkInfoRegistry_Internal.h>
-#import <MapboxCommon/MapboxSdkInformation_Internal.h>
 #import <MapboxCommon/MapboxSettingsService_Internal.h>
 #import <MapboxCommon/MapboxStream_Internal.h>
 #import <MapboxCommon/MapboxSystemInformation_Internal.h>

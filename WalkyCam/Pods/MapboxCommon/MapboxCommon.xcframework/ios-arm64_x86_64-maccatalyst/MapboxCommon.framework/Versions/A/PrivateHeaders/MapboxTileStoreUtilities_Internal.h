@@ -16,4 +16,5 @@
 #import "MBXTileRegionBooleanCallback_Internal.h"
 #import "MBXResourceLoadProgressCallback_Internal.h"
 #import "MBXResourceLoadResultCallback_Internal.h"
+#import "MBXTileRegionEstimateResultCallback_Internal.h"
 #import "MBXTileRegion_Internal.h"

@@ -11,7 +11,7 @@ protocol MapboxMapProtocol: AnyObject {
     var options: MapOptions { get }
     func setCamera(to cameraOptions: CameraOptions)
     func setCameraBounds(with options: CameraBoundsOptions) throws
-    func setNorthOrientation(northOrientation: NorthOrientation)
+    func setNorthOrientation(_ northOrientation: NorthOrientation)
     func setConstrainMode(_ constrainMode: ConstrainMode)
     func setViewportMode(_ viewportMode: ViewportMode)
     func dragCameraOptions(from: CGPoint, to: CGPoint) -> CameraOptions
@@ -21,6 +21,8 @@ protocol MapboxMapProtocol: AnyObject {
     func endGesture()
     @discardableResult
     func queryRenderedFeatures(with point: CGPoint, options: RenderedQueryOptions?, completion: @escaping (Result<[QueriedRenderedFeature], Error>) -> Void) -> Cancelable
+    func collectPerformanceStatistics(_ options: PerformanceStatisticsOptions, callback: @escaping (PerformanceStatistics) -> Void) -> AnyCancelable
+
     // View annotation management
     func setViewAnnotationPositionsUpdateCallback(_ callback: ViewAnnotationPositionsUpdateCallback?)
     func addViewAnnotation(withId id: String, options: ViewAnnotationOptions) throws
@@ -291,9 +293,13 @@ public final class MapboxMap: StyleManager {
         }
     }
 
-    /// Reduces memory use. Useful to call when the application gets paused or
+    /// Reduces memory use. This is called automatically when the application gets paused or
     /// sent to background.
-    internal func reduceMemoryUse() {
+    ///
+    /// Calling this might have lead to temporary increased CPU load, as in-memory caches of tiles, images, textures etc.
+    /// will be cleared. This will cause the map to fetch the required resources anew.
+    /// For example, the map tiles will be re-created for the currently displayed portion of the map.
+    public func reduceMemoryUse() {
         __map.reduceMemoryUse()
     }
 
@@ -305,9 +311,25 @@ public final class MapboxMap: StyleManager {
     /// If tile cache budget in megabytes is set, the engine will try to use ETC1 texture compression
     /// for raster layers, therefore, raster images with alpha channel will be rendered incorrectly.
     ///
+    /// If null is set, the tile cache budget size in tile units will be dynamically calculated based on
+    /// the current viewport size.
+    /// - Parameter size: The tile cache budget size to be used by the Map.
+    public func setTileCacheBudget(size: TileCacheBudgetSize?) {
+        __map.__setTileCacheBudgetFor(size?.coreTileCacheBudget)
+    }
+
+    /// The MapboxCoreMaps tile cache budget hint to be used by the map.
+    ///
+    /// The budget can be given in tile units or in megabytes. A Map will do the best effort to keep memory
+    /// allocations for a non essential resources within the budget.
+    ///
+    /// If tile cache budget in megabytes is set, the engine will try to use ETC1 texture compression
+    /// for raster layers, therefore, raster images with alpha channel will be rendered incorrectly.
+    ///
     /// If null is set, the tile cache budget in tile units will be dynamically calculated based on
     /// the current viewport size.
-    /// - Parameter tileCacheBudget: The tile cache budget hint to be used by the Map.
+    /// - Parameter tileCacheBudget: The MapboxCoreMaps tile cache budget hint to be used by the Map.
+    @available(*, deprecated, message: "Use .setTileCacheBudget(size: TileCacheBudgetSize?) instead.")
     public func setTileCacheBudget(_ tileCacheBudget: TileCacheBudget?) {
         __map.__setTileCacheBudgetFor(tileCacheBudget)
     }
@@ -405,22 +427,47 @@ public final class MapboxMap: StyleManager {
     /// Set the map north orientation
     ///
     /// - Parameter northOrientation: The map north orientation to set
-    func setNorthOrientation(northOrientation: NorthOrientation) {
+    public func setNorthOrientation(_ northOrientation: NorthOrientation) {
         __map.setNorthOrientationFor(northOrientation)
     }
 
     /// Set the map constrain mode
     ///
     /// - Parameter constrainMode: The map constraint mode to set
-    func setConstrainMode(_ constrainMode: ConstrainMode) {
+    public func setConstrainMode(_ constrainMode: ConstrainMode) {
         __map.setConstrainModeFor(constrainMode)
     }
 
     /// Set the map viewport mode
     ///
     /// - Parameter viewportMode: The map viewport mode to set
-    func setViewportMode(_ viewportMode: ViewportMode) {
+    public func setViewportMode(_ viewportMode: ViewportMode) {
         __map.setViewportModeFor(viewportMode)
+    }
+
+    /// Collects CPU and GPU resource usage, as well as timings of layers and rendering groups, over a user-configurable sampling duration.
+    /// Use the collected information to identify layers or rendering groups that may be performing poorly.
+    ///
+    /// Use ``PerformanceStatisticsOptions`` to configure the following collection behaviours:
+    ///     - Which types of sampling to perform, whether cumulative, per-frame, or both.
+    ///     - Duration of sampling in milliseconds. A value of 0 forces the collection of performance statistics every frame.
+    ///
+    /// The statistics collection can be canceled using the ``AnyCancelable`` object returned by this function, note that if the token goes out of the scope it's deinitialized and thus canceled. Canceling collection will prevent the
+    /// callback from being called. Collection can be restarted by calling ``MapboxMap/collectPerformanceStatistics(_:callback:)`` again to obtain a new ``AnyCancelable`` object.
+    ///
+    /// The callback function will be called every time the configured sampling duration ``PerformanceStatisticsOptions/samplingDurationMillis`` has elapsed.
+    ///
+    /// - Parameters:
+    ///   - options The statistics collection options to collect.
+    ///   - callback The callback to be invoked when performance statistics are available.
+    /// - Returns:  The ``AnyCancelable`` object that can be used to cancel performance statistics collection.
+    @_documentation(visibility: public)
+    @_spi(Experimental)
+    public func collectPerformanceStatistics(_ options: PerformanceStatisticsOptions, callback: @escaping (PerformanceStatistics) -> Void) -> AnyCancelable {
+        __map.startPerformanceStatisticsCollection(for: options, callback: callback)
+        return BlockCancelable { [weak self] in
+            self?.__map.stopPerformanceStatisticsCollection()
+        }.erased
     }
 
     /// Calculates a `CameraOptions` to fit a `CoordinateBounds`
@@ -429,7 +476,9 @@ public final class MapboxMap: StyleManager {
     ///
     /// - Parameters:
     ///   - coordinateBounds: The coordinate bounds that will be displayed within the viewport.
-    ///   - padding: The amount of padding to add to the given bounds when calculating the camera, in points. This is differnt from camera padding.
+    ///   - padding: The amount of padding in screen points to add to the given `coordinates`.
+    ///              This padding is not applied to the map but to the coordinates provided.
+    ///              If you want to apply padding to the map use `camera` parameter on ``camera(for:camera:coordinatesPadding:maxZoom:offset:)``
     ///   - bearing: The new bearing to be used by the camera, in degrees (0°, 360°) clockwise from true north.
     ///   - pitch: The new pitch to be used by the camera, in degrees (0°, 85°) with 0° being a top-down view.
     ///   - maxZoom: The maximum zoom level to allow when the camera would transition to the specified bounds.
@@ -457,10 +506,13 @@ public final class MapboxMap: StyleManager {
     ///
     /// - Parameters:
     ///   - coordinates: Array of coordinates that should fit within the new viewport.
-    ///   - padding: The amount of padding to add to the given bounds when calculating the camera, in points. This is differnt from camera padding.
+    ///   - padding: The amount of padding in screen points to add to the given `coordinates`.
+    ///              This padding is not applied to the map but to the coordinates provided.
+    ///              If you want to apply padding to the map use `camera` parameter on ``camera(for:camera:coordinatesPadding:maxZoom:offset:)``
     ///   - bearing: The new bearing to be used by the camera, in degrees (0°, 360°) clockwise from true north.
     ///   - pitch: The new pitch to be used by the camera, in degrees (0°, 85°) with 0° being a top-down view.
     /// - Returns: A `CameraOptions` that fits the provided constraints
+    @available(*, deprecated, message: "Use ``camera(for:camera:coordinatesPadding:maxZoom:offset:)`` instead.")
     public func camera(for coordinates: [CLLocationCoordinate2D],
                        padding: UIEdgeInsets?,
                        bearing: Double?,
@@ -542,7 +594,7 @@ public final class MapboxMap: StyleManager {
     /// This API isn't supported by Globe projection.
     ///
     /// - Parameters:
-    ///   - geometry: The geoemtry that will be displayed within the viewport.
+    ///   - geometry: The geometry that will be displayed within the viewport.
     ///   - padding: The new padding to be used by the camera.
     ///   - bearing: The new bearing to be used by the camera.
     ///   - pitch: The new pitch to be used by the camera.
@@ -757,7 +809,7 @@ public final class MapboxMap: StyleManager {
     // MARK: - Drag API
 
     /// Calculates target point where camera should move after drag. The method
-    /// should be called after `dragStart` and before `dragEnd`.
+    /// should be called after `beginGesture` and before `endGesture`.
     ///
     /// - Parameters:
     ///   - fromPoint: The point from which the map is dragged.
@@ -786,10 +838,18 @@ public final class MapboxMap: StyleManager {
 
     // MARK: - Gesture and Animation Flags
 
+    /// Returns `true` if an animation is currently in progress.
+    public var isAnimationInProgress: Bool { __map.isUserAnimationInProgress() }
+
     private var animationCount = 0
 
     /// If implementing a custom animation mechanism, call this method when the animation begins.
-    /// Must always be paired with a corresponding call to `endAnimation()`
+    ///
+    /// Tells the map rendering engine that the animation is currently performed by the
+    /// user (e.g. with a `setCamera` calls series). It adjusts the engine for the animation use case.
+    /// In particular, it brings more stability to symbol placement and rendering.
+    ///
+    /// - Note: Must always be paired with a corresponding call to `endAnimation()`.
     public func beginAnimation() {
         animationCount += 1
         if animationCount == 1 {
@@ -798,7 +858,8 @@ public final class MapboxMap: StyleManager {
     }
 
     /// If implementing a custom animation mechanism, call this method when the animation ends.
-    /// Must always be paired with a corresponding call to `beginAnimation()`
+    ///
+    /// - Note: Must always be paired with a corresponding call to `beginAnimation()`.
     public func endAnimation() {
         assert(animationCount > 0)
         animationCount -= 1
@@ -807,26 +868,53 @@ public final class MapboxMap: StyleManager {
         }
     }
 
-    private var gestureCount = 0
-
-    /// If implementing a custom gesture, call this method when the gesture begins.
-    /// Must always be paired with a corresponding call to `endGesture()`
-    public func beginGesture() {
-        gestureCount += 1
-        if gestureCount == 1 {
-            __map.setGestureInProgressForInProgress(true)
-            __map.setCenterAltitudeModeFor(.sea)
+    /// Get/set the map centerAltitudeMode that defines how the map center point should react to terrain elevation changes.
+    /// See ``MapCenterAltitudeMode`` for options.
+    public var centerAltitudeMode: MapCenterAltitudeMode {
+        get { __map.getCenterAltitudeMode() }
+        set {
+            __map.setCenterAltitudeModeFor(newValue)
+            gestureState.intrinsicMode = newValue
         }
     }
 
+    private struct GestureState {
+        var count: Int
+        var intrinsicMode: MapCenterAltitudeMode
+    }
+
+    private lazy var gestureState = GestureState(count: 0, intrinsicMode: centerAltitudeMode)
+
+    /// Returns `true` if a gesture is currently in progress.
+    public var isGestureInProgress: Bool { __map.isGestureInProgress() }
+
+    /// If implementing a custom gesture, call this method when the gesture begins.
+    ///
+    /// Tells the map rendering engine that there is currently a gesture in progress. This
+    /// affects how the map renders labels, as it will use different texture filters if a gesture
+    /// is ongoing.
+    ///
+    /// - Note: Must always be paired with a corresponding call to `endGesture()`
+    public func beginGesture() {
+        gestureState.count += 1
+        if gestureState.count == 1 { __map.setGestureInProgressForInProgress(true) }
+
+        /// We should set the center altitude mode to ``MapCenterAltitudeMode.sea`` during gestures to avoid bumpiness when the terrain is enabled.
+        /// It's not necessary to update ``MapCenterAltitudeMode`` if the user explicitly changed altitude to ``MapCenterAltitudeMode.sea`` before the gesture starts.
+        if centerAltitudeMode != .sea { __map.setCenterAltitudeModeFor(.sea) }
+    }
+
     /// If implementing a custom gesture, call this method when the gesture ends.
-    /// Must always be paired with a corresponding call to `beginGesture()`
+    ///
+    /// - Note: Must always be paired with a corresponding call to `beginGesture()`.
     public func endGesture() {
-        assert(gestureCount > 0)
-        gestureCount -= 1
-        if gestureCount == 0 {
+        assert(gestureState.count > 0)
+        gestureState.count -= 1
+        if gestureState.count == 0 {
             __map.setGestureInProgressForInProgress(false)
-            __map.setCenterAltitudeModeFor(.terrain)
+
+            /// After the gesture end we must ensure to set the ``centerAltitudeMode`` expected be the user.
+            __map.setCenterAltitudeModeFor(gestureState.intrinsicMode)
         }
     }
 }
@@ -1061,9 +1149,7 @@ extension MapboxMap {
 
     /// Returns a ``Signal`` that allows to subscribe to the event with specified string name.
     /// This method is reserved for the future use.
-#if swift(>=5.8)
     @_documentation(visibility: public)
-#endif
     @_spi(Experimental)
     public subscript(eventName: String) -> Signal<GenericEvent> {
         events[eventName]
@@ -1129,7 +1215,7 @@ extension MapboxMap {
 // MARK: - Attribution
 
 extension MapboxMap: AttributionDataSource {
-    internal func loadAttributions(completion: @escaping ([Attribution]) -> Void) {
+    func loadAttributions(completion: @escaping ([Attribution]) -> Void) {
         Attribution.parse(__map.getAttributions(), completion: completion)
     }
 }
@@ -1274,9 +1360,7 @@ extension MapboxMap {
     ///
     /// - Parameters:
     ///   - options: Options for the tile cover method.
-#if swift(>=5.8)
     @_documentation(visibility: public)
-#endif
     @_spi(Experimental)
     public func tileCover(for options: TileCoverOptions) -> [CanonicalTileID] {
         __map.__tileCover(

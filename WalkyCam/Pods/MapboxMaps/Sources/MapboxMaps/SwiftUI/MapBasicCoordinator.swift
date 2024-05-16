@@ -14,6 +14,7 @@ final class MapBasicCoordinator {
     // Update params
     private var cameraChangeHandlers = [(CameraChanged) -> Void]()
     private var cameraBoundsOptions = CameraBoundsOptions()
+    private let performanceStatisticsState: PerformanceStatisticsState
 
     // Runtime variables
     private var currentViewport: Viewport?
@@ -31,6 +32,7 @@ final class MapBasicCoordinator {
     ) {
         self.mapView = mapView
         self.mainQueue = mainQueue
+        self.performanceStatisticsState = PerformanceStatisticsState(mapboxMap: mapView.mapboxMap)
 
         mapView.mapboxMap.onCameraChanged
             .blockUpdates(while: onCameraUpdateInProgress.signal)
@@ -89,6 +91,8 @@ final class MapBasicCoordinator {
         assign(&mapView, \.gestureManager.options, value: deps.gestureOptions)
         assign(&mapView, \.ornaments.options, value: deps.ornamentOptions)
         assign(&mapView, \.debugOptions, value: deps.debugOptions)
+        assign(&mapView, \.isOpaque, value: deps.isOpaque)
+        assign(&mapView, \.frameRate, value: deps.frameRate)
         assign(&mapView, \.presentsWithTransaction, value: deps.presentsWithTransaction)
         assign(&mapView, \.viewportManager.options, value: deps.viewportOptions)
 
@@ -122,6 +126,8 @@ final class MapBasicCoordinator {
                 .observe(onMapLongPress)
                 .store(in: &shortLivedSubscriptions)
         }
+
+        performanceStatisticsState.update(with: deps.performanceStatisticsParameters)
     }
 
     private func groupCameraUpdates(_ map: MapboxMapProtocol, _ updates: () -> Void) {
@@ -183,6 +189,30 @@ private final class IdleViewportObserver: ViewportStatusObserver {
             onIdle?()
         case (_, _, _):
             break
+        }
+    }
+}
+
+@available(iOS 13.0, *)
+extension MapBasicCoordinator {
+    final class PerformanceStatisticsState {
+        private var token: AnyCancelable?
+        private var parameters: Map.PerformanceStatisticsParameters?
+        private let mapboxMap: MapboxMapProtocol
+
+        init(mapboxMap: MapboxMapProtocol) {
+            self.mapboxMap = mapboxMap
+        }
+
+        func update(with newParameters: Map.PerformanceStatisticsParameters?) {
+            let oldParameters = parameters
+            parameters = newParameters
+            guard let parameters else { return token = nil }
+
+            if oldParameters?.options != parameters.options {
+                token?.cancel()
+                token = mapboxMap.collectPerformanceStatistics(parameters.options) { [weak self] statistics in self?.parameters?.callback(statistics) }
+            }
         }
     }
 }
