@@ -189,7 +189,7 @@ public struct TextInputView: View {
     private func fetchTextFieldForegroundColor() -> Color {
         switch status {
         case .disabled:
-            return Color.grisOscuro
+            return Color.gris
         default:
             return Color.negro
         }
