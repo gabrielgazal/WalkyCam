@@ -153,9 +153,9 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
                 TextInputView(
                     text: $viewModel.locationText,
                     accessory: Image(systemName: "magnifyingglass"),
+                    placeholder: "Buscar WalkCamer",
                     leftIcon: Asset.Icons.location.swiftUIImage,
                     rightIcon: Asset.Icons.filter.swiftUIImage,
-                    placeholder: "Buscar WalkCamer",
                     backgroundColor: .blanco,
                     actions: .init(
                         onCommitAction: {

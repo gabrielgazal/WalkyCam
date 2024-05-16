@@ -77,6 +77,7 @@
 		5637A8162AD5DD72000586DF /* WalkyCamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5637A8152AD5DD72000586DF /* WalkyCamApp.swift */; };
 		5637A81A2AD5DD73000586DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5637A8192AD5DD73000586DF /* Assets.xcassets */; };
 		565909642BF2A016002FD2B5 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 565909632BF2A016002FD2B5 /* PrivacyInfo.xcprivacy */; };
+		565909672BF67742002FD2B5 /* TextMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565909662BF67742002FD2B5 /* TextMask.swift */; };
 		5668BB332BDFD5FB00A6E05D /* ProfitSelectionAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668BB1E2BDFD5FA00A6E05D /* ProfitSelectionAssembler.swift */; };
 		5668BB342BDFD5FB00A6E05D /* ProfitSelectionAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668BB1F2BDFD5FA00A6E05D /* ProfitSelectionAssemblerProtocol.swift */; };
 		5668BB352BDFD5FB00A6E05D /* ProfitSelectionRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668BB212BDFD5FA00A6E05D /* ProfitSelectionRoute.swift */; };
@@ -1029,6 +1030,7 @@
 		5637A8152AD5DD72000586DF /* WalkyCamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkyCamApp.swift; sourceTree = "<group>"; };
 		5637A8192AD5DD73000586DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		565909632BF2A016002FD2B5 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		565909662BF67742002FD2B5 /* TextMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMask.swift; sourceTree = "<group>"; };
 		5668BB1E2BDFD5FA00A6E05D /* ProfitSelectionAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfitSelectionAssembler.swift; sourceTree = "<group>"; };
 		5668BB1F2BDFD5FA00A6E05D /* ProfitSelectionAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfitSelectionAssemblerProtocol.swift; sourceTree = "<group>"; };
 		5668BB212BDFD5FA00A6E05D /* ProfitSelectionRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfitSelectionRoute.swift; sourceTree = "<group>"; };
@@ -2497,6 +2499,14 @@
 				EA5E1D672AD70BC800738A8F /* ProjectColors.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		565909652BF67734002FD2B5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				565909662BF67742002FD2B5 /* TextMask.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		5668BB172BDFD49B00A6E05D /* ProfitSelection */ = {
@@ -5570,6 +5580,7 @@
 		EA5E1D652AD70B8100738A8F /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				565909652BF67734002FD2B5 /* Utilities */,
 				EA282E5E2AE9A0FA00B90920 /* Mock */,
 				EA910F9A2ADC436300584B98 /* Modifier */,
 				EA5E1D942AD725D000738A8F /* Color */,
@@ -10305,6 +10316,7 @@
 				EA06554E2BB5DA5D006148E7 /* RadarMenuInteractor.swift in Sources */,
 				EAE401FB2BBAFB0900B1311E /* RobotMenuView.swift in Sources */,
 				EA91102B2ADDB05300584B98 /* ImageLoader.swift in Sources */,
+				565909672BF67742002FD2B5 /* TextMask.swift in Sources */,
 				EA57A7A92B6C1558006247DD /* CammerDetailsRoute.swift in Sources */,
 				EAF47BED2B83099F003F8B86 /* MapTabAssemblerProtocol.swift in Sources */,
 				EA9110312ADDB95C00584B98 /* ImageCache.swift in Sources */,

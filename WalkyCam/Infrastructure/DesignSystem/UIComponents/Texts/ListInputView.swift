@@ -55,11 +55,12 @@ public struct ListInputView: View {
         VStack(spacing: -Tokens.Size.Spacing.small) {
             TextInputView(
                 text: $selection,
+                status: .constant(.default),
                 accessory: accessory,
-                leftIcon: leftIcon,
-                rightIcon: rightIcon,
                 topDescriptionText: topDescriptionText,
                 placeholder: placeholder,
+                leftIcon: leftIcon,
+                rightIcon: rightIcon,
                 keyboardType: keyboardType,
                 backgroundColor: backgroundColor,
                 actions: actions

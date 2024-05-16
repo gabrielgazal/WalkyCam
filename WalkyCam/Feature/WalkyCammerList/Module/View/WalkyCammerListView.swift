@@ -25,9 +25,9 @@ struct WalkyCammerListView<ViewModel:WalkyCammerListViewModelProtocol, Router: W
             TextInputView(
                 text: $searchText,
                 accessory: Image(systemName: "magnifyingglass"),
+                placeholder: "Buscar WalkCamer",
                 leftIcon: Asset.Icons.location.swiftUIImage,
                 rightIcon: Asset.Icons.filter.swiftUIImage,
-                placeholder: "Buscar WalkCamer",
                 backgroundColor: .blanco,
                 actions: .init()
             )
