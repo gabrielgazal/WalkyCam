@@ -475,7 +475,7 @@ internal enum Asset {
   }
   internal static let launchScreen = ImageAsset(name: "LaunchScreen")
   internal enum Menu {
-    internal static let usd = ImageAsset(name: "Usd")
+    internal static let usdBlack = ImageAsset(name: "UsdBlack")
     internal static let bot = ImageAsset(name: "bot")
     internal static let galery = ImageAsset(name: "galery")
     internal static let help = ImageAsset(name: "help")
