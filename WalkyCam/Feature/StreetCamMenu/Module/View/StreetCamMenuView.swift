@@ -34,16 +34,14 @@ struct StreetCamMenuView<ViewModel: StreetCamMenuViewModelProtocol, Router: Stre
                              description: "Localiza tu WalkCamer más cercano.",
                              buttonTitle: "Buscar",
                              icon: Asset.Icons.link.name,
-                             action: {
-                    router.routeToSearchCammer()
-                })
+                             action: handleCreateStreetcam)
+                .loading(viewModel.createStreetcamAsyncData.isLoading)
                 verticalCard(title: "RESERVAR",
                              description: "Programa tu WalkCamer con anterioridad.",
                              buttonTitle: "Reservar",
                              icon: Asset.Icons.calendar.name,
-                             action: {
-                    router.routeToBookCammer()
-                })
+                             action: handleScheduleStreetcam)
+                .loading(viewModel.scheduleStreetcamAsyncData.isLoading)
             }
             horizontalCard(action: {})
         }
@@ -120,12 +118,44 @@ struct StreetCamMenuView<ViewModel: StreetCamMenuViewModelProtocol, Router: Stre
                     .cornerRadius(48)
                )
     }
+    
+    
+    private func handleCreateStreetcam() {
+        Task {
+            await viewModel.createStreetcam(
+                onSuccess: {
+                    router.routeToSearchCammer()
+                },
+                onFailure: {
+                    print("Failed")
+                }
+            )
+        }
+    }
+    
+    private func handleScheduleStreetcam() {
+        Task {
+            await viewModel.scheduleStreetcam(
+                onSuccess: {
+                    router.routeToBookCammer()
+                },
+                onFailure: {}
+            )
+        }
+    }
 }
 
 struct StreetCamMenuView_Previews: PreviewProvider {
     static var previews: some View {
     StreetCamMenuView(
-            viewModel: StreetCamMenuViewModel(),
+        viewModel: StreetCamMenuViewModel(
+            interactor: StreetCamMenuInteractor(
+                useCases: .init(
+                    startCreateStreetcam: .empty,
+                    startScheduleStreetcam: .empty
+                )
+            )
+        ),
             router: StreetCamMenuRouter(isPresented: .constant(false))
         )
     }

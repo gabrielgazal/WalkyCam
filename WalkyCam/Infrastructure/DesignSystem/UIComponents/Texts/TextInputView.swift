@@ -143,6 +143,7 @@ public struct TextInputView: View {
                 }
             }
         )
+        .foregroundColor(Color.negro)
     }
     
     // MARK: - Private Methods
@@ -229,7 +230,7 @@ struct TextField_Previews: PreviewProvider {
     static var previews: some View {
         VStack(spacing: 20) {
             TextInputView(
-                text: .constant("adasd"),
+                text: .constant(""),
                 status: .constant(.default),
                 accessory: Image("dropDownArrowIcon"),
                 topDescriptionText: "Texto Superior",

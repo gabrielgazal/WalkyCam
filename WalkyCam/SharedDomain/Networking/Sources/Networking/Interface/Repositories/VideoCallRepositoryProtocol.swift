@@ -9,11 +9,11 @@ import Foundation
 
 public protocol VideoCallRepositoryProtocol {
     
-    typealias CreateCallResult = Result<Void, RepositoryError>
-    typealias StartScheduleResult = Result<Void, RepositoryError>
-    typealias UpdateCallResult = Result<Void, RepositoryError>
+    typealias CreateCallResult = Result<VideoCallResponse, RepositoryError>
+    typealias StartScheduleResult = Result<VideoCallResponse, RepositoryError>
+    typealias UpdateCallResult = Result<VideoCallResponse, RepositoryError>
     typealias CancelCallResult = Result<Void, RepositoryError>
-    typealias ScheduleCallResult = Result<Void, RepositoryError>
+    typealias ScheduleCallResult = Result<VideoCallResponse, RepositoryError>
 
     func create(userId: String,
                 completion: @escaping (CreateCallResult) -> Void)

@@ -12,6 +12,15 @@ final class VideoCallViewModel: VideoCallViewModelProtocol {
     init(interactor: VideoCallInteractorProtocol = VideoCallInteractor()) {
         self.interactor = interactor
     }
+    
+    // MARK: - Public API
+    
+    func assembleVideoCallLink() -> String {
+        guard let userId = try? UserSession().user().id else {
+            fatalError("Unable to locate user id")
+        }
+        return "https://meet.walkycam.com/videocall/\(videoCallLink)/\(userId)"
+    }
 
     // MARK: - Private Methods
 

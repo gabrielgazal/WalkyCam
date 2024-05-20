@@ -41,7 +41,7 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
                              action: {})
             }
             horizontalCard(action: {
-                router.routeToMeetRoom(viewModel.videoCallLink)
+                router.routeToMeetRoom(viewModel.assembleVideoCallLink())
             })
         }
                .padding(Tokens.Size.Spacing.regular)

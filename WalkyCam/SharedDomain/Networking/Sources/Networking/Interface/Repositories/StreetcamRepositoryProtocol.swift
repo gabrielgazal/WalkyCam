@@ -9,12 +9,12 @@ import Foundation
 
 public protocol StreetcamRepositoryProtocol {
     
-    typealias StartCreateStreetcamResult = Result<Void, RepositoryError>
-    typealias CreateStreetcamResult = Result<Void, RepositoryError>
-    typealias StartScheduleResult = Result<Void, RepositoryError>
-    typealias UpdateStreetcamResult = Result<Void, RepositoryError>
+    typealias StartCreateStreetcamResult = Result<VideoCallResponse, RepositoryError>
+    typealias CreateStreetcamResult = Result<VideoCallResponse, RepositoryError>
+    typealias StartScheduleResult = Result<VideoCallResponse, RepositoryError>
+    typealias UpdateStreetcamResult = Result<VideoCallResponse, RepositoryError>
     typealias CancelStreetcamResult = Result<Void, RepositoryError>
-    typealias ScheduleStreetcamResult = Result<Void, RepositoryError>
+    typealias ScheduleStreetcamResult = Result<VideoCallResponse, RepositoryError>
     
     func startCreate(userId: String,
                      completion: @escaping (StartCreateStreetcamResult) -> Void)

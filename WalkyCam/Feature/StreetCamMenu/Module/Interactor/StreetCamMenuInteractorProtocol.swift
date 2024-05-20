@@ -1,3 +1,4 @@
 protocol StreetCamMenuInteractorProtocol {
-    func someFunction()
+    func startCreationStreetcam() async throws -> VideoCallOutput
+    func startScheduleStreetcam() async throws -> VideoCallOutput
 }

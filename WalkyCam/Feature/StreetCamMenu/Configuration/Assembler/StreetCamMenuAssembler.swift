@@ -1,4 +1,5 @@
 import SwiftUI
+import Networking
 
 final class StreetCamMenuAssembler: StreetCamMenuAssemblerProtocol {
     func resolveView(
@@ -7,8 +8,14 @@ final class StreetCamMenuAssembler: StreetCamMenuAssemblerProtocol {
 
         let router = StreetCamMenuRouter(isPresented: route.isPresented)
 
+        let repository = route.retailRepository.resolve(StreetcamRepositoryProtocol.self)
+
+        
         let interactor = StreetCamMenuInteractor(
-            useCases: .init()
+            useCases: .init(
+                startCreateStreetcam: .create(repository: repository),
+                startScheduleStreetcam: .schedule(repository: repository)
+            )
         )
         let viewModel = StreetCamMenuViewModel(interactor: interactor)
         let view = StreetCamMenuView(viewModel: viewModel, router: router)

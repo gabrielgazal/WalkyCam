@@ -6,8 +6,8 @@ final class VideoCallRouter: Router, VideoCallRouterProtocol {
 
     func routeToMeetRoom(_ link: String) {
         navigateTo(
-            VideoCallRoomRoute(isPresented: isPresentingSheet,
-                               meetLink: link)
+            WebRoute(isPreseted: isNavigating,
+                     webViewURL: link)
         )
     }
 }

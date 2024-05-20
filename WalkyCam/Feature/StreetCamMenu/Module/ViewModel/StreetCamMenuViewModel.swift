@@ -6,23 +6,38 @@ final class StreetCamMenuViewModel: StreetCamMenuViewModelProtocol {
 
     private let interactor: StreetCamMenuInteractorProtocol
 
+    @Published var createStreetcamAsyncData: AsyncData<VideoCallOutput, ErrorProtocol> = .idle
+    @Published var scheduleStreetcamAsyncData: AsyncData<VideoCallOutput, ErrorProtocol> = .idle
+    
     // MARK: - Initialization
 
-    init(interactor: StreetCamMenuInteractorProtocol = StreetCamMenuInteractor()) {
+    init(interactor: StreetCamMenuInteractorProtocol) {
         self.interactor = interactor
     }
 
     // MARK: - Public API
 
-    #warning("Example function. Rename or remove it")
-    func someAction() {
-
+    @MainActor func createStreetcam(onSuccess: (() -> Void)?, onFailure: (() -> Void)?) async {
+        createStreetcamAsyncData = .loading
+        do {
+            let output = try await interactor.startCreationStreetcam()
+            createStreetcamAsyncData = .loaded(output)
+            onSuccess?()
+        } catch {
+            createStreetcamAsyncData = .failed(GenericError())
+            onFailure?()
+        }
     }
-
-    // MARK: - Private Methods
-
-    #warning("Example function. Rename or remove it")
-    private func somePrivateMethod() {
-
+    
+    @MainActor func scheduleStreetcam(onSuccess: (() -> Void)?, onFailure: (() -> Void)?) async {
+        scheduleStreetcamAsyncData = .loading
+        do {
+            let output = try await interactor.startScheduleStreetcam()
+            scheduleStreetcamAsyncData = .loaded(output)
+            onSuccess?()
+        } catch {
+            scheduleStreetcamAsyncData = .failed(GenericError())
+            onFailure?()
+        }
     }
 }

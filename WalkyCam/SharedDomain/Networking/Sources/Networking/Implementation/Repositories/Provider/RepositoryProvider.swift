@@ -60,12 +60,16 @@ public final class RepositoryProvider: RepositoryRegistering, RepositoryResolvin
         let plansRepositoryFactory = { PlansRepository(service: PlansService()) }
         let paymentRepositoryFactory = { PaymentRepository(service: PaymentService()) }
         let subscriptionRepositoryFactory = { SubscriptionRepository(service: SubscriptionService()) }
+        let streetcamRepositoryFactory = { StreetcamRepository(service: StreetcamService()) }
+        let videoCallRepositoryFactory = { VideoCallRepository(service: VideoCallService()) }
 
         try? register(authRepositoryFactory, forType: AuthRepositoryProtocol.self)
         try? register(configurationRepositoryFactory, forType: ConfigurationRepositoryProtocol.self)
         try? register(plansRepositoryFactory, forType: PlansRepositoryProtocol.self)
         try? register(paymentRepositoryFactory, forType: PaymentRepositoryProtocol.self)
         try? register(subscriptionRepositoryFactory, forType: SubscriptionRepositoryProtocol.self)
+        try? register(streetcamRepositoryFactory, forType: StreetcamRepositoryProtocol.self)
+        try? register(videoCallRepositoryFactory, forType: VideoCallRepositoryProtocol.self)
     }
 }
 

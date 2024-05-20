@@ -78,6 +78,8 @@
 		5637A81A2AD5DD73000586DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5637A8192AD5DD73000586DF /* Assets.xcassets */; };
 		565909642BF2A016002FD2B5 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 565909632BF2A016002FD2B5 /* PrivacyInfo.xcprivacy */; };
 		565909672BF67742002FD2B5 /* TextMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565909662BF67742002FD2B5 /* TextMask.swift */; };
+		5663D6692BFBB27B00C6655E /* StartStreetcamUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D6682BFBB27A00C6655E /* StartStreetcamUseCase.swift */; };
+		5663D66B2BFBB2C800C6655E /* VideoCallOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D66A2BFBB2C800C6655E /* VideoCallOutput.swift */; };
 		5668BB332BDFD5FB00A6E05D /* ProfitSelectionAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668BB1E2BDFD5FA00A6E05D /* ProfitSelectionAssembler.swift */; };
 		5668BB342BDFD5FB00A6E05D /* ProfitSelectionAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668BB1F2BDFD5FA00A6E05D /* ProfitSelectionAssemblerProtocol.swift */; };
 		5668BB352BDFD5FB00A6E05D /* ProfitSelectionRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668BB212BDFD5FA00A6E05D /* ProfitSelectionRoute.swift */; };
@@ -1032,6 +1034,8 @@
 		5637A8192AD5DD73000586DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		565909632BF2A016002FD2B5 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		565909662BF67742002FD2B5 /* TextMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMask.swift; sourceTree = "<group>"; };
+		5663D6682BFBB27A00C6655E /* StartStreetcamUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartStreetcamUseCase.swift; sourceTree = "<group>"; };
+		5663D66A2BFBB2C800C6655E /* VideoCallOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCallOutput.swift; sourceTree = "<group>"; };
 		5668BB1E2BDFD5FA00A6E05D /* ProfitSelectionAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfitSelectionAssembler.swift; sourceTree = "<group>"; };
 		5668BB1F2BDFD5FA00A6E05D /* ProfitSelectionAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfitSelectionAssemblerProtocol.swift; sourceTree = "<group>"; };
 		5668BB212BDFD5FA00A6E05D /* ProfitSelectionRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfitSelectionRoute.swift; sourceTree = "<group>"; };
@@ -2511,6 +2515,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		5663D6672BFBB25F00C6655E /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				5663D6682BFBB27A00C6655E /* StartStreetcamUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
 		5668BB172BDFD49B00A6E05D /* ProfitSelection */ = {
 			isa = PBXGroup;
 			children = (
@@ -2804,6 +2816,7 @@
 		56A552522B2F6E3D006B1B17 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				5663D6672BFBB25F00C6655E /* UseCase */,
 				56A552532B2F6E3D006B1B17 /* Model */,
 			);
 			path = Domain;
@@ -4494,6 +4507,7 @@
 				EA282ED92AEB56B800B90920 /* FunctionData.swift */,
 				EA57A7812B6BFD09006247DD /* CammerData.swift */,
 				5668BB3E2BE0233200A6E05D /* CamerRegistrationData.swift */,
+				5663D66A2BFBB2C800C6655E /* VideoCallOutput.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -10534,6 +10548,7 @@
 				561D83EC2BE91EE00045C540 /* LegalDocumentationViewModelProtocol.swift in Sources */,
 				EA7219972B05612900BE2D93 /* WalkyBotModel.swift in Sources */,
 				EAF47C1A2B830C80003F8B86 /* WalkyCammerListRouter.swift in Sources */,
+				5663D6692BFBB27B00C6655E /* StartStreetcamUseCase.swift in Sources */,
 				EAB63BC42B83D63A0017BDA4 /* ARHandsMenuAssembler.swift in Sources */,
 				EA5103092BA7A9C900A2DE2E /* FetchAvailablePlansUseCase.swift in Sources */,
 				56A552552B2F6E3D006B1B17 /* StreetCamMenuRoute.swift in Sources */,
@@ -10866,6 +10881,7 @@
 				EA5E1D932AD71ABB00738A8F /* Tokens.swift in Sources */,
 				EA4165422AE706C6008CE66A /* NotificationsViewModel.swift in Sources */,
 				EA910FC92ADC495700584B98 /* TabBarViewModel.swift in Sources */,
+				5663D66B2BFBB2C800C6655E /* VideoCallOutput.swift in Sources */,
 				EA8652402B902E4B00B86A54 /* FunctionMenuInteractor.swift in Sources */,
 				EA94A5362B7160EF00EC3037 /* ServiceDetailsModel.swift in Sources */,
 				56A5525B2B2F6E3D006B1B17 /* StreetCamMenuInteractorProtocol.swift in Sources */,
