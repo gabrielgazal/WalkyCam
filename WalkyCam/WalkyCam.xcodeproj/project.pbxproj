@@ -90,6 +90,7 @@
 		5668BB3C2BDFD5FB00A6E05D /* ProfitSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668BB2F2BDFD5FA00A6E05D /* ProfitSelectionViewModel.swift */; };
 		5668BB3D2BDFD5FB00A6E05D /* ProfitSelectionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668BB302BDFD5FA00A6E05D /* ProfitSelectionViewModelProtocol.swift */; };
 		5668BB3F2BE0233200A6E05D /* CamerRegistrationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668BB3E2BE0233200A6E05D /* CamerRegistrationData.swift */; };
+		569DA7E12BF6894400945F0C /* PasswordConfigurationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569DA7E02BF6894400945F0C /* PasswordConfigurationError.swift */; };
 		56A5522C2B2F6135006B1B17 /* WalkyCamerOnboardingRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552192B2F6134006B1B17 /* WalkyCamerOnboardingRoute.swift */; };
 		56A5522D2B2F6135006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5521B2B2F6134006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift */; };
 		56A5522E2B2F6135006B1B17 /* WalkyCamerOnboardingAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5521C2B2F6134006B1B17 /* WalkyCamerOnboardingAssembler.swift */; };
@@ -1043,6 +1044,7 @@
 		5668BB2F2BDFD5FA00A6E05D /* ProfitSelectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfitSelectionViewModel.swift; sourceTree = "<group>"; };
 		5668BB302BDFD5FA00A6E05D /* ProfitSelectionViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfitSelectionViewModelProtocol.swift; sourceTree = "<group>"; };
 		5668BB3E2BE0233200A6E05D /* CamerRegistrationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamerRegistrationData.swift; sourceTree = "<group>"; };
+		569DA7E02BF6894400945F0C /* PasswordConfigurationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordConfigurationError.swift; sourceTree = "<group>"; };
 		56A552192B2F6134006B1B17 /* WalkyCamerOnboardingRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingRoute.swift; sourceTree = "<group>"; };
 		56A5521B2B2F6134006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingAssemblerProtocol.swift; sourceTree = "<group>"; };
 		56A5521C2B2F6134006B1B17 /* WalkyCamerOnboardingAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingAssembler.swift; sourceTree = "<group>"; };
@@ -5565,6 +5567,7 @@
 			children = (
 				EA5A88002B68039400BBB7F9 /* LoginOutput.swift */,
 				EA5A88012B68039400BBB7F9 /* LoginInput.swift */,
+				569DA7E02BF6894400945F0C /* PasswordConfigurationError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -10724,6 +10727,7 @@
 				EA60833F2AFD58A900295069 /* CryptoTabAssemblerProtocol.swift in Sources */,
 				EA91102F2ADDB93D00584B98 /* EnvironmentValues+ImageCache.swift in Sources */,
 				EA57A7D32B6C2C31006247DD /* AddPeopleTransmissionInteractor.swift in Sources */,
+				569DA7E12BF6894400945F0C /* PasswordConfigurationError.swift in Sources */,
 				EA86537E2B90FA8800B86A54 /* AIMenuRouterProtocol.swift in Sources */,
 				56A6BE9D2BE2EFC7007EBF13 /* IdentityUploadAssemblerProtocol.swift in Sources */,
 				EA86526D2B90AC8300B86A54 /* IOTMenuRouter.swift in Sources */,

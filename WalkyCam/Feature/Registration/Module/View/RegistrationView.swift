@@ -27,21 +27,22 @@ struct RegistrationView<ViewModel: RegistrationViewModelProtocol, Router: Regist
                     .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .semibold))
                     .foregroundColor(Color.blanco)
                 Group {
-                    TextInputView(text: $viewModel.name,
-                                  topDescriptionText: "Nombre",
-                                  placeholder: "Nombre")
-                    TextInputView(text: $viewModel.lastName,
-                                  topDescriptionText: "Apellido",
-                                  placeholder: "Apellido")
-                    TextInputView(text: $viewModel.username,
-                                  topDescriptionText: "Usuario",
-                                  placeholder: "Nombre Usuario")
-                    SecureTextInputView(text: $viewModel.password,
-                                        placeholder: "Contraseña",
-                                        topDescriptionText: "Contraseña")
-                    TextInputView(text: $viewModel.email,
-                                  topDescriptionText: "Email",
-                                  placeholder: "nombre@email.com")
+//                    TextInputView(text: $viewModel.name,
+//                                  topDescriptionText: "Nombre",
+//                                  placeholder: "Nombre")
+//                    TextInputView(text: $viewModel.lastName,
+//                                  topDescriptionText: "Apellido",
+//                                  placeholder: "Apellido")
+//                    TextInputView(text: $viewModel.username,
+//                                  topDescriptionText: "Usuario",
+//                                  placeholder: "Nombre Usuario")
+//                    SecureTextInputView(text: $viewModel.password,
+//                                        placeholder: "Contraseña",
+//                                        topDescriptionText: "Contraseña")
+//                    TextInputView(text: $viewModel.email,
+//                                  topDescriptionText: "Email",
+//                                  placeholder: "nombre@email.com")
+                    Text("teste")
                 }
                 CheckBoxToggle(model: viewModel.acceptedTerms)
                     .onTapGesture {

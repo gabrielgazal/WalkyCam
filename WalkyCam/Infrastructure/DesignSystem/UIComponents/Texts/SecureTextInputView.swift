@@ -35,6 +35,7 @@ public struct SecureTextInputView: View {
     @FocusState var safeFieldFocus: Bool
     private var placeholder: String
     private var topDescriptionText: String?
+    private var bottomDescriptionText: String?
     private var actions: Actions
 
     // MARK: - Initialization
@@ -43,11 +44,13 @@ public struct SecureTextInputView: View {
         text: Binding<String>,
         placeholder: String,
         topDescriptionText: String? = nil,
+        bottomDescriptionText: String? = nil,
         actions: Actions = .init()
     ) {
         self._text = text
         self.placeholder = placeholder
         self.topDescriptionText = topDescriptionText
+        self.bottomDescriptionText = bottomDescriptionText
         self.actions = actions
     }
 
@@ -103,6 +106,7 @@ public struct SecureTextInputView: View {
                     .frame(height: 56)
                     .foregroundColor(Color.blancoGris)
             )
+            buildDescriptionText(bottomDescriptionText)
         }
     }
 

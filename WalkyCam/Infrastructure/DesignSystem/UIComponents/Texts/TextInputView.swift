@@ -88,7 +88,7 @@ public struct TextInputView: View {
             alignment: .leading,
             spacing: Tokens.Size.Spacing.small
         ) {
-            buildDescriptionText(topDescriptionText)
+            buildDescriptionText(topDescriptionText, fetchBottomTextColor())
             HStack(spacing: Tokens.Size.Spacing.small) {
                 configureIcon(leftIcon)
                 ZStack(alignment: .leading) {
@@ -149,7 +149,7 @@ public struct TextInputView: View {
     
     private func buildDescriptionText(
         _ text: String?,
-        _ textColor: Color = Color.negro
+        _ textColor: Color = Color.blanco
     ) -> AnyView? {
         guard let text = text, !text.isEmpty else { return nil }
         return AnyView(
@@ -218,7 +218,7 @@ public struct TextInputView: View {
         case .error:
             return Color.rojo
         default:
-            return Color.negro
+            return Color.blanco
         }
     }
 }
