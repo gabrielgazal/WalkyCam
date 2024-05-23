@@ -48,7 +48,6 @@ final class VideoCallService: VideoCallServiceProtocol {
         startTime: String,
         endTime: String,
         pixelationEnabled: Bool,
-        timeZone: String,
         completion: @escaping Moya.Completion
     ) {
         provider.request(
@@ -57,8 +56,7 @@ final class VideoCallService: VideoCallServiceProtocol {
                 date: date,
                 startTime: startTime,
                 endTime: endTime,
-                pixelationEnabled: pixelationEnabled,
-                timeZone: timeZone
+                pixelationEnabled: pixelationEnabled
             ),
             completion: completion
         )

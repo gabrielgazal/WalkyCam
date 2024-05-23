@@ -53,7 +53,6 @@ final class StreetcamService: StreetcamServiceProtocol {
         startTime: String,
         endTime: String,
         pixelationEnabled: Bool,
-        timeZone: String,
         completion: @escaping Moya.Completion
     ) {
         provider.request(
@@ -62,8 +61,7 @@ final class StreetcamService: StreetcamServiceProtocol {
                 date: date,
                 startTime: startTime,
                 endTime: endTime,
-                pixelationEnabled: pixelationEnabled,
-                timeZone: timeZone
+                pixelationEnabled: pixelationEnabled
             ),
             completion: completion
         )

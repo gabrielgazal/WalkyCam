@@ -15,8 +15,7 @@ enum VideoCallRouter {
                 date: String,
                 startTime: String,
                 endTime: String,
-                pixelationEnabled: Bool,
-                timeZone: String)
+                pixelationEnabled: Bool)
     case cancel(callId: String)
     case schedule(callId: String)
     
@@ -55,8 +54,8 @@ extension VideoCallRouter: TargetType {
             return create(userId: userId)
         case let .startSchedule(userId):
             return startSchedule(userId: userId)
-        case let .update(callId, date, startTime, endTime, pixelationEnabled, timeZone):
-            return update(callId: callId, date: date, startTime: startTime, endTime: endTime, pixelationEnabled: pixelationEnabled, timeZone: timeZone)
+        case let .update(callId, date, startTime, endTime, pixelationEnabled):
+            return update(callId: callId, date: date, startTime: startTime, endTime: endTime, pixelationEnabled: pixelationEnabled)
         case let .cancel(callId):
             return cancel(callId: callId)
         case let .schedule(callId):
@@ -66,7 +65,8 @@ extension VideoCallRouter: TargetType {
     
     private func create(userId: String) -> Task {
         let parameters = [
-            "id_host_user": userId
+            "id_host_user": userId,
+            "time_zone": TimeZone.current.identifier
         ] as [String: Any]
         
         return .requestParameters(parameters: parameters,
@@ -75,7 +75,8 @@ extension VideoCallRouter: TargetType {
     
     private func startSchedule(userId: String) -> Task {
         let parameters = [
-            "id_host_user": userId
+            "id_host_user": userId,
+            "time_zone": TimeZone.current.identifier
         ] as [String: Any]
         
         return .requestParameters(parameters: parameters,
@@ -87,8 +88,7 @@ extension VideoCallRouter: TargetType {
         date: String,
         startTime: String,
         endTime: String,
-        pixelationEnabled: Bool,
-        timeZone: String
+        pixelationEnabled: Bool
     ) -> Task {
         let parameters = [
             "id": callId,
@@ -96,7 +96,7 @@ extension VideoCallRouter: TargetType {
             "start_time": startTime,
             "end_time": endTime,
             "pixelation_face_enabled": pixelationEnabled,
-            "time_zone": timeZone
+            "time_zone": TimeZone.current.identifier
         ] as [String: Any]
         
         return .requestParameters(parameters: parameters,

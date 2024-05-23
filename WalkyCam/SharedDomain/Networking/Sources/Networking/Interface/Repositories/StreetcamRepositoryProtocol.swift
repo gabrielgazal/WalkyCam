@@ -29,7 +29,6 @@ public protocol StreetcamRepositoryProtocol {
                 startTime: String,
                 endTime: String,
                 pixelationEnabled: Bool,
-                timeZone: String,
                 completion: @escaping (UpdateStreetcamResult) -> Void)
     func cancel(streetcamId: String,
                 completion: @escaping (CancelStreetcamResult) -> Void)

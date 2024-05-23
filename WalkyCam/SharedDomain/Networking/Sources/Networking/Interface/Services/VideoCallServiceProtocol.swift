@@ -20,7 +20,6 @@ protocol VideoCallServiceProtocol {
                 startTime: String,
                 endTime: String,
                 pixelationEnabled: Bool,
-                timeZone: String,
                 completion: @escaping Completion)
     func cancel(callId: String,
                 completion: @escaping Completion)

@@ -24,7 +24,6 @@ public protocol VideoCallRepositoryProtocol {
                 startTime: String,
                 endTime: String,
                 pixelationEnabled: Bool,
-                timeZone: String,
                 completion: @escaping (UpdateCallResult) -> Void)
     func cancel(callId: String,
                 completion: @escaping (CancelCallResult) -> Void)

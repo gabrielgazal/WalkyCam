@@ -57,7 +57,6 @@ final class StreetcamRepository: StreetcamRepositoryProtocol {
         startTime: String,
         endTime: String,
         pixelationEnabled: Bool,
-        timeZone: String,
         completion: @escaping (UpdateStreetcamResult) -> Void
     ) {
         service.update(
@@ -65,8 +64,7 @@ final class StreetcamRepository: StreetcamRepositoryProtocol {
             date: date,
             startTime: startTime,
             endTime: endTime,
-            pixelationEnabled: pixelationEnabled,
-            timeZone: timeZone) { result in
+            pixelationEnabled: pixelationEnabled) { result in
                 completion(result.mapToRepositoryResult(with: self.requestHandler))
             }
     }

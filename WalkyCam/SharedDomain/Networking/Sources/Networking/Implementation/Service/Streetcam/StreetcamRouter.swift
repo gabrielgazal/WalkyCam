@@ -16,8 +16,7 @@ enum StreetcamRouter {
                 date: String,
                 startTime: String,
                 endTime: String,
-                pixelationEnabled: Bool,
-                timeZone: String)
+                pixelationEnabled: Bool)
     case cancel(streetcamId: String)
     case schedule(streetcamId: String)
     
@@ -60,8 +59,8 @@ extension StreetcamRouter: TargetType {
             return create(streetcamId: streetcamId)
         case let .startSchedule(userId):
             return startSchedule(userId: userId)
-        case let .update(streetcamId, date, startTime, endTime, pixelationEnabled, timeZone):
-            return update(streetcamId: streetcamId, date: date, startTime: startTime, endTime: endTime, pixelationEnabled: pixelationEnabled, timeZone: timeZone)
+        case let .update(streetcamId, date, startTime, endTime, pixelationEnabled):
+            return update(streetcamId: streetcamId, date: date, startTime: startTime, endTime: endTime, pixelationEnabled: pixelationEnabled)
         case let .cancel(streetcamId):
             return cancel(streetcamId: streetcamId)
         case let .schedule(streetcamId):
@@ -71,7 +70,8 @@ extension StreetcamRouter: TargetType {
     
     private func startCreate(userId: String) -> Task {
         let parameters = [
-            "id_host_user": userId
+            "id_host_user": userId,
+            "time_zone": TimeZone.current.identifier
         ] as [String: Any]
         
         return .requestParameters(parameters: parameters,
@@ -89,7 +89,8 @@ extension StreetcamRouter: TargetType {
     
     private func startSchedule(userId: String) -> Task {
         let parameters = [
-            "id_host_user": userId
+            "id_host_user": userId,
+            "time_zone": TimeZone.current.identifier
         ] as [String: Any]
         
         return .requestParameters(parameters: parameters,
@@ -101,8 +102,7 @@ extension StreetcamRouter: TargetType {
         date: String,
         startTime: String,
         endTime: String,
-        pixelationEnabled: Bool,
-        timeZone: String
+        pixelationEnabled: Bool
     ) -> Task {
         let parameters = [
             "id": streetcamId,
@@ -110,7 +110,7 @@ extension StreetcamRouter: TargetType {
             "start_time": startTime,
             "end_time": endTime,
             "pixelation_face_enabled": pixelationEnabled,
-            "time_zone": timeZone
+            "time_zone": TimeZone.current.identifier
         ] as [String: Any]
         
         return .requestParameters(parameters: parameters,

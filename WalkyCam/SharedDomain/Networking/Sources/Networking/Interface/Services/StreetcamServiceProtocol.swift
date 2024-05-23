@@ -16,7 +16,6 @@ protocol StreetcamServiceProtocol {
                 startTime: String,
                 endTime: String,
                 pixelationEnabled: Bool,
-                timeZone: String,
                 completion: @escaping Completion)
     func cancel(streetcamId: String,
                 completion: @escaping Completion)
