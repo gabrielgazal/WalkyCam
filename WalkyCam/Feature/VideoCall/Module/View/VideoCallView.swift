@@ -38,7 +38,9 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
                              description: "Programa con anterioridad",
                              buttonTitle: "Programar",
                              icon: Asset.Icons.calendar.name,
-                             action: {})
+                             action: {
+                    router.routeToBookCammer()
+                })
             }
             horizontalCard(action: {
                 router.routeToMeetRoom(viewModel.assembleVideoCallLink())
@@ -50,6 +52,9 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
                .navigation(router)
                .sheet(router)
                .environment(\.colorScheme, .dark)
+               .onAppear {
+                   UserDefaults.standard.set(FunctionType.videocall.rawValue, forKey: "currentService")
+               }
     }
 
     private func verticalCard(title: String,

@@ -144,6 +144,7 @@ public struct TextInputView: View {
             }
         )
         .foregroundColor(Color.negro)
+        .environment(\.colorScheme, .light)
     }
     
     // MARK: - Private Methods

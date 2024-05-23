@@ -10,4 +10,10 @@ final class VideoCallRouter: Router, VideoCallRouterProtocol {
                      webViewURL: link)
         )
     }
+    
+    func routeToBookCammer() {
+        navigateTo(
+            BookWalkycamerRoute(isPresented: isNavigating)
+        )
+    }
 }
