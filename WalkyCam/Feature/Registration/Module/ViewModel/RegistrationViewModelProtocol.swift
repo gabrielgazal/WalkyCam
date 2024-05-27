@@ -10,5 +10,6 @@ protocol RegistrationViewModelProtocol: ViewModelProtocol {
     var registerUserAsyncData: AsyncData<RegistrationOutput, ErrorProtocol> { get set }
     
     func isRegisterButtonDisabled() -> Bool
-    func registerUser(onSuccess: (() -> Void)?, onFailure: (() -> Void)?) async
+    func registerUser() async
+    func isPasswordRight() -> [PasswordConfigurationError]
 }

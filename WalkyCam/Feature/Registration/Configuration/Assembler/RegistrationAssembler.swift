@@ -13,7 +13,8 @@ final class RegistrationAssembler: RegistrationAssemblerProtocol {
         let interactor = RegistrationInteractor(
             useCases: .init(registerUseCase: .live(repository: repository))
         )
-        let viewModel = RegistrationViewModel(interactor: interactor)
+        let viewModel = RegistrationViewModel(interactor: interactor,
+                                              router: router)
         let view = RegistrationView(viewModel: viewModel, router: router)
 
         return view

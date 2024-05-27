@@ -38,7 +38,14 @@ struct RegistrationView<ViewModel: RegistrationViewModelProtocol, Router: Regist
                                   placeholder: "Nombre Usuario")
                     SecureTextInputView(text: $viewModel.password,
                                         placeholder: "Contraseña",
-                                        topDescriptionText: "Contraseña")
+                                        topDescriptionText: "Contraseña",
+                                        bottomDescriptionText: "Fuerza de contraseña: \(getPasswordStrength())")
+                    VStack(alignment: .leading,
+                           spacing: Tokens.Size.Spacing.small) {
+                        ForEach(PasswordConfigurationError.allCases, id: \.self) { item in
+                            passwordRuleItem(item)
+                        }
+                    }
                     TextInputView(text: $viewModel.email,
                                   topDescriptionText: "Email",
                                   placeholder: "nombre@email.com")
@@ -52,6 +59,7 @@ struct RegistrationView<ViewModel: RegistrationViewModelProtocol, Router: Regist
                            descriptor: OrangeButtonStyleDescriptor(),
                            action: routeToConfirmMail)
                 .disabled(viewModel.isRegisterButtonDisabled())
+                .loading(viewModel.registerUserAsyncData.isLoading)
                 LinkButton(title: "Ya tengo una cuenta",
                            color: .naranja,
                            action: handleAlreadyRegistered)
@@ -60,10 +68,28 @@ struct RegistrationView<ViewModel: RegistrationViewModelProtocol, Router: Regist
                     .foregroundColor(Color.blanco)
             }
         }
+        .scrollIndicators(.hidden)
         .padding(.horizontal, Tokens.Size.Spacing.regular)
         .background(Asset.Fondos.loginFondo.swiftUIImage
             .ignoresSafeArea())
         .navigation(router)
+        .snackbar(router)
+    }
+    
+    private func passwordRuleItem(_ type: PasswordConfigurationError) -> some View {
+        HStack(spacing: Tokens.Size.Spacing.small) {
+            ruleIcon(type)
+            Text(type.asRule())
+                .font(.projectFont(size: Tokens.Size.Font.small, weight: .medium))
+                .foregroundColor(.blanco)
+            Spacer()
+        }
+    }
+    
+    private func ruleIcon(_ item: PasswordConfigurationError) -> some View {
+        let isRuleMissing = viewModel.isPasswordRight().contains(where: { $0 == item })
+        return Image(systemName: isRuleMissing ? "xmark" : "checkmark")
+            .foregroundColor(isRuleMissing ? .rojo : .green2)
     }
 
     private func handleAlreadyRegistered() {
@@ -72,11 +98,18 @@ struct RegistrationView<ViewModel: RegistrationViewModelProtocol, Router: Regist
 
     private func routeToConfirmMail() {
         Task {
-            await viewModel.registerUser(
-                onSuccess: {
-                    router.routeToConfirmMail()
-                },
-                onFailure: {})
+            await viewModel.registerUser()
+        }
+    }
+    
+    private func getPasswordStrength() -> String {
+        switch viewModel.isPasswordRight().count {
+        case 0:
+            return "Strong"
+        case 1, 2:
+            return "Medium"
+        default:
+            return "Weak"
         }
     }
 }
@@ -88,7 +121,8 @@ struct RegistrationView_Previews: PreviewProvider {
                 interactor: RegistrationInteractor(
                     useCases: .init(registerUseCase: .empty
                                    )
-                )
+                ), 
+                router: RegistrationRouter(state: RouterState(isPresented: .constant(false)))
             ),
             router: RegistrationRouter(state: RouterState(isPresented: .constant(false)))
         )
