@@ -32,14 +32,7 @@ struct LoginView<ViewModel: LoginViewModelProtocol, Router: LoginRouterProtocol>
                 VStack(spacing: Tokens.Size.Spacing.small) {
                     SecureTextInputView(text: $viewModel.password,
                                         placeholder: L10n.LoginView.Input.Password.placeholder,
-                                        topDescriptionText: L10n.LoginView.Input.Password.text,
-                                        bottomDescriptionText: "Fuerza de contraseña: \(getPasswordStrength())")
-                    VStack(alignment: .leading,
-                           spacing: Tokens.Size.Spacing.small) {
-                        ForEach(PasswordConfigurationError.allCases, id: \.self) { item in
-                            passwordRuleItem(item)
-                        }
-                    }
+                                        topDescriptionText: L10n.LoginView.Input.Password.text)
                     CheckBoxToggle(model: viewModel.rememberPassword)
                         .onTapGesture {
                             viewModel.rememberPassword.isSelected.toggle()
@@ -94,22 +87,6 @@ struct LoginView<ViewModel: LoginViewModelProtocol, Router: LoginRouterProtocol>
         .navigation(router)
     }
     
-    private func passwordRuleItem(_ type: PasswordConfigurationError) -> some View {
-        HStack(spacing: Tokens.Size.Spacing.small) {
-            ruleIcon(type)
-            Text(type.asRule())
-                .font(.projectFont(size: Tokens.Size.Font.small, weight: .medium))
-                .foregroundColor(.blanco)
-            Spacer()
-        }
-    }
-    
-    private func ruleIcon(_ item: PasswordConfigurationError) -> some View {
-        let isRuleMissing = viewModel.isPasswordRight().contains(where: { $0 == item })
-        return Image(systemName: isRuleMissing ? "xmark" : "checkmark")
-            .foregroundColor(isRuleMissing ? .rojo : .green2)
-    }
-
     private func handleForgotPassword() {}
 
     private func handleLogin() {
@@ -126,17 +103,6 @@ struct LoginView<ViewModel: LoginViewModelProtocol, Router: LoginRouterProtocol>
 
     private func handleSignUp() {
         router.routeToOnboarding()
-    }
-    
-    private func getPasswordStrength() -> String {
-        switch viewModel.isPasswordRight().count {
-        case 0:
-            return "Strong"
-        case 1, 2:
-            return "Medium"
-        default:
-            return "Weak"
-        }
     }
 }
 

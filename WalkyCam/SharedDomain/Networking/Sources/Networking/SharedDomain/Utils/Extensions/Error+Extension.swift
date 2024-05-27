@@ -29,7 +29,7 @@ extension Error {
         } else {
             return .init(
                 status: .unexpected,
-                message: "Não consegui processar sua solicitação... Aguarde alguns minutos e pode tentar novamente!"
+                message: "No pude procesar tu solicitud... ¡Espera unos minutos y podrás volver a intentarlo!"
             )
         }
     }

@@ -34,27 +34,4 @@ final class LoginViewModel: LoginViewModelProtocol {
             onFailure?()
         }
     }
-    
-    func isPasswordRight() -> [PasswordConfigurationError] {
-        var errorsToReturn: [PasswordConfigurationError] = []
-        
-        if password.count < 8 {
-            errorsToReturn.append(.small)
-        }
-        
-        if password.rangeOfCharacter(from: CharacterSet.symbols) == nil {
-            errorsToReturn.append(.missingSymbolNumber)
-        }
-        
-        if password.contains(" ") {
-            errorsToReturn.append(.spaces)
-        }
-        
-        if password.isEmpty {
-            errorsToReturn.append(contentsOf: PasswordConfigurationError.allCases)
-        }
-        
-        return errorsToReturn
-    }
-
 }

@@ -12,11 +12,14 @@ final class RegistrationViewModel: RegistrationViewModelProtocol {
     @Published var registerUserAsyncData: AsyncData<RegistrationOutput, ErrorProtocol> = .idle
 
     private let interactor: RegistrationInteractorProtocol
-
+    private let router: RegistrationRouterProtocol
+    
     // MARK: - Initialization
 
-    init(interactor: RegistrationInteractorProtocol) {
+    init(interactor: RegistrationInteractorProtocol,
+         router: RegistrationRouterProtocol) {
         self.interactor = interactor
+        self.router = router
     }
 
 
@@ -26,7 +29,7 @@ final class RegistrationViewModel: RegistrationViewModelProtocol {
         return name.isEmpty || lastName.isEmpty || username.isEmpty || password.isEmpty || email.isEmpty || !acceptedTerms.isSelected
     }
 
-    @MainActor func registerUser(onSuccess: (() -> Void)?, onFailure: (() -> Void)?) async {
+    @MainActor func registerUser() async {
         registerUserAsyncData = .loading
         do {
             let registrationOutput = try await interactor.register(
@@ -38,10 +41,38 @@ final class RegistrationViewModel: RegistrationViewModelProtocol {
                     password: password)
             )
             registerUserAsyncData = .loaded(registrationOutput)
-            onSuccess?()
+            router.routeToConfirmMail()
         } catch {
             registerUserAsyncData = .failed(GenericError())
-            onFailure?()
+            router.presentSnackbar(
+                SnackBarRoute(
+                    isPresented: router.isPresentingSnackbar,
+                    title: error.localizedDescription,
+                    style: InformationViewErrorStyle()
+                )
+            )
         }
+    }
+    
+    func isPasswordRight() -> [PasswordConfigurationError] {
+        var errorsToReturn: [PasswordConfigurationError] = []
+        
+        if password.count < 8 {
+            errorsToReturn.append(.small)
+        }
+        
+        if password.rangeOfCharacter(from: CharacterSet.symbols) == nil {
+            errorsToReturn.append(.missingSymbolNumber)
+        }
+        
+        if password.contains(" ") {
+            errorsToReturn.append(.spaces)
+        }
+        
+        if password.isEmpty {
+            errorsToReturn.append(contentsOf: PasswordConfigurationError.allCases)
+        }
+        
+        return errorsToReturn
     }
 }

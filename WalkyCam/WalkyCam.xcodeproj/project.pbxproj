@@ -76,6 +76,14 @@
 		561FC8C82B5C6854005B6006 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FC8C52B5C6854005B6006 /* ErrorView.swift */; };
 		5637A8162AD5DD72000586DF /* WalkyCamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5637A8152AD5DD72000586DF /* WalkyCamApp.swift */; };
 		5637A81A2AD5DD73000586DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5637A8192AD5DD73000586DF /* Assets.xcassets */; };
+		56459FA32BFFB4D300776F68 /* SnackBarAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56459F982BFFB4D300776F68 /* SnackBarAssembler.swift */; };
+		56459FA42BFFB4D300776F68 /* SnackBarAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56459F992BFFB4D300776F68 /* SnackBarAssemblerProtocol.swift */; };
+		56459FA52BFFB4D300776F68 /* SnackBarRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56459F9B2BFFB4D300776F68 /* SnackBarRoute.swift */; };
+		56459FA62BFFB4D300776F68 /* SnackBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56459F9D2BFFB4D300776F68 /* SnackBarRouter.swift */; };
+		56459FA72BFFB4D300776F68 /* SnackBarRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56459F9E2BFFB4D300776F68 /* SnackBarRouterProtocol.swift */; };
+		56459FA82BFFB4D300776F68 /* SnackBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56459FA02BFFB4D300776F68 /* SnackBarView.swift */; };
+		56459FAC2BFFB5FD00776F68 /* InformationViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56459FAA2BFFB5FC00776F68 /* InformationViewStyle.swift */; };
+		56459FAD2BFFB5FD00776F68 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56459FAB2BFFB5FD00776F68 /* InformationView.swift */; };
 		565909642BF2A016002FD2B5 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 565909632BF2A016002FD2B5 /* PrivacyInfo.xcprivacy */; };
 		565909672BF67742002FD2B5 /* TextMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565909662BF67742002FD2B5 /* TextMask.swift */; };
 		5663D6692BFBB27B00C6655E /* StartStreetcamUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D6682BFBB27A00C6655E /* StartStreetcamUseCase.swift */; };
@@ -1032,6 +1040,14 @@
 		5637A8122AD5DD72000586DF /* WalkyCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkyCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5637A8152AD5DD72000586DF /* WalkyCamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkyCamApp.swift; sourceTree = "<group>"; };
 		5637A8192AD5DD73000586DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		56459F982BFFB4D300776F68 /* SnackBarAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnackBarAssembler.swift; sourceTree = "<group>"; };
+		56459F992BFFB4D300776F68 /* SnackBarAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnackBarAssemblerProtocol.swift; sourceTree = "<group>"; };
+		56459F9B2BFFB4D300776F68 /* SnackBarRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnackBarRoute.swift; sourceTree = "<group>"; };
+		56459F9D2BFFB4D300776F68 /* SnackBarRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnackBarRouter.swift; sourceTree = "<group>"; };
+		56459F9E2BFFB4D300776F68 /* SnackBarRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnackBarRouterProtocol.swift; sourceTree = "<group>"; };
+		56459FA02BFFB4D300776F68 /* SnackBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnackBarView.swift; sourceTree = "<group>"; };
+		56459FAA2BFFB5FC00776F68 /* InformationViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewStyle.swift; sourceTree = "<group>"; };
+		56459FAB2BFFB5FD00776F68 /* InformationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 		565909632BF2A016002FD2B5 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		565909662BF67742002FD2B5 /* TextMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMask.swift; sourceTree = "<group>"; };
 		5663D6682BFBB27A00C6655E /* StartStreetcamUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartStreetcamUseCase.swift; sourceTree = "<group>"; };
@@ -2505,6 +2521,60 @@
 				EA5E1D672AD70BC800738A8F /* ProjectColors.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		56459F9A2BFFB4D300776F68 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				56459F982BFFB4D300776F68 /* SnackBarAssembler.swift */,
+				56459F992BFFB4D300776F68 /* SnackBarAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		56459F9C2BFFB4D300776F68 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				56459F9B2BFFB4D300776F68 /* SnackBarRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		56459F9F2BFFB4D300776F68 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				56459F9D2BFFB4D300776F68 /* SnackBarRouter.swift */,
+				56459F9E2BFFB4D300776F68 /* SnackBarRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		56459FA12BFFB4D300776F68 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				56459FA02BFFB4D300776F68 /* SnackBarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		56459FA22BFFB4D300776F68 /* SnackBarAlert */ = {
+			isa = PBXGroup;
+			children = (
+				56459F9A2BFFB4D300776F68 /* Assembler */,
+				56459F9C2BFFB4D300776F68 /* Route */,
+				56459F9F2BFFB4D300776F68 /* Router */,
+				56459FA12BFFB4D300776F68 /* View */,
+			);
+			path = SnackBarAlert;
+			sourceTree = "<group>";
+		};
+		56459FA92BFFB5C200776F68 /* InformationView */ = {
+			isa = PBXGroup;
+			children = (
+				56459FAB2BFFB5FD00776F68 /* InformationView.swift */,
+				56459FAA2BFFB5FC00776F68 /* InformationViewStyle.swift */,
+			);
+			path = InformationView;
 			sourceTree = "<group>";
 		};
 		565909652BF67734002FD2B5 /* Utilities */ = {
@@ -5668,6 +5738,7 @@
 		EA5E1D812AD7182800738A8F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				56459FA22BFFB4D300776F68 /* SnackBarAlert */,
 				EA57A7AC2B6C1C9B006247DD /* FooterView */,
 				561FC8C32B5C6854005B6006 /* Error */,
 				561FC8C12B5C6853005B6006 /* ExternalURL */,
@@ -7519,6 +7590,7 @@
 		EA910F9F2ADC464400584B98 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				56459FA92BFFB5C200776F68 /* InformationView */,
 				56F2AF8C2BEC7A1800C458DE /* TimePicker */,
 				EAA1E6182AFAFA7100A42174 /* TopBar */,
 				EA282E7A2AE9F13000B90920 /* WCToggle */,
@@ -10271,6 +10343,7 @@
 				EA172B252AF06EF600EB1514 /* StartupInteractorProtocol.swift in Sources */,
 				EA8652FF2B90E0FB00B86A54 /* LidarOnboardingModel.swift in Sources */,
 				561AA6C72BE30A9900393CEF /* FeatureSelectionViewModel.swift in Sources */,
+				56459FAC2BFFB5FD00776F68 /* InformationViewStyle.swift in Sources */,
 				EA6083E12B01DBE000295069 /* GalleryPhotosAssemblerProtocol.swift in Sources */,
 				561D83C12BE916D70045C540 /* AvailabilityTabRouter.swift in Sources */,
 				EA5E1D742AD716A500738A8F /* ProjectFont.swift in Sources */,
@@ -10371,6 +10444,7 @@
 				EA8653052B90E0FB00B86A54 /* LidarOnboardingRouter.swift in Sources */,
 				EA20A4ED2B87C3B5006662FA /* Scan3DOnboardingRouter.swift in Sources */,
 				EAF47B4C2B82F7EA003F8B86 /* VideocallOnboardingAssemblerProtocol.swift in Sources */,
+				56459FA42BFFB4D300776F68 /* SnackBarAssemblerProtocol.swift in Sources */,
 				EAD048722AE22C530096E6AB /* RegistrationPlansAssembler.swift in Sources */,
 				EA172AFD2AF06BDE00EB1514 /* ConfirmMailInteractorProtocol.swift in Sources */,
 				561AA6F22BE3A6B500393CEF /* FeatureInformationView.swift in Sources */,
@@ -10381,6 +10455,7 @@
 				EA910F6D2ADA03D600584B98 /* String+Extension.swift in Sources */,
 				EAB63B942B83D2ED0017BDA4 /* ARHandsOnboardingAssembler.swift in Sources */,
 				561FC8C02B5C67FB005B6006 /* AsyncDataView.swift in Sources */,
+				56459FA32BFFB4D300776F68 /* SnackBarAssembler.swift in Sources */,
 				EA910F692AD9B57400584B98 /* OnboardingPageView.swift in Sources */,
 				EADB5CA62B190819005863E1 /* VideoCallAssemblerProtocol.swift in Sources */,
 				EAA1E63E2AFB03FD00A42174 /* CashTabViewModelProtocol.swift in Sources */,
@@ -10407,6 +10482,7 @@
 				5668BB392BDFD5FB00A6E05D /* ProfitSelectionRouter.swift in Sources */,
 				EA4A1C882B8799B400B5FC59 /* RuralDroneOnboardingViewModelProtocol.swift in Sources */,
 				561D839B2BE90D930045C540 /* CamerAvailabilityModel.swift in Sources */,
+				56459FA82BFFB4D300776F68 /* SnackBarView.swift in Sources */,
 				EA4A1C642B87909F00B5FC59 /* ExternalAssistantViewModel.swift in Sources */,
 				EA282E592AE952F700B90920 /* ProfileInteractor.swift in Sources */,
 				EA1FD1BC2B1E932F000E583D /* VideoCallRoomInteractor.swift in Sources */,
@@ -10427,6 +10503,7 @@
 				EA8653292B90E9CA00B86A54 /* AIOnboardingInteractor.swift in Sources */,
 				EA4A1C182B87799100B5FC59 /* AvailableAssistantsInteractorProtocol.swift in Sources */,
 				EACFDF162BA7EF3E00B08990 /* UnreleasedFeatureViewModel.swift in Sources */,
+				56459FAD2BFFB5FD00776F68 /* InformationView.swift in Sources */,
 				EA282E7C2AE9F14B00B90920 /* WCToggleStyle.swift in Sources */,
 				EA4A1C412B8788DB00B5FC59 /* SpecialistNotifiedView.swift in Sources */,
 				EA15B5B02AD7071300C03407 /* SheetModifier.swift in Sources */,
@@ -10444,6 +10521,7 @@
 				EA86523E2B902E4B00B86A54 /* FunctionMenuView.swift in Sources */,
 				EA282ECA2AEB531100B90920 /* FunctionsViewModel.swift in Sources */,
 				EA9110242ADDADE100584B98 /* HomeAssembler.swift in Sources */,
+				56459FA72BFFB4D300776F68 /* SnackBarRouterProtocol.swift in Sources */,
 				561FC8C62B5C6854005B6006 /* ExternalURL.swift in Sources */,
 				EA910F962ADA06F500584B98 /* RegistrationInput.swift in Sources */,
 				56A552592B2F6E3D006B1B17 /* StreetCamMenuViewModelProtocol.swift in Sources */,
@@ -10557,6 +10635,7 @@
 				EAE401AB2BBA3D6100B1311E /* DigitalTwinsOnboardingAssemblerProtocol.swift in Sources */,
 				EA1FD1BA2B1E932F000E583D /* VideoCallRoomViewModelProtocol.swift in Sources */,
 				EA5E1D842AD7183700738A8F /* RoundedCornerShape.swift in Sources */,
+				56459FA62BFFB4D300776F68 /* SnackBarRouter.swift in Sources */,
 				EA282EDA2AEB56B800B90920 /* FunctionData.swift in Sources */,
 				EA4AE48D2B75065300B5A89F /* TabBarInteractor.swift in Sources */,
 				EA172B1D2AF06EF600EB1514 /* StartupModel.swift in Sources */,
@@ -10570,6 +10649,7 @@
 				EA910FC42ADC495700584B98 /* TabBarRoute.swift in Sources */,
 				EAF47C862B839308003F8B86 /* FlightMenuView.swift in Sources */,
 				EADBE1012AE823BA00FED579 /* NotificationItemView.swift in Sources */,
+				56459FA52BFFB4D300776F68 /* SnackBarRoute.swift in Sources */,
 				EAF47C812B839308003F8B86 /* FlightMenuRoute.swift in Sources */,
 				EACFDF222BA85E9C00B08990 /* LocationPermissionManager.swift in Sources */,
 				EAF47BA02B82FFF2003F8B86 /* CalendarTabInteractor.swift in Sources */,

@@ -51,7 +51,9 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
                 WCUIButton(title: "Finalizar y Enviar",
                            style: .standard,
                            descriptor: OrangeButtonStyleDescriptor(),
-                           action: {})
+                           action: {
+                    router.routeToHome()
+                })
                 WCUIButton(title: "Cancelar",
                            style: .standard,
                            descriptor: BlackButtonStyleDescriptor(),
@@ -91,7 +93,7 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
                     .frame(width: CGFloat(index - 1) * 63.3, height: 3)
                     .foregroundColor(.naranja)
                 Spacer()
-            }
+            } 
             HStack(alignment: .center) {
                 ForEach(0..<totalSteps) { step in
                     ZStack {
@@ -133,7 +135,7 @@ struct ServiceDetailsView_Previews: PreviewProvider {
     static var previews: some View {
     ServiceDetailsView(
             viewModel: ServiceDetailsViewModel(),
-            router: ServiceDetailsRouter(isPresented: .constant(false))
+            router: ServiceDetailsRouter(state: RouterState(isPresented: .constant(false)))
         )
     }
 }

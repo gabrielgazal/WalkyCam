@@ -5,7 +5,7 @@ final class ServiceDetailsAssembler: ServiceDetailsAssemblerProtocol {
         route: ServiceDetailsRoute
     ) -> ServiceDetailsView<ServiceDetailsViewModel, ServiceDetailsRouter> {
 
-        let router = ServiceDetailsRouter(isPresented: route.isPresented)
+        let router = ServiceDetailsRouter(state: RouterState(isPresented: route.isPresented))
 
         let interactor = ServiceDetailsInteractor(
             useCases: .init()
