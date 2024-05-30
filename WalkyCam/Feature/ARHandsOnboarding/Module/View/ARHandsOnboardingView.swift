@@ -36,19 +36,32 @@ struct ARHandsOnboardingView<ViewModel:ARHandsOnboardingViewModelProtocol, Route
             WCUIButton(title: "Comenzar",
                        style: .standard,
                        descriptor: OrangeButtonStyleDescriptor(),
-                       action: {
-                router.routeToARHandsMenu()
-            })
+                       action: handleRouteToARHands)
+            .loading(viewModel.isUpdating)
         }
                .padding(Tokens.Size.Spacing.large)
                .navigation(router)
+    }
+    
+    private func handleRouteToARHands() {
+        Task {
+            await viewModel.updateUserConfiguration {
+                self.router.routeToARHandsMenu()
+            }
+        }
     }
 }
 
 struct ARHandsOnboardingView_Previews: PreviewProvider {
     static var previews: some View {
         ARHandsOnboardingView(
-            viewModel: ARHandsOnboardingViewModel(),
+            viewModel: ARHandsOnboardingViewModel(
+                interactor: ARHandsOnboardingInteractor(
+                    useCases: .init(
+                        updateARHandsConfiguration: .empty
+                    )
+                )
+            ),
             router: ARHandsOnboardingRouter(isPresented: .constant(false))
         )
     }
