@@ -1,3 +1,3 @@
 protocol ARHandsOnboardingInteractorProtocol {
-    func someFunction()
+    func updateUserConfiguration() async throws
 }

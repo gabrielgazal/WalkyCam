@@ -1,28 +1,28 @@
 import SwiftUI
 
 final class ARHandsOnboardingViewModel: ARHandsOnboardingViewModelProtocol {
-
+    
     // MARK: - Dependencies
-
+    
     private let interactor: ARHandsOnboardingInteractorProtocol
+    @Published var isUpdating: Bool = false
 
     // MARK: - Initialization
-
-    init(interactor: ARHandsOnboardingInteractorProtocol = ARHandsOnboardingInteractor()) {
+    
+    init(interactor: ARHandsOnboardingInteractorProtocol) {
         self.interactor = interactor
     }
-
+    
     // MARK: - Public API
-
-    #warning("Example function. Rename or remove it")
-    func someAction() {
-
-    }
-
-    // MARK: - Private Methods
-
-    #warning("Example function. Rename or remove it")
-    private func somePrivateMethod() {
-
+    
+    @MainActor func updateUserConfiguration(completion: (() -> Void)?) async {
+        isUpdating = true
+        do {
+            _ = try await interactor.updateUserConfiguration()
+            isUpdating = false
+        } catch {
+            isUpdating = false
+        }
+        completion?()
     }
 }

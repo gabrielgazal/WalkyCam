@@ -1,22 +1,22 @@
 import SwiftUI
 
 struct Scan3DOnboardingView<ViewModel:Scan3DOnboardingViewModelProtocol, Router: Scan3DOnboardingRouterProtocol>: View {
-
+    
     // MARK: - Dependencies
-
+    
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
-
+    
     // MARK: - Initialization
-
+    
     init(viewModel: ViewModel,
          router: Router) {
         self.viewModel = viewModel
         self.router = router
     }
-
+    
     // MARK: - View Body
-
+    
     var body: some View {
         VStack(alignment: .center,
                spacing: Tokens.Size.Spacing.regular) {
@@ -51,6 +51,7 @@ struct Scan3DOnboardingView<ViewModel:Scan3DOnboardingViewModelProtocol, Router:
                                color: .naranja,
                                action: handleScan3dStart)
                     .frame(maxWidth: .infinity)
+                    .loading(viewModel.isUpdating)
                     WCUIButton(
                         title: L10n.CashWalletOnboardingView.Button.next,
                         style: .outline,
@@ -74,6 +75,7 @@ struct Scan3DOnboardingView<ViewModel:Scan3DOnboardingViewModelProtocol, Router:
                         action: handleScan3dStart
                     )
                     .frame(maxWidth: .infinity)
+                    .loading(viewModel.isUpdating)
                 }
                 .isHidden(viewModel.currentPage != 3)
                 .animation(.easeInOut, value: viewModel.currentPage)
@@ -86,21 +88,31 @@ struct Scan3DOnboardingView<ViewModel:Scan3DOnboardingViewModelProtocol, Router:
                }
                .navigation(router)
     }
-
+    
     private func setupAppearence() {
         UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(Color.naranja)
         UIPageControl.appearance().pageIndicatorTintColor = UIColor(Color.blancoGris)
     }
-
+    
     private func handleScan3dStart() {
-        router.routeToScan3D()
+        Task {
+            await viewModel.updateUserConfiguration {
+                self.router.routeToScan3D()
+            }
+        }
     }
 }
 
 struct Scan3DOnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-    Scan3DOnboardingView(
-            viewModel: Scan3DOnboardingViewModel(),
+        Scan3DOnboardingView(
+            viewModel: Scan3DOnboardingViewModel(
+                interactor: Scan3DOnboardingInteractor(
+                    useCases: .init(
+                        updateScan3DConfiguration: .empty
+                    )
+                )
+            ),
             router: Scan3DOnboardingRouter(isPresented: .constant(false))
         )
     }

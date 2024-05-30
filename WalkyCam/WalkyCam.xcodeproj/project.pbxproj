@@ -97,6 +97,8 @@
 		56459FA82BFFB4D300776F68 /* SnackBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56459FA02BFFB4D300776F68 /* SnackBarView.swift */; };
 		56459FAC2BFFB5FD00776F68 /* InformationViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56459FAA2BFFB5FC00776F68 /* InformationViewStyle.swift */; };
 		56459FAD2BFFB5FD00776F68 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56459FAB2BFFB5FD00776F68 /* InformationView.swift */; };
+		565343682C08D9BC002C2F36 /* UpdateARHandsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565343672C08D9BC002C2F36 /* UpdateARHandsConfiguration.swift */; };
+		5653436B2C08F03D002C2F36 /* UpdateScan3DConfigurationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5653436A2C08F03D002C2F36 /* UpdateScan3DConfigurationUseCase.swift */; };
 		565909642BF2A016002FD2B5 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 565909632BF2A016002FD2B5 /* PrivacyInfo.xcprivacy */; };
 		565909672BF67742002FD2B5 /* TextMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565909662BF67742002FD2B5 /* TextMask.swift */; };
 		5663D6692BFBB27B00C6655E /* StartStreetcamUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D6682BFBB27A00C6655E /* StartStreetcamUseCase.swift */; };
@@ -1077,6 +1079,8 @@
 		56459FA02BFFB4D300776F68 /* SnackBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnackBarView.swift; sourceTree = "<group>"; };
 		56459FAA2BFFB5FC00776F68 /* InformationViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewStyle.swift; sourceTree = "<group>"; };
 		56459FAB2BFFB5FD00776F68 /* InformationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		565343672C08D9BC002C2F36 /* UpdateARHandsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateARHandsConfiguration.swift; sourceTree = "<group>"; };
+		5653436A2C08F03D002C2F36 /* UpdateScan3DConfigurationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateScan3DConfigurationUseCase.swift; sourceTree = "<group>"; };
 		565909632BF2A016002FD2B5 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		565909662BF67742002FD2B5 /* TextMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMask.swift; sourceTree = "<group>"; };
 		5663D6682BFBB27A00C6655E /* StartStreetcamUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartStreetcamUseCase.swift; sourceTree = "<group>"; };
@@ -2726,6 +2730,22 @@
 			path = InformationView;
 			sourceTree = "<group>";
 		};
+		565343662C08D9A4002C2F36 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				565343672C08D9BC002C2F36 /* UpdateARHandsConfiguration.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		565343692C08F026002C2F36 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				5653436A2C08F03D002C2F36 /* UpdateScan3DConfigurationUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
 		565909652BF67734002FD2B5 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -4299,6 +4319,7 @@
 		EA20A4E52B87C3B3006662FA /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				565343692C08F026002C2F36 /* UseCase */,
 				EA20A4E62B87C3B3006662FA /* Model */,
 			);
 			path = Domain;
@@ -8315,6 +8336,7 @@
 		EAB63B832B83D2ED0017BDA4 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				565343662C08D9A4002C2F36 /* UseCase */,
 				EAB63B842B83D2ED0017BDA4 /* Model */,
 			);
 			path = Domain;
@@ -10411,6 +10433,7 @@
 				EAF47C172B830C80003F8B86 /* WalkyCammerListView.swift in Sources */,
 				EAE8EC4C2B9574840003AE96 /* ChatDetailInteractorProtocol.swift in Sources */,
 				EA94A52C2B7160EF00EC3037 /* ServiceDetailsRoute.swift in Sources */,
+				565343682C08D9BC002C2F36 /* UpdateARHandsConfiguration.swift in Sources */,
 				EA47D0E02B0FAE6500E5C4FC /* PlansComparisonPageView.swift in Sources */,
 				EA282E512AE952F700B90920 /* ProfileRoute.swift in Sources */,
 				EA4165452AE706C6008CE66A /* NotificationsInteractor.swift in Sources */,
@@ -11112,6 +11135,7 @@
 				EA8EF8DC2B67E24400136D1F /* Keychain.swift in Sources */,
 				EAB63B972B83D2ED0017BDA4 /* ARHandsOnboardingViewModel.swift in Sources */,
 				56A6BE9B2BE2EFC7007EBF13 /* IdentityUploadViewModelProtocol.swift in Sources */,
+				5653436B2C08F03D002C2F36 /* UpdateScan3DConfigurationUseCase.swift in Sources */,
 				EA20A4F42B87C47F006662FA /* Scan3DOnboardingPageView.swift in Sources */,
 				EA282ECE2AEB531100B90920 /* FunctionsInteractor.swift in Sources */,
 				EAF47BA72B8303BC003F8B86 /* CalendarView.swift in Sources */,

@@ -89,7 +89,8 @@ extension ConfigurationRouter: TargetType {
 
     private func updateConfiguration(_ userId: String) -> Task {
         let parameters = [
-            "id_user": userId
+            "id_user": userId,
+            "onboarding_readed": true
         ] as [String:Any]
 
         return .requestParameters(

@@ -13,6 +13,7 @@ struct LinkButton: View {
     private let color: Color
     private let action: () -> Void
     @Environment(\.isEnabled) private var isEnabled: Bool
+    @Environment(\.isLoading) var isLoading
 
     init(
         title: String,
@@ -30,11 +31,17 @@ struct LinkButton: View {
         Button(
             action: action,
             label: {
-                HStack(spacing: 12) {
-                    iconView
-                    Text(title)
-                        .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
-                        .foregroundColor(foregroundColor)
+                if isLoading {
+                    ProgressView()
+                        .frame(width: 30, height: 30)
+                        .progressViewStyle(CircularProgressViewStyle(tint: color))
+                } else {
+                    HStack(spacing: 12) {
+                        iconView
+                        Text(title)
+                            .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                            .foregroundColor(foregroundColor)
+                    }
                 }
             })
         .linkButton()

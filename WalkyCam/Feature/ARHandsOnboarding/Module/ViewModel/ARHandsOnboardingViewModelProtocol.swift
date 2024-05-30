@@ -1,5 +1,7 @@
 import SwiftUI
 
 protocol ARHandsOnboardingViewModelProtocol: ViewModelProtocol {
-    func someAction()
+    var isUpdating: Bool { get set }
+
+    func updateUserConfiguration(completion: (() -> Void)?) async
 }

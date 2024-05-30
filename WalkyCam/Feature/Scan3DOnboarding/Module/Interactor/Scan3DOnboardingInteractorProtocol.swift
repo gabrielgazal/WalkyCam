@@ -1,3 +1,3 @@
 protocol Scan3DOnboardingInteractorProtocol {
-    func someFunction()
+    func updateUserConfiguration() async throws
 }
