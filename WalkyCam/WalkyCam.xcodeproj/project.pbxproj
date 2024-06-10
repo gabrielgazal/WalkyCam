@@ -158,6 +158,8 @@
 		56DADB272AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB262AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift */; };
 		56F2AF8E2BEC7A2F00C458DE /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F2AF8D2BEC7A2F00C458DE /* TimePicker.swift */; };
 		56F2AF902BEC896000C458DE /* AvailableDayItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F2AF8F2BEC896000C458DE /* AvailableDayItemView.swift */; };
+		56F3D4682C16B8EA008CFE1B /* DroneDefaultLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3D4672C16B8EA008CFE1B /* DroneDefaultLayoutViewController.swift */; };
+		56F3D46A2C16B9E0008CFE1B /* AppDelegate+DeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3D4692C16B9E0008CFE1B /* AppDelegate+DeviceOrientation.swift */; };
 		56FEECEF2B5C802C003FA686 /* SearchWalkyCammerRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FEECDC2B5C802C003FA686 /* SearchWalkyCammerRoute.swift */; };
 		56FEECF02B5C802C003FA686 /* SearchWalkyCammerAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FEECDE2B5C802C003FA686 /* SearchWalkyCammerAssembler.swift */; };
 		56FEECF12B5C802C003FA686 /* SearchWalkyCammerAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FEECDF2B5C802C003FA686 /* SearchWalkyCammerAssemblerProtocol.swift */; };
@@ -1128,6 +1130,8 @@
 		56DADB262AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+DependencyRegistration.swift"; sourceTree = "<group>"; };
 		56F2AF8D2BEC7A2F00C458DE /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
 		56F2AF8F2BEC896000C458DE /* AvailableDayItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableDayItemView.swift; sourceTree = "<group>"; };
+		56F3D4672C16B8EA008CFE1B /* DroneDefaultLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneDefaultLayoutViewController.swift; sourceTree = "<group>"; };
+		56F3D4692C16B9E0008CFE1B /* AppDelegate+DeviceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+DeviceOrientation.swift"; sourceTree = "<group>"; };
 		56FEECDC2B5C802C003FA686 /* SearchWalkyCammerRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchWalkyCammerRoute.swift; sourceTree = "<group>"; };
 		56FEECDE2B5C802C003FA686 /* SearchWalkyCammerAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchWalkyCammerAssembler.swift; sourceTree = "<group>"; };
 		56FEECDF2B5C802C003FA686 /* SearchWalkyCammerAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchWalkyCammerAssemblerProtocol.swift; sourceTree = "<group>"; };
@@ -1973,6 +1977,7 @@
 		5604D0B52C1157890069C0D6 /* DJI */ = {
 			isa = PBXGroup;
 			children = (
+				56F3D4662C16B88D008CFE1B /* UXComponents */,
 				5604D0B62C1157A20069C0D6 /* DroneConnection */,
 			);
 			path = DJI;
@@ -3188,6 +3193,7 @@
 				EAE8EC5E2B9576E50003AE96 /* AppDelegate+Chat.swift */,
 				EA51030E2BA7E9DA00A2DE2E /* AppDelegate+Payment.swift */,
 				56B448742BFED0390007D872 /* AppDelegate+DJI.swift */,
+				56F3D4692C16B9E0008CFE1B /* AppDelegate+DeviceOrientation.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -3198,6 +3204,14 @@
 				56F2AF8D2BEC7A2F00C458DE /* TimePicker.swift */,
 			);
 			path = TimePicker;
+			sourceTree = "<group>";
+		};
+		56F3D4662C16B88D008CFE1B /* UXComponents */ = {
+			isa = PBXGroup;
+			children = (
+				56F3D4672C16B8EA008CFE1B /* DroneDefaultLayoutViewController.swift */,
+			);
+			path = UXComponents;
 			sourceTree = "<group>";
 		};
 		56FEECD32B5C7FEA003FA686 /* SearchWalkyCammer */ = {
@@ -10905,6 +10919,7 @@
 				EA86526D2B90AC8300B86A54 /* IOTMenuRouter.swift in Sources */,
 				EA3E5C952B87692400158207 /* AssistantMenuViewModel.swift in Sources */,
 				EAE401A82BBA3D6100B1311E /* DigitalTwinsOnboardingModel.swift in Sources */,
+				56F3D46A2C16B9E0008CFE1B /* AppDelegate+DeviceOrientation.swift in Sources */,
 				EAE8EC522B9574840003AE96 /* ChatListAssemblerProtocol.swift in Sources */,
 				EA20A5172B87C913006662FA /* Scan3DMenuView.swift in Sources */,
 				5604D0D52C1157C60069C0D6 /* DroneConnectionModel.swift in Sources */,
@@ -10970,6 +10985,7 @@
 				EA0E40BE2AF70E86002B7437 /* CashWalletInteractorProtocol.swift in Sources */,
 				56FEECF32B5C802C003FA686 /* SearchWalkyCammerViewModel.swift in Sources */,
 				561AA6EB2BE3A6B500393CEF /* FeatureInformationAssembler.swift in Sources */,
+				56F3D4682C16B8EA008CFE1B /* DroneDefaultLayoutViewController.swift in Sources */,
 				EA1FD1B92B1E932F000E583D /* VideoCallRoomViewModel.swift in Sources */,
 				EA15B5A12AD6E44D00C03407 /* LoginAssembler.swift in Sources */,
 				EA87DE222BACBAB1001CB5E6 /* CreateSubscriptionUseCase.swift in Sources */,
@@ -11204,10 +11220,12 @@
 					"\"$(PODS_ROOT)/Headers/Public/DJIWidget/FFmpeg/..\"/**",
 				);
 				INFOPLIST_FILE = "WalkyCam-Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "We need to connect to your bluetooth to enable app functions";
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "Our application needs permission to access the calendar";
-				INFOPLIST_KEY_NSCameraUsageDescription = "Our application needs permission to access the camera";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Our application needs permission to access the location";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Our application needs permission to access the microphone";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to access your camera to enable app functions";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need to access your location to enable app functions";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need to access your location to enable app functions";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need to access your microphone to enable app functions";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -11241,10 +11259,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "WalkyCam-Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "We need to connect to your bluetooth to enable app functions";
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "Our application needs permission to access the calendar";
-				INFOPLIST_KEY_NSCameraUsageDescription = "Our application needs permission to access the camera";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Our application needs permission to access the location";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Our application needs permission to access the microphone";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to access your camera to enable app functions";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need to access your location to enable app functions";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need to access your location to enable app functions";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need to access your microphone to enable app functions";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

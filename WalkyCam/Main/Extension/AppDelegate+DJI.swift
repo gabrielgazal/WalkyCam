@@ -38,11 +38,13 @@ class DroneManager: NSObject, DJISDKManagerDelegate {
     
     func productConnected(_ product: DJIBaseProduct?) {
         if let product = product {
+            UserDefaults.standard.set(product.model, forKey: "droneSDKModel")
             print("DRONE CONECTADO - \(product.model ?? "Desconhecido")")
         }
     }
     
     func productDisconnected() {
+        UserDefaults.standard.set("", forKey: "droneSDKModel")
         print("DRONE DESCONECTADO")
     }
 }
