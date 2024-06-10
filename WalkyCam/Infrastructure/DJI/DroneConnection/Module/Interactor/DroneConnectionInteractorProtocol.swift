@@ -1,0 +1,3 @@
+protocol DroneConnectionInteractorProtocol {
+    func someFunction()
+}

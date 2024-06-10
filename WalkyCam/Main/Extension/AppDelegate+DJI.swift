@@ -22,15 +22,27 @@ extension AppDelegate {
 }
 
 class DroneManager: NSObject, DJISDKManagerDelegate {
+    
     func appRegisteredWithError(_ error: (any Error)?) {
         if let error = error {
             print("Error connecting to DJI API: \(error)")
             return
         }
         print("Registration success")
+        DJISDKManager.startConnectionToProduct()
     }
     
     func didUpdateDatabaseDownloadProgress(_ progress: Progress) {
         // faz nada
+    }
+    
+    func productConnected(_ product: DJIBaseProduct?) {
+        if let product = product {
+            print("DRONE CONECTADO - \(product.model ?? "Desconhecido")")
+        }
+    }
+    
+    func productDisconnected() {
+        print("DRONE DESCONECTADO")
     }
 }

@@ -37,7 +37,7 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
                 }
                 VStack(spacing: 0) {
                     Divider()
-                    cellView("Día", "8 Jun 2022")
+                    cellView("Día", Date().relativeTimeFormatted())
                     cellView("Hora", "13:00 h")
                     cellView("WalkCamer", "Diego Salas")
                     cellView("Lugar de grabación", "New York")

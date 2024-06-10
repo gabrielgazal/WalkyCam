@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5604D0D22C1157C60069C0D6 /* DroneConnectionAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5604D0BD2C1157C60069C0D6 /* DroneConnectionAssembler.swift */; };
+		5604D0D32C1157C60069C0D6 /* DroneConnectionAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5604D0BE2C1157C60069C0D6 /* DroneConnectionAssemblerProtocol.swift */; };
+		5604D0D42C1157C60069C0D6 /* DroneConnectionRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5604D0C02C1157C60069C0D6 /* DroneConnectionRoute.swift */; };
+		5604D0D52C1157C60069C0D6 /* DroneConnectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5604D0C32C1157C60069C0D6 /* DroneConnectionModel.swift */; };
+		5604D0D62C1157C60069C0D6 /* DroneConnectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5604D0C62C1157C60069C0D6 /* DroneConnectionInteractor.swift */; };
+		5604D0D72C1157C60069C0D6 /* DroneConnectionInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5604D0C72C1157C60069C0D6 /* DroneConnectionInteractorProtocol.swift */; };
+		5604D0D82C1157C60069C0D6 /* DroneConnectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5604D0C92C1157C60069C0D6 /* DroneConnectionRouter.swift */; };
+		5604D0D92C1157C60069C0D6 /* DroneConnectionRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5604D0CA2C1157C60069C0D6 /* DroneConnectionRouterProtocol.swift */; };
+		5604D0DA2C1157C60069C0D6 /* DroneConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5604D0CC2C1157C60069C0D6 /* DroneConnectionView.swift */; };
+		5604D0DB2C1157C60069C0D6 /* DroneConnectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5604D0CE2C1157C60069C0D6 /* DroneConnectionViewModel.swift */; };
+		5604D0DC2C1157C60069C0D6 /* DroneConnectionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5604D0CF2C1157C60069C0D6 /* DroneConnectionViewModelProtocol.swift */; };
+		5604D0E42C11FA050069C0D6 /* FPVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5604D0E32C11FA040069C0D6 /* FPVManager.swift */; };
+		5604D0E62C11FA590069C0D6 /* FPUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5604D0E52C11FA590069C0D6 /* FPUIView.swift */; };
 		561AA6C22BE30A9800393CEF /* FeatureSelectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6AD2BE30A9800393CEF /* FeatureSelectionInteractor.swift */; };
 		561AA6C32BE30A9800393CEF /* FeatureSelectionInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6AE2BE30A9800393CEF /* FeatureSelectionInteractorProtocol.swift */; };
 		561AA6C42BE30A9900393CEF /* FeatureSelectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6B02BE30A9800393CEF /* FeatureSelectionRouter.swift */; };
@@ -963,6 +976,19 @@
 /* Begin PBXFileReference section */
 		01210015DB17D27A5A6A4908 /* Pods-WalkyCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkyCam.debug.xcconfig"; path = "Target Support Files/Pods-WalkyCam/Pods-WalkyCam.debug.xcconfig"; sourceTree = "<group>"; };
 		1657E0E09B4F0512C50B8036 /* Pods-WalkyCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkyCam.release.xcconfig"; path = "Target Support Files/Pods-WalkyCam/Pods-WalkyCam.release.xcconfig"; sourceTree = "<group>"; };
+		5604D0BD2C1157C60069C0D6 /* DroneConnectionAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneConnectionAssembler.swift; sourceTree = "<group>"; };
+		5604D0BE2C1157C60069C0D6 /* DroneConnectionAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneConnectionAssemblerProtocol.swift; sourceTree = "<group>"; };
+		5604D0C02C1157C60069C0D6 /* DroneConnectionRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneConnectionRoute.swift; sourceTree = "<group>"; };
+		5604D0C32C1157C60069C0D6 /* DroneConnectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneConnectionModel.swift; sourceTree = "<group>"; };
+		5604D0C62C1157C60069C0D6 /* DroneConnectionInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneConnectionInteractor.swift; sourceTree = "<group>"; };
+		5604D0C72C1157C60069C0D6 /* DroneConnectionInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneConnectionInteractorProtocol.swift; sourceTree = "<group>"; };
+		5604D0C92C1157C60069C0D6 /* DroneConnectionRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneConnectionRouter.swift; sourceTree = "<group>"; };
+		5604D0CA2C1157C60069C0D6 /* DroneConnectionRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneConnectionRouterProtocol.swift; sourceTree = "<group>"; };
+		5604D0CC2C1157C60069C0D6 /* DroneConnectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneConnectionView.swift; sourceTree = "<group>"; };
+		5604D0CE2C1157C60069C0D6 /* DroneConnectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneConnectionViewModel.swift; sourceTree = "<group>"; };
+		5604D0CF2C1157C60069C0D6 /* DroneConnectionViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneConnectionViewModelProtocol.swift; sourceTree = "<group>"; };
+		5604D0E32C11FA040069C0D6 /* FPVManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPVManager.swift; sourceTree = "<group>"; };
+		5604D0E52C11FA590069C0D6 /* FPUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPUIView.swift; sourceTree = "<group>"; };
 		561AA6AD2BE30A9800393CEF /* FeatureSelectionInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureSelectionInteractor.swift; sourceTree = "<group>"; };
 		561AA6AE2BE30A9800393CEF /* FeatureSelectionInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureSelectionInteractorProtocol.swift; sourceTree = "<group>"; };
 		561AA6B02BE30A9800393CEF /* FeatureSelectionRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureSelectionRouter.swift; sourceTree = "<group>"; };
@@ -1942,6 +1968,122 @@
 				E0F44B040E9D3F5ADD523210 /* Pods_WalkyCamTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5604D0B52C1157890069C0D6 /* DJI */ = {
+			isa = PBXGroup;
+			children = (
+				5604D0B62C1157A20069C0D6 /* DroneConnection */,
+			);
+			path = DJI;
+			sourceTree = "<group>";
+		};
+		5604D0B62C1157A20069C0D6 /* DroneConnection */ = {
+			isa = PBXGroup;
+			children = (
+				5604D0C22C1157C60069C0D6 /* Configuration */,
+				5604D0C52C1157C60069C0D6 /* Domain */,
+				5604D0D12C1157C60069C0D6 /* Module */,
+			);
+			path = DroneConnection;
+			sourceTree = "<group>";
+		};
+		5604D0BF2C1157C60069C0D6 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				5604D0BD2C1157C60069C0D6 /* DroneConnectionAssembler.swift */,
+				5604D0BE2C1157C60069C0D6 /* DroneConnectionAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		5604D0C12C1157C60069C0D6 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				5604D0C02C1157C60069C0D6 /* DroneConnectionRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		5604D0C22C1157C60069C0D6 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				5604D0BF2C1157C60069C0D6 /* Assembler */,
+				5604D0C12C1157C60069C0D6 /* Route */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		5604D0C42C1157C60069C0D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5604D0C32C1157C60069C0D6 /* DroneConnectionModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5604D0C52C1157C60069C0D6 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				5604D0C42C1157C60069C0D6 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		5604D0C82C1157C60069C0D6 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				5604D0C62C1157C60069C0D6 /* DroneConnectionInteractor.swift */,
+				5604D0C72C1157C60069C0D6 /* DroneConnectionInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		5604D0CB2C1157C60069C0D6 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				5604D0C92C1157C60069C0D6 /* DroneConnectionRouter.swift */,
+				5604D0CA2C1157C60069C0D6 /* DroneConnectionRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		5604D0CD2C1157C60069C0D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5604D0E22C11F9A10069C0D6 /* Subviews */,
+				5604D0CC2C1157C60069C0D6 /* DroneConnectionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5604D0D02C1157C60069C0D6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5604D0CE2C1157C60069C0D6 /* DroneConnectionViewModel.swift */,
+				5604D0CF2C1157C60069C0D6 /* DroneConnectionViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5604D0D12C1157C60069C0D6 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				5604D0C82C1157C60069C0D6 /* Interactor */,
+				5604D0CB2C1157C60069C0D6 /* Router */,
+				5604D0CD2C1157C60069C0D6 /* View */,
+				5604D0D02C1157C60069C0D6 /* ViewModel */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		5604D0E22C11F9A10069C0D6 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				5604D0E32C11FA040069C0D6 /* FPVManager.swift */,
+				5604D0E52C11FA590069C0D6 /* FPUIView.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 		561AA6A62BE30A7700393CEF /* FeatureSelection */ = {
@@ -3626,6 +3768,7 @@
 		EA15B5A52AD7067400C03407 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				5604D0B52C1157890069C0D6 /* DJI */,
 				EA8EF8CE2B67E11600136D1F /* Persistence */,
 				EA890A272B61EDCE00FC369B /* DependencyStore */,
 				EA1FD19A2B1E8F83000E583D /* Jitsi */,
@@ -10076,9 +10219,11 @@
 				EA87DE242BACBAF4001CB5E6 /* SubscriptionInput.swift in Sources */,
 				EA15B5AC2AD706DB00C03407 /* BottomSheetModifier.swift in Sources */,
 				EA282E552AE952F700B90920 /* ProfileViewModelProtocol.swift in Sources */,
+				5604D0D62C1157C60069C0D6 /* DroneConnectionInteractor.swift in Sources */,
 				EA91101F2ADDADE100584B98 /* HomeRouter.swift in Sources */,
 				EACFDF1B2BA7EF3E00B08990 /* UnreleasedFeatureRouterProtocol.swift in Sources */,
 				EA3E5C922B87692400158207 /* AssistantMenuAssemblerProtocol.swift in Sources */,
+				5604D0D92C1157C60069C0D6 /* DroneConnectionRouterProtocol.swift in Sources */,
 				EA94A52D2B7160EF00EC3037 /* ServiceDetailsAssembler.swift in Sources */,
 				561FC8B52B5C66F7005B6006 /* WebView.swift in Sources */,
 				EA1FD19C2B1E8F91000E583D /* JitsiMeetView.swift in Sources */,
@@ -10236,6 +10381,7 @@
 				561AA6ED2BE3A6B500393CEF /* FeatureInformationRoute.swift in Sources */,
 				EA7219962B05612900BE2D93 /* WalkyBotAssembler.swift in Sources */,
 				EA0E408B2AF69771002B7437 /* CashWalletOnboardingModel.swift in Sources */,
+				5604D0D22C1157C60069C0D6 /* DroneConnectionAssembler.swift in Sources */,
 				EA5A88052B68039400BBB7F9 /* LoginInput.swift in Sources */,
 				56A6BE972BE2EFC7007EBF13 /* IdentityUploadRouter.swift in Sources */,
 				EAD0486B2AE22C530096E6AB /* RegistrationPlansViewModel.swift in Sources */,
@@ -10243,6 +10389,7 @@
 				56A5525C2B2F6E3D006B1B17 /* StreetCamMenuInteractor.swift in Sources */,
 				EA4A1C402B8788DB00B5FC59 /* SpecialistNotifiedViewModel.swift in Sources */,
 				EAF47BF22B83099F003F8B86 /* MapTabInteractor.swift in Sources */,
+				5604D0DA2C1157C60069C0D6 /* DroneConnectionView.swift in Sources */,
 				EA8652632B90AC8300B86A54 /* IOTMenuModel.swift in Sources */,
 				561D83F02BE91EE00045C540 /* LegalDocumentationModel.swift in Sources */,
 				EA6083B32B01D9E100295069 /* GalleryAssembler.swift in Sources */,
@@ -10425,6 +10572,7 @@
 				EA8652432B902E4B00B86A54 /* FunctionMenuModel.swift in Sources */,
 				EA6083412AFD58A900295069 /* CryptoTabViewModelProtocol.swift in Sources */,
 				EAD0486D2AE22C530096E6AB /* RegistrationPlansInteractor.swift in Sources */,
+				5604D0E42C11FA050069C0D6 /* FPVManager.swift in Sources */,
 				EA5E1D782AD7170400738A8F /* LinkButton.swift in Sources */,
 				EAE401F82BBAFB0900B1311E /* RobotMenuModel.swift in Sources */,
 				EA8653292B90E9CA00B86A54 /* AIOnboardingInteractor.swift in Sources */,
@@ -10432,6 +10580,7 @@
 				EACFDF162BA7EF3E00B08990 /* UnreleasedFeatureViewModel.swift in Sources */,
 				EA282E7C2AE9F14B00B90920 /* WCToggleStyle.swift in Sources */,
 				EA4A1C412B8788DB00B5FC59 /* SpecialistNotifiedView.swift in Sources */,
+				5604D0DB2C1157C60069C0D6 /* DroneConnectionViewModel.swift in Sources */,
 				EA15B5B02AD7071300C03407 /* SheetModifier.swift in Sources */,
 				EAE401AA2BBA3D6100B1311E /* DigitalTwinsOnboardingAssembler.swift in Sources */,
 				EA50A0902B0BCC940042B238 /* PlanPageView.swift in Sources */,
@@ -10515,6 +10664,7 @@
 				561FC8B92B5C6787005B6006 /* WebViewRoute.swift in Sources */,
 				EA86523D2B902E4B00B86A54 /* FunctionMenuViewModelProtocol.swift in Sources */,
 				EAE8EC5F2B9576E50003AE96 /* AppDelegate+Chat.swift in Sources */,
+				5604D0D32C1157C60069C0D6 /* DroneConnectionAssemblerProtocol.swift in Sources */,
 				EADB5CAD2B190819005863E1 /* VideoCallRouter.swift in Sources */,
 				EAE401B42BBA3F3C00B1311E /* DigitalTwinsPageView.swift in Sources */,
 				EA20A5622B87D35B006662FA /* ShareSheetViewModel.swift in Sources */,
@@ -10546,6 +10696,7 @@
 				56A5522F2B2F6135006B1B17 /* WalkyCamerOnboardingViewModel.swift in Sources */,
 				EAF47B7A2B82FCE8003F8B86 /* BookWalkycamerRouterProtocol.swift in Sources */,
 				EA7219A42B05863C00BE2D93 /* FavoriteItemView.swift in Sources */,
+				5604D0D72C1157C60069C0D6 /* DroneConnectionInteractorProtocol.swift in Sources */,
 				EA60833D2AFD58A900295069 /* CryptoTabRoute.swift in Sources */,
 				EA8652D92B90DCE900B86A54 /* PrintMenuAssemblerProtocol.swift in Sources */,
 				561D83EC2BE91EE00045C540 /* LegalDocumentationViewModelProtocol.swift in Sources */,
@@ -10645,6 +10796,7 @@
 				EAF47B4F2B82F7EA003F8B86 /* VideocallOnboardingViewModelProtocol.swift in Sources */,
 				EA0E40912AF69771002B7437 /* CashWalletOnboardingRouterProtocol.swift in Sources */,
 				EAE8EC572B9574840003AE96 /* ChatListInteractorProtocol.swift in Sources */,
+				5604D0DC2C1157C60069C0D6 /* DroneConnectionViewModelProtocol.swift in Sources */,
 				EA50A08C2B0BC77F0042B238 /* PlansPagesRoute.swift in Sources */,
 				EA50A0842B0BC77F0042B238 /* PlansPagesModel.swift in Sources */,
 				EA0655492BB5DA5D006148E7 /* RadarMenuAssemblerProtocol.swift in Sources */,
@@ -10727,6 +10879,7 @@
 				EA5E1D8C2AD719C400738A8F /* TextInputView.swift in Sources */,
 				56FEECF62B5C802C003FA686 /* SearchWalkyCammerInteractorProtocol.swift in Sources */,
 				EAF47C3E2B838D74003F8B86 /* DroneMenuViewModelProtocol.swift in Sources */,
+				5604D0D42C1157C60069C0D6 /* DroneConnectionRoute.swift in Sources */,
 				EA282E522AE952F700B90920 /* ProfileAssemblerProtocol.swift in Sources */,
 				EA8653562B90EBE800B86A54 /* ConfigureAccessAssemblerProtocol.swift in Sources */,
 				EAB63B962B83D2ED0017BDA4 /* ARHandsOnboardingViewModelProtocol.swift in Sources */,
@@ -10754,6 +10907,7 @@
 				EAE401A82BBA3D6100B1311E /* DigitalTwinsOnboardingModel.swift in Sources */,
 				EAE8EC522B9574840003AE96 /* ChatListAssemblerProtocol.swift in Sources */,
 				EA20A5172B87C913006662FA /* Scan3DMenuView.swift in Sources */,
+				5604D0D52C1157C60069C0D6 /* DroneConnectionModel.swift in Sources */,
 				EA86532B2B90E9CA00B86A54 /* AIOnboardingRouterProtocol.swift in Sources */,
 				EAF47C3C2B838D74003F8B86 /* DroneMenuModel.swift in Sources */,
 				EA910F9C2ADC437300584B98 /* AlertModifier.swift in Sources */,
@@ -10802,6 +10956,7 @@
 				EAF47C3A2B838D74003F8B86 /* DroneMenuAssemblerProtocol.swift in Sources */,
 				EA0E40C02AF70E86002B7437 /* CashWalletRouterProtocol.swift in Sources */,
 				EA3E5C972B87692400158207 /* AssistantMenuInteractor.swift in Sources */,
+				5604D0E62C11FA590069C0D6 /* FPUIView.swift in Sources */,
 				EA8EF8E92B67E71B00136D1F /* UserSessionData.swift in Sources */,
 				EA57A7CD2B6C2C31006247DD /* AddPeopleTransmissionAssembler.swift in Sources */,
 				EA4165472AE706C6008CE66A /* NotificationsRouterProtocol.swift in Sources */,
@@ -10826,6 +10981,7 @@
 				EA6083672B01981800295069 /* CryptoDetailsInteractorProtocol.swift in Sources */,
 				EA4A1C6D2B87909F00B5FC59 /* ExternalAssistantAssemblerProtocol.swift in Sources */,
 				EA1FD1C32B1E932F000E583D /* VideoCallRoomModel.swift in Sources */,
+				5604D0D82C1157C60069C0D6 /* DroneConnectionRouter.swift in Sources */,
 				561AA6F32BE3A6B500393CEF /* FeatureInformationViewModel.swift in Sources */,
 				EA57A7A32B6C1558006247DD /* CammerDetailsView.swift in Sources */,
 				EA57A7CE2B6C2C31006247DD /* AddPeopleTransmissionModel.swift in Sources */,
