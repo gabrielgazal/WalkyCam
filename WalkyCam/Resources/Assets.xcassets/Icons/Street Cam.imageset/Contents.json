@@ -3,6 +3,16 @@
     {
       "filename" : "Street Cam.pdf",
       "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "streetCam_white.pdf",
+      "idiom" : "universal"
     }
   ],
   "info" : {
