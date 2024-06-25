@@ -37,15 +37,6 @@
       }
     },
     {
-      "identity" : "sendbird-chat-sdk-ios",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/sendbird/sendbird-chat-sdk-ios",
-      "state" : {
-        "branch" : "master",
-        "revision" : "858841999de5aee1652d76ce74ee0afb0ef530da"
-      }
-    },
-    {
       "identity" : "stripe-ios-spm",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/stripe/stripe-ios-spm",

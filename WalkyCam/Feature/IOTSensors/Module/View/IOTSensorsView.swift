@@ -58,6 +58,7 @@ struct IOTSensorsView<ViewModel: IOTSensorsViewModelProtocol, Router: IOTSensors
                     }
                 )
             }
+                   .padding()
         }
         .navigation(router)
     }

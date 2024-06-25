@@ -1,5 +1,4 @@
 import SwiftUI
-import SendbirdChatSDK
 
 final class ChatListViewModel: ChatListViewModelProtocol {
 
@@ -24,40 +23,7 @@ final class ChatListViewModel: ChatListViewModelProtocol {
 
     // MARK: - Private Methods
 
-    private func initializeUser() {
-        channels = .loading
-        SendbirdChat.connect(userId: userID) { user, error in
-            guard let user = user,
-                  error == nil else {
-                print("Connection error")
-                return
-            }
-            print("Connected")
-            self.getGroupChannels()
-        }
-    }
+    private func initializeUser() {}
 
-    private func getGroupChannels() {
-        GroupChannel.createMyGroupChannelListQuery().loadNextPage { channels, error in
-            if let channels = channels {
-                let mappedChannels = channels.compactMap { channel in
-                    return self.mapObjectToModel(channel)
-                }
-                self.channels = .loaded(mappedChannels)
-            } else {
-                print("Erro nas mensagens")
-            }
-        }
-    }
-
-    private func mapObjectToModel(_ input: GroupChannel) -> ChannelModel? {
-        let member = input.members.first(where: { $0.id != "developer" })
-        return input.lastMessage == nil ? nil : ChannelModel(id: input.id,
-                                                             title: member?.nickname ?? "(No members)",
-                                                             image: input.coverURL ?? "",
-                                                             timeStamp: input.lastMessage?.createdAt ?? 0,
-                                                             chatOpened: input.unreadMessageCount == 0,
-                                                             lastMessage: input.lastMessage?.message ?? "",
-                                                             chatURL: input.channelURL)
-    }
+    private func getGroupChannels() {}
 }

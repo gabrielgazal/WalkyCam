@@ -886,7 +886,6 @@
 		EAE8EC582B9574840003AE96 /* ChatListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE8EC402B9574840003AE96 /* ChatListRouter.swift */; };
 		EAE8EC592B9574840003AE96 /* ChatListRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE8EC412B9574840003AE96 /* ChatListRouterProtocol.swift */; };
 		EAE8EC5A2B9574840003AE96 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE8EC442B9574840003AE96 /* ChatModel.swift */; };
-		EAE8EC5D2B9575AE0003AE96 /* SendbirdChatSDK in Frameworks */ = {isa = PBXBuildFile; productRef = EAE8EC5C2B9575AE0003AE96 /* SendbirdChatSDK */; };
 		EAE8EC5F2B9576E50003AE96 /* AppDelegate+Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE8EC5E2B9576E50003AE96 /* AppDelegate+Chat.swift */; };
 		EAF47B4B2B82F7EA003F8B86 /* VideocallOnboardingRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47B352B82F7E9003F8B86 /* VideocallOnboardingRoute.swift */; };
 		EAF47B4C2B82F7EA003F8B86 /* VideocallOnboardingAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47B372B82F7E9003F8B86 /* VideocallOnboardingAssemblerProtocol.swift */; };
@@ -1964,7 +1963,6 @@
 				EA5103182BA7EA3200A2DE2E /* StripeFinancialConnections in Frameworks */,
 				EA5103122BA7EA3200A2DE2E /* Stripe in Frameworks */,
 				DFD0945A60FA5B637D89BC1D /* Pods_WalkyCam.framework in Frameworks */,
-				EAE8EC5D2B9575AE0003AE96 /* SendbirdChatSDK in Frameworks */,
 				EA51031C2BA7EA3200A2DE2E /* StripePaymentSheet in Frameworks */,
 				EA51031A2BA7EA3200A2DE2E /* StripeIdentity in Frameworks */,
 			);
@@ -10063,7 +10061,6 @@
 			name = WalkyCam;
 			packageProductDependencies = (
 				EA890A252B61ECFB00FC369B /* Networking */,
-				EAE8EC5C2B9575AE0003AE96 /* SendbirdChatSDK */,
 				EA5103112BA7EA3200A2DE2E /* Stripe */,
 				EA5103132BA7EA3200A2DE2E /* StripeApplePay */,
 				EA5103152BA7EA3200A2DE2E /* StripeCardScan */,
@@ -10101,7 +10098,6 @@
 			);
 			mainGroup = 5637A8092AD5DD71000586DF;
 			packageReferences = (
-				EAE8EC5B2B9575AE0003AE96 /* XCRemoteSwiftPackageReference "sendbird-chat-sdk-ios" */,
 				EA5103102BA7EA3200A2DE2E /* XCRemoteSwiftPackageReference "stripe-ios-spm" */,
 			);
 			productRefGroup = 5637A8132AD5DD72000586DF /* Products */;
@@ -11368,14 +11364,6 @@
 				version = 23.25.0;
 			};
 		};
-		EAE8EC5B2B9575AE0003AE96 /* XCRemoteSwiftPackageReference "sendbird-chat-sdk-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sendbird/sendbird-chat-sdk-ios";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -11422,11 +11410,6 @@
 		EA890A252B61ECFB00FC369B /* Networking */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Networking;
-		};
-		EAE8EC5C2B9575AE0003AE96 /* SendbirdChatSDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EAE8EC5B2B9575AE0003AE96 /* XCRemoteSwiftPackageReference "sendbird-chat-sdk-ios" */;
-			productName = SendbirdChatSDK;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

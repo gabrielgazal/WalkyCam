@@ -23,7 +23,8 @@ struct PlansComparisonPageView: View {
     
     var body: some View {
         ScrollView(showsIndicators: false) {
-            HStack(spacing: Tokens.Size.Spacing.small) {
+            HStack(alignment: .center,
+                   spacing: Tokens.Size.Spacing.small) {
                 VStack(alignment: .leading,
                        spacing: Tokens.Size.Spacing.regular) {
                     Image(Asset.logo.name)
@@ -52,12 +53,13 @@ struct PlansComparisonPageView: View {
                     }
                 }
             }
-            .padding()
+                   .padding()
         }
     }
     
     private func featureItem(_ item: FunctionData) -> some View {
-        HStack(spacing: Tokens.Size.Spacing.small) {
+        HStack(alignment: .center,
+               spacing: Tokens.Size.Spacing.small) {
             Image(item.icon)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -66,9 +68,9 @@ struct PlansComparisonPageView: View {
                 .font(.projectFont(size: Tokens.Size.Font.xsmall, weight: .medium))
                 .foregroundColor(Color.negro)
                 .lineLimit(3)
-//            Image(systemName: "info.circle.fill")
-//                .resizable()
-//                .frame(width: 20, height: 20)
+                        Image(systemName: "info.circle.fill")
+                            .resizable()
+                            .frame(width: 15, height: 15)
             Spacer()
         }
     }

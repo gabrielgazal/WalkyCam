@@ -1,5 +1,4 @@
 import SwiftUI
-import SendbirdChatSDK
 
 struct ChatDetailView<ViewModel:ChatDetailViewModelProtocol, Router: ChatDetailRouterProtocol>: View {
 
