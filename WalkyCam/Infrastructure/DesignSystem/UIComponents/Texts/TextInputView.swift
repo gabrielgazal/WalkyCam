@@ -49,6 +49,7 @@ public struct TextInputView: View {
     private var actions: Actions
     private var keyboardType: UIKeyboardType
     private var backgroundColor: Color
+    private var textColor: Color
     private var mask: TextMask?
     
     // MARK: - Initialization
@@ -64,6 +65,7 @@ public struct TextInputView: View {
         rightIcon: Image? = nil,
         keyboardType: UIKeyboardType = .default,
         backgroundColor: Color = .blancoGris,
+        textColor: Color = .blanco,
         mask: TextMask? = nil,
         actions: Actions = .init()
     ) {
@@ -77,6 +79,7 @@ public struct TextInputView: View {
         self.bottomDescriptionText = bottomDescriptionText
         self.keyboardType = keyboardType
         self.backgroundColor = backgroundColor
+        self.textColor = textColor
         self.mask = mask
         self.actions = actions
     }
@@ -220,7 +223,7 @@ public struct TextInputView: View {
         case .error:
             return Color.rojo
         default:
-            return Color.blanco
+            return textColor
         }
     }
 }

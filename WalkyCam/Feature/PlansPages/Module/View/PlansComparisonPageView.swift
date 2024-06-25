@@ -9,15 +9,18 @@ import Foundation
 import SwiftUI
 
 struct PlansComparisonPageView: View {
-
+    
     private var plansData: [PlansPagesModel]
-
+    private var startPlanAction: ((String) -> Void)?
+    
     public init(
-        plansData: [PlansPagesModel]
+        plansData: [PlansPagesModel],
+        startPlanAction: ((String) -> Void)?
     ) {
         self.plansData = plansData
+        self.startPlanAction = startPlanAction
     }
-
+    
     var body: some View {
         ScrollView(showsIndicators: false) {
             HStack(spacing: Tokens.Size.Spacing.small) {
@@ -31,10 +34,11 @@ struct PlansComparisonPageView: View {
                         .foregroundColor(.naranja)
                     Text("En todos los planes se incluyen funciones como: White Board, Share to, Chat, REC, etc.")
                         .font(.projectFont(size: Tokens.Size.Font.xsmall, weight: .semibold))
-                    VStack(spacing: Tokens.Size.Spacing.small) {
+                    VStack(alignment: .leading,
+                           spacing: Tokens.Size.Spacing.small) {
                         ForEach(plansData.first(where: { $0.title == "premium"})?.features ?? []) { item in
                             featureItem(item)
-                                .frame(height: 30)
+                                .frame(height: 50)
                         }
                     }
                 }
@@ -43,6 +47,7 @@ struct PlansComparisonPageView: View {
                     HStack(spacing: Tokens.Size.Spacing.small) {
                         ForEach(plansData, id: \.self) { data in
                             planItem(data)
+                                .padding([.top], Tokens.Size.Spacing.regular)
                         }
                     }
                 }
@@ -50,23 +55,24 @@ struct PlansComparisonPageView: View {
             .padding()
         }
     }
-
+    
     private func featureItem(_ item: FunctionData) -> some View {
         HStack(spacing: Tokens.Size.Spacing.small) {
             Image(item.icon)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 30, height: 30)
+                .frame(width: 50, height: 50)
             Text(item.title)
-                .font(.projectFont(size: Tokens.Size.Font.tiny, weight: .medium))
+                .font(.projectFont(size: Tokens.Size.Font.xsmall, weight: .medium))
                 .foregroundColor(Color.negro)
-            Image(systemName: "info.circle.fill")
-                .resizable()
-                .frame(width: 10, height: 10)
+                .lineLimit(3)
+//            Image(systemName: "info.circle.fill")
+//                .resizable()
+//                .frame(width: 20, height: 20)
             Spacer()
         }
     }
-
+    
     private func planItem(_ plan: PlansPagesModel) -> some View {
         VStack(alignment: .center,
                spacing: Tokens.Size.Spacing.xsmall) {
@@ -78,7 +84,9 @@ struct PlansComparisonPageView: View {
             WCUIButton(title: "Start \(plan.title)",
                        style: .standard,
                        descriptor: getButtonDescriptor(plan.title),
-                       action: {})
+                       action: {
+                startPlanAction?(plan.title)
+            })
             .frame(width: 130)
             VStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.small) {
@@ -88,7 +96,7 @@ struct PlansComparisonPageView: View {
                             .resizable()
                             .renderingMode(.template)
                             .aspectRatio(contentMode: .fit)
-                            .frame(height: 30)
+                            .frame(height: 50)
                             .foregroundColor(plan.accentColor)
                     } else {
                         EmptyView()
@@ -98,7 +106,7 @@ struct PlansComparisonPageView: View {
             Spacer()
         }
     }
-
+    
     private func getButtonDescriptor(_ title: String) -> ButtonStyleDescriptorProtocol {
         switch title {
         case "free":
@@ -131,7 +139,7 @@ struct PlansComparisonPageView_Previews: PreviewProvider {
                         .init(title: "Juegos y otros", icon: Asset.Icons.games.name),
                         .init(title: "Se incluye funciones como: White board, Share to, Chat, REC, etc.", icon: ""),
                         .init(title: "Disfruta mas de 20 funciones adicionales", icon: "")
-                    ]),
+                      ]),
                 .init(title: "basic",
                       monthlyPrice: "30.0",
                       backgroundImage: Asset.Fondos.planFondo.name,
@@ -147,7 +155,7 @@ struct PlansComparisonPageView_Previews: PreviewProvider {
                         .init(title: "Pixelation Faces", icon: Asset.Icons.pixelation.name),
                         .init(title: "Juegos y otros", icon: Asset.Icons.games.name),
                         .init(title: "Se incluye funciones como: White board, Share to, Chat, REC, etc.", icon: "")
-                    ]),
+                      ]),
                 .init(title: "standard",
                       monthlyPrice: "60.0",
                       backgroundImage: Asset.Fondos.planFondo.name,
@@ -169,7 +177,7 @@ struct PlansComparisonPageView_Previews: PreviewProvider {
                         .init(title: "Certified Recording", icon: Asset.Icons.translate.name),
                         .init(title: "Juegos y otros", icon: Asset.Icons.games.name),
                         .init(title: "Se incluye funciones como: White board, Share to, Chat, REC, etc.", icon: "")
-                    ]),
+                      ]),
                 .init(title: "premium",
                       monthlyPrice: "180.0",
                       backgroundImage: Asset.Fondos.planFondo.name,
@@ -203,8 +211,9 @@ struct PlansComparisonPageView_Previews: PreviewProvider {
                         .init(title: "Certified Recording", icon: Asset.Icons.translate.name),
                         .init(title: "Alcohol & Drug test", icon: Asset.Icons.alcohol.name),
                         .init(title: "Juegos y otros", icon: Asset.Icons.games.name)
-                    ])
-            ]
+                      ])
+            ],
+            startPlanAction: nil
         )
     }
 }

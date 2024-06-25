@@ -38,6 +38,7 @@ struct IOTMenuView<ViewModel:IOTMenuViewModelProtocol, Router: IOTMenuRouterProt
                             itemCell(title: "Farming", icon: Asset.Icons.farming.name)
                             itemCell(title: "Fleet", icon: Asset.Icons.fleet.name)
                         }
+                        .disabled(true)
                         .padding(Tokens.Size.Spacing.regular)
                         .shadow(
                             color: Color.negro.opacity(0.1),
@@ -105,6 +106,10 @@ struct IOTMenuView<ViewModel:IOTMenuViewModelProtocol, Router: IOTMenuRouterProt
             }
                    .padding(Tokens.Size.Spacing.regular)
         }
+        .onAppear {
+            UserDefaults.standard.set(FunctionType.iot.rawValue, forKey: "currentService")
+        }
+        .navigation(router)
     }
 
     private func itemCell(title: String, icon: String) -> some View {
@@ -122,6 +127,9 @@ struct IOTMenuView<ViewModel:IOTMenuViewModelProtocol, Router: IOTMenuRouterProt
                    .padding(Tokens.Size.Spacing.regular)
         }
         .frame(minWidth: 135)
+        .onTapGesture {
+            router.routeToSensors()
+        }
     }
 }
 
