@@ -26,36 +26,6 @@ final class ConfigurationService: ConfigurationServiceProtocol {
 
     // MARK: - Public API
 
-    func getStreetCamConfiguration(userId: String, completion: @escaping Completion) {
-        provider.request(.getStreetCamConfiguration(userId: userId),
-                         completion: completion)
-    }
-
-    func getScan3DConfiguration(userId: String, completion: @escaping Completion) {
-        provider.request(.getScan3DConfiguration(userId: userId),
-                         completion: completion)
-    }
-
-    func getVideoCallConfiguration(userId: String, completion: @escaping Completion) {
-        provider.request(.getVideoCallConfiguration(userId: userId),
-                         completion: completion)
-    }
-
-    func getARHandsConfiguration(userId: String, completion: @escaping Completion) {
-        provider.request(.getARHandsConfiguration(userId: userId),
-                         completion: completion)
-    }
-
-    func getDigitalTwinsCamConfiguration(userId: String, completion: @escaping Completion) {
-        provider.request(.getDigitalTwinsCamConfiguration(userId: userId),
-                         completion: completion)
-    }
-
-    func getDroneConfiguration(userId: String, completion: @escaping Completion) {
-        provider.request(.getDroneConfiguration(userId: userId),
-                         completion: completion)
-    }
-
     func updateStreetCamConfiguration(userId: String, completion: @escaping Completion) {
         provider.request(.updateStreetCamConfiguration(userId: userId),
                          completion: completion)

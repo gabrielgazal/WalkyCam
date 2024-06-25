@@ -14,11 +14,12 @@ public struct UserResponse: Codable, Hashable {
     public let lastName: String
     public let email: String
     public let address: String
+    public let configurations: ConfigurationsResponse
 
     private enum CodingKeys: String, CodingKey {
         case id = "_id"
         case userName = "user_name"
         case lastName = "last_name"
-        case name, email, address
+        case name, email, address, configurations
     }
 }

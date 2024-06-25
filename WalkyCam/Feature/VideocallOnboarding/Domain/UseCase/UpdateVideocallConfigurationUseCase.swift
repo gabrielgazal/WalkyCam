@@ -45,7 +45,7 @@ extension UpdateVideocallConfigurationUseCase {
     ) throws -> Void {
         do {
             var user = try session.user()
-            user.configurations.videoCall = true
+            user.configurations.videocallConfiguration = true
             try session.save(user: user)
             return
         } catch {
