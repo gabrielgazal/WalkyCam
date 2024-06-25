@@ -14,3 +14,4 @@ public struct UserConfiguration: Codable, Hashable {
         case onboardingReaded = "onboarding_readed"
     }
 }
+
