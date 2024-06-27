@@ -30,13 +30,10 @@ final class FunctionsViewModel: FunctionsViewModelProtocol {
             .init(title: "Street Cam", icon: Asset.Icons.streetCam.name),
             .init(title: "AR Hands", icon: Asset.Icons.ar.name),
             .init(title: "Scan 3D", icon: Asset.Icons.scan3D.name),
+            .init(title: "Cam 360º", icon: Asset.Icons._360Camera.name),
             .init(title: "Certified Recording", icon: Asset.Icons.translate.name),
-            .init(title: "Karaoke", icon: Asset.Icons.karaoke.name),
-            .init(title: "Glasses Prove", icon: Asset.Icons.lentes.name),
             .init(title: "Games", icon: Asset.Icons.games.name),
-            .init(title: "Hair Prove", icon: Asset.Icons.hair.name),
-            .init(title: "Dress Prove", icon: Asset.Icons.tShirt.name),
-            .init(title: "RGB Bulb Party", icon: Asset.Icons.rgb.name)
+            .init(title: "Play & Business ", icon: Asset.Icons.playBusiness.name),
         ]
     }
 

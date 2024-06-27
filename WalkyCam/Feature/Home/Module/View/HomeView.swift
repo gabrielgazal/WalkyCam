@@ -41,7 +41,6 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                         router.routeToWalkyBot()
                     })
                     recentFunctionsView(proxy)
-                        .padding([.leading, .trailing], Tokens.Size.Spacing.regular)
                     remindersView()
                     newsView()
                     favoritesView()
@@ -83,6 +82,7 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                         }
                 }
             }
+                      .padding([.leading, .trailing], Tokens.Size.Spacing.regular)
         }
     }
 
@@ -161,7 +161,9 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
     private func filesView() -> some View {
         HomeSectionView(title: "Galeria de archivos",
                         icon: Asset.Icons.images.name,
-                        action: { tabBar.tabSelection = tabBar.tabBarItems[SelectedTabItem.menu.rawValue] }) {
+                        action: {
+            router.routeToGallery()
+        }) {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .center,
                        spacing: Tokens.Size.Spacing.regular) {

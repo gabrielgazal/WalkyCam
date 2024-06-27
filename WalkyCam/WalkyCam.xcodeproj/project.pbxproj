@@ -102,6 +102,28 @@
 		5668BB3C2BDFD5FB00A6E05D /* ProfitSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668BB2F2BDFD5FA00A6E05D /* ProfitSelectionViewModel.swift */; };
 		5668BB3D2BDFD5FB00A6E05D /* ProfitSelectionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668BB302BDFD5FA00A6E05D /* ProfitSelectionViewModelProtocol.swift */; };
 		5668BB3F2BE0233200A6E05D /* CamerRegistrationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668BB3E2BE0233200A6E05D /* CamerRegistrationData.swift */; };
+		569BA76C2C2DF55200E4CCF1 /* GamesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA7572C2DF55100E4CCF1 /* GamesModel.swift */; };
+		569BA76D2C2DF55200E4CCF1 /* GamesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA75A2C2DF55100E4CCF1 /* GamesInteractor.swift */; };
+		569BA76E2C2DF55200E4CCF1 /* GamesInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA75B2C2DF55100E4CCF1 /* GamesInteractorProtocol.swift */; };
+		569BA76F2C2DF55200E4CCF1 /* GamesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA75D2C2DF55100E4CCF1 /* GamesRouter.swift */; };
+		569BA7702C2DF55200E4CCF1 /* GamesRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA75E2C2DF55100E4CCF1 /* GamesRouterProtocol.swift */; };
+		569BA7712C2DF55200E4CCF1 /* GamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA7602C2DF55100E4CCF1 /* GamesView.swift */; };
+		569BA7722C2DF55200E4CCF1 /* GamesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA7622C2DF55100E4CCF1 /* GamesViewModel.swift */; };
+		569BA7732C2DF55200E4CCF1 /* GamesViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA7632C2DF55100E4CCF1 /* GamesViewModelProtocol.swift */; };
+		569BA7742C2DF55200E4CCF1 /* GamesAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA7662C2DF55100E4CCF1 /* GamesAssembler.swift */; };
+		569BA7752C2DF55200E4CCF1 /* GamesAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA7672C2DF55100E4CCF1 /* GamesAssemblerProtocol.swift */; };
+		569BA7762C2DF55200E4CCF1 /* GamesRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA7692C2DF55100E4CCF1 /* GamesRoute.swift */; };
+		569BA7932C2DF57E00E4CCF1 /* PlayBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA77E2C2DF57D00E4CCF1 /* PlayBusinessModel.swift */; };
+		569BA7942C2DF57E00E4CCF1 /* PlayBusinessAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA7812C2DF57E00E4CCF1 /* PlayBusinessAssembler.swift */; };
+		569BA7952C2DF57E00E4CCF1 /* PlayBusinessAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA7822C2DF57E00E4CCF1 /* PlayBusinessAssemblerProtocol.swift */; };
+		569BA7962C2DF57E00E4CCF1 /* PlayBusinessRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA7842C2DF57E00E4CCF1 /* PlayBusinessRoute.swift */; };
+		569BA7972C2DF57E00E4CCF1 /* PlayBusinessInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA7872C2DF57E00E4CCF1 /* PlayBusinessInteractor.swift */; };
+		569BA7982C2DF57E00E4CCF1 /* PlayBusinessInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA7882C2DF57E00E4CCF1 /* PlayBusinessInteractorProtocol.swift */; };
+		569BA7992C2DF57E00E4CCF1 /* PlayBusinessRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA78A2C2DF57E00E4CCF1 /* PlayBusinessRouter.swift */; };
+		569BA79A2C2DF57E00E4CCF1 /* PlayBusinessRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA78B2C2DF57E00E4CCF1 /* PlayBusinessRouterProtocol.swift */; };
+		569BA79B2C2DF57E00E4CCF1 /* PlayBusinessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA78D2C2DF57E00E4CCF1 /* PlayBusinessView.swift */; };
+		569BA79C2C2DF57E00E4CCF1 /* PlayBusinessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA78F2C2DF57E00E4CCF1 /* PlayBusinessViewModel.swift */; };
+		569BA79D2C2DF57E00E4CCF1 /* PlayBusinessViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA7902C2DF57E00E4CCF1 /* PlayBusinessViewModelProtocol.swift */; };
 		569DA7E12BF6894400945F0C /* PasswordConfigurationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569DA7E02BF6894400945F0C /* PasswordConfigurationError.swift */; };
 		56A5522C2B2F6135006B1B17 /* WalkyCamerOnboardingRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552192B2F6134006B1B17 /* WalkyCamerOnboardingRoute.swift */; };
 		56A5522D2B2F6135006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5521B2B2F6134006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift */; };
@@ -1077,6 +1099,28 @@
 		5668BB2F2BDFD5FA00A6E05D /* ProfitSelectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfitSelectionViewModel.swift; sourceTree = "<group>"; };
 		5668BB302BDFD5FA00A6E05D /* ProfitSelectionViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfitSelectionViewModelProtocol.swift; sourceTree = "<group>"; };
 		5668BB3E2BE0233200A6E05D /* CamerRegistrationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamerRegistrationData.swift; sourceTree = "<group>"; };
+		569BA7572C2DF55100E4CCF1 /* GamesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesModel.swift; sourceTree = "<group>"; };
+		569BA75A2C2DF55100E4CCF1 /* GamesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesInteractor.swift; sourceTree = "<group>"; };
+		569BA75B2C2DF55100E4CCF1 /* GamesInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesInteractorProtocol.swift; sourceTree = "<group>"; };
+		569BA75D2C2DF55100E4CCF1 /* GamesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesRouter.swift; sourceTree = "<group>"; };
+		569BA75E2C2DF55100E4CCF1 /* GamesRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesRouterProtocol.swift; sourceTree = "<group>"; };
+		569BA7602C2DF55100E4CCF1 /* GamesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesView.swift; sourceTree = "<group>"; };
+		569BA7622C2DF55100E4CCF1 /* GamesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesViewModel.swift; sourceTree = "<group>"; };
+		569BA7632C2DF55100E4CCF1 /* GamesViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesViewModelProtocol.swift; sourceTree = "<group>"; };
+		569BA7662C2DF55100E4CCF1 /* GamesAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesAssembler.swift; sourceTree = "<group>"; };
+		569BA7672C2DF55100E4CCF1 /* GamesAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesAssemblerProtocol.swift; sourceTree = "<group>"; };
+		569BA7692C2DF55100E4CCF1 /* GamesRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesRoute.swift; sourceTree = "<group>"; };
+		569BA77E2C2DF57D00E4CCF1 /* PlayBusinessModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayBusinessModel.swift; sourceTree = "<group>"; };
+		569BA7812C2DF57E00E4CCF1 /* PlayBusinessAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayBusinessAssembler.swift; sourceTree = "<group>"; };
+		569BA7822C2DF57E00E4CCF1 /* PlayBusinessAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayBusinessAssemblerProtocol.swift; sourceTree = "<group>"; };
+		569BA7842C2DF57E00E4CCF1 /* PlayBusinessRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayBusinessRoute.swift; sourceTree = "<group>"; };
+		569BA7872C2DF57E00E4CCF1 /* PlayBusinessInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayBusinessInteractor.swift; sourceTree = "<group>"; };
+		569BA7882C2DF57E00E4CCF1 /* PlayBusinessInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayBusinessInteractorProtocol.swift; sourceTree = "<group>"; };
+		569BA78A2C2DF57E00E4CCF1 /* PlayBusinessRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayBusinessRouter.swift; sourceTree = "<group>"; };
+		569BA78B2C2DF57E00E4CCF1 /* PlayBusinessRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayBusinessRouterProtocol.swift; sourceTree = "<group>"; };
+		569BA78D2C2DF57E00E4CCF1 /* PlayBusinessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayBusinessView.swift; sourceTree = "<group>"; };
+		569BA78F2C2DF57E00E4CCF1 /* PlayBusinessViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayBusinessViewModel.swift; sourceTree = "<group>"; };
+		569BA7902C2DF57E00E4CCF1 /* PlayBusinessViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayBusinessViewModelProtocol.swift; sourceTree = "<group>"; };
 		569DA7E02BF6894400945F0C /* PasswordConfigurationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordConfigurationError.swift; sourceTree = "<group>"; };
 		56A552192B2F6134006B1B17 /* WalkyCamerOnboardingRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingRoute.swift; sourceTree = "<group>"; };
 		56A5521B2B2F6134006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingAssemblerProtocol.swift; sourceTree = "<group>"; };
@@ -1980,6 +2024,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		560C27A82C2DF20F00CF3835 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				569BA76B2C2DF55100E4CCF1 /* Configuration */,
+				569BA7592C2DF55100E4CCF1 /* Domain */,
+				569BA7652C2DF55100E4CCF1 /* Module */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
 		561AA6A62BE30A7700393CEF /* FeatureSelection */ = {
 			isa = PBXGroup;
 			children = (
@@ -2737,6 +2791,192 @@
 				56AF27542BDAE00800DADC29 /* Module */,
 			);
 			path = RegisterWalkcamer;
+			sourceTree = "<group>";
+		};
+		569BA7582C2DF55100E4CCF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				569BA7572C2DF55100E4CCF1 /* GamesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		569BA7592C2DF55100E4CCF1 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				569BA7582C2DF55100E4CCF1 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		569BA75C2C2DF55100E4CCF1 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				569BA75A2C2DF55100E4CCF1 /* GamesInteractor.swift */,
+				569BA75B2C2DF55100E4CCF1 /* GamesInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		569BA75F2C2DF55100E4CCF1 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				569BA75D2C2DF55100E4CCF1 /* GamesRouter.swift */,
+				569BA75E2C2DF55100E4CCF1 /* GamesRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		569BA7612C2DF55100E4CCF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				569BA7602C2DF55100E4CCF1 /* GamesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		569BA7642C2DF55100E4CCF1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				569BA7622C2DF55100E4CCF1 /* GamesViewModel.swift */,
+				569BA7632C2DF55100E4CCF1 /* GamesViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		569BA7652C2DF55100E4CCF1 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				569BA75C2C2DF55100E4CCF1 /* Interactor */,
+				569BA75F2C2DF55100E4CCF1 /* Router */,
+				569BA7612C2DF55100E4CCF1 /* View */,
+				569BA7642C2DF55100E4CCF1 /* ViewModel */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		569BA7682C2DF55100E4CCF1 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				569BA7662C2DF55100E4CCF1 /* GamesAssembler.swift */,
+				569BA7672C2DF55100E4CCF1 /* GamesAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		569BA76A2C2DF55100E4CCF1 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				569BA7692C2DF55100E4CCF1 /* GamesRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		569BA76B2C2DF55100E4CCF1 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				569BA7682C2DF55100E4CCF1 /* Assembler */,
+				569BA76A2C2DF55100E4CCF1 /* Route */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		569BA7772C2DF56000E4CCF1 /* PlayBusiness */ = {
+			isa = PBXGroup;
+			children = (
+				569BA7862C2DF57E00E4CCF1 /* Configuration */,
+				569BA7802C2DF57D00E4CCF1 /* Domain */,
+				569BA7922C2DF57E00E4CCF1 /* Module */,
+			);
+			path = PlayBusiness;
+			sourceTree = "<group>";
+		};
+		569BA77F2C2DF57D00E4CCF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				569BA77E2C2DF57D00E4CCF1 /* PlayBusinessModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		569BA7802C2DF57D00E4CCF1 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				569BA77F2C2DF57D00E4CCF1 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		569BA7832C2DF57E00E4CCF1 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				569BA7812C2DF57E00E4CCF1 /* PlayBusinessAssembler.swift */,
+				569BA7822C2DF57E00E4CCF1 /* PlayBusinessAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		569BA7852C2DF57E00E4CCF1 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				569BA7842C2DF57E00E4CCF1 /* PlayBusinessRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		569BA7862C2DF57E00E4CCF1 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				569BA7832C2DF57E00E4CCF1 /* Assembler */,
+				569BA7852C2DF57E00E4CCF1 /* Route */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		569BA7892C2DF57E00E4CCF1 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				569BA7872C2DF57E00E4CCF1 /* PlayBusinessInteractor.swift */,
+				569BA7882C2DF57E00E4CCF1 /* PlayBusinessInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		569BA78C2C2DF57E00E4CCF1 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				569BA78A2C2DF57E00E4CCF1 /* PlayBusinessRouter.swift */,
+				569BA78B2C2DF57E00E4CCF1 /* PlayBusinessRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		569BA78E2C2DF57E00E4CCF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				569BA78D2C2DF57E00E4CCF1 /* PlayBusinessView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		569BA7912C2DF57E00E4CCF1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				569BA78F2C2DF57E00E4CCF1 /* PlayBusinessViewModel.swift */,
+				569BA7902C2DF57E00E4CCF1 /* PlayBusinessViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		569BA7922C2DF57E00E4CCF1 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				569BA7892C2DF57E00E4CCF1 /* Interactor */,
+				569BA78C2C2DF57E00E4CCF1 /* Router */,
+				569BA78E2C2DF57E00E4CCF1 /* View */,
+				569BA7912C2DF57E00E4CCF1 /* ViewModel */,
+			);
+			path = Module;
 			sourceTree = "<group>";
 		};
 		56A552102B2F5FE7006B1B17 /* WalkyCamerOnboarding */ = {
@@ -3676,6 +3916,8 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				569BA7772C2DF56000E4CCF1 /* PlayBusiness */,
+				560C27A82C2DF20F00CF3835 /* Games */,
 				56F8AE012C247B7700EC7D4F /* IOTSensors */,
 				561D83CA2BE91EC30045C540 /* LegalDocumentation */,
 				561D83A32BE9165A0045C540 /* AvailabilityTab */,
@@ -10219,12 +10461,14 @@
 				EAE401B22BBA3D6100B1311E /* DigitalTwinsOnboardingRouterProtocol.swift in Sources */,
 				5668BB3A2BDFD5FB00A6E05D /* ProfitSelectionRouterProtocol.swift in Sources */,
 				EA4165442AE706C6008CE66A /* NotificationsInteractorProtocol.swift in Sources */,
+				569BA7702C2DF55200E4CCF1 /* GamesRouterProtocol.swift in Sources */,
 				EA6083682B01981800295069 /* CryptoDetailsRouter.swift in Sources */,
 				56A6BE982BE2EFC7007EBF13 /* IdentityUploadRouterProtocol.swift in Sources */,
 				EA15B5B22AD7072400C03407 /* SnackBarModifier.swift in Sources */,
 				EA8652902B90ACC200B86A54 /* IOTOnboardingInteractorProtocol.swift in Sources */,
 				EA20A4EE2B87C3B5006662FA /* Scan3DOnboardingRouterProtocol.swift in Sources */,
 				EAA1E6452AFB03FD00A42174 /* CashTabModel.swift in Sources */,
+				569BA7992C2DF57E00E4CCF1 /* PlayBusinessRouter.swift in Sources */,
 				EA0E40952AF69771002B7437 /* CashWalletOnboardingAssembler.swift in Sources */,
 				EA86532E2B90E9CA00B86A54 /* AIOnboardingAssemblerProtocol.swift in Sources */,
 				EAF47C412B838D74003F8B86 /* DroneMenuInteractor.swift in Sources */,
@@ -10326,6 +10570,7 @@
 				EAF47C432B838D74003F8B86 /* DroneMenuRouter.swift in Sources */,
 				EA910F8B2ADA06F500584B98 /* RegistrationRoute.swift in Sources */,
 				EA172AF72AF06BDE00EB1514 /* ConfirmMailAssemblerProtocol.swift in Sources */,
+				569BA79D2C2DF57E00E4CCF1 /* PlayBusinessViewModelProtocol.swift in Sources */,
 				EA282ED12AEB531100B90920 /* FunctionsModel.swift in Sources */,
 				EA8652412B902E4B00B86A54 /* FunctionMenuRouter.swift in Sources */,
 				EA910F912ADA06F500584B98 /* RegistrationView.swift in Sources */,
@@ -10341,6 +10586,7 @@
 				56A552322B2F6135006B1B17 /* WalkyCamerOnboardingInteractor.swift in Sources */,
 				EA20A5662B87D35B006662FA /* ShareSheetInteractor.swift in Sources */,
 				EA172AD92AF0335400EB1514 /* AdvertisementCard.swift in Sources */,
+				569BA7752C2DF55200E4CCF1 /* GamesAssemblerProtocol.swift in Sources */,
 				EADB5CAA2B190819005863E1 /* VideoCallInteractor.swift in Sources */,
 				EA20A5692B87D35B006662FA /* ShareSheetModel.swift in Sources */,
 				561D83EA2BE91EDF0045C540 /* LegalDocumentationView.swift in Sources */,
@@ -10352,6 +10598,7 @@
 				561D83A02BE90D930045C540 /* CamerAvailabilityView.swift in Sources */,
 				EAD048692AE22C530096E6AB /* RegistrationPlansViewModelProtocol.swift in Sources */,
 				EA5A87F72B67FD7C00BBB7F9 /* FetchUserDataUseCase.swift in Sources */,
+				569BA79A2C2DF57E00E4CCF1 /* PlayBusinessRouterProtocol.swift in Sources */,
 				EAF47B7D2B82FCE8003F8B86 /* BookWalkycamerAssembler.swift in Sources */,
 				EAA1E63B2AFB03FD00A42174 /* CashTabRoute.swift in Sources */,
 				EA8EF8DE2B67E24400136D1F /* KeychainPersistenceProtocol.swift in Sources */,
@@ -10402,6 +10649,7 @@
 				EA94A5332B7160EF00EC3037 /* ServiceDetailsInteractor.swift in Sources */,
 				561D83ED2BE91EE00045C540 /* LegalDocumentationAssembler.swift in Sources */,
 				EA910FA62ADC48DE00584B98 /* WCTabBarContainerView.swift in Sources */,
+				569BA7762C2DF55200E4CCF1 /* GamesRoute.swift in Sources */,
 				EA910F672AD9B20600584B98 /* NavigationController+Extension.swift in Sources */,
 				EA0E40BB2AF70E86002B7437 /* CashWalletViewModelProtocol.swift in Sources */,
 				EA60836C2B01981800295069 /* CryptoDetailsAssemblerProtocol.swift in Sources */,
@@ -10475,6 +10723,7 @@
 				EA172B252AF06EF600EB1514 /* StartupInteractorProtocol.swift in Sources */,
 				EA8652FF2B90E0FB00B86A54 /* LidarOnboardingModel.swift in Sources */,
 				561AA6C72BE30A9900393CEF /* FeatureSelectionViewModel.swift in Sources */,
+				569BA76C2C2DF55200E4CCF1 /* GamesModel.swift in Sources */,
 				56459FAC2BFFB5FD00776F68 /* InformationViewStyle.swift in Sources */,
 				EA6083E12B01DBE000295069 /* GalleryPhotosAssemblerProtocol.swift in Sources */,
 				561D83C12BE916D70045C540 /* AvailabilityTabRouter.swift in Sources */,
@@ -10551,6 +10800,7 @@
 				EAE8EC542B9574840003AE96 /* ChatListViewModel.swift in Sources */,
 				EA910F8E2ADA06F500584B98 /* RegistrationViewModel.swift in Sources */,
 				EAE401D62BBA452900B1311E /* DigitalTwinsMenuViewModelProtocol.swift in Sources */,
+				569BA7932C2DF57E00E4CCF1 /* PlayBusinessModel.swift in Sources */,
 				EA6083462AFD58A900295069 /* CryptoTabRouterProtocol.swift in Sources */,
 				EA8652DC2B90DCE900B86A54 /* PrintMenuViewModel.swift in Sources */,
 				EA282ED02AEB531100B90920 /* FunctionsRouter.swift in Sources */,
@@ -10622,6 +10872,7 @@
 				EA20A55F2B87D35B006662FA /* ShareSheetRoute.swift in Sources */,
 				EA20A4F22B87C3B5006662FA /* Scan3DOnboardingModel.swift in Sources */,
 				EAF47BC42B8306E9003F8B86 /* TimeTabModel.swift in Sources */,
+				569BA7722C2DF55200E4CCF1 /* GamesViewModel.swift in Sources */,
 				EA8652DE2B90DCE900B86A54 /* PrintMenuView.swift in Sources */,
 				EA910FFA2ADCBCC000584B98 /* MenuRouter.swift in Sources */,
 				561AA6EF2BE3A6B500393CEF /* FeatureInformationInteractorProtocol.swift in Sources */,
@@ -10680,9 +10931,11 @@
 				EA4A1C6A2B87909F00B5FC59 /* ExternalAssistantModel.swift in Sources */,
 				EA8653092B90E0FB00B86A54 /* LidarOnboardingAssembler.swift in Sources */,
 				56A552572B2F6E3D006B1B17 /* StreetCamMenuAssembler.swift in Sources */,
+				569BA79C2C2DF57E00E4CCF1 /* PlayBusinessViewModel.swift in Sources */,
 				EA20A4EB2B87C3B4006662FA /* Scan3DOnboardingInteractor.swift in Sources */,
 				EA172AF82AF06BDE00EB1514 /* ConfirmMailAssembler.swift in Sources */,
 				EA82DB532ADF605500E6B39A /* ReminderCardView.swift in Sources */,
+				569BA7962C2DF57E00E4CCF1 /* PlayBusinessRoute.swift in Sources */,
 				EA9110262ADDAE6400584B98 /* ProfileHeaderView.swift in Sources */,
 				EA57A7A82B6C1558006247DD /* CammerDetailsModel.swift in Sources */,
 				EAE8EC552B9574840003AE96 /* ChatListView.swift in Sources */,
@@ -10801,6 +11054,7 @@
 				EA8652932B90ACC200B86A54 /* IOTOnboardingRouter.swift in Sources */,
 				EAF47C3D2B838D74003F8B86 /* DroneMenuViewModel.swift in Sources */,
 				EA910FF52ADCBCC000584B98 /* MenuViewModelProtocol.swift in Sources */,
+				569BA7942C2DF57E00E4CCF1 /* PlayBusinessAssembler.swift in Sources */,
 				EA910F8C2ADA06F500584B98 /* RegistrationAssemblerProtocol.swift in Sources */,
 				EA910F9E2ADC43B200584B98 /* FullScreenWrapper.swift in Sources */,
 				561D83E92BE91EDF0045C540 /* LegalDocumentationRouterProtocol.swift in Sources */,
@@ -10837,6 +11091,7 @@
 				EA0655502BB5DA5D006148E7 /* RadarMenuRouterProtocol.swift in Sources */,
 				EA8653072B90E0FB00B86A54 /* LidarOnboardingRoute.swift in Sources */,
 				EAE401B12BBA3D6100B1311E /* DigitalTwinsOnboardingRouter.swift in Sources */,
+				569BA7952C2DF57E00E4CCF1 /* PlayBusinessAssemblerProtocol.swift in Sources */,
 				EAE401D42BBA452900B1311E /* DigitalTwinsMenuModel.swift in Sources */,
 				EA57A7CC2B6C2C31006247DD /* AddPeopleTransmissionAssemblerProtocol.swift in Sources */,
 				EA282E112AE8327100B90920 /* DateFormat.swift in Sources */,
@@ -10873,6 +11128,7 @@
 				EAD048712AE22C530096E6AB /* RegistrationPlansRoute.swift in Sources */,
 				56A6BE9A2BE2EFC7007EBF13 /* IdentityUploadViewModel.swift in Sources */,
 				EA910F8D2ADA06F500584B98 /* RegistrationAssembler.swift in Sources */,
+				569BA7972C2DF57E00E4CCF1 /* PlayBusinessInteractor.swift in Sources */,
 				EAE401D12BBA452900B1311E /* DigitalTwinsMenuRoute.swift in Sources */,
 				EAE8EC492B9574840003AE96 /* ChatDetailViewModel.swift in Sources */,
 				EA4AE48B2B7505D100B5A89F /* TabBarInteractorProtocol.swift in Sources */,
@@ -10904,6 +11160,7 @@
 				EAB63BBD2B83D6390017BDA4 /* ARHandsMenuViewModel.swift in Sources */,
 				EA4A1C852B8799B400B5FC59 /* RuralDroneOnboardingRoute.swift in Sources */,
 				EA8652BA2B90DA9600B86A54 /* 3DPrintOnboardingRouter.swift in Sources */,
+				569BA79B2C2DF57E00E4CCF1 /* PlayBusinessView.swift in Sources */,
 				EA8652462B902E4B00B86A54 /* FunctionMenuAssemblerProtocol.swift in Sources */,
 				56A552342B2F6135006B1B17 /* WalkyCamerOnboardingRouter.swift in Sources */,
 				EA910F2E2AD8B14C00584B98 /* WCUIButton.swift in Sources */,
@@ -10989,6 +11246,7 @@
 				EAB63B922B83D2ED0017BDA4 /* ARHandsOnboardingRoute.swift in Sources */,
 				EA8652BB2B90DA9600B86A54 /* 3DPrintOnboardingRouterProtocol.swift in Sources */,
 				561AA6EE2BE3A6B500393CEF /* FeatureInformationInteractor.swift in Sources */,
+				569BA7732C2DF55200E4CCF1 /* GamesViewModelProtocol.swift in Sources */,
 				EA910F922ADA06F500584B98 /* RegistrationInteractor.swift in Sources */,
 				EA86537B2B90FA8800B86A54 /* AIMenuInteractorProtocol.swift in Sources */,
 				EA910FC52ADC495700584B98 /* TabBarAssembler.swift in Sources */,
@@ -11031,6 +11289,7 @@
 				EA15B5A12AD6E44D00C03407 /* LoginAssembler.swift in Sources */,
 				EA87DE222BACBAB1001CB5E6 /* CreateSubscriptionUseCase.swift in Sources */,
 				561D83C42BE916D70045C540 /* AvailabilityTabViewModel.swift in Sources */,
+				569BA76F2C2DF55200E4CCF1 /* GamesRouter.swift in Sources */,
 				561AA6CE2BE3115800393CEF /* WrappingHStack.swift in Sources */,
 				5668BB362BDFD5FB00A6E05D /* ProfitSelectionModel.swift in Sources */,
 				EA94A52E2B7160EF00EC3037 /* ServiceDetailsAssemblerProtocol.swift in Sources */,
@@ -11057,16 +11316,21 @@
 				EA910F6B2AD9CCF500584B98 /* PageControl.swift in Sources */,
 				EA2C4C2B2B7E5C9500F1EE26 /* DroneOnboardingPageView.swift in Sources */,
 				EAE8EC4D2B9574840003AE96 /* ChatDetailRouterProtocol.swift in Sources */,
+				569BA76D2C2DF55200E4CCF1 /* GamesInteractor.swift in Sources */,
 				EA172B212AF06EF600EB1514 /* StartupViewModel.swift in Sources */,
 				EA282E572AE952F700B90920 /* ProfileView.swift in Sources */,
 				EA86534D2B90EBE800B86A54 /* ConfigureAccessViewModel.swift in Sources */,
 				EAF47C872B839308003F8B86 /* FlightMenuInteractor.swift in Sources */,
 				56F8AE282C247BE000EC7D4F /* IOTSensorsRouter.swift in Sources */,
+				569BA7712C2DF55200E4CCF1 /* GamesView.swift in Sources */,
 				EAE8EC582B9574840003AE96 /* ChatListRouter.swift in Sources */,
 				EA8652B62B90DA9600B86A54 /* 3DPrintOnboardingViewModel.swift in Sources */,
+				569BA7742C2DF55200E4CCF1 /* GamesAssembler.swift in Sources */,
 				EA20A4E82B87C3B4006662FA /* Scan3DOnboardingViewModelProtocol.swift in Sources */,
 				EA60836A2B01981800295069 /* CryptoDetailsModel.swift in Sources */,
 				EA172AFE2AF06BDE00EB1514 /* ConfirmMailInteractor.swift in Sources */,
+				569BA7982C2DF57E00E4CCF1 /* PlayBusinessInteractorProtocol.swift in Sources */,
+				569BA76E2C2DF55200E4CCF1 /* GamesInteractorProtocol.swift in Sources */,
 				EA172AFB2AF06BDE00EB1514 /* ConfirmMailViewModelProtocol.swift in Sources */,
 				EA9110232ADDADE100584B98 /* HomeAssemblerProtocol.swift in Sources */,
 				56A552382B2F6168006B1B17 /* WalkyCamerOnboardingPageView.swift in Sources */,

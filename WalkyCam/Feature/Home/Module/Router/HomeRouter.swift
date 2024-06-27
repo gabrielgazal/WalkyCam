@@ -67,4 +67,10 @@ final class HomeRouter: Router, HomeRouterProtocol {
             RegistrationPlansRoute(isPresented: isNavigating)
         )
     }
+    
+    func routeToGallery() {
+        navigateTo(
+            GalleryRoute(isPresented: isNavigating)
+        )
+    }
 }

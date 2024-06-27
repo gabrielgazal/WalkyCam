@@ -11,4 +11,5 @@ protocol HomeRouterProtocol: Router {
     func routeToScan3D()
     func routeToChat()
     func routeToRegistrationPlans()
+    func routeToGallery()
 }
