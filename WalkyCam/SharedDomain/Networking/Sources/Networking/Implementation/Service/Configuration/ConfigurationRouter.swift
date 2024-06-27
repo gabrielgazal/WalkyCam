@@ -9,12 +9,6 @@ import Foundation
 import Moya
 
 enum ConfigurationRouter {
-    case getStreetCamConfiguration(userId: String)
-    case getScan3DConfiguration(userId: String)
-    case getVideoCallConfiguration(userId: String)
-    case getARHandsConfiguration(userId: String)
-    case getDigitalTwinsCamConfiguration(userId: String)
-    case getDroneConfiguration(userId: String)
     case updateStreetCamConfiguration(userId: String)
     case updateScan3DConfiguration(userId: String)
     case updateVideoCallConfiguration(userId: String)
@@ -30,18 +24,6 @@ extension ConfigurationRouter: TargetType {
 
     var path: String {
         switch self {
-        case let .getStreetCamConfiguration(userId):
-            return "user/get-street-cam-configuration/\(userId)"
-        case let .getScan3DConfiguration(userId):
-            return "user/get-scan3d-configuration/\(userId)"
-        case let .getVideoCallConfiguration(userId):
-            return "user/get-videocall-configuration/\(userId)"
-        case let .getARHandsConfiguration(userId):
-            return "user/get-arhands-configuration/\(userId)"
-        case let .getDigitalTwinsCamConfiguration(userId):
-            return "user/get-digital-twins-configuration/\(userId)"
-        case let .getDroneConfiguration(userId):
-            return "user/get-drone-configuration/\(userId)"
         case .updateStreetCamConfiguration:
             return "user/update-street-cam-configuration"
         case .updateScan3DConfiguration:
@@ -59,35 +41,44 @@ extension ConfigurationRouter: TargetType {
 
     var method: Moya.Method {
         switch self {
-        case .getStreetCamConfiguration, .getScan3DConfiguration, .getVideoCallConfiguration, .getARHandsConfiguration, .getDigitalTwinsCamConfiguration, .getDroneConfiguration:
-            return .get
         case .updateStreetCamConfiguration, .updateScan3DConfiguration, .updateVideoCallConfiguration, .updateARHandsConfiguration, .updateDigitalTwinsCamConfiguration, .updateDroneConfiguration:
-            return .post
+            return .put
         }
     }
 
     var task: Task {
         switch self {
-        case .getStreetCamConfiguration, .getScan3DConfiguration, .getVideoCallConfiguration, .getARHandsConfiguration, .getDigitalTwinsCamConfiguration, .getDroneConfiguration:
-            return .requestPlain
         case let .updateStreetCamConfiguration(userId):
-            return updateConfiguration(userId)
+            return updateStreetCamConfiguration(userId)
         case let .updateScan3DConfiguration(userId):
-            return updateConfiguration(userId)
+            return updateScan3DConfiguration(userId)
         case let .updateVideoCallConfiguration(userId):
-            return updateConfiguration(userId)
+            return updateVideoCallConfiguration(userId)
         case let .updateARHandsConfiguration(userId):
-            return updateConfiguration(userId)
+            return updateARHandsConfiguration(userId)
         case let .updateDigitalTwinsCamConfiguration(userId):
-            return updateConfiguration(userId)
+            return updateDigitalTwinsCamConfiguration(userId)
         case let .updateDroneConfiguration(userId):
-            return updateConfiguration(userId)
+            return updateDroneConfiguration(userId)
         }
     }
 
     // MARK: - Private Methods
 
-    private func updateConfiguration(_ userId: String) -> Task {
+    private func updateStreetCamConfiguration(_ userId: String) -> Task {
+        let parameters = [
+            "id_user": userId,
+            "onboarding_readed": true,
+            "pixelation_terms_accepted": true
+        ] as [String:Any]
+
+        return .requestParameters(
+            parameters: parameters,
+            encoding: JSONEncoding.default
+        )
+    }
+
+    private func updateScan3DConfiguration(_ userId: String) -> Task {
         let parameters = [
             "id_user": userId,
             "onboarding_readed": true
@@ -98,5 +89,54 @@ extension ConfigurationRouter: TargetType {
             encoding: JSONEncoding.default
         )
     }
+    
+    private func updateVideoCallConfiguration(_ userId: String) -> Task {
+        let parameters = [
+            "id_user": userId,
+            "onboarding_readed": true,
+            "pixelation_terms_accepted": true
+        ] as [String:Any]
 
+        return .requestParameters(
+            parameters: parameters,
+            encoding: JSONEncoding.default
+        )
+    }
+    
+    private func updateARHandsConfiguration(_ userId: String) -> Task {
+        let parameters = [
+            "id_user": userId,
+            "onboarding_readed": true
+        ] as [String:Any]
+
+        return .requestParameters(
+            parameters: parameters,
+            encoding: JSONEncoding.default
+        )
+    }
+    
+    private func updateDigitalTwinsCamConfiguration(_ userId: String) -> Task {
+        let parameters = [
+            "id_user": userId,
+            "onboarding_readed": true
+        ] as [String:Any]
+
+        return .requestParameters(
+            parameters: parameters,
+            encoding: JSONEncoding.default
+        )
+    }
+    
+    private func updateDroneConfiguration(_ userId: String) -> Task {
+        let parameters = [
+            "id_user": userId,
+            "onboarding_readed": true,
+            "terms_accepted": true
+        ] as [String:Any]
+
+        return .requestParameters(
+            parameters: parameters,
+            encoding: JSONEncoding.default
+        )
+    }
 }

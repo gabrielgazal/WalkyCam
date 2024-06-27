@@ -55,8 +55,17 @@ extension LoginUseCase {
                 name: loginResponse.name,
                 lastName: loginResponse.lastName,
                 email: loginResponse.email,
-                address: loginResponse.address
-//                configurations: .init(streetCam: <#T##Bool#>, scan3D: <#T##Bool#>, videoCall: <#T##Bool#>, ARHands: <#T##Bool#>, digitalTwins: <#T##Bool#>, drone: <#T##Bool#>)
+                address: loginResponse.address,
+                configurations: .init(
+                    streetcamConfiguration: loginResponse.configurations.streetcamConfiguration.onboardingReaded,
+                    scan3dConfiguration: loginResponse.configurations.scan3dConfiguration.onboardingReaded,
+                    videocallConfiguration: loginResponse.configurations.videocallConfiguration.onboardingReaded,
+                    arHandsConfiguration: loginResponse.configurations.arHandsConfiguration.onboardingReaded,
+                    digitalTwinsConfiguration: loginResponse.configurations.digitalTwinsConfiguration.onboardingReaded,
+                    droneConfiguration: loginResponse.configurations.droneConfiguration.onboardingReaded,
+                    droneIOTConfiguration: loginResponse.configurations.droneIOTConfiguration.onboardingReaded,
+                    print3dConfiguration: loginResponse.configurations.print3dConfiguration.onboardingReaded
+                )
             )
 
             try session.save(user: loginOutput.asUserSessionData())
@@ -77,7 +86,16 @@ extension LoginOutput {
             lastName: lastName,
             email: email,
             address: address,
-            configurations: .init()
+            configurations: .init(
+                streetcamConfiguration: configurations.streetcamConfiguration,
+                scan3dConfiguration: configurations.scan3dConfiguration,
+                videocallConfiguration: configurations.videocallConfiguration,
+                arHandsConfiguration: configurations.arHandsConfiguration,
+                digitalTwinsConfiguration: configurations.digitalTwinsConfiguration,
+                droneConfiguration: configurations.droneConfiguration,
+                droneIOTConfiguration: configurations.droneIOTConfiguration,
+                print3dConfiguration: configurations.print3dConfiguration
+            )
         )
     }
 }

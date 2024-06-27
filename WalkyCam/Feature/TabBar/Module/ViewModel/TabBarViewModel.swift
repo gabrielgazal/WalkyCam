@@ -42,14 +42,4 @@ final class TabBarViewModel: TabBarViewModelProtocol {
         else { return }
         tabBarItems[tabBarItemIndex].destination = tabBarItem.destination
     }
-
-    // MARK: - Public API
-
-    @MainActor func getConfigurations() async {
-        if let userId = try? UserSession().user().id {
-            do {
-                _ = try await interactor.getUserConfigurations(id: userId)
-            } catch {}
-        }
-    }
 }

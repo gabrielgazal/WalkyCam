@@ -415,7 +415,6 @@
 		EA4A1C8D2B8799B400B5FC59 /* RuralDroneOnboardingInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A1C7E2B8799B400B5FC59 /* RuralDroneOnboardingInteractorProtocol.swift */; };
 		EA4A1C8E2B8799B400B5FC59 /* RuralDroneOnboardingRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A1C802B8799B400B5FC59 /* RuralDroneOnboardingRouterProtocol.swift */; };
 		EA4A1C8F2B8799B400B5FC59 /* RuralDroneOnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A1C812B8799B400B5FC59 /* RuralDroneOnboardingRouter.swift */; };
-		EA4AE4882B75011B00B5A89F /* FetchUserConfigurationsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE4872B75011B00B5A89F /* FetchUserConfigurationsUseCase.swift */; };
 		EA4AE48B2B7505D100B5A89F /* TabBarInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE48A2B7505D100B5A89F /* TabBarInteractorProtocol.swift */; };
 		EA4AE48D2B75065300B5A89F /* TabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE48C2B75065300B5A89F /* TabBarInteractor.swift */; };
 		EA4AE4942B75136600B5A89F /* UpdateStreetcamConfigurationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4AE4932B75136600B5A89F /* UpdateStreetcamConfigurationUseCase.swift */; };
@@ -1394,7 +1393,6 @@
 		EA4A1C7E2B8799B400B5FC59 /* RuralDroneOnboardingInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuralDroneOnboardingInteractorProtocol.swift; sourceTree = "<group>"; };
 		EA4A1C802B8799B400B5FC59 /* RuralDroneOnboardingRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuralDroneOnboardingRouterProtocol.swift; sourceTree = "<group>"; };
 		EA4A1C812B8799B400B5FC59 /* RuralDroneOnboardingRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuralDroneOnboardingRouter.swift; sourceTree = "<group>"; };
-		EA4AE4872B75011B00B5A89F /* FetchUserConfigurationsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUserConfigurationsUseCase.swift; sourceTree = "<group>"; };
 		EA4AE48A2B7505D100B5A89F /* TabBarInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarInteractorProtocol.swift; sourceTree = "<group>"; };
 		EA4AE48C2B75065300B5A89F /* TabBarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarInteractor.swift; sourceTree = "<group>"; };
 		EA4AE4932B75136600B5A89F /* UpdateStreetcamConfigurationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStreetcamConfigurationUseCase.swift; sourceTree = "<group>"; };
@@ -5420,14 +5418,6 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		EA4AE4862B75010700B5A89F /* UseCase */ = {
-			isa = PBXGroup;
-			children = (
-				EA4AE4872B75011B00B5A89F /* FetchUserConfigurationsUseCase.swift */,
-			);
-			path = UseCase;
-			sourceTree = "<group>";
-		};
 		EA4AE4892B7505B900B5A89F /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -7828,7 +7818,6 @@
 		EA910FC12ADC495700584B98 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				EA4AE4862B75010700B5A89F /* UseCase */,
 				EA910FD02ADC497D00584B98 /* Builder */,
 				EA910FC22ADC495700584B98 /* Model */,
 			);
@@ -10684,7 +10673,6 @@
 				EA6083DA2B01DBDF00295069 /* GalleryPhotosViewModelProtocol.swift in Sources */,
 				56AF275C2BDAE00800DADC29 /* RegisterWalkcamerRouterProtocol.swift in Sources */,
 				EA8653272B90E9CA00B86A54 /* AIOnboardingViewModel.swift in Sources */,
-				EA4AE4882B75011B00B5A89F /* FetchUserConfigurationsUseCase.swift in Sources */,
 				EA910FD22ADC499500584B98 /* TabBarBuilder.swift in Sources */,
 				EA5E1D762AD716D200738A8F /* ButtonStyleDescriptor.swift in Sources */,
 				EA8653262B90E9CA00B86A54 /* AIOnboardingViewModelProtocol.swift in Sources */,

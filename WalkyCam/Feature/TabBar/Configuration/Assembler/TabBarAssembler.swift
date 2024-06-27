@@ -16,9 +16,7 @@ final class TabBarAssembler: TabBarAssemblerProtocol {
         let repository = route.retailRepository.resolve(ConfigurationRepositoryProtocol.self)
 
         let interactor = TabBarInteractor(
-            useCases: .init(
-                fetchConfigurations: .fetchConfigurations(repository: repository)
-            )
+            useCases: .init()
         )
 
         let viewModel = TabBarViewModel(

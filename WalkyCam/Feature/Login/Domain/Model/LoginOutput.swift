@@ -14,14 +14,16 @@ struct LoginOutput: Hashable {
     public let lastName: String
     public let email: String
     public let address: String
-//    public let configurations: Configurations
-//
-//    public struct Configurations: Hashable, Codable {
-//        public var streetCam: Bool
-//        public var scan3D: Bool
-//        public var videoCall: Bool
-//        public var ARHands: Bool
-//        public var digitalTwins: Bool
-//        public var drone: Bool
-//    }
+    public let configurations: Configurations
+    
+    public struct Configurations: Hashable, Codable {
+        public var streetcamConfiguration: Bool
+        public var scan3dConfiguration: Bool
+        public var videocallConfiguration: Bool
+        public var arHandsConfiguration: Bool
+        public var digitalTwinsConfiguration: Bool
+        public var droneConfiguration: Bool
+        public var droneIOTConfiguration: Bool
+        public var print3dConfiguration: Bool
+    }
 }
