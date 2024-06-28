@@ -1,3 +1,3 @@
 protocol VideoCallInteractorProtocol {
-    func someFunction()
+    func createVideoCall() async throws -> String
 }

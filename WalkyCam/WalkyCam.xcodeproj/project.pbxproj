@@ -85,6 +85,9 @@
 		5621B7042C2E605100BFD923 /* UnavailableFeatureAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621B6F62C2E605000BFD923 /* UnavailableFeatureAssembler.swift */; };
 		5621B7052C2E605100BFD923 /* UnavailableFeatureAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621B6F72C2E605000BFD923 /* UnavailableFeatureAssemblerProtocol.swift */; };
 		5621B7062C2E605100BFD923 /* UnavailableFeatureRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621B6F92C2E605000BFD923 /* UnavailableFeatureRoute.swift */; };
+		5621B7092C2EF25400BFD923 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 5621B7082C2EF25400BFD923 /* SocketIO */; };
+		5621B70C2C2EF32100BFD923 /* ChatBotClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621B70B2C2EF32100BFD923 /* ChatBotClient.swift */; };
+		5621B70F2C2F478300BFD923 /* CreateVideoCallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621B70E2C2F478200BFD923 /* CreateVideoCallUseCase.swift */; };
 		5637A8162AD5DD72000586DF /* WalkyCamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5637A8152AD5DD72000586DF /* WalkyCamApp.swift */; };
 		5637A81A2AD5DD73000586DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5637A8192AD5DD73000586DF /* Assets.xcassets */; };
 		56459FA32BFFB4D300776F68 /* SnackBarAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56459F982BFFB4D300776F68 /* SnackBarAssembler.swift */; };
@@ -1092,6 +1095,8 @@
 		5621B6F62C2E605000BFD923 /* UnavailableFeatureAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnavailableFeatureAssembler.swift; sourceTree = "<group>"; };
 		5621B6F72C2E605000BFD923 /* UnavailableFeatureAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnavailableFeatureAssemblerProtocol.swift; sourceTree = "<group>"; };
 		5621B6F92C2E605000BFD923 /* UnavailableFeatureRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnavailableFeatureRoute.swift; sourceTree = "<group>"; };
+		5621B70B2C2EF32100BFD923 /* ChatBotClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotClient.swift; sourceTree = "<group>"; };
+		5621B70E2C2F478200BFD923 /* CreateVideoCallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateVideoCallUseCase.swift; sourceTree = "<group>"; };
 		5637A8122AD5DD72000586DF /* WalkyCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkyCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5637A8152AD5DD72000586DF /* WalkyCamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkyCamApp.swift; sourceTree = "<group>"; };
 		5637A8192AD5DD73000586DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -2024,6 +2029,7 @@
 				EA5103142BA7EA3200A2DE2E /* StripeApplePay in Frameworks */,
 				EA5103202BA7EA3200A2DE2E /* StripePaymentsUI in Frameworks */,
 				EA890A262B61ECFB00FC369B /* Networking in Frameworks */,
+				5621B7092C2EF25400BFD923 /* SocketIO in Frameworks */,
 				EA5103182BA7EA3200A2DE2E /* StripeFinancialConnections in Frameworks */,
 				EA5103122BA7EA3200A2DE2E /* Stripe in Frameworks */,
 				DFD0945A60FA5B637D89BC1D /* Pods_WalkyCam.framework in Frameworks */,
@@ -2682,6 +2688,22 @@
 				5621B6FA2C2E605000BFD923 /* Route */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		5621B70A2C2EF27000BFD923 /* ChatBot */ = {
+			isa = PBXGroup;
+			children = (
+				5621B70B2C2EF32100BFD923 /* ChatBotClient.swift */,
+			);
+			path = ChatBot;
+			sourceTree = "<group>";
+		};
+		5621B70D2C2F477600BFD923 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				5621B70E2C2F478200BFD923 /* CreateVideoCallUseCase.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 		5637A8092AD5DD71000586DF = {
@@ -4193,6 +4215,7 @@
 		EA15B5A52AD7067400C03407 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				5621B70A2C2EF27000BFD923 /* ChatBot */,
 				EA8EF8CE2B67E11600136D1F /* Persistence */,
 				EA890A272B61EDCE00FC369B /* DependencyStore */,
 				EA1FD19A2B1E8F83000E583D /* Jitsi */,
@@ -9102,6 +9125,7 @@
 		EADB5CA12B190819005863E1 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				5621B70D2C2F477600BFD923 /* UseCase */,
 				EADB5CA22B190819005863E1 /* Model */,
 			);
 			path = Domain;
@@ -10421,6 +10445,7 @@
 				EA51031B2BA7EA3200A2DE2E /* StripePaymentSheet */,
 				EA51031D2BA7EA3200A2DE2E /* StripePayments */,
 				EA51031F2BA7EA3200A2DE2E /* StripePaymentsUI */,
+				5621B7082C2EF25400BFD923 /* SocketIO */,
 			);
 			productName = WalkyCam;
 			productReference = 5637A8122AD5DD72000586DF /* WalkyCam.app */;
@@ -10451,6 +10476,7 @@
 			mainGroup = 5637A8092AD5DD71000586DF;
 			packageReferences = (
 				EA5103102BA7EA3200A2DE2E /* XCRemoteSwiftPackageReference "stripe-ios-spm" */,
+				5621B7072C2EF25400BFD923 /* XCRemoteSwiftPackageReference "socket" */,
 			);
 			productRefGroup = 5637A8132AD5DD72000586DF /* Products */;
 			projectDirPath = "";
@@ -10933,6 +10959,7 @@
 				56A552562B2F6E3D006B1B17 /* StreetCamMenuAssemblerProtocol.swift in Sources */,
 				EA3E5C9E2B876E1F00158207 /* ListInputView.swift in Sources */,
 				EAF47BA42B82FFF2003F8B86 /* CalendarTabAssemblerProtocol.swift in Sources */,
+				5621B70C2C2EF32100BFD923 /* ChatBotClient.swift in Sources */,
 				EA282E562AE952F700B90920 /* ProfileViewModel.swift in Sources */,
 				EA20A4F02B87C3B5006662FA /* Scan3DOnboardingAssembler.swift in Sources */,
 				EA910FCA2ADC495700584B98 /* TabBarView.swift in Sources */,
@@ -11482,6 +11509,7 @@
 				EA910FA42ADC470A00584B98 /* WCTabBarView.swift in Sources */,
 				561AA6CB2BE30A9900393CEF /* FeatureSelectionRoute.swift in Sources */,
 				561FC8C82B5C6854005B6006 /* ErrorView.swift in Sources */,
+				5621B70F2C2F478300BFD923 /* CreateVideoCallUseCase.swift in Sources */,
 				EAB63B9B2B83D2ED0017BDA4 /* ARHandsOnboardingRouter.swift in Sources */,
 				EA60838E2B01CD0A00295069 /* ShopTabViewModelProtocol.swift in Sources */,
 				56A6BE992BE2EFC7007EBF13 /* IdentityUploadView.swift in Sources */,
@@ -11740,6 +11768,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5621B7072C2EF25400BFD923 /* XCRemoteSwiftPackageReference "socket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		EA5103102BA7EA3200A2DE2E /* XCRemoteSwiftPackageReference "stripe-ios-spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/stripe/stripe-ios-spm";
@@ -11751,6 +11787,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5621B7082C2EF25400BFD923 /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5621B7072C2EF25400BFD923 /* XCRemoteSwiftPackageReference "socket" */;
+			productName = SocketIO;
+		};
 		EA5103112BA7EA3200A2DE2E /* Stripe */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EA5103102BA7EA3200A2DE2E /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;

@@ -1,4 +1,5 @@
 import SwiftUI
+import Foundation
 
 struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouterProtocol>: View {
     
@@ -6,9 +7,8 @@ struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouter
     
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
-    @State var isWalkyBotOnboardingEnabled: Bool = !UserDefaults.standard.bool(forKey: "isWalkyBotOnboardingDisabled")
     
-    // MARK: - Initialization
+    // MARK: - Initializationr
     
     init(viewModel: ViewModel,
          router: Router) {
@@ -23,83 +23,46 @@ struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouter
             VStack(spacing: Tokens.Size.Spacing.regular) {
                 header
                 ScrollView(showsIndicators: false) {
-                    AsyncDataView(viewModel.messages) { messages in
-                        ForEach(messages, id: \.self) { message in
-                            if message.isSenderMessage {
-                                userMessage(message.value, date: message.timeStamp.toTimeString())
-                                    .flippedUpsideDown()
-                            } else {
-                                channelMessage(message.value, date: message.timeStamp.toTimeString())
-                                    .flippedUpsideDown()
-                            }
+                    ForEach(viewModel.messages.reversed(), id: \.self) { message in
+                        if message.username == viewModel.userName {
+                            userMessage(message.text)
+                                .flippedUpsideDown()
+                        } else {
+                            channelMessage(message.text)
+                                .flippedUpsideDown()
                         }
-                    } errorAction: {}
-                        .padding(Tokens.Size.Spacing.regular)
+                    }
+                    .padding(Tokens.Size.Spacing.large)
                 }
                 .flippedUpsideDown()
             }
-            .padding(Tokens.Size.Spacing.large)
             .footer {
                 HStack(spacing: Tokens.Size.Spacing.regular) {
                     Asset.Icons.smileFace.swiftUIImage
-                    TextInputView(text: $viewModel.currentMessage,
+                    TextInputView(text: $viewModel.message,
                                   placeholder: "Escribe aquí...",
                                   backgroundColor: .clear)
                     Asset.Icons.sendIcon.swiftUIImage
                         .renderingMode(.template)
-                        .foregroundColor(viewModel.currentMessage.isEmpty ? .grisOscuro : .naranja)
+                        .foregroundColor(viewModel.message.isEmpty ? .grisOscuro : .naranja)
                         .onTapGesture {
-                            if !viewModel.currentMessage.isEmpty  {
-                                viewModel.sendMessage()
+                            if !viewModel.message.isEmpty  {
+                                sendMessage()
                             }
                         }
                     Spacer()
                 }
                 .padding(Tokens.Size.Spacing.regular)
             }
-        }
-        .fullScreen(isPresented: $isWalkyBotOnboardingEnabled) {
-            VStack(spacing: Tokens.Size.Spacing.regular) {
-                Image(Asset.Illustrations.chatBot.name)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(height: 340)
-                HStack(spacing: Tokens.Size.Spacing.regular) {
-                    Text("Walky Bot de FAQ's")
-                        .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .semibold))
-                    Image(systemName: "info.circle.fill")
-                        .resizable()
-                        .frame(width: 16, height: 16)
-                        .foregroundColor(Color.naranja)
-                }
-                Text("Tu respondedor de dudas\nmás comunes.")
-                    .font(.projectFont(size: Tokens.Size.Font.medium, weight: .medium))
-                    .multilineTextAlignment(.center)
-                Spacer()
-                    .frame(height: 50)
-                WCUIButton(title: "Comenzar",
-                           style: .standard,
-                           descriptor: OrangeButtonStyleDescriptor(),
-                           action: {
-                    UserDefaults.standard.set(true, forKey: "isWalkyBotOnboardingDisabled")
-                    self.isWalkyBotOnboardingEnabled = false
-                })
-                WCUIButton(title: "Salir",
-                           style: .outline,
-                           descriptor: OrangeButtonStyleDescriptor(),
-                           action: {
-                    router.dismiss()
-                })
+            .onAppear {
+                connect()
             }
-            .padding(Tokens.Size.Spacing.regular)
-        }
-        .onAppear {
-            UserDefaults.standard.set(true, forKey: "isWalkyBotOnboardingDisabled")
-            viewModel.initializeUser()
-            viewModel.subscribeToChannelEvents()
-        }
-        .onReceive(viewModel.messageObserver.objectWillChange) { _ in
-            viewModel.loadNewTexts()
+            .onDisappear {
+                ChatBotClient.shared.disconnect()
+            }
+            .onChange(of: viewModel.messages) { _, _ in
+                print(viewModel.messages)
+            }
         }
     }
     
@@ -138,14 +101,12 @@ struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouter
             .cornerRadius(Tokens.Size.Border.Radius.medium)
     }
     
-    private func channelMessage(_ text: String, date: String) -> some View {
+    private func channelMessage(_ text: String) -> some View {
         HStack {
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.regular) {
                 Text(text)
                     .font(.projectFont(size: Tokens.Size.Font.regular))
-                Text(date)
-                    .font(.projectFont(size: Tokens.Size.Font.small))
             }
                    .padding(Tokens.Size.Spacing.regular)
                    .background(Color.blanco)
@@ -160,15 +121,13 @@ struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouter
         }
     }
     
-    private func userMessage(_ text: String, date: String) -> some View {
+    private func userMessage(_ text: String) -> some View {
         HStack {
             Spacer()
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.regular) {
                 Text(text)
                     .font(.projectFont(size: Tokens.Size.Font.regular))
-                Text(date)
-                    .font(.projectFont(size: Tokens.Size.Font.small))
             }
                    .padding(Tokens.Size.Spacing.regular)
                    .background(Color.blancoGris)
@@ -180,6 +139,37 @@ struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouter
                     y: 2
                    )
         }
+    }
+    
+    
+    // MARK: - WebSocket Methods
+    
+    func connect() {
+        ChatBotClient.shared.connect(username: viewModel.userName, userID: viewModel.userID)
+        ChatBotClient.shared.receiveMessage { text in
+            self.receiveMessage(text: text)
+        }
+        ChatBotClient.shared.receiveNewUser { username, users in
+            self.receiveNewUser(username: username, users: users)
+        }
+        viewModel.showUsernamePrompt = false
+    }
+    
+    func sendMessage() {
+        ChatBotClient.shared.sendMessage(viewModel.message)
+        viewModel.messages.append(MessageModel(username: viewModel.userName, text: viewModel.message))
+        viewModel.message = ""
+    }
+    
+    func receiveMessage(text: String) {
+        viewModel.messages.append(MessageModel(id: UUID(), username: "walky", text: text))
+    }
+    
+    func receiveNewUser(username: String, users: [String:String]) {
+        viewModel.users = users
+        viewModel.newUser = username
+        
+        viewModel.isShowingNewUserAlert = viewModel.userName != username
     }
 }
 

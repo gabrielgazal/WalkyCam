@@ -1,13 +1,12 @@
 import SwiftUI
 
 protocol WalkyBotViewModelProtocol: ViewModelProtocol {
-    var messages: AsyncData<[MessageModel], ErrorProtocol> { get set }
-    var currentMessage: String { get set }
-    var messageObserver: MessageObserver { get set }
-    
-    func initializeUser()
-    func sendMessage()
-    func loadMessages()
-    func loadNewTexts()
-    func subscribeToChannelEvents()
+    var message: String { get set }
+    var messages: [MessageModel] { get set }
+    var users: [String:String] { get set }
+    var newUser: String { get set }
+    var showUsernamePrompt: Bool { get set }
+    var isShowingNewUserAlert: Bool { get set }
+    var userName: String { get set }
+    var userID: String { get set }
 }

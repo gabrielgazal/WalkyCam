@@ -31,18 +31,19 @@ struct ChatDetailView<ViewModel:ChatDetailViewModelProtocol, Router: ChatDetailR
             }
             .frame(height: 50)
             ScrollView(showsIndicators: false) {
-                AsyncDataView(viewModel.messages) { messages in
-                    ForEach(messages, id: \.self) { message in
-                        if message.isSenderMessage {
-                            userMessage(message.value, date: message.timeStamp.toTimeString())
-                                .flippedUpsideDown()
-                        } else {
-                            channelMessage(message.value, date: message.timeStamp.toTimeString())
-                                .flippedUpsideDown()
-                        }
-                    }
-                } errorAction: {}
-                    .padding(Tokens.Size.Spacing.regular)
+//                AsyncDataView(viewModel.messages) { messages in
+//                    ForEach(messages, id: \.self) { message in
+//                        if message.username == "" {
+//                            userMessage(message.value, date: message.timeStamp.toTimeString())
+//                                .flippedUpsideDown()
+//                        } else {
+//                            channelMessage(message.value, date: message.timeStamp.toTimeString())
+//                                .flippedUpsideDown()
+//                        }
+//                    }
+//                } errorAction: {}
+//                    .padding(Tokens.Size.Spacing.regular)
+                Text("No messages yet")
             }
             .flippedUpsideDown()
         }
