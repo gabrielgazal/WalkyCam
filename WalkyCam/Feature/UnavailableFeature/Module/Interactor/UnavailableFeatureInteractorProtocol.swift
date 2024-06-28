@@ -1,0 +1,3 @@
+protocol UnavailableFeatureInteractorProtocol {
+    func someFunction()
+}
