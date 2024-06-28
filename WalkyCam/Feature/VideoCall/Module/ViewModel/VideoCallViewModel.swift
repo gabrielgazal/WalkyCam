@@ -1,15 +1,17 @@
 import SwiftUI
 
 final class VideoCallViewModel: VideoCallViewModelProtocol {
-
+    
     // MARK: - Dependencies
-   @Published var videoCallLink: String = ""
-
+    @Published var videoCallLink: String = ""
+    @Published var createVideoCallAsyncData: AsyncData<String, ErrorProtocol> = .idle
+    @Published var scheduleVideoCallAsyncData: AsyncData<String, ErrorProtocol> = .idle
+    
     private let interactor: VideoCallInteractorProtocol
-
+    
     // MARK: - Initialization
-
-    init(interactor: VideoCallInteractorProtocol = VideoCallInteractor()) {
+    
+    init(interactor: VideoCallInteractorProtocol) {
         self.interactor = interactor
     }
     
@@ -21,10 +23,15 @@ final class VideoCallViewModel: VideoCallViewModelProtocol {
         }
         return "https://meet.walkycam.com/videocall/\(videoCallLink)/\(userId)"
     }
-
-    // MARK: - Private Methods
-
-    private func somePrivateMethod() {
-
+    
+    @MainActor func createVideoCall(onSuccess: ((String) -> Void)?, onFailure: (() -> Void)?) async {
+        createVideoCallAsyncData = .loading
+        do {
+            let output = try await interactor.createVideoCall()
+            createVideoCallAsyncData = .loaded(output)
+            onSuccess?(output)
+        } catch {
+            onFailure?()
+        }
     }
 }

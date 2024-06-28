@@ -33,7 +33,23 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
                              description: "Crea una nueva para compartir",
                              buttonTitle: "Crear",
                              icon: Asset.Icons.link.name,
-                             action: {})
+                             action: {
+                    Task {
+                        await viewModel.createVideoCall(
+                            onSuccess: { callId in
+                                if let userId = try? UserSession().user().id {
+                                    router.routeToMeetRoom(
+                                        "https://meet.walkycam.com/videocall/\(callId)/\(userId)"
+                                    )
+                                }
+                            },
+                            onFailure: {
+                                
+                            }
+                        )
+                    }
+                })
+                .loading(viewModel.createVideoCallAsyncData.isLoading)
                 verticalCard(title: "PROGRAMAR",
                              description: "Programa con anterioridad",
                              buttonTitle: "Programar",
@@ -41,6 +57,7 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
                              action: {
                     router.routeToBookCammer()
                 })
+                .loading(viewModel.scheduleVideoCallAsyncData.isLoading)
             }
             horizontalCard(action: {
                 router.routeToMeetRoom(viewModel.assembleVideoCallLink())
@@ -125,7 +142,11 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
 struct VideoCallView_Previews: PreviewProvider {
     static var previews: some View {
     VideoCallView(
-            viewModel: VideoCallViewModel(),
+        viewModel: VideoCallViewModel(
+            interactor: VideoCallInteractor(
+                useCases: .init(createVideoCall: .empty)
+            )
+        ),
             router: VideoCallRouter(isPresented: .constant(false))
         )
     }
