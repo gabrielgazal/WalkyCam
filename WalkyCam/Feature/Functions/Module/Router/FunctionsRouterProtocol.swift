@@ -13,6 +13,8 @@ protocol FunctionsRouterProtocol: Router {
     func routeToNFT()
     func routeToDigitalTwins()
     func routeToLidar()
+    func routeToGames()
+    func routeToPlayBusiness()
 
     func routeToRadar()
     func routeToROV()

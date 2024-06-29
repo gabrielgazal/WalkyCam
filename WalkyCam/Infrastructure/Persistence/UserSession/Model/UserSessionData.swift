@@ -17,27 +17,33 @@ struct UserSessionData: Hashable, Codable {
     public var configurations: Configurations
 
     public struct Configurations: Hashable, Codable {
-        public var streetCam: Bool
-        public var scan3D: Bool
-        public var videoCall: Bool
-        public var ARHands: Bool
-        public var digitalTwins: Bool
-        public var drone: Bool
-
+        public var streetcamConfiguration: Bool
+        public var scan3dConfiguration: Bool
+        public var videocallConfiguration: Bool
+        public var arHandsConfiguration: Bool
+        public var digitalTwinsConfiguration: Bool
+        public var droneConfiguration: Bool
+        public var droneIOTConfiguration: Bool
+        public var print3dConfiguration: Bool
+             
         public init(
-            streetCam: Bool = false,
-            scan3D: Bool = false,
-            videoCall: Bool = false,
-            ARHands: Bool = false,
-            digitalTwins: Bool = false,
-            drone: Bool = false
+            streetcamConfiguration: Bool = false,
+            scan3dConfiguration: Bool = false,
+            videocallConfiguration: Bool = false,
+            arHandsConfiguration: Bool = false,
+            digitalTwinsConfiguration: Bool = false,
+            droneConfiguration: Bool = false,
+            droneIOTConfiguration: Bool = false,
+            print3dConfiguration: Bool = false
         ) {
-            self.streetCam = streetCam
-            self.scan3D = scan3D
-            self.videoCall = videoCall
-            self.ARHands = ARHands
-            self.digitalTwins = digitalTwins
-            self.drone = drone
+            self.streetcamConfiguration = streetcamConfiguration
+            self.scan3dConfiguration = scan3dConfiguration
+            self.videocallConfiguration = videocallConfiguration
+            self.arHandsConfiguration = arHandsConfiguration
+            self.digitalTwinsConfiguration = digitalTwinsConfiguration
+            self.droneConfiguration = droneConfiguration
+            self.droneIOTConfiguration = droneIOTConfiguration
+            self.print3dConfiguration = print3dConfiguration
         }
     }
 }

@@ -39,7 +39,9 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
                                    rightIcon: Asset.Icons.compare.name,
                                    style: .standard,
                                    descriptor: BlackButtonStyleDescriptor(),
-                                   action: {})
+                                   action: {
+                            viewModel.currentPage = 4
+                        })
                         .frame(width: 140)
                         .isHidden(viewModel.currentPage == 4)
                     }
@@ -49,7 +51,12 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
                                 .environment(\.colorScheme, .dark)
                                 .tag(index)
                         }
-                        PlansComparisonPageView(plansData: viewModel.plans)
+                        PlansComparisonPageView(plansData: viewModel.plans,
+                                                startPlanAction: { title in
+                            if let selectedPlanIndex = viewModel.plans.firstIndex(where: { $0.title == title }) {
+                                viewModel.currentPage = selectedPlanIndex
+                            }
+                        })
                             .tag(4)
                     }
                     .accentColor(.naranja)

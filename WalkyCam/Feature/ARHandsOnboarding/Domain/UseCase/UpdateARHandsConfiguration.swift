@@ -45,7 +45,7 @@ extension UpdateARHandsConfigurationUseCase {
     ) throws -> Void {
         do {
             var user = try session.user()
-            user.configurations.ARHands = true
+            user.configurations.arHandsConfiguration = true
             try session.save(user: user)
             return
         } catch {

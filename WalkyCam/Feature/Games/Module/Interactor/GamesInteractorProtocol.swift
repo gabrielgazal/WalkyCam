@@ -1,0 +1,3 @@
+protocol GamesInteractorProtocol {
+    func someFunction()
+}

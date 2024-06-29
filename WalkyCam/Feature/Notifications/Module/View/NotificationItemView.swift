@@ -54,6 +54,9 @@ struct NotificationItemView: View {
                             }
                         }
                     }
+                    .frame(width: 68, height: 68)
+                    .clipped()
+                    .clipShape(Circle())
                 } else {
                     placeholder
                 }
@@ -79,10 +82,15 @@ struct NotificationItemView: View {
     }
 
     private var placeholder: some View {
-        Image(systemName: "person.circle")
-            .resizable()
-            .frame(width: 68, height: 68)
-            .scaledToFill()
+        ZStack(alignment: .center) {
+            Circle()
+                .fill(Color.naranja)
+            Image(Asset.logo.name)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 64)
+        }
+        .frame(width: 68, height: 68)
     }
 
     private func formatDate() -> String {

@@ -11,9 +11,7 @@ final class TabBarInteractor: TabBarInteractorProtocol {
 
     // MARK: - Inner Types
 
-    struct UseCases {
-        let fetchConfigurations: FetchUserConfigurationsUseCase
-    }
+    struct UseCases {}
 
     // MARK: - Dependencies
 
@@ -24,27 +22,5 @@ final class TabBarInteractor: TabBarInteractorProtocol {
 
     init(useCases: UseCases) {
         self.useCases = useCases
-    }
-
-    // MARK: - Public API
-
-    func getUserConfigurations(id: String) async throws {
-        return try await withCheckedThrowingContinuation { continuation in
-            useCases.fetchConfigurations(id)
-                .sink(
-                    receiveCompletion: { completion in
-                        switch completion {
-                        case let .failure(error):
-                            continuation.resume(throwing: error)
-                        case .finished:
-                            break
-                        }
-                    },
-                    receiveValue: { result in
-                        continuation.resume()
-                    }
-                )
-                .store(in: &bag)
-        }
     }
 }

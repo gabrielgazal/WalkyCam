@@ -54,6 +54,7 @@ struct ConfirmMailView<ViewModel: ConfirmMailViewModelProtocol, Router: ConfirmM
     }
 
     private func handleAction() {
+        viewModel.openEmailApp()
         router.routeToStartup()
     }
 }

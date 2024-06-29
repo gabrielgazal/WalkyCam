@@ -14,15 +14,11 @@ final class ConfirmMailViewModel: ConfirmMailViewModelProtocol {
 
     // MARK: - Public API
 
-    #warning("Example function. Rename or remove it")
-    func someAction() {
-
-    }
-
-    // MARK: - Private Methods
-
-    #warning("Example function. Rename or remove it")
-    private func somePrivateMethod() {
-
+    func openEmailApp() {
+        if let url = URL(string: "message://") {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url)
+            }
+        }
     }
 }

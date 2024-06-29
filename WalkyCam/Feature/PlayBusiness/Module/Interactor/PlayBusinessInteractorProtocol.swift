@@ -1,0 +1,3 @@
+protocol PlayBusinessInteractorProtocol {
+    func someFunction()
+}

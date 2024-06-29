@@ -1,27 +1,27 @@
 import SwiftUI
 
 struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRouterProtocol>: View {
-
+    
     // MARK: - Dependencies
-
+    
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
-
+    
     private let otherFunctionsColumns = [
         GridItem(.flexible()),
         GridItem(.flexible())
     ]
-
+    
     // MARK: - Initialization
-
+    
     init(viewModel: ViewModel,
          router: Router) {
         self.viewModel = viewModel
         self.router = router
     }
-
+    
     // MARK: - View Body
-
+    
     var body: some View {
         GeometryReader { proxy in
             ScrollView(showsIndicators: false) {
@@ -32,7 +32,7 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
                         .padding(Tokens.Size.Spacing.regular)
                     HomeSectionView(title: "Básicas") {
                         ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(spacing: Tokens.Size.Spacing.regular) {
+                            HStack(spacing: -8) {
                                 ForEach(viewModel.basicFunctions, id: \.self) { item in
                                     FunctionCell(title: item.title, icon: item.icon, lastItem: false)
                                         .onTapGesture {
@@ -45,16 +45,20 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
                                                 router.routeToARHands()
                                             case "Scan 3D":
                                                 router.routeToScan3D()
-                                            case "Drone":
-                                                router.routeToDrone()
+                                            case "Cam 360º":
+                                                router.routeToCamera360()
+                                            case "Games":
+                                                router.routeToGames()
+                                            case "Play & Business":
+                                                router.routeToPlayBusiness()
                                             default: break
                                             }
                                         }
                                 }
+                                .padding(Tokens.Size.Spacing.regular)
                             }
                         }
                     }
-                    .padding(Tokens.Size.Spacing.regular)
                     Asset.Ads.premium2.swiftUIImage
                         .scaledToFit()
                         .frame(width: proxy.size.width)
@@ -69,8 +73,8 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
                                 FunctionCell(title: item.title, icon: item.icon, lastItem: false)
                                     .onTapGesture {
                                         switch item.title {
-                                            case "Digital Twins":
-                                                router.routeToDigitalTwins()
+                                        case "Digital Twins":
+                                            router.routeToDigitalTwins()
                                         case "IOT applications & Data Analysis":
                                             router.routeToIOT()
                                         case "3D Printer":

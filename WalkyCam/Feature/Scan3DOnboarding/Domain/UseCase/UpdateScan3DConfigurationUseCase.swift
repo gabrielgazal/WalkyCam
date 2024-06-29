@@ -45,7 +45,7 @@ extension UpdateScan3DConfigurationUseCase {
     ) throws -> Void {
         do {
             var user = try session.user()
-            user.configurations.scan3D = true
+            user.configurations.scan3dConfiguration = true
             try session.save(user: user)
             return
         } catch {

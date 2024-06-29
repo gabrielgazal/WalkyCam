@@ -9,18 +9,28 @@ import Foundation
 import SwiftUI
 
 struct PlansComparisonPageView: View {
-
+    
     private var plansData: [PlansPagesModel]
-
+    private var startPlanAction: ((String) -> Void)?
+    @State private var tooltipVisibility: [String: Bool] = [:]  // Adicione esta linha
+    
     public init(
-        plansData: [PlansPagesModel]
+        plansData: [PlansPagesModel],
+        startPlanAction: ((String) -> Void)?
     ) {
         self.plansData = plansData
+        self.startPlanAction = startPlanAction
+        self._tooltipVisibility = State(initialValue: plansData.reduce(into: [:]) { dict, plan in
+            for feature in plan.features {
+                dict[feature.title] = false
+            }
+        })  // Inicialize o dicionário com todos os tooltips invisíveis
     }
-
+    
     var body: some View {
         ScrollView(showsIndicators: false) {
-            HStack(spacing: Tokens.Size.Spacing.small) {
+            HStack(alignment: .center,
+                   spacing: Tokens.Size.Spacing.small) {
                 VStack(alignment: .leading,
                        spacing: Tokens.Size.Spacing.regular) {
                     Image(Asset.logo.name)
@@ -31,42 +41,85 @@ struct PlansComparisonPageView: View {
                         .foregroundColor(.naranja)
                     Text("En todos los planes se incluyen funciones como: White Board, Share to, Chat, REC, etc.")
                         .font(.projectFont(size: Tokens.Size.Font.xsmall, weight: .semibold))
-                    VStack(spacing: Tokens.Size.Spacing.small) {
+                    VStack(alignment: .leading,
+                           spacing: Tokens.Size.Spacing.small) {
                         ForEach(plansData.first(where: { $0.title == "premium"})?.features ?? []) { item in
                             featureItem(item)
-                                .frame(height: 30)
+                                .frame(height: 50)
                         }
                     }
                 }
+                       .zIndex(1)
                 ScrollView(.horizontal,
                            showsIndicators: false) {
                     HStack(spacing: Tokens.Size.Spacing.small) {
                         ForEach(plansData, id: \.self) { data in
                             planItem(data)
+                                .padding([.top], Tokens.Size.Spacing.regular)
                         }
                     }
                 }
             }
             .padding()
         }
+        .simultaneousGesture(
+            DragGesture().onChanged({ _ in
+                hideAllTooltips()
+            }))
+        .onTapGesture {
+            hideAllTooltips()
+        }
     }
-
+    
+    private func hideAllTooltips() {
+        for key in tooltipVisibility.keys {
+            tooltipVisibility[key] = false
+        }
+    }
+    
     private func featureItem(_ item: FunctionData) -> some View {
-        HStack(spacing: Tokens.Size.Spacing.small) {
+        HStack(alignment: .center,
+               spacing: Tokens.Size.Spacing.small) {
             Image(item.icon)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 30, height: 30)
+                .frame(width: 50, height: 50)
             Text(item.title)
-                .font(.projectFont(size: Tokens.Size.Font.tiny, weight: .medium))
+                .font(.projectFont(size: Tokens.Size.Font.xsmall, weight: .medium))
                 .foregroundColor(Color.negro)
+                .lineLimit(3)
+            
             Image(systemName: "info.circle.fill")
                 .resizable()
-                .frame(width: 10, height: 10)
+                .frame(width: 15, height: 15)
+                .overlay {
+                    TooltipView(alignment: .top, isVisible: Binding(
+                        get: { tooltipVisibility[item.title] ?? false },
+                        set: { tooltipVisibility[item.title] = $0 }
+                    )) {
+                        HStack {
+                            VStack(alignment: .leading,
+                                   spacing: Tokens.Size.Spacing.small) {
+                                Text(item.title)
+                                    .font(.projectFont(size: Tokens.Size.Font.small, weight: .bold))
+                                Text(item.getTooltipText())
+                                    .lineLimit(nil)
+                                    .font(.projectFont(size: Tokens.Size.Font.small))
+                            }
+                            Spacer()
+                        }
+                        .frame(maxWidth: 200)
+                        .padding()
+                    }
+                }
+                .onTapGesture {
+                    hideAllTooltips()
+                    tooltipVisibility[item.title]?.toggle()
+                }
             Spacer()
         }
     }
-
+    
     private func planItem(_ plan: PlansPagesModel) -> some View {
         VStack(alignment: .center,
                spacing: Tokens.Size.Spacing.xsmall) {
@@ -78,7 +131,9 @@ struct PlansComparisonPageView: View {
             WCUIButton(title: "Start \(plan.title)",
                        style: .standard,
                        descriptor: getButtonDescriptor(plan.title),
-                       action: {})
+                       action: {
+                startPlanAction?(plan.title)
+            })
             .frame(width: 130)
             VStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.small) {
@@ -88,7 +143,7 @@ struct PlansComparisonPageView: View {
                             .resizable()
                             .renderingMode(.template)
                             .aspectRatio(contentMode: .fit)
-                            .frame(height: 30)
+                            .frame(height: 50)
                             .foregroundColor(plan.accentColor)
                     } else {
                         EmptyView()
@@ -98,7 +153,7 @@ struct PlansComparisonPageView: View {
             Spacer()
         }
     }
-
+    
     private func getButtonDescriptor(_ title: String) -> ButtonStyleDescriptorProtocol {
         switch title {
         case "free":
@@ -131,7 +186,7 @@ struct PlansComparisonPageView_Previews: PreviewProvider {
                         .init(title: "Juegos y otros", icon: Asset.Icons.games.name),
                         .init(title: "Se incluye funciones como: White board, Share to, Chat, REC, etc.", icon: ""),
                         .init(title: "Disfruta mas de 20 funciones adicionales", icon: "")
-                    ]),
+                      ]),
                 .init(title: "basic",
                       monthlyPrice: "30.0",
                       backgroundImage: Asset.Fondos.planFondo.name,
@@ -147,7 +202,7 @@ struct PlansComparisonPageView_Previews: PreviewProvider {
                         .init(title: "Pixelation Faces", icon: Asset.Icons.pixelation.name),
                         .init(title: "Juegos y otros", icon: Asset.Icons.games.name),
                         .init(title: "Se incluye funciones como: White board, Share to, Chat, REC, etc.", icon: "")
-                    ]),
+                      ]),
                 .init(title: "standard",
                       monthlyPrice: "60.0",
                       backgroundImage: Asset.Fondos.planFondo.name,
@@ -169,7 +224,7 @@ struct PlansComparisonPageView_Previews: PreviewProvider {
                         .init(title: "Certified Recording", icon: Asset.Icons.translate.name),
                         .init(title: "Juegos y otros", icon: Asset.Icons.games.name),
                         .init(title: "Se incluye funciones como: White board, Share to, Chat, REC, etc.", icon: "")
-                    ]),
+                      ]),
                 .init(title: "premium",
                       monthlyPrice: "180.0",
                       backgroundImage: Asset.Fondos.planFondo.name,
@@ -203,8 +258,83 @@ struct PlansComparisonPageView_Previews: PreviewProvider {
                         .init(title: "Certified Recording", icon: Asset.Icons.translate.name),
                         .init(title: "Alcohol & Drug test", icon: Asset.Icons.alcohol.name),
                         .init(title: "Juegos y otros", icon: Asset.Icons.games.name)
-                    ])
-            ]
+                      ])
+            ],
+            startPlanAction: nil
         )
+    }
+}
+
+struct TooltipView<Content: View>: View {
+    let alignment: Edge
+    @Binding var isVisible: Bool
+    let content: () -> Content
+    let arrowOffset = CGFloat(8)
+
+    private var oppositeAlignment: Alignment {
+        let result: Alignment
+        switch alignment {
+        case .top: result = .bottom
+        case .bottom: result = .top
+        case .leading: result = .trailing
+        case .trailing: result = .leading
+        }
+        return result
+    }
+
+    private var theHint: some View {
+        content()
+            .padding()
+            .background(Color.negro)
+            .foregroundColor(.white)
+            .cornerRadius(8)
+            .background(alignment: oppositeAlignment) {
+
+                // The arrow is a square that is rotated by 45 degrees
+                Rectangle()
+                    .fill(Color.negro)
+                    .frame(width: 22, height: 22)
+                    .rotationEffect(.degrees(45))
+                    .offset(x: alignment == .leading ? arrowOffset : 0)
+                    .offset(x: alignment == .trailing ? -arrowOffset : 0)
+                    .offset(y: alignment == .top ? arrowOffset : 0)
+                    .offset(y: alignment == .bottom ? -arrowOffset : 0)
+            }
+            .padding()
+            .fixedSize()
+    }
+
+    var body: some View {
+        if isVisible {
+            GeometryReader { proxy1 in
+
+                // Use a hidden version of the hint to form the footprint
+                theHint
+                    .hidden()
+                    .overlay {
+                        GeometryReader { proxy2 in
+
+                            // The visible version of the hint
+                            theHint
+                                .drawingGroup()
+                                .shadow(radius: 4)
+
+                                // Center the hint over the source view
+                                .offset(
+                                    x: -(proxy2.size.width / 2) + (proxy1.size.width / 2),
+                                    y: -(proxy2.size.height / 2) + (proxy1.size.height / 2)
+                                )
+                                // Move the hint to the required edge
+                                .offset(x: alignment == .leading ? (-proxy2.size.width / 2) - (proxy1.size.width / 2) : 0)
+                                .offset(x: alignment == .trailing ? (proxy2.size.width / 2) + (proxy1.size.width / 2) : 0)
+                                .offset(y: alignment == .top ? (-proxy2.size.height / 2) - (proxy1.size.height / 2) : 0)
+                                .offset(y: alignment == .bottom ? (proxy2.size.height / 2) + (proxy1.size.height / 2) : 0)
+                        }
+                    }
+            }
+            .onTapGesture {
+                isVisible.toggle()
+            }
+        }
     }
 }

@@ -22,7 +22,7 @@ struct AIMenuView<ViewModel:AIMenuViewModelProtocol, Router: AIMenuRouterProtoco
             VStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.large) {
                 HStack {
-                    Text("Servicios Drone")
+                    Text("AI & Data Analysis")
                         .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                     Spacer()
                 }

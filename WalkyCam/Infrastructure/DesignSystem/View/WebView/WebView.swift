@@ -57,7 +57,8 @@ struct WebView: View {
         .onAppear {
             viewModel.loadUrl()
         }
-        .padding(padding)
+//        .padding(padding)
+        .edgesIgnoringSafeArea(.all)
     }
 }
 

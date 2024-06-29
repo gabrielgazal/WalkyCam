@@ -1,77 +1,77 @@
 import SwiftUI
 
 final class FunctionsRouter: Router, FunctionsRouterProtocol {
-
+    
     // MARK: - Public API
-
+    
     func routeToVideoCall() {
-        let seenOnboarding: Bool = (try? UserSession().user().configurations.streetCam) ?? false
+        let seenOnboarding: Bool = (try? UserSession().user().configurations.streetcamConfiguration) ?? false
         navigateTo(
             seenOnboarding ? VideoCallRoute(isPresented: isNavigating) : VideocallOnboardingRoute(isPresented: isNavigating)
         )
     }
-
+    
     func routeToWalkCamer() {
         navigateTo(
             WalkyCamerOnboardingRoute(isPresented: isNavigating)
         )
     }
-
+    
     func routeToARHands() {
-        let seenOnboarding: Bool = (try? UserSession().user().configurations.ARHands) ?? false
+        let seenOnboarding: Bool = (try? UserSession().user().configurations.arHandsConfiguration) ?? false
         navigateTo(
             seenOnboarding ? ARHandsMenuRoute(isPresented: isNavigating) : ARHandsOnboardingRoute(isPresented: isNavigating)
         )
     }
-
+    
     func routeToDrone() {
         navigateTo(
             DroneMenuRoute(isPresented: isNavigating)
         )
     }
-
+    
     func routeToScan3D() {
-        let seenOnboarding: Bool = (try? UserSession().user().configurations.scan3D) ?? false
+        let seenOnboarding: Bool = (try? UserSession().user().configurations.scan3dConfiguration) ?? false
         navigateTo(
             seenOnboarding ? Scan3DMenuRoute(isPresented: isNavigating) : Scan3DOnboardingRoute(isPresented: isNavigating)
         )
     }
-
+    
     func routeToCryptoWallet() {
         navigateTo(CashWalletRoute(isPresented: isNavigating))
     }
-
+    
     func routeToIOT() {
         navigateTo(
             IOTOnboardingRoute(isPresented: isNavigating)
         )
     }
-
+    
     func routeTo3DPrinting() {
         navigateTo(
             _DPrintOnboardingRoute(isPresented: isNavigating)
         )
     }
-
+    
     func routeToAI() {
         navigateTo(
             AIOnboardingRoute(isPresented: isNavigating)
         )
     }
-
+    
     func routeToDigitalTwins() {
-        let seenOnboarding: Bool = (try? UserSession().user().configurations.digitalTwins) ?? false
+        let seenOnboarding: Bool = (try? UserSession().user().configurations.digitalTwinsConfiguration) ?? false
         navigateTo(
             seenOnboarding ? DigitalTwinsMenuRoute(isPresented: isNavigating) : DigitalTwinsOnboardingRoute(isPresented: isNavigating)
         )
     }
-
+    
     func routeToLidar() {
         navigateTo(
             LidarOnboardingRoute(isPresented: isNavigating)
         )
     }
-
+    
     func routeToNFT() {
         navigateTo(
             UnreleasedFeatureRoute(
@@ -90,19 +90,19 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
             )
         )
     }
-
+    
     func routeToRadar() {
         navigateTo(
             RadarMenuRoute(isPresented: isNavigating)
         )
     }
-
+    
     func routeToRobot() {
         navigateTo(
             RobotMenuRoute(isPresented: isNavigating)
         )
     }
-
+    
     func routeToROV() {
         navigateTo(
             UnreleasedFeatureRoute(
@@ -133,7 +133,7 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
             )
         )
     }
-
+    
     func routeToScreenAd() {
         navigateTo(
             UnreleasedFeatureRoute(
@@ -163,7 +163,7 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
             )
         )
     }
-
+    
     func routeToDrugTest() {
         navigateTo(
             UnreleasedFeatureRoute(
@@ -190,7 +190,7 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
             )
         )
     }
-
+    
     func routeToCamera360() {
         navigateTo(
             UnreleasedFeatureRoute(
@@ -223,7 +223,7 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
             )
         )
     }
-
+    
     func routeToConsulting() {
         navigateTo(
             UnreleasedFeatureRoute(
@@ -247,7 +247,7 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
             )
         )
     }
-
+    
     func routeToCRM() {
         navigateTo(
             UnreleasedFeatureRoute(
@@ -259,11 +259,11 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
                     Asset.Banners.Crm.crm4.name,
                     Asset.Banners.Crm.crm5.name,
                     Asset.Banners.Crm.crm6.name
-                    ]
+                ]
             )
         )
     }
-
+    
     func routeToDetectorMetales() {
         navigateTo(
             UnreleasedFeatureRoute(
@@ -290,7 +290,7 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
             )
         )
     }
-
+    
     func routeToEcografia() {
         navigateTo(
             UnreleasedFeatureRoute(
@@ -316,7 +316,7 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
             )
         )
     }
-
+    
     func routeToRecording() {
         navigateTo(
             UnreleasedFeatureRoute(
@@ -344,7 +344,7 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
             )
         )
     }
-
+    
     func routeToLawConsulting() {
         navigateTo(
             UnreleasedFeatureRoute(
@@ -371,6 +371,17 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
     func routeToRegistrationPlans() {
         navigateTo(
             RegistrationPlansRoute(isPresented: isNavigating)
+        )
+    }
+    
+    func routeToGames() {
+        navigateTo(
+            GamesRoute(isPresented: isNavigating)
+        )
+    }
+    func routeToPlayBusiness() {
+        navigateTo(
+            PlayBusinessRoute(isPresented: isNavigating)
         )
     }
 }

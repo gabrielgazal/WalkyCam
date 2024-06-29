@@ -14,3 +14,4 @@ public struct DigitalTwinsConfigurationResponse: Codable, Hashable {
         case configuration = "digital_twins_user_configuration"
     }
 }
+

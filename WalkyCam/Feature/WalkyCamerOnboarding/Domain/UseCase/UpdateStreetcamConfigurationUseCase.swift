@@ -45,7 +45,7 @@ extension UpdateStreetcamConfigurationUseCase {
     ) throws -> Void {
         do {
             var user = try session.user()
-            user.configurations.streetCam = true
+            user.configurations.streetcamConfiguration = true
             try session.save(user: user)
             return
         } catch {

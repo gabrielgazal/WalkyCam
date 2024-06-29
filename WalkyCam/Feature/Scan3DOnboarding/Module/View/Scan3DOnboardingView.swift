@@ -38,7 +38,7 @@ struct Scan3DOnboardingView<ViewModel:Scan3DOnboardingViewModelProtocol, Router:
                 ).tag(2)
                 Scan3DOnboardingPageView(
                     illustration: Asset.Illustrations.scan3dOnboarding4.swiftUIImage,
-                    title: "Realioza una impresión 3D del objeto",
+                    title: "Realiza una impresión 3D del objeto",
                     description: "Envía la imagen y el archivo generados para efectuar una impresión 3D y entrega el objeto en el destino final."
                 ).tag(3)
             }
