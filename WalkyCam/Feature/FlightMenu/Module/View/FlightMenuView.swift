@@ -16,6 +16,8 @@ struct FlightMenuView<ViewModel:FlightMenuViewModelProtocol, Router: FlightMenuR
     }
 
     // MARK: - View Body
+    @State var isSearchLoading = false
+    @State var isScheduleLoading = false
 
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -36,17 +38,25 @@ struct FlightMenuView<ViewModel:FlightMenuViewModelProtocol, Router: FlightMenuR
                                  buttonTitle: "Buscar",
                                  icon: Asset.Icons.location.name,
                                  action: {
+                        isSearchLoading.toggle()
                         router.routeToSearchCammer()
                     })
+                    .loading(isSearchLoading)
                     verticalCard(title: "RESERVAR",
                                  description: "Programa tu Vuelo con anterioridad.",
                                  buttonTitle: "Reservar",
                                  icon: Asset.Icons.calendar.name,
                                  action: {
+                        isScheduleLoading.toggle()
                         router.routeToScheduleCammer()
                     })
+                    .loading(isScheduleLoading)
                 }
-                horizontalCard(action: {})
+                horizontalCard(action: {
+                    router.navigateTo(
+                        DroneConnectionRoute(isPresented: router.isNavigating)
+                    )
+                })
             }
         }
                .padding(Tokens.Size.Spacing.regular)
