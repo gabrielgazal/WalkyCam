@@ -1,6 +1,9 @@
 import SwiftUI
 
 protocol AddPeopleTransmissionRouterProtocol: Router {
-    func routeToServiceDetails(onCancelAction: (() -> Void)?)
+    func routeToServiceDetails(
+        currentStep: Int,
+        totalSteps: Int,
+        onCancelAction: (() -> Void)?)
 }
 

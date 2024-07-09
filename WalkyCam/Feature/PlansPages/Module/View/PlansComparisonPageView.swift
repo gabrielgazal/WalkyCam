@@ -32,12 +32,12 @@ struct PlansComparisonPageView: View {
             HStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.small) {
                 VStack(alignment: .leading,
-                       spacing: Tokens.Size.Spacing.regular) {
+                       spacing: Tokens.Size.Spacing.large) {
                     Image(Asset.logo.name)
                         .resizable()
                         .renderingMode(.template)
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 100)
+                        .frame(width: 190)
                         .foregroundColor(.naranja)
                     Text("En todos los planes se incluyen funciones como: White Board, Share to, Chat, REC, etc.")
                         .font(.projectFont(size: Tokens.Size.Font.xsmall, weight: .semibold))
@@ -49,6 +49,7 @@ struct PlansComparisonPageView: View {
                         }
                     }
                 }
+                       .frame(minWidth: 190)
                        .zIndex(1)
                 ScrollView(.horizontal,
                            showsIndicators: false) {
@@ -80,15 +81,17 @@ struct PlansComparisonPageView: View {
     private func featureItem(_ item: FunctionData) -> some View {
         HStack(alignment: .center,
                spacing: Tokens.Size.Spacing.small) {
-            Image(item.icon)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 50, height: 50)
+            if !item.icon.isEmpty {
+                Image(item.icon)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 50, height: 50)
+            }
             Text(item.title)
                 .font(.projectFont(size: Tokens.Size.Font.xsmall, weight: .medium))
                 .foregroundColor(Color.negro)
                 .lineLimit(3)
-            
+            Spacer()
             Image(systemName: "info.circle.fill")
                 .resizable()
                 .frame(width: 15, height: 15)
@@ -136,7 +139,7 @@ struct PlansComparisonPageView: View {
             })
             .frame(width: 130)
             VStack(alignment: .center,
-                   spacing: Tokens.Size.Spacing.small) {
+                   spacing: Tokens.Size.Spacing.xsmall) {
                 ForEach(plansData.first(where: { $0.title == "premium"})?.features ?? []) { feature in
                     if plan.features.contains(where: { $0.title == feature.title }) {
                         Image(Asset.Icons.check.name)

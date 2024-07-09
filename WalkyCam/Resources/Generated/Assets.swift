@@ -32,6 +32,7 @@ internal enum Asset {
     internal static let premium1 = ImageAsset(name: "premium-1")
     internal static let premium2 = ImageAsset(name: "premium-2")
     internal static let premium3 = ImageAsset(name: "premium-3")
+    internal static let premium4 = ImageAsset(name: "premium-4")
     internal static let search = ImageAsset(name: "search")
   }
   internal enum Banners {
@@ -419,8 +420,10 @@ internal enum Asset {
     internal static let identity = ImageAsset(name: "identity")
     internal static let images = ImageAsset(name: "images")
     internal static let iot = ImageAsset(name: "iot")
+    internal static let joinMeet = ImageAsset(name: "joinMeet")
     internal static let lawyer = ImageAsset(name: "lawyer")
     internal static let lidar = ImageAsset(name: "lidar")
+    internal static let locationWhite = ImageAsset(name: "locationWhite")
     internal static let mail = ImageAsset(name: "mail")
     internal static let market = ImageAsset(name: "market")
     internal static let mascotas = ImageAsset(name: "mascotas")

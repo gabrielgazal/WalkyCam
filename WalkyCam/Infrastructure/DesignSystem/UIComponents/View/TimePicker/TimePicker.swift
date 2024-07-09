@@ -17,7 +17,7 @@ class TimePickerViewModel: ObservableObject {
 
 struct TimePicker: View {
     enum TimePickerStyle {
-        case `default`, expanded
+        case `default`, expanded, giant
     }
     
     @Environment(\.isEnabled) var isEnabled
@@ -49,6 +49,10 @@ struct TimePicker: View {
                     Text("\(timeFormat(date: viewModel.selectedTime))")
                         .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                         .padding()
+                case .giant:
+                    Text("\(timeFormat(date: viewModel.selectedTime)) h")
+                        .font(.projectFont(size: Tokens.Size.Font.giant, weight: .bold))
+                        .padding()
                 }
             }
             .buttonStyle(.plain)
@@ -79,10 +83,12 @@ struct TimePicker_Previews: PreviewProvider {
     static var previews: some View {
         let viewModel1 = TimePickerViewModel(selectedTime: Date())
         let viewModel2 = TimePickerViewModel(selectedTime: Date())
-
+        let viewModel3 = TimePickerViewModel(selectedTime: Date())
+        
         return VStack {
             TimePicker(viewModel: viewModel1, timePickerStyle: .expanded)
             TimePicker(viewModel: viewModel2, timePickerStyle: .default)
+            TimePicker(viewModel: viewModel3, timePickerStyle: .giant)
         }
     }
 }

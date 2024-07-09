@@ -1,0 +1,3 @@
+protocol ScheduleVideoCallInteractorProtocol {
+    func someFunction()
+}

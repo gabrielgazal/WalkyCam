@@ -11,10 +11,12 @@ final class SearchWalkyCammerViewModel: SearchWalkyCammerViewModelProtocol {
     @Published var userLocation: Viewport = .idle
     @Published var locationText: String = ""
     @Published var currentStep: Int = 1
+    @Published var currentTitle: String = "Buscar zona"
     @Published var walkyCammers: AsyncData<[CammerData], ErrorProtocol> = .idle
     @Published var shouldDisplayCammerList: Bool = false
     @State var coordinates: CLLocationCoordinate2D = .init()
-
+    @State var updatedUserLocation = false
+    
     // MARK: - Initialization
 
     init(interactor: SearchWalkyCammerInteractorProtocol = SearchWalkyCammerInteractor()) {
@@ -35,17 +37,33 @@ final class SearchWalkyCammerViewModel: SearchWalkyCammerViewModelProtocol {
                                             bearing: 0,
                                             pitch: 0)
                 self.currentStep = 2
+                self.currentTitle = "WalkCamers Disponibles"
             }
         }
     }
 
     func updateUserViewPort(manager: LocationPermissionManager) {
         guard let location = manager.coordinates else { return }
-        getWalkyCammersOnLocation(coordinates: location) {
-            self.userLocation = Viewport.camera(center: location,
-                                        zoom: 15,
-                                        bearing: 0,
-                                        pitch: 0)
+        if !updatedUserLocation {
+            getWalkyCammersOnLocation(coordinates: location) {
+                self.userLocation = Viewport.camera(center: location,
+                                            zoom: 15,
+                                            bearing: 0,
+                                            pitch: 0)
+            }
+            updatedUserLocation.toggle()
+        }
+    }
+    
+    func isListButtonHidden() -> Bool {
+        if currentStep == 1 {
+            return true
+        } else {
+            if walkyCammers.loadedValue == nil {
+                return true
+            } else {
+                return false
+            }
         }
     }
 

@@ -71,7 +71,7 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
                spacing: Tokens.Size.Spacing.regular) {
             HStack {
                 Spacer()
-                headerCounterView(4, 4)
+                HeaderCounterView(index: viewModel.currentStep, totalSteps: viewModel.totalSteps)
             }
             .padding(.horizontal, Tokens.Size.Spacing.large)
             HStack(alignment: .center,
@@ -81,38 +81,6 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
                 Spacer()
             }
         }
-    }
-
-    private func headerCounterView(_ index: Int, _ totalSteps: Int) -> some View {
-        ZStack {
-            Rectangle()
-                .frame(height: 3)
-                .foregroundColor(.black)
-            HStack {
-                Rectangle()
-                    .frame(width: CGFloat(index - 1) * 63.3, height: 3)
-                    .foregroundColor(.naranja)
-                Spacer()
-            } 
-            HStack(alignment: .center) {
-                ForEach(0..<totalSteps) { step in
-                    ZStack {
-                        Circle()
-                            .foregroundColor(step < index ? .naranja : .black)
-                            .frame(height: 20)
-                        if step < index {
-                            Text("\(step + 1)")
-                                .font(.projectFont(size: Tokens.Size.Font.small, weight: .bold))
-                                .foregroundColor(.blanco)
-                        }
-                    }
-                    if step < totalSteps - 1 {
-                        Spacer()
-                    }
-                }
-            }
-        }
-        .frame(width: 190)
     }
 
     private func cellView(_ title: String, _ value: String) -> some View {
@@ -134,7 +102,10 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
 struct ServiceDetailsView_Previews: PreviewProvider {
     static var previews: some View {
     ServiceDetailsView(
-            viewModel: ServiceDetailsViewModel(),
+        viewModel: ServiceDetailsViewModel(
+            currentStep: 4,
+            totalSteps: 4
+        ),
             router: ServiceDetailsRouter(state: RouterState(isPresented: .constant(false)))
         )
     }

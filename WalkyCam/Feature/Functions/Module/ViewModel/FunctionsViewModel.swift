@@ -33,7 +33,7 @@ final class FunctionsViewModel: FunctionsViewModelProtocol {
             .init(title: "Cam 360º", icon: Asset.Icons._360Camera.name),
             .init(title: "Certified Recording", icon: Asset.Icons.translate.name),
             .init(title: "Games", icon: Asset.Icons.games.name),
-            .init(title: "Play & Business ", icon: Asset.Icons.playBusiness.name),
+            .init(title: "Play & Business", icon: Asset.Icons.playBusiness.name),
         ]
     }
 

@@ -109,7 +109,7 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
         VStack(alignment: .center,
                spacing: Tokens.Size.Spacing.regular) {
             HStack(spacing: Tokens.Size.Spacing.regular) {
-                Image(Asset.Icons.calendar.name)
+                Image(Asset.Icons.joinMeet.name)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 40, height: 40)

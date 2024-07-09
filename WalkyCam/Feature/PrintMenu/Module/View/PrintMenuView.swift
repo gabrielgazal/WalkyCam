@@ -26,6 +26,10 @@ struct PrintMenuView<ViewModel:PrintMenuViewModelProtocol, Router: PrintMenuRout
                         .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                     Spacer()
                 }
+                itemCell(title: "Galeria", icon: Asset.Icons.scan3D.name)
+                    .onTapGesture {
+                        router.routeToScan3d()
+                    }
                 itemCell(title: "Escanear imagen", icon: Asset.Icons.scan3D.name)
                     .onTapGesture {
                         router.routeToScan3d()

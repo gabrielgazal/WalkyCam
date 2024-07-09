@@ -55,7 +55,6 @@ struct CammerDetailsView<ViewModel:CammerDetailsViewModelProtocol, Router: Camme
                             }
                             .frame(height: 170)
                             .cornerRadius(Tokens.Size.Border.Radius.medium)
-                            .disabled(true)
                         }
                         .padding(.horizontal, Tokens.Size.Spacing.regular)
                     }
@@ -107,7 +106,11 @@ struct CammerDetailsView<ViewModel:CammerDetailsViewModelProtocol, Router: Camme
                            style: .standard,
                            descriptor: OrangeButtonStyleDescriptor(),
                            action: {
-                    router.routeToAddPeople(specialistMode: viewModel.specialistMode)
+                    router.routeToAddPeople(
+                        specialistMode: viewModel.specialistMode,
+                        currentStep: 3,
+                        totalSteps: 4
+                    )
                 })
                 LinkButton(title: "Chatea conmigo",
                            icon: Asset.Icons.messageCircle.name,

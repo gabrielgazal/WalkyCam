@@ -13,7 +13,7 @@ final class VideoCallRouter: Router, VideoCallRouterProtocol {
     
     func routeToBookCammer() {
         navigateTo(
-            BookWalkycamerRoute(isPresented: isNavigating)
+            ScheduleVideoCallRoute(isPresented: isNavigating)
         )
     }
 }
