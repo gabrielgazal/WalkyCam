@@ -50,6 +50,7 @@ public struct TextInputView: View {
     private var keyboardType: UIKeyboardType
     private var backgroundColor: Color
     private var textColor: Color
+    private var accentColor: Color
     private var mask: TextMask?
     
     // MARK: - Initialization
@@ -66,6 +67,7 @@ public struct TextInputView: View {
         keyboardType: UIKeyboardType = .default,
         backgroundColor: Color = .blancoGris,
         textColor: Color = .blanco,
+        accentColor: Color = .naranja,
         mask: TextMask? = nil,
         actions: Actions = .init()
     ) {
@@ -80,6 +82,7 @@ public struct TextInputView: View {
         self.keyboardType = keyboardType
         self.backgroundColor = backgroundColor
         self.textColor = textColor
+        self.accentColor = accentColor
         self.mask = mask
         self.actions = actions
     }
@@ -94,6 +97,7 @@ public struct TextInputView: View {
             buildDescriptionText(topDescriptionText, fetchBottomTextColor())
             HStack(spacing: Tokens.Size.Spacing.small) {
                 configureIcon(leftIcon)
+                    .foregroundColor(fetchIconColor())
                 ZStack(alignment: .leading) {
                     textFieldView
                         .isHidden(self.isLoading)
@@ -166,29 +170,35 @@ public struct TextInputView: View {
     
     private func configureIcon(
         _ icon: Image?
-    ) -> AnyView {
-        AnyView(
-            icon?
-                .renderingMode(.template)
-                .frame(
-                    width: Tokens.Size.Spacing.regular,
-                    height: Tokens.Size.Spacing.regular
-                )
-                .foregroundColor(fetchIconColor())
-        )
+    ) -> some View {
+
+        return ZStack {
+            if let icon = icon  {
+                icon
+                    .renderingMode(.template)
+                    .frame(
+                        width: 20,
+                        height: 20
+                    )
+            }
+            EmptyView()
+        }
     }
     
-    private func configureAccessoryButton() -> AnyView? {
-        guard let accessoryAction = actions.accessoryAction,
-              let accessory = accessory
-        else { return nil }
-        return AnyView(
-            Button(action: accessoryAction, label: {
-                accessory
-                    .foregroundColor(fetchIconColor())
-            })
-            .disabled(status == .disabled ? true : false)
-        )
+    private func configureAccessoryButton() -> some View {
+
+        return ZStack {
+            if let accessory = accessory {
+                Button(action: {
+                    actions.accessoryAction?()
+                }, label: {
+                    accessory
+                        .foregroundColor(.negro)
+                })
+                .disabled(status == .disabled ? true : false)
+            }
+            EmptyView()
+        }
     }
     
     private func fetchTextFieldForegroundColor() -> Color {
@@ -205,7 +215,7 @@ public struct TextInputView: View {
         case .error:
             return Color.rojo
         default:
-            return Color.clear
+            return accentColor
         }
     }
     
@@ -236,32 +246,32 @@ struct TextField_Previews: PreviewProvider {
             TextInputView(
                 text: .constant(""),
                 status: .constant(.default),
-                accessory: Image("dropDownArrowIcon"),
+                accessory: Asset.Icons.add.swiftUIImage,
                 topDescriptionText: "Texto Superior",
                 bottomDescriptionText: "TEXTO INFERIOR",
                 placeholder: "Texto de exemplo",
-                leftIcon: Image("searchIcon"),
-                rightIcon: Image("searchIcon"),
+                leftIcon: Asset.Icons.location.swiftUIImage,
+                rightIcon: Asset.Icons.location.swiftUIImage,
                 actions: .init(onCommitAction: {}))
             TextInputView(
                 text: .constant("adasd"),
                 status: .constant(.error),
-                accessory: Image("dropDownArrowIcon"),
+                accessory: Asset.Icons.add.swiftUIImage,
                 topDescriptionText: "Texto Superior",
                 bottomDescriptionText: "TEXTO INFERIOR",
                 placeholder: "Texto de exemplo",
-                leftIcon: Image("searchIcon"),
-                rightIcon: Image("searchIcon"),
+                leftIcon: Asset.Icons.location.swiftUIImage,
+                rightIcon: Asset.Icons.location.swiftUIImage,
                 actions: .init(onCommitAction: {}))
             TextInputView(
                 text: .constant("adasd"),
                 status: .constant(.disabled),
-                accessory: Image("dropDownArrowIcon"),
+                accessory: Asset.Icons.add.swiftUIImage,
                 topDescriptionText: "Texto Superior",
                 bottomDescriptionText: "TEXTO INFERIOR",
                 placeholder: "Texto de exemplo",
-                leftIcon: Image("searchIcon"),
-                rightIcon: Image("searchIcon"),
+                leftIcon: Asset.Icons.location.swiftUIImage,
+                rightIcon: Asset.Icons.location.swiftUIImage,
                 actions: .init(onCommitAction: {}))
             
         }

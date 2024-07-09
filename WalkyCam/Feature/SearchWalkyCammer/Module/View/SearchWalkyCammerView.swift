@@ -64,7 +64,7 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
             .padding(.horizontal, Tokens.Size.Spacing.large)
             HStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {
-                Text("Buscar zona")
+                Text(viewModel.currentTitle)
                     .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                 Spacer()
             }
@@ -152,10 +152,10 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
             VStack {
                 TextInputView(
                     text: $viewModel.locationText,
-                    accessory: Image(systemName: "magnifyingglass"),
+                    accessory: Asset.Icons.filter.swiftUIImage,
                     placeholder: "Buscar WalkCamer",
                     leftIcon: Asset.Icons.location.swiftUIImage,
-                    rightIcon: Asset.Icons.filter.swiftUIImage,
+                    rightIcon: Image(systemName: "magnifyingglass"),
                     backgroundColor: .blanco,
                     actions: .init(
                         onCommitAction: {

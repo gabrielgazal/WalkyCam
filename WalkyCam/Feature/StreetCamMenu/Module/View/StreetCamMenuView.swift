@@ -19,21 +19,19 @@ struct StreetCamMenuView<ViewModel: StreetCamMenuViewModelProtocol, Router: Stre
 
     var body: some View {
         VStack(alignment: .center,
-               spacing: Tokens.Size.Spacing.regular) {
+               spacing: Tokens.Size.Spacing.small) {
             Image(Asset.Icons.streetCam.name)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 100, height: 100)
+                .frame(height: 124)
             Text("Conecta con cualquier lugar!")
-                .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .bold))
+                .font(.projectFont(size: Tokens.Size.Font.larger, weight: .bold))
                 .multilineTextAlignment(.center)
-            Spacer()
-                .frame(height: 30)
             HStack(spacing: Tokens.Size.Spacing.regular) {
                 verticalCard(title: "BUSCAR",
                              description: "Localiza tu WalkCamer más cercano.",
                              buttonTitle: "Buscar",
-                             icon: Asset.Icons.link.name,
+                             icon: Asset.Icons.locationWhite.name,
                              action: handleCreateStreetcam)
                 .loading(viewModel.createStreetcamAsyncData.isLoading)
                 verticalCard(title: "RESERVAR",
@@ -91,7 +89,7 @@ struct StreetCamMenuView<ViewModel: StreetCamMenuViewModelProtocol, Router: Stre
         VStack(alignment: .center,
                spacing: Tokens.Size.Spacing.regular) {
             HStack(spacing: Tokens.Size.Spacing.regular) {
-                Image(Asset.Icons.calendar.name)
+                Image(Asset.Icons.joinMeet.name)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 40, height: 40)
