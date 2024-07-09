@@ -1,0 +1,3 @@
+protocol VideocallTimeTabInteractorProtocol {
+    func someFunction()
+}

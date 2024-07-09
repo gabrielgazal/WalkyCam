@@ -41,7 +41,7 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
                         })
                         .frame(width: 150)
                     }
-                    .isHidden(viewModel.walkyCammers.loadedValue == nil)
+                    .isHidden(viewModel.isListButtonHidden())
                 }
                 .padding(Tokens.Size.Spacing.large)
             }

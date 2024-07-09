@@ -54,6 +54,18 @@ final class SearchWalkyCammerViewModel: SearchWalkyCammerViewModelProtocol {
             updatedUserLocation.toggle()
         }
     }
+    
+    func isListButtonHidden() -> Bool {
+        if currentStep == 1 {
+            return true
+        } else {
+            if walkyCammers.loadedValue == nil {
+                return true
+            } else {
+                return false
+            }
+        }
+    }
 
     private func getWalkyCammersOnLocation(coordinates: CLLocationCoordinate2D, completion: @escaping () -> Void) {
         walkyCammers = .loading

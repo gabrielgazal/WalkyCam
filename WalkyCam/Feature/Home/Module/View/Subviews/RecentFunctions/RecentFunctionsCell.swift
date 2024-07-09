@@ -33,6 +33,9 @@ struct RecentFunctionsCell: View {
             VStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.small) {
                 Image(icon)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 48)
                 Text(title)
                     .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
                     .multilineTextAlignment(.center)

@@ -12,4 +12,5 @@ protocol SearchWalkyCammerViewModelProtocol: ViewModelProtocol {
 
     func getUserRegion()
     func updateUserViewPort(manager: LocationPermissionManager)
+    func isListButtonHidden() -> Bool
 }

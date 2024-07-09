@@ -1,5 +1,6 @@
 import SwiftUI
 
 protocol AddPeopleTransmissionViewModelProtocol: ViewModelProtocol {
-    func someAction()
+    var currentStep: Int { get set }
+    var totalSteps: Int { get set }
 }

@@ -23,6 +23,7 @@ struct WCTopBarView: View {
                     }
             }
         }
+        .padding(.horizontal, Tokens.Size.Spacing.large)
         .shadow(
             color: .black.opacity(0.2),
             radius: 8,
@@ -35,6 +36,7 @@ struct WCTopBarView: View {
 
     private func tabView(tab: WCTopBarItem) -> some View {
         HStack(spacing: Tokens.Size.Spacing.tiny) {
+            Spacer()
             if !tab.iconName.isEmpty {
                 Image(tab.iconName)
                     .resizable()
@@ -44,6 +46,7 @@ struct WCTopBarView: View {
             Text(tab.title)
                 .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
                 .foregroundColor(fetchCurrentColor(tab))
+            Spacer()
         }
         .padding(.vertical, Tokens.Size.Spacing.small)
         .padding(.horizontal, Tokens.Size.Spacing.regular)
@@ -78,9 +81,9 @@ struct IMCTopBarView_Previews: PreviewProvider {
         .init(iconName: Asset.Icons.cryptocurrency.name,
               title: "Crypto",
               destination: nil),
-//        .init(iconName: Asset.Icons.shop.name,
-//              title: "Shop",
-//              destination: nil)
+        .init(iconName: Asset.Icons.shop.name,
+              title: "Shop",
+              destination: nil)
     ]
 
     static var previews: some View {
