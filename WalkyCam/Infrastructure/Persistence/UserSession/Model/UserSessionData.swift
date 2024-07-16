@@ -15,6 +15,7 @@ struct UserSessionData: Hashable, Codable {
     public let email: String
     public let address: String
     public var configurations: Configurations
+    public var plan: PlanData
 
     public struct Configurations: Hashable, Codable {
         public var streetcamConfiguration: Bool
@@ -44,6 +45,18 @@ struct UserSessionData: Hashable, Codable {
             self.droneConfiguration = droneConfiguration
             self.droneIOTConfiguration = droneIOTConfiguration
             self.print3dConfiguration = print3dConfiguration
+        }
+    }
+    
+    public struct PlanData: Hashable, Codable {
+        public var id: String
+        public var name: String
+        
+        public init(id: String = "",
+                    name: String = "")
+        {
+            self.id = id
+            self.name = name
         }
     }
 }

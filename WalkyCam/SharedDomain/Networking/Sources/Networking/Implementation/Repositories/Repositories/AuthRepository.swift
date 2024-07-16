@@ -52,4 +52,10 @@ final class AuthRepository: AuthRepositoryProtocol {
             completion(result.mapToRepositoryResult(with: self.requestHandler))
         }
     }
+    
+    func getUserPlan(userName: String, password: String, completion: @escaping (UserPlanResponse) -> Void) {
+        service.login(userName: userName, password: password) { result in
+            completion(result.mapToRepositoryResult(with: DefaultRequestHandler(at: "user_plan")))
+        }
+    }
 }

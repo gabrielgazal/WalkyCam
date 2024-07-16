@@ -11,7 +11,8 @@ public protocol AuthRepositoryProtocol {
     typealias LoginResult = Result<UserResponse, RepositoryError>
     typealias RegisterResult = Result<UserResponse, RepositoryError>
     typealias VerifyByEmailResult = Result<UserResponse, RepositoryError>
-
+    typealias UserPlanResponse = Result<PlanResponse, RepositoryError>
+    
     func login(userName: String,
                password: String,
                completion: @escaping (LoginResult) -> Void)
@@ -24,4 +25,7 @@ public protocol AuthRepositoryProtocol {
     func verifyByEmail(email: String,
                        verificationCode: String,
                        completion: @escaping (VerifyByEmailResult) -> Void)
+    func getUserPlan(userName: String,
+                     password: String,
+                     completion: @escaping (UserPlanResponse) -> Void)
 }

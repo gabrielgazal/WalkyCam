@@ -95,7 +95,8 @@ extension LoginOutput {
                 droneConfiguration: configurations.droneConfiguration,
                 droneIOTConfiguration: configurations.droneIOTConfiguration,
                 print3dConfiguration: configurations.print3dConfiguration
-            )
+            ),
+            plan: .init()
         )
     }
 }

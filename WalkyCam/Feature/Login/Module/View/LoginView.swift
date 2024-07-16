@@ -111,7 +111,8 @@ struct LoginView_Previews: PreviewProvider {
         LoginView(
             viewModel: LoginViewModel(
                 interactor: LoginInteractor(
-                    useCases: .init(login: .empty)
+                    useCases: .init(login: .empty,
+                                    gerUserPlan: .empty)
                 )
             ),
             router: LoginRouter(isPresented: .constant(false))

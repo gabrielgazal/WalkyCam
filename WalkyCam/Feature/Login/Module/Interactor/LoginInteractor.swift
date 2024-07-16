@@ -13,6 +13,7 @@ final class LoginInteractor: LoginInteractorProtocol {
 
     struct UseCases {
         let login: LoginUseCase
+        let gerUserPlan: GetUserPlanUseCase
     }
 
     // MARK: - Dependencies
@@ -30,21 +31,25 @@ final class LoginInteractor: LoginInteractorProtocol {
 
     func login(with input: LoginInput) async throws -> LoginOutput {
         return try await withCheckedThrowingContinuation { continuation in
-            useCases.login(input)
-                .sink(
-                    receiveCompletion: { completion in
-                        switch completion {
-                        case let .failure(error):
-                            continuation.resume(throwing: error)
-                        case .finished:
-                            break
-                        }
-                    },
-                    receiveValue: { user in
-                        continuation.resume(returning: user)
+            Publishers.Zip(
+                useCases.login(input),
+                useCases.gerUserPlan(input)
+            )
+            .sink(
+                receiveCompletion: { completion in
+                    switch completion {
+                    case .finished:
+                        break
+                    case .failure(let failure):
+                        continuation.resume(with: .failure(failure))
                     }
-                )
-                .store(in: &bag)
+                },
+                receiveValue: { user, _ in
+                    continuation.resume(returning: user
+                    )
+                }
+            )
+            .store(in: &bag)
         }
     }
 }

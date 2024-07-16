@@ -139,6 +139,8 @@
 		569BA79C2C2DF57E00E4CCF1 /* PlayBusinessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA78F2C2DF57E00E4CCF1 /* PlayBusinessViewModel.swift */; };
 		569BA79D2C2DF57E00E4CCF1 /* PlayBusinessViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA7902C2DF57E00E4CCF1 /* PlayBusinessViewModelProtocol.swift */; };
 		569DA7E12BF6894400945F0C /* PasswordConfigurationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569DA7E02BF6894400945F0C /* PasswordConfigurationError.swift */; };
+		56A2999A2C46116600D437C5 /* GetUserPlanUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A299992C46116600D437C5 /* GetUserPlanUseCase.swift */; };
+		56A2999C2C4611BA00D437C5 /* UserPlanOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A2999B2C4611BA00D437C5 /* UserPlanOutput.swift */; };
 		56A5522C2B2F6135006B1B17 /* WalkyCamerOnboardingRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552192B2F6134006B1B17 /* WalkyCamerOnboardingRoute.swift */; };
 		56A5522D2B2F6135006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5521B2B2F6134006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift */; };
 		56A5522E2B2F6135006B1B17 /* WalkyCamerOnboardingAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5521C2B2F6134006B1B17 /* WalkyCamerOnboardingAssembler.swift */; };
@@ -1172,6 +1174,8 @@
 		569BA78F2C2DF57E00E4CCF1 /* PlayBusinessViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayBusinessViewModel.swift; sourceTree = "<group>"; };
 		569BA7902C2DF57E00E4CCF1 /* PlayBusinessViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayBusinessViewModelProtocol.swift; sourceTree = "<group>"; };
 		569DA7E02BF6894400945F0C /* PasswordConfigurationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordConfigurationError.swift; sourceTree = "<group>"; };
+		56A299992C46116600D437C5 /* GetUserPlanUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserPlanUseCase.swift; sourceTree = "<group>"; };
+		56A2999B2C4611BA00D437C5 /* UserPlanOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPlanOutput.swift; sourceTree = "<group>"; };
 		56A552192B2F6134006B1B17 /* WalkyCamerOnboardingRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingRoute.swift; sourceTree = "<group>"; };
 		56A5521B2B2F6134006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingAssemblerProtocol.swift; sourceTree = "<group>"; };
 		56A5521C2B2F6134006B1B17 /* WalkyCamerOnboardingAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingAssembler.swift; sourceTree = "<group>"; };
@@ -6413,6 +6417,7 @@
 				EA5A88002B68039400BBB7F9 /* LoginOutput.swift */,
 				EA5A88012B68039400BBB7F9 /* LoginInput.swift */,
 				569DA7E02BF6894400945F0C /* PasswordConfigurationError.swift */,
+				56A2999B2C4611BA00D437C5 /* UserPlanOutput.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -6421,6 +6426,7 @@
 			isa = PBXGroup;
 			children = (
 				EA5A88032B68039400BBB7F9 /* LoginUseCase.swift */,
+				56A299992C46116600D437C5 /* GetUserPlanUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -11014,6 +11020,7 @@
 				EA4A1C652B87909F00B5FC59 /* ExternalAssistantView.swift in Sources */,
 				EAF47BEB2B83099F003F8B86 /* MapTabModel.swift in Sources */,
 				EA50A08E2B0BC77F0042B238 /* PlansPagesAssemblerProtocol.swift in Sources */,
+				56A2999A2C46116600D437C5 /* GetUserPlanUseCase.swift in Sources */,
 				EA57A7D42B6C2C31006247DD /* AddPeopleTransmissionRouter.swift in Sources */,
 				EA57A7AB2B6C1558006247DD /* CammerDetailsAssembler.swift in Sources */,
 				EA0E40BD2AF70E86002B7437 /* CashWalletView.swift in Sources */,
@@ -11604,6 +11611,7 @@
 				EAF47C882B839308003F8B86 /* FlightMenuInteractorProtocol.swift in Sources */,
 				EA6083422AFD58A900295069 /* CryptoTabView.swift in Sources */,
 				EAB63BC32B83D63A0017BDA4 /* ARHandsMenuRoute.swift in Sources */,
+				56A2999C2C4611BA00D437C5 /* UserPlanOutput.swift in Sources */,
 				EAF47BF02B83099F003F8B86 /* MapTabViewModelProtocol.swift in Sources */,
 				EA5E1D8C2AD719C400738A8F /* TextInputView.swift in Sources */,
 				56FEECF62B5C802C003FA686 /* SearchWalkyCammerInteractorProtocol.swift in Sources */,

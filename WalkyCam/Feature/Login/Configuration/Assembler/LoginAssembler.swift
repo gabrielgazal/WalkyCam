@@ -12,7 +12,8 @@ final class LoginAssembler: LoginAssemblerProtocol {
         
         let interactor = LoginInteractor(
             useCases: .init(
-                login: .live(repository: repository)
+                login: .live(repository: repository),
+                gerUserPlan: .live(repository: repository)
             )
         )
         
