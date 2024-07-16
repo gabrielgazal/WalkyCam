@@ -61,3 +61,20 @@ extension View {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
+
+extension View {
+    @ViewBuilder
+    func forceRotation(orientation: UIInterfaceOrientationMask) -> some View {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            self.onAppear() {
+                AppDelegate.orientationLock = orientation
+            }
+            let currentOrientation = AppDelegate.orientationLock
+            self.onDisappear() {
+                AppDelegate.orientationLock = currentOrientation
+            }
+        } else {
+            self
+        }
+    }
+}
