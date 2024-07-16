@@ -65,6 +65,7 @@ struct ProfitSelectionView<ViewModel: ProfitSelectionViewModelProtocol, Router: 
         }
         .scrollIndicators(.hidden)
         .navigation(router)
+        .withInfoIcon()
     }
     
     private func profitCell(title: String, description: String, icon: String, index: Int) -> some View {

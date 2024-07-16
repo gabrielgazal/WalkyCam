@@ -141,6 +141,7 @@
 		569DA7E12BF6894400945F0C /* PasswordConfigurationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569DA7E02BF6894400945F0C /* PasswordConfigurationError.swift */; };
 		56A2999A2C46116600D437C5 /* GetUserPlanUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A299992C46116600D437C5 /* GetUserPlanUseCase.swift */; };
 		56A2999C2C4611BA00D437C5 /* UserPlanOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A2999B2C4611BA00D437C5 /* UserPlanOutput.swift */; };
+		56A2999E2C46265900D437C5 /* IconModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A2999D2C46265900D437C5 /* IconModifier.swift */; };
 		56A5522C2B2F6135006B1B17 /* WalkyCamerOnboardingRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552192B2F6134006B1B17 /* WalkyCamerOnboardingRoute.swift */; };
 		56A5522D2B2F6135006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5521B2B2F6134006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift */; };
 		56A5522E2B2F6135006B1B17 /* WalkyCamerOnboardingAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5521C2B2F6134006B1B17 /* WalkyCamerOnboardingAssembler.swift */; };
@@ -1176,6 +1177,7 @@
 		569DA7E02BF6894400945F0C /* PasswordConfigurationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordConfigurationError.swift; sourceTree = "<group>"; };
 		56A299992C46116600D437C5 /* GetUserPlanUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserPlanUseCase.swift; sourceTree = "<group>"; };
 		56A2999B2C4611BA00D437C5 /* UserPlanOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPlanOutput.swift; sourceTree = "<group>"; };
+		56A2999D2C46265900D437C5 /* IconModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconModifier.swift; sourceTree = "<group>"; };
 		56A552192B2F6134006B1B17 /* WalkyCamerOnboardingRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingRoute.swift; sourceTree = "<group>"; };
 		56A5521B2B2F6134006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingAssemblerProtocol.swift; sourceTree = "<group>"; };
 		56A5521C2B2F6134006B1B17 /* WalkyCamerOnboardingAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingAssembler.swift; sourceTree = "<group>"; };
@@ -3171,6 +3173,13 @@
 			path = Module;
 			sourceTree = "<group>";
 		};
+		56A2999F2C4628D100D437C5 /* TimedLoadingScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TimedLoadingScreen;
+			sourceTree = "<group>";
+		};
 		56A552102B2F5FE7006B1B17 /* WalkyCamerOnboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -4304,6 +4313,7 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				56A2999F2C4628D100D437C5 /* TimedLoadingScreen */,
 				56B3E4762C3D9EBB004A87FA /* VideocallTimeTab */,
 				56B3E44F2C3D8417004A87FA /* ScheduleVideoCall */,
 				5621B6E02C2E603200BFD923 /* UnavailableFeature */,
@@ -8350,6 +8360,7 @@
 				EA910F9B2ADC437300584B98 /* AlertModifier.swift */,
 				EA910F9D2ADC43B200584B98 /* FullScreenWrapper.swift */,
 				EA1235152B99FC1100443CF8 /* FlippedUpsideDown.swift */,
+				56A2999D2C46265900D437C5 /* IconModifier.swift */,
 			);
 			path = Modifier;
 			sourceTree = "<group>";
@@ -11269,6 +11280,7 @@
 				EA910F652AD9B01300584B98 /* OnboardingRouterProtocol.swift in Sources */,
 				EAF47C182B830C80003F8B86 /* WalkyCammerListInteractorProtocol.swift in Sources */,
 				EA4A1C3E2B8788DB00B5FC59 /* SpecialistNotifiedAssembler.swift in Sources */,
+				56A2999E2C46265900D437C5 /* IconModifier.swift in Sources */,
 				EA2E65212BA8AEB60092A135 /* SubscriptionIntentInput.swift in Sources */,
 				EA6083B72B01D9E100295069 /* GalleryView.swift in Sources */,
 				EA0655482BB5DA5D006148E7 /* RadarMenuAssembler.swift in Sources */,

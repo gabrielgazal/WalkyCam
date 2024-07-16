@@ -8,12 +8,14 @@
 import Foundation
 
 struct UserSessionData: Hashable, Codable {
-    public let id: String
-    public let userName: String
-    public let name: String
-    public let lastName: String
-    public let email: String
-    public let address: String
+    public var id: String
+    public var userName: String
+    public var name: String
+    public var lastName: String
+    public var email: String
+    public var address: String
+    public var phone: String
+    public var birthDate: String
     public var configurations: Configurations
     public var plan: PlanData
 

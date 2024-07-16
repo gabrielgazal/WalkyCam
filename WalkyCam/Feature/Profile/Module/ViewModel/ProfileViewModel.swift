@@ -35,14 +35,17 @@ final class ProfileViewModel: ProfileViewModelProtocol {
     @MainActor private func fetchUserData() async {
         let user = await interactor.fetchUserData()
         
-        var name = user.name
-        var lastName = user.lastName
-        var birthDate = ""
+        let name = user.name
+        let lastName = user.lastName
+        let birthDate = ""
+        let planName = user.plan.name
+        
         userData = .init(profileImage: .imageMock,
                          name: name,
                          lastName: lastName,
                          birthDate: birthDate,
-                         isWalkCamer: false)
+                         isWalkCamer: false,
+                         planName: planName)
         temporaryName = name
         temporaryLastname = lastName
         temporaryBirthDate = birthDate

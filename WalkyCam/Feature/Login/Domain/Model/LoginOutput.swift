@@ -14,6 +14,8 @@ struct LoginOutput: Hashable {
     public let lastName: String
     public let email: String
     public let address: String
+    public let phone: String
+    public let birthDate: String
     public let configurations: Configurations
     
     public struct Configurations: Hashable, Codable {

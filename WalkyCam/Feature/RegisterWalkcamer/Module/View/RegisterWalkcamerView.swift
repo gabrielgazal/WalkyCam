@@ -21,9 +21,14 @@ struct RegisterWalkcamerView<ViewModel: RegisterWalkcamerViewModelProtocol, Rout
         ScrollView {
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.regular) {
-                Text("Genera ganancias, hazte WalkCamer")
-                    .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
-                    .foregroundStyle(Color.blanco)
+                Group {
+                    Text("Genera ganancias, hazte ")
+                        .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
+                        .foregroundStyle(Color.blanco) +
+                    Text("WalkCamer")
+                        .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
+                        .foregroundStyle(Color.naranja)
+                }
                 Text("Registrate hoy!")
                     .font(.projectFont(size: Tokens.Size.Font.small, weight: .regular))
                     .foregroundStyle(Color.blanco)
@@ -37,6 +42,7 @@ struct RegisterWalkcamerView<ViewModel: RegisterWalkcamerViewModelProtocol, Rout
                 .ignoresSafeArea()
         }
         .navigation(router)
+        .withInfoIcon()
     }
     
     private var registrationCard: some View {
@@ -64,6 +70,7 @@ struct RegisterWalkcamerView<ViewModel: RegisterWalkcamerViewModelProtocol, Rout
                        style: .standard,
                        descriptor: OrangeButtonStyleDescriptor(),
                        action: {
+                saveUserPhone()
                 router.routeToProfit(registrationData: viewModel.registrationData)
             })
             .disabled(viewModel.isRegisterButtonDisabled())
@@ -73,6 +80,14 @@ struct RegisterWalkcamerView<ViewModel: RegisterWalkcamerViewModelProtocol, Rout
                    RoundedRectangle(cornerRadius: 16)
                        .fill(Color.blanco)
                }
+    }
+    
+    private func saveUserPhone() {
+        do {
+            var user = try UserSession().user()
+            user.phone = viewModel.registrationData.phoneNumber
+            _ = try UserSession().save(user: user)
+        } catch {}
     }
 }
 

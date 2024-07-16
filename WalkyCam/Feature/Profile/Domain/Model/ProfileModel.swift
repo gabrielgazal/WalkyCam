@@ -6,18 +6,21 @@ struct UserData: Hashable {
     var lastName: String
     var birthDate: String
     var isWalkCamer: Bool
+    var planName: String
 
     public init(
         profileImage: String = "",
         name: String = "",
         lastName: String = "",
         birthDate: String = "",
-        isWalkCamer: Bool = false
+        isWalkCamer: Bool = false,
+        planName: String = ""
     ) {
         self.profileImage = profileImage
         self.name = name
         self.lastName = lastName
         self.birthDate = birthDate
         self.isWalkCamer = isWalkCamer
+        self.planName = planName
     }
 }

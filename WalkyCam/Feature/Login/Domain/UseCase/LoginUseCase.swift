@@ -56,6 +56,8 @@ extension LoginUseCase {
                 lastName: loginResponse.lastName,
                 email: loginResponse.email,
                 address: loginResponse.address,
+                phone: loginResponse.phone,
+                birthDate: loginResponse.birthDate,
                 configurations: .init(
                     streetcamConfiguration: loginResponse.configurations.streetcamConfiguration.onboardingReaded,
                     scan3dConfiguration: loginResponse.configurations.scan3dConfiguration.onboardingReaded,
@@ -86,6 +88,8 @@ extension LoginOutput {
             lastName: lastName,
             email: email,
             address: address,
+            phone: phone,
+            birthDate: birthDate,
             configurations: .init(
                 streetcamConfiguration: configurations.streetcamConfiguration,
                 scan3dConfiguration: configurations.scan3dConfiguration,

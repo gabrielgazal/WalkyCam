@@ -77,6 +77,8 @@ extension RegistrationOutput {
                                lastName: lastName,
                                email: email,
                                address: address,
+                               phone: "",
+                               birthDate: "",
                                configurations: .init(),
                                plan: .init())
     }

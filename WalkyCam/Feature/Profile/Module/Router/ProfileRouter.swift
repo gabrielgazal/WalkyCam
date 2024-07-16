@@ -21,4 +21,10 @@ final class ProfileRouter: Router, ProfileRouterProtocol {
             RegisterWalkcamerRoute(isPresented: isNavigating)
         )
     }
+    
+    func routeToPlans() {
+        navigateTo(
+            PlansPagesRoute(isPresented: isNavigating, currentPage: 3)
+        )
+    }
 }
