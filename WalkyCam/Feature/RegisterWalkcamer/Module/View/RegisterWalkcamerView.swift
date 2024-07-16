@@ -50,16 +50,20 @@ struct RegisterWalkcamerView<ViewModel: RegisterWalkcamerViewModelProtocol, Rout
                spacing: Tokens.Size.Spacing.regular) {
             TextInputView(text: $viewModel.registrationData.email,
                           topDescriptionText: "Email",
-                          placeholder: "nombre@email.com")
+                          placeholder: "nombre@email.com",
+                          textColor: .negro)
             TextInputView(text: $viewModel.registrationData.name,
                           topDescriptionText: "Nombre",
-                          placeholder: "Nombre")
+                          placeholder: "Nombre",
+                          textColor: .negro)
             TextInputView(text: $viewModel.registrationData.lastName,
                           topDescriptionText: "Apellido",
-                          placeholder: "Apellido")
+                          placeholder: "Apellido",
+                          textColor: .negro)
             TextInputView(text: $viewModel.registrationData.phoneNumber,
                           topDescriptionText: "Telefono",
-                          placeholder: "Telefono")
+                          placeholder: "Telefono",
+                          textColor: .negro)
         
             CheckBoxToggle(model: viewModel.acceptedTerms,
                            foregroundColor: .negro)
@@ -75,7 +79,7 @@ struct RegisterWalkcamerView<ViewModel: RegisterWalkcamerViewModelProtocol, Rout
             })
             .disabled(viewModel.isRegisterButtonDisabled())
         }
-               .padding()
+               .padding(Tokens.Size.Spacing.xlarge)
                .background {
                    RoundedRectangle(cornerRadius: 16)
                        .fill(Color.blanco)

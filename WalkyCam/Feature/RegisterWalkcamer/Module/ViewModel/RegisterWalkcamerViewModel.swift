@@ -27,6 +27,7 @@ final class RegisterWalkcamerViewModel: RegisterWalkcamerViewModelProtocol {
             id: user?.id ?? "",
             name: user?.name ?? "",
             lastName: user?.lastName ?? "",
+            phoneNumber: user?.phone ?? "", 
             email: user?.email ?? ""
         )
     }

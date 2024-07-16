@@ -59,13 +59,17 @@ struct FeatureSelectionView<ViewModel: FeatureSelectionViewModelProtocol, Router
                 .font(.projectFont(size: Tokens.Size.Font.large))
             LazyVGrid(columns: columns,
                       spacing: Tokens.Size.Spacing.large) {
-                ForEach(0..<viewModel.devicesModel.count, id: \.self) { index in
+                ForEach(0..<(viewModel.devicesModel.count - 1), id: \.self) { index in
                     deviceItemCell(viewModel.devicesModel[index])
                         .onTapGesture {
                             viewModel.devicesModel[index].isSelected.toggle()
                         }
                 }
             }
+            deviceItemCell(viewModel.devicesModel[viewModel.devicesModel.count - 1])
+                .onTapGesture {
+                    viewModel.devicesModel[viewModel.devicesModel.count - 1].isSelected.toggle()
+                }
         }
     }
     
@@ -80,15 +84,17 @@ struct FeatureSelectionView<ViewModel: FeatureSelectionViewModelProtocol, Router
             }
             VStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.small) {
-                Image(model.key)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 60)
+                if !model.key.isEmpty {
+                    Image(model.key)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 60)
+                }
                 Text(model.value)
                     .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
                     .multilineTextAlignment(.center)
             }
-                   .padding(Tokens.Size.Spacing.regular)
+                   .padding(!model.key.isEmpty ? Tokens.Size.Spacing.regular : Tokens.Size.Spacing.big)
             if model.isSelected {
                 VStack {
                     HStack {

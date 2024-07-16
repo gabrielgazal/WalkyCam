@@ -116,6 +116,17 @@
 		5668BB3C2BDFD5FB00A6E05D /* ProfitSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668BB2F2BDFD5FA00A6E05D /* ProfitSelectionViewModel.swift */; };
 		5668BB3D2BDFD5FB00A6E05D /* ProfitSelectionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668BB302BDFD5FA00A6E05D /* ProfitSelectionViewModelProtocol.swift */; };
 		5668BB3F2BE0233200A6E05D /* CamerRegistrationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668BB3E2BE0233200A6E05D /* CamerRegistrationData.swift */; };
+		569889AA2C462E2D006D5997 /* TimedLoadingScreenAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889952C462E2C006D5997 /* TimedLoadingScreenAssembler.swift */; };
+		569889AB2C462E2D006D5997 /* TimedLoadingScreenAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889962C462E2C006D5997 /* TimedLoadingScreenAssemblerProtocol.swift */; };
+		569889AC2C462E2D006D5997 /* TimedLoadingScreenRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889982C462E2C006D5997 /* TimedLoadingScreenRoute.swift */; };
+		569889AD2C462E2D006D5997 /* TimedLoadingScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698899B2C462E2D006D5997 /* TimedLoadingScreenModel.swift */; };
+		569889AE2C462E2D006D5997 /* TimedLoadingScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698899E2C462E2D006D5997 /* TimedLoadingScreenInteractor.swift */; };
+		569889AF2C462E2D006D5997 /* TimedLoadingScreenInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698899F2C462E2D006D5997 /* TimedLoadingScreenInteractorProtocol.swift */; };
+		569889B02C462E2D006D5997 /* TimedLoadingScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889A12C462E2D006D5997 /* TimedLoadingScreenRouter.swift */; };
+		569889B12C462E2D006D5997 /* TimedLoadingScreenRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889A22C462E2D006D5997 /* TimedLoadingScreenRouterProtocol.swift */; };
+		569889B22C462E2D006D5997 /* TimedLoadingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889A42C462E2D006D5997 /* TimedLoadingScreenView.swift */; };
+		569889B32C462E2D006D5997 /* TimedLoadingScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889A62C462E2D006D5997 /* TimedLoadingScreenViewModel.swift */; };
+		569889B42C462E2D006D5997 /* TimedLoadingScreenViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889A72C462E2D006D5997 /* TimedLoadingScreenViewModelProtocol.swift */; };
 		569BA76C2C2DF55200E4CCF1 /* GamesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA7572C2DF55100E4CCF1 /* GamesModel.swift */; };
 		569BA76D2C2DF55200E4CCF1 /* GamesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA75A2C2DF55100E4CCF1 /* GamesInteractor.swift */; };
 		569BA76E2C2DF55200E4CCF1 /* GamesInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA75B2C2DF55100E4CCF1 /* GamesInteractorProtocol.swift */; };
@@ -1152,6 +1163,17 @@
 		5668BB2F2BDFD5FA00A6E05D /* ProfitSelectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfitSelectionViewModel.swift; sourceTree = "<group>"; };
 		5668BB302BDFD5FA00A6E05D /* ProfitSelectionViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfitSelectionViewModelProtocol.swift; sourceTree = "<group>"; };
 		5668BB3E2BE0233200A6E05D /* CamerRegistrationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamerRegistrationData.swift; sourceTree = "<group>"; };
+		569889952C462E2C006D5997 /* TimedLoadingScreenAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenAssembler.swift; sourceTree = "<group>"; };
+		569889962C462E2C006D5997 /* TimedLoadingScreenAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenAssemblerProtocol.swift; sourceTree = "<group>"; };
+		569889982C462E2C006D5997 /* TimedLoadingScreenRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenRoute.swift; sourceTree = "<group>"; };
+		5698899B2C462E2D006D5997 /* TimedLoadingScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenModel.swift; sourceTree = "<group>"; };
+		5698899E2C462E2D006D5997 /* TimedLoadingScreenInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenInteractor.swift; sourceTree = "<group>"; };
+		5698899F2C462E2D006D5997 /* TimedLoadingScreenInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenInteractorProtocol.swift; sourceTree = "<group>"; };
+		569889A12C462E2D006D5997 /* TimedLoadingScreenRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenRouter.swift; sourceTree = "<group>"; };
+		569889A22C462E2D006D5997 /* TimedLoadingScreenRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenRouterProtocol.swift; sourceTree = "<group>"; };
+		569889A42C462E2D006D5997 /* TimedLoadingScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenView.swift; sourceTree = "<group>"; };
+		569889A62C462E2D006D5997 /* TimedLoadingScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenViewModel.swift; sourceTree = "<group>"; };
+		569889A72C462E2D006D5997 /* TimedLoadingScreenViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenViewModelProtocol.swift; sourceTree = "<group>"; };
 		569BA7572C2DF55100E4CCF1 /* GamesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesModel.swift; sourceTree = "<group>"; };
 		569BA75A2C2DF55100E4CCF1 /* GamesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesInteractor.swift; sourceTree = "<group>"; };
 		569BA75B2C2DF55100E4CCF1 /* GamesInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesInteractorProtocol.swift; sourceTree = "<group>"; };
@@ -2987,6 +3009,104 @@
 			path = RegisterWalkcamer;
 			sourceTree = "<group>";
 		};
+		5698898E2C462E04006D5997 /* TimedLoadingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				5698899A2C462E2C006D5997 /* Configuration */,
+				5698899D2C462E2D006D5997 /* Domain */,
+				569889A92C462E2D006D5997 /* Module */,
+			);
+			path = TimedLoadingScreen;
+			sourceTree = "<group>";
+		};
+		569889972C462E2C006D5997 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				569889952C462E2C006D5997 /* TimedLoadingScreenAssembler.swift */,
+				569889962C462E2C006D5997 /* TimedLoadingScreenAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		569889992C462E2C006D5997 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				569889982C462E2C006D5997 /* TimedLoadingScreenRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		5698899A2C462E2C006D5997 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				569889972C462E2C006D5997 /* Assembler */,
+				569889992C462E2C006D5997 /* Route */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		5698899C2C462E2D006D5997 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5698899B2C462E2D006D5997 /* TimedLoadingScreenModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5698899D2C462E2D006D5997 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				5698899C2C462E2D006D5997 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		569889A02C462E2D006D5997 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				5698899E2C462E2D006D5997 /* TimedLoadingScreenInteractor.swift */,
+				5698899F2C462E2D006D5997 /* TimedLoadingScreenInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		569889A32C462E2D006D5997 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				569889A12C462E2D006D5997 /* TimedLoadingScreenRouter.swift */,
+				569889A22C462E2D006D5997 /* TimedLoadingScreenRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		569889A52C462E2D006D5997 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				569889A42C462E2D006D5997 /* TimedLoadingScreenView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		569889A82C462E2D006D5997 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				569889A62C462E2D006D5997 /* TimedLoadingScreenViewModel.swift */,
+				569889A72C462E2D006D5997 /* TimedLoadingScreenViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		569889A92C462E2D006D5997 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				569889A02C462E2D006D5997 /* Interactor */,
+				569889A32C462E2D006D5997 /* Router */,
+				569889A52C462E2D006D5997 /* View */,
+				569889A82C462E2D006D5997 /* ViewModel */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
 		569BA7582C2DF55100E4CCF1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -3171,13 +3291,6 @@
 				569BA7912C2DF57E00E4CCF1 /* ViewModel */,
 			);
 			path = Module;
-			sourceTree = "<group>";
-		};
-		56A2999F2C4628D100D437C5 /* TimedLoadingScreen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TimedLoadingScreen;
 			sourceTree = "<group>";
 		};
 		56A552102B2F5FE7006B1B17 /* WalkyCamerOnboarding */ = {
@@ -4313,7 +4426,7 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				56A2999F2C4628D100D437C5 /* TimedLoadingScreen */,
+				5698898E2C462E04006D5997 /* TimedLoadingScreen */,
 				56B3E4762C3D9EBB004A87FA /* VideocallTimeTab */,
 				56B3E44F2C3D8417004A87FA /* ScheduleVideoCall */,
 				5621B6E02C2E603200BFD923 /* UnavailableFeature */,
@@ -10904,6 +11017,7 @@
 				EA8652DD2B90DCE900B86A54 /* PrintMenuViewModelProtocol.swift in Sources */,
 				EADB5CAB2B190819005863E1 /* VideoCallInteractorProtocol.swift in Sources */,
 				56FEECF82B5C802C003FA686 /* SearchWalkyCammerRouter.swift in Sources */,
+				569889AE2C462E2D006D5997 /* TimedLoadingScreenInteractor.swift in Sources */,
 				56B3E46F2C3D8443004A87FA /* ScheduleVideoCallInteractor.swift in Sources */,
 				EA8652DF2B90DCE900B86A54 /* PrintMenuInteractorProtocol.swift in Sources */,
 				561D83A22BE90D930045C540 /* CamerAvailabilityViewModelProtocol.swift in Sources */,
@@ -11163,6 +11277,7 @@
 				EA6083B52B01D9E100295069 /* GalleryViewModel.swift in Sources */,
 				EAF47BCB2B8306E9003F8B86 /* TimeTabRouter.swift in Sources */,
 				EA5A88042B68039400BBB7F9 /* LoginOutput.swift in Sources */,
+				569889B02C462E2D006D5997 /* TimedLoadingScreenRouter.swift in Sources */,
 				EAF47C422B838D74003F8B86 /* DroneMenuRouterProtocol.swift in Sources */,
 				EA6083DE2B01DBDF00295069 /* GalleryPhotosRouterProtocol.swift in Sources */,
 				EA6083DF2B01DBE000295069 /* GalleryPhotosRouter.swift in Sources */,
@@ -11382,6 +11497,7 @@
 				EA15B5B62AD7075600C03407 /* Router.swift in Sources */,
 				EA91101A2ADDADE100584B98 /* HomeViewModel.swift in Sources */,
 				56F8AE292C247BE000EC7D4F /* IOTSensorsRouterProtocol.swift in Sources */,
+				569889AA2C462E2D006D5997 /* TimedLoadingScreenAssembler.swift in Sources */,
 				EAF47C1C2B830C80003F8B86 /* WalkyCammerListModel.swift in Sources */,
 				EA0E40BF2AF70E86002B7437 /* CashWalletInteractor.swift in Sources */,
 				EA0E40902AF69771002B7437 /* CashWalletOnboardingInteractorProtocol.swift in Sources */,
@@ -11431,6 +11547,7 @@
 				EAE8EC4A2B9574840003AE96 /* ChatDetailView.swift in Sources */,
 				EA0E40C12AF70E86002B7437 /* CashWalletRouter.swift in Sources */,
 				56A5522F2B2F6135006B1B17 /* WalkyCamerOnboardingViewModel.swift in Sources */,
+				569889AF2C462E2D006D5997 /* TimedLoadingScreenInteractorProtocol.swift in Sources */,
 				EAF47B7A2B82FCE8003F8B86 /* BookWalkycamerRouterProtocol.swift in Sources */,
 				56B3E49A2C3DA041004A87FA /* VideocallTimeTabAssembler.swift in Sources */,
 				EA7219A42B05863C00BE2D93 /* FavoriteItemView.swift in Sources */,
@@ -11440,6 +11557,7 @@
 				EA7219972B05612900BE2D93 /* WalkyBotModel.swift in Sources */,
 				EAF47C1A2B830C80003F8B86 /* WalkyCammerListRouter.swift in Sources */,
 				5663D6692BFBB27B00C6655E /* StartStreetcamUseCase.swift in Sources */,
+				569889B42C462E2D006D5997 /* TimedLoadingScreenViewModelProtocol.swift in Sources */,
 				EAB63BC42B83D63A0017BDA4 /* ARHandsMenuAssembler.swift in Sources */,
 				EA5103092BA7A9C900A2DE2E /* FetchAvailablePlansUseCase.swift in Sources */,
 				56A552552B2F6E3D006B1B17 /* StreetCamMenuRoute.swift in Sources */,
@@ -11496,6 +11614,7 @@
 				EA20A51B2B87C913006662FA /* Scan3DMenuRouter.swift in Sources */,
 				561FC8BE2B5C67FB005B6006 /* AsyncDataError.swift in Sources */,
 				561D83C92BE916D70045C540 /* AvailabilityTabModel.swift in Sources */,
+				569889AC2C462E2D006D5997 /* TimedLoadingScreenRoute.swift in Sources */,
 				EA94A52F2B7160EF00EC3037 /* ServiceDetailsViewModel.swift in Sources */,
 				EA4A1C662B87909F00B5FC59 /* ExternalAssistantInteractor.swift in Sources */,
 				EAF47BEF2B83099F003F8B86 /* MapTabViewModel.swift in Sources */,
@@ -11525,6 +11644,7 @@
 				EA282E112AE8327100B90920 /* DateFormat.swift in Sources */,
 				EA4A1C172B87799100B5FC59 /* AvailableAssistantsView.swift in Sources */,
 				56F8AE2B2C247BE000EC7D4F /* IOTSensorsViewModel.swift in Sources */,
+				569889B22C462E2D006D5997 /* TimedLoadingScreenView.swift in Sources */,
 				EA0E408F2AF69771002B7437 /* CashWalletOnboardingInteractor.swift in Sources */,
 				EA8653032B90E0FB00B86A54 /* LidarOnboardingInteractorProtocol.swift in Sources */,
 				56F8AE2A2C247BE000EC7D4F /* IOTSensorsView.swift in Sources */,
@@ -11548,6 +11668,7 @@
 				EA4A1C442B8788DB00B5FC59 /* SpecialistNotifiedRouterProtocol.swift in Sources */,
 				EAF47C122B830C80003F8B86 /* WalkyCammerListRoute.swift in Sources */,
 				EA4A1C432B8788DB00B5FC59 /* SpecialistNotifiedInteractor.swift in Sources */,
+				569889AD2C462E2D006D5997 /* TimedLoadingScreenModel.swift in Sources */,
 				EA86532F2B90E9CA00B86A54 /* AIOnboardingAssembler.swift in Sources */,
 				EA0E40C42AF70E86002B7437 /* CashWalletAssemblerProtocol.swift in Sources */,
 				EA60833E2AFD58A900295069 /* CryptoTabAssembler.swift in Sources */,
@@ -11581,6 +11702,7 @@
 				EA06554D2BB5DA5D006148E7 /* RadarMenuView.swift in Sources */,
 				EAF47BC92B8306E9003F8B86 /* TimeTabInteractorProtocol.swift in Sources */,
 				561AA6C92BE30A9900393CEF /* FeatureSelectionAssembler.swift in Sources */,
+				569889B32C462E2D006D5997 /* TimedLoadingScreenViewModel.swift in Sources */,
 				EA7219772B0553C900BE2D93 /* GalleryItemView.swift in Sources */,
 				561D83992BE90D930045C540 /* CamerAvailabilityAssemblerProtocol.swift in Sources */,
 				EA4A1C6B2B87909F00B5FC59 /* ExternalAssistantRoute.swift in Sources */,
@@ -11672,6 +11794,7 @@
 				56B3E4742C3D8443004A87FA /* ScheduleVideoCallViewModel.swift in Sources */,
 				EA57A7CF2B6C2C31006247DD /* AddPeopleTransmissionViewModel.swift in Sources */,
 				56A6BE9E2BE2EFC7007EBF13 /* IdentityUploadRoute.swift in Sources */,
+				569889B12C462E2D006D5997 /* TimedLoadingScreenRouterProtocol.swift in Sources */,
 				5621B6FE2C2E605100BFD923 /* UnavailableFeatureInteractorProtocol.swift in Sources */,
 				EA4165432AE706C6008CE66A /* NotificationsView.swift in Sources */,
 				EAF47C192B830C80003F8B86 /* WalkyCammerListInteractor.swift in Sources */,
@@ -11750,6 +11873,7 @@
 				EA8652922B90ACC200B86A54 /* IOTOnboardingRouterProtocol.swift in Sources */,
 				EAE401A92BBA3D6100B1311E /* DigitalTwinsOnboardingRoute.swift in Sources */,
 				56F8AE272C247BE000EC7D4F /* IOTSensorsInteractorProtocol.swift in Sources */,
+				569889AB2C462E2D006D5997 /* TimedLoadingScreenAssemblerProtocol.swift in Sources */,
 				EAF47B792B82FCE8003F8B86 /* BookWalkycamerInteractorProtocol.swift in Sources */,
 				56A5525F2B2F6E3D006B1B17 /* StreetCamMenuModel.swift in Sources */,
 				EA60838F2B01CD0A00295069 /* ShopTabViewModel.swift in Sources */,

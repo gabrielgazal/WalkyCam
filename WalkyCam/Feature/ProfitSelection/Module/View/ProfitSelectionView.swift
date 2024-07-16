@@ -50,6 +50,7 @@ struct ProfitSelectionView<ViewModel: ProfitSelectionViewModelProtocol, Router: 
                     default:
                         viewModel.registrationData.earningType = ""
                     }
+                    
                     router.routeToIdentityUpload(data: viewModel.registrationData)
                 })
                 .isHidden(selectedIndex == 0)

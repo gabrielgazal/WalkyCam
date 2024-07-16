@@ -20,6 +20,7 @@ final class FeatureSelectionViewModel: FeatureSelectionViewModelProtocol {
         .init(key: Asset.Icons.cables.name, value: "Detector de cables", isSelected: false),
         .init(key: Asset.Icons._3dPrinting.name, value: "3D Printer", isSelected: false),
         .init(key: Asset.Icons.robotDog.name, value: "Robot Dog", isSelected: false),
+        .init(key: "", value: "Sin dispositivo", isSelected: false)
     ]
     
     @Published var abilitiesModel: [SelectorModel] = [

@@ -39,13 +39,17 @@ final class ProfileViewModel: ProfileViewModelProtocol {
         let lastName = user.lastName
         let birthDate = ""
         let planName = user.plan.name
+        let phoneNumber = user.phone
         
-        userData = .init(profileImage: .imageMock,
-                         name: name,
-                         lastName: lastName,
-                         birthDate: birthDate,
-                         isWalkCamer: false,
-                         planName: planName)
+        userData = .init(
+            profileImage: .imageMock,
+            name: name,
+            lastName: lastName,
+            birthDate: birthDate,
+            isWalkCamer: false,
+            planName: planName,
+            phoneNumber: phoneNumber
+        )
         temporaryName = name
         temporaryLastname = lastName
         temporaryBirthDate = birthDate
