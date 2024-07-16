@@ -45,7 +45,7 @@ struct PlansComparisonPageView: View {
                            spacing: Tokens.Size.Spacing.small) {
                         ForEach(plansData.first(where: { $0.title == "premium"})?.features ?? []) { item in
                             featureItem(item)
-                                .frame(height: 50)
+                                .frame(width: 190, height: 50)
                         }
                     }
                 }
@@ -91,7 +91,9 @@ struct PlansComparisonPageView: View {
                 .font(.projectFont(size: Tokens.Size.Font.xsmall, weight: .medium))
                 .foregroundColor(Color.negro)
                 .lineLimit(3)
+                .layoutPriority(1)
             Spacer()
+                .frame(width: .infinity)
             Image(systemName: "info.circle.fill")
                 .resizable()
                 .frame(width: 15, height: 15)
