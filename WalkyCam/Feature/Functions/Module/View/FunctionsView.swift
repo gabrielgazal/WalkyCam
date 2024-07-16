@@ -138,6 +138,8 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
                                     router.routeToEcografia()
                                 case "Detector de metales":
                                     router.routeToDetectorMetales()
+                                case "Thermal Camera":
+                                    router.routeToThermalCamera()
                                 default: break
                                 }
                             }

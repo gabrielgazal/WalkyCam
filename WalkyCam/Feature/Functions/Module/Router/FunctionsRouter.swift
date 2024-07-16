@@ -384,5 +384,11 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
             PlayBusinessRoute(isPresented: isNavigating)
         )
     }
+    
+    func routeToThermalCamera() {
+        navigateTo(
+            ThermalCameraOnboardingRoute(isPresented: isNavigating)
+        )
+    }
 }
 

@@ -127,6 +127,18 @@
 		569889B22C462E2D006D5997 /* TimedLoadingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889A42C462E2D006D5997 /* TimedLoadingScreenView.swift */; };
 		569889B32C462E2D006D5997 /* TimedLoadingScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889A62C462E2D006D5997 /* TimedLoadingScreenViewModel.swift */; };
 		569889B42C462E2D006D5997 /* TimedLoadingScreenViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889A72C462E2D006D5997 /* TimedLoadingScreenViewModelProtocol.swift */; };
+		569889D12C46AE85006D5997 /* ThermalCameraOnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889BC2C46AE83006D5997 /* ThermalCameraOnboardingInteractor.swift */; };
+		569889D22C46AE85006D5997 /* ThermalCameraOnboardingInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889BD2C46AE83006D5997 /* ThermalCameraOnboardingInteractorProtocol.swift */; };
+		569889D32C46AE85006D5997 /* ThermalCameraOnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889BF2C46AE83006D5997 /* ThermalCameraOnboardingRouter.swift */; };
+		569889D42C46AE85006D5997 /* ThermalCameraOnboardingRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889C02C46AE83006D5997 /* ThermalCameraOnboardingRouterProtocol.swift */; };
+		569889D52C46AE85006D5997 /* ThermalCameraOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889C22C46AE83006D5997 /* ThermalCameraOnboardingView.swift */; };
+		569889D62C46AE85006D5997 /* ThermalCameraOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889C42C46AE83006D5997 /* ThermalCameraOnboardingViewModel.swift */; };
+		569889D72C46AE85006D5997 /* ThermalCameraOnboardingViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889C52C46AE83006D5997 /* ThermalCameraOnboardingViewModelProtocol.swift */; };
+		569889D82C46AE85006D5997 /* ThermalCameraOnboardingAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889C82C46AE84006D5997 /* ThermalCameraOnboardingAssembler.swift */; };
+		569889D92C46AE85006D5997 /* ThermalCameraOnboardingAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889C92C46AE84006D5997 /* ThermalCameraOnboardingAssemblerProtocol.swift */; };
+		569889DA2C46AE85006D5997 /* ThermalCameraOnboardingRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889CB2C46AE84006D5997 /* ThermalCameraOnboardingRoute.swift */; };
+		569889DB2C46AE85006D5997 /* ThermalCameraOnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889CE2C46AE85006D5997 /* ThermalCameraOnboardingModel.swift */; };
+		56988A042C46AF50006D5997 /* ThermalCameraPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56988A032C46AF50006D5997 /* ThermalCameraPageView.swift */; };
 		569BA76C2C2DF55200E4CCF1 /* GamesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA7572C2DF55100E4CCF1 /* GamesModel.swift */; };
 		569BA76D2C2DF55200E4CCF1 /* GamesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA75A2C2DF55100E4CCF1 /* GamesInteractor.swift */; };
 		569BA76E2C2DF55200E4CCF1 /* GamesInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA75B2C2DF55100E4CCF1 /* GamesInteractorProtocol.swift */; };
@@ -1174,6 +1186,18 @@
 		569889A42C462E2D006D5997 /* TimedLoadingScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenView.swift; sourceTree = "<group>"; };
 		569889A62C462E2D006D5997 /* TimedLoadingScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenViewModel.swift; sourceTree = "<group>"; };
 		569889A72C462E2D006D5997 /* TimedLoadingScreenViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenViewModelProtocol.swift; sourceTree = "<group>"; };
+		569889BC2C46AE83006D5997 /* ThermalCameraOnboardingInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThermalCameraOnboardingInteractor.swift; sourceTree = "<group>"; };
+		569889BD2C46AE83006D5997 /* ThermalCameraOnboardingInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThermalCameraOnboardingInteractorProtocol.swift; sourceTree = "<group>"; };
+		569889BF2C46AE83006D5997 /* ThermalCameraOnboardingRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThermalCameraOnboardingRouter.swift; sourceTree = "<group>"; };
+		569889C02C46AE83006D5997 /* ThermalCameraOnboardingRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThermalCameraOnboardingRouterProtocol.swift; sourceTree = "<group>"; };
+		569889C22C46AE83006D5997 /* ThermalCameraOnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThermalCameraOnboardingView.swift; sourceTree = "<group>"; };
+		569889C42C46AE83006D5997 /* ThermalCameraOnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThermalCameraOnboardingViewModel.swift; sourceTree = "<group>"; };
+		569889C52C46AE83006D5997 /* ThermalCameraOnboardingViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThermalCameraOnboardingViewModelProtocol.swift; sourceTree = "<group>"; };
+		569889C82C46AE84006D5997 /* ThermalCameraOnboardingAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThermalCameraOnboardingAssembler.swift; sourceTree = "<group>"; };
+		569889C92C46AE84006D5997 /* ThermalCameraOnboardingAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThermalCameraOnboardingAssemblerProtocol.swift; sourceTree = "<group>"; };
+		569889CB2C46AE84006D5997 /* ThermalCameraOnboardingRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThermalCameraOnboardingRoute.swift; sourceTree = "<group>"; };
+		569889CE2C46AE85006D5997 /* ThermalCameraOnboardingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThermalCameraOnboardingModel.swift; sourceTree = "<group>"; };
+		56988A032C46AF50006D5997 /* ThermalCameraPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermalCameraPageView.swift; sourceTree = "<group>"; };
 		569BA7572C2DF55100E4CCF1 /* GamesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesModel.swift; sourceTree = "<group>"; };
 		569BA75A2C2DF55100E4CCF1 /* GamesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesInteractor.swift; sourceTree = "<group>"; };
 		569BA75B2C2DF55100E4CCF1 /* GamesInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesInteractorProtocol.swift; sourceTree = "<group>"; };
@@ -3107,6 +3131,105 @@
 			path = Module;
 			sourceTree = "<group>";
 		};
+		569889B52C46AE45006D5997 /* ThermalCameraOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+				569889CD2C46AE84006D5997 /* Configuration */,
+				569889D02C46AE85006D5997 /* Domain */,
+				569889C72C46AE83006D5997 /* Module */,
+			);
+			path = ThermalCameraOnboarding;
+			sourceTree = "<group>";
+		};
+		569889BE2C46AE83006D5997 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				569889BC2C46AE83006D5997 /* ThermalCameraOnboardingInteractor.swift */,
+				569889BD2C46AE83006D5997 /* ThermalCameraOnboardingInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		569889C12C46AE83006D5997 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				569889BF2C46AE83006D5997 /* ThermalCameraOnboardingRouter.swift */,
+				569889C02C46AE83006D5997 /* ThermalCameraOnboardingRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		569889C32C46AE83006D5997 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				569889C22C46AE83006D5997 /* ThermalCameraOnboardingView.swift */,
+				56988A032C46AF50006D5997 /* ThermalCameraPageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		569889C62C46AE83006D5997 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				569889C42C46AE83006D5997 /* ThermalCameraOnboardingViewModel.swift */,
+				569889C52C46AE83006D5997 /* ThermalCameraOnboardingViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		569889C72C46AE83006D5997 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				569889BE2C46AE83006D5997 /* Interactor */,
+				569889C12C46AE83006D5997 /* Router */,
+				569889C32C46AE83006D5997 /* View */,
+				569889C62C46AE83006D5997 /* ViewModel */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		569889CA2C46AE84006D5997 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				569889C82C46AE84006D5997 /* ThermalCameraOnboardingAssembler.swift */,
+				569889C92C46AE84006D5997 /* ThermalCameraOnboardingAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		569889CC2C46AE84006D5997 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				569889CB2C46AE84006D5997 /* ThermalCameraOnboardingRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		569889CD2C46AE84006D5997 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				569889CA2C46AE84006D5997 /* Assembler */,
+				569889CC2C46AE84006D5997 /* Route */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		569889CF2C46AE85006D5997 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				569889CE2C46AE85006D5997 /* ThermalCameraOnboardingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		569889D02C46AE85006D5997 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				569889CF2C46AE85006D5997 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		569BA7582C2DF55100E4CCF1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -4426,6 +4549,7 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				569889B52C46AE45006D5997 /* ThermalCameraOnboarding */,
 				5698898E2C462E04006D5997 /* TimedLoadingScreen */,
 				56B3E4762C3D9EBB004A87FA /* VideocallTimeTab */,
 				56B3E44F2C3D8417004A87FA /* ScheduleVideoCall */,
@@ -10941,6 +11065,7 @@
 				561D83A12BE90D930045C540 /* CamerAvailabilityViewModel.swift in Sources */,
 				EA910FCD2ADC495700584B98 /* TabBarRouterProtocol.swift in Sources */,
 				EA4A1C162B87799100B5FC59 /* AvailableAssistantsViewModelProtocol.swift in Sources */,
+				569889DA2C46AE85006D5997 /* ThermalCameraOnboardingRoute.swift in Sources */,
 				56B3E4702C3D8443004A87FA /* ScheduleVideoCallInteractorProtocol.swift in Sources */,
 				EA172B002AF06BDE00EB1514 /* ConfirmMailRouter.swift in Sources */,
 				EAD048732AE22C530096E6AB /* RegistrationPlansAssemblerProtocol.swift in Sources */,
@@ -11045,6 +11170,7 @@
 				EA87DE242BACBAF4001CB5E6 /* SubscriptionInput.swift in Sources */,
 				EA15B5AC2AD706DB00C03407 /* BottomSheetModifier.swift in Sources */,
 				EA282E552AE952F700B90920 /* ProfileViewModelProtocol.swift in Sources */,
+				56988A042C46AF50006D5997 /* ThermalCameraPageView.swift in Sources */,
 				EA91101F2ADDADE100584B98 /* HomeRouter.swift in Sources */,
 				EACFDF1B2BA7EF3E00B08990 /* UnreleasedFeatureRouterProtocol.swift in Sources */,
 				EA3E5C922B87692400158207 /* AssistantMenuAssemblerProtocol.swift in Sources */,
@@ -11130,8 +11256,10 @@
 				EAF47B7D2B82FCE8003F8B86 /* BookWalkycamerAssembler.swift in Sources */,
 				EAA1E63B2AFB03FD00A42174 /* CashTabRoute.swift in Sources */,
 				EA8EF8DE2B67E24400136D1F /* KeychainPersistenceProtocol.swift in Sources */,
+				569889D82C46AE85006D5997 /* ThermalCameraOnboardingAssembler.swift in Sources */,
 				EAE401FF2BBAFB0900B1311E /* RobotMenuRouter.swift in Sources */,
 				EA910FF02ADCBCC000584B98 /* MenuRoute.swift in Sources */,
+				569889D32C46AE85006D5997 /* ThermalCameraOnboardingRouter.swift in Sources */,
 				EAF47BF12B83099F003F8B86 /* MapTabView.swift in Sources */,
 				EA86537D2B90FA8800B86A54 /* AIMenuRouter.swift in Sources */,
 				EA6083452AFD58A900295069 /* CryptoTabRouter.swift in Sources */,
@@ -11252,11 +11380,13 @@
 				EA4AE4942B75136600B5A89F /* UpdateStreetcamConfigurationUseCase.swift in Sources */,
 				EA6083442AFD58A900295069 /* CryptoTabInteractorProtocol.swift in Sources */,
 				56F8AE262C247BE000EC7D4F /* IOTSensorsInteractor.swift in Sources */,
+				569889D92C46AE85006D5997 /* ThermalCameraOnboardingAssemblerProtocol.swift in Sources */,
 				EAF47B4B2B82F7EA003F8B86 /* VideocallOnboardingRoute.swift in Sources */,
 				EA172B252AF06EF600EB1514 /* StartupInteractorProtocol.swift in Sources */,
 				EA8652FF2B90E0FB00B86A54 /* LidarOnboardingModel.swift in Sources */,
 				561AA6C72BE30A9900393CEF /* FeatureSelectionViewModel.swift in Sources */,
 				569BA76C2C2DF55200E4CCF1 /* GamesModel.swift in Sources */,
+				569889D62C46AE85006D5997 /* ThermalCameraOnboardingViewModel.swift in Sources */,
 				56459FAC2BFFB5FD00776F68 /* InformationViewStyle.swift in Sources */,
 				EA6083E12B01DBE000295069 /* GalleryPhotosAssemblerProtocol.swift in Sources */,
 				561D83C12BE916D70045C540 /* AvailabilityTabRouter.swift in Sources */,
@@ -11309,6 +11439,7 @@
 				EA7219A12B057D3A00BE2D93 /* NewsItemView.swift in Sources */,
 				EA910FF12ADCBCC000584B98 /* MenuAssemblerProtocol.swift in Sources */,
 				EA6083912B01CD0A00295069 /* ShopTabInteractor.swift in Sources */,
+				569889D72C46AE85006D5997 /* ThermalCameraOnboardingViewModelProtocol.swift in Sources */,
 				EAF47B502B82F7EA003F8B86 /* VideocallOnboardingPageView.swift in Sources */,
 				EA3E5C912B87692400158207 /* AssistantMenuAssembler.swift in Sources */,
 				EA8652672B90AC8300B86A54 /* IOTMenuViewModel.swift in Sources */,
@@ -11418,6 +11549,7 @@
 				561AA6EF2BE3A6B500393CEF /* FeatureInformationInteractorProtocol.swift in Sources */,
 				EA57A7A62B6C1558006247DD /* CammerDetailsRouter.swift in Sources */,
 				EA12351A2B9A2B6200443CF8 /* Int64+Extension.swift in Sources */,
+				569889D52C46AE85006D5997 /* ThermalCameraOnboardingView.swift in Sources */,
 				EA8652432B902E4B00B86A54 /* FunctionMenuModel.swift in Sources */,
 				EA6083412AFD58A900295069 /* CryptoTabViewModelProtocol.swift in Sources */,
 				EAD0486D2AE22C530096E6AB /* RegistrationPlansInteractor.swift in Sources */,
@@ -11523,6 +11655,7 @@
 				EA57A7CB2B6C2C31006247DD /* AddPeopleTransmissionRoute.swift in Sources */,
 				EA57A7AE2B6C1C9B006247DD /* FooterView.swift in Sources */,
 				EA6083DD2B01DBDF00295069 /* GalleryPhotosInteractorProtocol.swift in Sources */,
+				569889D12C46AE85006D5997 /* ThermalCameraOnboardingInteractor.swift in Sources */,
 				EA06554C2BB5DA5D006148E7 /* RadarMenuViewModel.swift in Sources */,
 				EA910F362AD976F600584B98 /* CheckboxToggle.swift in Sources */,
 				EA6083932B01CD0A00295069 /* ShopTabRouterProtocol.swift in Sources */,
@@ -11705,6 +11838,7 @@
 				569889B32C462E2D006D5997 /* TimedLoadingScreenViewModel.swift in Sources */,
 				EA7219772B0553C900BE2D93 /* GalleryItemView.swift in Sources */,
 				561D83992BE90D930045C540 /* CamerAvailabilityAssemblerProtocol.swift in Sources */,
+				569889D22C46AE85006D5997 /* ThermalCameraOnboardingInteractorProtocol.swift in Sources */,
 				EA4A1C6B2B87909F00B5FC59 /* ExternalAssistantRoute.swift in Sources */,
 				EA86528F2B90ACC200B86A54 /* IOTOnboardingView.swift in Sources */,
 				5637A8162AD5DD72000586DF /* WalkyCamApp.swift in Sources */,
@@ -11809,6 +11943,7 @@
 				561AA6EE2BE3A6B500393CEF /* FeatureInformationInteractor.swift in Sources */,
 				569BA7732C2DF55200E4CCF1 /* GamesViewModelProtocol.swift in Sources */,
 				EA910F922ADA06F500584B98 /* RegistrationInteractor.swift in Sources */,
+				569889D42C46AE85006D5997 /* ThermalCameraOnboardingRouterProtocol.swift in Sources */,
 				EA86537B2B90FA8800B86A54 /* AIMenuInteractorProtocol.swift in Sources */,
 				EA910FC52ADC495700584B98 /* TabBarAssembler.swift in Sources */,
 				EA82DB502ADF4DBB00E6B39A /* HomeSectionView.swift in Sources */,
@@ -11893,6 +12028,7 @@
 				56F8AE282C247BE000EC7D4F /* IOTSensorsRouter.swift in Sources */,
 				569BA7712C2DF55200E4CCF1 /* GamesView.swift in Sources */,
 				EAE8EC582B9574840003AE96 /* ChatListRouter.swift in Sources */,
+				569889DB2C46AE85006D5997 /* ThermalCameraOnboardingModel.swift in Sources */,
 				EA8652B62B90DA9600B86A54 /* 3DPrintOnboardingViewModel.swift in Sources */,
 				569BA7742C2DF55200E4CCF1 /* GamesAssembler.swift in Sources */,
 				EA20A4E82B87C3B4006662FA /* Scan3DOnboardingViewModelProtocol.swift in Sources */,

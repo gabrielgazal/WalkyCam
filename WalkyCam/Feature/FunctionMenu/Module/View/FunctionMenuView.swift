@@ -23,9 +23,9 @@ struct FunctionMenuView<ViewModel:FunctionMenuViewModelProtocol, Router: Functio
             Image(viewModel.model.icon)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 100, height: 100)
+                .frame(width: 200)
             Text(viewModel.model.title)
-                .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .bold))
+                .font(.projectFont(size: Tokens.Size.Font.larger, weight: .bold))
                 .multilineTextAlignment(.center)
             Spacer()
                 .frame(height: 30)
@@ -33,14 +33,14 @@ struct FunctionMenuView<ViewModel:FunctionMenuViewModelProtocol, Router: Functio
                 verticalCard(title: "BUSCAR",
                              description: "Localiza tu WalkCamer más cercano.",
                              buttonTitle: "Buscar",
-                             icon: Asset.Icons.link.name,
+                             icon: Asset.Icons.locationWhite.name,
                              action: {
                     router.routeToSearchCammer()
                 })
                 verticalCard(title: "RESERVAR",
                              description: "Programa tu WalkCamer con anterioridad.",
                              buttonTitle: "Reservar",
-                             icon: Asset.Icons.calendar.name,
+                             icon: Asset.Icons.joinMeet.name,
                              action: {
                     router.routeToScheduleCammer()
                 })

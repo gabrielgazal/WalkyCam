@@ -28,6 +28,7 @@ protocol FunctionsRouterProtocol: Router {
     func routeToEcografia()
     func routeToRecording()
     func routeToLawConsulting()
+    func routeToThermalCamera()
     
     func routeToRegistrationPlans()
 }

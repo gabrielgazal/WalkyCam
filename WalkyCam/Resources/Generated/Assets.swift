@@ -490,6 +490,8 @@ internal enum Asset {
     internal static let scan3dOnboarding2 = ImageAsset(name: "scan3d-onboarding2")
     internal static let scan3dOnboarding3 = ImageAsset(name: "scan3d-onboarding3")
     internal static let scan3dOnboarding4 = ImageAsset(name: "scan3d-onboarding4")
+    internal static let thermalOnboarding1 = ImageAsset(name: "thermal-onboarding-1")
+    internal static let thermalOnboarding2 = ImageAsset(name: "thermal-onboarding-2")
     internal static let videocallOnboarding = ImageAsset(name: "videocall-onboarding")
   }
   internal static let launchScreen = ImageAsset(name: "LaunchScreen")
