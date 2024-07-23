@@ -97,26 +97,26 @@ struct PlansComparisonPageView: View {
             Image(systemName: "info.circle.fill")
                 .resizable()
                 .frame(width: 15, height: 15)
-                .overlay {
-                    TooltipView(alignment: .top, isVisible: Binding(
-                        get: { tooltipVisibility[item.title] ?? false },
-                        set: { tooltipVisibility[item.title] = $0 }
-                    )) {
-                        HStack {
-                            VStack(alignment: .leading,
-                                   spacing: Tokens.Size.Spacing.small) {
-                                Text(item.title)
-                                    .font(.projectFont(size: Tokens.Size.Font.small, weight: .bold))
-                                Text(item.getTooltipText())
-                                    .lineLimit(nil)
-                                    .font(.projectFont(size: Tokens.Size.Font.small))
-                            }
-                            Spacer()
-                        }
-                        .frame(maxWidth: 200)
-                        .padding()
-                    }
-                }
+//                .overlay {
+//                    TooltipView(alignment: .top, isVisible: Binding(
+//                        get: { tooltipVisibility[item.title] ?? false },
+//                        set: { tooltipVisibility[item.title] = $0 }
+//                    )) {
+//                        HStack {
+//                            VStack(alignment: .leading,
+//                                   spacing: Tokens.Size.Spacing.small) {
+//                                Text(item.title)
+//                                    .font(.projectFont(size: Tokens.Size.Font.small, weight: .bold))
+//                                Text(item.getTooltipText())
+//                                    .lineLimit(nil)
+//                                    .font(.projectFont(size: Tokens.Size.Font.small))
+//                            }
+//                            Spacer()
+//                        }
+//                        .frame(maxWidth: 200)
+//                        .padding()
+//                    }
+//                }
                 .onTapGesture {
                     hideAllTooltips()
                     tooltipVisibility[item.title]?.toggle()
@@ -131,7 +131,7 @@ struct PlansComparisonPageView: View {
             Text("Plan \(plan.title.capitalized)")
                 .font(.projectFont(size: Tokens.Size.Font.xsmall, weight: .bold))
                 .foregroundColor(plan.accentColor)
-            Text("\(plan.monthlyPrice) €/mo")
+            Text("\(formatDouble(plan.monthlyPrice)) €/mo")
                 .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .bold))
             WCUIButton(title: "Start \(plan.title)",
                        style: .standard,
@@ -172,6 +172,11 @@ struct PlansComparisonPageView: View {
         default:
             return OrangeButtonStyleDescriptor()
         }
+    }
+    
+    private func formatDouble(_ data: String) -> String {
+        let stringnDouble = Double(data) ?? 0.0
+        return String(format: "%.f", stringnDouble)
     }
 }
 

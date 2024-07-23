@@ -29,7 +29,7 @@ struct PlanPageView: View {
                     Text(planData.title.capitalized)
                         .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                     Spacer()
-                    Text("\(planData.monthlyPrice) € /mo")
+                    Text("\(formatDouble(planData.monthlyPrice)) € /mo")
                         .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                 }
                 .foregroundColor(planData.accentColor)
@@ -73,6 +73,11 @@ struct PlanPageView: View {
             Spacer()
         }
     }
+    
+    private func formatDouble(_ data: String) -> String {
+        let stringnDouble = Double(data) ?? 0.0
+        return String(format: "%.f", stringnDouble)
+    }
 }
 
 struct PlanPageView_Previews: PreviewProvider {
@@ -80,7 +85,7 @@ struct PlanPageView_Previews: PreviewProvider {
         PlanPageView(
             planData: .init(
                 title: "Basic",
-                monthlyPrice: "60.0",
+                monthlyPrice: "10.0",
                 backgroundImage: "",
                 accentColor: .acentoFondoDark,
                 features: [
@@ -91,7 +96,7 @@ struct PlanPageView_Previews: PreviewProvider {
                     .init(title: "Video Call: 200 Personas con duración ilimitada.", icon: "")
                 ]),
             lastPlan: .init(title: "Free",
-                            monthlyPrice: "0.0",
+                            monthlyPrice: "10.0",
                             backgroundImage: "",
                             accentColor: .plateado,
                             features: [])
