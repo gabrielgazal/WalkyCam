@@ -55,8 +55,11 @@ struct MapTabView<ViewModel:MapTabViewModelProtocol, Router: MapTabRouterProtoco
             .padding(Tokens.Size.Spacing.huge)
         }
         .ignoresSafeArea()
-        .onChange(of: locationManager.coordinates) { newValue in
+        .onChange(of: locationManager.coordinates) { _, newValue in
             viewModel.updateUserViewPort(manager: locationManager)
+        }
+        .onDisappear {
+            viewModel.updateCamerLocation()
         }
     }
 }

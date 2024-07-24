@@ -1,9 +1,9 @@
 import SwiftUI
 
 struct VideocallTimeTabView<ViewModel: VideocallTimeTabViewModelProtocol, Router: VideocallTimeTabRouterProtocol>: View {
-
+    
     // MARK: - Dependencies
-
+    
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
     @State var startTimeSelected = Date.now
@@ -53,7 +53,7 @@ struct VideocallTimeTabView<ViewModel: VideocallTimeTabViewModelProtocol, Router
 
 struct VideocallTimeTabView_Previews: PreviewProvider {
     static var previews: some View {
-    VideocallTimeTabView(
+        VideocallTimeTabView(
             viewModel: VideocallTimeTabViewModel(),
             router: VideocallTimeTabRouter(isPresented: .constant(false))
         )

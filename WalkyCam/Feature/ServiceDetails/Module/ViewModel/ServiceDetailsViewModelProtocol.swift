@@ -6,4 +6,5 @@ protocol ServiceDetailsViewModelProtocol: ViewModelProtocol {
     var totalSteps: Int { get set}
     
     func cancelAction()
+    func assembleServiceDetails() -> [ServiceDetailsItemModel]
 }

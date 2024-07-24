@@ -5,4 +5,6 @@ protocol CammerDetailsViewModelProtocol: ViewModelProtocol {
     var specialistMode: Bool { get set }
     var topBarItems: [WCTopBarItem] { get set }
     var selection: WCTopBarItem { get set }
+    
+    func updateSelectedCammer()
 }

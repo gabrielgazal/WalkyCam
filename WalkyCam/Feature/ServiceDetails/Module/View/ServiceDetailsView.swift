@@ -37,11 +37,9 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
                 }
                 VStack(spacing: 0) {
                     Divider()
-                    cellView("Día", "8 Jun 2022")
-                    cellView("Hora", "13:00 h")
-                    cellView("WalkCamer", "Diego Salas")
-                    cellView("Lugar de grabación", "New York")
-                    cellView("País", "United States")
+                    ForEach(viewModel.assembleServiceDetails(), id: \.self) { item in
+                        cellView(data: item)
+                    }
                 }
             }
                    .padding(.horizontal, Tokens.Size.Spacing.large)
@@ -83,13 +81,13 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
         }
     }
 
-    private func cellView(_ title: String, _ value: String) -> some View {
+    private func cellView(data: ServiceDetailsItemModel) -> some View {
         return VStack(alignment: .leading,
                       spacing: Tokens.Size.Spacing.large) {
             HStack(spacing: Tokens.Size.Spacing.regular) {
-                Text(title)
+                Text(data.title)
                     .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
-                Text(value)
+                Text(data.value)
                     .font(.projectFont(size: Tokens.Size.Font.regular))
                 Spacer()
             }
@@ -103,8 +101,8 @@ struct ServiceDetailsView_Previews: PreviewProvider {
     static var previews: some View {
     ServiceDetailsView(
         viewModel: ServiceDetailsViewModel(
-            currentStep: 4,
-            totalSteps: 4
+            currentStep: 3,
+            totalSteps: 3
         ),
             router: ServiceDetailsRouter(state: RouterState(isPresented: .constant(false)))
         )

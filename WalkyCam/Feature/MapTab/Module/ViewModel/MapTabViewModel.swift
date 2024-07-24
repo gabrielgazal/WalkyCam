@@ -7,6 +7,7 @@ final class MapTabViewModel: MapTabViewModelProtocol {
     // MARK: - Dependencies
 
     private let interactor: MapTabInteractorProtocol
+    private let serviceManager: ServiceInformationManagerProtocol
     @Published var userLocation: Viewport = .idle
     @Published var locationText: String = ""
     @State var coordinates: CLLocationCoordinate2D = .init()
@@ -14,13 +15,20 @@ final class MapTabViewModel: MapTabViewModelProtocol {
 
     // MARK: - Initialization
 
-    init(interactor: MapTabInteractorProtocol = MapTabInteractor()) {
+    init(interactor: MapTabInteractorProtocol = MapTabInteractor(),
+         serviceManager: ServiceInformationManagerProtocol = ServiceInformationManager.shared) {
         self.interactor = interactor
+        self.serviceManager = serviceManager
         updateUserViewPort(manager: locationManager)
     }
 
     // MARK: - Public API
 
+    func updateCamerLocation() {
+        if let userCoordinates = userLocation.camera?.center {
+            serviceManager.updateLocation(userCoordinates)
+        }
+    }
 
     // MARK: - Private Methods
     

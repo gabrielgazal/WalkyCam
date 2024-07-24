@@ -117,6 +117,7 @@
 		5668BB3C2BDFD5FB00A6E05D /* ProfitSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668BB2F2BDFD5FA00A6E05D /* ProfitSelectionViewModel.swift */; };
 		5668BB3D2BDFD5FB00A6E05D /* ProfitSelectionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668BB302BDFD5FA00A6E05D /* ProfitSelectionViewModelProtocol.swift */; };
 		5668BB3F2BE0233200A6E05D /* CamerRegistrationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668BB3E2BE0233200A6E05D /* CamerRegistrationData.swift */; };
+		567CB7522C51564C00112F05 /* ServiceInformationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567CB7512C51564C00112F05 /* ServiceInformationManager.swift */; };
 		569889AA2C462E2D006D5997 /* TimedLoadingScreenAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889952C462E2C006D5997 /* TimedLoadingScreenAssembler.swift */; };
 		569889AB2C462E2D006D5997 /* TimedLoadingScreenAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889962C462E2C006D5997 /* TimedLoadingScreenAssemblerProtocol.swift */; };
 		569889AC2C462E2D006D5997 /* TimedLoadingScreenRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889982C462E2C006D5997 /* TimedLoadingScreenRoute.swift */; };
@@ -843,7 +844,7 @@
 		EA94A5332B7160EF00EC3037 /* ServiceDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94A5252B7160EF00EC3037 /* ServiceDetailsInteractor.swift */; };
 		EA94A5342B7160EF00EC3037 /* ServiceDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94A5272B7160EF00EC3037 /* ServiceDetailsRouter.swift */; };
 		EA94A5352B7160EF00EC3037 /* ServiceDetailsRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94A5282B7160EF00EC3037 /* ServiceDetailsRouterProtocol.swift */; };
-		EA94A5362B7160EF00EC3037 /* ServiceDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94A52B2B7160EF00EC3037 /* ServiceDetailsModel.swift */; };
+		EA94A5362B7160EF00EC3037 /* ServiceDetailsItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94A52B2B7160EF00EC3037 /* ServiceDetailsItemModel.swift */; };
 		EAA1E61C2AFAFA7100A42174 /* WCTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA1E6192AFAFA7100A42174 /* WCTopBarView.swift */; };
 		EAA1E61D2AFAFA7100A42174 /* WCTopBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA1E61A2AFAFA7100A42174 /* WCTopBarItem.swift */; };
 		EAA1E61E2AFAFA7100A42174 /* WCTopBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA1E61B2AFAFA7100A42174 /* WCTopBarContainerView.swift */; };
@@ -1177,6 +1178,7 @@
 		5668BB2F2BDFD5FA00A6E05D /* ProfitSelectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfitSelectionViewModel.swift; sourceTree = "<group>"; };
 		5668BB302BDFD5FA00A6E05D /* ProfitSelectionViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfitSelectionViewModelProtocol.swift; sourceTree = "<group>"; };
 		5668BB3E2BE0233200A6E05D /* CamerRegistrationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamerRegistrationData.swift; sourceTree = "<group>"; };
+		567CB7512C51564C00112F05 /* ServiceInformationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceInformationManager.swift; sourceTree = "<group>"; };
 		569889952C462E2C006D5997 /* TimedLoadingScreenAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenAssembler.swift; sourceTree = "<group>"; };
 		569889962C462E2C006D5997 /* TimedLoadingScreenAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenAssemblerProtocol.swift; sourceTree = "<group>"; };
 		569889982C462E2C006D5997 /* TimedLoadingScreenRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenRoute.swift; sourceTree = "<group>"; };
@@ -1898,7 +1900,7 @@
 		EA94A5252B7160EF00EC3037 /* ServiceDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailsInteractor.swift; sourceTree = "<group>"; };
 		EA94A5272B7160EF00EC3037 /* ServiceDetailsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailsRouter.swift; sourceTree = "<group>"; };
 		EA94A5282B7160EF00EC3037 /* ServiceDetailsRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailsRouterProtocol.swift; sourceTree = "<group>"; };
-		EA94A52B2B7160EF00EC3037 /* ServiceDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailsModel.swift; sourceTree = "<group>"; };
+		EA94A52B2B7160EF00EC3037 /* ServiceDetailsItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailsItemModel.swift; sourceTree = "<group>"; };
 		EAA1E6192AFAFA7100A42174 /* WCTopBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCTopBarView.swift; sourceTree = "<group>"; };
 		EAA1E61A2AFAFA7100A42174 /* WCTopBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCTopBarItem.swift; sourceTree = "<group>"; };
 		EAA1E61B2AFAFA7100A42174 /* WCTopBarContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCTopBarContainerView.swift; sourceTree = "<group>"; };
@@ -3033,6 +3035,14 @@
 				56AF27542BDAE00800DADC29 /* Module */,
 			);
 			path = RegisterWalkcamer;
+			sourceTree = "<group>";
+		};
+		567CB7502C51563800112F05 /* ServiceInformationManager */ = {
+			isa = PBXGroup;
+			children = (
+				567CB7512C51564C00112F05 /* ServiceInformationManager.swift */,
+			);
+			path = ServiceInformationManager;
 			sourceTree = "<group>";
 		};
 		5698898E2C462E04006D5997 /* TimedLoadingScreen */ = {
@@ -4712,6 +4722,7 @@
 		EA15B5A52AD7067400C03407 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				567CB7502C51563800112F05 /* ServiceInformationManager */,
 				5621B70A2C2EF27000BFD923 /* ChatBot */,
 				EA8EF8CE2B67E11600136D1F /* Persistence */,
 				EA890A272B61EDCE00FC369B /* DependencyStore */,
@@ -9020,7 +9031,7 @@
 		EA94A52A2B7160EF00EC3037 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EA94A52B2B7160EF00EC3037 /* ServiceDetailsModel.swift */,
+				EA94A52B2B7160EF00EC3037 /* ServiceDetailsItemModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -12019,6 +12030,7 @@
 				56F8AE232C247BE000EC7D4F /* IOTSensorsAssembler.swift in Sources */,
 				EA8652B52B90DA9600B86A54 /* 3DPrintOnboardingViewModelProtocol.swift in Sources */,
 				EA1FD1BB2B1E932F000E583D /* VideoCallRoomView.swift in Sources */,
+				567CB7522C51564C00112F05 /* ServiceInformationManager.swift in Sources */,
 				EA910F6B2AD9CCF500584B98 /* PageControl.swift in Sources */,
 				EA2C4C2B2B7E5C9500F1EE26 /* DroneOnboardingPageView.swift in Sources */,
 				EAE8EC4D2B9574840003AE96 /* ChatDetailRouterProtocol.swift in Sources */,
@@ -12078,7 +12090,7 @@
 				EA910FC92ADC495700584B98 /* TabBarViewModel.swift in Sources */,
 				5663D66B2BFBB2C800C6655E /* VideoCallOutput.swift in Sources */,
 				EA8652402B902E4B00B86A54 /* FunctionMenuInteractor.swift in Sources */,
-				EA94A5362B7160EF00EC3037 /* ServiceDetailsModel.swift in Sources */,
+				EA94A5362B7160EF00EC3037 /* ServiceDetailsItemModel.swift in Sources */,
 				56A5525B2B2F6E3D006B1B17 /* StreetCamMenuInteractorProtocol.swift in Sources */,
 				56A5525D2B2F6E3D006B1B17 /* StreetCamMenuRouterProtocol.swift in Sources */,
 				EA72199E2B05612900BE2D93 /* WalkyBotRouter.swift in Sources */,

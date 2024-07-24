@@ -106,6 +106,7 @@ struct CammerDetailsView<ViewModel:CammerDetailsViewModelProtocol, Router: Camme
                            style: .standard,
                            descriptor: OrangeButtonStyleDescriptor(),
                            action: {
+                    viewModel.updateSelectedCammer()
                     router.routeToAddPeople(
                         specialistMode: viewModel.specialistMode,
                         currentStep: 3,

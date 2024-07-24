@@ -32,6 +32,9 @@ struct TimeTabView<ViewModel:TimeTabViewModelProtocol, Router: TimeTabRouterProt
                             .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .medium))
                         TimePicker(viewModel: .init(selectedTime: startTimeSelected),
                                    timePickerStyle: .expanded)
+                        .onChange(of: startTimeSelected) { _, newValue in
+                            viewModel.updateSelectedDate(newValue)
+                        }
                     }
                     Spacer()
                 }

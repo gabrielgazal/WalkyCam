@@ -1,12 +1,12 @@
 import SwiftUI
 
-struct CalendarTabView<ViewModel:CalendarTabViewModelProtocol, Router: CalendarTabRouterProtocol>: View {
+struct CalendarTabView<ViewModel: CalendarTabViewModelProtocol, Router: CalendarTabRouterProtocol>: View {
 
     // MARK: - Dependencies
 
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
-    @State private var selectedDate: Date?
+    @State private var selectedDate: Date = .init()
 
     // MARK: - Initialization
 
@@ -19,52 +19,16 @@ struct CalendarTabView<ViewModel:CalendarTabViewModelProtocol, Router: CalendarT
     // MARK: - View Body
 
     var body: some View {
-        VStack(alignment: .center,
-               spacing: Tokens.Size.Spacing.large) {
-            CalendarView(dateInterval: DateInterval()) { date in
-                Button(action: {
-                    selectedDate = date
-                }) {
-                    Text("00")
-                        .padding(8)
-                        .foregroundColor(.clear)
-                        .background(date == selectedDate ? Color.naranja : Color.clear)
-                        .clipShape(Circle())
-                        .clipped()
-                        .accessibilityHidden(true)
-                        .overlay(
-                            Text(DateFormatter.day.string(from: date))
-                                .foregroundColor(date == selectedDate ? Color.blanco : Color.negro)
-                                .font(.projectFont(size: Tokens.Size.Font.regular))
-                        )
+        VStack {
+            DatePicker("Selecciona una fecha", selection: $selectedDate, in: Date()..., displayedComponents: .date)
+                .datePickerStyle(.graphical)
+                .environment(\.locale, Locale(identifier: "es_ES"))
+                .accentColor(.naranja)
+                .onChange(of: selectedDate) { _, newValue in
+                    viewModel.updateSelectedDate(newValue)
                 }
-            } header: {
-                Text(DateFormatter.weekDay.string(from: $0).uppercased())
-                    .font(.projectFont(size: Tokens.Size.Spacing.regular, weight: .bold))
-            } title: { date in
-                HStack {
-                    Image(systemName: "arrow.left")
-                        .resizable()
-                        .scaledToFit()
-                        .foregroundColor(.naranja)
-                        .frame(width: 24, height: 24)
-                    Spacer()
-                    Text(DateFormatter.monthAndYear.string(from: date).capitalized)
-                        .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .medium))
-                    Spacer()
-                    Image(systemName: "arrow.right")
-                        .resizable()
-                        .scaledToFit()
-                        .foregroundColor(.naranja)
-                        .frame(width: 24, height: 24)
-                }
-            } trailing: {
-                Text(DateFormatter.day.string(from: $0))
-                    .foregroundColor(.secondary)
-            }
-
+            Spacer()
         }
-               .padding(Tokens.Size.Spacing.large)
     }
 }
 

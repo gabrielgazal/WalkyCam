@@ -7,4 +7,5 @@ protocol MapTabViewModelProtocol: ViewModelProtocol {
 
     func getUserRegion()
     func updateUserViewPort(manager: LocationPermissionManager)
+    func updateCamerLocation()
 }
