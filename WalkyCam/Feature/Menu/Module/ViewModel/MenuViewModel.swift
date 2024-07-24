@@ -36,6 +36,14 @@ final class MenuViewModel: MenuViewModelProtocol {
                   routeToNavigate: WalkyBotRoute(isPresented: .constant(false)))
         ]
     }
+    
+    func assembleMenuBannnerData() -> [MenuPlanBannerModel] {
+        return [
+            .init(title: "Basic", text: "Consigue mas beneficios!", color: .acentoFondoDark),
+            .init(title: "Standard", text: "Consigue mas beneficios. Vuela un Drone a distancia!", color: .naranja),
+            .init(title: "Premium", text: "Consigue TODOS los beneficios que WalkyCam ofrece ", color: .premium)
+        ]
+    }
 
     private func fetchCashWalletRoute() -> Route {
         return isCashWalletOnboardingDisabled ? CashWalletRoute(isPresented: .constant(false)): CashWalletOnboardingRoute(isPresented: .constant(false))

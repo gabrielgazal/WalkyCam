@@ -39,9 +39,11 @@ struct MenuView<ViewModel: MenuViewModelProtocol, Router: MenuRouterProtocol>: V
                 Divider()
                     .isHidden(index == viewModel.menuItems.count - 1)
             }
+            .padding([.leading, .trailing], Tokens.Size.Spacing.large)
             Spacer()
+            MenuPlanBannerView(pages: viewModel.assembleMenuBannnerData())
         }
-        .padding([.leading, .trailing, .bottom], Tokens.Size.Spacing.large)
+        .padding([.bottom], Tokens.Size.Spacing.large)
         .padding([.top], Tokens.Size.Spacing.xlarge)
         .navigation(router)
     }

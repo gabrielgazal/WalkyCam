@@ -51,6 +51,8 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
                                                 router.routeToGames()
                                             case "Play & Business":
                                                 router.routeToPlayBusiness()
+                                            case "Certified Recording":
+                                                router.routeToCertifiedRecording()
                                             default: break
                                             }
                                         }

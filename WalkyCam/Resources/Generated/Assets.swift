@@ -113,6 +113,26 @@ internal enum Asset {
       internal static let camera3608 = ImageAsset(name: "Camera360_8")
       internal static let camera3609 = ImageAsset(name: "Camera360_9")
     }
+    internal enum CertifiedRecording {
+      internal static let _321CertifiedRecordingOnboarding1 = ImageAsset(name: "32.1 Certified recording _ Onboarding 1")
+      internal static let _3210CertifiedRecordingDetallesDelServicio = ImageAsset(name: "32.10 Certified recording _ Detalles del servicio")
+      internal static let _3211VideollamadaRegistradaConExito = ImageAsset(name: "32.11 Videollamada registrada con exito")
+      internal static let _3212PublicidadTiempo = ImageAsset(name: "32.12 Publicidad tiempo")
+      internal static let _3213CertifiedRecordingInvitacion = ImageAsset(name: "32.13 Certified recording _ invitacion")
+      internal static let _3214CertifiedRecordingVideollmada1 = ImageAsset(name: "32.14 Certified recording _ videollmada 1")
+      internal static let _3215CertifiedRecordingTransmisionGrabacion = ImageAsset(name: "32.15 Certified recording _ transmision grabacion")
+      internal static let _3216CertifiedRecordingVideollamadaGrabacion = ImageAsset(name: "32.16 Certified recording _ videollamada grabacion")
+      internal static let _3217CertifiedRecordingInvitacionAVideoCertificado = ImageAsset(name: "32.17 Certified recording _ invitacion a video certificado")
+      internal static let _3218CertifiedRecordingCertificacion = ImageAsset(name: "32.18 Certified recording _ Certificacion")
+      internal static let _322CertifiedRecordingOnboarding2 = ImageAsset(name: "32.2 Certified recording _ Onboarding 2")
+      internal static let _323CertifiedRecordingOnboardingPixelado = ImageAsset(name: "32.3 Certified recording _ Onboarding pixelado")
+      internal static let _324CertifiedRecordingBuscarYReservar = ImageAsset(name: "32.4 Certified recording _ Buscar y reservar")
+      internal static let _325CertifiedRecordingBuscarZona = ImageAsset(name: "32.5 Certified recording _ Buscar zona")
+      internal static let _326CertifiedRecordingWalkCamersDisponiblesMapa = ImageAsset(name: "32.6 Certified recording _ WalkCamers disponibles mapa")
+      internal static let _327CertifiedRecordingWalkCamersDisponiblesLista = ImageAsset(name: "32.7 Certified recording _ WalkCamers disponibles lista")
+      internal static let _328CertifiedRecordingWalkCamer = ImageAsset(name: "32.8 Certified recording _ WalkCamer")
+      internal static let _329CertifiedRecordingAgregarPersonas = ImageAsset(name: "32.9 Certified recording _ Agregar personas")
+    }
     internal enum Consulting {
       internal static let consulting1 = ImageAsset(name: "Consulting1")
       internal static let consulting10 = ImageAsset(name: "Consulting10")

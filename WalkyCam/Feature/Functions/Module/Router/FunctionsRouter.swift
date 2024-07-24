@@ -368,6 +368,34 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
         )
     }
     
+    func routeToCertifiedRecording() {
+        navigateTo(
+            UnreleasedFeatureRoute(
+                isPresented: isNavigating,
+                banners: [
+                    Asset.Banners.CertifiedRecording._321CertifiedRecordingOnboarding1.name,
+                    Asset.Banners.CertifiedRecording._322CertifiedRecordingOnboarding2.name,
+                    Asset.Banners.CertifiedRecording._323CertifiedRecordingOnboardingPixelado.name,
+                    Asset.Banners.CertifiedRecording._324CertifiedRecordingBuscarYReservar.name,
+                    Asset.Banners.CertifiedRecording._325CertifiedRecordingBuscarZona.name,
+                    Asset.Banners.CertifiedRecording._326CertifiedRecordingWalkCamersDisponiblesMapa.name,
+                    Asset.Banners.CertifiedRecording._327CertifiedRecordingWalkCamersDisponiblesLista.name,
+                    Asset.Banners.CertifiedRecording._328CertifiedRecordingWalkCamer.name,
+                    Asset.Banners.CertifiedRecording._329CertifiedRecordingAgregarPersonas.name,
+                    Asset.Banners.CertifiedRecording._3210CertifiedRecordingDetallesDelServicio.name,
+                    Asset.Banners.CertifiedRecording._3211VideollamadaRegistradaConExito.name,
+                    Asset.Banners.CertifiedRecording._3212PublicidadTiempo.name,
+                    Asset.Banners.CertifiedRecording._3213CertifiedRecordingInvitacion.name,
+                    Asset.Banners.CertifiedRecording._3214CertifiedRecordingVideollmada1.name,
+                    Asset.Banners.CertifiedRecording._3215CertifiedRecordingTransmisionGrabacion.name,
+                    Asset.Banners.CertifiedRecording._3216CertifiedRecordingVideollamadaGrabacion.name,
+                    Asset.Banners.CertifiedRecording._3217CertifiedRecordingInvitacionAVideoCertificado.name,
+                    Asset.Banners.CertifiedRecording._3218CertifiedRecordingCertificacion.name
+                ]
+            )
+        )
+    }
+    
     func routeToRegistrationPlans() {
         navigateTo(
             RegistrationPlansRoute(isPresented: isNavigating)
