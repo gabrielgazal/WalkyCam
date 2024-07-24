@@ -11,6 +11,7 @@ final class ServiceDetailsViewModel: ServiceDetailsViewModelProtocol {
     @Published var service: FunctionData = .init(title: "", icon: "")
     @Published var currentStep: Int
     @Published var totalSteps: Int
+    @Published var detailItems: [ServiceDetailsItemModel] = []
     
     // MARK: - Initialization
 
@@ -25,6 +26,7 @@ final class ServiceDetailsViewModel: ServiceDetailsViewModelProtocol {
         self.totalSteps = totalSteps
         self.onCancelAction = onCancelAction
         initializeService()
+        assembleServiceDetails()
     }
 
     // MARK: - Public API
@@ -33,78 +35,92 @@ final class ServiceDetailsViewModel: ServiceDetailsViewModelProtocol {
         onCancelAction?()
     }
     
-    func assembleServiceDetails() -> [ServiceDetailsItemModel] {
-        var dataToReturn: [ServiceDetailsItemModel] = []
+    func assembleServiceDetails() {
         let basicInfo = serviceManager.getServiceBasicInformation()
         let cammerInfo = serviceManager.getServiceCammerInformation()
         
-        dataToReturn.append(
+        detailItems.append(
             .init(title: "Día", value: formatDateToDay(basicInfo.date))
         )
-        dataToReturn.append(
+        detailItems.append(
             .init(title: "Hora", value: formatDateToTime(basicInfo.date))
         )
         if let cammerName = cammerInfo?.name {
-            dataToReturn.append(
-                .init(title: "WalkCamer", value: cammerName)
+            detailItems.append(
+                .init(title: "WalkCamer", value: cammerName, image: cammerInfo?.profileImage)
             )
         }
         
-        if let serviceCity = formatLocationToCity(basicInfo.location) {
-            dataToReturn.append(
-                .init(title: "Lugar de grabación", value: serviceCity)
-            )
+        formatLocationToPlaceName(from: basicInfo.location) { name in
+            if let servicePlaceName = name {
+                self.detailItems.append(
+                    .init(title: "Lugar de grabación", value: servicePlaceName)
+                )
+            }
         }
         
-        if let serviceCountry = formatLocationToCountry(basicInfo.location) {
-            dataToReturn.append(
-                .init(title: "País", value: serviceCountry)
-            )
+        formatLocationToCity(from: basicInfo.location) { city in
+            if let serviceCity = city {
+                self.detailItems.append(
+                    .init(title: "Ciudad", value: serviceCity)
+                )
+            }
         }
-        return dataToReturn
+
+        formatLocationToCountry(from: basicInfo.location) { country in
+            if let serviceCountry = country {
+                self.detailItems.append(
+                    .init(title: "País", value: serviceCountry)
+                )
+            }
+        }
     }
     
-
     // MARK: - Private Methods
     
-    private func formatLocationToCity(_ location: CLLocationCoordinate2D) -> String? {
-        let location = CLLocation(latitude: location.latitude, longitude: location.longitude)
-        
+    func formatLocationToPlaceName(from coordinates: CLLocationCoordinate2D, completion: @escaping (String?) -> Void) {
+        let location = CLLocation(latitude: coordinates.latitude, longitude: coordinates.longitude)
         let geocoder = CLGeocoder()
-        
-        var stringToReturn: String?
-        
         geocoder.reverseGeocodeLocation(location, preferredLocale: Locale(identifier: "es_ES")) { (placemarks, error) in
             if let error = error {
-                stringToReturn = nil
+                completion(nil)
             } else if let placemarks = placemarks, let placemark = placemarks.first {
-                let city = placemark.locality
-                stringToReturn = city
+                let name = placemark.name
+                completion(name)
             } else {
-                stringToReturn = nil
+                completion(nil)
             }
         }
-        return stringToReturn
     }
     
-    private func formatLocationToCountry(_ location: CLLocationCoordinate2D) -> String? {
-        let location = CLLocation(latitude: location.latitude, longitude: location.longitude)
-        
+    func formatLocationToCity(from coordinates: CLLocationCoordinate2D, completion: @escaping (String?) -> Void) {
+        let location = CLLocation(latitude: coordinates.latitude, longitude: coordinates.longitude)
         let geocoder = CLGeocoder()
-        
-        var stringToReturn: String?
-        
         geocoder.reverseGeocodeLocation(location, preferredLocale: Locale(identifier: "es_ES")) { (placemarks, error) in
             if let error = error {
-                stringToReturn = nil
+                completion(nil)
             } else if let placemarks = placemarks, let placemark = placemarks.first {
-                let city = placemark.country
-                stringToReturn = city
+                let city = placemark.locality
+                completion(city)
             } else {
-                stringToReturn = nil
+                completion(nil)
             }
         }
-        return stringToReturn
+    }
+    
+    func formatLocationToCountry(from coordinates: CLLocationCoordinate2D, completion: @escaping (String?) -> Void) {
+        let location = CLLocation(latitude: coordinates.latitude, longitude: coordinates.longitude)
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(location, preferredLocale: Locale(identifier: "es_ES")) { (placemarks, error) in
+            if let error = error {
+                completion(nil)
+            } else if let placemarks = placemarks, let placemark = placemarks.first {
+                let city = placemark.country
+                completion(city)
+            } else {
+                completion(nil)
+            }
+        }
     }
     
     private func formatDateToDay(_ date: Date) -> String {

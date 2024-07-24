@@ -37,7 +37,7 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
                 }
                 VStack(spacing: 0) {
                     Divider()
-                    ForEach(viewModel.assembleServiceDetails(), id: \.self) { item in
+                    ForEach(viewModel.detailItems, id: \.self) { item in
                         cellView(data: item)
                     }
                 }
@@ -87,6 +87,9 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
             HStack(spacing: Tokens.Size.Spacing.regular) {
                 Text(data.title)
                     .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                if let image = data.image {
+                    profileImage(image)
+                }
                 Text(data.value)
                     .font(.projectFont(size: Tokens.Size.Font.regular))
                 Spacer()
@@ -94,6 +97,37 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
             Divider()
         }
                       .padding([.top], Tokens.Size.Spacing.large)
+    }
+    
+    private func profileImage(_ urlString: String) -> some View {
+        VStack {
+            if let url = URL(string: urlString) {
+                AsyncImageView(imageLoadable: url) { status in
+                    Group {
+                        switch status {
+                        case .failured:
+                            placeholder
+                        case .loading:
+                            ProgressView()
+                        default:
+                            placeholder
+                        }
+                    }
+                }
+            } else {
+                placeholder
+            }
+        }
+        .frame(width: 32, height: 32)
+        .clipShape(Circle())
+    }
+    
+    private var placeholder: some View {
+        Image(systemName: "camera")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .padding(Tokens.Size.Spacing.large)
+            .cornerRadius(Tokens.Size.Border.Radius.medium)
     }
 }
 
