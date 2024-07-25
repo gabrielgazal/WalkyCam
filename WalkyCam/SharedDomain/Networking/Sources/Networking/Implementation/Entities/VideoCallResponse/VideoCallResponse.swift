@@ -20,7 +20,7 @@ public struct VideoCallResponse: Codable, Hashable {
 
     private enum CodingKeys: String, CodingKey {
         case type, date, status
-        case id = "id_host_user"
+        case id = "_id"
         case baseFunction = "base_function"
         case startTime = "start_time"
         case endTime = "end_time"

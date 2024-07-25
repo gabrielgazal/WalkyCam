@@ -16,6 +16,8 @@ struct CammerData: Hashable {
     let profileImage: String
     let technologies: [CammerTechnology]
     let coordinates: Coordinate
+    let availability: AvailabilityInfo?
+    let devices: [DevicesInfo]
 
     public init(
         id: Int,
@@ -24,15 +26,19 @@ struct CammerData: Hashable {
         description: String,
         profileImage: String,
         technologies: [CammerTechnology],
-        coordinates: Coordinate = .init()
+        coordinates: Coordinate = .init(),
+        devices: [DevicesInfo] = [],
+        availability: AvailabilityInfo? = nil
     ) {
         self.id = id
         self.name = name
         self.stars = stars
         self.description = description
         self.profileImage = profileImage
-        self.technologies = technologies
+        self.devices = devices
         self.coordinates = coordinates
+        self.technologies = technologies
+        self.availability = availability
     }
 }
 
@@ -53,4 +59,15 @@ struct Coordinate: Hashable {
         self.latitude = latitude
         self.longitude = longitude
     }
+}
+
+struct AvailabilityInfo: Hashable {
+    let hourlyCost: Double
+    let recordingTime: Double
+    let availabilityTime: Double
+}
+
+struct DevicesInfo: Hashable {
+    let name: String
+    let type: CammerTechnology
 }

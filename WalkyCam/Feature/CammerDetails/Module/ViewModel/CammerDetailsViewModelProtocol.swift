@@ -7,4 +7,5 @@ protocol CammerDetailsViewModelProtocol: ViewModelProtocol {
     var selection: WCTopBarItem { get set }
     
     func updateSelectedCammer()
+    func getCammerLocation() -> String?
 }

@@ -31,32 +31,7 @@ struct CammerDetailsView<ViewModel:CammerDetailsViewModelProtocol, Router: Camme
                             .frame(height: 200)
                         Spacer()
                             .frame(height: 100)
-                        VStack(spacing: Tokens.Size.Spacing.regular) {
-                            WCTopBarView(
-                                tabs: viewModel.topBarItems,
-                                selection: $viewModel.selection
-                            )
-                            Map(
-                                initialViewport: .camera(
-                                    center: getCamerCoordinates(),
-                                    zoom: 15,
-                                    bearing: 0,
-                                    pitch: 0
-                                )
-                            ) {
-                                MapViewAnnotation(
-                                    coordinate: .init(
-                                        latitude: viewModel.cammerData.coordinates.latitude,
-                                        longitude: viewModel.cammerData.coordinates.longitude
-                                    )
-                                ) {
-                                    Asset.Icons.wIcon.swiftUIImage
-                                }
-                            }
-                            .frame(height: 170)
-                            .cornerRadius(Tokens.Size.Border.Radius.medium)
-                        }
-                        .padding(.horizontal, Tokens.Size.Spacing.regular)
+                        viewBody
                     }
                     VStack(spacing: Tokens.Size.Spacing.large) {
                         HStack {
@@ -122,6 +97,66 @@ struct CammerDetailsView<ViewModel:CammerDetailsViewModelProtocol, Router: Camme
         }
         .navigation(router)
     }
+    
+    private var viewBody: some View {
+        VStack(spacing: Tokens.Size.Spacing.regular) {
+            WCTopBarView(
+                tabs: viewModel.topBarItems,
+                selection: $viewModel.selection
+            )
+            ZStack(alignment: .bottom) {
+                Map(
+                    initialViewport: .camera(
+                        center: getCamerCoordinates(),
+                        zoom: 15,
+                        bearing: 0,
+                        pitch: 0
+                    )
+                ) {
+                    MapViewAnnotation(
+                        coordinate: .init(
+                            latitude: viewModel.cammerData.coordinates.latitude,
+                            longitude: viewModel.cammerData.coordinates.longitude
+                        )
+                    ) {
+                        Asset.Icons.wIcon.swiftUIImage
+                    }
+                }
+                Rectangle()
+                    .fill(Color.blanco)
+                    .frame(height: 40)
+                HStack(alignment: .center,
+                       spacing: Tokens.Size.Spacing.small) {
+                    Asset.Icons.location.swiftUIImage
+                    Text("TESTE 123")
+                        .font(.projectFont(size: Tokens.Size.Font.medium))
+                    Spacer()
+                }
+                       .padding(.vertical, Tokens.Size.Spacing.small)
+                       .padding(.horizontal, Tokens.Size.Spacing.large)
+            }
+            .frame(height: 170)
+            .cornerRadius(Tokens.Size.Border.Radius.medium)
+            .shadow(color: .black.opacity(0.16), radius: 8, x: 0, y: 2)
+        }
+        .padding(.horizontal, Tokens.Size.Spacing.regular)
+    }
+    
+    private func availabilityView() -> some View {
+        return VStack(
+            alignment: .leading,
+            spacing: Tokens.Size.Spacing.regular) {
+                if let availabilityInfo = viewModel.cammerData.availability {
+                    HStack(
+                        alignment: .center,
+                        spacing: Tokens.Size.Spacing.small
+                    ) {
+                        Text("Costo por hora")
+                        Text("\(availabilityInfo.hourlyCost)")
+                    }
+                }
+            }
+    }
 
     private var headerView: some View {
         HStack {
@@ -151,6 +186,8 @@ struct CammerDetailsView<ViewModel:CammerDetailsViewModelProtocol, Router: Camme
             .padding(Tokens.Size.Spacing.large)
             .cornerRadius(Tokens.Size.Border.Radius.medium)
     }
+    
+    
 }
 
 struct CammerDetailsView_Previews: PreviewProvider {
@@ -158,14 +195,26 @@ struct CammerDetailsView_Previews: PreviewProvider {
     CammerDetailsView(
         viewModel: CammerDetailsViewModel(
             interactor: CammerDetailsInteractor(),
-            cammerData: .init(id: 0,
-                              name: "Camila Perez",
-                              stars: 5,
-                              description: "",
-                              profileImage: .womanMock1,
-                              technologies: [],
-                              coordinates: .init(latitude: -12.123123, longitude: -49.123)),
-            specialistMode: false),
+            cammerData: .init(
+                id: 0,
+                name: "Camila Perez",
+                stars: 5,
+                description: "",
+                profileImage: .womanMock1,
+                technologies: [],
+                coordinates: .init(latitude: -12.123123, longitude: -49.123),
+                devices: [
+                    .init(name: "Tese 1", type: .camera),
+                    .init(name: "Tese 2", type: .smartphone)
+                ],
+                availability: .init(
+                    hourlyCost: 60.0,
+                    recordingTime: 3,
+                    availabilityTime: 3
+                )
+            ),
+            specialistMode: false
+        ),
             router: CammerDetailsRouter(isPresented: .constant(false))
         )
     }

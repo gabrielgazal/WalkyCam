@@ -10,4 +10,3 @@ final class VideocallOnboardingRouter: Router, VideocallOnboardingRouterProtocol
         )
     }
 }
-
