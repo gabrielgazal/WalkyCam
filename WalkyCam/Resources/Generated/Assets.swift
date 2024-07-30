@@ -422,6 +422,7 @@ internal enum Asset {
     internal static let blueCheckmark = ImageAsset(name: "blueCheckmark")
     internal static let cables = ImageAsset(name: "cables")
     internal static let calendar = ImageAsset(name: "calendar")
+    internal static let camerScan = ImageAsset(name: "camer+scan")
     internal static let cash = ImageAsset(name: "cash")
     internal static let check = ImageAsset(name: "check")
     internal static let checkmark = ImageAsset(name: "checkmark")

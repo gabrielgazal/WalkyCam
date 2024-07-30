@@ -24,7 +24,7 @@ final class Scan3DMenuRouter: Router, Scan3DMenuRouterProtocol {
                 model: .init(
                     type: .scan3d,
                     title: "Scan 3D",
-                    icon: Asset.Icons.scan3D.name,
+                    icon: Asset.Icons.camerScan.name,
                     background: Asset.Fondos.videocallFondo.name)
             )
         )
