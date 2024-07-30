@@ -18,31 +18,34 @@ struct MenuView<ViewModel: MenuViewModelProtocol, Router: MenuRouterProtocol>: V
     // MARK: - View Body
 
     var body: some View {
-        VStack(spacing: 0) {
-            ForEach(Array(zip(viewModel.menuItems.indices, viewModel.menuItems)), id: \.0) { index, item in
-                HStack(alignment: .center,
-                       spacing: Tokens.Size.Spacing.regular) {
-                    Image(item.icon)
-                    Text(item.title)
-                        .font(.projectFont(size: Tokens.Size.Font.regular,
-                                           weight: .bold))
-                        .foregroundColor(.negro)
-                    Spacer()
-                }
-                .background(Color.blanco)
-                .onTapGesture {
-                    if let route = item.routeToNavigate {
-                        router.navigateTo(route)
+        ScrollView {
+            VStack(spacing: 0) {
+                ForEach(Array(zip(viewModel.menuItems.indices, viewModel.menuItems)), id: \.0) { index, item in
+                    HStack(alignment: .center,
+                           spacing: Tokens.Size.Spacing.regular) {
+                        Image(item.icon)
+                        Text(item.title)
+                            .font(.projectFont(size: Tokens.Size.Font.regular,
+                                               weight: .bold))
+                            .foregroundColor(.negro)
+                        Spacer()
                     }
+                    .background(Color.blanco)
+                    .onTapGesture {
+                        if let route = item.routeToNavigate {
+                            router.navigateTo(route)
+                        }
+                    }
+                    .padding(.vertical, Tokens.Size.Spacing.xlarge)
+                    Divider()
+                        .isHidden(index == viewModel.menuItems.count - 1)
                 }
-                .padding(.vertical, Tokens.Size.Spacing.xlarge)
-                Divider()
-                    .isHidden(index == viewModel.menuItems.count - 1)
+                .padding([.leading, .trailing], Tokens.Size.Spacing.large)
+                Spacer()
+                MenuPlanBannerView(pages: viewModel.assembleMenuBannnerData())
             }
-            .padding([.leading, .trailing], Tokens.Size.Spacing.large)
-            Spacer()
-            MenuPlanBannerView(pages: viewModel.assembleMenuBannnerData())
         }
+        .scrollIndicators(.hidden)
         .padding([.bottom], Tokens.Size.Spacing.large)
         .padding([.top], Tokens.Size.Spacing.xlarge)
         .navigation(router)
@@ -52,7 +55,7 @@ struct MenuView<ViewModel: MenuViewModelProtocol, Router: MenuRouterProtocol>: V
 struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
     MenuView(
-            viewModel: MenuViewModel(),
+            viewModel: MenuViewModel(router: MenuRouter(isPresented: .constant(false))),
             router: MenuRouter(isPresented: .constant(false))
         )
     }

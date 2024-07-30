@@ -7,10 +7,11 @@
 
 import SwiftUI
 
-struct MenuPlanBannerModel: Hashable {
+struct MenuPlanBannerModel {
     let title: String
     let text: String
     let color: Color
+    let action: (() -> Void)?
 }
 
 struct MenuPlanBannerView: View {
@@ -36,6 +37,9 @@ struct MenuPlanBannerView: View {
                 ForEach(0..<pages.count) { index in
                     itemView(pages[index])
                         .tag(index)
+                        .onTapGesture {
+                            pages[index].action?()
+                        }
                 }
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
@@ -89,17 +93,20 @@ struct MenuPlanBannerView_Previews: PreviewProvider {
                 .init(
                     title: "TESTE1",
                     text: "Consigue mas beneficios.",
-                    color: .naranja
+                    color: .naranja,
+                    action: nil
                 ),
                 .init(
                     title: "TESTE2",
                     text: "Consigue mas beneficios. Vuela un Drone a distancia!",
-                    color: .premium
+                    color: .premium, 
+                    action: nil
                 ),
                 .init(
                     title: "TESTE3",
                     text: "Consigue mas beneficios. Vuela un Drone a distancia!",
-                    color: .acentoFondoDark
+                    color: .acentoFondoDark,
+                    action: nil
                 )
             ]
         )

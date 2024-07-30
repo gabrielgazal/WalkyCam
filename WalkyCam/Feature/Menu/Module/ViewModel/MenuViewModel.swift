@@ -5,10 +5,12 @@ final class MenuViewModel: MenuViewModelProtocol {
 
     @Published var menuItems: [MenuItemModel] = []
     @State private var isCashWalletOnboardingDisabled = UserDefaults.standard.bool(forKey: "isCashWalletOnboardingDisabled")
+    private let router: MenuRouterProtocol
 
     // MARK: - Initialization
 
-    init() {
+    init(router: MenuRouterProtocol) {
+        self.router = router
         buildMenuItems()
     }
 
@@ -39,14 +41,26 @@ final class MenuViewModel: MenuViewModelProtocol {
     
     func assembleMenuBannnerData() -> [MenuPlanBannerModel] {
         return [
-            .init(title: "Basic", text: "Consigue mas beneficios!", color: .acentoFondoDark),
-            .init(title: "Standard", text: "Consigue mas beneficios. Vuela un Drone a distancia!", color: .naranja),
-            .init(title: "Premium", text: "Consigue TODOS los beneficios que WalkyCam ofrece ", color: .premium)
+            .init(title: "Basic", text: "Consigue mas beneficios!", color: .acentoFondoDark, action: navigateToBasic),
+            .init(title: "Standard", text: "Consigue mas beneficios. Vuela un Drone a distancia!", color: .naranja, action: navigateToStandard),
+            .init(title: "Premium", text: "Consigue TODOS los beneficios que WalkyCam ofrece ", color: .premium, action: navigateToPremium)
         ]
     }
 
     private func fetchCashWalletRoute() -> Route {
         return isCashWalletOnboardingDisabled ? CashWalletRoute(isPresented: .constant(false)): CashWalletOnboardingRoute(isPresented: .constant(false))
+    }
+    
+    private func navigateToBasic() {
+        router.routeToBasic()
+    }
+    
+    private func navigateToStandard() {
+        router.routeToStandard()
+    }
+    
+    private func navigateToPremium() {
+        router.routeToPremium()
     }
 }
 

@@ -1,12 +1,25 @@
 import SwiftUI
 
 final class MenuRouter: Router, MenuRouterProtocol {
-
+    
     // MARK: - Public API
-
-    #warning("Example function. Rename or remove it")
-    func routeToSomething() { 
-
+    
+    func routeToBasic() {
+        navigateTo(
+            PlansPagesRoute(isPresented: isNavigating, currentPage: 1)
+        )
+    }
+    
+    func routeToStandard() {
+        navigateTo(
+            PlansPagesRoute(isPresented: isNavigating, currentPage: 2)
+        )
+    }
+    
+    func routeToPremium() {
+        navigateTo(
+            PlansPagesRoute(isPresented: isNavigating, currentPage: 3)
+        )
     }
 }
 

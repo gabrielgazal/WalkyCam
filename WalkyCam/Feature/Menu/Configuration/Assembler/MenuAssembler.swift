@@ -7,7 +7,7 @@ final class MenuAssembler: MenuAssemblerProtocol {
 
         let router = MenuRouter(isPresented: route.isPresented)
 
-        let viewModel = MenuViewModel()
+        let viewModel = MenuViewModel(router: router)
         let view = MenuView(viewModel: viewModel, router: router)
 
         return view
