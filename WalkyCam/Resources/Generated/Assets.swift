@@ -348,6 +348,11 @@ internal enum Asset {
       internal static let telepresence3 = ImageAsset(name: "Telepresence3")
     }
   }
+  internal enum DevicesIcons {
+    internal static let camera = ImageAsset(name: "camera")
+    internal static let smartphone = ImageAsset(name: "smartphone")
+    internal static let video = ImageAsset(name: "video")
+  }
   internal enum Fondos {
     internal static let digitalTwinsfondo = ImageAsset(name: "digitalTwinsfondo")
     internal static let droneFondo = ImageAsset(name: "drone_fondo")

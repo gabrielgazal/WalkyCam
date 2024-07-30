@@ -6,7 +6,7 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
 
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
-
+    @State var pixelationActive: Bool = false
     // MARK: - Initialization
 
     init(viewModel: ViewModel,
@@ -41,6 +41,10 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
                         cellView(data: item)
                     }
                 }
+                devicesView()
+                abilitiesView()
+                assistantView
+                pixelationView
             }
                    .padding(.horizontal, Tokens.Size.Spacing.large)
         }
@@ -128,6 +132,96 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
             .aspectRatio(contentMode: .fit)
             .padding(Tokens.Size.Spacing.large)
             .cornerRadius(Tokens.Size.Border.Radius.medium)
+    }
+    
+    private func devicesView() -> some View {
+        return VStack(
+            alignment: .leading,
+            spacing: Tokens.Size.Spacing.regular) {
+                Text("Dispositivos")
+                    .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                ForEach(viewModel.devices, id: \.self) { item in
+                    itemView(icon: item.type.toIcon(), title: item.name)
+                }
+                Divider()
+            }
+            .isHidden(viewModel.devices.isEmpty)
+    }
+    
+    private func abilitiesView() -> some View {
+        return VStack(
+            alignment: .leading,
+            spacing: Tokens.Size.Spacing.regular) {
+                Text("Capacidades")
+                    .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                ForEach(viewModel.abilities, id: \.self) { item in
+                    itemView(icon: item.icon, title: "Apto \(item.name)")
+                }
+                Divider()
+            }
+            .isHidden(viewModel.abilities.isEmpty)
+    }
+    
+    private func itemView(icon: String, title: String) -> some View {
+        return HStack(alignment: .center,
+                      spacing: Tokens.Size.Spacing.regular) {
+            Image(icon)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 50, height: 24, alignment: .center)
+            Text(title)
+                .font(.projectFont(size: Tokens.Size.Font.regular))
+            Spacer()
+        }
+    }
+    
+    private var assistantView: some View {
+        VStack(
+            alignment: .leading,
+            spacing: Tokens.Size.Spacing.regular) {
+                HStack(alignment: .center,
+                       spacing: Tokens.Size.Spacing.small) {
+                    Text("Asistentes")
+                        .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                    Text("3")
+                        .font(.projectFont(size: Tokens.Size.Font.regular))
+                    Image(systemName: "eye")
+                        .renderingMode(.template)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 24, height: 24)
+                        .foregroundColor(.naranja)
+                }
+                Text("La invitación se enviará a los miembros de esta reunión al finalizar el proceso.")
+                    .font(.projectFont(size: Tokens.Size.Font.regular))
+                Divider()
+            }
+    }
+    
+    private var pixelationView: some View {
+        VStack(
+            alignment: .leading,
+            spacing: Tokens.Size.Spacing.regular) {
+                HStack(alignment: .center,
+                       spacing: Tokens.Size.Spacing.small) {
+                    Asset.Icons.pixelation.swiftUIImage
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 24)
+                    Text("Pixelado facial activado")
+                        .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                    Toggle(isOn: $pixelationActive, label: {})
+                        .toggleStyle(WCNamelessToggleStyle())
+                }
+                Text("Al apagar este selector, estarás dejando de ocultar los rostros de las personas.")
+                    .font(.projectFont(size: Tokens.Size.Font.regular))
+            }
+            .padding(Tokens.Size.Spacing.large)
+            .background(
+                RoundedRectangle(cornerRadius: Tokens.Size.Border.Radius.huge)
+                    .fill(Color.blanco)
+                    .shadow(color: .black.opacity(0.16), radius: 8, x: 0, y: 2)
+            )
     }
 }
 

@@ -12,6 +12,8 @@ final class ServiceDetailsViewModel: ServiceDetailsViewModelProtocol {
     @Published var currentStep: Int
     @Published var totalSteps: Int
     @Published var detailItems: [ServiceDetailsItemModel] = []
+    @Published var devices: [DevicesInfo] = []
+    @Published var abilities: [AbilityInfo] = []
     
     // MARK: - Initialization
 
@@ -36,8 +38,36 @@ final class ServiceDetailsViewModel: ServiceDetailsViewModelProtocol {
     }
     
     func assembleServiceDetails() {
-        let basicInfo = serviceManager.getServiceBasicInformation()
-        let cammerInfo = serviceManager.getServiceCammerInformation()
+//        let basicInfo = serviceManager.getServiceBasicInformation()
+//        let cammerInfo = serviceManager.getServiceCammerInformation()
+        
+        let basicInfo: ServiceBasicInformation = .init(
+            date: .init(),
+            location: .init(latitude: -12.123123, longitude: -49.123)
+        )
+        
+        let cammerInfo: CammerData? = CammerData(
+            id: 0,
+            name: "Camila Perez",
+            stars: 5,
+            description: "asdadasdazdasdDSDHJKgshjgajdvahjkgdhavhjksdgahjsvdhjagsdvagsdhvahjksdgvahjsvdjkvv",
+            profileImage: .womanMock1,
+            technologies: [],
+            coordinates: .init(latitude: -12.123123, longitude: -49.123),
+            devices: [
+                .init(name: "Tese 1", type: .camera),
+                .init(name: "Tese 2", type: .smartphone)
+            ],
+            availability: .init(
+                hourlyCost: 60.0,
+                recordingTime: 3,
+                availabilityTime: 3
+            ),
+            abilities: [
+                .init(name: "escaneo 3D", icon: Asset.Icons.scan3D.name),
+                .init(name: "LIDAR", icon: Asset.Icons.lidar.name)
+            ]
+        )
         
         detailItems.append(
             .init(title: "Día", value: formatDateToDay(basicInfo.date))
@@ -74,6 +104,9 @@ final class ServiceDetailsViewModel: ServiceDetailsViewModelProtocol {
                 )
             }
         }
+        
+        devices = cammerInfo?.devices ?? []
+        abilities = cammerInfo?.abilities ?? []
     }
     
     // MARK: - Private Methods
