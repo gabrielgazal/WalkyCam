@@ -94,7 +94,7 @@ enum FunctionType: String {
     var convertedValue: FunctionData {
         switch self {
         case .videocall:
-            return .init(title: "Video Call", icon: Asset.Icons.videoCall.name)
+            return .init(title: "Videollamada", icon: Asset.Icons.videoCall.name)
         case .drone:
             return .init(title: "Drone", icon: Asset.Icons.drone.name)
         case .scan3d:

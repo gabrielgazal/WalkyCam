@@ -23,15 +23,32 @@ final class TimeTabViewModel: TimeTabViewModelProtocol {
         
         let newComponents = calendar.dateComponents([.hour, .minute, .second], from: date)
         let oldComponents = calendar.dateComponents([.year, .month, .day], from: currentDate)
-        if let hour = oldComponents.hour,
-           let minutes = oldComponents.minute,
-           let seconds = oldComponents.second,
-           let newDate = calendar.date(from: newComponents),
+        if let hour = newComponents.hour,
+           let minutes = newComponents.minute,
+           let seconds = newComponents.second,
            let newDate = calendar.date(bySettingHour: hour,
                                        minute: minutes,
                                        second: seconds,
-                                       of: newDate) {
+                                       of: currentDate) {
             serviceManager.updateDate(newDate)
+            serviceManager.updateEndDate(newDate)
+        }
+    }
+    
+    func updateEndTime(_ date: Date) {
+        let calendar = Calendar.current
+        let currentDate = ServiceInformationManager.shared.getServiceBasicInformation().endDate
+        
+        let newComponents = calendar.dateComponents([.hour, .minute, .second], from: date)
+        let oldComponents = calendar.dateComponents([.year, .month, .day], from: currentDate)
+        if let hour = newComponents.hour,
+           let minutes = newComponents.minute,
+           let seconds = newComponents.second,
+           let newDate = calendar.date(bySettingHour: hour,
+                                       minute: minutes,
+                                       second: seconds,
+                                       of: currentDate) {
+            ServiceInformationManager.shared.updateEndDate(newDate)
         }
     }
 }

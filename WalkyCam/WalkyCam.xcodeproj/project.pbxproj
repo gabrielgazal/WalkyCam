@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		5615ECD22C503018002D31FA /* MenuPlanBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615ECD12C503018002D31FA /* MenuPlanBannerView.swift */; };
+		561853AA2C589F5E00CBD687 /* StartScheduleVideocallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561853A92C589F5E00CBD687 /* StartScheduleVideocallUseCase.swift */; };
+		561853AF2C58AC8900CBD687 /* ScheduleVideoCallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561853AE2C58AC8900CBD687 /* ScheduleVideoCallUseCase.swift */; };
+		561853B12C58AC9D00CBD687 /* CancelVideoCallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561853B02C58AC9D00CBD687 /* CancelVideoCallUseCase.swift */; };
+		561853B32C58B10000CBD687 /* UpdateVideoCallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561853B22C58B10000CBD687 /* UpdateVideoCallUseCase.swift */; };
+		561853B52C58B13200CBD687 /* UpdateVideoCallInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561853B42C58B13200CBD687 /* UpdateVideoCallInput.swift */; };
 		561AA6C22BE30A9800393CEF /* FeatureSelectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6AD2BE30A9800393CEF /* FeatureSelectionInteractor.swift */; };
 		561AA6C32BE30A9800393CEF /* FeatureSelectionInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6AE2BE30A9800393CEF /* FeatureSelectionInteractorProtocol.swift */; };
 		561AA6C42BE30A9900393CEF /* FeatureSelectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6B02BE30A9800393CEF /* FeatureSelectionRouter.swift */; };
@@ -1080,6 +1085,11 @@
 		01210015DB17D27A5A6A4908 /* Pods-WalkyCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkyCam.debug.xcconfig"; path = "Target Support Files/Pods-WalkyCam/Pods-WalkyCam.debug.xcconfig"; sourceTree = "<group>"; };
 		1657E0E09B4F0512C50B8036 /* Pods-WalkyCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkyCam.release.xcconfig"; path = "Target Support Files/Pods-WalkyCam/Pods-WalkyCam.release.xcconfig"; sourceTree = "<group>"; };
 		5615ECD12C503018002D31FA /* MenuPlanBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPlanBannerView.swift; sourceTree = "<group>"; };
+		561853A92C589F5E00CBD687 /* StartScheduleVideocallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScheduleVideocallUseCase.swift; sourceTree = "<group>"; };
+		561853AE2C58AC8900CBD687 /* ScheduleVideoCallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVideoCallUseCase.swift; sourceTree = "<group>"; };
+		561853B02C58AC9D00CBD687 /* CancelVideoCallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelVideoCallUseCase.swift; sourceTree = "<group>"; };
+		561853B22C58B10000CBD687 /* UpdateVideoCallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateVideoCallUseCase.swift; sourceTree = "<group>"; };
+		561853B42C58B13200CBD687 /* UpdateVideoCallInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateVideoCallInput.swift; sourceTree = "<group>"; };
 		561AA6AD2BE30A9800393CEF /* FeatureSelectionInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureSelectionInteractor.swift; sourceTree = "<group>"; };
 		561AA6AE2BE30A9800393CEF /* FeatureSelectionInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureSelectionInteractorProtocol.swift; sourceTree = "<group>"; };
 		561AA6B02BE30A9800393CEF /* FeatureSelectionRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureSelectionRouter.swift; sourceTree = "<group>"; };
@@ -2826,6 +2836,7 @@
 			isa = PBXGroup;
 			children = (
 				5621B70E2C2F478200BFD923 /* CreateVideoCallUseCase.swift */,
+				561853A92C589F5E00CBD687 /* StartScheduleVideocallUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -5731,6 +5742,7 @@
 				EA57A7812B6BFD09006247DD /* CammerData.swift */,
 				5668BB3E2BE0233200A6E05D /* CamerRegistrationData.swift */,
 				5663D66A2BFBB2C800C6655E /* VideoCallOutput.swift */,
+				561853B42C58B13200CBD687 /* UpdateVideoCallInput.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -6559,6 +6571,9 @@
 			isa = PBXGroup;
 			children = (
 				EA5103082BA7A9C900A2DE2E /* FetchAvailablePlansUseCase.swift */,
+				561853AE2C58AC8900CBD687 /* ScheduleVideoCallUseCase.swift */,
+				561853B02C58AC9D00CBD687 /* CancelVideoCallUseCase.swift */,
+				561853B22C58B10000CBD687 /* UpdateVideoCallUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -11320,6 +11335,7 @@
 				EA94A5302B7160EF00EC3037 /* ServiceDetailsViewModelProtocol.swift in Sources */,
 				EA5E1D712AD7167300738A8F /* LinkButtonStyle.swift in Sources */,
 				EAF47C1B2B830C80003F8B86 /* WalkyCammerListRouterProtocol.swift in Sources */,
+				561853AA2C589F5E00CBD687 /* StartScheduleVideocallUseCase.swift in Sources */,
 				EA2F93FA2B62CECD00E1C146 /* LoginInteractorProtocol.swift in Sources */,
 				EAE8EC472B9574840003AE96 /* ChatDetailAssembler.swift in Sources */,
 				561AA6F02BE3A6B500393CEF /* FeatureInformationRouter.swift in Sources */,
@@ -11454,6 +11470,7 @@
 				EAF47BC82B8306E9003F8B86 /* TimeTabInteractor.swift in Sources */,
 				EA0E40C22AF70E86002B7437 /* CashWalletModel.swift in Sources */,
 				EAF47BCC2B8306E9003F8B86 /* TimeTabRoute.swift in Sources */,
+				561853AF2C58AC8900CBD687 /* ScheduleVideoCallUseCase.swift in Sources */,
 				561D83E72BE91EDF0045C540 /* LegalDocumentationInteractorProtocol.swift in Sources */,
 				EA86526B2B90AC8300B86A54 /* IOTMenuInteractor.swift in Sources */,
 				EAF47C832B839308003F8B86 /* FlightMenuAssembler.swift in Sources */,
@@ -11979,6 +11996,7 @@
 				EA8652422B902E4B00B86A54 /* FunctionMenuRouterProtocol.swift in Sources */,
 				EA06554D2BB5DA5D006148E7 /* RadarMenuView.swift in Sources */,
 				EAF47BC92B8306E9003F8B86 /* TimeTabInteractorProtocol.swift in Sources */,
+				561853B12C58AC9D00CBD687 /* CancelVideoCallUseCase.swift in Sources */,
 				561AA6C92BE30A9900393CEF /* FeatureSelectionAssembler.swift in Sources */,
 				569889B32C462E2D006D5997 /* TimedLoadingScreenViewModel.swift in Sources */,
 				EA7219772B0553C900BE2D93 /* GalleryItemView.swift in Sources */,
@@ -12055,6 +12073,7 @@
 				EA86526D2B90AC8300B86A54 /* IOTMenuRouter.swift in Sources */,
 				EA3E5C952B87692400158207 /* AssistantMenuViewModel.swift in Sources */,
 				EAE401A82BBA3D6100B1311E /* DigitalTwinsOnboardingModel.swift in Sources */,
+				561853B32C58B10000CBD687 /* UpdateVideoCallUseCase.swift in Sources */,
 				EAE8EC522B9574840003AE96 /* ChatListAssemblerProtocol.swift in Sources */,
 				EA20A5172B87C913006662FA /* Scan3DMenuView.swift in Sources */,
 				56B3E4982C3DA041004A87FA /* VideocallTimeTabViewModel.swift in Sources */,
@@ -12220,6 +12239,7 @@
 				EA5E1D932AD71ABB00738A8F /* Tokens.swift in Sources */,
 				EA4165422AE706C6008CE66A /* NotificationsViewModel.swift in Sources */,
 				EA910FC92ADC495700584B98 /* TabBarViewModel.swift in Sources */,
+				561853B52C58B13200CBD687 /* UpdateVideoCallInput.swift in Sources */,
 				5663D66B2BFBB2C800C6655E /* VideoCallOutput.swift in Sources */,
 				EA8652402B902E4B00B86A54 /* FunctionMenuInteractor.swift in Sources */,
 				EA94A5362B7160EF00EC3037 /* ServiceDetailsItemModel.swift in Sources */,

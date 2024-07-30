@@ -134,7 +134,8 @@ struct StreetCamMenuView<ViewModel: StreetCamMenuViewModelProtocol, Router: Stre
     private func handleScheduleStreetcam() {
         Task {
             await viewModel.scheduleStreetcam(
-                onSuccess: {
+                onSuccess: { callId in
+                    ServiceInformationManager.shared.updateCallId(callId)
                     router.routeToBookCammer()
                 },
                 onFailure: {}

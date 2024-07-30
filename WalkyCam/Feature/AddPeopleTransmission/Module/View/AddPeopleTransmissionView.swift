@@ -43,7 +43,12 @@ struct AddPeopleTransmissionView<ViewModel:AddPeopleTransmissionViewModelProtoco
                 }
                 HStack {
                     Spacer()
-                    Image(Asset.Icons.socialsGrid.name)
+                    if let userId = try? UserSession().user().id,
+                       let url = URL(string: "https://meet.walkycam.com/videocall/\(ServiceInformationManager.shared.getServiceBasicInformation().callId)/\(userId)") {
+                        ShareLink(item: url){
+                            Image(Asset.Icons.socialsGrid.name)
+                        }
+                    }
                     Spacer()
                 }
                 Spacer()
@@ -60,6 +65,7 @@ struct AddPeopleTransmissionView<ViewModel:AddPeopleTransmissionViewModelProtoco
                             )
                         })
                         .frame(width: proxy.size.width / 2)
+                        .isHidden(true)
                         WCUIButton(title: "Siguiente",
                                    style: .standard,
                                    descriptor: BlackButtonStyleDescriptor(),
@@ -70,7 +76,7 @@ struct AddPeopleTransmissionView<ViewModel:AddPeopleTransmissionViewModelProtoco
                                 onCancelAction: {  router.dismiss() }
                             )
                         })
-                        .frame(width: proxy.size.width / 2)
+//                        .frame(width: proxy.size.width / 2)
                     }
                 }
             }

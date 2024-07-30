@@ -8,10 +8,10 @@
 import SwiftUI
 
 class TimePickerViewModel: ObservableObject {
-    @Published var selectedTime: Date
+    @Binding var selectedTime: Date
     
-    init(selectedTime: Date) {
-        self.selectedTime = selectedTime
+    init(selectedTime: Binding<Date>) {
+        self._selectedTime = selectedTime
     }
 }
 
@@ -81,9 +81,9 @@ struct TimeSelector: View {
 
 struct TimePicker_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel1 = TimePickerViewModel(selectedTime: Date())
-        let viewModel2 = TimePickerViewModel(selectedTime: Date())
-        let viewModel3 = TimePickerViewModel(selectedTime: Date())
+        let viewModel1 = TimePickerViewModel(selectedTime: .constant(Date()))
+        let viewModel2 = TimePickerViewModel(selectedTime: .constant(Date()))
+        let viewModel3 = TimePickerViewModel(selectedTime: .constant(Date()))
         
         return VStack {
             TimePicker(viewModel: viewModel1, timePickerStyle: .expanded)

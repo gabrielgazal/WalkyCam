@@ -56,12 +56,12 @@ extension StartStreetcamUseCase {
             id: response.id,
             type: response.type,
             baseFunction: response.baseFunction,
-            date: response.date,
+            date: response.date ?? "",
             startTime: response.startTime,
             endTime: response.endTime,
             timeZone: response.timeZone,
             pixelationEnabled: response.pixelationEnabled,
-            status: response.status
+            status: response.status ?? ""
         )
     }
 

@@ -6,7 +6,7 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
 
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
-    @State var pixelationActive: Bool = false
+
     // MARK: - Initialization
 
     init(viewModel: ViewModel,
@@ -24,14 +24,14 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
                 headerView
                 Text("La invitación se enviará a los miembros de esta reunión al finalizar el proceso.")
                     .font(.projectFont(size: Tokens.Size.Font.regular))
-                    .isHidden(viewModel.service.title != "Video Call")
+                    .isHidden(viewModel.service.title != "Videollamada")
                 HStack(spacing: Tokens.Size.Spacing.regular) {
                     Image(viewModel.service.icon)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 45, height: 60)
                     Text(viewModel.service.title)
-                        .font(.projectFont(size: Tokens.Size.Font.large, weight: .bold))
+                        .font(.projectFont(size: Tokens.Size.Font.medium, weight: .bold))
                     Spacer()
                     Asset.Icons.accionesDetalle.swiftUIImage
                 }
@@ -54,18 +54,35 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
                            style: .standard,
                            descriptor: OrangeButtonStyleDescriptor(),
                            action: {
-                    router.routeToHome()
+                    Task {
+                        await viewModel.updateVideoCall(
+                            onSuccess: {
+                                router.routeToConfirmation()
+                            },
+                            onFailure: {}
+                        )
+                    }
                 })
+                .loading(viewModel.updateCallAsyncData.isLoading)
                 WCUIButton(title: "Cancelar",
                            style: .standard,
                            descriptor: BlackButtonStyleDescriptor(),
                            action: {
-                    router.dismiss()
-                    viewModel.cancelAction()
+                    Task {
+                        await viewModel.cancelVideoCall(
+                            onSuccess: {
+                                viewModel.cancelAction()
+                                router.dismiss()
+                            },
+                            onFailure: {}
+                        )
+                    }
                 })
+                .loading(viewModel.cancelCallAsyncData.isLoading)
             }
             .padding(Tokens.Size.Spacing.large)
         }
+        .navigation(router)
     }
 
     private var headerView: some View {
@@ -145,7 +162,7 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
                 }
                 Divider()
             }
-            .isHidden(viewModel.devices.isEmpty)
+            .isHidden(viewModel.devices.isEmpty || viewModel.service.title == "Videollamada")
     }
     
     private func abilitiesView() -> some View {
@@ -159,7 +176,7 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
                 }
                 Divider()
             }
-            .isHidden(viewModel.abilities.isEmpty)
+            .isHidden(viewModel.abilities.isEmpty || viewModel.service.title == "Videollamada")
     }
     
     private func itemView(icon: String, title: String) -> some View {
@@ -210,7 +227,7 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
                         .frame(width: 24)
                     Text("Pixelado facial activado")
                         .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
-                    Toggle(isOn: $pixelationActive, label: {})
+                    Toggle(isOn: $viewModel.pixelationActive, label: {})
                         .toggleStyle(WCNamelessToggleStyle())
                 }
                 Text("Al apagar este selector, estarás dejando de ocultar los rostros de las personas.")
@@ -229,6 +246,13 @@ struct ServiceDetailsView_Previews: PreviewProvider {
     static var previews: some View {
     ServiceDetailsView(
         viewModel: ServiceDetailsViewModel(
+            interactor: ServiceDetailsInteractor(
+                useCases: .init(
+                    updateVideoCall: .empty,
+                    cancelVideoCall: .empty
+                )
+            ),
+            
             currentStep: 3,
             totalSteps: 3
         ),

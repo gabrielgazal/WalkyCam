@@ -5,5 +5,5 @@ protocol StreetCamMenuViewModelProtocol: ViewModelProtocol {
     var scheduleStreetcamAsyncData: AsyncData<VideoCallOutput, ErrorProtocol> { get set }
     
     func createStreetcam(onSuccess: (() -> Void)?, onFailure: (() -> Void)?) async
-    func scheduleStreetcam(onSuccess: (() -> Void)?, onFailure: (() -> Void)?) async
+    func scheduleStreetcam(onSuccess: ((String) -> Void)?, onFailure: (() -> Void)?) async
 }

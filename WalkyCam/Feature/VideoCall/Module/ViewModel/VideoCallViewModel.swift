@@ -34,4 +34,15 @@ final class VideoCallViewModel: VideoCallViewModelProtocol {
             onFailure?()
         }
     }
+    
+    @MainActor func startScheduleVideoCall(onSuccess: ((String) -> Void)?, onFailure: (() -> Void)?) async {
+        scheduleVideoCallAsyncData = .loading
+        do {
+            let output = try await interactor.startScheduleVideoCall()
+            scheduleVideoCallAsyncData = .loaded(output)
+            onSuccess?(output)
+        } catch {
+            onFailure?()
+        }
+    }
 }

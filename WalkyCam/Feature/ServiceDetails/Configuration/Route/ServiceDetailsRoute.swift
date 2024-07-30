@@ -1,5 +1,6 @@
 import Foundation
 import SwiftUI
+import Networking
 
 struct ServiceDetailsRoute: Route {
     var isPresented: Binding<Bool>
@@ -7,7 +8,8 @@ struct ServiceDetailsRoute: Route {
     let onCancelAction: (() -> Void)?
     let currentStep: Int
     let totalSteps: Int
-    
+    @Dependency var retailRepository: RepositoryResolving
+
     init(isPresented: Binding<Bool>,
          currentStep: Int,
          totalSteps: Int,

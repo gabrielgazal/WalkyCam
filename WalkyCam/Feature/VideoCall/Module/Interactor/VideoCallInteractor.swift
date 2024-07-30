@@ -6,6 +6,7 @@ final class VideoCallInteractor: VideoCallInteractorProtocol {
 
     struct UseCases {
         let createVideoCall: CreateVideoCallUseCase
+        let startSchedule: StartScheduleVideocallUseCase
     }
 
     // MARK: - Dependencies
@@ -24,6 +25,26 @@ final class VideoCallInteractor: VideoCallInteractorProtocol {
     func createVideoCall() async throws -> String {
         return try await withCheckedThrowingContinuation { continuation in
             useCases.createVideoCall()
+                .sink(
+                    receiveCompletion: { completion in
+                        switch completion {
+                        case let .failure(error):
+                            continuation.resume(throwing: error)
+                        case .finished:
+                            break
+                        }
+                    },
+                    receiveValue: { user in
+                        continuation.resume(returning: user)
+                    }
+                )
+                .store(in: &bag)
+        }
+    }
+    
+    func startScheduleVideoCall() async throws -> String {
+        return try await withCheckedThrowingContinuation { continuation in
+            useCases.startSchedule()
                 .sink(
                     receiveCompletion: { completion in
                         switch completion {

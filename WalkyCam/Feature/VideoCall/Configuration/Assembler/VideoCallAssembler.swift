@@ -7,10 +7,12 @@ final class VideoCallAssembler: VideoCallAssemblerProtocol {
     ) -> VideoCallView<VideoCallViewModel, VideoCallRouter> {
 
         let router = VideoCallRouter(isPresented: route.isPresented)
+        let repository = route.retailRepository.resolve(VideoCallRepositoryProtocol.self)
 
         let interactor = VideoCallInteractor(
             useCases: .init(
-                createVideoCall: .createVideoCall(repository: route.retailRepository.resolve(VideoCallRepositoryProtocol.self))
+                createVideoCall: .createVideoCall(repository: repository),
+                startSchedule: .startScheduleVideoCall(repository: repository)
             )
         )
         let viewModel = VideoCallViewModel(interactor: interactor)
