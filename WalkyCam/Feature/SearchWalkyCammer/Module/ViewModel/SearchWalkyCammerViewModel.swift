@@ -14,6 +14,7 @@ final class SearchWalkyCammerViewModel: SearchWalkyCammerViewModelProtocol {
     @Published var currentTitle: String = "Buscar zona"
     @Published var walkyCammers: AsyncData<[CammerData], ErrorProtocol> = .idle
     @Published var shouldDisplayCammerList: Bool = false
+    @Published var cammerSearch: String = ""
     @State var coordinates: CLLocationCoordinate2D = .init()
     @State var updatedUserLocation = false
     

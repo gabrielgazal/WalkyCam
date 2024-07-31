@@ -31,17 +31,17 @@ struct FunctionCell: View {
                 .aspectRatio(1.0, contentMode: .fit)
                 .cornerRadius(Tokens.Size.Border.Radius.medium, corners: .allCorners)
             VStack(alignment: .center,
-                   spacing: Tokens.Size.Spacing.small) {
+                   spacing: Tokens.Size.Spacing.tiny) {
                 Image(icon)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(maxWidth: 80, maxHeight: 80)
+                    .frame(maxWidth: 100, maxHeight: 100)
                 Text(title)
                     .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
                     .multilineTextAlignment(.center)
                     .lineLimit(2)
             }
-                   .padding(Tokens.Size.Spacing.regular)
+                   .padding(Tokens.Size.Spacing.small)
         }
         .shadow(
             color: lastItem ? .clear : Color.negro.opacity(0.1),
@@ -55,7 +55,10 @@ struct FunctionCell: View {
 struct FunctionCell_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            FunctionCell(title: "Teste", icon: Asset.Icons.ar.name, lastItem: false)
+            HStack {
+                FunctionCell(title: "Teste", icon: Asset.Icons.ar.name, lastItem: false)
+                FunctionCell(title: "Teste", icon: Asset.Icons.ar.name, lastItem: false)
+            }
             FunctionCell(title: "Teste", icon: Asset.Icons.ar.name, lastItem: true)
         }
     }

@@ -91,6 +91,8 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
                                             router.routeToNFT()
                                         case "Crypto Wallet":
                                             router.routeToCryptoWallet()
+                                        case "Gestión Agrícola":
+                                            router.routeToRuralDrone()
                                         default: break
                                         }
                                     }
@@ -142,6 +144,18 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
                                     router.routeToDetectorMetales()
                                 case "Thermal Camera":
                                     router.routeToThermalCamera()
+                                case "Georadar (GPR)":
+                                    router.routeToGeoradarSuperbanner()
+                                case "Detector de Cables Enterrados":
+                                    router.routeToDetectorSuperbanner()
+                                case "Analizador de Redes Eléctricas":
+                                    router.routeToAnalysisSuperbanner()
+                                case "Robótica para Mascotas":
+                                    router.routeToMascotSuperbanner()
+                                case "Dog Robot":
+                                    router.routeToDogRobotSuperbanner()
+                                case "Robótica Telepresecia":
+                                    router.routeToTelepresenciaSuperbanner()
                                 default: break
                                 }
                             }

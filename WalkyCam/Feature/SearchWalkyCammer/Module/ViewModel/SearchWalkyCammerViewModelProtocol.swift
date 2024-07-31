@@ -9,7 +9,8 @@ protocol SearchWalkyCammerViewModelProtocol: ViewModelProtocol {
     var currentTitle: String { get set }
     var walkyCammers: AsyncData<[CammerData], ErrorProtocol> { get set }
     var shouldDisplayCammerList: Bool { get set }
-
+    var cammerSearch: String { get set }
+    
     func getUserRegion()
     func updateUserViewPort(manager: LocationPermissionManager)
     func isListButtonHidden() -> Bool

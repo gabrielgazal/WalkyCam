@@ -33,7 +33,7 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
                 verticalCard(title: "NUEVA",
                              description: "Crea una nueva para compartir.",
                              buttonTitle: "Crear",
-                             icon: Asset.Icons.locationWhite.name,
+                             icon: Asset.Icons.link.name,
                              action: {
                     Task {
                         await viewModel.createVideoCall(
@@ -52,7 +52,7 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
                 verticalCard(title: "PROGRAMAR",
                              description: "Programar con anterioridad.",
                              buttonTitle: "Programar",
-                             icon: Asset.Icons.joinMeet.name,
+                             icon: Asset.Icons.calendar.name,
                              action: {
                     Task {
                         await viewModel.startScheduleVideoCall(
@@ -118,7 +118,7 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
         VStack(alignment: .center,
                spacing: Tokens.Size.Spacing.regular) {
             HStack(spacing: Tokens.Size.Spacing.regular) {
-                Image(Asset.Icons.calendar.name)
+                Image(Asset.Icons.joinMeet.name)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 40, height: 40)

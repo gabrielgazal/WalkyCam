@@ -186,6 +186,15 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading,
                        spacing: Tokens.Size.Spacing.regular) {
+                    TextInputView(
+                        text: $viewModel.cammerSearch,
+                        accessory: Asset.Icons.filter.swiftUIImage,
+                        placeholder: "Buscar WalkCamer",
+                        leftIcon: Asset.Icons.location.swiftUIImage,
+                        rightIcon: Image(systemName: "magnifyingglass"),
+                        backgroundColor: .blanco
+                    )
+                    .applyShadow()
                     ForEach(cammers, id: \.self) { cammer in
                         CammerItemView(name: cammer.name,
                                        photo: cammer.profileImage,

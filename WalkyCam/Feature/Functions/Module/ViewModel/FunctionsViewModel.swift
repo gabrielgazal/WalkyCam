@@ -46,6 +46,7 @@ final class FunctionsViewModel: FunctionsViewModelProtocol {
             .init(title: "Drone Fly", icon: Asset.Icons.drone.name),
             .init(title: "Alcohol & Drug test", icon: Asset.Icons.alcohol.name),
             .init(title: "NFT platform", icon: Asset.Icons.nft.name),
+            .init(title: "Gestión Agrícola", icon: Asset.Icons.riego.name),
             .init(title: "Crypto Wallet", icon: Asset.Icons.crypto.name)
         ]
     }
@@ -62,7 +63,13 @@ final class FunctionsViewModel: FunctionsViewModelProtocol {
             .init(title: "Ecografia", icon: Asset.Icons.ecografia.name),
             .init(title: "Lawyer (Consulting only)", icon: Asset.Icons.lawyer.name),
             .init(title: "Robótica", icon: Asset.Icons.robotica.name),
-            .init(title: "Detector de metales", icon: Asset.Icons.detectorMetales.name)
+            .init(title: "Detector de metales", icon: Asset.Icons.detectorMetales.name),
+            .init(title: "Georadar (GPR)", icon: Asset.Icons.radar.name),
+            .init(title: "Detector de Cables Enterrados", icon: Asset.Icons.cables.name),
+            .init(title: "Analizador de Redes Eléctricas", icon: Asset.Icons.analisadorRedes.name),
+            .init(title: "Robótica para Mascotas", icon: Asset.Icons.mascotas.name),
+            .init(title: "Dog Robot", icon: Asset.Icons.robotDog.name),
+            .init(title: "Robótica Telepresecia", icon: Asset.Icons.telepresencia.name)
         ]
     }
 }

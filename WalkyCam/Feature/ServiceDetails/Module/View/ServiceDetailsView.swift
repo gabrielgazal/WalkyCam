@@ -47,6 +47,10 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
                 pixelationView
             }
                    .padding(.horizontal, Tokens.Size.Spacing.large)
+            Asset.Ads.premium5.swiftUIImage
+                .resizable()
+                .scaledToFit()
+                .padding(.horizontal, -50)
         }
         .footer {
             VStack(spacing: Tokens.Size.Spacing.regular) {
