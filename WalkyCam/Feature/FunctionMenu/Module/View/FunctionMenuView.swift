@@ -40,7 +40,7 @@ struct FunctionMenuView<ViewModel:FunctionMenuViewModelProtocol, Router: Functio
                 verticalCard(title: "RESERVAR",
                              description: "Programa tu WalkCamer con anterioridad.",
                              buttonTitle: "Reservar",
-                             icon: Asset.Icons.joinMeet.name,
+                             icon: Asset.Icons.calendar.name,
                              action: {
                     router.routeToScheduleCammer()
                 })
@@ -95,7 +95,7 @@ struct FunctionMenuView<ViewModel:FunctionMenuViewModelProtocol, Router: Functio
         VStack(alignment: .center,
                spacing: Tokens.Size.Spacing.regular) {
             HStack(spacing: Tokens.Size.Spacing.regular) {
-                Image(Asset.Icons.calendar.name)
+                Image(Asset.Icons.joinMeet.name)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 40, height: 40)

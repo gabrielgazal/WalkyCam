@@ -47,31 +47,33 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
                     premiumBanner
                         .isHidden(viewModel.userData.planName == "premium")
                     Group {
-                        Divider()
-                        Group {
-                            Toggle(isOn: $viewModel.userData.isWalkCamer) {
-                                Text(L10n.ProfileView.Toggle.walkycamer)
-                            }
-                            .toggleStyle(WCToggleStyle())
-                            .disabled(true)
-                            Divider()
-                        }
-                        .isHidden(viewModel.isEditingModeEnabled || !viewModel.userData.isWalkCamer)
-                        assembleItemView(title: L10n.ProfileView.Field.name,
-                                         text: viewModel.userData.name,
-                                         editableText: $viewModel.temporaryName)
-                        Divider()
-                        assembleItemView(title: L10n.ProfileView.Field.lastname,
-                                         text: viewModel.userData.lastName,
-                                         editableText: $viewModel.temporaryLastname)
-                        Group {
-                            Divider()
+                        VStack(spacing: 0) {
+                            assembleItemView(title: L10n.ProfileView.Field.name,
+                                             text: viewModel.userData.name,
+                                             editableText: $viewModel.temporaryName)
+                            assembleItemView(title: L10n.ProfileView.Field.lastname,
+                                             text: viewModel.userData.lastName,
+                                             editableText: $viewModel.temporaryLastname)
+                            assembleItemView(
+                                title: "Número de celular",
+                                text: viewModel.userData.phoneNumber,
+                                editableText: $viewModel.temporaryPhoneNumber
+                            )
+                            assembleItemView(
+                                title: "Fecha de nacimiento",
+                                text: viewModel.userData.birthDate,
+                                editableText: $viewModel.temporaryBirthDate
+                            )
+                            assembleItemView(
+                                title: "Sexo",
+                                text: viewModel.userData.gender,
+                                editableText: $viewModel.temporaryGender
+                            )
                             assembleItemView(title: L10n.ProfileView.Field.birthDate,
                                              text: viewModel.userData.birthDate,
                                              editableText: $viewModel.temporaryBirthDate)
                         }
-                        .isHidden(viewModel.userData.birthDate.isEmpty)
-                        Divider()
+                        
                         Group {
                             Group {
                                 HStack(spacing: Tokens.Size.Spacing.regular) {
@@ -176,20 +178,24 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
             .scaledToFit()
     }
 
-    private func assembleItemView(title: String, text: String, editableText: Binding<String>) -> some View {
+    private func assembleItemView(title: String, text: String, editableText: Binding<String>?) -> some View {
         VStack(alignment: .leading,
-               spacing: Tokens.Size.Spacing.small) {
+               spacing: Tokens.Size.Spacing.large) {
             HStack(spacing: Tokens.Size.Spacing.regular) {
                 Text(title)
                     .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
-                Text(text)
+                Text(text.isEmpty ? "No informado" : text)
                     .font(.projectFont(size: Tokens.Size.Font.regular))
                     .isHidden(viewModel.isEditingModeEnabled)
                 Spacer()
             }
-            TextInputView(text: editableText, placeholder: "")
-                .isHidden(!viewModel.isEditingModeEnabled)
+            if let editableText = editableText {
+                TextInputView(text: editableText, placeholder: "")
+                    .isHidden(!viewModel.isEditingModeEnabled)
+            }
+            Divider()
         }
+               .padding([.top], Tokens.Size.Spacing.large)
     }
 
     private func handleLogoutAction() {
@@ -229,7 +235,25 @@ struct ProfileView_Previews: PreviewProvider {
         ProfileView(
             viewModel: ProfileViewModel(
                 interactor: ProfileInteractor(
-                    useCases: .init(fetchUserDataUseCase: .empty)
+                    useCases: .init(
+                        fetchUserDataUseCase: .static(
+                            .init(
+                                id: "",
+                                userName: "username",
+                                name: "name",
+                                lastName: "lastname",
+                                email: "email",
+                                address: "address",
+                                phone: "12131231",
+                                birthDate: "12/20/2024",
+                                gender: "Masculino",
+                                additionalInfo: "additionalInfoadditionalInfoadditionalInfoadditionalInfoadditionalInfo",
+                                isWalkCamer: false,
+                                configurations: .init(),
+                                plan: .init()
+                            )
+                        )
+                    )
                 )
             ),
             router: ProfileRouter(state: RouterState(isPresented: .constant(false)))

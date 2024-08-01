@@ -51,6 +51,9 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
                 .resizable()
                 .scaledToFit()
                 .padding(.horizontal, -50)
+                .onTapGesture {
+                    router.routeToPlans()
+                }
         }
         .footer {
             VStack(spacing: Tokens.Size.Spacing.regular) {

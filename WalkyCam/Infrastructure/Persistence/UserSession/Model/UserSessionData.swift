@@ -16,6 +16,9 @@ struct UserSessionData: Hashable, Codable {
     public var address: String
     public var phone: String
     public var birthDate: String
+    public var gender: String
+    public var additionalInfo: String
+    public var isWalkCamer: Bool
     public var configurations: Configurations
     public var plan: PlanData
 

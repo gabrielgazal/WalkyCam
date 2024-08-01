@@ -58,6 +58,10 @@ extension LoginUseCase {
                 address: loginResponse.address,
                 phone: loginResponse.phone,
                 birthDate: loginResponse.birthDate,
+                gender: loginResponse.gender,
+                additionalInfo: loginResponse.additionalInfo,
+                isWalkCammer: loginResponse.isWalkCammer,
+                profileImage: loginResponse.profileImage,
                 configurations: .init(
                     streetcamConfiguration: loginResponse.configurations.streetcamConfiguration.onboardingReaded,
                     scan3dConfiguration: loginResponse.configurations.scan3dConfiguration.onboardingReaded,
@@ -90,6 +94,9 @@ extension LoginOutput {
             address: address,
             phone: phone,
             birthDate: birthDate,
+            gender: gender,
+            additionalInfo: additionalInfo,
+            isWalkCamer: isWalkCammer,
             configurations: .init(
                 streetcamConfiguration: configurations.streetcamConfiguration,
                 scan3dConfiguration: configurations.scan3dConfiguration,

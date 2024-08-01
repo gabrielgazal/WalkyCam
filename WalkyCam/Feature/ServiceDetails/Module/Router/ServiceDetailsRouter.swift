@@ -17,5 +17,11 @@ final class ServiceDetailsRouter: Router, ServiceDetailsRouterProtocol {
             ServiceConfirmationRoute(isPresented: isNavigating)
         )
     }
+    
+    func routeToPlans() {
+        navigateTo(
+         PlansPagesRoute(isPresented: isNavigating, currentPage: 3)
+        )
+    }
 }
 

@@ -351,7 +351,7 @@ internal enum Asset {
   }
   internal enum DevicesIcons {
     internal static let camera = ImageAsset(name: "camera")
-    internal static let smartphone = ImageAsset(name: "smartphone")
+    internal static let smartphone2 = ImageAsset(name: "smartphone-2")
     internal static let video = ImageAsset(name: "video")
   }
   internal enum Fondos {

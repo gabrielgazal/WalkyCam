@@ -63,7 +63,7 @@ enum CammerTechnology: Int, CaseIterable {
         case .scan:
             return Asset.Icons.scan3D.name
         case .smartphone:
-            return Asset.DevicesIcons.smartphone.name
+            return Asset.DevicesIcons.smartphone2.name
         case .camera:
             return Asset.DevicesIcons.camera.name
         case .video:
