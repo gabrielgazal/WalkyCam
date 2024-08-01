@@ -24,12 +24,12 @@ struct ThermalCameraOnboardingView<ViewModel: ThermalCameraOnboardingViewModelPr
                 ThermalCameraPageView(
                     illustration: Asset.Illustrations.thermalOnboarding1.swiftUIImage,
                     title: "Thermal Camera",
-                    description: "Texto de camara termica bla bla bla bla bla bla bla bla"
+                    description: "Detecta y visualiza el calor emitido por objetos y personas, permitiendo ver diferencias de temperatura, identificar problemas de aislamiento, detectar animales en la oscuridad y explorar el entorno."
                 ).tag(0)
                 ThermalCameraPageView(
                     illustration: Asset.Illustrations.thermalOnboarding2.swiftUIImage,
                     title: "Thermal Camera",
-                    description: "Texto de camara termica bla bla bla bla bla bla bla bla"
+                    description: "Enfoca la cámara hacia el área u objeto que deseas analizar y toma una foto o graba un video.\n\nObserva las diferencias de temperatura visualizadas en colores, desde los tonos más fríos (azules) a los más cálidos (rojos)."
                 ).tag(1)
             }
             .accentColor(.naranja)
