@@ -198,7 +198,7 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
             }
             .isHidden(viewModel.isEditingModeEnabled)
             if let editableText = editableText {
-                TextInputView(text: editableText, topDescriptionText: title, placeholder: "")
+                TextInputView(text: editableText, topDescriptionText: title, placeholder: "", textColor: .negro)
                     .isHidden(!viewModel.isEditingModeEnabled)
             }
             Divider()
