@@ -13,6 +13,7 @@
 		561853B12C58AC9D00CBD687 /* CancelVideoCallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561853B02C58AC9D00CBD687 /* CancelVideoCallUseCase.swift */; };
 		561853B32C58B10000CBD687 /* UpdateVideoCallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561853B22C58B10000CBD687 /* UpdateVideoCallUseCase.swift */; };
 		561853B52C58B13200CBD687 /* UpdateVideoCallInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561853B42C58B13200CBD687 /* UpdateVideoCallInput.swift */; };
+		561853B72C629EB200CBD687 /* UpdateUserInfoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561853B62C629EB100CBD687 /* UpdateUserInfoUseCase.swift */; };
 		561AA6C22BE30A9800393CEF /* FeatureSelectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6AD2BE30A9800393CEF /* FeatureSelectionInteractor.swift */; };
 		561AA6C32BE30A9800393CEF /* FeatureSelectionInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6AE2BE30A9800393CEF /* FeatureSelectionInteractorProtocol.swift */; };
 		561AA6C42BE30A9900393CEF /* FeatureSelectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6B02BE30A9800393CEF /* FeatureSelectionRouter.swift */; };
@@ -1090,6 +1091,7 @@
 		561853B02C58AC9D00CBD687 /* CancelVideoCallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelVideoCallUseCase.swift; sourceTree = "<group>"; };
 		561853B22C58B10000CBD687 /* UpdateVideoCallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateVideoCallUseCase.swift; sourceTree = "<group>"; };
 		561853B42C58B13200CBD687 /* UpdateVideoCallInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateVideoCallInput.swift; sourceTree = "<group>"; };
+		561853B62C629EB100CBD687 /* UpdateUserInfoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserInfoUseCase.swift; sourceTree = "<group>"; };
 		561AA6AD2BE30A9800393CEF /* FeatureSelectionInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureSelectionInteractor.swift; sourceTree = "<group>"; };
 		561AA6AE2BE30A9800393CEF /* FeatureSelectionInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureSelectionInteractorProtocol.swift; sourceTree = "<group>"; };
 		561AA6B02BE30A9800393CEF /* FeatureSelectionRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureSelectionRouter.swift; sourceTree = "<group>"; };
@@ -6786,6 +6788,7 @@
 			isa = PBXGroup;
 			children = (
 				EA5A87F62B67FD7C00BBB7F9 /* FetchUserDataUseCase.swift */,
+				561853B62C629EB100CBD687 /* UpdateUserInfoUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -12019,6 +12022,7 @@
 				EA0E408E2AF69771002B7437 /* CashWalletOnboardingView.swift in Sources */,
 				EA8652442B902E4B00B86A54 /* FunctionMenuRoute.swift in Sources */,
 				EA282E5B2AE952F700B90920 /* ProfileRouterProtocol.swift in Sources */,
+				561853B72C629EB200CBD687 /* UpdateUserInfoUseCase.swift in Sources */,
 				EA20A5642B87D35B006662FA /* ShareSheetView.swift in Sources */,
 				EACFDF1C2BA7EF3E00B08990 /* UnreleasedFeatureRouter.swift in Sources */,
 				EAE8EC512B9574840003AE96 /* ChatListAssembler.swift in Sources */,

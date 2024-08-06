@@ -12,7 +12,8 @@ final class ProfileViewModel: ProfileViewModelProtocol {
     @Published var temporaryGender: String = ""
     @Published var temporaryAddress: String = ""
     @Published var temporaryAdditionalInfo: String = ""
-
+    @Published var asyncProfileInfo: AsyncData<String, ErrorProtocol> = .idle
+    
     private let interactor: ProfileInteractorProtocol
     let userSession: UserSessionProtocol
 
@@ -32,6 +33,34 @@ final class ProfileViewModel: ProfileViewModelProtocol {
     func logout() {
         try? userSession.clear()
     }
+    
+    @MainActor func updateInfo() async {
+        asyncProfileInfo = .loading
+        do {
+            let output = await interactor.updateUserData(
+                .init(
+                    id: userData.id,
+                    profileImage: userData.profileImage,
+                    name: temporaryName,
+                    lastName: temporaryLastname,
+                    phoneNumber: temporaryPhoneNumber,
+                    birthDate: temporaryBirthDate,
+                    gender: temporaryGender,
+                    address: temporaryAddress,
+                    additionalInfo: temporaryAdditionalInfo,
+                    email: userData.email,
+                    userName: userData.userName,
+                    isWalkCamer: userData.isWalkCamer,
+                    planName: userData.planName
+                )
+            )
+            asyncProfileInfo = .loaded("")
+            userData = output
+            isEditingModeEnabled = false
+        } catch {
+            asyncProfileInfo = .failed(GenericError())
+        }
+    }
 
     // MARK: - Private Functions
 
@@ -49,6 +78,7 @@ final class ProfileViewModel: ProfileViewModelProtocol {
         let additionalInfo = user.additionalInfo
         
         userData = .init(
+            id: user.id,
             profileImage: .imageMock,
             name: name,
             lastName: lastName,

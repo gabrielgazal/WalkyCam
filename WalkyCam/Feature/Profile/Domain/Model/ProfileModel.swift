@@ -1,20 +1,22 @@
 import Foundation
 
 struct UserData: Hashable {
-    var profileImage: String
-    var name: String
-    var lastName: String
-    var phoneNumber: String
-    var birthDate: String
-    var gender: String
-    var address: String
-    var additionalInfo: String
-    var email: String
-    var userName: String
-    var isWalkCamer: Bool
-    var planName: String
+    public var id: String
+    public var profileImage: String
+    public var name: String
+    public var lastName: String
+    public var phoneNumber: String
+    public var birthDate: String
+    public var gender: String
+    public var address: String
+    public var additionalInfo: String
+    public var email: String
+    public var userName: String
+    public var isWalkCamer: Bool
+    public var planName: String
     
     public init(
+        id: String = "",
         profileImage: String = "",
         name: String = "",
         lastName: String = "",
@@ -28,6 +30,7 @@ struct UserData: Hashable {
         isWalkCamer: Bool = false,
         planName: String = ""
     ) {
+        self.id = id
         self.profileImage = profileImage
         self.name = name
         self.lastName = lastName

@@ -60,11 +60,6 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
                                 editableText: $viewModel.temporaryPhoneNumber
                             )
                             assembleItemView(
-                                title: "Fecha de nacimiento",
-                                text: viewModel.userData.birthDate,
-                                editableText: $viewModel.temporaryBirthDate
-                            )
-                            assembleItemView(
                                 title: "Sexo",
                                 text: viewModel.userData.gender,
                                 editableText: $viewModel.temporaryGender
@@ -72,6 +67,14 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
                             assembleItemView(title: L10n.ProfileView.Field.birthDate,
                                              text: viewModel.userData.birthDate,
                                              editableText: $viewModel.temporaryBirthDate)
+                            assembleItemView(title: "Domicilio",
+                                             text: viewModel.userData.address,
+                                             editableText: $viewModel.temporaryAddress)
+                            assembleItemView(
+                                title: "Sobre mi",
+                                text: viewModel.userData.additionalInfo,
+                                editableText: $viewModel.temporaryAdditionalInfo
+                            )
                         }
                         
                         Group {
@@ -113,7 +116,12 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
                                 WCUIButton(title: L10n.ProfileView.Button.save,
                                            style: .standard,
                                            descriptor: OrangeButtonStyleDescriptor(),
-                                           action: {})
+                                           action: {
+                                    Task {
+                                        await viewModel.updateInfo()
+                                    }
+                                })
+                                .loading(viewModel.asyncProfileInfo.isLoading)
                                 WCUIButton(title: L10n.ProfileView.Button.cancel,
                                            style: .standard,
                                            descriptor: BlackButtonStyleDescriptor(),
@@ -186,11 +194,11 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
                     .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
                 Text(text.isEmpty ? "No informado" : text)
                     .font(.projectFont(size: Tokens.Size.Font.regular))
-                    .isHidden(viewModel.isEditingModeEnabled)
                 Spacer()
             }
+            .isHidden(viewModel.isEditingModeEnabled)
             if let editableText = editableText {
-                TextInputView(text: editableText, placeholder: "")
+                TextInputView(text: editableText, topDescriptionText: title, placeholder: "")
                     .isHidden(!viewModel.isEditingModeEnabled)
             }
             Divider()
@@ -252,7 +260,8 @@ struct ProfileView_Previews: PreviewProvider {
                                 configurations: .init(),
                                 plan: .init()
                             )
-                        )
+                        ),
+                        updateInfo: .empty
                     )
                 )
             ),

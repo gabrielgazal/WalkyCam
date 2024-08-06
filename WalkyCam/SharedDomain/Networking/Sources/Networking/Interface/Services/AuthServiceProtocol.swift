@@ -22,4 +22,15 @@ protocol AuthServiceProtocol {
     func verifyByEmail(email: String,
                        verificationCode: String,
                        completion: @escaping Completion)
+    func updateInfo(
+        userId: String,
+        name: String?,
+        lastName: String?,
+        gender: String?,
+        cellphone: String?,
+        address: String?,
+        additionalInfo: String?,
+        birthdate: String?,
+        completion: @escaping Completion
+    )
 }
