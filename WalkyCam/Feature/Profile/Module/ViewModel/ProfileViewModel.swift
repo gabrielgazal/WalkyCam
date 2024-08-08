@@ -36,29 +36,31 @@ final class ProfileViewModel: ProfileViewModelProtocol {
     
     @MainActor func updateInfo() async {
         asyncProfileInfo = .loading
-        do {
-            let output = await interactor.updateUserData(
-                .init(
-                    id: userData.id,
-                    profileImage: userData.profileImage,
-                    name: temporaryName,
-                    lastName: temporaryLastname,
-                    phoneNumber: temporaryPhoneNumber,
-                    birthDate: temporaryBirthDate,
-                    gender: temporaryGender,
-                    address: temporaryAddress,
-                    additionalInfo: temporaryAdditionalInfo,
-                    email: userData.email,
-                    userName: userData.userName,
-                    isWalkCamer: userData.isWalkCamer,
-                    planName: userData.planName
+        Task {
+            do {
+                let output = await interactor.updateUserData(
+                    .init(
+                        id: userData.id,
+                        profileImage: userData.profileImage,
+                        name: temporaryName,
+                        lastName: temporaryLastname,
+                        phoneNumber: temporaryPhoneNumber,
+                        birthDate: temporaryBirthDate,
+                        gender: temporaryGender,
+                        address: temporaryAddress,
+                        additionalInfo: temporaryAdditionalInfo,
+                        email: userData.email,
+                        userName: userData.userName,
+                        isWalkCamer: userData.isWalkCamer,
+                        planName: userData.planName
+                    )
                 )
-            )
-            asyncProfileInfo = .loaded("")
-            userData = output
-            isEditingModeEnabled = false
-        } catch {
-            asyncProfileInfo = .failed(GenericError())
+                asyncProfileInfo = .loaded("")
+                userData = output
+                isEditingModeEnabled = false
+            } catch {
+                asyncProfileInfo = .failed(GenericError())
+            }
         }
     }
 

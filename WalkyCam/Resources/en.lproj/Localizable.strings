@@ -49,7 +49,8 @@
 "RegistrationPlans.description" = "Para comenzar elige un plan, luego puedes cambiarlo.";
 "RegistrationPlans.button.title" = "Comparar Planes";
 "RegistrationPlans.plan.button.title" = "Ver Plan";
-"RegistrationPlans.value" = "%@ € / mo";
+"RegistrationPlans.value.monthly" = "%@ €/mo";
+"RegistrationPlans.value.yearly" = "%@ €/yr";
 
 // MARK: - ProfileView
 "ProfileView.navigation.default.title" = "Perfil";

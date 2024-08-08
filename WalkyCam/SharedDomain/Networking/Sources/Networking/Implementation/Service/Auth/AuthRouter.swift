@@ -35,10 +35,12 @@ extension AuthRouter: TargetType {
     
     var method: Moya.Method {
         switch self {
-        case .login, .register, .updateInfo:
+        case .login, .register:
             return .post
         case .verifyByEmail:
             return .get
+        case .updateInfo:
+            return .put
         }
     }
     

@@ -6,6 +6,7 @@ struct RegistrationPlansView<ViewModel:RegistrationPlansViewModelProtocol, Route
 
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
+    @State var monthlyToggle: Bool = false
 
     // MARK: - Initialization
 
@@ -33,6 +34,22 @@ struct RegistrationPlansView<ViewModel:RegistrationPlansViewModelProtocol, Route
                 Text(L10n.RegistrationPlans.description)
                     .font(.projectFont(size: Tokens.Size.Font.medium, weight: .medium))
                     .foregroundColor(Color.blanco)
+                HStack(alignment: .center,
+                       spacing: Tokens.Size.Spacing.regular) {
+                    Toggle(isOn: $monthlyToggle) {
+                        Text("Toggle Test")
+                    }
+                    .toggleStyle(WCNamelessToggleStyle())
+                    HStack(alignment: .center,
+                           spacing: Tokens.Size.Spacing.xsmall) {
+                        Text("Plan anual")
+                            .font(.projectFont(size: Tokens.Size.Font.medium, weight: .medium))
+                        Text("(ahora 5%)")
+                            .font(.projectFont(size: Tokens.Size.Font.medium, weight: .bold))
+                            .foregroundColor(monthlyToggle ? .naranja : .blanco)
+                    }
+                }
+                
                 AsyncDataView(viewModel.availablePlans) { plans in
                     ForEach(plans, id: \.self) { item in
                         assemblePlanCard(item) {
@@ -76,20 +93,17 @@ struct RegistrationPlansView<ViewModel:RegistrationPlansViewModelProtocol, Route
                         .foregroundColor(Color.blanco)
                     Spacer()
                     Text(
-                        L10n.RegistrationPlans.value(
-                            formatDouble(item.monthlyPrice)
-                        )
+                        monthlyToggle ?
+                        L10n.RegistrationPlans.Value.yearly(formatDouble(item.yearlyPrice)): L10n.RegistrationPlans.Value.monthly(formatDouble(item.monthlyPrice))
                     )
                     .font(.projectFont(size: Tokens.Size.Font.larger, weight: .bold))
                         .foregroundColor(Color.blanco)
                 }
-                WCUIButton(title: L10n.RegistrationPlans.Plan.Button.title,
-                           style: .outline,
-                           descriptor: WhiteButtonStyleDescriptor(),
-                           action: {
-                    handlePlanAction(item.order - 1)
-                })
-                .frame(width: 100, height: 32)
+                LinkButton(
+                    title: L10n.RegistrationPlans.Plan.Button.title,
+                    color: .blanco) {
+                        handlePlanAction(item.order - 1)
+                    }
             }
                    .padding(Tokens.Size.Spacing.regular)
         }
@@ -116,6 +130,7 @@ struct RegistrationPlansView_Previews: PreviewProvider {
                                 id: "teste",
                                 name: "TESTE",
                                 monthlyPrice: "120.0",
+                                yearlyPrice: "240.0",
                                 color: .naranja,
                                 order: 0
                             )]

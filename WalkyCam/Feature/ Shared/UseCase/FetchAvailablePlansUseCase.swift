@@ -39,6 +39,7 @@ extension FetchAvailablePlansUseCase {
             return .init(id: item.id,
                          name: item.name,
                          monthlyPrice: item.monthlyPrice,
+                         yearlyPrice: item.yearlyPrice,
                          color: Color(item.name),
                          order: Int(item.order) ?? 0)
         }

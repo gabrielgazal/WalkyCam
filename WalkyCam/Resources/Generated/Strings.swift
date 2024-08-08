@@ -164,10 +164,6 @@ internal enum L10n {
     internal static let description = L10n.tr("Localizable", "RegistrationPlans.description", fallback: "Para comenzar elige un plan, luego puedes cambiarlo.")
     /// Elige tu plan
     internal static let title = L10n.tr("Localizable", "RegistrationPlans.title", fallback: "Elige tu plan")
-    /// %@ € / mo
-    internal static func value(_ p1: Any) -> String {
-      return L10n.tr("Localizable", "RegistrationPlans.value", String(describing: p1), fallback: "%@ € / mo")
-    }
     internal enum Button {
       /// Comparar Planes
       internal static let title = L10n.tr("Localizable", "RegistrationPlans.button.title", fallback: "Comparar Planes")
@@ -176,6 +172,16 @@ internal enum L10n {
       internal enum Button {
         /// Ver Plan
         internal static let title = L10n.tr("Localizable", "RegistrationPlans.plan.button.title", fallback: "Ver Plan")
+      }
+    }
+    internal enum Value {
+      /// %@ €/mo
+      internal static func monthly(_ p1: Any) -> String {
+        return L10n.tr("Localizable", "RegistrationPlans.value.monthly", String(describing: p1), fallback: "%@ €/mo")
+      }
+      /// %@ €/yr
+      internal static func yearly(_ p1: Any) -> String {
+        return L10n.tr("Localizable", "RegistrationPlans.value.yearly", String(describing: p1), fallback: "%@ €/yr")
       }
     }
   }
