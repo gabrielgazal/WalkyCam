@@ -13,6 +13,7 @@ struct PlansComparisonPageView: View {
     private var plansData: [PlansPagesModel]
     private var startPlanAction: ((String) -> Void)?
     @State private var tooltipVisibility: [String: Bool] = [:]  // Adicione esta linha
+    @State var monthlyToggle: Bool = false
     
     public init(
         plansData: [PlansPagesModel],
@@ -29,6 +30,23 @@ struct PlansComparisonPageView: View {
     
     var body: some View {
         ScrollView(showsIndicators: false) {
+            HStack(alignment: .center,
+                   spacing: Tokens.Size.Spacing.regular) {
+                Spacer()
+                Toggle(isOn: $monthlyToggle) {
+                    Text("Toggle Test")
+                }
+                .toggleStyle(WCNamelessToggleStyle())
+                HStack(alignment: .center,
+                       spacing: Tokens.Size.Spacing.xsmall) {
+                    Text("Plan anual")
+                        .font(.projectFont(size: Tokens.Size.Font.medium, weight: .medium))
+                        .foregroundColor(monthlyToggle ? .naranja : .negro)
+                    Text("(ahora 5%)")
+                        .font(.projectFont(size: Tokens.Size.Font.medium, weight: .bold))
+                        .foregroundColor(monthlyToggle ? .naranja : .negro)
+                }
+            }
             HStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.small) {
                 VStack(alignment: .leading,
@@ -131,7 +149,8 @@ struct PlansComparisonPageView: View {
             Text("Plan \(plan.title.capitalized)")
                 .font(.projectFont(size: Tokens.Size.Font.xsmall, weight: .bold))
                 .foregroundColor(plan.accentColor)
-            Text("\(formatDouble(plan.monthlyPrice)) €/mo")
+            Text(monthlyToggle ?
+                 L10n.RegistrationPlans.Value.yearly(formatDouble(plan.yearlyPrice)): L10n.RegistrationPlans.Value.monthly(formatDouble(plan.monthlyPrice)))
                 .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .bold))
             WCUIButton(title: "Start \(plan.title)",
                        style: .standard,
