@@ -186,6 +186,7 @@ struct PlansComparisonPageView_Previews: PreviewProvider {
             plansData: [
                 .init(title: "free",
                       monthlyPrice: "0.0",
+                      yearlyPrice: "0.0",
                       backgroundImage: Asset.Fondos.planFondo.name,
                       accentColor: .plateado,
                       features: [
@@ -199,6 +200,7 @@ struct PlansComparisonPageView_Previews: PreviewProvider {
                       ]),
                 .init(title: "basic",
                       monthlyPrice: "30.0",
+                      yearlyPrice: "60.0",
                       backgroundImage: Asset.Fondos.planFondo.name,
                       accentColor: .acentoFondoDark,
                       features: [
@@ -214,7 +216,8 @@ struct PlansComparisonPageView_Previews: PreviewProvider {
                         .init(title: "Se incluye funciones como: White board, Share to, Chat, REC, etc.", icon: "")
                       ]),
                 .init(title: "standard",
-                      monthlyPrice: "60.0",
+                      monthlyPrice: "60.0", 
+                      yearlyPrice: "120.0",
                       backgroundImage: Asset.Fondos.planFondo.name,
                       accentColor: .naranja,
                       features: [
@@ -236,7 +239,8 @@ struct PlansComparisonPageView_Previews: PreviewProvider {
                         .init(title: "Se incluye funciones como: White board, Share to, Chat, REC, etc.", icon: "")
                       ]),
                 .init(title: "premium",
-                      monthlyPrice: "180.0",
+                      monthlyPrice: "180.0", 
+                      yearlyPrice: "360.0",
                       backgroundImage: Asset.Fondos.planFondo.name,
                       accentColor: .premium,
                       features: [

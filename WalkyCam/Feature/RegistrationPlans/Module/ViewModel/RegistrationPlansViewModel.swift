@@ -25,9 +25,14 @@ final class RegistrationPlansViewModel: RegistrationPlansViewModelProtocol {
     }
 
     private func savePlansPricesToDefaults(_ plans: [AvailablePlanData]) {
-        UserDefaults.standard.set(plans.first(where: { $0.name == "free" })?.monthlyPrice, forKey: "freePlanPrice")
-        UserDefaults.standard.set(plans.first(where: { $0.name == "basic" })?.monthlyPrice, forKey: "basicPlanPrice")
-        UserDefaults.standard.set(plans.first(where: { $0.name == "standard" })?.monthlyPrice, forKey: "standardPlanPrice")
-        UserDefaults.standard.set(plans.first(where: { $0.name == "premium" })?.monthlyPrice, forKey: "premiumPlanPrice")
+        UserDefaults.standard.set(plans.first(where: { $0.name == "free" })?.monthlyPrice, forKey: "freePlanMonthlyPrice")
+        UserDefaults.standard.set(plans.first(where: { $0.name == "basic" })?.monthlyPrice, forKey: "basicPlanMonthlyPrice")
+        UserDefaults.standard.set(plans.first(where: { $0.name == "standard" })?.monthlyPrice, forKey: "standardPlanMonthlyPrice")
+        UserDefaults.standard.set(plans.first(where: { $0.name == "premium" })?.monthlyPrice, forKey: "premiumPlanMonthlyPrice")
+        
+        UserDefaults.standard.set(plans.first(where: { $0.name == "free" })?.yearlyPrice, forKey: "freePlanYearlyPrice")
+        UserDefaults.standard.set(plans.first(where: { $0.name == "basic" })?.yearlyPrice, forKey: "basicPlanYearlyPrice")
+        UserDefaults.standard.set(plans.first(where: { $0.name == "standard" })?.yearlyPrice, forKey: "standardPlanYearlyPrice")
+        UserDefaults.standard.set(plans.first(where: { $0.name == "premium" })?.yearlyPrice, forKey: "premiumPlanYearlyPrice")
     }
 }

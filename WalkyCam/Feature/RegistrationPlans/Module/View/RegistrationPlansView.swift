@@ -44,6 +44,7 @@ struct RegistrationPlansView<ViewModel:RegistrationPlansViewModelProtocol, Route
                            spacing: Tokens.Size.Spacing.xsmall) {
                         Text("Plan anual")
                             .font(.projectFont(size: Tokens.Size.Font.medium, weight: .medium))
+                            .foregroundColor(.blanco)
                         Text("(ahora 5%)")
                             .font(.projectFont(size: Tokens.Size.Font.medium, weight: .bold))
                             .foregroundColor(monthlyToggle ? .naranja : .blanco)
