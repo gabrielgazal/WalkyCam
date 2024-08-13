@@ -14,6 +14,7 @@
 		561853B32C58B10000CBD687 /* UpdateVideoCallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561853B22C58B10000CBD687 /* UpdateVideoCallUseCase.swift */; };
 		561853B52C58B13200CBD687 /* UpdateVideoCallInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561853B42C58B13200CBD687 /* UpdateVideoCallInput.swift */; };
 		561853B72C629EB200CBD687 /* UpdateUserInfoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561853B62C629EB100CBD687 /* UpdateUserInfoUseCase.swift */; };
+		561853B92C65363100CBD687 /* MapBoxViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561853B82C65363000CBD687 /* MapBoxViewWrapper.swift */; };
 		561AA6C22BE30A9800393CEF /* FeatureSelectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6AD2BE30A9800393CEF /* FeatureSelectionInteractor.swift */; };
 		561AA6C32BE30A9800393CEF /* FeatureSelectionInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6AE2BE30A9800393CEF /* FeatureSelectionInteractorProtocol.swift */; };
 		561AA6C42BE30A9900393CEF /* FeatureSelectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6B02BE30A9800393CEF /* FeatureSelectionRouter.swift */; };
@@ -1092,6 +1093,7 @@
 		561853B22C58B10000CBD687 /* UpdateVideoCallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateVideoCallUseCase.swift; sourceTree = "<group>"; };
 		561853B42C58B13200CBD687 /* UpdateVideoCallInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateVideoCallInput.swift; sourceTree = "<group>"; };
 		561853B62C629EB100CBD687 /* UpdateUserInfoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserInfoUseCase.swift; sourceTree = "<group>"; };
+		561853B82C65363000CBD687 /* MapBoxViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBoxViewWrapper.swift; sourceTree = "<group>"; };
 		561AA6AD2BE30A9800393CEF /* FeatureSelectionInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureSelectionInteractor.swift; sourceTree = "<group>"; };
 		561AA6AE2BE30A9800393CEF /* FeatureSelectionInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureSelectionInteractorProtocol.swift; sourceTree = "<group>"; };
 		561AA6B02BE30A9800393CEF /* FeatureSelectionRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureSelectionRouter.swift; sourceTree = "<group>"; };
@@ -10753,6 +10755,7 @@
 			isa = PBXGroup;
 			children = (
 				EAF47BE42B83099F003F8B86 /* MapTabView.swift */,
+				561853B82C65363000CBD687 /* MapBoxViewWrapper.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -11652,6 +11655,7 @@
 				EAF47C3B2B838D74003F8B86 /* DroneMenuAssembler.swift in Sources */,
 				EAA1E61E2AFAFA7100A42174 /* WCTopBarContainerView.swift in Sources */,
 				561D83982BE90D930045C540 /* CamerAvailabilityAssembler.swift in Sources */,
+				561853B92C65363100CBD687 /* MapBoxViewWrapper.swift in Sources */,
 				EA910F312AD8B55200584B98 /* Divider.swift in Sources */,
 				56A552302B2F6135006B1B17 /* WalkyCamerOnboardingViewModelProtocol.swift in Sources */,
 				EA8653052B90E0FB00B86A54 /* LidarOnboardingRouter.swift in Sources */,

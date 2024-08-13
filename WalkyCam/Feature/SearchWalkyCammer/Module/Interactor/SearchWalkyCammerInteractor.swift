@@ -120,7 +120,6 @@ final class SearchWalkyCammerInteractor: SearchWalkyCammerInteractorProtocol {
                 ]
             ),
             .init(id: 4,
-                  
                   name: "Gabriel Silva",
                   stars: 3,
                   description: "*4 min* de distancia - Desde %6",

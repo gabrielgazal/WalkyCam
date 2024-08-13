@@ -1,5 +1,4 @@
 import SwiftUI
-@_spi(Experimental) import MapboxMaps
 
 struct MapTabView<ViewModel:MapTabViewModelProtocol, Router: MapTabRouterProtocol>: View {
     
@@ -18,13 +17,9 @@ struct MapTabView<ViewModel:MapTabViewModelProtocol, Router: MapTabRouterProtoco
     }
     
     // MARK: - View Body
-    
     var body: some View {
         ZStack {
-            Map(
-                viewport: $viewModel.userLocation
-            )
-            .disabled(true)
+            MapBoxViewWrapper(mapView: $viewModel.mapView)
             VStack {
                 TextInputView(
                     text: $viewModel.locationText,
@@ -53,6 +48,9 @@ struct MapTabView<ViewModel:MapTabViewModelProtocol, Router: MapTabRouterProtoco
                     .frame(width: 30, height: 30)
             }
             .padding(Tokens.Size.Spacing.huge)
+            .onTapGesture {
+                viewModel.updateUserRegionGeocoder()
+            }
         }
         .ignoresSafeArea()
         .onChange(of: locationManager.coordinates) { _, newValue in

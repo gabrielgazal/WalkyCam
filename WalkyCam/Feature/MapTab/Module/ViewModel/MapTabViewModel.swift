@@ -8,11 +8,12 @@ final class MapTabViewModel: MapTabViewModelProtocol {
 
     private let interactor: MapTabInteractorProtocol
     private let serviceManager: ServiceInformationManagerProtocol
-    @Published var userLocation: Viewport = .idle
     @Published var locationText: String = ""
     @State var coordinates: CLLocationCoordinate2D = .init()
     @StateObject var locationManager = LocationPermissionManager()
-
+    @State var isFirstUpdate = true
+    @Published var mapView: MapView?
+    
     // MARK: - Initialization
 
     init(interactor: MapTabInteractorProtocol = MapTabInteractor(),
@@ -25,7 +26,7 @@ final class MapTabViewModel: MapTabViewModelProtocol {
     // MARK: - Public API
 
     func updateCamerLocation() {
-        if let userCoordinates = userLocation.camera?.center {
+        if let userCoordinates = mapView?.mapboxMap.cameraState.center {
             serviceManager.updateLocation(userCoordinates)
         }
     }
@@ -38,18 +39,36 @@ final class MapTabViewModel: MapTabViewModelProtocol {
             guard let placemarks = placemarks,
                   let location = placemarks.first?.location?.coordinate else { return }
             self.coordinates = location
-            self.userLocation = Viewport.camera(center: location,
-                                        zoom: 15,
-                                        bearing: 0,
-                                        pitch: 0)
+            self.mapView?.camera.ease(
+                to: CameraOptions(
+                    center: location,
+                    zoom: 15,
+                    bearing: 0,
+                    pitch: 0
+                ),
+                duration: 1.0
+            )
         }
     }
     
     func updateUserViewPort(manager: LocationPermissionManager) {
-        guard let location = manager.coordinates else { return }
-        self.userLocation = Viewport.camera(center: location,
-                                    zoom: 15,
-                                    bearing: 0,
-                                    pitch: 0)
+        if isFirstUpdate {
+            guard let location = manager.coordinates else { return }
+            self.mapView?.camera.ease(
+                to: CameraOptions(
+                    center: location,
+                    zoom: 15,
+                    bearing: 0,
+                    pitch: 0
+                ),
+                duration: 1.0
+            )
+            isFirstUpdate = false
+        }
+    }
+    
+    func updateUserRegionGeocoder() {
+        let coordinates = mapView?.mapboxMap.cameraState.center
+        print(coordinates)
     }
 }

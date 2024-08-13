@@ -3,7 +3,8 @@ import MapKit
 @_spi(Experimental) import MapboxMaps
 
 protocol SearchWalkyCammerViewModelProtocol: ViewModelProtocol {
-    var userLocation: Viewport { get set }
+    var mapView: MapView? { get set }
+    
     var locationText: String { get set }
     var currentStep: Int { get set }
     var currentTitle: String { get set }
@@ -14,4 +15,6 @@ protocol SearchWalkyCammerViewModelProtocol: ViewModelProtocol {
     func getUserRegion()
     func updateUserViewPort(manager: LocationPermissionManager)
     func isListButtonHidden() -> Bool
+    func updateUserRegionGeocoder()
+    func panCameraToLocation()
 }
