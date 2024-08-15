@@ -12,8 +12,10 @@ struct PlansComparisonPageView: View {
     
     private var plansData: [PlansPagesModel]
     private var startPlanAction: ((String) -> Void)?
-    @State private var tooltipVisibility: [String: Bool] = [:]  // Adicione esta linha
     @State var monthlyToggle: Bool = false
+    @State var tooltipTitle: String = ""
+    @State var tooltipText: String = ""
+    @State var isAlertShown = false
     
     public init(
         plansData: [PlansPagesModel],
@@ -21,11 +23,6 @@ struct PlansComparisonPageView: View {
     ) {
         self.plansData = plansData
         self.startPlanAction = startPlanAction
-        self._tooltipVisibility = State(initialValue: plansData.reduce(into: [:]) { dict, plan in
-            for feature in plan.features {
-                dict[feature.title] = false
-            }
-        })  // Inicialize o dicionário com todos os tooltips invisíveis
     }
     
     var body: some View {
@@ -83,16 +80,26 @@ struct PlansComparisonPageView: View {
         }
         .simultaneousGesture(
             DragGesture().onChanged({ _ in
-                hideAllTooltips()
+                isAlertShown = false
             }))
         .onTapGesture {
-            hideAllTooltips()
+            isAlertShown = false
         }
-    }
-    
-    private func hideAllTooltips() {
-        for key in tooltipVisibility.keys {
-            tooltipVisibility[key] = false
+        .overlay(alignment: .center) {
+            VStack(alignment: .leading,
+                   spacing: Tokens.Size.Spacing.regular) {
+                Text(tooltipTitle)
+                    .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                Text(tooltipText)
+                    .font(.projectFont(size: Tokens.Size.Font.regular))
+            }
+                   .foregroundColor(Color.blanco)
+                   .padding(Tokens.Size.Spacing.large)
+                   .background(
+                    RoundedRectangle(cornerRadius: 8)
+                        .fill(Color.negro.opacity(0.96))
+                   )
+                   .isHidden(!isAlertShown)
         }
     }
     
@@ -115,29 +122,10 @@ struct PlansComparisonPageView: View {
             Image(systemName: "info.circle.fill")
                 .resizable()
                 .frame(width: 15, height: 15)
-//                .overlay {
-//                    TooltipView(alignment: .top, isVisible: Binding(
-//                        get: { tooltipVisibility[item.title] ?? false },
-//                        set: { tooltipVisibility[item.title] = $0 }
-//                    )) {
-//                        HStack {
-//                            VStack(alignment: .leading,
-//                                   spacing: Tokens.Size.Spacing.small) {
-//                                Text(item.title)
-//                                    .font(.projectFont(size: Tokens.Size.Font.small, weight: .bold))
-//                                Text(item.getTooltipText())
-//                                    .lineLimit(nil)
-//                                    .font(.projectFont(size: Tokens.Size.Font.small))
-//                            }
-//                            Spacer()
-//                        }
-//                        .frame(maxWidth: 200)
-//                        .padding()
-//                    }
-//                }
                 .onTapGesture {
-                    hideAllTooltips()
-                    tooltipVisibility[item.title]?.toggle()
+                    tooltipTitle = item.title
+                    tooltipText = item.getTooltipText()
+                    isAlertShown = true
                 }
             Spacer()
         }
@@ -295,79 +283,5 @@ struct PlansComparisonPageView_Previews: PreviewProvider {
             ],
             startPlanAction: nil
         )
-    }
-}
-
-struct TooltipView<Content: View>: View {
-    let alignment: Edge
-    @Binding var isVisible: Bool
-    let content: () -> Content
-    let arrowOffset = CGFloat(8)
-
-    private var oppositeAlignment: Alignment {
-        let result: Alignment
-        switch alignment {
-        case .top: result = .bottom
-        case .bottom: result = .top
-        case .leading: result = .trailing
-        case .trailing: result = .leading
-        }
-        return result
-    }
-
-    private var theHint: some View {
-        content()
-            .padding()
-            .background(Color.negro)
-            .foregroundColor(.white)
-            .cornerRadius(8)
-            .background(alignment: oppositeAlignment) {
-
-                // The arrow is a square that is rotated by 45 degrees
-                Rectangle()
-                    .fill(Color.negro)
-                    .frame(width: 22, height: 22)
-                    .rotationEffect(.degrees(45))
-                    .offset(x: alignment == .leading ? arrowOffset : 0)
-                    .offset(x: alignment == .trailing ? -arrowOffset : 0)
-                    .offset(y: alignment == .top ? arrowOffset : 0)
-                    .offset(y: alignment == .bottom ? -arrowOffset : 0)
-            }
-            .padding()
-            .fixedSize()
-    }
-
-    var body: some View {
-        if isVisible {
-            GeometryReader { proxy1 in
-
-                // Use a hidden version of the hint to form the footprint
-                theHint
-                    .hidden()
-                    .overlay {
-                        GeometryReader { proxy2 in
-
-                            // The visible version of the hint
-                            theHint
-                                .drawingGroup()
-                                .shadow(radius: 4)
-
-                                // Center the hint over the source view
-                                .offset(
-                                    x: -(proxy2.size.width / 2) + (proxy1.size.width / 2),
-                                    y: -(proxy2.size.height / 2) + (proxy1.size.height / 2)
-                                )
-                                // Move the hint to the required edge
-                                .offset(x: alignment == .leading ? (-proxy2.size.width / 2) - (proxy1.size.width / 2) : 0)
-                                .offset(x: alignment == .trailing ? (proxy2.size.width / 2) + (proxy1.size.width / 2) : 0)
-                                .offset(y: alignment == .top ? (-proxy2.size.height / 2) - (proxy1.size.height / 2) : 0)
-                                .offset(y: alignment == .bottom ? (proxy2.size.height / 2) + (proxy1.size.height / 2) : 0)
-                        }
-                    }
-            }
-            .onTapGesture {
-                isVisible.toggle()
-            }
-        }
     }
 }

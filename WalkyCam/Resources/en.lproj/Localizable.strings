@@ -96,9 +96,9 @@
 // MARK: - ErrorView
 
 "errorView.generic.icon" = "retry";
-"errorView.generic.message" = "Ops! Algo deu errado";
-"errorView.generic.description" = "Por algum motivo as informações não carregaram";
-"errorView.generic.buttonTitle" = "Tentar novamente";
+"errorView.generic.message" = "Ops! Algo salió mal";
+"errorView.generic.description" = "Por alguna razón la información no cargó";
+"errorView.generic.buttonTitle" = "Intentar otra vez";
 
 // MARK: - Tooltips
 

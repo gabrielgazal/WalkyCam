@@ -60,7 +60,7 @@ final class FunctionsViewModel: FunctionsViewModelProtocol {
             .init(title: "Thermal Camera", icon: Asset.Icons.thermalCamera.name),
             .init(title: "Backpack Screen Advertising", icon: Asset.Icons.backpack.name),
             .init(title: "Link to CRM/ERP", icon: Asset.Icons.crm.name),
-            .init(title: "Ecografia", icon: Asset.Icons.ecografia.name),
+            .init(title: "Ecografía", icon: Asset.Icons.ecografia.name),
             .init(title: "Lawyer (Consulting only)", icon: Asset.Icons.lawyer.name),
             .init(title: "Robótica", icon: Asset.Icons.robotica.name),
             .init(title: "Detector de metales", icon: Asset.Icons.detectorMetales.name),
