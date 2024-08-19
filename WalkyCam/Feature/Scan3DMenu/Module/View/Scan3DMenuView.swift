@@ -18,41 +18,58 @@ struct Scan3DMenuView<ViewModel:Scan3DMenuViewModelProtocol, Router: Scan3DMenuR
     // MARK: - View Body
 
     var body: some View {
-        VStack(alignment: .leading,
-               spacing: Tokens.Size.Spacing.large) {
-            Text("Scan 3D")
-                .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
+        ZStack {
             VStack(alignment: .leading,
-                   spacing: Tokens.Size.Spacing.regular) {
-                Text("Desde tu smartphone")
-                    .font(.projectFont(size: Tokens.Size.Font.large, weight: .medium))
-                HStack(spacing: Tokens.Size.Spacing.regular) {
-                    squaredCell(icon: Asset.Icons.scan3D.name, title: "Scan 3D")
-                        .onTapGesture {
-                            router.routeTo3DScanner()
-                        }
-                    squaredCell(icon: Asset.Icons.images.name, title: "Galería")
-                        .onTapGesture {
-                            router.routeToGallery()
-                        }
+                   spacing: Tokens.Size.Spacing.large) {
+                Text("Scan 3D")
+                    .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
+                VStack(alignment: .leading,
+                       spacing: Tokens.Size.Spacing.regular) {
+                    Text("Desde tu smartphone")
+                        .font(.projectFont(size: Tokens.Size.Font.large, weight: .medium))
+                    HStack(spacing: Tokens.Size.Spacing.regular) {
+                        squaredCell(icon: Asset.Icons.scan3D.name, title: "Scan 3D")
+                            .onTapGesture {
+                                router.routeTo3DScanner()
+                            }
+                        squaredCell(icon: Asset.Icons.images.name, title: "Galería")
+                            .onTapGesture {
+                                router.routeToGallery()
+                            }
+                    }
+                }
+                VStack(alignment: .leading,
+                       spacing: Tokens.Size.Spacing.regular) {
+                    Text("A distancia")
+                        .font(.projectFont(size: Tokens.Size.Font.large, weight: .medium))
+                    HStack(spacing: Tokens.Size.Spacing.regular) {
+                        squaredCell(icon: Asset.Icons.streetCam.name, title: "Buscar WalkCamer")
+                            .onTapGesture {
+                                router.routeToWalkCammer()
+                            }
+                        squaredCell(icon: Asset.Icons.orangeShare.name, title: "Buscar un Contacto")
+                            .onTapGesture {
+                                router.routeToContact()
+                            }
+                    }
+                }
+                Spacer()
+            }
+            VStack {
+                Spacer()
+                HStack {
+                    Spacer()
+                    VStack(alignment: .center,
+                           spacing: Tokens.Size.Spacing.tiny) {
+                        Asset.Menu.bot.swiftUIImage
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 75)
+                        Text("FAQ's")
+                            .font(.projectFont(size: Tokens.Size.Font.medium, weight: .bold))
+                    }
                 }
             }
-            VStack(alignment: .leading,
-                   spacing: Tokens.Size.Spacing.regular) {
-                Text("A distancia")
-                    .font(.projectFont(size: Tokens.Size.Font.large, weight: .medium))
-                HStack(spacing: Tokens.Size.Spacing.regular) {
-                    squaredCell(icon: Asset.Icons.streetCam.name, title: "Buscar WalkCamer")
-                        .onTapGesture {
-                            router.routeToWalkCammer()
-                        }
-                    squaredCell(icon: Asset.Icons.orangeShare.name, title: "Buscar un Contacto")
-                        .onTapGesture {
-                            router.routeToContact()
-                        }
-                }
-            }
-            Spacer()
         }
                .padding(Tokens.Size.Spacing.large)
                .navigation(router)

@@ -133,7 +133,7 @@ struct PlansComparisonPageView: View {
     
     private func planItem(_ plan: PlansPagesModel) -> some View {
         VStack(alignment: .center,
-               spacing: Tokens.Size.Spacing.xsmall) {
+               spacing: Tokens.Size.Spacing.small) {
             Text("Plan \(plan.title.capitalized)")
                 .font(.projectFont(size: Tokens.Size.Font.xsmall, weight: .bold))
                 .foregroundColor(plan.accentColor)
@@ -148,7 +148,7 @@ struct PlansComparisonPageView: View {
             })
             .frame(width: 130)
             VStack(alignment: .center,
-                   spacing: Tokens.Size.Spacing.xsmall) {
+                   spacing: Tokens.Size.Spacing.small) {
                 ForEach(plansData.first(where: { $0.title == "premium"})?.features ?? []) { feature in
                     if plan.features.contains(where: { $0.title == feature.title }) {
                         Image(Asset.Icons.check.name)
@@ -159,6 +159,7 @@ struct PlansComparisonPageView: View {
                             .foregroundColor(plan.accentColor)
                     } else {
                         EmptyView()
+                            .frame(height: 50)
                     }
                 }
             }

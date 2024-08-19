@@ -206,71 +206,145 @@ internal enum L10n {
     }
   }
   internal enum Tooltip {
-    /// 
-    internal static let _360ºCamera = L10n.tr("Localizable", "Tooltip.360º Camera", fallback: "")
-    /// Análisis técnico de una muestra biológica, por ejemplo, orina, cabello, sangre, aliento, sudor o fluido oral/saliva, para determinar la presencia o ausencia de drogas originales específicas o sus metabolitos. Selecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.
-    internal static let alcoholDrugTest = L10n.tr("Localizable", "Tooltip.Alcohol & Drug test", fallback: "Análisis técnico de una muestra biológica, por ejemplo, orina, cabello, sangre, aliento, sudor o fluido oral/saliva, para determinar la presencia o ausencia de drogas originales específicas o sus metabolitos. Selecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.")
-    /// Analiza Instalaciones y Sistemas eléctricos, mediante un computador que mide incidencias en tu red, consumos indebidos, entre otros. Selecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.
-    internal static let analizadorDeRedes = L10n.tr("Localizable", "Tooltip.Analizador de redes", fallback: "Analiza Instalaciones y Sistemas eléctricos, mediante un computador que mide incidencias en tu red, consumos indebidos, entre otros. Selecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.")
-    /// 
-    internal static let arHands = L10n.tr("Localizable", "Tooltip.AR Hands", fallback: "")
-    /// 
-    internal static let certifiedRecording = L10n.tr("Localizable", "Tooltip.Certified Recording", fallback: "")
-    /// 
-    internal static let cryptoWallet = L10n.tr("Localizable", "Tooltip.CryptoWallet", fallback: "")
-    /// Mediante ondas electromagnéticas detecta y mapea, cables eléctricos y tuberías, enterrados hasta una profundidad de 7 mt con  total precisión. Selecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.
-    internal static let detectorDeCables = L10n.tr("Localizable", "Tooltip.Detector de cables", fallback: "Mediante ondas electromagnéticas detecta y mapea, cables eléctricos y tuberías, enterrados hasta una profundidad de 7 mt con  total precisión. Selecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.")
-    /// Encuentra tu anillo perdido. Puedes enviar a un experto a buscar por ti. Descubre increíbles tesoros desde la comodidad de tu hogar u oficina.
-    internal static let detectorDeMetales = L10n.tr("Localizable", "Tooltip.Detector de metales", fallback: "Encuentra tu anillo perdido. Puedes enviar a un experto a buscar por ti. Descubre increíbles tesoros desde la comodidad de tu hogar u oficina.")
-    /// Representación virtual de un objeto o sistema que abarca su ciclo de vida, se actualiza a partir de datos en tiempo real y utiliza simulación, machine learning y razonamiento para ayudar en la toma de decisiones. Selecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.
-    internal static let digitalTwin = L10n.tr("Localizable", "Tooltip.Digital Twin", fallback: "Representación virtual de un objeto o sistema que abarca su ciclo de vida, se actualiza a partir de datos en tiempo real y utiliza simulación, machine learning y razonamiento para ayudar en la toma de decisiones. Selecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.")
-    /// Robot con forma de perro que utiliza sensores con (IA) para moverse e interaccionar con personas y objetos. Puede prestar ayuda en emergencias o como acompañante de personas dependientes, también puede monitorizar datos de su entorno de forma remota.
-    internal static let dogRobot = L10n.tr("Localizable", "Tooltip.Dog Robot", fallback: "Robot con forma de perro que utiliza sensores con (IA) para moverse e interaccionar con personas y objetos. Puede prestar ayuda en emergencias o como acompañante de personas dependientes, también puede monitorizar datos de su entorno de forma remota.")
-    /// Tu eliges donde grabar tus videos y/o capturar imágenes. Nosotros pilotamos por ti. Utiliza drones en tu cultivo: mapeo de campos, IOT, vigilancia y monitoreo de los cultivos, agricultura ecológica. Contamos con profesionales acreditados y con experiencia. Tu WalkCamer te guiará.
-    internal static let droneFly = L10n.tr("Localizable", "Tooltip.Drone Fly", fallback: "Tu eliges donde grabar tus videos y/o capturar imágenes. Nosotros pilotamos por ti. Utiliza drones en tu cultivo: mapeo de campos, IOT, vigilancia y monitoreo de los cultivos, agricultura ecológica. Contamos con profesionales acreditados y con experiencia. Tu WalkCamer te guiará.")
-    /// Ecografías a distancia efectuadas por profesionales. Llegamos a donde menos te lo esperas, con equipos de primera calidad. Consigue una segunda opinión Podrás ver las imágenes en directo.
-    internal static let ecografía = L10n.tr("Localizable", "Tooltip.Ecografía", fallback: "Ecografías a distancia efectuadas por profesionales. Llegamos a donde menos te lo esperas, con equipos de primera calidad. Consigue una segunda opinión Podrás ver las imágenes en directo.")
-    /// Radar de Penetración de Suelo: Permite Mapear y localizar estructuras y objetos enterrados en el subsuelo. Selecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.
-    internal static let georradar = L10n.tr("Localizable", "Tooltip.Georradar", fallback: "Radar de Penetración de Suelo: Permite Mapear y localizar estructuras y objetos enterrados en el subsuelo. Selecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.")
-    /// Motor de AI entrenado sobre tus datos y tu comportamiento de uso dentro de WalkyCam. Por única vez, antes de iniciar es necesario integrar y permitir accesos para poder ofrecer mejores recomendaciones, ahorrar trabajo y ofrecer soluciones/ alternativas a los problemas.
-    internal static let iaDataAnalysis = L10n.tr("Localizable", "Tooltip.IA & Data Analysis", fallback: "Motor de AI entrenado sobre tus datos y tu comportamiento de uso dentro de WalkyCam. Por única vez, antes de iniciar es necesario integrar y permitir accesos para poder ofrecer mejores recomendaciones, ahorrar trabajo y ofrecer soluciones/ alternativas a los problemas.")
-    /// Elige entre Farming, Industry, Agriculture, Fleet, Retail, Smart City y mucho más! Selecciona los sensores indicando su valor. Localiza tu WalkCamer más cercano y gestiona tu IOT.
-    internal static let iotApplicationsDataAnalysis = L10n.tr("Localizable", "Tooltip.IOT applications & Data analysis", fallback: "Elige entre Farming, Industry, Agriculture, Fleet, Retail, Smart City y mucho más! Selecciona los sensores indicando su valor. Localiza tu WalkCamer más cercano y gestiona tu IOT.")
-    /// 
-    internal static let juegosYOtros = L10n.tr("Localizable", "Tooltip.Juegos y otros", fallback: "")
-    /// 
-    internal static let linkToCRMERP = L10n.tr("Localizable", "Tooltip.Link to CRM/ERP", fallback: "")
-    /// 
-    internal static let nftPictures = L10n.tr("Localizable", "Tooltip.NFT (Pictures)", fallback: "")
-    /// Su privacidad es importante para nosotros. Para cuidar su privacidad, WalkyCam da la posibilidad de pixelar el rostro de las personas y placas de autos que puedan aparecer en una transmisión. WalkyCam no se responsabiliza por las imagenes que se transmiten ni por la grabación realizada.
-    internal static let pixelationFaces = L10n.tr("Localizable", "Tooltip.Pixelation Faces", fallback: "Su privacidad es importante para nosotros. Para cuidar su privacidad, WalkyCam da la posibilidad de pixelar el rostro de las personas y placas de autos que puedan aparecer en una transmisión. WalkyCam no se responsabiliza por las imagenes que se transmiten ni por la grabación realizada.")
-    /// 
-    internal static let robótica = L10n.tr("Localizable", "Tooltip.Robótica", fallback: "")
-    /// Vigila, Entrena o Alimenta a tus mascotas a distancia. Podrás controlar sus movimientos y su estado general, desde la comodidad de tu móvil.
-    internal static let robóticaParaMascotas = L10n.tr("Localizable", "Tooltip.Robótica para Mascotas", fallback: "Vigila, Entrena o Alimenta a tus mascotas a distancia. Podrás controlar sus movimientos y su estado general, desde la comodidad de tu móvil.")
-    /// Robot de vídeo online que permite que varios interlocutores se comuniquen. Desplázate por ferias y eventos como si estuvieras alli. Interactúa comercialmente o da clases y conferencias a distancia, mientras te mueves por el entorno.
-    internal static let robóticaTelepresencia = L10n.tr("Localizable", "Tooltip.Robótica Telepresencia", fallback: "Robot de vídeo online que permite que varios interlocutores se comuniquen. Desplázate por ferias y eventos como si estuvieras alli. Interactúa comercialmente o da clases y conferencias a distancia, mientras te mueves por el entorno.")
-    /// Mapea y digitaliza áreas en contrucción o descubre lo que hay debajo de la selva. Vive la magia del escaneado con laser mediante la técnica LIDAR
-    internal static let rotoLIDARScan = L10n.tr("Localizable", "Tooltip.Roto LIDAR Scan", fallback: "Mapea y digitaliza áreas en contrucción o descubre lo que hay debajo de la selva. Vive la magia del escaneado con laser mediante la técnica LIDAR")
-    /// Crea modelos 3D de objetos reales a partir de fotografías. Solicita un WalkCamer para efectuar el Scan 3D por ti, a distancia. Una vez escaneado, puedes editar color, tamaño y forma de la imagen escaneada del objeto. Realiza una impresión 3D del objeto y recibe el objeto.
-    internal static let scan3D = L10n.tr("Localizable", "Tooltip.Scan 3D", fallback: "Crea modelos 3D de objetos reales a partir de fotografías. Solicita un WalkCamer para efectuar el Scan 3D por ti, a distancia. Una vez escaneado, puedes editar color, tamaño y forma de la imagen escaneada del objeto. Realiza una impresión 3D del objeto y recibe el objeto.")
+    /// Análisis técnico de una muestra biológica, por ejemplo, orina, cabello, sangre, aliento, sudor o fluido oral/saliva, para determinar la presencia o ausencia de drogas originales específicas o sus metabolitos.
+    /// Selecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.
+    internal static let alcoholDrugTest = L10n.tr("Localizable", "Tooltip.AlcoholDrugTest", fallback: "Análisis técnico de una muestra biológica, por ejemplo, orina, cabello, sangre, aliento, sudor o fluido oral/saliva, para determinar la presencia o ausencia de drogas originales específicas o sus metabolitos.\nSelecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.")
+    /// Analiza Instalaciones y Sistemas eléctricos, mediante un computador que mide incidencias en tu red, consumos indebidos, entre otros.
+    /// Selecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.
+    internal static let analizadorDeRedes = L10n.tr("Localizable", "Tooltip.Analizador de Redes", fallback: "Analiza Instalaciones y Sistemas eléctricos, mediante un computador que mide incidencias en tu red, consumos indebidos, entre otros.\nSelecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.")
+    /// Selecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.
+    /// O también puedes ingresar el código que te envíe tu asistente de confianza.
+    internal static let asistenciaRemota = L10n.tr("Localizable", "Tooltip.AsistenciaRemota", fallback: "Selecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.\nO también puedes ingresar el código que te envíe tu asistente de confianza.")
+    /// Crea tu campaña publicitaria con Anuncios en Pantallas móviles.
+    /// Aumenta tu ratio de ventas.
+    /// Selecciona el área en el que necesites asistencia.
+    /// Haz que tu negocio se vea en la calle.
+    /// Accede a zonas impensables y gana visibilidad.
+    internal static let backPackScreenADversiting = L10n.tr("Localizable", "Tooltip.BackPackScreenADversiting", fallback: "Crea tu campaña publicitaria con Anuncios en Pantallas móviles.\nAumenta tu ratio de ventas.\nSelecciona el área en el que necesites asistencia.\nHaz que tu negocio se vea en la calle.\nAccede a zonas impensables y gana visibilidad.")
+    /// Regalate o regala a otros nuestras alucinantes cajas sorpresa.
+    internal static let cajaSorpresa = L10n.tr("Localizable", "Tooltip.CajaSorpresa", fallback: "Regalate o regala a otros nuestras alucinantes cajas sorpresa.")
+    /// Graba videos con visión 360º, o crea Gemelos Digitales, para formación o mantenimiento.
+    internal static let camara360 = L10n.tr("Localizable", "Tooltip.Camara360", fallback: "Graba videos con visión 360º, o crea Gemelos Digitales, para formación o mantenimiento.")
+    /// Grabación certificada de Documentos,Videos y Navegación Online
+    internal static let certifiedRecording = L10n.tr("Localizable", "Tooltip.CertifiedRecording", fallback: "Grabación certificada de Documentos,Videos y Navegación Online")
+    /// Legaliza y protege tus derechos de autor, gratis(*) o de forma guiada.
+    internal static let copyrights = L10n.tr("Localizable", "Tooltip.Copyrights", fallback: "Legaliza y protege tus derechos de autor, gratis(*) o de forma guiada.")
+    /// Conecta y sincroniza tus CRM con WalkyCam,de forma segura. Comparte y almacena información en ambas plataformas.
+    internal static let crm = L10n.tr("Localizable", "Tooltip.CRM", fallback: "Conecta y sincroniza tus CRM con WalkyCam,de forma segura. Comparte y almacena información en ambas plataformas.")
+    /// Monedero de Criptomonedas: Opera sobre tus criptomonedas con total seguridad.
+    internal static let cryptoWallet = L10n.tr("Localizable", "Tooltip.CryptoWallet", fallback: "Monedero de Criptomonedas: Opera sobre tus criptomonedas con total seguridad.")
+    /// Mediante ondas electromagnéticas detecta y mapea, cables eléctricos y tuberías, enterrados hasta una profundidad de 7 mt con total precisión.
+    /// Selecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.
+    internal static let detectorCables = L10n.tr("Localizable", "Tooltip.DetectorCables", fallback: "Mediante ondas electromagnéticas detecta y mapea, cables eléctricos y tuberías, enterrados hasta una profundidad de 7 mt con total precisión.\nSelecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.")
+    /// Encuentra tu anillo perdido.
+    /// Puedes enviar a un experto a buscar por ti.
+    /// Descubre increíbles tesoros desde la comodidad de tu hogar u oficina.
+    internal static let detectorMetales = L10n.tr("Localizable", "Tooltip.DetectorMetales", fallback: "Encuentra tu anillo perdido.\nPuedes enviar a un experto a buscar por ti.\nDescubre increíbles tesoros desde la comodidad de tu hogar u oficina.")
+    /// Representación virtual de un objeto o sistema que abarca su ciclo de vida, se actualiza a partir de datos en tiempo real y utiliza simulación, machine learning y razonamiento para ayudar en la toma de decisiones.
+    /// Selecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.
+    internal static let digitalTwins = L10n.tr("Localizable", "Tooltip.DigitalTwins", fallback: "Representación virtual de un objeto o sistema que abarca su ciclo de vida, se actualiza a partir de datos en tiempo real y utiliza simulación, machine learning y razonamiento para ayudar en la toma de decisiones.\nSelecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.")
+    /// Robot con forma de perro que utiliza sensores con (IA) para moverse e interaccionar con personas y objetos.
+    /// Puede prestar ayuda en emergencias o como acompañante de personas dependientes, también puede monitorizar datos de su entorno de forma remota.
+    internal static let dogRobot = L10n.tr("Localizable", "Tooltip.DogRobot", fallback: "Robot con forma de perro que utiliza sensores con (IA) para moverse e interaccionar con personas y objetos.\nPuede prestar ayuda en emergencias o como acompañante de personas dependientes, también puede monitorizar datos de su entorno de forma remota.")
+    /// Tu provadro de ropa virtual, con grandes ofertas.
+    internal static let dressProve = L10n.tr("Localizable", "Tooltip.DressProve", fallback: "Tu provadro de ropa virtual, con grandes ofertas.")
+    /// Tu eliges donde grabar tus videos y/o capturar imágenes.
+    /// Nosotros pilotamos por ti.
+    /// Utiliza drones en tu cultivo: mapeo de campos, IOT, vigilancia y monitoreo de los cultivos, agricultura ecológica.
+    /// Contamos con profesionales acreditados y con experiencia. Tu WalkCamer te guiará.
+    internal static let droneFly = L10n.tr("Localizable", "Tooltip.Drone Fly", fallback: "Tu eliges donde grabar tus videos y/o capturar imágenes.\nNosotros pilotamos por ti.\nUtiliza drones en tu cultivo: mapeo de campos, IOT, vigilancia y monitoreo de los cultivos, agricultura ecológica.\nContamos con profesionales acreditados y con experiencia. Tu WalkCamer te guiará.")
+    /// Ecografías a distancia efectuadas por profesionales.
+    /// Llegamos a donde menos te lo esperas, con equipos de primera calidad.
+    /// Consigue una segunda opinión
+    /// Podrás ver las imágenes en directo.
+    internal static let ecografía = L10n.tr("Localizable", "Tooltip.Ecografía", fallback: "Ecografías a distancia efectuadas por profesionales.\nLlegamos a donde menos te lo esperas, con equipos de primera calidad.\nConsigue una segunda opinión\nPodrás ver las imágenes en directo.")
+    /// Consultores en ingeniería para resolver tus dudas, de legalizaciones, instalaciones, obras, etc
+    internal static let engineering = L10n.tr("Localizable", "Tooltip.Engineering", fallback: "Consultores en ingeniería para resolver tus dudas, de legalizaciones, instalaciones, obras, etc")
+    /// Consigue tu sueño una videollamada de tu famoso/a preferido/a.
+    internal static let famosos = L10n.tr("Localizable", "Tooltip.Famosos", fallback: "Consigue tu sueño una videollamada de tu famoso/a preferido/a.")
+    /// Conviertete en director/a de cine, crea tus propias películas con efectos y diálogos, gracias a nuestra AI.
+    internal static let filmMaker = L10n.tr("Localizable", "Tooltip.FilmMaker", fallback: "Conviertete en director/a de cine, crea tus propias películas con efectos y diálogos, gracias a nuestra AI.")
+    /// Juega a miles de videojuegos, gratis y de pago, en local o en linea.
+    internal static let games = L10n.tr("Localizable", "Tooltip.Games", fallback: "Juega a miles de videojuegos, gratis y de pago, en local o en linea.")
+    /// Radar de Penetración de Suelo:
+    /// Permite Mapear y localizar estructuras y objetos enterrados en el subsuelo.
+    /// Selecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.
+    internal static let georadar = L10n.tr("Localizable", "Tooltip.Georadar", fallback: "Radar de Penetración de Suelo:\nPermite Mapear y localizar estructuras y objetos enterrados en el subsuelo.\nSelecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.")
+    /// Pruebate los ultimos modelos de gafas y obten grandes descuentos.
+    internal static let glassesProve = L10n.tr("Localizable", "Tooltip.Glasses Prove", fallback: "Pruebate los ultimos modelos de gafas y obten grandes descuentos.")
+    /// Monta tus mejores juegos de busqueda del tesoro con nosotros en ubicaciones increibles o en streaming. Participa y pasalo bien en grupo o desde casa.
+    internal static let gymkhana = L10n.tr("Localizable", "Tooltip.Gymkhana", fallback: "Monta tus mejores juegos de busqueda del tesoro con nosotros en ubicaciones increibles o en streaming. Participa y pasalo bien en grupo o desde casa.")
+    /// Pruebate los más atrevedidos peinados, y reserva cita en una de nuestras peluquerías.
+    internal static let hairProve = L10n.tr("Localizable", "Tooltip.HairProve", fallback: "Pruebate los más atrevedidos peinados, y reserva cita en una de nuestras peluquerías.")
+    /// Motor de AI entrenado sobre tus datos y tu comportamiento de uso dentro de WalkyCam.
+    /// Por única vez, antes de iniciar es necesario integrar y permitir accesos para poder ofrecer mejores recomendaciones, ahorrar trabajo y ofrecer soluciones/ alternativas a los problemas.
+    internal static let iaDataAnalysis = L10n.tr("Localizable", "Tooltip.IADataAnalysis", fallback: "Motor de AI entrenado sobre tus datos y tu comportamiento de uso dentro de WalkyCam.\nPor única vez, antes de iniciar es necesario integrar y permitir accesos para poder ofrecer mejores recomendaciones, ahorrar trabajo y ofrecer soluciones/ alternativas a los problemas.")
+    /// Registra tu know how de negocio con nosotros y pruebalo en privado o en publico.
+    internal static let ideaNegocio = L10n.tr("Localizable", "Tooltip.IdeaNegocio", fallback: "Registra tu know how de negocio con nosotros y pruebalo en privado o en publico.")
+    /// Elige entre Farming, Industry, Agriculture, Fleet, Retail, Smart City y mucho más!
+    /// Selecciona los sensores indicando su valor.
+    /// Localiza tu WalkCamer más cercano y gestiona tu IOT.
+    internal static let iot = L10n.tr("Localizable", "Tooltip.IOT", fallback: "Elige entre Farming, Industry, Agriculture, Fleet, Retail, Smart City y mucho más!\nSelecciona los sensores indicando su valor.\nLocaliza tu WalkCamer más cercano y gestiona tu IOT.")
+    /// Disfruta de un karaoke en streaming con tu familia y amigos.
+    internal static let karaoke = L10n.tr("Localizable", "Tooltip.Karaoke", fallback: "Disfruta de un karaoke en streaming con tu familia y amigos.")
+    /// Consultores legales para resolver tus dudas, sobre temas laborales, fiscales, contables, etc
+    internal static let lawyer = L10n.tr("Localizable", "Tooltip.Lawyer", fallback: "Consultores legales para resolver tus dudas, sobre temas laborales, fiscales, contables, etc")
+    /// Mapea y digitaliza áreas en contrucción o descubre lo que hay debajo de la selva.
+    /// Vive la magia del escaneado con laser mediante la técnica LIDAR
+    internal static let lidar = L10n.tr("Localizable", "Tooltip.LIDAR", fallback: "Mapea y digitaliza áreas en contrucción o descubre lo que hay debajo de la selva.\nVive la magia del escaneado con laser mediante la técnica LIDAR")
+    /// Envía un servicio de cantantes o mariachis a domicilio, para cumpleaños, bromas etc.
+    internal static let mariachis = L10n.tr("Localizable", "Tooltip.Mariachis", fallback: "Envía un servicio de cantantes o mariachis a domicilio, para cumpleaños, bromas etc.")
+    /// Expon tu propio show room de productos y envía muestras a tus clientes.
+    internal static let muestraProductos = L10n.tr("Localizable", "Tooltip.MuestraProductos", fallback: "Expon tu propio show room de productos y envía muestras a tus clientes.")
+    /// Crea NFT’s de tu arte digital o descubre nuevos NFT’s en nuestra tienda.
+    internal static let nft = L10n.tr("Localizable", "Tooltip.NFT", fallback: "Crea NFT’s de tu arte digital o descubre nuevos NFT’s en nuestra tienda.")
+    /// Te ayudamos a presentar tus patentes de invención,o nos hacemos socios si así lo deseas.
+    internal static let patenteInvención = L10n.tr("Localizable", "Tooltip.PatenteInvención", fallback: "Te ayudamos a presentar tus patentes de invención,o nos hacemos socios si así lo deseas.")
+    /// Si no tienes tiempo, compramos lo que necesites para ti, y te lo llevamos a casa o a donde tu quieras, todo ello en streaming.
+    internal static let personalShopper = L10n.tr("Localizable", "Tooltip.PersonalShopper", fallback: "Si no tienes tiempo, compramos lo que necesites para ti, y te lo llevamos a casa o a donde tu quieras, todo ello en streaming.")
+    /// Su privacidad es importante para nosotros.
+    /// Para cuidar su privacidad, WalkyCam da la posibilidad de pixelar el rostro de las personas y placas de autos que puedan aparecer en una transmisión.
+    /// WalkyCam no se responsabiliza por las imagenes que se transmiten ni por la grabación realizada.
+    internal static let pixelationFaces = L10n.tr("Localizable", "Tooltip.PixelationFaces", fallback: "Su privacidad es importante para nosotros.\nPara cuidar su privacidad, WalkyCam da la posibilidad de pixelar el rostro de las personas y placas de autos que puedan aparecer en una transmisión.\nWalkyCam no se responsabiliza por las imagenes que se transmiten ni por la grabación realizada.")
+    /// Una vez escaneado, puedes editar el color y el tamaño.
+    /// Elige la forma de envío más adecuada.
+    /// Elegir el material y el acabado del objeto antes de enviarlo a imprimir en 3D.
+    /// Disfruta de nuestro envio VIP, envíos frecuentes, y mucho más!
+    internal static let print3D = L10n.tr("Localizable", "Tooltip.Print3D", fallback: "Una vez escaneado, puedes editar el color y el tamaño.\nElige la forma de envío más adecuada.\nElegir el material y el acabado del objeto antes de enviarlo a imprimir en 3D.\nDisfruta de nuestro envio VIP, envíos frecuentes, y mucho más!")
+    /// Participa en carreras en grupo por streaming, o ponle una pulsera a tu mascota.
+    internal static let pulseraFitness = L10n.tr("Localizable", "Tooltip.PulseraFitness", fallback: "Participa en carreras en grupo por streaming, o ponle una pulsera a tu mascota.")
+    /// Convierte tu Laptop o tú móvil, en un show de luces de colores, mientras escuchas tu música favorita.
+    internal static let rgbBulbParty = L10n.tr("Localizable", "Tooltip.RGBBulbParty.", fallback: "Convierte tu Laptop o tú móvil, en un show de luces de colores, mientras escuchas tu música favorita.")
+    /// Vigila, Entrena o Alimenta a tus mascotas a distancia.
+    /// Podrás controlar sus movimientos y su estado general, desde la comodidad de tu móvil.
+    internal static let robóticaMascotas = L10n.tr("Localizable", "Tooltip.RobóticaMascotas", fallback: "Vigila, Entrena o Alimenta a tus mascotas a distancia.\nPodrás controlar sus movimientos y su estado general, desde la comodidad de tu móvil.")
+    /// Robot de vídeo online que permite que varios interlocutores se comuniquen.
+    /// Desplázate por ferias y eventos como si estuvieras alli.
+    /// Interactúa comercialmente o da clases y conferencias a distancia, mientras te mueves por el entorno.
+    internal static let robóticaTelepresencia = L10n.tr("Localizable", "Tooltip.RobóticaTelepresencia", fallback: "Robot de vídeo online que permite que varios interlocutores se comuniquen.\nDesplázate por ferias y eventos como si estuvieras alli.\nInteractúa comercialmente o da clases y conferencias a distancia, mientras te mueves por el entorno.")
+    /// Nuestros R.O.V. Drones Submarinos, serán controlados por WalkCamers especialistas.
+    /// Selecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.
+    /// Sumerjete en aguas profundas y graba tus propios videos, con nuestros R.O.V. Drones Submarinos.
+    /// Podrás usar su brazo robot, para recoger muestras, o manipular objetos.
+    /// Los equipos van desde un simple R.O.V. para grabar video, hasta equipos de aguas profundas para la industria naval y la investigación científica
+    internal static let rovDrone = L10n.tr("Localizable", "Tooltip.ROVDrone", fallback: "Nuestros R.O.V. Drones Submarinos, serán controlados por WalkCamers especialistas.\nSelecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.\nSumerjete en aguas profundas y graba tus propios videos, con nuestros R.O.V. Drones Submarinos.\nPodrás usar su brazo robot, para recoger muestras, o manipular objetos.\nLos equipos van desde un simple R.O.V. para grabar video, hasta equipos de aguas profundas para la industria naval y la investigación científica")
+    /// Crea modelos 3D de objetos reales a partir de fotografías.
+    /// Solicita un WalkCamer para efectuar el Scan 3D por ti, a distancia.
+    /// Una vez escaneado, puedes editar color, tamaño y forma de la imagen escaneada del objeto. Realiza una impresión 3D del objeto y recibe el objeto.
+    internal static let scan3D = L10n.tr("Localizable", "Tooltip.Scan3D", fallback: "Crea modelos 3D de objetos reales a partir de fotografías.\nSolicita un WalkCamer para efectuar el Scan 3D por ti, a distancia.\nUna vez escaneado, puedes editar color, tamaño y forma de la imagen escaneada del objeto. Realiza una impresión 3D del objeto y recibe el objeto.")
+    /// Monta las mejores fiestas de Scape Room, online o en una casa real.
+    internal static let scapeRoom = L10n.tr("Localizable", "Tooltip.ScapeRoom", fallback: "Monta las mejores fiestas de Scape Room, online o en una casa real.")
     /// Conéctate con el mundo.
-    /// 1. Indica la zona a grabar.
-    /// 2. Elige un WalkCamer acorde a tus requerimientos
-    /// 3. Tu WalkCamer aceptará la invitación para iniciar la videollamada.
-    internal static let streetCamWalkCamer = L10n.tr("Localizable", "Tooltip.Street Cam (WalkCamer)", fallback: "Conéctate con el mundo.\n1. Indica la zona a grabar.\n2. Elige un WalkCamer acorde a tus requerimientos\n3. Tu WalkCamer aceptará la invitación para iniciar la videollamada.")
-    /// 
-    internal static let thermalCamara = L10n.tr("Localizable", "Tooltip.Thermal Camara", fallback: "")
-    /// Crea una nueva reunión o programa para otro día.También puedes unirte a una reunión ingresando el código que te han compartido.
-    internal static let videoCall200PersonasConDuraciónIlimitada = L10n.tr("Localizable", "Tooltip.Video Call: 200 Personas con duración ilimitada.", fallback: "Crea una nueva reunión o programa para otro día.También puedes unirte a una reunión ingresando el código que te han compartido.")
-    internal enum R {
-      internal enum O {
-        internal enum V {
-          /// Nuestros R.O.V. Drones Submarinos, serán controlados por WalkCamers especialistas. Selecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados. Sumerjete en aguas profundas y graba tus propios videos, con nuestros R.O.V. Drones Submarinos. Podrás usar su brazo robot, para recoger muestras, o manipular objetos. Los equipos van desde un simple R.O.V. para grabar video, hasta equipos de aguas profundas para la industria naval y la investigación científica
-          internal static let underwaterDrone = L10n.tr("Localizable", "Tooltip.R.O.V. Underwater Drone", fallback: "Nuestros R.O.V. Drones Submarinos, serán controlados por WalkCamers especialistas. Selecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados. Sumerjete en aguas profundas y graba tus propios videos, con nuestros R.O.V. Drones Submarinos. Podrás usar su brazo robot, para recoger muestras, o manipular objetos. Los equipos van desde un simple R.O.V. para grabar video, hasta equipos de aguas profundas para la industria naval y la investigación científica")
-        }
-      }
-    }
+    /// Indica la zona a grabar.
+    /// Elige un WalkCamer acorde a tus requerimientos
+    /// Tu WalkCamer aceptará la invitación para iniciar la videollamada.
+    internal static let streetCam = L10n.tr("Localizable", "Tooltip.StreetCam", fallback: "Conéctate con el mundo.\nIndica la zona a grabar.\nElige un WalkCamer acorde a tus requerimientos\nTu WalkCamer aceptará la invitación para iniciar la videollamada.")
+    /// Detecta y visualiza el calor emitido por objetos y personas
+    /// Problemas eléctricos y de aislamiento térmico
+    internal static let thermalCamera = L10n.tr("Localizable", "Tooltip.ThermalCamera", fallback: "Detecta y visualiza el calor emitido por objetos y personas\nProblemas eléctricos y de aislamiento térmico")
+    /// Crea una nueva reunión o programa para otro día.
+    /// También puedes unirte a una reunión ingresando el código que te han compartido.
+    internal static let videoCall = L10n.tr("Localizable", "Tooltip.VideoCall", fallback: "Crea una nueva reunión o programa para otro día.\nTambién puedes unirte a una reunión ingresando el código que te han compartido.")
   }
   internal enum VideocallOnboardingView {
     internal enum Page {
@@ -312,14 +386,14 @@ internal enum L10n {
   }
   internal enum ErrorView {
     internal enum Generic {
-      /// Tentar novamente
-      internal static let buttonTitle = L10n.tr("Localizable", "errorView.generic.buttonTitle", fallback: "Tentar novamente")
-      /// Por algum motivo as informações não carregaram
-      internal static let description = L10n.tr("Localizable", "errorView.generic.description", fallback: "Por algum motivo as informações não carregaram")
+      /// Intentar otra vez
+      internal static let buttonTitle = L10n.tr("Localizable", "errorView.generic.buttonTitle", fallback: "Intentar otra vez")
+      /// Por alguna razón la información no cargó
+      internal static let description = L10n.tr("Localizable", "errorView.generic.description", fallback: "Por alguna razón la información no cargó")
       /// retry
       internal static let icon = L10n.tr("Localizable", "errorView.generic.icon", fallback: "retry")
-      /// Ops! Algo deu errado
-      internal static let message = L10n.tr("Localizable", "errorView.generic.message", fallback: "Ops! Algo deu errado")
+      /// Ops! Algo salió mal
+      internal static let message = L10n.tr("Localizable", "errorView.generic.message", fallback: "Ops! Algo salió mal")
     }
   }
 }
