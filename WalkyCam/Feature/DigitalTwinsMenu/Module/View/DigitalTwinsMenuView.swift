@@ -33,7 +33,7 @@ struct DigitalTwinsMenuView<ViewModel:DigitalTwinsMenuViewModelProtocol, Router:
                 verticalCard(title: "BUSCAR",
                              description: "Localiza tu WalkCamer más cercano.",
                              buttonTitle: "Buscar",
-                             icon: Asset.Icons.link.name,
+                             icon: Asset.Icons.locationWhite.name,
                              action: {
                     router.routeToSearchCammer()
                 })
@@ -93,7 +93,7 @@ struct DigitalTwinsMenuView<ViewModel:DigitalTwinsMenuViewModelProtocol, Router:
         VStack(alignment: .center,
                spacing: Tokens.Size.Spacing.regular) {
             HStack(spacing: Tokens.Size.Spacing.regular) {
-                Image(Asset.Icons.calendar.name)
+                Image(Asset.Icons.joinMeet.name)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 40, height: 40)

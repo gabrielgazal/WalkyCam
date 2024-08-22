@@ -75,6 +75,7 @@ struct RegisterWalkcamerView<ViewModel: RegisterWalkcamerViewModelProtocol, Rout
                        descriptor: OrangeButtonStyleDescriptor(),
                        action: {
                 saveUserPhone()
+                viewModel.saveUserDataToRegistration()
                 router.routeToProfit(registrationData: viewModel.registrationData)
             })
             .disabled(viewModel.isRegisterButtonDisabled())

@@ -96,6 +96,7 @@
 		5621B7092C2EF25400BFD923 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 5621B7082C2EF25400BFD923 /* SocketIO */; };
 		5621B70C2C2EF32100BFD923 /* ChatBotClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621B70B2C2EF32100BFD923 /* ChatBotClient.swift */; };
 		5621B70F2C2F478300BFD923 /* CreateVideoCallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621B70E2C2F478200BFD923 /* CreateVideoCallUseCase.swift */; };
+		5626C3962C74D9B600CC8004 /* WalkcamerRegistrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5626C3952C74D9B600CC8004 /* WalkcamerRegistrationManager.swift */; };
 		5637A8162AD5DD72000586DF /* WalkyCamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5637A8152AD5DD72000586DF /* WalkyCamApp.swift */; };
 		5637A81A2AD5DD73000586DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5637A8192AD5DD73000586DF /* Assets.xcassets */; };
 		56459FA32BFFB4D300776F68 /* SnackBarAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56459F982BFFB4D300776F68 /* SnackBarAssembler.swift */; };
@@ -1174,6 +1175,7 @@
 		5621B6F92C2E605000BFD923 /* UnavailableFeatureRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnavailableFeatureRoute.swift; sourceTree = "<group>"; };
 		5621B70B2C2EF32100BFD923 /* ChatBotClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotClient.swift; sourceTree = "<group>"; };
 		5621B70E2C2F478200BFD923 /* CreateVideoCallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateVideoCallUseCase.swift; sourceTree = "<group>"; };
+		5626C3952C74D9B600CC8004 /* WalkcamerRegistrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkcamerRegistrationManager.swift; sourceTree = "<group>"; };
 		5637A8122AD5DD72000586DF /* WalkyCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkyCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5637A8152AD5DD72000586DF /* WalkyCamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkyCamApp.swift; sourceTree = "<group>"; };
 		5637A8192AD5DD73000586DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -2843,6 +2845,14 @@
 				561853A92C589F5E00CBD687 /* StartScheduleVideocallUseCase.swift */,
 			);
 			path = UseCase;
+			sourceTree = "<group>";
+		};
+		5626C3942C74D9A000CC8004 /* WalkcamerRegistrationManager */ = {
+			isa = PBXGroup;
+			children = (
+				5626C3952C74D9B600CC8004 /* WalkcamerRegistrationManager.swift */,
+			);
+			path = WalkcamerRegistrationManager;
 			sourceTree = "<group>";
 		};
 		5637A8092AD5DD71000586DF = {
@@ -4858,6 +4868,7 @@
 		EA15B5A52AD7067400C03407 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				5626C3942C74D9A000CC8004 /* WalkcamerRegistrationManager */,
 				567CB7502C51563800112F05 /* ServiceInformationManager */,
 				5621B70A2C2EF27000BFD923 /* ChatBot */,
 				EA8EF8CE2B67E11600136D1F /* Persistence */,
@@ -12046,6 +12057,7 @@
 				EA8653792B90FA8800B86A54 /* AIMenuViewModelProtocol.swift in Sources */,
 				5621B7032C2E605100BFD923 /* UnavailableFeatureViewModelProtocol.swift in Sources */,
 				EA86523C2B902E4B00B86A54 /* FunctionMenuViewModel.swift in Sources */,
+				5626C3962C74D9B600CC8004 /* WalkcamerRegistrationManager.swift in Sources */,
 				EAE402002BBAFB0900B1311E /* RobotMenuRoute.swift in Sources */,
 				EAF47C882B839308003F8B86 /* FlightMenuInteractorProtocol.swift in Sources */,
 				EA6083422AFD58A900295069 /* CryptoTabView.swift in Sources */,

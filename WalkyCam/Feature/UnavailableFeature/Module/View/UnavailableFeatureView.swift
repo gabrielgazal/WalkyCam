@@ -25,14 +25,21 @@ struct UnavailableFeatureView<ViewModel: UnavailableFeatureViewModelProtocol, Ro
                 .resizable()
                 .scaledToFit()
                 .frame(width: 100, height: 100)
+                .padding(Tokens.Size.Spacing.small)
+                .background(
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(Color.blanco.opacity(0.8))
+                )
             Text(viewModel.title)
                 .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .bold))
                 .multilineTextAlignment(.center)
+                .foregroundColor(Color.blanco)
             Spacer()
                 .frame(height: 30)
             Text("¡Ups! Parece que esta función aún no está disponible")
                 .font(.projectFont(size: Tokens.Size.Font.xlarge))
                 .multilineTextAlignment(.center)
+                .foregroundColor(Color.blanco)
             Spacer()
             WCUIButton(
                 title: "Ir a Home",
@@ -42,13 +49,14 @@ struct UnavailableFeatureView<ViewModel: UnavailableFeatureViewModelProtocol, Ro
                     router.dismiss()
                 }
             )
+            Spacer()
         }
                .padding(Tokens.Size.Spacing.regular)
                .background(Image(Asset.Fondos.loginFondo.name))
                .ignoresSafeArea()
                .navigation(router)
                .sheet(router)
-               .environment(\.colorScheme, .dark)
+//               .environment(\.colorScheme, .dark)
     }
 }
 
