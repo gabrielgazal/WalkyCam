@@ -17,7 +17,7 @@ public struct UserResponse: Codable, Hashable {
     public let phone: String
     public let birthDate: String
     public let gender: String
-    public let additionalInfo: String
+    public let additionalInfo: String?
     public let isWalkCammer: Bool
     public let profileImage: String
     public let configurations: ConfigurationsResponse

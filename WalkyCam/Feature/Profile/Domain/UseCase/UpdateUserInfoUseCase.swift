@@ -62,7 +62,7 @@ extension UpdateUserInfoUseCase {
                 phone: response.phone,
                 birthDate: response.birthDate,
                 gender: response.gender,
-                additionalInfo: response.additionalInfo,
+                additionalInfo: response.additionalInfo ?? "",
                 isWalkCamer: response.isWalkCammer,
                 configurations: .init(
                     streetcamConfiguration: response.configurations.streetcamConfiguration.onboardingReaded,

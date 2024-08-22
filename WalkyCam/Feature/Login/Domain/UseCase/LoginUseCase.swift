@@ -95,7 +95,7 @@ extension LoginOutput {
             phone: phone,
             birthDate: birthDate,
             gender: gender,
-            additionalInfo: additionalInfo,
+            additionalInfo: additionalInfo ?? "",
             isWalkCamer: isWalkCammer,
             configurations: .init(
                 streetcamConfiguration: configurations.streetcamConfiguration,
