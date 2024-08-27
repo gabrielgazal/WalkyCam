@@ -13,6 +13,7 @@ enum AuthRouter {
     case register(name: String, lastName: String, userName: String, email: String, password: String)
     case verifyByEmail(email: String, verificationCode: String)
     case updateInfo(userId: String, name: String?, lastName: String?, gender: String?, cellphone: String?, address: String?, additionalInfo: String?, birthdate: String?)
+    case getUserFiles(userId: String)
 }
 
 extension AuthRouter: TargetType {
@@ -30,6 +31,8 @@ extension AuthRouter: TargetType {
             return "user/verify-email/\(email)/\(verificationCode)"
         case .updateInfo:
             return "user/update"
+        case .getUserFiles:
+            return "user/get-files"
         }
     }
     
@@ -37,7 +40,7 @@ extension AuthRouter: TargetType {
         switch self {
         case .login, .register:
             return .post
-        case .verifyByEmail:
+        case .verifyByEmail, .getUserFiles:
             return .get
         case .updateInfo:
             return .put
@@ -63,6 +66,8 @@ extension AuthRouter: TargetType {
                 additionalInfo: additionalInfo,
                 birthdate: birthdate
             )
+        case let .getUserFiles(userId):
+            return getUserFiles(userId: userId)
         }
     }
     
@@ -109,6 +114,17 @@ extension AuthRouter: TargetType {
             "address": address ?? "",
             "about_me": additionalInfo ?? "",
             "birth_date": birthdate ?? ""
+        ] as [String:Any]
+        
+        return .requestParameters(
+            parameters: parameters,
+            encoding: JSONEncoding.default
+        )
+    }
+    
+    private func getUserFiles(userId: String) -> Task {
+        let parameters = [
+            "id_user": userId
         ] as [String:Any]
         
         return .requestParameters(

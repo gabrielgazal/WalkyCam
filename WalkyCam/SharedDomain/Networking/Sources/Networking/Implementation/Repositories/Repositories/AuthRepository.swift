@@ -82,4 +82,11 @@ final class AuthRepository: AuthRepositoryProtocol {
                 completion(result.mapToRepositoryResult(with: self.requestHandler))
             }
     }
+    
+    func getUserFiles(userId: String, completion: @escaping (GetUserFilesResponse) -> Void) {
+        service.getUserFiles(
+            userId: userId) { result in
+                completion(result.mapToRepositoryResult(with: self.requestHandler))
+            }
+    }
 }

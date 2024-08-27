@@ -33,4 +33,9 @@ protocol AuthServiceProtocol {
         birthdate: String?,
         completion: @escaping Completion
     )
+    
+    func getUserFiles(
+        userId: String,
+        completion: @escaping Completion
+    )
 }

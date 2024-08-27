@@ -78,4 +78,11 @@ final class AuthService: AuthServiceProtocol {
             completion: completion
         )
     }
+    
+    func getUserFiles(userId: String, completion: @escaping Completion) {
+        provider.request(
+            .getUserFiles(userId: userId),
+            completion: completion
+        )
+    }
 }

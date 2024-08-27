@@ -19,6 +19,7 @@ final class WebViewModel: NSObject, ObservableObject {
         webView.scrollView.showsVerticalScrollIndicator = false
         webView.scrollView.showsHorizontalScrollIndicator = false
         webView.configuration.preferences.javaScriptCanOpenWindowsAutomatically = true
+        webView.configuration.allowsInlineMediaPlayback = true
         webView.setPullToRefresh()
         self.webView = webView
         self.disallowedPaths = disallowedPaths.reduce(into: [:]) { result, keyValue in
