@@ -7,9 +7,9 @@ struct GalleryPhotosView<ViewModel: GalleryPhotosViewModelProtocol, Router: Gall
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
 
-    var notificationsGroupedByDate: [Date: [GalleryPhotosModel]] {
+    var notificationsGroupedByDate: [Date: [GalleryItemModel]] {
         Dictionary(grouping: viewModel.photosData) { item in
-            let convertedDate = Calendar.current.startOfDay(for: item.date)
+            let convertedDate = Calendar.current.startOfDay(for: item.creationDate)
             return convertedDate
         }
     }
@@ -39,11 +39,12 @@ struct GalleryPhotosView<ViewModel: GalleryPhotosViewModelProtocol, Router: Gall
                 ForEach(headers, id: \.self) { header in
                     Section {
                         LazyVGrid(columns: otherFunctionsColumns,
-                                  spacing: Tokens.Size.Spacing.small) {
+                                  spacing: Tokens.Size.Spacing.regular) {
                             ForEach(notificationsGroupedByDate[header]!, id: \.self) { item in
-                                GalleryItemView(image: item.image)
+                                GalleryItemView(image: item.viewPath)
                             }
                         }
+                                  .padding(.horizontal, Tokens.Size.Spacing.regular)
                     } header: {
                         HStack {
                             Text(formatDateInRelationToToday(header))
@@ -75,7 +76,7 @@ struct GalleryPhotosView<ViewModel: GalleryPhotosViewModelProtocol, Router: Gall
 struct GalleryPhotosView_Previews: PreviewProvider {
     static var previews: some View {
     GalleryPhotosView(
-            viewModel: GalleryPhotosViewModel(),
+        viewModel: GalleryPhotosViewModel(photosData: []),
             router: GalleryPhotosRouter(isPresented: .constant(false))
         )
     }

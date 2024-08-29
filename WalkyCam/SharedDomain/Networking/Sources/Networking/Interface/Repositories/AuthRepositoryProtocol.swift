@@ -13,7 +13,7 @@ public protocol AuthRepositoryProtocol {
     typealias VerifyByEmailResult = Result<UserResponse, RepositoryError>
     typealias UserPlanResponse = Result<PlanResponse, RepositoryError>
     typealias UpdateUserInfoResponse = Result<UserResponse, RepositoryError>
-    typealias GetUserFilesResponse = Result<String, RepositoryError>
+    typealias GetUserFilesResponse = Result<[UserFileReponse], RepositoryError>
 
     func login(userName: String,
                password: String,

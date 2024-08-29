@@ -5,25 +5,13 @@ final class GalleryPhotosViewModel: GalleryPhotosViewModelProtocol {
     // MARK: - Dependencies
 
     private let interactor: GalleryPhotosInteractorProtocol
-    @Published var photosData: [GalleryPhotosModel] = []
+    @Published var photosData: [GalleryItemModel]
 
     // MARK: - Initialization
 
-    init(interactor: GalleryPhotosInteractorProtocol = GalleryPhotosInteractor()) {
+    init(interactor: GalleryPhotosInteractorProtocol = GalleryPhotosInteractor(),
+         photosData: [GalleryItemModel]) {
         self.interactor = interactor
-        initializePhotos()
-    }
-
-    // MARK: - Private Methods
-
-    private func initializePhotos() {
-        photosData = [
-            .init(image: Asset.Ads.beach.name, date: .init()),
-            .init(image: Asset.Ads.iphone.name, date: .init()),
-            .init(image: Asset.Ads.planeTravel.name, date: .distantPast),
-            .init(image: Asset.Ads.search.name, date: .distantPast),
-            .init(image: Asset.Ads.beach.name, date: .init()),
-            .init(image: Asset.Ads.iphone.name, date: .init())
-        ]
+        self.photosData = photosData
     }
 }

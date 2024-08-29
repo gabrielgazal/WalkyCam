@@ -31,8 +31,8 @@ extension AuthRouter: TargetType {
             return "user/verify-email/\(email)/\(verificationCode)"
         case .updateInfo:
             return "user/update"
-        case .getUserFiles:
-            return "user/get-files"
+        case let .getUserFiles(userId):
+            return "user/get-files/\(userId)"
         }
     }
     
@@ -66,8 +66,8 @@ extension AuthRouter: TargetType {
                 additionalInfo: additionalInfo,
                 birthdate: birthdate
             )
-        case let .getUserFiles(userId):
-            return getUserFiles(userId: userId)
+        case .getUserFiles:
+            return .requestPlain
         }
     }
     
@@ -114,17 +114,6 @@ extension AuthRouter: TargetType {
             "address": address ?? "",
             "about_me": additionalInfo ?? "",
             "birth_date": birthdate ?? ""
-        ] as [String:Any]
-        
-        return .requestParameters(
-            parameters: parameters,
-            encoding: JSONEncoding.default
-        )
-    }
-    
-    private func getUserFiles(userId: String) -> Task {
-        let parameters = [
-            "id_user": userId
         ] as [String:Any]
         
         return .requestParameters(
