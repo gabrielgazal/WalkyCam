@@ -246,7 +246,6 @@
 		56AF275D2BDAE00800DADC29 /* RegisterWalkcamerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF274F2BDAE00800DADC29 /* RegisterWalkcamerView.swift */; };
 		56AF275E2BDAE00800DADC29 /* RegisterWalkcamerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF27512BDAE00800DADC29 /* RegisterWalkcamerViewModel.swift */; };
 		56AF275F2BDAE00800DADC29 /* RegisterWalkcamerViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF27522BDAE00800DADC29 /* RegisterWalkcamerViewModelProtocol.swift */; };
-		56B448752BFED03A0007D872 /* AppDelegate+DJI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B448742BFED0390007D872 /* AppDelegate+DJI.swift */; };
 		56B3E46B2C3D8443004A87FA /* ScheduleVideoCallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B3E4562C3D8442004A87FA /* ScheduleVideoCallModel.swift */; };
 		56B3E46C2C3D8443004A87FA /* ScheduleVideoCallAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B3E4592C3D8442004A87FA /* ScheduleVideoCallAssembler.swift */; };
 		56B3E46D2C3D8443004A87FA /* ScheduleVideoCallAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B3E45A2C3D8442004A87FA /* ScheduleVideoCallAssemblerProtocol.swift */; };
@@ -270,6 +269,7 @@
 		56B3E49B2C3DA041004A87FA /* VideocallTimeTabAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B3E48D2C3DA041004A87FA /* VideocallTimeTabAssemblerProtocol.swift */; };
 		56B3E49C2C3DA041004A87FA /* VideocallTimeTabRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B3E48F2C3DA041004A87FA /* VideocallTimeTabRoute.swift */; };
 		56B3E49E2C3DAD65004A87FA /* HeaderCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B3E49D2C3DAD65004A87FA /* HeaderCounterView.swift */; };
+		56B448752BFED03A0007D872 /* AppDelegate+DJI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B448742BFED0390007D872 /* AppDelegate+DJI.swift */; };
 		56DADB202AD5EA7200710618 /* AppNavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB1F2AD5EA7200710618 /* AppNavigatorProtocol.swift */; };
 		56DADB222AD5EAA400710618 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB212AD5EAA400710618 /* AppNavigator.swift */; };
 		56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB232AD5EB3800710618 /* AppDelegate.swift */; };
@@ -380,18 +380,6 @@
 		EA172B252AF06EF600EB1514 /* StartupInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA172B192AF06EF600EB1514 /* StartupInteractorProtocol.swift */; };
 		EA172B262AF06EF600EB1514 /* StartupRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA172B1B2AF06EF600EB1514 /* StartupRouter.swift */; };
 		EA172B272AF06EF600EB1514 /* StartupRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA172B1C2AF06EF600EB1514 /* StartupRouterProtocol.swift */; };
-		EA1FD19C2B1E8F91000E583D /* JitsiMeetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1FD19B2B1E8F91000E583D /* JitsiMeetView.swift */; };
-		EA1FD1B92B1E932F000E583D /* VideoCallRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1FD1A62B1E932E000E583D /* VideoCallRoomViewModel.swift */; };
-		EA1FD1BA2B1E932F000E583D /* VideoCallRoomViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1FD1A72B1E932E000E583D /* VideoCallRoomViewModelProtocol.swift */; };
-		EA1FD1BB2B1E932F000E583D /* VideoCallRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1FD1A92B1E932E000E583D /* VideoCallRoomView.swift */; };
-		EA1FD1BC2B1E932F000E583D /* VideoCallRoomInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1FD1AB2B1E932E000E583D /* VideoCallRoomInteractor.swift */; };
-		EA1FD1BD2B1E932F000E583D /* VideoCallRoomInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1FD1AC2B1E932E000E583D /* VideoCallRoomInteractorProtocol.swift */; };
-		EA1FD1BE2B1E932F000E583D /* VideoCallRoomRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1FD1AE2B1E932E000E583D /* VideoCallRoomRouter.swift */; };
-		EA1FD1BF2B1E932F000E583D /* VideoCallRoomRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1FD1AF2B1E932E000E583D /* VideoCallRoomRouterProtocol.swift */; };
-		EA1FD1C02B1E932F000E583D /* VideoCallRoomRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1FD1B22B1E932F000E583D /* VideoCallRoomRoute.swift */; };
-		EA1FD1C12B1E932F000E583D /* VideoCallRoomAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1FD1B42B1E932F000E583D /* VideoCallRoomAssemblerProtocol.swift */; };
-		EA1FD1C22B1E932F000E583D /* VideoCallRoomAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1FD1B52B1E932F000E583D /* VideoCallRoomAssembler.swift */; };
-		EA1FD1C32B1E932F000E583D /* VideoCallRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1FD1B82B1E932F000E583D /* VideoCallRoomModel.swift */; };
 		EA20A4E82B87C3B4006662FA /* Scan3DOnboardingViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A4D52B87C3B0006662FA /* Scan3DOnboardingViewModelProtocol.swift */; };
 		EA20A4E92B87C3B4006662FA /* Scan3DOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A4D62B87C3B0006662FA /* Scan3DOnboardingViewModel.swift */; };
 		EA20A4EA2B87C3B4006662FA /* Scan3DOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A4D82B87C3B0006662FA /* Scan3DOnboardingView.swift */; };
@@ -1344,7 +1332,6 @@
 		56AF274F2BDAE00800DADC29 /* RegisterWalkcamerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWalkcamerView.swift; sourceTree = "<group>"; };
 		56AF27512BDAE00800DADC29 /* RegisterWalkcamerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWalkcamerViewModel.swift; sourceTree = "<group>"; };
 		56AF27522BDAE00800DADC29 /* RegisterWalkcamerViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWalkcamerViewModelProtocol.swift; sourceTree = "<group>"; };
-		56B448742BFED0390007D872 /* AppDelegate+DJI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+DJI.swift"; sourceTree = "<group>"; };
 		56B3E4562C3D8442004A87FA /* ScheduleVideoCallModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVideoCallModel.swift; sourceTree = "<group>"; };
 		56B3E4592C3D8442004A87FA /* ScheduleVideoCallAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVideoCallAssembler.swift; sourceTree = "<group>"; };
 		56B3E45A2C3D8442004A87FA /* ScheduleVideoCallAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVideoCallAssemblerProtocol.swift; sourceTree = "<group>"; };
@@ -1368,6 +1355,7 @@
 		56B3E48D2C3DA041004A87FA /* VideocallTimeTabAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideocallTimeTabAssemblerProtocol.swift; sourceTree = "<group>"; };
 		56B3E48F2C3DA041004A87FA /* VideocallTimeTabRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideocallTimeTabRoute.swift; sourceTree = "<group>"; };
 		56B3E49D2C3DAD65004A87FA /* HeaderCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCounterView.swift; sourceTree = "<group>"; };
+		56B448742BFED0390007D872 /* AppDelegate+DJI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+DJI.swift"; sourceTree = "<group>"; };
 		56DADB1F2AD5EA7200710618 /* AppNavigatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigatorProtocol.swift; sourceTree = "<group>"; };
 		56DADB212AD5EAA400710618 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		56DADB232AD5EB3800710618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -1481,18 +1469,6 @@
 		EA172B192AF06EF600EB1514 /* StartupInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupInteractorProtocol.swift; sourceTree = "<group>"; };
 		EA172B1B2AF06EF600EB1514 /* StartupRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupRouter.swift; sourceTree = "<group>"; };
 		EA172B1C2AF06EF600EB1514 /* StartupRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupRouterProtocol.swift; sourceTree = "<group>"; };
-		EA1FD19B2B1E8F91000E583D /* JitsiMeetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JitsiMeetView.swift; sourceTree = "<group>"; };
-		EA1FD1A62B1E932E000E583D /* VideoCallRoomViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallRoomViewModel.swift; sourceTree = "<group>"; };
-		EA1FD1A72B1E932E000E583D /* VideoCallRoomViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallRoomViewModelProtocol.swift; sourceTree = "<group>"; };
-		EA1FD1A92B1E932E000E583D /* VideoCallRoomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallRoomView.swift; sourceTree = "<group>"; };
-		EA1FD1AB2B1E932E000E583D /* VideoCallRoomInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallRoomInteractor.swift; sourceTree = "<group>"; };
-		EA1FD1AC2B1E932E000E583D /* VideoCallRoomInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallRoomInteractorProtocol.swift; sourceTree = "<group>"; };
-		EA1FD1AE2B1E932E000E583D /* VideoCallRoomRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallRoomRouter.swift; sourceTree = "<group>"; };
-		EA1FD1AF2B1E932E000E583D /* VideoCallRoomRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallRoomRouterProtocol.swift; sourceTree = "<group>"; };
-		EA1FD1B22B1E932F000E583D /* VideoCallRoomRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallRoomRoute.swift; sourceTree = "<group>"; };
-		EA1FD1B42B1E932F000E583D /* VideoCallRoomAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallRoomAssemblerProtocol.swift; sourceTree = "<group>"; };
-		EA1FD1B52B1E932F000E583D /* VideoCallRoomAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallRoomAssembler.swift; sourceTree = "<group>"; };
-		EA1FD1B82B1E932F000E583D /* VideoCallRoomModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallRoomModel.swift; sourceTree = "<group>"; };
 		EA20A4D52B87C3B0006662FA /* Scan3DOnboardingViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DOnboardingViewModelProtocol.swift; sourceTree = "<group>"; };
 		EA20A4D62B87C3B0006662FA /* Scan3DOnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DOnboardingViewModel.swift; sourceTree = "<group>"; };
 		EA20A4D82B87C3B0006662FA /* Scan3DOnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan3DOnboardingView.swift; sourceTree = "<group>"; };
@@ -4934,7 +4910,6 @@
 				56FEECD32B5C7FEA003FA686 /* SearchWalkyCammer */,
 				56A552392B2F6E16006B1B17 /* StreetCamMenu */,
 				56A552102B2F5FE7006B1B17 /* WalkyCamerOnboarding */,
-				EA1FD19D2B1E930C000E583D /* VideoCallRoom */,
 				EADB5C8E2B190818005863E1 /* VideoCall */,
 				EA50A0682B0BC7590042B238 /* PlansPages */,
 				EA7219782B0560FD00BE2D93 /* WalkyBot */,
@@ -5045,7 +5020,6 @@
 				5621B70A2C2EF27000BFD923 /* ChatBot */,
 				EA8EF8CE2B67E11600136D1F /* Persistence */,
 				EA890A272B61EDCE00FC369B /* DependencyStore */,
-				EA1FD19A2B1E8F83000E583D /* Jitsi */,
 				EA5E1D652AD70B8100738A8F /* DesignSystem */,
 				EA15B5BA2AD7079600C03407 /* ViewModel */,
 				EA15B5B72AD7077100C03407 /*  UseCase */,
@@ -5295,112 +5269,6 @@
 				EA172B1C2AF06EF600EB1514 /* StartupRouterProtocol.swift */,
 			);
 			path = Router;
-			sourceTree = "<group>";
-		};
-		EA1FD19A2B1E8F83000E583D /* Jitsi */ = {
-			isa = PBXGroup;
-			children = (
-				EA1FD19B2B1E8F91000E583D /* JitsiMeetView.swift */,
-			);
-			path = Jitsi;
-			sourceTree = "<group>";
-		};
-		EA1FD19D2B1E930C000E583D /* VideoCallRoom */ = {
-			isa = PBXGroup;
-			children = (
-				EA1FD1B02B1E932E000E583D /* Configuration */,
-				EA1FD1B62B1E932F000E583D /* Domain */,
-				EA1FD1A42B1E932E000E583D /* Module */,
-			);
-			path = VideoCallRoom;
-			sourceTree = "<group>";
-		};
-		EA1FD1A42B1E932E000E583D /* Module */ = {
-			isa = PBXGroup;
-			children = (
-				EA1FD1A52B1E932E000E583D /* ViewModel */,
-				EA1FD1A82B1E932E000E583D /* View */,
-				EA1FD1AA2B1E932E000E583D /* Interactor */,
-				EA1FD1AD2B1E932E000E583D /* Router */,
-			);
-			path = Module;
-			sourceTree = "<group>";
-		};
-		EA1FD1A52B1E932E000E583D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				EA1FD1A62B1E932E000E583D /* VideoCallRoomViewModel.swift */,
-				EA1FD1A72B1E932E000E583D /* VideoCallRoomViewModelProtocol.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		EA1FD1A82B1E932E000E583D /* View */ = {
-			isa = PBXGroup;
-			children = (
-				EA1FD1A92B1E932E000E583D /* VideoCallRoomView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		EA1FD1AA2B1E932E000E583D /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				EA1FD1AB2B1E932E000E583D /* VideoCallRoomInteractor.swift */,
-				EA1FD1AC2B1E932E000E583D /* VideoCallRoomInteractorProtocol.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		EA1FD1AD2B1E932E000E583D /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				EA1FD1AE2B1E932E000E583D /* VideoCallRoomRouter.swift */,
-				EA1FD1AF2B1E932E000E583D /* VideoCallRoomRouterProtocol.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		EA1FD1B02B1E932E000E583D /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				EA1FD1B12B1E932F000E583D /* Route */,
-				EA1FD1B32B1E932F000E583D /* Assembler */,
-			);
-			path = Configuration;
-			sourceTree = "<group>";
-		};
-		EA1FD1B12B1E932F000E583D /* Route */ = {
-			isa = PBXGroup;
-			children = (
-				EA1FD1B22B1E932F000E583D /* VideoCallRoomRoute.swift */,
-			);
-			path = Route;
-			sourceTree = "<group>";
-		};
-		EA1FD1B32B1E932F000E583D /* Assembler */ = {
-			isa = PBXGroup;
-			children = (
-				EA1FD1B42B1E932F000E583D /* VideoCallRoomAssemblerProtocol.swift */,
-				EA1FD1B52B1E932F000E583D /* VideoCallRoomAssembler.swift */,
-			);
-			path = Assembler;
-			sourceTree = "<group>";
-		};
-		EA1FD1B62B1E932F000E583D /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				EA1FD1B72B1E932F000E583D /* Model */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		EA1FD1B72B1E932F000E583D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				EA1FD1B82B1E932F000E583D /* VideoCallRoomModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		EA20A4CC2B87C35B006662FA /* Scan3DOnboarding */ = {
@@ -11509,7 +11377,6 @@
 				EAE401B02BBA3D6100B1311E /* DigitalTwinsOnboardingInteractor.swift in Sources */,
 				EA4165412AE706C6008CE66A /* NotificationsViewModelProtocol.swift in Sources */,
 				EAF47C142B830C80003F8B86 /* WalkyCammerListAssemblerProtocol.swift in Sources */,
-				EA1FD1BF2B1E932F000E583D /* VideoCallRoomRouterProtocol.swift in Sources */,
 				EA87DE242BACBAF4001CB5E6 /* SubscriptionInput.swift in Sources */,
 				EA15B5AC2AD706DB00C03407 /* BottomSheetModifier.swift in Sources */,
 				EA282E552AE952F700B90920 /* ProfileViewModelProtocol.swift in Sources */,
@@ -11521,7 +11388,6 @@
 				5604D0D92C1157C60069C0D6 /* DroneConnectionRouterProtocol.swift in Sources */,
 				EA94A52D2B7160EF00EC3037 /* ServiceDetailsAssembler.swift in Sources */,
 				561FC8B52B5C66F7005B6006 /* WebView.swift in Sources */,
-				EA1FD19C2B1E8F91000E583D /* JitsiMeetView.swift in Sources */,
 				EA60838C2B01CD0A00295069 /* ShopTabAssembler.swift in Sources */,
 				EA50A08A2B0BC77F0042B238 /* PlansPagesRouterProtocol.swift in Sources */,
 				EA20A4EC2B87C3B4006662FA /* Scan3DOnboardingInteractorProtocol.swift in Sources */,
@@ -11696,7 +11562,6 @@
 				EA5A88052B68039400BBB7F9 /* LoginInput.swift in Sources */,
 				56A6BE972BE2EFC7007EBF13 /* IdentityUploadRouter.swift in Sources */,
 				EAD0486B2AE22C530096E6AB /* RegistrationPlansViewModel.swift in Sources */,
-				EA1FD1BE2B1E932F000E583D /* VideoCallRoomRouter.swift in Sources */,
 				56A5525C2B2F6E3D006B1B17 /* StreetCamMenuInteractor.swift in Sources */,
 				EA4A1C402B8788DB00B5FC59 /* SpecialistNotifiedViewModel.swift in Sources */,
 				EAF47BF22B83099F003F8B86 /* MapTabInteractor.swift in Sources */,
@@ -11706,7 +11571,6 @@
 				EA6083B32B01D9E100295069 /* GalleryAssembler.swift in Sources */,
 				EA94A5352B7160EF00EC3037 /* ServiceDetailsRouterProtocol.swift in Sources */,
 				EA2F93FC2B62CED700E1C146 /* LoginInteractor.swift in Sources */,
-				EA1FD1BD2B1E932F000E583D /* VideoCallRoomInteractorProtocol.swift in Sources */,
 				EAF47B4D2B82F7EA003F8B86 /* VideocallOnboardingAssembler.swift in Sources */,
 				EACFDF1A2BA7EF3E00B08990 /* UnreleasedFeatureInteractorProtocol.swift in Sources */,
 				EAF47B532B82F7EA003F8B86 /* VideocallOnboardingInteractorProtocol.swift in Sources */,
@@ -11893,7 +11757,6 @@
 				56459FA82BFFB4D300776F68 /* SnackBarView.swift in Sources */,
 				EA4A1C642B87909F00B5FC59 /* ExternalAssistantViewModel.swift in Sources */,
 				EA282E592AE952F700B90920 /* ProfileInteractor.swift in Sources */,
-				EA1FD1BC2B1E932F000E583D /* VideoCallRoomInteractor.swift in Sources */,
 				EA2C4C1F2B7E5C4300F1EE26 /* DroneOnboardingModel.swift in Sources */,
 				EA20A55F2B87D35B006662FA /* ShareSheetRoute.swift in Sources */,
 				EA20A4F22B87C3B5006662FA /* Scan3DOnboardingModel.swift in Sources */,
@@ -11976,7 +11839,6 @@
 				EAF47B7B2B82FCE8003F8B86 /* BookWalkycamerRouter.swift in Sources */,
 				EA20A5192B87C913006662FA /* Scan3DMenuInteractorProtocol.swift in Sources */,
 				EA282E602AE9A10600B90920 /* ImageMock.swift in Sources */,
-				EA1FD1C22B1E932F000E583D /* VideoCallRoomAssembler.swift in Sources */,
 				56A552332B2F6135006B1B17 /* WalkyCamerOnboardingInteractorProtocol.swift in Sources */,
 				EAE401D52BBA452900B1311E /* DigitalTwinsMenuViewModel.swift in Sources */,
 				EA8EF8DB2B67E24400136D1F /* KeychainProtocol.swift in Sources */,
@@ -12059,7 +11921,6 @@
 				EA6083E22B01DBE000295069 /* GalleryPhotosAssembler.swift in Sources */,
 				EA910F932ADA06F500584B98 /* RegistrationInteractorProtocol.swift in Sources */,
 				EAE401AB2BBA3D6100B1311E /* DigitalTwinsOnboardingAssemblerProtocol.swift in Sources */,
-				EA1FD1BA2B1E932F000E583D /* VideoCallRoomViewModelProtocol.swift in Sources */,
 				EA5E1D842AD7183700738A8F /* RoundedCornerShape.swift in Sources */,
 				56459FA62BFFB4D300776F68 /* SnackBarRouter.swift in Sources */,
 				EA282EDA2AEB56B800B90920 /* FunctionData.swift in Sources */,
@@ -12123,7 +11984,6 @@
 				EAF47C3F2B838D74003F8B86 /* DroneMenuView.swift in Sources */,
 				EA57A7842B6C0A75006247DD /* CammerItemView.swift in Sources */,
 				EAF47B552B82F7EA003F8B86 /* VideocallOnboardingRouterProtocol.swift in Sources */,
-				EA1FD1C12B1E932F000E583D /* VideoCallRoomAssemblerProtocol.swift in Sources */,
 				EA172B222AF06EF600EB1514 /* StartupViewModelProtocol.swift in Sources */,
 				56B448752BFED03A0007D872 /* AppDelegate+DJI.swift in Sources */,
 				EA4A1C1B2B87799100B5FC59 /* AvailableAssistantsRouterProtocol.swift in Sources */,
@@ -12362,7 +12222,6 @@
 				56FEECF32B5C802C003FA686 /* SearchWalkyCammerViewModel.swift in Sources */,
 				561AA6EB2BE3A6B500393CEF /* FeatureInformationAssembler.swift in Sources */,
 				56F3D4682C16B8EA008CFE1B /* DroneDefaultLayoutViewController.swift in Sources */,
-				EA1FD1B92B1E932F000E583D /* VideoCallRoomViewModel.swift in Sources */,
 				EA15B5A12AD6E44D00C03407 /* LoginAssembler.swift in Sources */,
 				EA87DE222BACBAB1001CB5E6 /* CreateSubscriptionUseCase.swift in Sources */,
 				561D83C42BE916D70045C540 /* AvailabilityTabViewModel.swift in Sources */,
@@ -12373,7 +12232,6 @@
 				EADB5CA52B190819005863E1 /* VideoCallAssembler.swift in Sources */,
 				EA6083672B01981800295069 /* CryptoDetailsInteractorProtocol.swift in Sources */,
 				EA4A1C6D2B87909F00B5FC59 /* ExternalAssistantAssemblerProtocol.swift in Sources */,
-				EA1FD1C32B1E932F000E583D /* VideoCallRoomModel.swift in Sources */,
 				5604D0D82C1157C60069C0D6 /* DroneConnectionRouter.swift in Sources */,
 				561AA6F32BE3A6B500393CEF /* FeatureInformationViewModel.swift in Sources */,
 				EA57A7A32B6C1558006247DD /* CammerDetailsView.swift in Sources */,
@@ -12391,7 +12249,6 @@
 				EA0E40C52AF70E86002B7437 /* CashWalletAssembler.swift in Sources */,
 				56F8AE232C247BE000EC7D4F /* IOTSensorsAssembler.swift in Sources */,
 				EA8652B52B90DA9600B86A54 /* 3DPrintOnboardingViewModelProtocol.swift in Sources */,
-				EA1FD1BB2B1E932F000E583D /* VideoCallRoomView.swift in Sources */,
 				567CB7522C51564C00112F05 /* ServiceInformationManager.swift in Sources */,
 				EA910F6B2AD9CCF500584B98 /* PageControl.swift in Sources */,
 				EA2C4C2B2B7E5C9500F1EE26 /* DroneOnboardingPageView.swift in Sources */,
@@ -12430,7 +12287,6 @@
 				EAF47BC62B8306E9003F8B86 /* TimeTabViewModelProtocol.swift in Sources */,
 				EA8653062B90E0FB00B86A54 /* LidarOnboardingRouterProtocol.swift in Sources */,
 				EA910F3C2AD982F300584B98 /* SecureTextInputView.swift in Sources */,
-				EA1FD1C02B1E932F000E583D /* VideoCallRoomRoute.swift in Sources */,
 				EA910FA42ADC470A00584B98 /* WCTabBarView.swift in Sources */,
 				561AA6CB2BE30A9900393CEF /* FeatureSelectionRoute.swift in Sources */,
 				561FC8C82B5C6854005B6006 /* ErrorView.swift in Sources */,

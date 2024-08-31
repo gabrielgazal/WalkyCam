@@ -2,24 +2,6 @@ PODS:
   - DJI-SDK-iOS (4.16.2)
   - DJI-UXSDK-iOS (4.16.2)
   - DJIWidget (1.6.8)
-  - Giphy (2.1.20):
-    - libwebp
-  - JitsiMeetSDK (8.6.2):
-    - Giphy (= 2.1.20)
-    - JitsiWebRTC (~> 111.0)
-  - JitsiWebRTC (111.0.2)
-  - libwebp (1.3.2):
-    - libwebp/demux (= 1.3.2)
-    - libwebp/mux (= 1.3.2)
-    - libwebp/sharpyuv (= 1.3.2)
-    - libwebp/webp (= 1.3.2)
-  - libwebp/demux (1.3.2):
-    - libwebp/webp
-  - libwebp/mux (1.3.2):
-    - libwebp/demux
-  - libwebp/sharpyuv (1.3.2)
-  - libwebp/webp (1.3.2):
-    - libwebp/sharpyuv
   - MapboxCommon (24.3.1)
   - MapboxCoreMaps (11.3.0):
     - MapboxCommon (~> 24.3)
@@ -33,7 +15,6 @@ DEPENDENCIES:
   - DJI-SDK-iOS
   - DJI-UXSDK-iOS
   - DJIWidget
-  - JitsiMeetSDK
   - MapboxMaps (= 11.3.0)
 
 SPEC REPOS:
@@ -41,10 +22,6 @@ SPEC REPOS:
     - DJI-SDK-iOS
     - DJI-UXSDK-iOS
     - DJIWidget
-    - Giphy
-    - JitsiMeetSDK
-    - JitsiWebRTC
-    - libwebp
     - MapboxCommon
     - MapboxCoreMaps
     - MapboxMaps
@@ -54,15 +31,11 @@ SPEC CHECKSUMS:
   DJI-SDK-iOS: 44308a021c3b95a912be52c4e7a8e0a27e5434f5
   DJI-UXSDK-iOS: 8a9db4bda9fcc38ccf9861fb7d7ba30d44c7791c
   DJIWidget: 9d92abb52888cd6296717c93feacd8a703bf678a
-  Giphy: b6d5087521d251bb8c99cdc0eb07bbdf86d142d5
-  JitsiMeetSDK: 1f8369f2f30f5c9b9a3360a1b99fef5dc3bc7aa2
-  JitsiWebRTC: 80f62908fcf2a1160e0d14b584323fb6e6be630b
-  libwebp: 1786c9f4ff8a279e4dac1e8f385004d5fc253009
   MapboxCommon: e6d0d15f1e34278e21bae28bdc548d378757b51e
   MapboxCoreMaps: 0e3eab0bd5787e833d48261fa1d01f356d6c4ad8
   MapboxMaps: 5aba2ba70a85d08e0ea00ad011ca3d2965e69a59
   Turf: aa2ede4298009639d10db36aba1a7ebaad072a5e
 
-PODFILE CHECKSUM: c16deb470ded7b3ae8af478dfd8c1f9d918eb55c
+PODFILE CHECKSUM: 8f18c907065c0ff9b6c2917197d6891dc63f8157
 
 COCOAPODS: 1.14.3
