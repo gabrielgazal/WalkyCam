@@ -10,7 +10,8 @@ final class SearchWalkyCammerAssembler: SearchWalkyCammerAssemblerProtocol {
         let interactor = SearchWalkyCammerInteractor(
             useCases: .init()
         )
-        let viewModel = SearchWalkyCammerViewModel(interactor: interactor)
+        let viewModel = SearchWalkyCammerViewModel(interactor: interactor, 
+                                                   router: router)
         let view = SearchWalkyCammerView(viewModel: viewModel, router: router)
 
         return view

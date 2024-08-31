@@ -12,8 +12,16 @@ final class ServiceDetailsRouter: Router, ServiceDetailsRouterProtocol {
     
     // MARK: - Public API
 
-    func routeToHome() {
-        appNavigator.view = TabBarRoute(isPresented: .constant(false)).build()
+    func routeToConfirmation() {
+        navigateTo(
+            ServiceConfirmationRoute(isPresented: isNavigating)
+        )
+    }
+    
+    func routeToPlans() {
+        navigateTo(
+         PlansPagesRoute(isPresented: isNavigating, currentPage: 3)
+        )
     }
 }
 

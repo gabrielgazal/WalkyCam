@@ -1,5 +1,6 @@
 import SwiftUI
 
 protocol TimeTabViewModelProtocol: ViewModelProtocol {
-    func someAction()
+    func updateSelectedDate(_ date: Date)
+    func updateEndTime(_ date: Date)
 }

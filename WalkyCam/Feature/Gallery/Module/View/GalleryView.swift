@@ -25,11 +25,20 @@ struct GalleryView<ViewModel: GalleryViewModelProtocol, Router: GalleryRouterPro
                 Spacer()
             }
             .padding(.horizontal, Tokens.Size.Spacing.regular)
-            WCTopBarContainerView(
-                topBarItems: viewModel.tabBarItems,
-                selection: $viewModel.tabSelection
-            )
-            .environmentObject(viewModel)
+            AsyncDataView(viewModel.asyncTabBarItems) { tabBarItems in
+                WCTopBarContainerView(
+                    topBarItems: tabBarItems,
+                    selection: $viewModel.tabSelection
+                )
+                .environmentObject(viewModel)
+            } errorAction: {
+                Task {
+                    await viewModel.initializeTabs()
+                }
+            }
+        }
+        .task {
+            await viewModel.initializeTabs()
         }
     }
 }
@@ -37,7 +46,13 @@ struct GalleryView<ViewModel: GalleryViewModelProtocol, Router: GalleryRouterPro
 struct GalleryView_Previews: PreviewProvider {
     static var previews: some View {
     GalleryView(
-            viewModel: GalleryViewModel(),
+        viewModel: GalleryViewModel(
+            interactor: GalleryInteractor(
+                useCases: .init(
+                    fetchUserFiles: .empty
+                )
+            )
+        ),
             router: GalleryRouter(isPresented: .constant(false))
         )
     }

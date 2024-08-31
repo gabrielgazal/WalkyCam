@@ -71,12 +71,20 @@ extension RegisterUserUseCase {
 
 extension RegistrationOutput {
     func asUserSessionData() -> UserSessionData {
-        return UserSessionData(id: id,
-                               userName: userName,
-                               name: name,
-                               lastName: lastName,
-                               email: email,
-                               address: address,
-                               configurations: .init())
+        return UserSessionData(
+            id: id,
+            userName: userName,
+            name: name,
+            lastName: lastName,
+            email: email,
+            address: address,
+            phone: "",
+            birthDate: "",
+            gender: "",
+            additionalInfo: "",
+            isWalkCamer: false,
+            configurations: .init(),
+            plan: .init()
+        )
     }
 }

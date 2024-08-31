@@ -1,4 +1,5 @@
 import SwiftUI
+import Networking
 
 final class ProfileAssembler: ProfileAssemblerProtocol {
     func resolveView(
@@ -7,9 +8,12 @@ final class ProfileAssembler: ProfileAssemblerProtocol {
 
         let router = ProfileRouter(state: RouterState(isPresented: route.isPresented))
 
+        let repository = route.retailRepository.resolve(AuthRepositoryProtocol.self)
+        
         let interactor = ProfileInteractor(
             useCases: .init(
-                fetchUserDataUseCase: .live()
+                fetchUserDataUseCase: .live(),
+                updateInfo: .updateInfo(repository: repository)
             )
         )
         let viewModel = ProfileViewModel(interactor: interactor)

@@ -1,3 +1,3 @@
 protocol GalleryInteractorProtocol {
-    func someFunction()
+    func fetchGalleryItems() async throws -> [GalleryItemModel]
 }

@@ -5,4 +5,5 @@ protocol RegisterWalkcamerViewModelProtocol: ViewModelProtocol {
     var acceptedTerms: SelectorModel { get set }
     
     func isRegisterButtonDisabled() -> Bool
+    func saveUserDataToRegistration()
 }

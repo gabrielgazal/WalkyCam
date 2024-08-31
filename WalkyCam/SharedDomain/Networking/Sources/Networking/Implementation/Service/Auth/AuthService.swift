@@ -52,4 +52,37 @@ final class AuthService: AuthServiceProtocol {
                                         verificationCode: verificationCode),
                          completion: completion)
     }
+    
+    func updateInfo(
+        userId: String,
+        name: String?,
+        lastName: String?,
+        gender: String?,
+        cellphone: String?,
+        address: String?,
+        additionalInfo: String?,
+        birthdate: String?,
+        completion: @escaping Completion
+    ) {
+        provider.request(
+            .updateInfo(
+                userId: userId,
+                name: name,
+                lastName: lastName,
+                gender: gender,
+                cellphone: cellphone,
+                address: address,
+                additionalInfo: additionalInfo,
+                birthdate: birthdate
+            ),
+            completion: completion
+        )
+    }
+    
+    func getUserFiles(userId: String, completion: @escaping Completion) {
+        provider.request(
+            .getUserFiles(userId: userId),
+            completion: completion
+        )
+    }
 }

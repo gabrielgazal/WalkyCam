@@ -23,17 +23,17 @@ struct FunctionMenuView<ViewModel:FunctionMenuViewModelProtocol, Router: Functio
             Image(viewModel.model.icon)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 100, height: 100)
+                .frame(width: 150)
             Text(viewModel.model.title)
-                .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .bold))
+                .font(.projectFont(size: Tokens.Size.Font.larger, weight: .bold))
                 .multilineTextAlignment(.center)
             Spacer()
-                .frame(height: 30)
+                .frame(height: 15)
             HStack(spacing: Tokens.Size.Spacing.regular) {
                 verticalCard(title: "BUSCAR",
                              description: "Localiza tu WalkCamer más cercano.",
                              buttonTitle: "Buscar",
-                             icon: Asset.Icons.link.name,
+                             icon: Asset.Icons.locationWhite.name,
                              action: {
                     router.routeToSearchCammer()
                 })
@@ -45,6 +45,8 @@ struct FunctionMenuView<ViewModel:FunctionMenuViewModelProtocol, Router: Functio
                     router.routeToScheduleCammer()
                 })
             }
+            .layoutPriority(1)
+
             horizontalCard(action: {})
         }
                .padding(Tokens.Size.Spacing.regular)
@@ -93,7 +95,7 @@ struct FunctionMenuView<ViewModel:FunctionMenuViewModelProtocol, Router: Functio
         VStack(alignment: .center,
                spacing: Tokens.Size.Spacing.regular) {
             HStack(spacing: Tokens.Size.Spacing.regular) {
-                Image(Asset.Icons.calendar.name)
+                Image(Asset.Icons.joinMeet.name)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 40, height: 40)
@@ -126,9 +128,9 @@ struct FunctionMenuView_Previews: PreviewProvider {
     static var previews: some View {
     FunctionMenuView(
         viewModel: FunctionMenuViewModel(model: .init(type: .drone,
-                                                      title: "",
-                                                      icon: "",
-                                                      background: "")),
+                                                      title: "Teste",
+                                                      icon: Asset.Icons.drone.name,
+                                                      background: Asset.Fondos.videocallFondo.name)),
             router: FunctionMenuRouter(isPresented: .constant(false))
         )
     }

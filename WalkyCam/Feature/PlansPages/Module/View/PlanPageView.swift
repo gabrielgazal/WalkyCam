@@ -12,7 +12,8 @@ struct PlanPageView: View {
 
     private var planData: PlansPagesModel
     private var lastPlan: PlansPagesModel?
-
+    @State var monthlyToggle: Bool = false
+    
     public init(
         planData: PlansPagesModel,
         lastPlan: PlansPagesModel? = nil
@@ -29,10 +30,27 @@ struct PlanPageView: View {
                     Text(planData.title.capitalized)
                         .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                     Spacer()
-                    Text("\(planData.monthlyPrice) € /mo")
+                    Text(monthlyToggle ?
+                         L10n.RegistrationPlans.Value.yearly(formatDouble(planData.yearlyPrice)): L10n.RegistrationPlans.Value.monthly(formatDouble(planData.monthlyPrice)))
                         .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                 }
                 .foregroundColor(planData.accentColor)
+                HStack(alignment: .center,
+                       spacing: Tokens.Size.Spacing.regular) {
+                    Toggle(isOn: $monthlyToggle) {
+                        Text("Toggle Test")
+                    }
+                    .toggleStyle(WCNamelessToggleStyle(accentColor: planData.accentColor))
+                    HStack(alignment: .center,
+                           spacing: Tokens.Size.Spacing.xsmall) {
+                        Text("Plan anual")
+                            .font(.projectFont(size: Tokens.Size.Font.medium, weight: .medium))
+                        Text("(ahora 5%)")
+                            .font(.projectFont(size: Tokens.Size.Font.medium, weight: .bold))
+                            .foregroundColor(monthlyToggle ? planData.accentColor : .blanco)
+                    }
+                    Spacer()
+                }
                 if let lastPlan = lastPlan {
                     HStack(spacing: Tokens.Size.Spacing.regular) {
                         Image(systemName: "checkmark")
@@ -73,6 +91,11 @@ struct PlanPageView: View {
             Spacer()
         }
     }
+    
+    private func formatDouble(_ data: String) -> String {
+        let stringnDouble = Double(data) ?? 0.0
+        return String(format: "%.f", stringnDouble)
+    }
 }
 
 struct PlanPageView_Previews: PreviewProvider {
@@ -80,7 +103,8 @@ struct PlanPageView_Previews: PreviewProvider {
         PlanPageView(
             planData: .init(
                 title: "Basic",
-                monthlyPrice: "60.0",
+                monthlyPrice: "10.0", 
+                yearlyPrice: "20.0",
                 backgroundImage: "",
                 accentColor: .acentoFondoDark,
                 features: [
@@ -91,7 +115,8 @@ struct PlanPageView_Previews: PreviewProvider {
                     .init(title: "Video Call: 200 Personas con duración ilimitada.", icon: "")
                 ]),
             lastPlan: .init(title: "Free",
-                            monthlyPrice: "0.0",
+                            monthlyPrice: "10.0",
+                            yearlyPrice: "20.0",
                             backgroundImage: "",
                             accentColor: .plateado,
                             features: [])

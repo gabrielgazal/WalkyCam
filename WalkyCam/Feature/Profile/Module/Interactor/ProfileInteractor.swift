@@ -6,6 +6,7 @@ final class ProfileInteractor: ProfileInteractorProtocol {
 
     struct UseCases {
         let fetchUserDataUseCase: FetchUserDataUseCase
+        let updateInfo: UpdateUserInfoUseCase
     }
 
     // MARK: - Dependencies
@@ -24,6 +25,19 @@ final class ProfileInteractor: ProfileInteractorProtocol {
     func fetchUserData() async -> UserSessionData {
         return await withCheckedContinuation { continuation in
             useCases.fetchUserDataUseCase()
+                .sink(
+                    receiveCompletion: { _ in },
+                    receiveValue: { data in
+                        continuation.resume(returning: data)
+                    }
+                )
+                .store(in: &bag)
+        }
+    }
+    
+    func updateUserData(_ user: UserData) async -> UserData {
+        return await withCheckedContinuation { continuation in
+            useCases.updateInfo(user)
                 .sink(
                     receiveCompletion: { _ in },
                     receiveValue: { data in

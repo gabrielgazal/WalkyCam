@@ -21,9 +21,14 @@ struct RegisterWalkcamerView<ViewModel: RegisterWalkcamerViewModelProtocol, Rout
         ScrollView {
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.regular) {
-                Text("Genera ganancias, hazte WalkCamer")
-                    .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
-                    .foregroundStyle(Color.blanco)
+                Group {
+                    Text("Genera ganancias, hazte ")
+                        .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
+                        .foregroundStyle(Color.blanco) +
+                    Text("WalkCamer")
+                        .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
+                        .foregroundStyle(Color.naranja)
+                }
                 Text("Registrate hoy!")
                     .font(.projectFont(size: Tokens.Size.Font.small, weight: .regular))
                     .foregroundStyle(Color.blanco)
@@ -37,6 +42,7 @@ struct RegisterWalkcamerView<ViewModel: RegisterWalkcamerViewModelProtocol, Rout
                 .ignoresSafeArea()
         }
         .navigation(router)
+        .withInfoIcon()
     }
     
     private var registrationCard: some View {
@@ -44,16 +50,20 @@ struct RegisterWalkcamerView<ViewModel: RegisterWalkcamerViewModelProtocol, Rout
                spacing: Tokens.Size.Spacing.regular) {
             TextInputView(text: $viewModel.registrationData.email,
                           topDescriptionText: "Email",
-                          placeholder: "nombre@email.com")
+                          placeholder: "nombre@email.com",
+                          textColor: .negro)
             TextInputView(text: $viewModel.registrationData.name,
                           topDescriptionText: "Nombre",
-                          placeholder: "Nombre")
+                          placeholder: "Nombre",
+                          textColor: .negro)
             TextInputView(text: $viewModel.registrationData.lastName,
                           topDescriptionText: "Apellido",
-                          placeholder: "Apellido")
+                          placeholder: "Apellido",
+                          textColor: .negro)
             TextInputView(text: $viewModel.registrationData.phoneNumber,
                           topDescriptionText: "Telefono",
-                          placeholder: "Telefono")
+                          placeholder: "Telefono",
+                          textColor: .negro)
         
             CheckBoxToggle(model: viewModel.acceptedTerms,
                            foregroundColor: .negro)
@@ -64,15 +74,25 @@ struct RegisterWalkcamerView<ViewModel: RegisterWalkcamerViewModelProtocol, Rout
                        style: .standard,
                        descriptor: OrangeButtonStyleDescriptor(),
                        action: {
+                saveUserPhone()
+                viewModel.saveUserDataToRegistration()
                 router.routeToProfit(registrationData: viewModel.registrationData)
             })
             .disabled(viewModel.isRegisterButtonDisabled())
         }
-               .padding()
+               .padding(Tokens.Size.Spacing.xlarge)
                .background {
                    RoundedRectangle(cornerRadius: 16)
                        .fill(Color.blanco)
                }
+    }
+    
+    private func saveUserPhone() {
+        do {
+            var user = try UserSession().user()
+            user.phone = viewModel.registrationData.phoneNumber
+            _ = try UserSession().save(user: user)
+        } catch {}
     }
 }
 

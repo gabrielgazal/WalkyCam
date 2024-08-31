@@ -22,7 +22,7 @@ struct RuralDroneOnboardingView<ViewModel:RuralDroneOnboardingViewModelProtocol,
                spacing: Tokens.Size.Spacing.regular) {
             TabView(selection: $viewModel.currentPage) {
                 DroneOnboardingPageView(illustration: Asset.Illustrations.ruralDrone.swiftUIImage,
-                                        title: "Utiliuza drones en tu cultivo",
+                                        title: "Utiliza drones en tu cultivo",
                                         description: "Mapeo de campos, IOT, vigilancia y monitoreo de los cultivos, agricultura ecológica, mediante Drone. \n\nContamos con profesionales acreditados y con experiencia.\nTu WalkCamer te guiará."
                 ).tag(0)
                 DroneOnboardingPageView(

@@ -28,6 +28,15 @@ protocol FunctionsRouterProtocol: Router {
     func routeToEcografia()
     func routeToRecording()
     func routeToLawConsulting()
+    func routeToThermalCamera()
+    func routeToCertifiedRecording()
+    func routeToRuralDrone()
     
     func routeToRegistrationPlans()
+    func routeToTelepresenciaSuperbanner()
+    func routeToDogRobotSuperbanner()
+    func routeToMascotSuperbanner()
+    func routeToGeoradarSuperbanner()
+    func routeToDetectorSuperbanner()
+    func routeToAnalysisSuperbanner()
 }

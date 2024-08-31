@@ -52,4 +52,41 @@ final class AuthRepository: AuthRepositoryProtocol {
             completion(result.mapToRepositoryResult(with: self.requestHandler))
         }
     }
+    
+    func getUserPlan(userName: String, password: String, completion: @escaping (UserPlanResponse) -> Void) {
+        service.login(userName: userName, password: password) { result in
+            completion(result.mapToRepositoryResult(with: DefaultRequestHandler(at: "user_plan")))
+        }
+    }
+    
+    func updateInfo(
+        userId: String,
+        name: String?,
+        lastName: String?,
+        gender: String?,
+        cellphone: String?,
+        address: String?,
+        additionalInfo: String?,
+        birthdate: String?,
+        completion: @escaping (UpdateUserInfoResponse) -> Void
+    ) {
+        service.updateInfo(
+            userId: userId,
+            name: name,
+            lastName: lastName,
+            gender: gender,
+            cellphone: cellphone,
+            address: address,
+            additionalInfo: additionalInfo,
+            birthdate: birthdate) { result in
+                completion(result.mapToRepositoryResult(with: self.requestHandler))
+            }
+    }
+    
+    func getUserFiles(userId: String, completion: @escaping (GetUserFilesResponse) -> Void) {
+        service.getUserFiles(
+            userId: userId) { result in
+                completion(result.mapToRepositoryResult(with:  DefaultRequestHandler(at: "files")))
+            }
+    }
 }

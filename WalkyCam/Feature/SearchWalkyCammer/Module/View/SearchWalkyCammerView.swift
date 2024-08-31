@@ -8,7 +8,7 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
     @StateObject var locationManager = LocationPermissionManager()
-
+    @State var isFirstUpdate = true
 
     // MARK: - Initialization
     
@@ -26,7 +26,7 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
             headerView
             ZStack {
                 mapView()
-                    .isHidden(viewModel.shouldDisplayCammerList)
+//                    .isHidden(viewModel.shouldDisplayCammerList)
                 cammerListView()
                     .isHidden(!viewModel.shouldDisplayCammerList)
                 VStack {
@@ -50,7 +50,10 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
                .ignoresSafeArea()
                .navigation(router)
                .onChange(of: locationManager.coordinates) { newValue in
-                   viewModel.updateUserViewPort(manager: locationManager)
+                   if isFirstUpdate {
+                       viewModel.updateUserViewPort(manager: locationManager)
+                       isFirstUpdate = false
+                   }
                }
     }
     
@@ -106,49 +109,7 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
     
     private func mapView() -> some View {
         return ZStack {
-            Map(
-                viewport: $viewModel.userLocation
-            ) {
-                if let values = viewModel.walkyCammers.loadedValue {
-                    ForEvery(values, id: \.self) { item in
-                        MapViewAnnotation(
-                            coordinate: .init(
-                                latitude: item.coordinates.latitude,
-                                longitude: item.coordinates.longitude
-                            )
-                        ) {
-                            Group {
-                                if let url = URL(string: item.profileImage) {
-                                    AsyncImageView(imageLoadable: url) { status in
-                                        Group {
-                                            switch status {
-                                            case .failured:
-                                                placeholder
-                                            case .loading:
-                                                ProgressView()
-                                            default:
-                                                placeholder
-                                            }
-                                        }
-                                    }
-                                    .overlay(
-                                        Circle()
-                                            .stroke(lineWidth: 2)
-                                    )
-                                } else {
-                                    placeholder
-                                }
-                            }
-                            .frame(width: 40, height: 40)
-                            .clipShape(Circle())
-                            .onTapGesture {
-                                router.routeToCamerDetail(item)
-                            }
-                        }
-                    }
-                }
-            }
-            .disabled(true)
+            MapBoxViewWrapper(mapView: $viewModel.mapView)
             VStack {
                 TextInputView(
                     text: $viewModel.locationText,
@@ -159,7 +120,7 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
                     backgroundColor: .blanco,
                     actions: .init(
                         onCommitAction: {
-                            viewModel.getUserRegion()
+                            viewModel.updateUserRegionGeocoder()
                         })
                 )
                 Spacer()
@@ -177,6 +138,10 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
                     .frame(width: 30, height: 30)
             }
             .padding(Tokens.Size.Spacing.huge)
+            .onTapGesture {
+                viewModel.updateUserRegionGeocoder()
+            }
+            .loading(viewModel.walkyCammers.isLoading)
         }
         .ignoresSafeArea()
     }
@@ -186,6 +151,15 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading,
                        spacing: Tokens.Size.Spacing.regular) {
+                    TextInputView(
+                        text: $viewModel.cammerSearch,
+                        accessory: Asset.Icons.filter.swiftUIImage,
+                        placeholder: "Buscar WalkCamer",
+                        leftIcon: Asset.Icons.location.swiftUIImage,
+                        rightIcon: Image(systemName: "magnifyingglass"),
+                        backgroundColor: .blanco
+                    )
+                    .applyShadow()
                     ForEach(cammers, id: \.self) { cammer in
                         CammerItemView(name: cammer.name,
                                        photo: cammer.profileImage,
@@ -200,6 +174,7 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
                        .padding(.horizontal, Tokens.Size.Spacing.regular)
             }
         } errorAction: {}
+            .background(Color.blanco)
     }
 
     private func footerButtonTitle() -> String {
@@ -218,7 +193,10 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
 struct SearchWalkyCammerView_Previews: PreviewProvider {
     static var previews: some View {
         SearchWalkyCammerView(
-            viewModel: SearchWalkyCammerViewModel(),
+            viewModel: SearchWalkyCammerViewModel(
+                interactor: SearchWalkyCammerInteractor(useCases: .init()),
+                router: SearchWalkyCammerRouter(isPresented: .constant(false))
+            ),
             router: SearchWalkyCammerRouter(isPresented: .constant(false))
         )
     }

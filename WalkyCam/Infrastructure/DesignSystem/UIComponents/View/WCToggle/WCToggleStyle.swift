@@ -9,10 +9,16 @@ import SwiftUI
 
 struct WCNamelessToggleStyle: ToggleStyle {
     
+    let accentColor: Color
+    
+    public init(accentColor: Color = .naranja) {
+        self.accentColor = accentColor
+    }
+    
     func makeBody(configuration: Configuration) -> some View {
         HStack {
             RoundedRectangle(cornerRadius: 30)
-                .fill(configuration.isOn ? Color.naranja : Color.blancoGris)
+                .fill(configuration.isOn ? accentColor : Color.blancoGris)
                 .overlay {
                     Circle()
                         .fill(.white)
@@ -37,13 +43,19 @@ struct WCNamelessToggleStyle: ToggleStyle {
 
 struct WCToggleStyle: ToggleStyle {
     
+    let accentColor: Color
+    
+    public init(accentColor: Color = .naranja) {
+        self.accentColor = accentColor
+    }
+    
     func makeBody(configuration: Configuration) -> some View {
         HStack {
             configuration.label
                 .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
             Spacer()
             RoundedRectangle(cornerRadius: 30)
-                .fill(configuration.isOn ? Color.naranja : Color.blancoGris)
+                .fill(configuration.isOn ? accentColor : Color.blancoGris)
                 .overlay {
                     Circle()
                         .fill(.white)

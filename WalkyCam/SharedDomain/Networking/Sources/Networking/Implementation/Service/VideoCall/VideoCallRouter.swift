@@ -43,8 +43,10 @@ extension VideoCallRouter: TargetType {
     
     var method: Moya.Method {
         switch self {
-        case .create, .startSchedule, .update, .cancel, .schedule:
+        case .create, .startSchedule, .cancel:
                 .post
+        case .update, .schedule:
+                .put
         }
     }
     

@@ -11,11 +11,11 @@ extension View {
     func eraseToAnyView() -> AnyView {
         AnyView(self)
     }
-
+    
     func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
         clipShape(RoundedCorner(radius: radius, corners: corners))
     }
-
+    
     @ViewBuilder func isHidden(_ hidden: Bool, remove: Bool = true) -> some View {
         if hidden {
             if !remove {
@@ -25,7 +25,7 @@ extension View {
             self
         }
     }
-
+    
     func withoutAnimation(action: @escaping () -> Void) {
         var transaction = Transaction()
         transaction.disablesAnimations = true
@@ -33,12 +33,12 @@ extension View {
             action()
         }
     }
-
+    
     func context(size: CGFloat,
                  weight: ProjectFontWeight = .regular) -> some View {
         font(.projectFont(size: size, weight: weight))
     }
-
+    
     func alert<Content: View>(isPresented: Binding<Bool>, @ViewBuilder content: @escaping () -> Content) -> some View {
         return modifier(
             AlertModifier(
@@ -47,7 +47,7 @@ extension View {
             )
         )
     }
-
+    
     func fullScreen<Content: View>(isPresented: Binding<Bool>, @ViewBuilder content: @escaping () -> Content) -> some View {
         return modifier(
             FullScreenModifier(
@@ -59,6 +59,15 @@ extension View {
     
     func hideKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+    
+    func applyShadow() -> some View {
+        return self.shadow(
+            color: Color.negro.opacity(0.1),
+            radius: 10,
+            x: 0,
+            y: 2
+        )
     }
 }
 

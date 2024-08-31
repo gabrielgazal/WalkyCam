@@ -8,13 +8,19 @@
 import Foundation
 
 struct UserSessionData: Hashable, Codable {
-    public let id: String
-    public let userName: String
-    public let name: String
-    public let lastName: String
-    public let email: String
-    public let address: String
+    public var id: String
+    public var userName: String
+    public var name: String
+    public var lastName: String
+    public var email: String
+    public var address: String
+    public var phone: String
+    public var birthDate: String
+    public var gender: String
+    public var additionalInfo: String
+    public var isWalkCamer: Bool
     public var configurations: Configurations
+    public var plan: PlanData
 
     public struct Configurations: Hashable, Codable {
         public var streetcamConfiguration: Bool
@@ -44,6 +50,18 @@ struct UserSessionData: Hashable, Codable {
             self.droneConfiguration = droneConfiguration
             self.droneIOTConfiguration = droneIOTConfiguration
             self.print3dConfiguration = print3dConfiguration
+        }
+    }
+    
+    public struct PlanData: Hashable, Codable {
+        public var id: String
+        public var name: String
+        
+        public init(id: String = "",
+                    name: String = "")
+        {
+            self.id = id
+            self.name = name
         }
     }
 }

@@ -40,12 +40,12 @@ struct AvailableDayItemView: View {
                 HStack(alignment: .center,
                        spacing: Tokens.Size.Spacing.regular) {
                     TimePicker(
-                        viewModel: .init(selectedTime: data.firstTime.initialTime),
+                        viewModel: .init(selectedTime: $data.firstTime.initialTime),
                         timePickerStyle: .default
                     )
                     .disabled(!data.active)
                     TimePicker(
-                        viewModel: .init(selectedTime: data.firstTime.finalTime),
+                        viewModel: .init(selectedTime: $data.firstTime.finalTime),
                         timePickerStyle: .default
                     )
                     .disabled(!data.active)
@@ -57,12 +57,12 @@ struct AvailableDayItemView: View {
                             data.secondTime = nil
                         }
                     TimePicker(
-                        viewModel: .init(selectedTime: data.firstTime.initialTime),
+                        viewModel: .init(selectedTime: $data.firstTime.initialTime),
                         timePickerStyle: .default
                     )
                     .disabled(!data.active)
                     TimePicker(
-                        viewModel: .init(selectedTime: data.firstTime.finalTime),
+                        viewModel: .init(selectedTime: $data.firstTime.finalTime),
                         timePickerStyle: .default
                     )
                     .disabled(!data.active)

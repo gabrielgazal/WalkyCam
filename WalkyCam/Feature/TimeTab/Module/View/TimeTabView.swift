@@ -30,8 +30,12 @@ struct TimeTabView<ViewModel:TimeTabViewModelProtocol, Router: TimeTabRouterProt
                     VStack(alignment: .center) {
                         Text("Desde")
                             .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .medium))
-                        TimePicker(viewModel: .init(selectedTime: startTimeSelected),
+                        TimePicker(viewModel: .init(selectedTime: $startTimeSelected),
                                    timePickerStyle: .expanded)
+                        .onChange(of: startTimeSelected) { _, newValue in
+                            viewModel.updateSelectedDate(newValue)
+                            endTimeSelected = Date.init(timeInterval: 2400, since: newValue)
+                        }
                     }
                     Spacer()
                 }
@@ -44,8 +48,11 @@ struct TimeTabView<ViewModel:TimeTabViewModelProtocol, Router: TimeTabRouterProt
                     VStack(alignment: .center) {
                         Text("Hasta")
                             .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .medium))
-                        TimePicker(viewModel: .init(selectedTime: endTimeSelected),
+                        TimePicker(viewModel: .init(selectedTime: $endTimeSelected),
                                    timePickerStyle: .expanded)
+                        .onChange(of: endTimeSelected) { _, newValue in
+                            viewModel.updateEndTime(newValue)
+                        }
                     }
                     Spacer()
                 }

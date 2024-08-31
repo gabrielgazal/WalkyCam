@@ -1,5 +1,5 @@
 import SwiftUI
 
 protocol CalendarTabViewModelProtocol: ViewModelProtocol {
-    func someAction()
+    func updateSelectedDate(_ date: Date)
 }

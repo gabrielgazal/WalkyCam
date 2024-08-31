@@ -12,6 +12,8 @@ enum AuthRouter {
     case login(userName: String, password: String)
     case register(name: String, lastName: String, userName: String, email: String, password: String)
     case verifyByEmail(email: String, verificationCode: String)
+    case updateInfo(userId: String, name: String?, lastName: String?, gender: String?, cellphone: String?, address: String?, additionalInfo: String?, birthdate: String?)
+    case getUserFiles(userId: String)
 }
 
 extension AuthRouter: TargetType {
@@ -27,6 +29,10 @@ extension AuthRouter: TargetType {
             return "user/register"
         case let .verifyByEmail(email, verificationCode):
             return "user/verify-email/\(email)/\(verificationCode)"
+        case .updateInfo:
+            return "user/update"
+        case let .getUserFiles(userId):
+            return "user/get-files/\(userId)"
         }
     }
     
@@ -34,8 +40,10 @@ extension AuthRouter: TargetType {
         switch self {
         case .login, .register:
             return .post
-        case .verifyByEmail:
+        case .verifyByEmail, .getUserFiles:
             return .get
+        case .updateInfo:
+            return .put
         }
     }
     
@@ -47,6 +55,19 @@ extension AuthRouter: TargetType {
             return getRegister(name, lastName, userName, email, password)
         case .verifyByEmail:
             return verifyByEmail()
+        case let .updateInfo(userId, name, lastName, gender, cellphone, address, additionalInfo, birthdate):
+            return updateInfo(
+                userId: userId,
+                name: name,
+                lastName: lastName,
+                gender: gender,
+                cellphone: cellphone,
+                address: address,
+                additionalInfo: additionalInfo,
+                birthdate: birthdate
+            )
+        case .getUserFiles:
+            return .requestPlain
         }
     }
     
@@ -81,5 +102,23 @@ extension AuthRouter: TargetType {
 
     private func verifyByEmail() -> Task {
         return .requestPlain
+    }
+    
+    private func updateInfo(userId: String, name: String?, lastName: String?, gender: String?, cellphone: String?, address: String?, additionalInfo: String?, birthdate: String?) -> Task {
+        let parameters = [
+            "id_user": userId,
+            "name": name ?? "",
+            "last_name": lastName ?? "",
+            "gender": gender ?? "",
+            "cellphone_number": cellphone ?? "",
+            "address": address ?? "",
+            "about_me": additionalInfo ?? "",
+            "birth_date": birthdate ?? ""
+        ] as [String:Any]
+        
+        return .requestParameters(
+            parameters: parameters,
+            encoding: JSONEncoding.default
+        )
     }
 }

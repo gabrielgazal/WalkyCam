@@ -1,0 +1,3 @@
+protocol ThermalCameraOnboardingInteractorProtocol {
+    func someFunction()
+}

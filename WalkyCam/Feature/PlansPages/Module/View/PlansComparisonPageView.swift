@@ -12,7 +12,10 @@ struct PlansComparisonPageView: View {
     
     private var plansData: [PlansPagesModel]
     private var startPlanAction: ((String) -> Void)?
-    @State private var tooltipVisibility: [String: Bool] = [:]  // Adicione esta linha
+    @State var monthlyToggle: Bool = false
+    @State var tooltipTitle: String = ""
+    @State var tooltipText: String = ""
+    @State var isAlertShown = false
     
     public init(
         plansData: [PlansPagesModel],
@@ -20,15 +23,27 @@ struct PlansComparisonPageView: View {
     ) {
         self.plansData = plansData
         self.startPlanAction = startPlanAction
-        self._tooltipVisibility = State(initialValue: plansData.reduce(into: [:]) { dict, plan in
-            for feature in plan.features {
-                dict[feature.title] = false
-            }
-        })  // Inicialize o dicionário com todos os tooltips invisíveis
     }
     
     var body: some View {
         ScrollView(showsIndicators: false) {
+            HStack(alignment: .center,
+                   spacing: Tokens.Size.Spacing.regular) {
+                Spacer()
+                Toggle(isOn: $monthlyToggle) {
+                    Text("Toggle Test")
+                }
+                .toggleStyle(WCNamelessToggleStyle())
+                HStack(alignment: .center,
+                       spacing: Tokens.Size.Spacing.xsmall) {
+                    Text("Plan anual")
+                        .font(.projectFont(size: Tokens.Size.Font.medium, weight: .medium))
+                        .foregroundColor(monthlyToggle ? .naranja : .negro)
+                    Text("(ahora 5%)")
+                        .font(.projectFont(size: Tokens.Size.Font.medium, weight: .bold))
+                        .foregroundColor(monthlyToggle ? .naranja : .negro)
+                }
+            }
             HStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.small) {
                 VStack(alignment: .leading,
@@ -45,7 +60,7 @@ struct PlansComparisonPageView: View {
                            spacing: Tokens.Size.Spacing.small) {
                         ForEach(plansData.first(where: { $0.title == "premium"})?.features ?? []) { item in
                             featureItem(item)
-                                .frame(height: 50)
+                                .frame(width: 190, height: 50)
                         }
                     }
                 }
@@ -65,16 +80,26 @@ struct PlansComparisonPageView: View {
         }
         .simultaneousGesture(
             DragGesture().onChanged({ _ in
-                hideAllTooltips()
+                isAlertShown = false
             }))
         .onTapGesture {
-            hideAllTooltips()
+            isAlertShown = false
         }
-    }
-    
-    private func hideAllTooltips() {
-        for key in tooltipVisibility.keys {
-            tooltipVisibility[key] = false
+        .overlay(alignment: .center) {
+            VStack(alignment: .leading,
+                   spacing: Tokens.Size.Spacing.regular) {
+                Text(tooltipTitle)
+                    .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                Text(tooltipText)
+                    .font(.projectFont(size: Tokens.Size.Font.regular))
+            }
+                   .foregroundColor(Color.blanco)
+                   .padding(Tokens.Size.Spacing.large)
+                   .background(
+                    RoundedRectangle(cornerRadius: 8)
+                        .fill(Color.negro.opacity(0.96))
+                   )
+                   .isHidden(!isAlertShown)
         }
     }
     
@@ -91,33 +116,16 @@ struct PlansComparisonPageView: View {
                 .font(.projectFont(size: Tokens.Size.Font.xsmall, weight: .medium))
                 .foregroundColor(Color.negro)
                 .lineLimit(3)
+                .layoutPriority(1)
             Spacer()
+                .frame(width: .infinity)
             Image(systemName: "info.circle.fill")
                 .resizable()
                 .frame(width: 15, height: 15)
-                .overlay {
-                    TooltipView(alignment: .top, isVisible: Binding(
-                        get: { tooltipVisibility[item.title] ?? false },
-                        set: { tooltipVisibility[item.title] = $0 }
-                    )) {
-                        HStack {
-                            VStack(alignment: .leading,
-                                   spacing: Tokens.Size.Spacing.small) {
-                                Text(item.title)
-                                    .font(.projectFont(size: Tokens.Size.Font.small, weight: .bold))
-                                Text(item.getTooltipText())
-                                    .lineLimit(nil)
-                                    .font(.projectFont(size: Tokens.Size.Font.small))
-                            }
-                            Spacer()
-                        }
-                        .frame(maxWidth: 200)
-                        .padding()
-                    }
-                }
                 .onTapGesture {
-                    hideAllTooltips()
-                    tooltipVisibility[item.title]?.toggle()
+                    tooltipTitle = item.title
+                    tooltipText = item.getTooltipText()
+                    isAlertShown = true
                 }
             Spacer()
         }
@@ -125,11 +133,12 @@ struct PlansComparisonPageView: View {
     
     private func planItem(_ plan: PlansPagesModel) -> some View {
         VStack(alignment: .center,
-               spacing: Tokens.Size.Spacing.xsmall) {
+               spacing: Tokens.Size.Spacing.small) {
             Text("Plan \(plan.title.capitalized)")
                 .font(.projectFont(size: Tokens.Size.Font.xsmall, weight: .bold))
                 .foregroundColor(plan.accentColor)
-            Text("\(plan.monthlyPrice) €/mo")
+            Text(monthlyToggle ?
+                 L10n.RegistrationPlans.Value.yearly(formatDouble(plan.yearlyPrice)): L10n.RegistrationPlans.Value.monthly(formatDouble(plan.monthlyPrice)))
                 .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .bold))
             WCUIButton(title: "Start \(plan.title)",
                        style: .standard,
@@ -139,7 +148,7 @@ struct PlansComparisonPageView: View {
             })
             .frame(width: 130)
             VStack(alignment: .center,
-                   spacing: Tokens.Size.Spacing.xsmall) {
+                   spacing: Tokens.Size.Spacing.small) {
                 ForEach(plansData.first(where: { $0.title == "premium"})?.features ?? []) { feature in
                     if plan.features.contains(where: { $0.title == feature.title }) {
                         Image(Asset.Icons.check.name)
@@ -150,6 +159,7 @@ struct PlansComparisonPageView: View {
                             .foregroundColor(plan.accentColor)
                     } else {
                         EmptyView()
+                            .frame(height: 50)
                     }
                 }
             }
@@ -171,6 +181,11 @@ struct PlansComparisonPageView: View {
             return OrangeButtonStyleDescriptor()
         }
     }
+    
+    private func formatDouble(_ data: String) -> String {
+        let stringnDouble = Double(data) ?? 0.0
+        return String(format: "%.f", stringnDouble)
+    }
 }
 
 struct PlansComparisonPageView_Previews: PreviewProvider {
@@ -179,6 +194,7 @@ struct PlansComparisonPageView_Previews: PreviewProvider {
             plansData: [
                 .init(title: "free",
                       monthlyPrice: "0.0",
+                      yearlyPrice: "0.0",
                       backgroundImage: Asset.Fondos.planFondo.name,
                       accentColor: .plateado,
                       features: [
@@ -192,6 +208,7 @@ struct PlansComparisonPageView_Previews: PreviewProvider {
                       ]),
                 .init(title: "basic",
                       monthlyPrice: "30.0",
+                      yearlyPrice: "60.0",
                       backgroundImage: Asset.Fondos.planFondo.name,
                       accentColor: .acentoFondoDark,
                       features: [
@@ -207,7 +224,8 @@ struct PlansComparisonPageView_Previews: PreviewProvider {
                         .init(title: "Se incluye funciones como: White board, Share to, Chat, REC, etc.", icon: "")
                       ]),
                 .init(title: "standard",
-                      monthlyPrice: "60.0",
+                      monthlyPrice: "60.0", 
+                      yearlyPrice: "120.0",
                       backgroundImage: Asset.Fondos.planFondo.name,
                       accentColor: .naranja,
                       features: [
@@ -229,7 +247,8 @@ struct PlansComparisonPageView_Previews: PreviewProvider {
                         .init(title: "Se incluye funciones como: White board, Share to, Chat, REC, etc.", icon: "")
                       ]),
                 .init(title: "premium",
-                      monthlyPrice: "180.0",
+                      monthlyPrice: "180.0", 
+                      yearlyPrice: "360.0",
                       backgroundImage: Asset.Fondos.planFondo.name,
                       accentColor: .premium,
                       features: [
@@ -265,79 +284,5 @@ struct PlansComparisonPageView_Previews: PreviewProvider {
             ],
             startPlanAction: nil
         )
-    }
-}
-
-struct TooltipView<Content: View>: View {
-    let alignment: Edge
-    @Binding var isVisible: Bool
-    let content: () -> Content
-    let arrowOffset = CGFloat(8)
-
-    private var oppositeAlignment: Alignment {
-        let result: Alignment
-        switch alignment {
-        case .top: result = .bottom
-        case .bottom: result = .top
-        case .leading: result = .trailing
-        case .trailing: result = .leading
-        }
-        return result
-    }
-
-    private var theHint: some View {
-        content()
-            .padding()
-            .background(Color.negro)
-            .foregroundColor(.white)
-            .cornerRadius(8)
-            .background(alignment: oppositeAlignment) {
-
-                // The arrow is a square that is rotated by 45 degrees
-                Rectangle()
-                    .fill(Color.negro)
-                    .frame(width: 22, height: 22)
-                    .rotationEffect(.degrees(45))
-                    .offset(x: alignment == .leading ? arrowOffset : 0)
-                    .offset(x: alignment == .trailing ? -arrowOffset : 0)
-                    .offset(y: alignment == .top ? arrowOffset : 0)
-                    .offset(y: alignment == .bottom ? -arrowOffset : 0)
-            }
-            .padding()
-            .fixedSize()
-    }
-
-    var body: some View {
-        if isVisible {
-            GeometryReader { proxy1 in
-
-                // Use a hidden version of the hint to form the footprint
-                theHint
-                    .hidden()
-                    .overlay {
-                        GeometryReader { proxy2 in
-
-                            // The visible version of the hint
-                            theHint
-                                .drawingGroup()
-                                .shadow(radius: 4)
-
-                                // Center the hint over the source view
-                                .offset(
-                                    x: -(proxy2.size.width / 2) + (proxy1.size.width / 2),
-                                    y: -(proxy2.size.height / 2) + (proxy1.size.height / 2)
-                                )
-                                // Move the hint to the required edge
-                                .offset(x: alignment == .leading ? (-proxy2.size.width / 2) - (proxy1.size.width / 2) : 0)
-                                .offset(x: alignment == .trailing ? (proxy2.size.width / 2) + (proxy1.size.width / 2) : 0)
-                                .offset(y: alignment == .top ? (-proxy2.size.height / 2) - (proxy1.size.height / 2) : 0)
-                                .offset(y: alignment == .bottom ? (proxy2.size.height / 2) + (proxy1.size.height / 2) : 0)
-                        }
-                    }
-            }
-            .onTapGesture {
-                isVisible.toggle()
-            }
-        }
     }
 }

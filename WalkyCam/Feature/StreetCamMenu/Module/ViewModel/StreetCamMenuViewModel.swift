@@ -29,12 +29,12 @@ final class StreetCamMenuViewModel: StreetCamMenuViewModelProtocol {
         }
     }
     
-    @MainActor func scheduleStreetcam(onSuccess: (() -> Void)?, onFailure: (() -> Void)?) async {
+    @MainActor func scheduleStreetcam(onSuccess: ((String) -> Void)?, onFailure: (() -> Void)?) async {
         scheduleStreetcamAsyncData = .loading
         do {
             let output = try await interactor.startScheduleStreetcam()
             scheduleStreetcamAsyncData = .loaded(output)
-            onSuccess?()
+            onSuccess?(output.id)
         } catch {
             scheduleStreetcamAsyncData = .failed(GenericError())
             onFailure?()

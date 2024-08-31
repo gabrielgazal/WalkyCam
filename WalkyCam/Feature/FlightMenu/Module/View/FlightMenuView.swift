@@ -74,7 +74,7 @@ struct FlightMenuView<ViewModel:FlightMenuViewModelProtocol, Router: FlightMenuR
         case .rural:
             return Asset.Icons.riego.name
         case .lidar:
-            return Asset.Icons.drone.name
+            return Asset.Icons.lidar.name
         }
     }
 

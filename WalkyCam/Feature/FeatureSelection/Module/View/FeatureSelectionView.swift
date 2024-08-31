@@ -31,6 +31,7 @@ struct FeatureSelectionView<ViewModel: FeatureSelectionViewModelProtocol, Router
             }
                    .padding(Tokens.Size.Spacing.regular)
         }
+        .scrollIndicators(.hidden)
         .footer {
             HStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {
@@ -52,6 +53,8 @@ struct FeatureSelectionView<ViewModel: FeatureSelectionViewModelProtocol, Router
         .navigation(router)
     }
     
+    @State private var dropDownOpen = false
+    
     private var devicesView: some View {
         VStack(alignment: .leading,
                spacing: Tokens.Size.Spacing.regular) {
@@ -59,14 +62,48 @@ struct FeatureSelectionView<ViewModel: FeatureSelectionViewModelProtocol, Router
                 .font(.projectFont(size: Tokens.Size.Font.large))
             LazyVGrid(columns: columns,
                       spacing: Tokens.Size.Spacing.large) {
-                ForEach(0..<viewModel.devicesModel.count, id: \.self) { index in
+                ForEach(0..<4, id: \.self) { index in
                     deviceItemCell(viewModel.devicesModel[index])
                         .onTapGesture {
                             viewModel.devicesModel[index].isSelected.toggle()
                         }
                 }
+                if dropDownOpen {
+                    ForEach(4..<(viewModel.devicesModel.count - 1), id: \.self) { index in
+                        deviceItemCell(viewModel.devicesModel[index])
+                            .onTapGesture {
+                                viewModel.devicesModel[index].isSelected.toggle()
+                                viewModel.devicesModel[viewModel.devicesModel.count - 1].isSelected = false
+                            }
+                    }
+                }
             }
+            deviceItemCell(viewModel.devicesModel[viewModel.devicesModel.count - 1])
+                .onTapGesture {
+                    for index in (0..<viewModel.devicesModel.count - 1) {
+                        viewModel.devicesModel[index].isSelected = false
+                    }
+                    viewModel.devicesModel[viewModel.devicesModel.count - 1].isSelected.toggle()
+                }
+                .isHidden(!dropDownOpen)
+            dropDownButton
         }
+    }
+    
+    private var dropDownButton: some View {
+        HStack(alignment: .center,
+               spacing: Tokens.Size.Spacing.small) {
+            Spacer()
+            Text("Ver \(dropDownOpen ? "menos" : "más")")
+                .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+            Image(systemName: dropDownOpen ? "arrow.up": "arrow.down")
+        }
+               .foregroundColor(.naranja)
+               .onTapGesture {
+                   withAnimation {
+                       dropDownOpen.toggle()
+                   }
+               }
     }
     
     private func deviceItemCell(_ model: SelectorModel) -> some View {
@@ -80,15 +117,17 @@ struct FeatureSelectionView<ViewModel: FeatureSelectionViewModelProtocol, Router
             }
             VStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.small) {
-                Image(model.key)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 60)
+                if !model.key.isEmpty {
+                    Image(model.key)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 60)
+                }
                 Text(model.value)
                     .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
                     .multilineTextAlignment(.center)
             }
-                   .padding(Tokens.Size.Spacing.regular)
+                   .padding(!model.key.isEmpty ? Tokens.Size.Spacing.regular : Tokens.Size.Spacing.big)
             if model.isSelected {
                 VStack {
                     HStack {

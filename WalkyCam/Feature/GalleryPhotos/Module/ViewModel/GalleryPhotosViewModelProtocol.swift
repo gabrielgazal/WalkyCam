@@ -1,5 +1,5 @@
 import SwiftUI
 
 protocol GalleryPhotosViewModelProtocol: ViewModelProtocol {
-    var photosData: [GalleryPhotosModel] { get set }
+    var photosData: [GalleryItemModel] { get set }
 }

@@ -6,6 +6,12 @@ protocol ProfileViewModelProtocol: ViewModelProtocol {
     var temporaryName: String { get set }
     var temporaryLastname: String { get set }
     var temporaryBirthDate: String { get set }
-
+    var temporaryPhoneNumber: String { get set }
+    var temporaryGender: String { get set }
+    var temporaryAddress: String { get set }
+    var temporaryAdditionalInfo: String { get set }
+    var asyncProfileInfo: AsyncData<String, ErrorProtocol> { get set }
+    
     func logout()
+    func updateInfo() async
 }

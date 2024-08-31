@@ -6,7 +6,13 @@ final class ProfitSelectionRouter: Router, ProfitSelectionRouterProtocol {
 
     func routeToIdentityUpload(data: CamerRegistrationData) {
         navigateTo(
-            IdentityUploadRoute(isPresented: isNavigating, data: data)
+            TimedLoadingScreenRoute(
+                isPresented: isNavigating,
+                title: "Ya casi eres WalkCamer",
+                description: "Solo unos pasos mas",
+                time: 3.0,
+                destinationRoute: IdentityUploadRoute(isPresented: isNavigating, data: data)
+            )
         )
     }
 }

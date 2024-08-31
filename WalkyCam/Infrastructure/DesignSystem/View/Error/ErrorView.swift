@@ -18,7 +18,7 @@ struct ErrorView: View {
                     Text(error.message)
                         .foregroundColor(.grisOscuro)
                     Text(error.description)
-                        .foregroundColor(.gris)
+                        .foregroundColor(.grisOscuro)
                 }
                 WCUIButton(title: error.buttonTitle,
                            style: .standard,
@@ -29,7 +29,7 @@ struct ErrorView: View {
             Spacer()
         }
         .frame(maxHeight: .infinity, alignment: .top)
-        .background(.white)
+        .background(.clear)
     }
 }
 

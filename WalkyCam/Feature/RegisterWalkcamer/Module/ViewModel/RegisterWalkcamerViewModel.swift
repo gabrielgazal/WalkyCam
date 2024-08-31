@@ -21,12 +21,24 @@ final class RegisterWalkcamerViewModel: RegisterWalkcamerViewModelProtocol {
         return registrationData.name.isEmpty || registrationData.lastName.isEmpty || registrationData.phoneNumber.isEmpty || registrationData.email.isEmpty || !acceptedTerms.isSelected
     }
     
+    func saveUserDataToRegistration() {
+        let manager = WalkcamerRegistrationManager.shared
+        manager.updateUserInfo(
+            id: registrationData.id,
+            name: registrationData.name,
+            lastName: registrationData.lastName,
+            phoneNumber: registrationData.phoneNumber,
+            email: registrationData.email
+        )
+    }
+    
     private func retriveUserData() {
         let user = try? UserSession().user()
         self.registrationData = .init(
             id: user?.id ?? "",
             name: user?.name ?? "",
             lastName: user?.lastName ?? "",
+            phoneNumber: user?.phone ?? "", 
             email: user?.email ?? ""
         )
     }

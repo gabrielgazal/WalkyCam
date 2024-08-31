@@ -56,6 +56,12 @@ extension LoginUseCase {
                 lastName: loginResponse.lastName,
                 email: loginResponse.email,
                 address: loginResponse.address,
+                phone: loginResponse.phone,
+                birthDate: loginResponse.birthDate,
+                gender: loginResponse.gender,
+                additionalInfo: loginResponse.additionalInfo,
+                isWalkCammer: loginResponse.isWalkCammer,
+                profileImage: loginResponse.profileImage,
                 configurations: .init(
                     streetcamConfiguration: loginResponse.configurations.streetcamConfiguration.onboardingReaded,
                     scan3dConfiguration: loginResponse.configurations.scan3dConfiguration.onboardingReaded,
@@ -86,6 +92,11 @@ extension LoginOutput {
             lastName: lastName,
             email: email,
             address: address,
+            phone: phone,
+            birthDate: birthDate,
+            gender: gender,
+            additionalInfo: additionalInfo ?? "",
+            isWalkCamer: isWalkCammer,
             configurations: .init(
                 streetcamConfiguration: configurations.streetcamConfiguration,
                 scan3dConfiguration: configurations.scan3dConfiguration,
@@ -95,7 +106,8 @@ extension LoginOutput {
                 droneConfiguration: configurations.droneConfiguration,
                 droneIOTConfiguration: configurations.droneIOTConfiguration,
                 print3dConfiguration: configurations.print3dConfiguration
-            )
+            ),
+            plan: .init()
         )
     }
 }

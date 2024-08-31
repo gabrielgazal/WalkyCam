@@ -15,11 +15,13 @@ struct WCTabBarView: View {
     @Namespace private var namespace
 
     var body: some View {
-        HStack {
+        HStack(spacing: 0) {
             ForEach(tabs, id: \.self) { tab in
                 tabView(tab: tab)
                     .onTapGesture {
-                        switchToTab(tab: tab)
+                        withAnimation(.easeInOut) {
+                            switchToTab(tab: tab)
+                        }
                     }
             }
         }
@@ -27,20 +29,28 @@ struct WCTabBarView: View {
             Color.blanco
                 .cornerRadius(48, corners: [.topLeft, .topRight])
                 .ignoresSafeArea(edges: .bottom)
+                .shadow(
+                    color: .black.opacity(0.2),
+                    radius: 8,
+                    x: 0,
+                    y: 2
+                )
         )
-        .shadow(
-            color: .black.opacity(0.2),
-            radius: 8,
-            x: 0,
-            y: 2
-        )
-
     }
 
     // MARK: - Private methods
 
     private func tabView(tab: WCTabBarItem) -> some View {
-        VStack(spacing: Tokens.Size.Spacing.tiny) {
+        let isFirst = (tabs.first == tab)
+        let isLast = (tabs.last == tab)
+        var roundedCorners: UIRectCorner = []
+        if isFirst {
+            roundedCorners = [.topLeft]
+        } else if isLast {
+            roundedCorners = [.topRight]
+        }
+        
+        return VStack(spacing: Tokens.Size.Spacing.tiny) {
             Image(tab.iconName)
                 .renderingMode(.template)
                 .foregroundColor(fetchCurrentColor(tab))
@@ -53,8 +63,21 @@ struct WCTabBarView: View {
         .foregroundColor(fetchCurrentColor(tab))
         .padding([.top], Tokens.Size.Spacing.regular)
         .frame(maxWidth: .infinity)
+        .background(
+            Group {
+                if selection == tab {
+                    Rectangle()
+                        .fill(
+                            Color.naranja.opacity(0.2)
+                        )
+                        .cornerRadius(48, corners: roundedCorners)
+                        .matchedGeometryEffect(id: "background_rectangle",
+                                               in: namespace)
+                        .ignoresSafeArea(edges: .bottom)
+                }
+            }
+        )
         .contentShape(Rectangle())
-        .cornerRadius(48, corners: [.topLeft, .topRight])
     }
 
     private func switchToTab(tab: WCTabBarItem) {

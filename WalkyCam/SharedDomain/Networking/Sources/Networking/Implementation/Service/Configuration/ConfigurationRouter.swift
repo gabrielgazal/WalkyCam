@@ -25,7 +25,7 @@ extension ConfigurationRouter: TargetType {
     var path: String {
         switch self {
         case .updateStreetCamConfiguration:
-            return "user/update-street-cam-configuration"
+            return "user/update-streetcam-configuration"
         case .updateScan3DConfiguration:
             return "user/update-scan3d-configuration"
         case .updateVideoCallConfiguration:

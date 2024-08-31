@@ -7,7 +7,7 @@ final class Scan3DMenuRouter: Router, Scan3DMenuRouterProtocol {
     func routeTo3DScanner() {
         navigateTo(
             WebRoute(isPreseted: isNavigating,
-                            webViewURL: "https://vcprojectj4g.com/static/main/")
+                            webViewURL: "https://api.walkycam.com/view/3d/66886285ad0c294c1608e5b2/66c3e57f97345")
         )
     }
 
@@ -24,7 +24,7 @@ final class Scan3DMenuRouter: Router, Scan3DMenuRouterProtocol {
                 model: .init(
                     type: .scan3d,
                     title: "Scan 3D",
-                    icon: Asset.Icons.scan3D.name,
+                    icon: Asset.Icons.camerScan.name,
                     background: Asset.Fondos.videocallFondo.name)
             )
         )

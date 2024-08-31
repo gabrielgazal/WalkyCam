@@ -10,7 +10,10 @@ final class GalleryPhotosAssembler: GalleryPhotosAssemblerProtocol {
         let interactor = GalleryPhotosInteractor(
             useCases: .init()
         )
-        let viewModel = GalleryPhotosViewModel(interactor: interactor)
+        let viewModel = GalleryPhotosViewModel(
+            interactor: interactor,
+            photosData: route.galleryItems
+        )
         let view = GalleryPhotosView(viewModel: viewModel, router: router)
 
         return view

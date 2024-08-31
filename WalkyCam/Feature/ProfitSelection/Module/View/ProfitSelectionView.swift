@@ -40,16 +40,19 @@ struct ProfitSelectionView<ViewModel: ProfitSelectionViewModelProtocol, Router: 
                            style: .standard,
                            descriptor: OrangeButtonStyleDescriptor(),
                            action: {
+                    
+                    var type: CamerContractType?
                     switch selectedIndex {
                     case 1:
-                        viewModel.registrationData.earningType = "freelancer"
+                        type = .freelance
                     case 2:
-                        viewModel.registrationData.earningType = "emplyee"
+                        type = .employee
                     case 3:
-                        viewModel.registrationData.earningType = "partner"
+                        type = .b2b
                     default:
                         viewModel.registrationData.earningType = ""
                     }
+                    WalkcamerRegistrationManager.shared.updateContractType(type ?? .freelance)
                     router.routeToIdentityUpload(data: viewModel.registrationData)
                 })
                 .isHidden(selectedIndex == 0)
@@ -65,6 +68,7 @@ struct ProfitSelectionView<ViewModel: ProfitSelectionViewModelProtocol, Router: 
         }
         .scrollIndicators(.hidden)
         .navigation(router)
+        .withInfoIcon()
     }
     
     private func profitCell(title: String, description: String, icon: String, index: Int) -> some View {

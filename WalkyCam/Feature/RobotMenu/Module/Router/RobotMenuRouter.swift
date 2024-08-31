@@ -58,6 +58,5 @@ final class RobotMenuRouter: Router, RobotMenuRouterProtocol {
             )
         )
     }
-
 }
 

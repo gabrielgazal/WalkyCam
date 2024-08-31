@@ -1,5 +1,7 @@
 import SwiftUI
 
 protocol MenuRouterProtocol: Router {
-    func routeToSomething()
+    func routeToBasic()
+    func routeToStandard()
+    func routeToPremium()
 }

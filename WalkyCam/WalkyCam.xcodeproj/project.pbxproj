@@ -20,6 +20,15 @@
 		5604D0DC2C1157C60069C0D6 /* DroneConnectionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5604D0CF2C1157C60069C0D6 /* DroneConnectionViewModelProtocol.swift */; };
 		5604D0E42C11FA050069C0D6 /* FPVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5604D0E32C11FA040069C0D6 /* FPVManager.swift */; };
 		5604D0E62C11FA590069C0D6 /* FPUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5604D0E52C11FA590069C0D6 /* FPUIView.swift */; };
+		5615ECD22C503018002D31FA /* MenuPlanBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615ECD12C503018002D31FA /* MenuPlanBannerView.swift */; };
+		561853AA2C589F5E00CBD687 /* StartScheduleVideocallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561853A92C589F5E00CBD687 /* StartScheduleVideocallUseCase.swift */; };
+		561853AF2C58AC8900CBD687 /* ScheduleVideoCallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561853AE2C58AC8900CBD687 /* ScheduleVideoCallUseCase.swift */; };
+		561853B12C58AC9D00CBD687 /* CancelVideoCallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561853B02C58AC9D00CBD687 /* CancelVideoCallUseCase.swift */; };
+		561853B32C58B10000CBD687 /* UpdateVideoCallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561853B22C58B10000CBD687 /* UpdateVideoCallUseCase.swift */; };
+		561853B52C58B13200CBD687 /* UpdateVideoCallInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561853B42C58B13200CBD687 /* UpdateVideoCallInput.swift */; };
+		561853B72C629EB200CBD687 /* UpdateUserInfoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561853B62C629EB100CBD687 /* UpdateUserInfoUseCase.swift */; };
+		561853B92C65363100CBD687 /* MapBoxViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561853B82C65363000CBD687 /* MapBoxViewWrapper.swift */; };
+		561A73F82C80BAF300EFB083 /* FetchUserFilesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561A73F72C80BAF300EFB083 /* FetchUserFilesUseCase.swift */; };
 		561AA6C22BE30A9800393CEF /* FeatureSelectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6AD2BE30A9800393CEF /* FeatureSelectionInteractor.swift */; };
 		561AA6C32BE30A9800393CEF /* FeatureSelectionInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6AE2BE30A9800393CEF /* FeatureSelectionInteractorProtocol.swift */; };
 		561AA6C42BE30A9900393CEF /* FeatureSelectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AA6B02BE30A9800393CEF /* FeatureSelectionRouter.swift */; };
@@ -101,6 +110,7 @@
 		5621B7092C2EF25400BFD923 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 5621B7082C2EF25400BFD923 /* SocketIO */; };
 		5621B70C2C2EF32100BFD923 /* ChatBotClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621B70B2C2EF32100BFD923 /* ChatBotClient.swift */; };
 		5621B70F2C2F478300BFD923 /* CreateVideoCallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621B70E2C2F478200BFD923 /* CreateVideoCallUseCase.swift */; };
+		5626C3962C74D9B600CC8004 /* WalkcamerRegistrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5626C3952C74D9B600CC8004 /* WalkcamerRegistrationManager.swift */; };
 		5637A8162AD5DD72000586DF /* WalkyCamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5637A8152AD5DD72000586DF /* WalkyCamApp.swift */; };
 		5637A81A2AD5DD73000586DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5637A8192AD5DD73000586DF /* Assets.xcassets */; };
 		56459FA32BFFB4D300776F68 /* SnackBarAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56459F982BFFB4D300776F68 /* SnackBarAssembler.swift */; };
@@ -129,6 +139,42 @@
 		5668BB3C2BDFD5FB00A6E05D /* ProfitSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668BB2F2BDFD5FA00A6E05D /* ProfitSelectionViewModel.swift */; };
 		5668BB3D2BDFD5FB00A6E05D /* ProfitSelectionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668BB302BDFD5FA00A6E05D /* ProfitSelectionViewModelProtocol.swift */; };
 		5668BB3F2BE0233200A6E05D /* CamerRegistrationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668BB3E2BE0233200A6E05D /* CamerRegistrationData.swift */; };
+		567CB7522C51564C00112F05 /* ServiceInformationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567CB7512C51564C00112F05 /* ServiceInformationManager.swift */; };
+		567CB76F2C51885600112F05 /* ServiceConfirmationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567CB75A2C51885300112F05 /* ServiceConfirmationModel.swift */; };
+		567CB7702C51885600112F05 /* ServiceConfirmationAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567CB75D2C51885500112F05 /* ServiceConfirmationAssembler.swift */; };
+		567CB7712C51885600112F05 /* ServiceConfirmationAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567CB75E2C51885500112F05 /* ServiceConfirmationAssemblerProtocol.swift */; };
+		567CB7722C51885600112F05 /* ServiceConfirmationRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567CB7602C51885500112F05 /* ServiceConfirmationRoute.swift */; };
+		567CB7732C51885600112F05 /* ServiceConfirmationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567CB7632C51885500112F05 /* ServiceConfirmationInteractor.swift */; };
+		567CB7742C51885600112F05 /* ServiceConfirmationInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567CB7642C51885500112F05 /* ServiceConfirmationInteractorProtocol.swift */; };
+		567CB7752C51885600112F05 /* ServiceConfirmationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567CB7662C51885500112F05 /* ServiceConfirmationRouter.swift */; };
+		567CB7762C51885600112F05 /* ServiceConfirmationRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567CB7672C51885500112F05 /* ServiceConfirmationRouterProtocol.swift */; };
+		567CB7772C51885600112F05 /* ServiceConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567CB7692C51885500112F05 /* ServiceConfirmationView.swift */; };
+		567CB7782C51885600112F05 /* ServiceConfirmationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567CB76B2C51885500112F05 /* ServiceConfirmationViewModel.swift */; };
+		567CB7792C51885600112F05 /* ServiceConfirmationViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567CB76C2C51885500112F05 /* ServiceConfirmationViewModelProtocol.swift */; };
+		568685D92C7D52550027709E /* UserFileOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568685D82C7D52550027709E /* UserFileOutput.swift */; };
+		569889AA2C462E2D006D5997 /* TimedLoadingScreenAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889952C462E2C006D5997 /* TimedLoadingScreenAssembler.swift */; };
+		569889AB2C462E2D006D5997 /* TimedLoadingScreenAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889962C462E2C006D5997 /* TimedLoadingScreenAssemblerProtocol.swift */; };
+		569889AC2C462E2D006D5997 /* TimedLoadingScreenRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889982C462E2C006D5997 /* TimedLoadingScreenRoute.swift */; };
+		569889AD2C462E2D006D5997 /* TimedLoadingScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698899B2C462E2D006D5997 /* TimedLoadingScreenModel.swift */; };
+		569889AE2C462E2D006D5997 /* TimedLoadingScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698899E2C462E2D006D5997 /* TimedLoadingScreenInteractor.swift */; };
+		569889AF2C462E2D006D5997 /* TimedLoadingScreenInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698899F2C462E2D006D5997 /* TimedLoadingScreenInteractorProtocol.swift */; };
+		569889B02C462E2D006D5997 /* TimedLoadingScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889A12C462E2D006D5997 /* TimedLoadingScreenRouter.swift */; };
+		569889B12C462E2D006D5997 /* TimedLoadingScreenRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889A22C462E2D006D5997 /* TimedLoadingScreenRouterProtocol.swift */; };
+		569889B22C462E2D006D5997 /* TimedLoadingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889A42C462E2D006D5997 /* TimedLoadingScreenView.swift */; };
+		569889B32C462E2D006D5997 /* TimedLoadingScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889A62C462E2D006D5997 /* TimedLoadingScreenViewModel.swift */; };
+		569889B42C462E2D006D5997 /* TimedLoadingScreenViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889A72C462E2D006D5997 /* TimedLoadingScreenViewModelProtocol.swift */; };
+		569889D12C46AE85006D5997 /* ThermalCameraOnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889BC2C46AE83006D5997 /* ThermalCameraOnboardingInteractor.swift */; };
+		569889D22C46AE85006D5997 /* ThermalCameraOnboardingInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889BD2C46AE83006D5997 /* ThermalCameraOnboardingInteractorProtocol.swift */; };
+		569889D32C46AE85006D5997 /* ThermalCameraOnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889BF2C46AE83006D5997 /* ThermalCameraOnboardingRouter.swift */; };
+		569889D42C46AE85006D5997 /* ThermalCameraOnboardingRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889C02C46AE83006D5997 /* ThermalCameraOnboardingRouterProtocol.swift */; };
+		569889D52C46AE85006D5997 /* ThermalCameraOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889C22C46AE83006D5997 /* ThermalCameraOnboardingView.swift */; };
+		569889D62C46AE85006D5997 /* ThermalCameraOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889C42C46AE83006D5997 /* ThermalCameraOnboardingViewModel.swift */; };
+		569889D72C46AE85006D5997 /* ThermalCameraOnboardingViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889C52C46AE83006D5997 /* ThermalCameraOnboardingViewModelProtocol.swift */; };
+		569889D82C46AE85006D5997 /* ThermalCameraOnboardingAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889C82C46AE84006D5997 /* ThermalCameraOnboardingAssembler.swift */; };
+		569889D92C46AE85006D5997 /* ThermalCameraOnboardingAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889C92C46AE84006D5997 /* ThermalCameraOnboardingAssemblerProtocol.swift */; };
+		569889DA2C46AE85006D5997 /* ThermalCameraOnboardingRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889CB2C46AE84006D5997 /* ThermalCameraOnboardingRoute.swift */; };
+		569889DB2C46AE85006D5997 /* ThermalCameraOnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889CE2C46AE85006D5997 /* ThermalCameraOnboardingModel.swift */; };
+		56988A042C46AF50006D5997 /* ThermalCameraPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56988A032C46AF50006D5997 /* ThermalCameraPageView.swift */; };
 		569BA76C2C2DF55200E4CCF1 /* GamesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA7572C2DF55100E4CCF1 /* GamesModel.swift */; };
 		569BA76D2C2DF55200E4CCF1 /* GamesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA75A2C2DF55100E4CCF1 /* GamesInteractor.swift */; };
 		569BA76E2C2DF55200E4CCF1 /* GamesInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA75B2C2DF55100E4CCF1 /* GamesInteractorProtocol.swift */; };
@@ -152,6 +198,9 @@
 		569BA79C2C2DF57E00E4CCF1 /* PlayBusinessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA78F2C2DF57E00E4CCF1 /* PlayBusinessViewModel.swift */; };
 		569BA79D2C2DF57E00E4CCF1 /* PlayBusinessViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569BA7902C2DF57E00E4CCF1 /* PlayBusinessViewModelProtocol.swift */; };
 		569DA7E12BF6894400945F0C /* PasswordConfigurationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569DA7E02BF6894400945F0C /* PasswordConfigurationError.swift */; };
+		56A2999A2C46116600D437C5 /* GetUserPlanUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A299992C46116600D437C5 /* GetUserPlanUseCase.swift */; };
+		56A2999C2C4611BA00D437C5 /* UserPlanOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A2999B2C4611BA00D437C5 /* UserPlanOutput.swift */; };
+		56A2999E2C46265900D437C5 /* IconModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A2999D2C46265900D437C5 /* IconModifier.swift */; };
 		56A5522C2B2F6135006B1B17 /* WalkyCamerOnboardingRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552192B2F6134006B1B17 /* WalkyCamerOnboardingRoute.swift */; };
 		56A5522D2B2F6135006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5521B2B2F6134006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift */; };
 		56A5522E2B2F6135006B1B17 /* WalkyCamerOnboardingAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5521C2B2F6134006B1B17 /* WalkyCamerOnboardingAssembler.swift */; };
@@ -597,7 +646,7 @@
 		EA6083B12B01D9E100295069 /* GalleryRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA60839E2B01D9E100295069 /* GalleryRoute.swift */; };
 		EA6083B22B01D9E100295069 /* GalleryAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083A02B01D9E100295069 /* GalleryAssemblerProtocol.swift */; };
 		EA6083B32B01D9E100295069 /* GalleryAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083A12B01D9E100295069 /* GalleryAssembler.swift */; };
-		EA6083B42B01D9E100295069 /* GalleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083A42B01D9E100295069 /* GalleryModel.swift */; };
+		EA6083B42B01D9E100295069 /* GalleryItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083A42B01D9E100295069 /* GalleryItemModel.swift */; };
 		EA6083B52B01D9E100295069 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083A72B01D9E100295069 /* GalleryViewModel.swift */; };
 		EA6083B62B01D9E100295069 /* GalleryViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083A82B01D9E100295069 /* GalleryViewModelProtocol.swift */; };
 		EA6083B72B01D9E100295069 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6083AA2B01D9E100295069 /* GalleryView.swift */; };
@@ -832,7 +881,7 @@
 		EA94A5332B7160EF00EC3037 /* ServiceDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94A5252B7160EF00EC3037 /* ServiceDetailsInteractor.swift */; };
 		EA94A5342B7160EF00EC3037 /* ServiceDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94A5272B7160EF00EC3037 /* ServiceDetailsRouter.swift */; };
 		EA94A5352B7160EF00EC3037 /* ServiceDetailsRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94A5282B7160EF00EC3037 /* ServiceDetailsRouterProtocol.swift */; };
-		EA94A5362B7160EF00EC3037 /* ServiceDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94A52B2B7160EF00EC3037 /* ServiceDetailsModel.swift */; };
+		EA94A5362B7160EF00EC3037 /* ServiceDetailsItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94A52B2B7160EF00EC3037 /* ServiceDetailsItemModel.swift */; };
 		EAA1E61C2AFAFA7100A42174 /* WCTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA1E6192AFAFA7100A42174 /* WCTopBarView.swift */; };
 		EAA1E61D2AFAFA7100A42174 /* WCTopBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA1E61A2AFAFA7100A42174 /* WCTopBarItem.swift */; };
 		EAA1E61E2AFAFA7100A42174 /* WCTopBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA1E61B2AFAFA7100A42174 /* WCTopBarContainerView.swift */; };
@@ -1069,6 +1118,15 @@
 		5604D0CF2C1157C60069C0D6 /* DroneConnectionViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneConnectionViewModelProtocol.swift; sourceTree = "<group>"; };
 		5604D0E32C11FA040069C0D6 /* FPVManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPVManager.swift; sourceTree = "<group>"; };
 		5604D0E52C11FA590069C0D6 /* FPUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPUIView.swift; sourceTree = "<group>"; };
+		5615ECD12C503018002D31FA /* MenuPlanBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPlanBannerView.swift; sourceTree = "<group>"; };
+		561853A92C589F5E00CBD687 /* StartScheduleVideocallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScheduleVideocallUseCase.swift; sourceTree = "<group>"; };
+		561853AE2C58AC8900CBD687 /* ScheduleVideoCallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVideoCallUseCase.swift; sourceTree = "<group>"; };
+		561853B02C58AC9D00CBD687 /* CancelVideoCallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelVideoCallUseCase.swift; sourceTree = "<group>"; };
+		561853B22C58B10000CBD687 /* UpdateVideoCallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateVideoCallUseCase.swift; sourceTree = "<group>"; };
+		561853B42C58B13200CBD687 /* UpdateVideoCallInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateVideoCallInput.swift; sourceTree = "<group>"; };
+		561853B62C629EB100CBD687 /* UpdateUserInfoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserInfoUseCase.swift; sourceTree = "<group>"; };
+		561853B82C65363000CBD687 /* MapBoxViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBoxViewWrapper.swift; sourceTree = "<group>"; };
+		561A73F72C80BAF300EFB083 /* FetchUserFilesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUserFilesUseCase.swift; sourceTree = "<group>"; };
 		561AA6AD2BE30A9800393CEF /* FeatureSelectionInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureSelectionInteractor.swift; sourceTree = "<group>"; };
 		561AA6AE2BE30A9800393CEF /* FeatureSelectionInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureSelectionInteractorProtocol.swift; sourceTree = "<group>"; };
 		561AA6B02BE30A9800393CEF /* FeatureSelectionRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureSelectionRouter.swift; sourceTree = "<group>"; };
@@ -1149,6 +1207,7 @@
 		5621B6F92C2E605000BFD923 /* UnavailableFeatureRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnavailableFeatureRoute.swift; sourceTree = "<group>"; };
 		5621B70B2C2EF32100BFD923 /* ChatBotClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotClient.swift; sourceTree = "<group>"; };
 		5621B70E2C2F478200BFD923 /* CreateVideoCallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateVideoCallUseCase.swift; sourceTree = "<group>"; };
+		5626C3952C74D9B600CC8004 /* WalkcamerRegistrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkcamerRegistrationManager.swift; sourceTree = "<group>"; };
 		5637A8122AD5DD72000586DF /* WalkyCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkyCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5637A8152AD5DD72000586DF /* WalkyCamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkyCamApp.swift; sourceTree = "<group>"; };
 		5637A8192AD5DD73000586DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1178,6 +1237,42 @@
 		5668BB2F2BDFD5FA00A6E05D /* ProfitSelectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfitSelectionViewModel.swift; sourceTree = "<group>"; };
 		5668BB302BDFD5FA00A6E05D /* ProfitSelectionViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfitSelectionViewModelProtocol.swift; sourceTree = "<group>"; };
 		5668BB3E2BE0233200A6E05D /* CamerRegistrationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamerRegistrationData.swift; sourceTree = "<group>"; };
+		567CB7512C51564C00112F05 /* ServiceInformationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceInformationManager.swift; sourceTree = "<group>"; };
+		567CB75A2C51885300112F05 /* ServiceConfirmationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfirmationModel.swift; sourceTree = "<group>"; };
+		567CB75D2C51885500112F05 /* ServiceConfirmationAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfirmationAssembler.swift; sourceTree = "<group>"; };
+		567CB75E2C51885500112F05 /* ServiceConfirmationAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfirmationAssemblerProtocol.swift; sourceTree = "<group>"; };
+		567CB7602C51885500112F05 /* ServiceConfirmationRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfirmationRoute.swift; sourceTree = "<group>"; };
+		567CB7632C51885500112F05 /* ServiceConfirmationInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfirmationInteractor.swift; sourceTree = "<group>"; };
+		567CB7642C51885500112F05 /* ServiceConfirmationInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfirmationInteractorProtocol.swift; sourceTree = "<group>"; };
+		567CB7662C51885500112F05 /* ServiceConfirmationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfirmationRouter.swift; sourceTree = "<group>"; };
+		567CB7672C51885500112F05 /* ServiceConfirmationRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfirmationRouterProtocol.swift; sourceTree = "<group>"; };
+		567CB7692C51885500112F05 /* ServiceConfirmationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfirmationView.swift; sourceTree = "<group>"; };
+		567CB76B2C51885500112F05 /* ServiceConfirmationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfirmationViewModel.swift; sourceTree = "<group>"; };
+		567CB76C2C51885500112F05 /* ServiceConfirmationViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfirmationViewModelProtocol.swift; sourceTree = "<group>"; };
+		568685D82C7D52550027709E /* UserFileOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFileOutput.swift; sourceTree = "<group>"; };
+		569889952C462E2C006D5997 /* TimedLoadingScreenAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenAssembler.swift; sourceTree = "<group>"; };
+		569889962C462E2C006D5997 /* TimedLoadingScreenAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenAssemblerProtocol.swift; sourceTree = "<group>"; };
+		569889982C462E2C006D5997 /* TimedLoadingScreenRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenRoute.swift; sourceTree = "<group>"; };
+		5698899B2C462E2D006D5997 /* TimedLoadingScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenModel.swift; sourceTree = "<group>"; };
+		5698899E2C462E2D006D5997 /* TimedLoadingScreenInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenInteractor.swift; sourceTree = "<group>"; };
+		5698899F2C462E2D006D5997 /* TimedLoadingScreenInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenInteractorProtocol.swift; sourceTree = "<group>"; };
+		569889A12C462E2D006D5997 /* TimedLoadingScreenRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenRouter.swift; sourceTree = "<group>"; };
+		569889A22C462E2D006D5997 /* TimedLoadingScreenRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenRouterProtocol.swift; sourceTree = "<group>"; };
+		569889A42C462E2D006D5997 /* TimedLoadingScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenView.swift; sourceTree = "<group>"; };
+		569889A62C462E2D006D5997 /* TimedLoadingScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenViewModel.swift; sourceTree = "<group>"; };
+		569889A72C462E2D006D5997 /* TimedLoadingScreenViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenViewModelProtocol.swift; sourceTree = "<group>"; };
+		569889BC2C46AE83006D5997 /* ThermalCameraOnboardingInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThermalCameraOnboardingInteractor.swift; sourceTree = "<group>"; };
+		569889BD2C46AE83006D5997 /* ThermalCameraOnboardingInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThermalCameraOnboardingInteractorProtocol.swift; sourceTree = "<group>"; };
+		569889BF2C46AE83006D5997 /* ThermalCameraOnboardingRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThermalCameraOnboardingRouter.swift; sourceTree = "<group>"; };
+		569889C02C46AE83006D5997 /* ThermalCameraOnboardingRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThermalCameraOnboardingRouterProtocol.swift; sourceTree = "<group>"; };
+		569889C22C46AE83006D5997 /* ThermalCameraOnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThermalCameraOnboardingView.swift; sourceTree = "<group>"; };
+		569889C42C46AE83006D5997 /* ThermalCameraOnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThermalCameraOnboardingViewModel.swift; sourceTree = "<group>"; };
+		569889C52C46AE83006D5997 /* ThermalCameraOnboardingViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThermalCameraOnboardingViewModelProtocol.swift; sourceTree = "<group>"; };
+		569889C82C46AE84006D5997 /* ThermalCameraOnboardingAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThermalCameraOnboardingAssembler.swift; sourceTree = "<group>"; };
+		569889C92C46AE84006D5997 /* ThermalCameraOnboardingAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThermalCameraOnboardingAssemblerProtocol.swift; sourceTree = "<group>"; };
+		569889CB2C46AE84006D5997 /* ThermalCameraOnboardingRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThermalCameraOnboardingRoute.swift; sourceTree = "<group>"; };
+		569889CE2C46AE85006D5997 /* ThermalCameraOnboardingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThermalCameraOnboardingModel.swift; sourceTree = "<group>"; };
+		56988A032C46AF50006D5997 /* ThermalCameraPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermalCameraPageView.swift; sourceTree = "<group>"; };
 		569BA7572C2DF55100E4CCF1 /* GamesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesModel.swift; sourceTree = "<group>"; };
 		569BA75A2C2DF55100E4CCF1 /* GamesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesInteractor.swift; sourceTree = "<group>"; };
 		569BA75B2C2DF55100E4CCF1 /* GamesInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesInteractorProtocol.swift; sourceTree = "<group>"; };
@@ -1201,6 +1296,9 @@
 		569BA78F2C2DF57E00E4CCF1 /* PlayBusinessViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayBusinessViewModel.swift; sourceTree = "<group>"; };
 		569BA7902C2DF57E00E4CCF1 /* PlayBusinessViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayBusinessViewModelProtocol.swift; sourceTree = "<group>"; };
 		569DA7E02BF6894400945F0C /* PasswordConfigurationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordConfigurationError.swift; sourceTree = "<group>"; };
+		56A299992C46116600D437C5 /* GetUserPlanUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserPlanUseCase.swift; sourceTree = "<group>"; };
+		56A2999B2C4611BA00D437C5 /* UserPlanOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPlanOutput.swift; sourceTree = "<group>"; };
+		56A2999D2C46265900D437C5 /* IconModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconModifier.swift; sourceTree = "<group>"; };
 		56A552192B2F6134006B1B17 /* WalkyCamerOnboardingRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingRoute.swift; sourceTree = "<group>"; };
 		56A5521B2B2F6134006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingAssemblerProtocol.swift; sourceTree = "<group>"; };
 		56A5521C2B2F6134006B1B17 /* WalkyCamerOnboardingAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingAssembler.swift; sourceTree = "<group>"; };
@@ -1642,7 +1740,7 @@
 		EA60839E2B01D9E100295069 /* GalleryRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryRoute.swift; sourceTree = "<group>"; };
 		EA6083A02B01D9E100295069 /* GalleryAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryAssemblerProtocol.swift; sourceTree = "<group>"; };
 		EA6083A12B01D9E100295069 /* GalleryAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryAssembler.swift; sourceTree = "<group>"; };
-		EA6083A42B01D9E100295069 /* GalleryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryModel.swift; sourceTree = "<group>"; };
+		EA6083A42B01D9E100295069 /* GalleryItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryItemModel.swift; sourceTree = "<group>"; };
 		EA6083A72B01D9E100295069 /* GalleryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 		EA6083A82B01D9E100295069 /* GalleryViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewModelProtocol.swift; sourceTree = "<group>"; };
 		EA6083AA2B01D9E100295069 /* GalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
@@ -1876,7 +1974,7 @@
 		EA94A5252B7160EF00EC3037 /* ServiceDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailsInteractor.swift; sourceTree = "<group>"; };
 		EA94A5272B7160EF00EC3037 /* ServiceDetailsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailsRouter.swift; sourceTree = "<group>"; };
 		EA94A5282B7160EF00EC3037 /* ServiceDetailsRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailsRouterProtocol.swift; sourceTree = "<group>"; };
-		EA94A52B2B7160EF00EC3037 /* ServiceDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailsModel.swift; sourceTree = "<group>"; };
+		EA94A52B2B7160EF00EC3037 /* ServiceDetailsItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailsItemModel.swift; sourceTree = "<group>"; };
 		EAA1E6192AFAFA7100A42174 /* WCTopBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCTopBarView.swift; sourceTree = "<group>"; };
 		EAA1E61A2AFAFA7100A42174 /* WCTopBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCTopBarItem.swift; sourceTree = "<group>"; };
 		EAA1E61B2AFAFA7100A42174 /* WCTopBarContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCTopBarContainerView.swift; sourceTree = "<group>"; };
@@ -2255,6 +2353,14 @@
 				569BA7652C2DF55100E4CCF1 /* Module */,
 			);
 			path = Games;
+			sourceTree = "<group>";
+		};
+		561A73F62C80BAE100EFB083 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				561A73F72C80BAF300EFB083 /* FetchUserFilesUseCase.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 		561AA6A62BE30A7700393CEF /* FeatureSelection */ = {
@@ -2897,8 +3003,17 @@
 			isa = PBXGroup;
 			children = (
 				5621B70E2C2F478200BFD923 /* CreateVideoCallUseCase.swift */,
+				561853A92C589F5E00CBD687 /* StartScheduleVideocallUseCase.swift */,
 			);
 			path = UseCase;
+			sourceTree = "<group>";
+		};
+		5626C3942C74D9A000CC8004 /* WalkcamerRegistrationManager */ = {
+			isa = PBXGroup;
+			children = (
+				5626C3952C74D9B600CC8004 /* WalkcamerRegistrationManager.swift */,
+			);
+			path = WalkcamerRegistrationManager;
 			sourceTree = "<group>";
 		};
 		5637A8092AD5DD71000586DF = {
@@ -3128,6 +3243,309 @@
 				56AF27542BDAE00800DADC29 /* Module */,
 			);
 			path = RegisterWalkcamer;
+			sourceTree = "<group>";
+		};
+		567CB7502C51563800112F05 /* ServiceInformationManager */ = {
+			isa = PBXGroup;
+			children = (
+				567CB7512C51564C00112F05 /* ServiceInformationManager.swift */,
+			);
+			path = ServiceInformationManager;
+			sourceTree = "<group>";
+		};
+		567CB7532C51880D00112F05 /* ServiceConfirmation */ = {
+			isa = PBXGroup;
+			children = (
+				567CB7622C51885500112F05 /* Configuration */,
+				567CB75C2C51885300112F05 /* Domain */,
+				567CB76E2C51885500112F05 /* Module */,
+			);
+			path = ServiceConfirmation;
+			sourceTree = "<group>";
+		};
+		567CB75B2C51885300112F05 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				567CB75A2C51885300112F05 /* ServiceConfirmationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		567CB75C2C51885300112F05 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				567CB75B2C51885300112F05 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		567CB75F2C51885500112F05 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				567CB75D2C51885500112F05 /* ServiceConfirmationAssembler.swift */,
+				567CB75E2C51885500112F05 /* ServiceConfirmationAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		567CB7612C51885500112F05 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				567CB7602C51885500112F05 /* ServiceConfirmationRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		567CB7622C51885500112F05 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				567CB75F2C51885500112F05 /* Assembler */,
+				567CB7612C51885500112F05 /* Route */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		567CB7652C51885500112F05 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				567CB7632C51885500112F05 /* ServiceConfirmationInteractor.swift */,
+				567CB7642C51885500112F05 /* ServiceConfirmationInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		567CB7682C51885500112F05 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				567CB7662C51885500112F05 /* ServiceConfirmationRouter.swift */,
+				567CB7672C51885500112F05 /* ServiceConfirmationRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		567CB76A2C51885500112F05 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				567CB7692C51885500112F05 /* ServiceConfirmationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		567CB76D2C51885500112F05 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				567CB76B2C51885500112F05 /* ServiceConfirmationViewModel.swift */,
+				567CB76C2C51885500112F05 /* ServiceConfirmationViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		567CB76E2C51885500112F05 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				567CB7652C51885500112F05 /* Interactor */,
+				567CB7682C51885500112F05 /* Router */,
+				567CB76A2C51885500112F05 /* View */,
+				567CB76D2C51885500112F05 /* ViewModel */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		5698898E2C462E04006D5997 /* TimedLoadingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				5698899A2C462E2C006D5997 /* Configuration */,
+				5698899D2C462E2D006D5997 /* Domain */,
+				569889A92C462E2D006D5997 /* Module */,
+			);
+			path = TimedLoadingScreen;
+			sourceTree = "<group>";
+		};
+		569889972C462E2C006D5997 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				569889952C462E2C006D5997 /* TimedLoadingScreenAssembler.swift */,
+				569889962C462E2C006D5997 /* TimedLoadingScreenAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		569889992C462E2C006D5997 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				569889982C462E2C006D5997 /* TimedLoadingScreenRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		5698899A2C462E2C006D5997 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				569889972C462E2C006D5997 /* Assembler */,
+				569889992C462E2C006D5997 /* Route */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		5698899C2C462E2D006D5997 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5698899B2C462E2D006D5997 /* TimedLoadingScreenModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5698899D2C462E2D006D5997 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				5698899C2C462E2D006D5997 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		569889A02C462E2D006D5997 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				5698899E2C462E2D006D5997 /* TimedLoadingScreenInteractor.swift */,
+				5698899F2C462E2D006D5997 /* TimedLoadingScreenInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		569889A32C462E2D006D5997 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				569889A12C462E2D006D5997 /* TimedLoadingScreenRouter.swift */,
+				569889A22C462E2D006D5997 /* TimedLoadingScreenRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		569889A52C462E2D006D5997 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				569889A42C462E2D006D5997 /* TimedLoadingScreenView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		569889A82C462E2D006D5997 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				569889A62C462E2D006D5997 /* TimedLoadingScreenViewModel.swift */,
+				569889A72C462E2D006D5997 /* TimedLoadingScreenViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		569889A92C462E2D006D5997 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				569889A02C462E2D006D5997 /* Interactor */,
+				569889A32C462E2D006D5997 /* Router */,
+				569889A52C462E2D006D5997 /* View */,
+				569889A82C462E2D006D5997 /* ViewModel */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		569889B52C46AE45006D5997 /* ThermalCameraOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+				569889CD2C46AE84006D5997 /* Configuration */,
+				569889D02C46AE85006D5997 /* Domain */,
+				569889C72C46AE83006D5997 /* Module */,
+			);
+			path = ThermalCameraOnboarding;
+			sourceTree = "<group>";
+		};
+		569889BE2C46AE83006D5997 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				569889BC2C46AE83006D5997 /* ThermalCameraOnboardingInteractor.swift */,
+				569889BD2C46AE83006D5997 /* ThermalCameraOnboardingInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		569889C12C46AE83006D5997 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				569889BF2C46AE83006D5997 /* ThermalCameraOnboardingRouter.swift */,
+				569889C02C46AE83006D5997 /* ThermalCameraOnboardingRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		569889C32C46AE83006D5997 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				569889C22C46AE83006D5997 /* ThermalCameraOnboardingView.swift */,
+				56988A032C46AF50006D5997 /* ThermalCameraPageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		569889C62C46AE83006D5997 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				569889C42C46AE83006D5997 /* ThermalCameraOnboardingViewModel.swift */,
+				569889C52C46AE83006D5997 /* ThermalCameraOnboardingViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		569889C72C46AE83006D5997 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				569889BE2C46AE83006D5997 /* Interactor */,
+				569889C12C46AE83006D5997 /* Router */,
+				569889C32C46AE83006D5997 /* View */,
+				569889C62C46AE83006D5997 /* ViewModel */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		569889CA2C46AE84006D5997 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				569889C82C46AE84006D5997 /* ThermalCameraOnboardingAssembler.swift */,
+				569889C92C46AE84006D5997 /* ThermalCameraOnboardingAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		569889CC2C46AE84006D5997 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				569889CB2C46AE84006D5997 /* ThermalCameraOnboardingRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		569889CD2C46AE84006D5997 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				569889CA2C46AE84006D5997 /* Assembler */,
+				569889CC2C46AE84006D5997 /* Route */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		569889CF2C46AE85006D5997 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				569889CE2C46AE85006D5997 /* ThermalCameraOnboardingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		569889D02C46AE85006D5997 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				569889CF2C46AE85006D5997 /* Model */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		569BA7582C2DF55100E4CCF1 /* Model */ = {
@@ -4459,6 +4877,9 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				567CB7532C51880D00112F05 /* ServiceConfirmation */,
+				569889B52C46AE45006D5997 /* ThermalCameraOnboarding */,
+				5698898E2C462E04006D5997 /* TimedLoadingScreen */,
 				56B3E4762C3D9EBB004A87FA /* VideocallTimeTab */,
 				56B3E44F2C3D8417004A87FA /* ScheduleVideoCall */,
 				5621B6E02C2E603200BFD923 /* UnavailableFeature */,
@@ -4619,6 +5040,8 @@
 			isa = PBXGroup;
 			children = (
 				5604D0B52C1157890069C0D6 /* DJI */,
+				5626C3942C74D9A000CC8004 /* WalkcamerRegistrationManager */,
+				567CB7502C51563800112F05 /* ServiceInformationManager */,
 				5621B70A2C2EF27000BFD923 /* ChatBot */,
 				EA8EF8CE2B67E11600136D1F /* Persistence */,
 				EA890A272B61EDCE00FC369B /* DependencyStore */,
@@ -5506,6 +5929,8 @@
 				EA57A7812B6BFD09006247DD /* CammerData.swift */,
 				5668BB3E2BE0233200A6E05D /* CamerRegistrationData.swift */,
 				5663D66A2BFBB2C800C6655E /* VideoCallOutput.swift */,
+				561853B42C58B13200CBD687 /* UpdateVideoCallInput.swift */,
+				568685D82C7D52550027709E /* UserFileOutput.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -6334,6 +6759,9 @@
 			isa = PBXGroup;
 			children = (
 				EA5103082BA7A9C900A2DE2E /* FetchAvailablePlansUseCase.swift */,
+				561853AE2C58AC8900CBD687 /* ScheduleVideoCallUseCase.swift */,
+				561853B02C58AC9D00CBD687 /* CancelVideoCallUseCase.swift */,
+				561853B22C58B10000CBD687 /* UpdateVideoCallUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -6546,6 +6974,7 @@
 			isa = PBXGroup;
 			children = (
 				EA5A87F62B67FD7C00BBB7F9 /* FetchUserDataUseCase.swift */,
+				561853B62C629EB100CBD687 /* UpdateUserInfoUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -6573,6 +7002,7 @@
 				EA5A88002B68039400BBB7F9 /* LoginOutput.swift */,
 				EA5A88012B68039400BBB7F9 /* LoginInput.swift */,
 				569DA7E02BF6894400945F0C /* PasswordConfigurationError.swift */,
+				56A2999B2C4611BA00D437C5 /* UserPlanOutput.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -6581,6 +7011,7 @@
 			isa = PBXGroup;
 			children = (
 				EA5A88032B68039400BBB7F9 /* LoginUseCase.swift */,
+				56A299992C46116600D437C5 /* GetUserPlanUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -7051,6 +7482,7 @@
 		EA6083A22B01D9E100295069 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				561A73F62C80BAE100EFB083 /* UseCase */,
 				EA6083A32B01D9E100295069 /* Model */,
 			);
 			path = Domain;
@@ -7059,7 +7491,7 @@
 		EA6083A32B01D9E100295069 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EA6083A42B01D9E100295069 /* GalleryModel.swift */,
+				EA6083A42B01D9E100295069 /* GalleryItemModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -8504,6 +8936,7 @@
 				EA910F9B2ADC437300584B98 /* AlertModifier.swift */,
 				EA910F9D2ADC43B200584B98 /* FullScreenWrapper.swift */,
 				EA1235152B99FC1100443CF8 /* FlippedUpsideDown.swift */,
+				56A2999D2C46265900D437C5 /* IconModifier.swift */,
 			);
 			path = Modifier;
 			sourceTree = "<group>";
@@ -8706,6 +9139,7 @@
 			isa = PBXGroup;
 			children = (
 				EA910FE92ADCBCC000584B98 /* MenuView.swift */,
+				5615ECD12C503018002D31FA /* MenuPlanBannerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -8923,7 +9357,7 @@
 		EA94A52A2B7160EF00EC3037 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EA94A52B2B7160EF00EC3037 /* ServiceDetailsModel.swift */,
+				EA94A52B2B7160EF00EC3037 /* ServiceDetailsItemModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -10506,6 +10940,7 @@
 			isa = PBXGroup;
 			children = (
 				EAF47BE42B83099F003F8B86 /* MapTabView.swift */,
+				561853B82C65363000CBD687 /* MapBoxViewWrapper.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -10971,6 +11406,7 @@
 				561D83A12BE90D930045C540 /* CamerAvailabilityViewModel.swift in Sources */,
 				EA910FCD2ADC495700584B98 /* TabBarRouterProtocol.swift in Sources */,
 				EA4A1C162B87799100B5FC59 /* AvailableAssistantsViewModelProtocol.swift in Sources */,
+				569889DA2C46AE85006D5997 /* ThermalCameraOnboardingRoute.swift in Sources */,
 				56B3E4702C3D8443004A87FA /* ScheduleVideoCallInteractorProtocol.swift in Sources */,
 				EA172B002AF06BDE00EB1514 /* ConfirmMailRouter.swift in Sources */,
 				EAD048732AE22C530096E6AB /* RegistrationPlansAssemblerProtocol.swift in Sources */,
@@ -11004,6 +11440,7 @@
 				EA94A5322B7160EF00EC3037 /* ServiceDetailsInteractorProtocol.swift in Sources */,
 				EA910FC62ADC495700584B98 /* TabBarAssemblerProtocol.swift in Sources */,
 				EAE401AD2BBA3D6100B1311E /* DigitalTwinsOnboardingViewModelProtocol.swift in Sources */,
+				567CB7712C51885600112F05 /* ServiceConfirmationAssemblerProtocol.swift in Sources */,
 				EAE401FA2BBAFB0900B1311E /* RobotMenuViewModel.swift in Sources */,
 				EA4A1C672B87909F00B5FC59 /* ExternalAssistantInteractorProtocol.swift in Sources */,
 				56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */,
@@ -11032,6 +11469,7 @@
 				56A552362B2F6135006B1B17 /* WalkyCamerOnboardingModel.swift in Sources */,
 				EA2C4C222B7E5C4300F1EE26 /* DroneOnboardingView.swift in Sources */,
 				EA86534F2B90EBE800B86A54 /* ConfigureAccessView.swift in Sources */,
+				567CB7792C51885600112F05 /* ServiceConfirmationViewModelProtocol.swift in Sources */,
 				EA50A0882B0BC77F0042B238 /* PlansPagesInteractorProtocol.swift in Sources */,
 				EADB5CA42B190819005863E1 /* VideoCallRoute.swift in Sources */,
 				EAF47BF42B83099F003F8B86 /* MapTabRouterProtocol.swift in Sources */,
@@ -11047,6 +11485,7 @@
 				EA8652DD2B90DCE900B86A54 /* PrintMenuViewModelProtocol.swift in Sources */,
 				EADB5CAB2B190819005863E1 /* VideoCallInteractorProtocol.swift in Sources */,
 				56FEECF82B5C802C003FA686 /* SearchWalkyCammerRouter.swift in Sources */,
+				569889AE2C462E2D006D5997 /* TimedLoadingScreenInteractor.swift in Sources */,
 				56B3E46F2C3D8443004A87FA /* ScheduleVideoCallInteractor.swift in Sources */,
 				EA8652DF2B90DCE900B86A54 /* PrintMenuInteractorProtocol.swift in Sources */,
 				561D83A22BE90D930045C540 /* CamerAvailabilityViewModelProtocol.swift in Sources */,
@@ -11075,6 +11514,7 @@
 				EA15B5AC2AD706DB00C03407 /* BottomSheetModifier.swift in Sources */,
 				EA282E552AE952F700B90920 /* ProfileViewModelProtocol.swift in Sources */,
 				5604D0D62C1157C60069C0D6 /* DroneConnectionInteractor.swift in Sources */,
+				56988A042C46AF50006D5997 /* ThermalCameraPageView.swift in Sources */,
 				EA91101F2ADDADE100584B98 /* HomeRouter.swift in Sources */,
 				EACFDF1B2BA7EF3E00B08990 /* UnreleasedFeatureRouterProtocol.swift in Sources */,
 				EA3E5C922B87692400158207 /* AssistantMenuAssemblerProtocol.swift in Sources */,
@@ -11088,6 +11528,7 @@
 				EA94A5302B7160EF00EC3037 /* ServiceDetailsViewModelProtocol.swift in Sources */,
 				EA5E1D712AD7167300738A8F /* LinkButtonStyle.swift in Sources */,
 				EAF47C1B2B830C80003F8B86 /* WalkyCammerListRouterProtocol.swift in Sources */,
+				561853AA2C589F5E00CBD687 /* StartScheduleVideocallUseCase.swift in Sources */,
 				EA2F93FA2B62CECD00E1C146 /* LoginInteractorProtocol.swift in Sources */,
 				EAE8EC472B9574840003AE96 /* ChatDetailAssembler.swift in Sources */,
 				561AA6F02BE3A6B500393CEF /* FeatureInformationRouter.swift in Sources */,
@@ -11117,6 +11558,7 @@
 				EA172B242AF06EF600EB1514 /* StartupInteractor.swift in Sources */,
 				EA20A5182B87C913006662FA /* Scan3DMenuInteractor.swift in Sources */,
 				EA20A5132B87C913006662FA /* Scan3DMenuAssembler.swift in Sources */,
+				567CB7772C51885600112F05 /* ServiceConfirmationView.swift in Sources */,
 				EA6083B92B01D9E100295069 /* GalleryInteractor.swift in Sources */,
 				EA0E40C32AF70E86002B7437 /* CashWalletRoute.swift in Sources */,
 				EA910F602AD9B01300584B98 /* OnboardingViewModel.swift in Sources */,
@@ -11137,6 +11579,7 @@
 				EAF47BC52B8306E9003F8B86 /* TimeTabViewModel.swift in Sources */,
 				56A6BE942BE2EFC7007EBF13 /* IdentityUploadModel.swift in Sources */,
 				EA15B59E2AD6E44D00C03407 /* LoginRouter.swift in Sources */,
+				567CB7752C51885600112F05 /* ServiceConfirmationRouter.swift in Sources */,
 				EA282ECC2AEB531100B90920 /* FunctionsView.swift in Sources */,
 				EA86534E2B90EBE800B86A54 /* ConfigureAccessViewModelProtocol.swift in Sources */,
 				EAE8EC592B9574840003AE96 /* ChatListRouterProtocol.swift in Sources */,
@@ -11161,8 +11604,10 @@
 				EAF47B7D2B82FCE8003F8B86 /* BookWalkycamerAssembler.swift in Sources */,
 				EAA1E63B2AFB03FD00A42174 /* CashTabRoute.swift in Sources */,
 				EA8EF8DE2B67E24400136D1F /* KeychainPersistenceProtocol.swift in Sources */,
+				569889D82C46AE85006D5997 /* ThermalCameraOnboardingAssembler.swift in Sources */,
 				EAE401FF2BBAFB0900B1311E /* RobotMenuRouter.swift in Sources */,
 				EA910FF02ADCBCC000584B98 /* MenuRoute.swift in Sources */,
+				569889D32C46AE85006D5997 /* ThermalCameraOnboardingRouter.swift in Sources */,
 				EAF47BF12B83099F003F8B86 /* MapTabView.swift in Sources */,
 				EA86537D2B90FA8800B86A54 /* AIMenuRouter.swift in Sources */,
 				EA6083452AFD58A900295069 /* CryptoTabRouter.swift in Sources */,
@@ -11176,6 +11621,7 @@
 				EA4A1C652B87909F00B5FC59 /* ExternalAssistantView.swift in Sources */,
 				EAF47BEB2B83099F003F8B86 /* MapTabModel.swift in Sources */,
 				EA50A08E2B0BC77F0042B238 /* PlansPagesAssemblerProtocol.swift in Sources */,
+				56A2999A2C46116600D437C5 /* GetUserPlanUseCase.swift in Sources */,
 				EA57A7D42B6C2C31006247DD /* AddPeopleTransmissionRouter.swift in Sources */,
 				EA57A7AB2B6C1558006247DD /* CammerDetailsAssembler.swift in Sources */,
 				EA0E40BD2AF70E86002B7437 /* CashWalletView.swift in Sources */,
@@ -11217,6 +11663,7 @@
 				EAF47BC82B8306E9003F8B86 /* TimeTabInteractor.swift in Sources */,
 				EA0E40C22AF70E86002B7437 /* CashWalletModel.swift in Sources */,
 				EAF47BCC2B8306E9003F8B86 /* TimeTabRoute.swift in Sources */,
+				561853AF2C58AC8900CBD687 /* ScheduleVideoCallUseCase.swift in Sources */,
 				561D83E72BE91EDF0045C540 /* LegalDocumentationInteractorProtocol.swift in Sources */,
 				EA86526B2B90AC8300B86A54 /* IOTMenuInteractor.swift in Sources */,
 				EAF47C832B839308003F8B86 /* FlightMenuAssembler.swift in Sources */,
@@ -11284,13 +11731,16 @@
 				EA4AE4942B75136600B5A89F /* UpdateStreetcamConfigurationUseCase.swift in Sources */,
 				EA6083442AFD58A900295069 /* CryptoTabInteractorProtocol.swift in Sources */,
 				56F8AE262C247BE000EC7D4F /* IOTSensorsInteractor.swift in Sources */,
+				569889D92C46AE85006D5997 /* ThermalCameraOnboardingAssemblerProtocol.swift in Sources */,
 				EAF47B4B2B82F7EA003F8B86 /* VideocallOnboardingRoute.swift in Sources */,
 				EA172B252AF06EF600EB1514 /* StartupInteractorProtocol.swift in Sources */,
 				EA8652FF2B90E0FB00B86A54 /* LidarOnboardingModel.swift in Sources */,
 				561AA6C72BE30A9900393CEF /* FeatureSelectionViewModel.swift in Sources */,
 				569BA76C2C2DF55200E4CCF1 /* GamesModel.swift in Sources */,
+				569889D62C46AE85006D5997 /* ThermalCameraOnboardingViewModel.swift in Sources */,
 				56459FAC2BFFB5FD00776F68 /* InformationViewStyle.swift in Sources */,
 				EA6083E12B01DBE000295069 /* GalleryPhotosAssemblerProtocol.swift in Sources */,
+				567CB7722C51885600112F05 /* ServiceConfirmationRoute.swift in Sources */,
 				561D83C12BE916D70045C540 /* AvailabilityTabRouter.swift in Sources */,
 				EA5E1D742AD716A500738A8F /* ProjectFont.swift in Sources */,
 				EAA1E6402AFB03FD00A42174 /* CashTabView.swift in Sources */,
@@ -11309,7 +11759,9 @@
 				EA6083B52B01D9E100295069 /* GalleryViewModel.swift in Sources */,
 				EAF47BCB2B8306E9003F8B86 /* TimeTabRouter.swift in Sources */,
 				EA5A88042B68039400BBB7F9 /* LoginOutput.swift in Sources */,
+				569889B02C462E2D006D5997 /* TimedLoadingScreenRouter.swift in Sources */,
 				EAF47C422B838D74003F8B86 /* DroneMenuRouterProtocol.swift in Sources */,
+				567CB7782C51885600112F05 /* ServiceConfirmationViewModel.swift in Sources */,
 				EA6083DE2B01DBDF00295069 /* GalleryPhotosRouterProtocol.swift in Sources */,
 				EA6083DF2B01DBE000295069 /* GalleryPhotosRouter.swift in Sources */,
 				EA20A5112B87C913006662FA /* Scan3DMenuModel.swift in Sources */,
@@ -11334,12 +11786,14 @@
 				EA172B1E2AF06EF600EB1514 /* StartupRoute.swift in Sources */,
 				EA15B59B2AD6E44D00C03407 /* LoginView.swift in Sources */,
 				EA6083692B01981800295069 /* CryptoDetailsRouterProtocol.swift in Sources */,
+				567CB7742C51885600112F05 /* ServiceConfirmationInteractorProtocol.swift in Sources */,
 				EAF47C8B2B839308003F8B86 /* FlightMenuModel.swift in Sources */,
 				EA6083B82B01D9E100295069 /* GalleryInteractorProtocol.swift in Sources */,
 				EA910F5E2AD9B01300584B98 /* OnboardingViewModelProtocol.swift in Sources */,
 				EA7219A12B057D3A00BE2D93 /* NewsItemView.swift in Sources */,
 				EA910FF12ADCBCC000584B98 /* MenuAssemblerProtocol.swift in Sources */,
 				EA6083912B01CD0A00295069 /* ShopTabInteractor.swift in Sources */,
+				569889D72C46AE85006D5997 /* ThermalCameraOnboardingViewModelProtocol.swift in Sources */,
 				EAF47B502B82F7EA003F8B86 /* VideocallOnboardingPageView.swift in Sources */,
 				EA3E5C912B87692400158207 /* AssistantMenuAssembler.swift in Sources */,
 				EA8652672B90AC8300B86A54 /* IOTMenuViewModel.swift in Sources */,
@@ -11351,6 +11805,7 @@
 				EA6083902B01CD0A00295069 /* ShopTabView.swift in Sources */,
 				EA06554E2BB5DA5D006148E7 /* RadarMenuInteractor.swift in Sources */,
 				EAE401FB2BBAFB0900B1311E /* RobotMenuView.swift in Sources */,
+				567CB76F2C51885600112F05 /* ServiceConfirmationModel.swift in Sources */,
 				EA91102B2ADDB05300584B98 /* ImageLoader.swift in Sources */,
 				565909672BF67742002FD2B5 /* TextMask.swift in Sources */,
 				EA57A7A92B6C1558006247DD /* CammerDetailsRoute.swift in Sources */,
@@ -11389,6 +11844,7 @@
 				EAF47C3B2B838D74003F8B86 /* DroneMenuAssembler.swift in Sources */,
 				EAA1E61E2AFAFA7100A42174 /* WCTopBarContainerView.swift in Sources */,
 				561D83982BE90D930045C540 /* CamerAvailabilityAssembler.swift in Sources */,
+				561853B92C65363100CBD687 /* MapBoxViewWrapper.swift in Sources */,
 				EA910F312AD8B55200584B98 /* Divider.swift in Sources */,
 				56A552302B2F6135006B1B17 /* WalkyCamerOnboardingViewModelProtocol.swift in Sources */,
 				EA8653052B90E0FB00B86A54 /* LidarOnboardingRouter.swift in Sources */,
@@ -11426,6 +11882,7 @@
 				EA910F652AD9B01300584B98 /* OnboardingRouterProtocol.swift in Sources */,
 				EAF47C182B830C80003F8B86 /* WalkyCammerListInteractorProtocol.swift in Sources */,
 				EA4A1C3E2B8788DB00B5FC59 /* SpecialistNotifiedAssembler.swift in Sources */,
+				56A2999E2C46265900D437C5 /* IconModifier.swift in Sources */,
 				EA2E65212BA8AEB60092A135 /* SubscriptionIntentInput.swift in Sources */,
 				EA6083B72B01D9E100295069 /* GalleryView.swift in Sources */,
 				EA0655482BB5DA5D006148E7 /* RadarMenuAssembler.swift in Sources */,
@@ -11448,6 +11905,7 @@
 				561AA6EF2BE3A6B500393CEF /* FeatureInformationInteractorProtocol.swift in Sources */,
 				EA57A7A62B6C1558006247DD /* CammerDetailsRouter.swift in Sources */,
 				EA12351A2B9A2B6200443CF8 /* Int64+Extension.swift in Sources */,
+				569889D52C46AE85006D5997 /* ThermalCameraOnboardingView.swift in Sources */,
 				EA8652432B902E4B00B86A54 /* FunctionMenuModel.swift in Sources */,
 				EA6083412AFD58A900295069 /* CryptoTabViewModelProtocol.swift in Sources */,
 				EAD0486D2AE22C530096E6AB /* RegistrationPlansInteractor.swift in Sources */,
@@ -11457,6 +11915,7 @@
 				EA8653292B90E9CA00B86A54 /* AIOnboardingInteractor.swift in Sources */,
 				EA4A1C182B87799100B5FC59 /* AvailableAssistantsInteractorProtocol.swift in Sources */,
 				EACFDF162BA7EF3E00B08990 /* UnreleasedFeatureViewModel.swift in Sources */,
+				567CB7762C51885600112F05 /* ServiceConfirmationRouterProtocol.swift in Sources */,
 				56459FAD2BFFB5FD00776F68 /* InformationView.swift in Sources */,
 				EA282E7C2AE9F14B00B90920 /* WCToggleStyle.swift in Sources */,
 				EA4A1C412B8788DB00B5FC59 /* SpecialistNotifiedView.swift in Sources */,
@@ -11510,6 +11969,7 @@
 				EA82DB532ADF605500E6B39A /* ReminderCardView.swift in Sources */,
 				569BA7962C2DF57E00E4CCF1 /* PlayBusinessRoute.swift in Sources */,
 				EA9110262ADDAE6400584B98 /* ProfileHeaderView.swift in Sources */,
+				567CB7732C51885600112F05 /* ServiceConfirmationInteractor.swift in Sources */,
 				EA57A7A82B6C1558006247DD /* CammerDetailsModel.swift in Sources */,
 				EAE8EC552B9574840003AE96 /* ChatListView.swift in Sources */,
 				EA8652452B902E4B00B86A54 /* FunctionMenuAssembler.swift in Sources */,
@@ -11529,6 +11989,7 @@
 				EA15B5B62AD7075600C03407 /* Router.swift in Sources */,
 				EA91101A2ADDADE100584B98 /* HomeViewModel.swift in Sources */,
 				56F8AE292C247BE000EC7D4F /* IOTSensorsRouterProtocol.swift in Sources */,
+				569889AA2C462E2D006D5997 /* TimedLoadingScreenAssembler.swift in Sources */,
 				EAF47C1C2B830C80003F8B86 /* WalkyCammerListModel.swift in Sources */,
 				EA0E40BF2AF70E86002B7437 /* CashWalletInteractor.swift in Sources */,
 				EA0E40902AF69771002B7437 /* CashWalletOnboardingInteractorProtocol.swift in Sources */,
@@ -11555,6 +12016,7 @@
 				EA57A7CB2B6C2C31006247DD /* AddPeopleTransmissionRoute.swift in Sources */,
 				EA57A7AE2B6C1C9B006247DD /* FooterView.swift in Sources */,
 				EA6083DD2B01DBDF00295069 /* GalleryPhotosInteractorProtocol.swift in Sources */,
+				569889D12C46AE85006D5997 /* ThermalCameraOnboardingInteractor.swift in Sources */,
 				EA06554C2BB5DA5D006148E7 /* RadarMenuViewModel.swift in Sources */,
 				EA910F362AD976F600584B98 /* CheckboxToggle.swift in Sources */,
 				EA6083932B01CD0A00295069 /* ShopTabRouterProtocol.swift in Sources */,
@@ -11579,6 +12041,7 @@
 				EAE8EC4A2B9574840003AE96 /* ChatDetailView.swift in Sources */,
 				EA0E40C12AF70E86002B7437 /* CashWalletRouter.swift in Sources */,
 				56A5522F2B2F6135006B1B17 /* WalkyCamerOnboardingViewModel.swift in Sources */,
+				569889AF2C462E2D006D5997 /* TimedLoadingScreenInteractorProtocol.swift in Sources */,
 				EAF47B7A2B82FCE8003F8B86 /* BookWalkycamerRouterProtocol.swift in Sources */,
 				56B3E49A2C3DA041004A87FA /* VideocallTimeTabAssembler.swift in Sources */,
 				EA7219A42B05863C00BE2D93 /* FavoriteItemView.swift in Sources */,
@@ -11589,6 +12052,7 @@
 				EA7219972B05612900BE2D93 /* WalkyBotModel.swift in Sources */,
 				EAF47C1A2B830C80003F8B86 /* WalkyCammerListRouter.swift in Sources */,
 				5663D6692BFBB27B00C6655E /* StartStreetcamUseCase.swift in Sources */,
+				569889B42C462E2D006D5997 /* TimedLoadingScreenViewModelProtocol.swift in Sources */,
 				EAB63BC42B83D63A0017BDA4 /* ARHandsMenuAssembler.swift in Sources */,
 				EA5103092BA7A9C900A2DE2E /* FetchAvailablePlansUseCase.swift in Sources */,
 				56A552552B2F6E3D006B1B17 /* StreetCamMenuRoute.swift in Sources */,
@@ -11645,6 +12109,7 @@
 				EA20A51B2B87C913006662FA /* Scan3DMenuRouter.swift in Sources */,
 				561FC8BE2B5C67FB005B6006 /* AsyncDataError.swift in Sources */,
 				561D83C92BE916D70045C540 /* AvailabilityTabModel.swift in Sources */,
+				569889AC2C462E2D006D5997 /* TimedLoadingScreenRoute.swift in Sources */,
 				EA94A52F2B7160EF00EC3037 /* ServiceDetailsViewModel.swift in Sources */,
 				EA4A1C662B87909F00B5FC59 /* ExternalAssistantInteractor.swift in Sources */,
 				EAF47BEF2B83099F003F8B86 /* MapTabViewModel.swift in Sources */,
@@ -11675,6 +12140,7 @@
 				EA282E112AE8327100B90920 /* DateFormat.swift in Sources */,
 				EA4A1C172B87799100B5FC59 /* AvailableAssistantsView.swift in Sources */,
 				56F8AE2B2C247BE000EC7D4F /* IOTSensorsViewModel.swift in Sources */,
+				569889B22C462E2D006D5997 /* TimedLoadingScreenView.swift in Sources */,
 				EA0E408F2AF69771002B7437 /* CashWalletOnboardingInteractor.swift in Sources */,
 				EA8653032B90E0FB00B86A54 /* LidarOnboardingInteractorProtocol.swift in Sources */,
 				56F8AE2A2C247BE000EC7D4F /* IOTSensorsView.swift in Sources */,
@@ -11699,6 +12165,7 @@
 				EA4A1C442B8788DB00B5FC59 /* SpecialistNotifiedRouterProtocol.swift in Sources */,
 				EAF47C122B830C80003F8B86 /* WalkyCammerListRoute.swift in Sources */,
 				EA4A1C432B8788DB00B5FC59 /* SpecialistNotifiedInteractor.swift in Sources */,
+				569889AD2C462E2D006D5997 /* TimedLoadingScreenModel.swift in Sources */,
 				EA86532F2B90E9CA00B86A54 /* AIOnboardingAssembler.swift in Sources */,
 				EA0E40C42AF70E86002B7437 /* CashWalletAssemblerProtocol.swift in Sources */,
 				EA60833E2AFD58A900295069 /* CryptoTabAssembler.swift in Sources */,
@@ -11731,9 +12198,12 @@
 				EA8652422B902E4B00B86A54 /* FunctionMenuRouterProtocol.swift in Sources */,
 				EA06554D2BB5DA5D006148E7 /* RadarMenuView.swift in Sources */,
 				EAF47BC92B8306E9003F8B86 /* TimeTabInteractorProtocol.swift in Sources */,
+				561853B12C58AC9D00CBD687 /* CancelVideoCallUseCase.swift in Sources */,
 				561AA6C92BE30A9900393CEF /* FeatureSelectionAssembler.swift in Sources */,
+				569889B32C462E2D006D5997 /* TimedLoadingScreenViewModel.swift in Sources */,
 				EA7219772B0553C900BE2D93 /* GalleryItemView.swift in Sources */,
 				561D83992BE90D930045C540 /* CamerAvailabilityAssemblerProtocol.swift in Sources */,
+				569889D22C46AE85006D5997 /* ThermalCameraOnboardingInteractorProtocol.swift in Sources */,
 				EA4A1C6B2B87909F00B5FC59 /* ExternalAssistantRoute.swift in Sources */,
 				EA86528F2B90ACC200B86A54 /* IOTOnboardingView.swift in Sources */,
 				5637A8162AD5DD72000586DF /* WalkyCamApp.swift in Sources */,
@@ -11751,6 +12221,7 @@
 				EA0E408E2AF69771002B7437 /* CashWalletOnboardingView.swift in Sources */,
 				EA8652442B902E4B00B86A54 /* FunctionMenuRoute.swift in Sources */,
 				EA282E5B2AE952F700B90920 /* ProfileRouterProtocol.swift in Sources */,
+				561853B72C629EB200CBD687 /* UpdateUserInfoUseCase.swift in Sources */,
 				EA20A5642B87D35B006662FA /* ShareSheetView.swift in Sources */,
 				EACFDF1C2BA7EF3E00B08990 /* UnreleasedFeatureRouter.swift in Sources */,
 				EAE8EC512B9574840003AE96 /* ChatListAssembler.swift in Sources */,
@@ -11770,10 +12241,12 @@
 				EA8653792B90FA8800B86A54 /* AIMenuViewModelProtocol.swift in Sources */,
 				5621B7032C2E605100BFD923 /* UnavailableFeatureViewModelProtocol.swift in Sources */,
 				EA86523C2B902E4B00B86A54 /* FunctionMenuViewModel.swift in Sources */,
+				5626C3962C74D9B600CC8004 /* WalkcamerRegistrationManager.swift in Sources */,
 				EAE402002BBAFB0900B1311E /* RobotMenuRoute.swift in Sources */,
 				EAF47C882B839308003F8B86 /* FlightMenuInteractorProtocol.swift in Sources */,
 				EA6083422AFD58A900295069 /* CryptoTabView.swift in Sources */,
 				EAB63BC32B83D63A0017BDA4 /* ARHandsMenuRoute.swift in Sources */,
+				56A2999C2C4611BA00D437C5 /* UserPlanOutput.swift in Sources */,
 				EAF47BF02B83099F003F8B86 /* MapTabViewModelProtocol.swift in Sources */,
 				EA5E1D8C2AD719C400738A8F /* TextInputView.swift in Sources */,
 				56FEECF62B5C802C003FA686 /* SearchWalkyCammerInteractorProtocol.swift in Sources */,
@@ -11806,6 +12279,7 @@
 				EA3E5C952B87692400158207 /* AssistantMenuViewModel.swift in Sources */,
 				EAE401A82BBA3D6100B1311E /* DigitalTwinsOnboardingModel.swift in Sources */,
 				56F3D46A2C16B9E0008CFE1B /* AppDelegate+DeviceOrientation.swift in Sources */,
+				561853B32C58B10000CBD687 /* UpdateVideoCallUseCase.swift in Sources */,
 				EAE8EC522B9574840003AE96 /* ChatListAssemblerProtocol.swift in Sources */,
 				EA20A5172B87C913006662FA /* Scan3DMenuView.swift in Sources */,
 				5604D0D52C1157C60069C0D6 /* DroneConnectionModel.swift in Sources */,
@@ -11813,6 +12287,7 @@
 				EA86532B2B90E9CA00B86A54 /* AIOnboardingRouterProtocol.swift in Sources */,
 				EAF47C3C2B838D74003F8B86 /* DroneMenuModel.swift in Sources */,
 				56B3E46B2C3D8443004A87FA /* ScheduleVideoCallModel.swift in Sources */,
+				568685D92C7D52550027709E /* UserFileOutput.swift in Sources */,
 				EA910F9C2ADC437300584B98 /* AlertModifier.swift in Sources */,
 				EA910FFB2ADCBCC000584B98 /* MenuRouterProtocol.swift in Sources */,
 				EAD0486E2AE22C530096E6AB /* RegistrationPlansInteractorProtocol.swift in Sources */,
@@ -11825,6 +12300,7 @@
 				56B3E4742C3D8443004A87FA /* ScheduleVideoCallViewModel.swift in Sources */,
 				EA57A7CF2B6C2C31006247DD /* AddPeopleTransmissionViewModel.swift in Sources */,
 				56A6BE9E2BE2EFC7007EBF13 /* IdentityUploadRoute.swift in Sources */,
+				569889B12C462E2D006D5997 /* TimedLoadingScreenRouterProtocol.swift in Sources */,
 				5621B6FE2C2E605100BFD923 /* UnavailableFeatureInteractorProtocol.swift in Sources */,
 				EA4165432AE706C6008CE66A /* NotificationsView.swift in Sources */,
 				EAF47C192B830C80003F8B86 /* WalkyCammerListInteractor.swift in Sources */,
@@ -11839,16 +12315,18 @@
 				561AA6EE2BE3A6B500393CEF /* FeatureInformationInteractor.swift in Sources */,
 				569BA7732C2DF55200E4CCF1 /* GamesViewModelProtocol.swift in Sources */,
 				EA910F922ADA06F500584B98 /* RegistrationInteractor.swift in Sources */,
+				569889D42C46AE85006D5997 /* ThermalCameraOnboardingRouterProtocol.swift in Sources */,
 				EA86537B2B90FA8800B86A54 /* AIMenuInteractorProtocol.swift in Sources */,
 				EA910FC52ADC495700584B98 /* TabBarAssembler.swift in Sources */,
 				EA82DB502ADF4DBB00E6B39A /* HomeSectionView.swift in Sources */,
 				561AA6C62BE30A9900393CEF /* FeatureSelectionView.swift in Sources */,
 				EAF47BF32B83099F003F8B86 /* MapTabInteractorProtocol.swift in Sources */,
 				EADB5CA72B190819005863E1 /* VideoCallViewModelProtocol.swift in Sources */,
+				567CB7702C51885600112F05 /* ServiceConfirmationAssembler.swift in Sources */,
 				EA4A1C682B87909F00B5FC59 /* ExternalAssistantRouter.swift in Sources */,
 				EA282E132AE832F100B90920 /* Date+Extension.swift in Sources */,
 				5621B6FD2C2E605100BFD923 /* UnavailableFeatureInteractor.swift in Sources */,
-				EA6083B42B01D9E100295069 /* GalleryModel.swift in Sources */,
+				EA6083B42B01D9E100295069 /* GalleryItemModel.swift in Sources */,
 				561AA6C42BE30A9900393CEF /* FeatureSelectionRouter.swift in Sources */,
 				561AA6EC2BE3A6B500393CEF /* FeatureInformationAssemblerProtocol.swift in Sources */,
 				561D83C02BE916D70045C540 /* AvailabilityTabInteractorProtocol.swift in Sources */,
@@ -11906,6 +12384,7 @@
 				EA8652922B90ACC200B86A54 /* IOTOnboardingRouterProtocol.swift in Sources */,
 				EAE401A92BBA3D6100B1311E /* DigitalTwinsOnboardingRoute.swift in Sources */,
 				56F8AE272C247BE000EC7D4F /* IOTSensorsInteractorProtocol.swift in Sources */,
+				569889AB2C462E2D006D5997 /* TimedLoadingScreenAssemblerProtocol.swift in Sources */,
 				EAF47B792B82FCE8003F8B86 /* BookWalkycamerInteractorProtocol.swift in Sources */,
 				56A5525F2B2F6E3D006B1B17 /* StreetCamMenuModel.swift in Sources */,
 				EA60838F2B01CD0A00295069 /* ShopTabViewModel.swift in Sources */,
@@ -11913,6 +12392,7 @@
 				56F8AE232C247BE000EC7D4F /* IOTSensorsAssembler.swift in Sources */,
 				EA8652B52B90DA9600B86A54 /* 3DPrintOnboardingViewModelProtocol.swift in Sources */,
 				EA1FD1BB2B1E932F000E583D /* VideoCallRoomView.swift in Sources */,
+				567CB7522C51564C00112F05 /* ServiceInformationManager.swift in Sources */,
 				EA910F6B2AD9CCF500584B98 /* PageControl.swift in Sources */,
 				EA2C4C2B2B7E5C9500F1EE26 /* DroneOnboardingPageView.swift in Sources */,
 				EAE8EC4D2B9574840003AE96 /* ChatDetailRouterProtocol.swift in Sources */,
@@ -11925,6 +12405,7 @@
 				56F8AE282C247BE000EC7D4F /* IOTSensorsRouter.swift in Sources */,
 				569BA7712C2DF55200E4CCF1 /* GamesView.swift in Sources */,
 				EAE8EC582B9574840003AE96 /* ChatListRouter.swift in Sources */,
+				569889DB2C46AE85006D5997 /* ThermalCameraOnboardingModel.swift in Sources */,
 				EA8652B62B90DA9600B86A54 /* 3DPrintOnboardingViewModel.swift in Sources */,
 				569BA7742C2DF55200E4CCF1 /* GamesAssembler.swift in Sources */,
 				EA20A4E82B87C3B4006662FA /* Scan3DOnboardingViewModelProtocol.swift in Sources */,
@@ -11962,6 +12443,7 @@
 				56A5522D2B2F6135006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift in Sources */,
 				EA0E40932AF69771002B7437 /* CashWalletOnboardingRoute.swift in Sources */,
 				EAE8EC462B9574840003AE96 /* ChatDetailAssemblerProtocol.swift in Sources */,
+				561A73F82C80BAF300EFB083 /* FetchUserFilesUseCase.swift in Sources */,
 				EA4165482AE706C6008CE66A /* NotificationsRoute.swift in Sources */,
 				EAA1E61C2AFAFA7100A42174 /* WCTopBarView.swift in Sources */,
 				EA8652B12B90DA9600B86A54 /* 3DPrintOnboardingModel.swift in Sources */,
@@ -11969,15 +12451,17 @@
 				EA5E1D932AD71ABB00738A8F /* Tokens.swift in Sources */,
 				EA4165422AE706C6008CE66A /* NotificationsViewModel.swift in Sources */,
 				EA910FC92ADC495700584B98 /* TabBarViewModel.swift in Sources */,
+				561853B52C58B13200CBD687 /* UpdateVideoCallInput.swift in Sources */,
 				5663D66B2BFBB2C800C6655E /* VideoCallOutput.swift in Sources */,
 				EA8652402B902E4B00B86A54 /* FunctionMenuInteractor.swift in Sources */,
-				EA94A5362B7160EF00EC3037 /* ServiceDetailsModel.swift in Sources */,
+				EA94A5362B7160EF00EC3037 /* ServiceDetailsItemModel.swift in Sources */,
 				56A5525B2B2F6E3D006B1B17 /* StreetCamMenuInteractorProtocol.swift in Sources */,
 				56A5525D2B2F6E3D006B1B17 /* StreetCamMenuRouterProtocol.swift in Sources */,
 				EA72199E2B05612900BE2D93 /* WalkyBotRouter.swift in Sources */,
 				EA910F8F2ADA06F500584B98 /* RegistrationViewModelProtocol.swift in Sources */,
 				EA2E651D2BA8ACF50092A135 /* CreateStripeSubscriptionIntentUseCase.swift in Sources */,
 				EA2C4C282B7E5C4300F1EE26 /* DroneOnboardingAssembler.swift in Sources */,
+				5615ECD22C503018002D31FA /* MenuPlanBannerView.swift in Sources */,
 				EA8652662B90AC8300B86A54 /* IOTMenuAssemblerProtocol.swift in Sources */,
 				EA20A4EF2B87C3B5006662FA /* Scan3DOnboardingRoute.swift in Sources */,
 				EAF47BA22B82FFF2003F8B86 /* CalendarTabRouterProtocol.swift in Sources */,

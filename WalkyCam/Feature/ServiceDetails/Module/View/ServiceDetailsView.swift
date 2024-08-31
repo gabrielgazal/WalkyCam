@@ -24,27 +24,36 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
                 headerView
                 Text("La invitación se enviará a los miembros de esta reunión al finalizar el proceso.")
                     .font(.projectFont(size: Tokens.Size.Font.regular))
-                    .isHidden(viewModel.service.title != "Video Call")
+                    .isHidden(viewModel.service.title != "Videollamada")
                 HStack(spacing: Tokens.Size.Spacing.regular) {
                     Image(viewModel.service.icon)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 45, height: 60)
                     Text(viewModel.service.title)
-                        .font(.projectFont(size: Tokens.Size.Font.large, weight: .bold))
+                        .font(.projectFont(size: Tokens.Size.Font.medium, weight: .bold))
                     Spacer()
                     Asset.Icons.accionesDetalle.swiftUIImage
                 }
                 VStack(spacing: 0) {
                     Divider()
-                    cellView("Día", Date().relativeTimeFormatted())
-                    cellView("Hora", "13:00 h")
-                    cellView("WalkCamer", "Diego Salas")
-                    cellView("Lugar de grabación", "New York")
-                    cellView("País", "United States")
+                    ForEach(viewModel.detailItems, id: \.self) { item in
+                        cellView(data: item)
+                    }
                 }
+                devicesView()
+                abilitiesView()
+                assistantView
+                pixelationView
             }
                    .padding(.horizontal, Tokens.Size.Spacing.large)
+            Asset.Ads.premium5.swiftUIImage
+                .resizable()
+                .scaledToFit()
+                .padding(.horizontal, -50)
+                .onTapGesture {
+                    router.routeToPlans()
+                }
         }
         .footer {
             VStack(spacing: Tokens.Size.Spacing.regular) {
@@ -52,18 +61,35 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
                            style: .standard,
                            descriptor: OrangeButtonStyleDescriptor(),
                            action: {
-                    router.routeToHome()
+                    Task {
+                        await viewModel.updateVideoCall(
+                            onSuccess: {
+                                router.routeToConfirmation()
+                            },
+                            onFailure: {}
+                        )
+                    }
                 })
+                .loading(viewModel.updateCallAsyncData.isLoading)
                 WCUIButton(title: "Cancelar",
                            style: .standard,
                            descriptor: BlackButtonStyleDescriptor(),
                            action: {
-                    router.dismiss()
-                    viewModel.cancelAction()
+                    Task {
+                        await viewModel.cancelVideoCall(
+                            onSuccess: {
+                                viewModel.cancelAction()
+                                router.dismiss()
+                            },
+                            onFailure: {}
+                        )
+                    }
                 })
+                .loading(viewModel.cancelCallAsyncData.isLoading)
             }
             .padding(Tokens.Size.Spacing.large)
         }
+        .navigation(router)
     }
 
     private var headerView: some View {
@@ -83,13 +109,16 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
         }
     }
 
-    private func cellView(_ title: String, _ value: String) -> some View {
+    private func cellView(data: ServiceDetailsItemModel) -> some View {
         return VStack(alignment: .leading,
                       spacing: Tokens.Size.Spacing.large) {
             HStack(spacing: Tokens.Size.Spacing.regular) {
-                Text(title)
+                Text(data.title)
                     .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
-                Text(value)
+                if let image = data.image {
+                    profileImage(image)
+                }
+                Text(data.value)
                     .font(.projectFont(size: Tokens.Size.Font.regular))
                 Spacer()
             }
@@ -97,14 +126,142 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
         }
                       .padding([.top], Tokens.Size.Spacing.large)
     }
+    
+    private func profileImage(_ urlString: String) -> some View {
+        VStack {
+            if let url = URL(string: urlString) {
+                AsyncImageView(imageLoadable: url) { status in
+                    Group {
+                        switch status {
+                        case .failured:
+                            placeholder
+                        case .loading:
+                            ProgressView()
+                        default:
+                            placeholder
+                        }
+                    }
+                }
+            } else {
+                placeholder
+            }
+        }
+        .frame(width: 32, height: 32)
+        .clipShape(Circle())
+    }
+    
+    private var placeholder: some View {
+        Image(systemName: "camera")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .padding(Tokens.Size.Spacing.large)
+            .cornerRadius(Tokens.Size.Border.Radius.medium)
+    }
+    
+    private func devicesView() -> some View {
+        return VStack(
+            alignment: .leading,
+            spacing: Tokens.Size.Spacing.regular) {
+                Text("Dispositivos")
+                    .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                ForEach(viewModel.devices, id: \.self) { item in
+                    itemView(icon: item.type.toIcon(), title: item.name)
+                }
+                Divider()
+            }
+            .isHidden(viewModel.devices.isEmpty || viewModel.service.title == "Videollamada")
+    }
+    
+    private func abilitiesView() -> some View {
+        return VStack(
+            alignment: .leading,
+            spacing: Tokens.Size.Spacing.regular) {
+                Text("Capacidades")
+                    .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                ForEach(viewModel.abilities, id: \.self) { item in
+                    itemView(icon: item.icon, title: "Apto \(item.name)")
+                }
+                Divider()
+            }
+            .isHidden(viewModel.abilities.isEmpty || viewModel.service.title == "Videollamada")
+    }
+    
+    private func itemView(icon: String, title: String) -> some View {
+        return HStack(alignment: .center,
+                      spacing: Tokens.Size.Spacing.regular) {
+            Image(icon)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 50, height: 24, alignment: .center)
+            Text(title)
+                .font(.projectFont(size: Tokens.Size.Font.regular))
+            Spacer()
+        }
+    }
+    
+    private var assistantView: some View {
+        VStack(
+            alignment: .leading,
+            spacing: Tokens.Size.Spacing.regular) {
+                HStack(alignment: .center,
+                       spacing: Tokens.Size.Spacing.small) {
+                    Text("Asistentes")
+                        .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                    Text("3")
+                        .font(.projectFont(size: Tokens.Size.Font.regular))
+                    Image(systemName: "eye")
+                        .renderingMode(.template)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 24, height: 24)
+                        .foregroundColor(.naranja)
+                }
+                Text("La invitación se enviará a los miembros de esta reunión al finalizar el proceso.")
+                    .font(.projectFont(size: Tokens.Size.Font.regular))
+                Divider()
+            }
+    }
+    
+    private var pixelationView: some View {
+        VStack(
+            alignment: .leading,
+            spacing: Tokens.Size.Spacing.regular) {
+                HStack(alignment: .center,
+                       spacing: Tokens.Size.Spacing.small) {
+                    Asset.Icons.pixelation.swiftUIImage
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 24)
+                    Text("Pixelado facial activado")
+                        .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                    Toggle(isOn: $viewModel.pixelationActive, label: {})
+                        .toggleStyle(WCNamelessToggleStyle())
+                }
+                Text("Al apagar este selector, estarás dejando de ocultar los rostros de las personas.")
+                    .font(.projectFont(size: Tokens.Size.Font.regular))
+            }
+            .padding(Tokens.Size.Spacing.large)
+            .background(
+                RoundedRectangle(cornerRadius: Tokens.Size.Border.Radius.huge)
+                    .fill(Color.blanco)
+                    .shadow(color: .black.opacity(0.16), radius: 8, x: 0, y: 2)
+            )
+    }
 }
 
 struct ServiceDetailsView_Previews: PreviewProvider {
     static var previews: some View {
     ServiceDetailsView(
         viewModel: ServiceDetailsViewModel(
-            currentStep: 4,
-            totalSteps: 4
+            interactor: ServiceDetailsInteractor(
+                useCases: .init(
+                    updateVideoCall: .empty,
+                    cancelVideoCall: .empty
+                )
+            ),
+            
+            currentStep: 3,
+            totalSteps: 3
         ),
             router: ServiceDetailsRouter(state: RouterState(isPresented: .constant(false)))
         )

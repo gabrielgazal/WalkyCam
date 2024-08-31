@@ -41,15 +41,18 @@ struct WCTopBarView: View {
                 Image(tab.iconName)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 24, height: 24)
+                    .frame(width: 20, height: 20)
             }
             Text(tab.title)
                 .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                .minimumScaleFactor(0.8)
                 .foregroundColor(fetchCurrentColor(tab))
+                .lineLimit(1)
+                .layoutPriority(1)
             Spacer()
         }
         .padding(.vertical, Tokens.Size.Spacing.small)
-        .padding(.horizontal, Tokens.Size.Spacing.regular)
+        .padding(.horizontal, Tokens.Size.Spacing.tiny)
         .background(
             ZStack {
                 Capsule()
@@ -58,6 +61,7 @@ struct WCTopBarView: View {
                     .fill(Color.blanco)
             }
         )
+        .frame(width: .infinity)
     }
 
     private func switchToTab(tab: WCTopBarItem) {

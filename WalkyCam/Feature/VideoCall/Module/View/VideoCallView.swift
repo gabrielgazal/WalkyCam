@@ -1,36 +1,37 @@
 import SwiftUI
 
 struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRouterProtocol>: View {
-
+    
     // MARK: - Dependencies
-
+    
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
-
+    
     // MARK: - Initialization
-
+    
     init(viewModel: ViewModel,
          router: Router) {
         self.viewModel = viewModel
         self.router = router
     }
-
+    
     // MARK: - View Body
-
+    
     var body: some View {
         VStack(alignment: .center,
                spacing: Tokens.Size.Spacing.regular) {
             Image(Asset.Icons.videoCall.name)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 100, height: 100)
+                .frame(width: 150)
             Text("Videollamada")
-                .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .bold))
+                .font(.projectFont(size: Tokens.Size.Font.larger, weight: .bold))
+                .multilineTextAlignment(.center)
             Spacer()
-                .frame(height: 30)
+                .frame(height: 15)
             HStack(spacing: Tokens.Size.Spacing.regular) {
                 verticalCard(title: "NUEVA",
-                             description: "Crea una nueva para compartir",
+                             description: "Crea una nueva para compartir.",
                              buttonTitle: "Crear",
                              icon: Asset.Icons.link.name,
                              action: {
@@ -43,22 +44,30 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
                                     )
                                 }
                             },
-                            onFailure: {
-                                
-                            }
+                            onFailure: {}
                         )
                     }
                 })
                 .loading(viewModel.createVideoCallAsyncData.isLoading)
                 verticalCard(title: "PROGRAMAR",
-                             description: "Programa con anterioridad",
+                             description: "Programar con anterioridad.",
                              buttonTitle: "Programar",
                              icon: Asset.Icons.calendar.name,
                              action: {
-                    router.routeToBookCammer()
+                    Task {
+                        await viewModel.startScheduleVideoCall(
+                            onSuccess: { callId in
+                                ServiceInformationManager.shared.updateCallId(callId)
+                                router.routeToBookCammer()
+                            },
+                            onFailure: {}
+                        )
+                    }
                 })
                 .loading(viewModel.scheduleVideoCallAsyncData.isLoading)
             }
+            .layoutPriority(1)
+
             horizontalCard(action: {
                 router.routeToMeetRoom(viewModel.assembleVideoCallLink())
             })
@@ -119,7 +128,7 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
             Text("Ingresa el código que has recebido.")
                 .font(.projectFont(size: Tokens.Size.Font.regular))
             HStack(spacing: Tokens.Size.Spacing.regular) {
-                TextInputView(text: $viewModel.videoCallLink,
+                TextInputView(text: .constant(""),
                               placeholder: "Ingresar código")
                 WCUIButton(title: "Unirme",
                            style: .outline,
@@ -127,7 +136,6 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
                            action: {
                     action?()
                 })
-                .disabled(viewModel.videoCallLink.isEmpty)
             }
         }
                .padding(Tokens.Size.Spacing.regular)
@@ -144,7 +152,8 @@ struct VideoCallView_Previews: PreviewProvider {
     VideoCallView(
         viewModel: VideoCallViewModel(
             interactor: VideoCallInteractor(
-                useCases: .init(createVideoCall: .empty)
+                useCases: .init(createVideoCall: .empty, 
+                                startSchedule: .empty)
             )
         ),
             router: VideoCallRouter(isPresented: .constant(false))

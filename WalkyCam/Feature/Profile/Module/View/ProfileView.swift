@@ -44,78 +44,95 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
                         .isHidden(!viewModel.isEditingModeEnabled)
                     }
                 VStack(spacing: Tokens.Size.Spacing.large) {
-                    Divider()
+                    premiumBanner
+                        .isHidden(viewModel.userData.planName == "premium")
                     Group {
-                        Toggle(isOn: $viewModel.userData.isWalkCamer) {
-                            Text(L10n.ProfileView.Toggle.walkycamer)
+                        VStack(spacing: 0) {
+                            assembleItemView(title: L10n.ProfileView.Field.name,
+                                             text: viewModel.userData.name,
+                                             editableText: $viewModel.temporaryName)
+                            assembleItemView(title: L10n.ProfileView.Field.lastname,
+                                             text: viewModel.userData.lastName,
+                                             editableText: $viewModel.temporaryLastname)
+                            assembleItemView(
+                                title: "Número de celular",
+                                text: viewModel.userData.phoneNumber,
+                                editableText: $viewModel.temporaryPhoneNumber
+                            )
+                            assembleItemView(
+                                title: "Sexo",
+                                text: viewModel.userData.gender,
+                                editableText: $viewModel.temporaryGender
+                            )
+                            assembleItemView(title: L10n.ProfileView.Field.birthDate,
+                                             text: viewModel.userData.birthDate,
+                                             editableText: $viewModel.temporaryBirthDate)
+                            assembleItemView(title: "Domicilio",
+                                             text: viewModel.userData.address,
+                                             editableText: $viewModel.temporaryAddress)
+                            assembleItemView(
+                                title: "Sobre mi",
+                                text: viewModel.userData.additionalInfo,
+                                editableText: $viewModel.temporaryAdditionalInfo
+                            )
                         }
-                        .toggleStyle(WCToggleStyle())
-                        .disabled(true)
-                        Divider()
-                    }
-                    .isHidden(viewModel.isEditingModeEnabled)
-                    assembleItemView(title: L10n.ProfileView.Field.name,
-                                     text: viewModel.userData.name,
-                                     editableText: $viewModel.temporaryName)
-                    Divider()
-                    assembleItemView(title: L10n.ProfileView.Field.lastname,
-                                     text: viewModel.userData.lastName,
-                                     editableText: $viewModel.temporaryLastname)
-                    Divider()
-                    assembleItemView(title: L10n.ProfileView.Field.birthDate,
-                                     text: viewModel.userData.birthDate,
-                                     editableText: $viewModel.temporaryBirthDate)
-                    Divider()
-                    Group {
+                        
                         Group {
-                            HStack(spacing: Tokens.Size.Spacing.regular) {
-                                Image(Asset.Icons.wIcon.name)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: Tokens.Size.Spacing.large, height: Tokens.Size.Spacing.large)
-                                VStack(alignment: .leading,
-                                       spacing: Tokens.Size.Spacing.tiny) {
-                                    Text(L10n.ProfileView.Convert.walkycamer)
-                                        .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
-                                    Text("(genera ganacias con nosotros)")
-                                        .font(.projectFont(size: Tokens.Size.Font.regular, weight: .regular))
+                            Group {
+                                HStack(spacing: Tokens.Size.Spacing.regular) {
+                                    Image(Asset.Icons.wIcon.name)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: Tokens.Size.Spacing.large, height: Tokens.Size.Spacing.large)
+                                    VStack(alignment: .leading,
+                                           spacing: Tokens.Size.Spacing.tiny) {
+                                        Text(L10n.ProfileView.Convert.walkycamer)
+                                            .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                                        Text("(genera ganacias con nosotros)")
+                                            .font(.projectFont(size: Tokens.Size.Font.regular, weight: .regular))
+                                    }
+                                    Spacer()
                                 }
-                                Spacer()
+                                .onTapGesture {
+                                    router.routeToRegisterCamer()
+                                }
+                                Divider()
+                                HStack(spacing: Tokens.Size.Spacing.regular) {
+                                    Image(systemName: "rectangle.portrait.and.arrow.right")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: Tokens.Size.Spacing.large, height: Tokens.Size.Spacing.large)
+                                    Text(L10n.ProfileView.Section.logout)
+                                        .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                                    Spacer()
+                                }
+                                .onTapGesture {
+                                    handleLogoutAction()
+                                }
+                                Divider()
                             }
-                            .onTapGesture {
-                                router.routeToRegisterCamer()
+                            .isHidden(viewModel.isEditingModeEnabled)
+                            Group {
+                                WCUIButton(title: L10n.ProfileView.Button.save,
+                                           style: .standard,
+                                           descriptor: OrangeButtonStyleDescriptor(),
+                                           action: {
+                                    Task {
+                                        await viewModel.updateInfo()
+                                    }
+                                })
+                                .loading(viewModel.asyncProfileInfo.isLoading)
+                                WCUIButton(title: L10n.ProfileView.Button.cancel,
+                                           style: .standard,
+                                           descriptor: BlackButtonStyleDescriptor(),
+                                           action: { viewModel.isEditingModeEnabled.toggle() })
                             }
-                            Divider()
-                            HStack(spacing: Tokens.Size.Spacing.regular) {
-                                Image(systemName: "rectangle.portrait.and.arrow.right")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: Tokens.Size.Spacing.large, height: Tokens.Size.Spacing.large)
-                                Text(L10n.ProfileView.Section.logout)
-                                    .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
-                                Spacer()
-                            }
-                            .onTapGesture {
-                                handleLogoutAction()
-                            }
-                            Divider()
+                            .isHidden(!viewModel.isEditingModeEnabled)
                         }
-                        .isHidden(viewModel.isEditingModeEnabled)
-                        Group {
-                            WCUIButton(title: L10n.ProfileView.Button.save,
-                                       style: .standard,
-                                       descriptor: OrangeButtonStyleDescriptor(),
-                                       action: {})
-                            WCUIButton(title: L10n.ProfileView.Button.cancel,
-                                       style: .standard,
-                                       descriptor: BlackButtonStyleDescriptor(),
-                                       action: { viewModel.isEditingModeEnabled.toggle() })
-                        }
-                        .isHidden(!viewModel.isEditingModeEnabled)
                     }
+                    .padding(.horizontal, Tokens.Size.Spacing.regular)
                 }
-            }
-            .padding(Tokens.Size.Spacing.regular)
+            } 
         }
                .background(Color.blanco)
                .navigation(router)
@@ -169,25 +186,55 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
             .scaledToFit()
     }
 
-    private func assembleItemView(title: String, text: String, editableText: Binding<String>) -> some View {
+    private func assembleItemView(title: String, text: String, editableText: Binding<String>?) -> some View {
         VStack(alignment: .leading,
-               spacing: Tokens.Size.Spacing.small) {
+               spacing: Tokens.Size.Spacing.large) {
             HStack(spacing: Tokens.Size.Spacing.regular) {
                 Text(title)
                     .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
-                Text(text)
+                Text(text.isEmpty ? "No informado" : text)
                     .font(.projectFont(size: Tokens.Size.Font.regular))
-                    .isHidden(viewModel.isEditingModeEnabled)
                 Spacer()
             }
-            TextInputView(text: editableText, placeholder: "")
-                .isHidden(!viewModel.isEditingModeEnabled)
+            .isHidden(viewModel.isEditingModeEnabled)
+            if let editableText = editableText {
+                TextInputView(text: editableText, topDescriptionText: title, placeholder: "", textColor: .negro)
+                    .isHidden(!viewModel.isEditingModeEnabled)
+            }
+            Divider()
         }
+               .padding([.top], Tokens.Size.Spacing.large)
     }
 
     private func handleLogoutAction() {
         viewModel.logout()
         router.routeToLogin()
+    }
+    
+    private var premiumBanner: some View {
+        ZStack {
+            Rectangle()
+                .fill(Color.negro)
+            HStack(alignment: .top,
+                   spacing: Tokens.Size.Spacing.small) {
+                Image(systemName: "crown.fill")
+                    .foregroundColor(Color.premium)
+                VStack(alignment: .leading,
+                       spacing: Tokens.Size.Spacing.small) {
+                    Text("Upgrade Plan Premium")
+                        .underline()
+                        .font(.projectFont(size: Tokens.Size.Font.medium, weight: .black))
+                        .foregroundColor(Color.premium)
+                    Text("Consigure TODOS los beneficios que WalkyCam oferece")
+                        .font(.projectFont(size: Tokens.Size.Font.regular))
+                        .foregroundColor(Color.blanco)
+                }
+            }
+                   .padding()
+        }
+        .onTapGesture {
+            router.routeToPlans()
+        }
     }
 }
 
@@ -196,7 +243,26 @@ struct ProfileView_Previews: PreviewProvider {
         ProfileView(
             viewModel: ProfileViewModel(
                 interactor: ProfileInteractor(
-                    useCases: .init(fetchUserDataUseCase: .empty)
+                    useCases: .init(
+                        fetchUserDataUseCase: .static(
+                            .init(
+                                id: "",
+                                userName: "username",
+                                name: "name",
+                                lastName: "lastname",
+                                email: "email",
+                                address: "address",
+                                phone: "12131231",
+                                birthDate: "12/20/2024",
+                                gender: "Masculino",
+                                additionalInfo: "additionalInfoadditionalInfoadditionalInfoadditionalInfoadditionalInfo",
+                                isWalkCamer: false,
+                                configurations: .init(),
+                                plan: .init()
+                            )
+                        ),
+                        updateInfo: .empty
+                    )
                 )
             ),
             router: ProfileRouter(state: RouterState(isPresented: .constant(false)))

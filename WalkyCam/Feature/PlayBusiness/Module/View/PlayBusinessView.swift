@@ -22,7 +22,7 @@ struct PlayBusinessView<ViewModel: PlayBusinessViewModelProtocol, Router: PlayBu
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.large) {
                 Group {
-                    Text("Scan 3D")
+                    Text("Play & Business")
                         .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                     HStack {
                         Image(Asset.Icons.lock.name)
@@ -46,6 +46,10 @@ struct PlayBusinessView<ViewModel: PlayBusinessViewModelProtocol, Router: PlayBu
                         }
                         HStack(spacing: Tokens.Size.Spacing.regular) {
                             squaredCell(icon: Asset.Icons.productos.name, title: "Muestra de Productos")
+                            squaredCell(icon: Asset.Icons.patenteDeIdea.name, title: "Idea de Negocio")
+                        }
+                        HStack(spacing: Tokens.Size.Spacing.regular) {
+                            squaredCell(icon: Asset.Icons.fitnessWatch.name, title: "Pulsera Fitness")
                             squaredCell(icon: Asset.Icons.surpriseBox.name, title: "Caja Surpresa")
                         }
                     }
