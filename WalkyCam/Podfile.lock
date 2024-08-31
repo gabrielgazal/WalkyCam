@@ -1,4 +1,7 @@
 PODS:
+  - DJI-SDK-iOS (4.16.2)
+  - DJI-UXSDK-iOS (4.16.2)
+  - DJIWidget (1.6.8)
   - Giphy (2.1.20):
     - libwebp
   - JitsiMeetSDK (8.6.2):
@@ -27,11 +30,17 @@ PODS:
   - Turf (2.8.0)
 
 DEPENDENCIES:
+  - DJI-SDK-iOS
+  - DJI-UXSDK-iOS
+  - DJIWidget
   - JitsiMeetSDK
   - MapboxMaps (= 11.3.0)
 
 SPEC REPOS:
   trunk:
+    - DJI-SDK-iOS
+    - DJI-UXSDK-iOS
+    - DJIWidget
     - Giphy
     - JitsiMeetSDK
     - JitsiWebRTC
@@ -42,6 +51,9 @@ SPEC REPOS:
     - Turf
 
 SPEC CHECKSUMS:
+  DJI-SDK-iOS: 44308a021c3b95a912be52c4e7a8e0a27e5434f5
+  DJI-UXSDK-iOS: 8a9db4bda9fcc38ccf9861fb7d7ba30d44c7791c
+  DJIWidget: 9d92abb52888cd6296717c93feacd8a703bf678a
   Giphy: b6d5087521d251bb8c99cdc0eb07bbdf86d142d5
   JitsiMeetSDK: 1f8369f2f30f5c9b9a3360a1b99fef5dc3bc7aa2
   JitsiWebRTC: 80f62908fcf2a1160e0d14b584323fb6e6be630b
@@ -51,6 +63,6 @@ SPEC CHECKSUMS:
   MapboxMaps: 5aba2ba70a85d08e0ea00ad011ca3d2965e69a59
   Turf: aa2ede4298009639d10db36aba1a7ebaad072a5e
 
-PODFILE CHECKSUM: 5f2846349396cfab7b7acc4288f1ea2438aa924b
+PODFILE CHECKSUM: c16deb470ded7b3ae8af478dfd8c1f9d918eb55c
 
 COCOAPODS: 1.14.3

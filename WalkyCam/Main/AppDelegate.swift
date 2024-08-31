@@ -16,6 +16,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         registerDependencies()
         initializeChatSDK()
         initializePaymentSDK()
+        registerDroneDependencies()
         return true
     }
 }

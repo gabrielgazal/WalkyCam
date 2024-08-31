@@ -45,7 +45,8 @@ final class HomeRouter: Router, HomeRouterProtocol {
 
     func routeToDrone() {
         navigateTo(
-            DroneMenuRoute(isPresented: isNavigating)
+//            DroneMenuRoute(isPresented: isNavigating)
+            DroneConnectionRoute(isPresented: isNavigating)
         )
     }
 

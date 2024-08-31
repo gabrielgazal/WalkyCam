@@ -8,5 +8,7 @@ target 'WalkyCam' do
   # Pods for WalkyCam
   pod 'JitsiMeetSDK'
   pod 'MapboxMaps', '11.3.0'
-
+  pod 'DJI-SDK-iOS'
+  pod 'DJI-UXSDK-iOS'
+  pod 'DJIWidget'
 end

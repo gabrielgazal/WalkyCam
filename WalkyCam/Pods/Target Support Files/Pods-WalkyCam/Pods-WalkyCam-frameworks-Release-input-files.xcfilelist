@@ -1,4 +1,8 @@
 ${PODS_ROOT}/Target Support Files/Pods-WalkyCam/Pods-WalkyCam-frameworks.sh
+${PODS_ROOT}/DJI-SDK-iOS/iOS_Mobile_SDK/DJISDK.framework
+${PODS_ROOT}/DJI-UXSDK-iOS/iOS_UX_SDK/DJIUXSDK.framework
+${PODS_ROOT}/DJIWidget/FFmpeg/FFmpeg.framework
+${BUILT_PRODUCTS_DIR}/DJIWidget/DJIWidget.framework
 ${BUILT_PRODUCTS_DIR}/MapboxMaps/MapboxMaps.framework
 ${BUILT_PRODUCTS_DIR}/Turf/Turf.framework
 ${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework
