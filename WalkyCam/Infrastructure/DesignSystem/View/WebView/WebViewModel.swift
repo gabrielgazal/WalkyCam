@@ -9,19 +9,23 @@ final class WebViewModel: NSObject, ObservableObject {
     private var popupWebView: WKWebView?
 
     let webView: WKWebView
+    
     init(
         url: URL,
-        webView: WKWebView = WKWebView(),
         disallowedPaths: [String: DisallowedFallback?] = [:],
         disallowedSchemes: [String: DisallowedFallback?] = [:]
     ) {
         self.url = url
-        webView.scrollView.showsVerticalScrollIndicator = false
-        webView.scrollView.showsHorizontalScrollIndicator = false
-        webView.configuration.preferences.javaScriptCanOpenWindowsAutomatically = true
-        webView.configuration.allowsInlineMediaPlayback = true
+        var configuration = WKWebViewConfiguration()
+        
+        configuration.allowsInlineMediaPlayback = true
+        
+        self.webView = WKWebView(
+            frame: .zero,
+            configuration: configuration
+        )
         webView.setPullToRefresh()
-        self.webView = webView
+        
         self.disallowedPaths = disallowedPaths.reduce(into: [:]) { result, keyValue in
             let lowercaseKey = keyValue.key.lowercased()
             result[lowercaseKey] = keyValue.value
@@ -45,6 +49,17 @@ extension WebViewModel: WKNavigationDelegate {
     }
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        let script = """
+            document.addEventListener('webkitfullscreenchange', function() {
+                if (!document.webkitIsFullScreen) {
+                    var videos = document.getElementsByTagName('video');
+                    for (var i = 0; i < videos.length; i++) {
+                        videos[i].play();
+                    }
+                }
+            });
+            """
+        webView.evaluateJavaScript(script, completionHandler: nil)
         webView.refreshControl?.endRefreshing()
         asyncLoading = .loaded(webView)
     }
@@ -113,4 +128,16 @@ extension WebViewModel: WKUIDelegate {
         webView.removeFromSuperview()
         popupWebView = nil
     }
+    
+    func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
+           completionHandler()
+       }
+
+       func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (Bool) -> Void) {
+           completionHandler(true)
+       }
+
+       func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (String?) -> Void) {
+           completionHandler(defaultText)
+       }
 }

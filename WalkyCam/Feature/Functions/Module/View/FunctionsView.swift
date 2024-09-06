@@ -138,7 +138,7 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
                                     router.routeToLawConsulting()
                                 case "Link to CRM/ERP":
                                     router.routeToCRM()
-                                case "Ecografia":
+                                case "Ecografía":
                                     router.routeToEcografia()
                                 case "Detector de metales":
                                     router.routeToDetectorMetales()
