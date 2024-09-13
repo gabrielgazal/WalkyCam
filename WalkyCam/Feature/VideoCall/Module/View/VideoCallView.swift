@@ -69,7 +69,12 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
             .layoutPriority(1)
 
             horizontalCard(action: {
-                router.routeToMeetRoom(viewModel.assembleVideoCallLink())
+                switch viewModel.assembleVideoCallLink() {
+                case let .success(meetUrl):
+                    router.routeToMeetRoom(meetUrl)
+                case .failure:
+                    return
+                }
             })
         }
                .padding(Tokens.Size.Spacing.regular)
@@ -128,7 +133,7 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
             Text("Ingresa el código que has recebido.")
                 .font(.projectFont(size: Tokens.Size.Font.regular))
             HStack(spacing: Tokens.Size.Spacing.regular) {
-                TextInputView(text: .constant(""),
+                TextInputView(text: $viewModel.videoCallLink,
                               placeholder: "Ingresar código")
                 WCUIButton(title: "Unirme",
                            style: .outline,
