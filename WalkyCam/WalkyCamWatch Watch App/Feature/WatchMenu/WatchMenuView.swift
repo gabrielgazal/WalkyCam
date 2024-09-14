@@ -5,6 +5,10 @@ struct WatchMenuView: View {
     // MARK: - Initialization
     @ObservedObject var viewModel: WatchMenuViewModel
     
+    public init(viewModel: WatchMenuViewModel = .init()) {
+        self.viewModel = viewModel
+    }
+    
     // MARK: - View Body
     
     var body: some View {
