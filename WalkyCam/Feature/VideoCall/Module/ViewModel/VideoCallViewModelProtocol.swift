@@ -5,7 +5,7 @@ protocol VideoCallViewModelProtocol: ViewModelProtocol {
     var createVideoCallAsyncData: AsyncData<String, ErrorProtocol> { get set }
     var scheduleVideoCallAsyncData: AsyncData<String, ErrorProtocol> { get set }
     
-    func assembleVideoCallLink() -> String
+    func assembleVideoCallLink() -> Result<String, Error>
     func createVideoCall(onSuccess: ((String) -> Void)?, onFailure: (() -> Void)?) async
     func startScheduleVideoCall(onSuccess: ((String) -> Void)?, onFailure: (() -> Void)?) async
 }

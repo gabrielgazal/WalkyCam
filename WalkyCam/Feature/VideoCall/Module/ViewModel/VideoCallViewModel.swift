@@ -17,12 +17,23 @@ final class VideoCallViewModel: VideoCallViewModelProtocol {
     
     // MARK: - Public API
     
-    func assembleVideoCallLink() -> String {
-        guard let userId = try? UserSession().user().id else {
-            fatalError("Unable to locate user id")
+    func assembleVideoCallLink() -> Result<String, Error> {
+        do {
+            let userId = try UserSession().user().id
+
+            if videoCallLink.starts(with: "https://meet.walkycam.com/") {
+                return .success(videoCallLink)
+            } else if videoCallLink.starts(with: "meet.walkycam.com/") {
+                return .success("httpS://\(videoCallLink)")
+            }
+            
+            let videoCallURL = "https://meet.walkycam.com/videocall/\(videoCallLink)/\(userId)"
+            return .success(videoCallURL)
+        } catch {
+            return .failure(error)
         }
-        return "https://meet.walkycam.com/videocall/\(videoCallLink)/\(userId)"
     }
+
     
     @MainActor func createVideoCall(onSuccess: ((String) -> Void)?, onFailure: (() -> Void)?) async {
         createVideoCallAsyncData = .loading
