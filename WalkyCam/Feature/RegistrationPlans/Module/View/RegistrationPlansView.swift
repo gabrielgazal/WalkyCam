@@ -26,7 +26,7 @@ struct RegistrationPlansView<ViewModel:RegistrationPlansViewModelProtocol, Route
                     .resizable()
                     .renderingMode(.template)
                     .aspectRatio(contentMode: .fit)
-                    .frame(height: Tokens.Size.Spacing.large)
+                    .frame(height: Tokens.Size.Spacing.big)
                     .foregroundColor(.naranja)
                 Text(L10n.RegistrationPlans.title)
                     .font(.projectFont(size: Tokens.Size.Font.huge, weight: .bold))
@@ -100,13 +100,21 @@ struct RegistrationPlansView<ViewModel:RegistrationPlansViewModelProtocol, Route
                     .font(.projectFont(size: Tokens.Size.Font.larger, weight: .bold))
                         .foregroundColor(Color.blanco)
                 }
-                LinkButton(
-                    title: L10n.RegistrationPlans.Plan.Button.title,
-                    color: .blanco) {
-                        handlePlanAction(item.order - 1)
-                    }
+                HStack {
+                    WCUIButton(
+                        title: L10n.RegistrationPlans.Plan.Button.title,
+                        style: .outline,
+                        descriptor: WhiteButtonStyleDescriptor()) {
+                            handlePlanAction(item.order - 1)
+                        }
+                        .frame(width: 100)
+                    Spacer()
+                }
             }
                    .padding(Tokens.Size.Spacing.regular)
+        }
+        .onTapGesture {
+            handlePlanAction(item.order - 1)
         }
     }
 

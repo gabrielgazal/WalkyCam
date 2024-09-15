@@ -398,7 +398,7 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
     
     func routeToRegistrationPlans() {
         navigateTo(
-            RegistrationPlansRoute(isPresented: isNavigating)
+            PlansPagesRoute(isPresented: isNavigating, currentPage: 3)
         )
     }
     

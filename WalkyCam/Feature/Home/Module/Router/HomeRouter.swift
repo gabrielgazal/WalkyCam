@@ -65,7 +65,7 @@ final class HomeRouter: Router, HomeRouterProtocol {
     
     func routeToRegistrationPlans() {
         navigateTo(
-            RegistrationPlansRoute(isPresented: isNavigating)
+            PlansPagesRoute(isPresented: isNavigating, currentPage: 3)
         )
     }
     
