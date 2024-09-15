@@ -47,7 +47,13 @@ struct WatchLocationView: View {
                             .renderingMode(.template)
                             .foregroundColor(.blanco)
                     }
-                    .onTapGesture {}
+                    .onTapGesture {
+                        navigateToNextView = true
+                    }
+                NavigationLink(destination: WatchPageView(), isActive: $navigateToNextView) {
+                    EmptyView()
+                }
+                .buttonStyle(PlainButtonStyle())
             }
             .padding()
         }

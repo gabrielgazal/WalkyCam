@@ -121,6 +121,7 @@
 		56459FA82BFFB4D300776F68 /* SnackBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56459FA02BFFB4D300776F68 /* SnackBarView.swift */; };
 		56459FAC2BFFB5FD00776F68 /* InformationViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56459FAA2BFFB5FC00776F68 /* InformationViewStyle.swift */; };
 		56459FAD2BFFB5FD00776F68 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56459FAB2BFFB5FD00776F68 /* InformationView.swift */; };
+		5652B10D2C96BE1E000D32FD /* WatchPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5652B10C2C96BE1E000D32FD /* WatchPageView.swift */; };
 		565343682C08D9BC002C2F36 /* UpdateARHandsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565343672C08D9BC002C2F36 /* UpdateARHandsConfiguration.swift */; };
 		5653436B2C08F03D002C2F36 /* UpdateScan3DConfigurationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5653436A2C08F03D002C2F36 /* UpdateScan3DConfigurationUseCase.swift */; };
 		565909642BF2A016002FD2B5 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 565909632BF2A016002FD2B5 /* PrivacyInfo.xcprivacy */; };
@@ -1265,6 +1266,7 @@
 		56459FA02BFFB4D300776F68 /* SnackBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnackBarView.swift; sourceTree = "<group>"; };
 		56459FAA2BFFB5FC00776F68 /* InformationViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewStyle.swift; sourceTree = "<group>"; };
 		56459FAB2BFFB5FD00776F68 /* InformationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		5652B10C2C96BE1E000D32FD /* WatchPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPageView.swift; sourceTree = "<group>"; };
 		565343672C08D9BC002C2F36 /* UpdateARHandsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateARHandsConfiguration.swift; sourceTree = "<group>"; };
 		5653436A2C08F03D002C2F36 /* UpdateScan3DConfigurationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateScan3DConfigurationUseCase.swift; sourceTree = "<group>"; };
 		565909632BF2A016002FD2B5 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
@@ -3162,6 +3164,14 @@
 			path = InformationView;
 			sourceTree = "<group>";
 		};
+		5652B10B2C96BE10000D32FD /* WatchPageView */ = {
+			isa = PBXGroup;
+			children = (
+				5652B10C2C96BE1E000D32FD /* WatchPageView.swift */,
+			);
+			path = WatchPageView;
+			sourceTree = "<group>";
+		};
 		565343662C08D9A4002C2F36 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
@@ -3432,6 +3442,7 @@
 		568974B72C90B44D001A214E /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				5652B10B2C96BE10000D32FD /* WatchPageView */,
 				56A322D42C96B3F900B5FE4B /* WatchLocationView */,
 				56A322BF2C969C2700B5FE4B /* WatchSearchView */,
 				568974CF2C90B7BD001A214E /* WatchMenu */,
@@ -12531,6 +12542,7 @@
 				56A322C92C96A72100B5FE4B /* View+Extension.swift in Sources */,
 				56A322D82C96B45300B5FE4B /* WatchLocationViewModel.swift in Sources */,
 				568974C92C90B575001A214E /* KeychainError.swift in Sources */,
+				5652B10D2C96BE1E000D32FD /* WatchPageView.swift in Sources */,
 				56A322C12C969C4300B5FE4B /* WatchSearchView.swift in Sources */,
 				568974CA2C90B575001A214E /* KeychainProtocol.swift in Sources */,
 				56A322CB2C96ACF000B5FE4B /* WatchSearchViewModel.swift in Sources */,
