@@ -8,10 +8,9 @@ struct NotificationsView<ViewModel: NotificationsViewModelProtocol, Router: Noti
     @ObservedObject private var router: Router
 
     var notificationsGroupedByDate: [Date: [NotificationModel]] {
-        Dictionary(grouping: viewModel.notifications) { item in
-            let convertedDate = Calendar.current.startOfDay(for: item.date)
-            return convertedDate
-        }
+        Dictionary(grouping: viewModel.notifications, by: { item in
+            Calendar.current.startOfDay(for: item.date)
+        })
     }
 
     var headers: [Date] {

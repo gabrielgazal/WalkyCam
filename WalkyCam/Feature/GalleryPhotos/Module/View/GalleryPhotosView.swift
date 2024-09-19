@@ -8,10 +8,9 @@ struct GalleryPhotosView<ViewModel: GalleryPhotosViewModelProtocol, Router: Gall
     @ObservedObject private var router: Router
 
     var notificationsGroupedByDate: [Date: [GalleryItemModel]] {
-        Dictionary(grouping: viewModel.photosData) { item in
-            let convertedDate = Calendar.current.startOfDay(for: item.creationDate)
-            return convertedDate
-        }
+        Dictionary(grouping: viewModel.photosData, by: { item in
+            Calendar.current.startOfDay(for: item.creationDate)
+        })
     }
 
     var headers: [Date] {
