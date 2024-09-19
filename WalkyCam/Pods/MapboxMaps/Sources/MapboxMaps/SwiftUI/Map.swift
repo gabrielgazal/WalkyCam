@@ -43,13 +43,10 @@ import SwiftUI
 /// ```
 ///
 /// Check out the <doc:SwiftUI-User-Guide> for more information about ``Map`` capabilities, and the <doc:Map-Content-Gestures-User-Guide> for more information about gesture handling.
-@_documentation(visibility: public)
-@_spi(Experimental)
 @available(iOS 13.0, *)
 public struct Map: UIViewControllerRepresentable {
-    private var viewport: ConstantOrBinding<Viewport>
     var mapDependencies = MapDependencies()
-    private var mapContentVisitor = DefaultMapContentVisitor()
+    private var viewport: ConstantOrBinding<Viewport>
     private let urlOpenerProvider: URLOpenerProvider
 
     @Environment(\.layoutDirection) var layoutDirection
@@ -59,11 +56,10 @@ public struct Map: UIViewControllerRepresentable {
     /// - Parameters:
     ///     - viewport: The camera viewport to display.
     ///     - content: A map content building closure.
-    @_documentation(visibility: public)
     @available(iOSApplicationExtension, unavailable)
     public init(
         viewport: Binding<Viewport>,
-        @MapContentBuilder content: @escaping () -> MapContent
+        @MapContentBuilder content: @escaping () -> some MapContent
     ) {
         self.init(
             _viewport: .binding(viewport),
@@ -76,11 +72,10 @@ public struct Map: UIViewControllerRepresentable {
     /// - Parameters:
     ///     - initialViewport: The camera viewport to display.
     ///     - content: A map content building closure.
-    @_documentation(visibility: public)
     @available(iOSApplicationExtension, unavailable)
     public init(
         initialViewport: Viewport = .styleDefault,
-        @MapContentBuilder content: @escaping () -> MapContent
+        @MapContentBuilder content: @escaping () -> some MapContent
     ) {
         self.init(
             _viewport: .constant(initialViewport),
@@ -91,42 +86,46 @@ public struct Map: UIViewControllerRepresentable {
     private init(
         _viewport: ConstantOrBinding<Viewport>,
         urlOpenerProvider: URLOpenerProvider,
-        content: (() -> MapContent)? = nil
+        content: (() -> any MapContent)? = nil
     ) {
         self.viewport = _viewport
         self.urlOpenerProvider = urlOpenerProvider
-        content?()
-            .visit(mapContentVisitor)
+        if let makeContent = content {
+            mapDependencies.mapContent = makeContent
+        }
     }
 
     public func makeCoordinator() -> Coordinator {
         let urlOpener = ClosureURLOpener()
+        sendTelemetry(\.swiftUI)
         let mapView = MapView(frame: .zero, urlOpener: urlOpener)
-        let vc = MapViewController(mapView: mapView)
+        let viewController = MapViewController(mapView: mapView)
 
-        let basicCoordinator = MapBasicCoordinator(
-            setViewport: viewport.setter,
-            mapView: MapViewFacade(from: mapView))
-
-        let viewAnnotationCoordinator = ViewAnnotationCoordinator(
-            viewAnnotationsManager: mapView.viewAnnotations,
-            addViewController: { childVC in
-                vc.addChild(childVC)
-                childVC.didMove(toParent: vc)
+        let mapContentDependencies = MapContentDependencies(
+            layerAnnotations: Ref.weakRef(mapView, property: \.annotations),
+            viewAnnotations: Ref.weakRef(mapView, property: \.viewAnnotations),
+            location: Ref.weakRef(mapView, property: \.location),
+            addAnnotationViewController: { [weak viewController] childVC in
+                guard let viewController else { return }
+                viewController.addChild(childVC)
+                childVC.didMove(toParent: viewController)
             },
-            removeViewController: { childVC in
+            removeAnnotationViewController: { childVC in
                 childVC.willMove(toParent: nil)
                 childVC.removeFromParent()
             }
         )
 
-        let layerAnnotationCoordinator = LayerAnnotationCoordinator(annotationOrchestrator: mapView.annotations)
+        mapView.mapboxMap.setMapContentDependencies(mapContentDependencies)
+
+        let basicCoordinator = MapBasicCoordinator(
+            setViewport: viewport.setter,
+            mapView: MapViewFacade(from: mapView)
+        )
 
         return Coordinator(
             basic: basicCoordinator,
-            viewAnnotation: viewAnnotationCoordinator,
-            layerAnnotation: layerAnnotationCoordinator,
-            viewController: vc,
+            viewController: viewController,
             urlOpener: urlOpener,
             mapView: mapView)
     }
@@ -134,6 +133,7 @@ public struct Map: UIViewControllerRepresentable {
     public func makeUIViewController(context: Context) -> UIViewController {
         context.coordinator.urlOpener.openURL = urlOpenerProvider.resolve(in: context.environment)
         context.environment.mapViewProvider?.mapView = context.coordinator.mapView
+
         return context.coordinator.viewController
     }
 
@@ -144,13 +144,9 @@ public struct Map: UIViewControllerRepresentable {
             deps: mapDependencies,
             layoutDirection: layoutDirection,
             animationData: context.transaction.viewportAnimationData)
-        context.coordinator.layerAnnotation.update(annotations: mapContentVisitor.annotationGroups)
-        context.coordinator.viewAnnotation.updateAnnotations(to: mapContentVisitor.visitedViewAnnotations)
-        context.coordinator.mapView.location.options = mapContentVisitor.locationOptions
     }
 }
 
-@_documentation(visibility: public)
 @available(iOS 13.0, *)
 extension Map {
 
@@ -158,30 +154,24 @@ extension Map {
     ///
     /// - Parameters:
     ///     - viewport: The camera viewport to display.
-    @_documentation(visibility: public)
     @available(iOSApplicationExtension, unavailable)
-    public init(
-        viewport: Binding<Viewport>
-    ) {
+    public init(viewport: Binding<Viewport>) {
         self.init(
             _viewport: .binding(viewport),
-            urlOpenerProvider: URLOpenerProvider(),
-            content: nil)
+            urlOpenerProvider: URLOpenerProvider()
+        )
     }
 
     /// Creates a map an initial viewport.
     ///
     /// - Parameters:
     ///     - initialViewport: Initial camera viewport.
-    @_documentation(visibility: public)
     @available(iOSApplicationExtension, unavailable)
-    public init(
-        initialViewport: Viewport = .styleDefault
-    ) {
+    public init(initialViewport: Viewport = .styleDefault) {
         self.init(
             _viewport: .constant(initialViewport),
-            urlOpenerProvider: URLOpenerProvider(),
-            content: nil)
+            urlOpenerProvider: URLOpenerProvider()
+        )
     }
 
     /// Creates a map with a viewport binding.
@@ -195,11 +185,10 @@ extension Map {
     ///     - viewport: The camera viewport to display.
     ///     - urlOpener: A closure that handles attribution url opening.
     ///     - content: A map content building closure.
-    @_documentation(visibility: public)
     public init(
         viewport: Binding<Viewport>,
         urlOpener: @escaping MapURLOpener,
-        @MapContentBuilder content: @escaping () -> MapContent
+        @MapContentBuilder content: @escaping () -> some MapContent
     ) {
         self.init(
             _viewport: .binding(viewport),
@@ -218,11 +207,10 @@ extension Map {
     ///     - initialViewport: The camera viewport to display.
     ///     - urlOpener: A closure that handles attribution url opening.
     ///     - content: A map content building closure.
-    @_documentation(visibility: public)
     public init(
         initialViewport: Viewport = .styleDefault,
         urlOpener: @escaping MapURLOpener,
-        @MapContentBuilder content: @escaping () -> MapContent
+        @MapContentBuilder content: @escaping () -> some MapContent
     ) {
         self.init(
             _viewport: .constant(initialViewport),
@@ -231,11 +219,9 @@ extension Map {
     }
 }
 
-@_documentation(visibility: public)
 @available(iOS 13.0, *)
 public extension Map {
     /// Sets camera bounds.
-    @_documentation(visibility: public)
     func cameraBounds(_ cameraBounds: CameraBoundsOptions) -> Self {
         copyAssigned(self, \.mapDependencies.cameraBounds, cameraBounds)
     }
@@ -244,43 +230,35 @@ public extension Map {
     ///
     /// - Parameters:
     ///     - mapStyle: A map style configuration.
-    @_documentation(visibility: public)
     func mapStyle(_ mapStyle: MapStyle) -> Self {
         copyAssigned(self, \.mapDependencies.mapStyle, mapStyle)
     }
 
     /// Sets constraint mode to the map. If not set, `heightOnly` will be in use.
-    @_documentation(visibility: public)
     func constrainMode(_ constrainMode: ConstrainMode) -> Self {
         copyAssigned(self, \.mapDependencies.constrainMode, constrainMode)
     }
-
     /// Sets viewport mode to the map.
-    @_documentation(visibility: public)
     func viewportMode(_ viewportMode: ViewportMode) -> Self {
         copyAssigned(self, \.mapDependencies.viewportMode, viewportMode)
     }
 
     /// Sets ``NorthOrientation`` to the map. If not set, `upwards` will be in use.
-    @_documentation(visibility: public)
     func northOrientation(_ northOrientation: NorthOrientation) -> Self {
         copyAssigned(self, \.mapDependencies.orientation, northOrientation)
     }
 
     /// Sets ``OrnamentOptions`` to the map.
-    @_documentation(visibility: public)
     func ornamentOptions(_ options: OrnamentOptions) -> Self {
         copyAssigned(self, \.mapDependencies.ornamentOptions, options)
     }
 
     /// Sets ``MapViewDebugOptions`` to the map.
-    @_documentation(visibility: public)
     func debugOptions(_ debugOptions: MapViewDebugOptions) -> Self {
         copyAssigned(self, \.mapDependencies.debugOptions, debugOptions)
     }
 
     /// A boolean value that determines whether the view is opaque. Default is true.
-    @_documentation(visibility: public)
     func opaque(_ value: Bool) -> Self {
         copyAssigned(self, \.mapDependencies.isOpaque, value)
     }
@@ -294,25 +272,32 @@ public extension Map {
     /// - Parameters:
     ///    - range: Allowed frame rate range. Negative and values less than 1 will be clamped to 1.
     ///    - preferred: Preferred frame rate.  Negative and values less than 1 will be clamped to 1, while too large values will be clamped to Int.max.
-    @_documentation(visibility: public)
     func frameRate(range: ClosedRange<Float>? = nil, preferred: Float? = nil) -> Self {
         copyAssigned(
             self, \.mapDependencies.frameRate, FrameRate(range: range, preferred: preferred))
     }
 
-    /// A Boolean value that indicates whether the underlying `CAMetalLayer` of the `MapView`
-    /// presents its content using a CoreAnimation transaction
+    /// Defines the map presentation mode.
     ///
-    /// See ``MapView/presentsWithTransaction``.
-    @_documentation(visibility: public)
-    func presentsWithTransaction(_ value: Bool) -> Self {
-        copyAssigned(self, \.mapDependencies.presentsWithTransaction, value)
+    /// This setting determines whether the underlying `CAMetalLayer` presents its content using a CoreAnimation transaction, controlling `CAMetalLayer.presentsWithTransaction` property.
+    ///
+    /// By default, the value is ``PresentationTransactionMode/automatic``,  meaning the mode will be switched between async and sync depending on the map content, such as view annotations.
+    ///
+    /// If you use a custom View displayed on top of the map that should appear at specific map coordinates, set presentation mode to ``PresentationTransactionMode/sync`` to avoid jitter.
+    /// However, setting ``PresentationTransactionMode/async`` mode can result in faster rendering in some cases.
+    ///
+    /// For more information please refer to `CAMetalLayer.presentsWithTransaction` and ``PresentationTransactionMode``.
+    func presentationTransactionMode(_ value: PresentationTransactionMode) -> Self {
+        copyAssigned(self, \.mapDependencies.presentationTransactionMode, value)
     }
+
+    /// :nodoc:
+    @available(*, unavailable, message: "Transaction mode is managed automatically, see presentationTransactionMode")
+    func presentsWithTransaction(_: Bool) {}
 
     /// Indicates whether the ``Viewport`` should idle when map receives pan touch input.
     ///
     /// Defaults to `true`.
-    @_documentation(visibility: public)
     func transitionsToIdleUponUserInteraction(_ value: Bool) -> Self {
         copyAssigned(self, \.mapDependencies.viewportOptions.transitionsToIdleUponUserInteraction, value)
     }
@@ -331,7 +316,6 @@ public extension Map {
     /// - Note: ``MapViewAnnotation`` will respect the padding area and will be placed outside of it.
     ///
     /// Defaults to `true`.
-    @_documentation(visibility: public)
     func usesSafeAreaInsetsAsPadding(_ value: Bool) -> Self {
         copyAssigned(self, \.mapDependencies.viewportOptions.usesSafeAreaInsetsAsPadding, value)
     }
@@ -342,7 +326,6 @@ public extension Map {
     /// `UIViewController.additionalSafeAreaInsets`.
     ///
     /// - Note: This property cannot be animated.
-    @_documentation(visibility: public)
     func additionalSafeAreaInsets(_ insets: SwiftUI.EdgeInsets) -> Self {
         copyAssigned(self, \.mapDependencies.additionalSafeArea, insets)
     }
@@ -365,7 +348,6 @@ public extension Map {
     ///   - options The statistics collection options to collect.
     ///   - callback The callback to be invoked when performance statistics are available.
     /// - Returns:  An ``AnyCancelable`` object that can be used to cancel performance statistics collection.
-    @_documentation(visibility: public)
     func collectPerformanceStatistics(_ options: PerformanceStatisticsOptions?, callback: @escaping (PerformanceStatistics) -> Void) -> Self {
         copyAssigned(self, \.mapDependencies.performanceStatisticsParameters, options.map { PerformanceStatisticsParameters(options: $0, callback: callback) })
     }
@@ -376,7 +358,6 @@ public extension Map {
     /// `UIViewController.additionalSafeAreaInsets`.
     ///
     /// - Note: This property cannot be animated.
-    @_documentation(visibility: public)
     func additionalSafeAreaInsets(_ edges: Edge.Set = .all, _ length: CGFloat) -> Self {
         var copy = self
         copy.mapDependencies.additionalSafeArea.updateEdges(edges, length)
@@ -390,23 +371,17 @@ extension Map {
     /// Map Coordinator.
     public final class Coordinator {
         let basic: MapBasicCoordinator
-        let viewAnnotation: ViewAnnotationCoordinator
-        let layerAnnotation: LayerAnnotationCoordinator
         let viewController: UIViewController
         let urlOpener: ClosureURLOpener
         let mapView: MapView
 
         init(
             basic: MapBasicCoordinator,
-            viewAnnotation: ViewAnnotationCoordinator,
-            layerAnnotation: LayerAnnotationCoordinator,
             viewController: UIViewController,
             urlOpener: ClosureURLOpener,
             mapView: MapView
         ) {
             self.basic = basic
-            self.viewAnnotation = viewAnnotation
-            self.layerAnnotation = layerAnnotation
             self.viewController = viewController
             self.urlOpener = urlOpener
             self.mapView = mapView

@@ -6,7 +6,7 @@ target 'WalkyCam' do
   use_frameworks!
 
   # Pods for WalkyCam
-  pod 'MapboxMaps', '11.3.0'
+  pod 'MapboxMaps', '11.6.1'
   pod 'DJI-SDK-iOS'
   pod 'DJI-UXSDK-iOS'
   pod 'DJIWidget'

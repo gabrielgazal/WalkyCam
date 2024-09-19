@@ -30,11 +30,11 @@ __attribute__((visibility ("default")))
                                                          bearing:(nullable NSNumber *)bearing
                                                            pitch:(nullable NSNumber *)pitch
                                                          maxZoom:(nullable NSNumber *)maxZoom
-                                                          offset:(nullable MBMScreenCoordinate *)offset __attribute((ns_returns_retained));
+                                                          offset:(nullable MBMScreenCoordinate *)offset __attribute((ns_returns_retained)) __attribute__((deprecated("Please use: '-cameraForCoordinatesForCoordinates:camera:coordinatesPadding:maxZoom:offset:' instead.", "-cameraForCoordinatesForCoordinates:camera:coordinatesPadding:maxZoom:offset:")));
 - (nonnull MBMCameraOptions *)cameraForCoordinatesForCoordinates:(nonnull NSArray<MBXCoordinate2D *> *)coordinates
                                                          padding:(nullable MBMEdgeInsets *)padding
                                                          bearing:(nullable NSNumber *)bearing
-                                                           pitch:(nullable NSNumber *)pitch __attribute((ns_returns_retained));
+                                                           pitch:(nullable NSNumber *)pitch __attribute((ns_returns_retained)) __attribute__((deprecated("Please use: '-cameraForCoordinatesForCoordinates:camera:coordinatesPadding:maxZoom:offset:' instead.", "-cameraForCoordinatesForCoordinates:camera:coordinatesPadding:maxZoom:offset:")));
 - (nonnull MBXExpected<MBMCameraOptions *, NSString *> *)cameraForCoordinatesForCoordinates:(nonnull NSArray<MBXCoordinate2D *> *)coordinates
                                                                                      camera:(nullable MBMCameraOptions *)camera
                                                                          coordinatesPadding:(nullable MBMEdgeInsets *)coordinatesPadding
@@ -46,7 +46,7 @@ __attribute__((visibility ("default")))
 - (nonnull MBMCameraOptions *)cameraForGeometryForGeometry:(nonnull MBXGeometry *)geometry
                                                    padding:(nullable MBMEdgeInsets *)padding
                                                    bearing:(nullable NSNumber *)bearing
-                                                     pitch:(nullable NSNumber *)pitch __attribute((ns_returns_retained));
+                                                     pitch:(nullable NSNumber *)pitch __attribute((ns_returns_retained)) __attribute__((deprecated("Please use: '-cameraForCoordinatesForCoordinates:camera:coordinatesPadding:maxZoom:offset:' instead.", "-cameraForCoordinatesForCoordinates:camera:coordinatesPadding:maxZoom:offset:")));
 - (nonnull MBMCoordinateBounds *)coordinateBoundsForCameraForCamera:(nonnull MBMCameraOptions *)camera __attribute((ns_returns_retained));
 - (nonnull MBMCoordinateBounds *)coordinateBoundsForCameraUnwrappedForCamera:(nonnull MBMCameraOptions *)camera __attribute((ns_returns_retained));
 - (nonnull MBMCoordinateBoundsZoom *)coordinateBoundsZoomForCameraForCamera:(nonnull MBMCameraOptions *)camera __attribute((ns_returns_retained));

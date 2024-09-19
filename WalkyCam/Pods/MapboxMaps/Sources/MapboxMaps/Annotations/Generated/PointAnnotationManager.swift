@@ -2,7 +2,6 @@
 import Foundation
 import os
 @_implementationOnly import MapboxCommon_Private
-
 /// An instance of `PointAnnotationManager` is responsible for a collection of `PointAnnotation`s.
 public class PointAnnotationManager: AnnotationManagerInternal {
     typealias OffsetCalculatorType = OffsetPointCalculator
@@ -16,6 +15,16 @@ public class PointAnnotationManager: AnnotationManagerInternal {
     private var clusterId: String { "mapbox-iOS-cluster-circle-layer-manager-\(id)" }
 
     public let id: String
+
+    var layerPosition: LayerPosition? {
+        didSet {
+            do {
+                try style.moveLayer(withId: layerId, to: layerPosition ?? .default)
+            } catch {
+                Log.error(forMessage: "Failed to mover layer to a new position. Error: \(error)", category: "Annotations")
+            }
+        }
+    }
 
     /// The collection of ``PointAnnotation`` being managed.
     ///
@@ -123,6 +132,7 @@ public class PointAnnotationManager: AnnotationManagerInternal {
                 source.clusterRadius = clusterOptions.clusterRadius
                 source.clusterProperties = clusterOptions.clusterProperties
                 source.clusterMaxZoom = clusterOptions.clusterMaxZoom
+                source.clusterMinPoints = clusterOptions.clusterMinPoints
             }
 
             try style.addSource(source)
@@ -200,7 +210,23 @@ public class PointAnnotationManager: AnnotationManagerInternal {
         }
     }
 
-    internal func destroy() {
+    var idsMap = [AnyHashable: String]()
+
+    func set(newAnnotations: [(AnyHashable, PointAnnotation)]) {
+        var resolvedAnnotations = [PointAnnotation]()
+        newAnnotations.forEach { elementId, annotation in
+            var annotation = annotation
+            let stringId = idsMap[elementId] ?? annotation.id
+            idsMap[elementId] = stringId
+            annotation.id = stringId
+            annotation.isDraggable = false
+            annotation.isSelected = false
+            resolvedAnnotations.append(annotation)
+        }
+        annotations = resolvedAnnotations
+    }
+
+    func destroy() {
         guard destroyOnce.continueOnce() else { return }
 
         displayLinkToken?.cancel()
@@ -315,8 +341,8 @@ public class PointAnnotationManager: AnnotationManagerInternal {
 
     // MARK: - Common layer properties
 
-
     /// If true, the icon will be visible even if it collides with other previously drawn symbols.
+    /// Default value: false.
     public var iconAllowOverlap: Bool? {
         get {
             return layerProperties["icon-allow-overlap"] as? Bool
@@ -327,6 +353,7 @@ public class PointAnnotationManager: AnnotationManagerInternal {
     }
 
     /// If true, other symbols can be visible even if they collide with the icon.
+    /// Default value: false.
     public var iconIgnorePlacement: Bool? {
         get {
             return layerProperties["icon-ignore-placement"] as? Bool
@@ -337,6 +364,7 @@ public class PointAnnotationManager: AnnotationManagerInternal {
     }
 
     /// If true, the icon may be flipped to prevent it from being rendered upside-down.
+    /// Default value: false.
     public var iconKeepUpright: Bool? {
         get {
             return layerProperties["icon-keep-upright"] as? Bool
@@ -347,6 +375,7 @@ public class PointAnnotationManager: AnnotationManagerInternal {
     }
 
     /// If true, text will display without their corresponding icons when the icon collides with other symbols and the text does not.
+    /// Default value: false.
     public var iconOptional: Bool? {
         get {
             return layerProperties["icon-optional"] as? Bool
@@ -357,6 +386,7 @@ public class PointAnnotationManager: AnnotationManagerInternal {
     }
 
     /// Size of the additional area around the icon bounding box used for detecting symbol collisions.
+    /// Default value: 2. Minimum value: 0.
     public var iconPadding: Double? {
         get {
             return layerProperties["icon-padding"] as? Double
@@ -367,6 +397,7 @@ public class PointAnnotationManager: AnnotationManagerInternal {
     }
 
     /// Orientation of icon when map is pitched.
+    /// Default value: "auto".
     public var iconPitchAlignment: IconPitchAlignment? {
         get {
             return layerProperties["icon-pitch-alignment"].flatMap { $0 as? String }.flatMap(IconPitchAlignment.init(rawValue:))
@@ -377,6 +408,7 @@ public class PointAnnotationManager: AnnotationManagerInternal {
     }
 
     /// In combination with `symbol-placement`, determines the rotation behavior of icons.
+    /// Default value: "auto".
     public var iconRotationAlignment: IconRotationAlignment? {
         get {
             return layerProperties["icon-rotation-alignment"].flatMap { $0 as? String }.flatMap(IconRotationAlignment.init(rawValue:))
@@ -387,6 +419,7 @@ public class PointAnnotationManager: AnnotationManagerInternal {
     }
 
     /// If true, the symbols will not cross tile edges to avoid mutual collisions. Recommended in layers that don't have enough padding in the vector tile to prevent collisions, or if it is a point symbol layer placed after a line symbol layer. When using a client that supports global collision detection, like Mapbox GL JS version 0.42.0 or greater, enabling this property is not needed to prevent clipped labels at tile boundaries.
+    /// Default value: false.
     public var symbolAvoidEdges: Bool? {
         get {
             return layerProperties["symbol-avoid-edges"] as? Bool
@@ -397,6 +430,7 @@ public class PointAnnotationManager: AnnotationManagerInternal {
     }
 
     /// Label placement relative to its geometry.
+    /// Default value: "point".
     public var symbolPlacement: SymbolPlacement? {
         get {
             return layerProperties["symbol-placement"].flatMap { $0 as? String }.flatMap(SymbolPlacement.init(rawValue:))
@@ -407,6 +441,7 @@ public class PointAnnotationManager: AnnotationManagerInternal {
     }
 
     /// Distance between two symbol anchors.
+    /// Default value: 250. Minimum value: 1.
     public var symbolSpacing: Double? {
         get {
             return layerProperties["symbol-spacing"] as? Double
@@ -417,6 +452,7 @@ public class PointAnnotationManager: AnnotationManagerInternal {
     }
 
     /// Position symbol on buildings (both fill extrusions and models) rooftops. In order to have minimal impact on performance, this is supported only when `fill-extrusion-height` is not zoom-dependent and remains unchanged. For fading in buildings when zooming in, fill-extrusion-vertical-scale should be used and symbols would raise with building rooftops. Symbols are sorted by elevation, except in cases when `viewport-y` sorting or `symbol-sort-key` are applied.
+    /// Default value: false.
     public var symbolZElevate: Bool? {
         get {
             return layerProperties["symbol-z-elevate"] as? Bool
@@ -427,6 +463,7 @@ public class PointAnnotationManager: AnnotationManagerInternal {
     }
 
     /// Determines whether overlapping symbols in the same layer are rendered in the order that they appear in the data source or by their y-position relative to the viewport. To control the order and prioritization of symbols otherwise, use `symbol-sort-key`.
+    /// Default value: "auto".
     public var symbolZOrder: SymbolZOrder? {
         get {
             return layerProperties["symbol-z-order"].flatMap { $0 as? String }.flatMap(SymbolZOrder.init(rawValue:))
@@ -437,6 +474,7 @@ public class PointAnnotationManager: AnnotationManagerInternal {
     }
 
     /// If true, the text will be visible even if it collides with other previously drawn symbols.
+    /// Default value: false.
     public var textAllowOverlap: Bool? {
         get {
             return layerProperties["text-allow-overlap"] as? Bool
@@ -457,6 +495,7 @@ public class PointAnnotationManager: AnnotationManagerInternal {
     }
 
     /// If true, other symbols can be visible even if they collide with the text.
+    /// Default value: false.
     public var textIgnorePlacement: Bool? {
         get {
             return layerProperties["text-ignore-placement"] as? Bool
@@ -467,6 +506,7 @@ public class PointAnnotationManager: AnnotationManagerInternal {
     }
 
     /// If true, the text may be flipped vertically to prevent it from being rendered upside-down.
+    /// Default value: true.
     public var textKeepUpright: Bool? {
         get {
             return layerProperties["text-keep-upright"] as? Bool
@@ -477,6 +517,7 @@ public class PointAnnotationManager: AnnotationManagerInternal {
     }
 
     /// Maximum angle change between adjacent characters.
+    /// Default value: 45.
     public var textMaxAngle: Double? {
         get {
             return layerProperties["text-max-angle"] as? Double
@@ -487,6 +528,7 @@ public class PointAnnotationManager: AnnotationManagerInternal {
     }
 
     /// If true, icons will display without their corresponding text when the text collides with other symbols and the icon does not.
+    /// Default value: false.
     public var textOptional: Bool? {
         get {
             return layerProperties["text-optional"] as? Bool
@@ -497,6 +539,7 @@ public class PointAnnotationManager: AnnotationManagerInternal {
     }
 
     /// Size of the additional area around the text bounding box used for detecting symbol collisions.
+    /// Default value: 2. Minimum value: 0.
     public var textPadding: Double? {
         get {
             return layerProperties["text-padding"] as? Double
@@ -507,6 +550,7 @@ public class PointAnnotationManager: AnnotationManagerInternal {
     }
 
     /// Orientation of text when map is pitched.
+    /// Default value: "auto".
     public var textPitchAlignment: TextPitchAlignment? {
         get {
             return layerProperties["text-pitch-alignment"].flatMap { $0 as? String }.flatMap(TextPitchAlignment.init(rawValue:))
@@ -517,6 +561,7 @@ public class PointAnnotationManager: AnnotationManagerInternal {
     }
 
     /// In combination with `symbol-placement`, determines the rotation behavior of the individual glyphs forming the text.
+    /// Default value: "auto".
     public var textRotationAlignment: TextRotationAlignment? {
         get {
             return layerProperties["text-rotation-alignment"].flatMap { $0 as? String }.flatMap(TextRotationAlignment.init(rawValue:))
@@ -546,7 +591,8 @@ public class PointAnnotationManager: AnnotationManagerInternal {
         }
     }
 
-    /// Controls saturation level of the symbol icon. With the default value of 1 the icon color is preserved while with a value of 0 it is fully desaturated and looks black and white.
+    /// Increase or reduce the saturation of the symbol icon.
+    /// Default value: 0. Value range: [-1, 1]
     public var iconColorSaturation: Double? {
         get {
             return layerProperties["icon-color-saturation"] as? Double
@@ -556,7 +602,19 @@ public class PointAnnotationManager: AnnotationManagerInternal {
         }
     }
 
+    /// The opacity at which the icon will be drawn in case of being depth occluded. Not supported on globe zoom levels.
+    /// Default value: 1. Value range: [0, 1]
+    public var iconOcclusionOpacity: Double? {
+        get {
+            return layerProperties["icon-occlusion-opacity"] as? Double
+        }
+        set {
+            layerProperties["icon-occlusion-opacity"] = newValue
+        }
+    }
+
     /// Distance that the icon's anchor is moved from its original placement. Positive values indicate right and down, while negative values indicate left and up.
+    /// Default value: [0,0].
     public var iconTranslate: [Double]? {
         get {
             return layerProperties["icon-translate"] as? [Double]
@@ -567,6 +625,7 @@ public class PointAnnotationManager: AnnotationManagerInternal {
     }
 
     /// Controls the frame of reference for `icon-translate`.
+    /// Default value: "map".
     public var iconTranslateAnchor: IconTranslateAnchor? {
         get {
             return layerProperties["icon-translate-anchor"].flatMap { $0 as? String }.flatMap(IconTranslateAnchor.init(rawValue:))
@@ -576,7 +635,19 @@ public class PointAnnotationManager: AnnotationManagerInternal {
         }
     }
 
+    /// The opacity at which the text will be drawn in case of being depth occluded. Not supported on globe zoom levels.
+    /// Default value: 1. Value range: [0, 1]
+    public var textOcclusionOpacity: Double? {
+        get {
+            return layerProperties["text-occlusion-opacity"] as? Double
+        }
+        set {
+            layerProperties["text-occlusion-opacity"] = newValue
+        }
+    }
+
     /// Distance that the text's anchor is moved from its original placement. Positive values indicate right and down, while negative values indicate left and up.
+    /// Default value: [0,0].
     public var textTranslate: [Double]? {
         get {
             return layerProperties["text-translate"] as? [Double]
@@ -587,6 +658,7 @@ public class PointAnnotationManager: AnnotationManagerInternal {
     }
 
     /// Controls the frame of reference for `text-translate`.
+    /// Default value: "map".
     public var textTranslateAnchor: TextTranslateAnchor? {
         get {
             return layerProperties["text-translate-anchor"].flatMap { $0 as? String }.flatMap(TextTranslateAnchor.init(rawValue:))
@@ -596,7 +668,6 @@ public class PointAnnotationManager: AnnotationManagerInternal {
         }
     }
 
-    /// 
     /// Slot for the underlying layer.
     ///
     /// Use this property to position the annotations relative to other map features if you use Mapbox Standard Style.
@@ -697,7 +768,7 @@ public class PointAnnotationManager: AnnotationManagerInternal {
             annotation.id == featureId && annotation.isDraggable
         }
 
-        func tryBeginDragging(_ annotations: inout [PointAnnotation], idx: Int) -> Bool  {
+        func tryBeginDragging(_ annotations: inout [PointAnnotation], idx: Int) -> Bool {
             var annotation = annotations[idx]
             // If no drag handler set, the dragging is allowed
             let dragAllowed = annotation.dragBeginHandler?(&annotation, context) ?? true

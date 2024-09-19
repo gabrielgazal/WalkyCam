@@ -2299,21 +2299,21 @@
     {
       "filePath": "\/Users\/distiller\/project\/components\/settings\/platform\/darwin\/SettingsService.swift",
       "kind": "StringLiteral",
-      "offset": 1469,
+      "offset": 1461,
       "length": 24,
       "value": "\"Internal casting error\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/components\/settings\/platform\/darwin\/SettingsService.swift",
       "kind": "StringLiteral",
-      "offset": 1948,
+      "offset": 1940,
       "length": 24,
       "value": "\"Internal casting error\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/components\/settings\/platform\/darwin\/SettingsService.swift",
       "kind": "BooleanLiteral",
-      "offset": 2516,
+      "offset": 2508,
       "length": 5,
       "value": "false"
     },

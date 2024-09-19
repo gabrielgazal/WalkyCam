@@ -58,7 +58,7 @@
 		</data>
 		<key>Headers/MBMCumulativeRenderingStatistics.h</key>
 		<data>
-		2TqYX7IYfRjBM4DeOxs0JC9vaJA=
+		DWH4h/Ghj4ILKIWMpGb09qL41iY=
 		</data>
 		<key>Headers/MBMCustomGeometrySourceOptions.h</key>
 		<data>
@@ -76,9 +76,29 @@
 		<data>
 		CaXLJEoISr3AbeQBOKPmzvKfcrY=
 		</data>
+		<key>Headers/MBMCustomRasterSourceClient.h</key>
+		<data>
+		LwXfG2H6r8xlvqWS3f1B/879wqQ=
+		</data>
 		<key>Headers/MBMCustomRasterSourceOptions.h</key>
 		<data>
-		4bHE9+/bpliIm3TGxdXwNuHvF9o=
+		dM/FgOMaDGLROU10QqwSs1FGZIk=
+		</data>
+		<key>Headers/MBMCustomRasterSourceTileData.h</key>
+		<data>
+		IgrBmZCYbcSlKfHfJTs2u4Niugw=
+		</data>
+		<key>Headers/MBMCustomRasterSourceTileRenderer.h</key>
+		<data>
+		k5/QrqVVmkS1qD2J3enMJim9hUY=
+		</data>
+		<key>Headers/MBMCustomRasterSourceTileStatus.h</key>
+		<data>
+		59c1ydVRSbnlgPPUFvNnL6zsuTw=
+		</data>
+		<key>Headers/MBMCustomRasterSourceTileStatusChangedCallback.h</key>
+		<data>
+		WJkiCuzH8tQrnlYmTt6TGKWs9SI=
 		</data>
 		<key>Headers/MBMDurationStatistics.h</key>
 		<data>
@@ -526,7 +546,7 @@
 		</data>
 		<key>Headers/StyleManager.h</key>
 		<data>
-		9h+aAs3/B2/iWw6nWEuoLoa0kA4=
+		4Qx9pgyJGvSF6NoPjEPx4H11d2Q=
 		</data>
 		<key>Headers/Vectors.h</key>
 		<data>
@@ -538,7 +558,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		YU141lYCFgiMROXHrQ11V+77SFQ=
+		6X/JlDY7kWIrEUv6yGhFvTvPw80=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -590,7 +610,7 @@
 		</data>
 		<key>PrivateHeaders/MBMCameraManager_Internal.h</key>
 		<data>
-		tEwTIfeRAxsfAPvN8PWJ0fPIifU=
+		UrR9gSf5nEXsTdB4Pcd0yjOoy6E=
 		</data>
 		<key>PrivateHeaders/MBMCameraOptions_Internal.h</key>
 		<data>
@@ -599,6 +619,10 @@
 		<key>PrivateHeaders/MBMCameraState_Internal.h</key>
 		<data>
 		xaAooixbbCuiw08RYt9VyiaPfU4=
+		</data>
+		<key>PrivateHeaders/MBMCustomRasterSourceTileData_Internal.h</key>
+		<data>
+		DUkkY/k7N4lSY50r38o6jGClOQg=
 		</data>
 		<key>PrivateHeaders/MBMEdgeInsets_Internal.h</key>
 		<data>
@@ -615,6 +639,10 @@
 		<key>PrivateHeaders/MBMImage_Internal.h</key>
 		<data>
 		60BU+j4F5UBumi6IZZq2CuyfvSc=
+		</data>
+		<key>PrivateHeaders/MBMImportPosition_Internal.h</key>
+		<data>
+		0Il0k8jNol4v7fUxXXDN3DrmNTw=
 		</data>
 		<key>PrivateHeaders/MBMLayerPosition_Internal.h</key>
 		<data>
@@ -754,7 +782,7 @@
 		</data>
 		<key>PrivateHeaders/MBMStyleManager_Internal.h</key>
 		<data>
-		E25K0MipX5KdQARMCG6qmK8zfYk=
+		TsbrCycgXjr0MmQ0+/ISG7qD0/0=
 		</data>
 		<key>PrivateHeaders/MBMStylePackCallback_Internal.h</key>
 		<data>
@@ -798,7 +826,7 @@
 		</data>
 		<key>PrivateHeaders/MBMViewAnnotationOptions_Internal.h</key>
 		<data>
-		mbSyZ3im4Xqty554BNT00FkpYB8=
+		eGtQ4OkxqWFxt43vDyIo9b0UDEk=
 		</data>
 		<key>PrivateHeaders/MBMViewAnnotationPositionDescriptor_Internal.h</key>
 		<data>
@@ -850,7 +878,7 @@
 		</data>
 		<key>PrivateHeaders/StyleManager_Internal.h</key>
 		<data>
-		VSBKqpOUGEcqr0Jqmldc/yPflI0=
+		TtFBQSR1v4MLzyIb1zzOBQGlaS4=
 		</data>
 		<key>PrivateHeaders/Tracing_Internal.h</key>
 		<data>
@@ -962,7 +990,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TCW2ISLUu/78RcbtFlgFICnAtvtO2Z7piY89SyU0tbo=
+			aLnyxD6T44cHXMnJtZiAXV9/+HG5VQCujDB9aGK0P+Q=
 			</data>
 		</dict>
 		<key>Headers/MBMCustomGeometrySourceOptions.h</key>
@@ -993,11 +1021,46 @@
 			aAU8evrL4CAruUnVWPTXGrzj2krJWHWscif68d5SCZk=
 			</data>
 		</dict>
+		<key>Headers/MBMCustomRasterSourceClient.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			JJe1CcoXa+aQKG15lueNTdFo8dy1r7xTH1hzuOue9Ck=
+			</data>
+		</dict>
 		<key>Headers/MBMCustomRasterSourceOptions.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			F3TgEpUX3ZC4LR/Ewkq/Mvr3s1KfvNTA9PaQWPr+87o=
+			4UokTBuIo/Xj+OXaANFbsOmFoXWsx/a35E8kYRk2fvk=
+			</data>
+		</dict>
+		<key>Headers/MBMCustomRasterSourceTileData.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			fe8ITMvmELEqGbrSvTOE5zmBtuc+jiUoMDtkpFgG6P0=
+			</data>
+		</dict>
+		<key>Headers/MBMCustomRasterSourceTileRenderer.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Ha1/8uve8aTm1W6p9mt13rv0gVPzau9Zd9VXCqk55LI=
+			</data>
+		</dict>
+		<key>Headers/MBMCustomRasterSourceTileStatus.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			q+H4c4Fe+BCP1434KcFbzuOc4+fYh6M+VjvJqwxjPEc=
+			</data>
+		</dict>
+		<key>Headers/MBMCustomRasterSourceTileStatusChangedCallback.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			645aOyWFeBNMpaK5iakep+t9g51AbSk7YNRCrNJY7Aw=
 			</data>
 		</dict>
 		<key>Headers/MBMDurationStatistics.h</key>
@@ -1781,7 +1844,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rK6+G8VrTymCr9vXAnAZz1NTdqSuyyXlyYZr1UYDTMo=
+			mIsGI8S7eUtbOTdVLf4hfpppnHq0vb3hThsb0hPhrQM=
 			</data>
 		</dict>
 		<key>Headers/Vectors.h</key>
@@ -1886,7 +1949,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HHi8XH+EBQIUkHbg4xd9sEYbJlmN32v1IwgvELlE5To=
+			ff8LGdPsI8F15ToJGB76GCWWFjnSV3Xu4G+udgDcdfk=
 			</data>
 		</dict>
 		<key>PrivateHeaders/MBMCameraOptions_Internal.h</key>
@@ -1901,6 +1964,13 @@
 			<key>hash2</key>
 			<data>
 			x/pRKQaccKb6xMqPjgdiTHDHT5eiEJi9pRa6OkIqazc=
+			</data>
+		</dict>
+		<key>PrivateHeaders/MBMCustomRasterSourceTileData_Internal.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			gRbqeqkw8ZrFAyZ538yh0ZTzH8/Q6t2aW3L2Qg25jvs=
 			</data>
 		</dict>
 		<key>PrivateHeaders/MBMEdgeInsets_Internal.h</key>
@@ -1929,6 +1999,13 @@
 			<key>hash2</key>
 			<data>
 			laWmR7ywOnX1s7D5KGrLLhfQ9Sv7V1hgn8llsQK6+zg=
+			</data>
+		</dict>
+		<key>PrivateHeaders/MBMImportPosition_Internal.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			FoJU6DEq5OCaAp8T5d3/qY9khZZgOb9nrcbvsE9wTO0=
 			</data>
 		</dict>
 		<key>PrivateHeaders/MBMLayerPosition_Internal.h</key>
@@ -2173,7 +2250,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			47SxEBPUwRuHGv9WyKlZIpZaUTK39OVwhIJpvd85Hjw=
+			ys2RwHOv7Qc2jD4ROJKJmPsa4TLvYmAGONI9hDa7qlc=
 			</data>
 		</dict>
 		<key>PrivateHeaders/MBMStylePackCallback_Internal.h</key>
@@ -2250,7 +2327,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			V29wEkZhdwsR7i5XDwuFb/7t/h1DoM13pzsSXYVcvug=
+			ps9Um/x7qqLkonKV8TPibh9st7jBNiDdmN0YdWEfS1A=
 			</data>
 		</dict>
 		<key>PrivateHeaders/MBMViewAnnotationPositionDescriptor_Internal.h</key>
@@ -2341,7 +2418,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VBiTKrH8wpJBXQK8gEF5Lxd5aFJO0o7GUYYOf9YJnsU=
+			1JdYquAMCsA8qM47YZUc1Ff5IrV2iRkupeb8T76CNlE=
 			</data>
 		</dict>
 		<key>PrivateHeaders/Tracing_Internal.h</key>

@@ -38,7 +38,7 @@ public protocol ViewAnnotationUpdateObserver: AnyObject {
     ///
     /// Use `isHidden` property to determine whether a view is visible or not.
     /// - Parameters:
-    ///   - annotationsViews: The annotation vies whose visibility changed.
+    ///   - annotationViews: The annotation vies whose visibility changed.
     func visibilityDidChange(for annotationViews: [UIView])
 }
 
@@ -50,12 +50,12 @@ public protocol ViewAnnotationUpdateObserver: AnyObject {
 /// View annotations are invariant to map camera transformations however such properties as size, visibility etc
 /// could be controlled by the user using update operation.
 public final class ViewAnnotationManager {
-
     private let containerView: UIView
     private let mapboxMap: MapboxMapProtocol
     private var displayLink: Signal<Void>
-    // internal for tests
-    var objectAnnotations = [String: ViewAnnotation]()
+    private(set) var displaysAnnotations = CurrentValueSignalSubject<Bool>(false)
+
+    private var objectAnnotations = [String: ViewAnnotation]()
 
     // deprecated properties
     private var viewsById: [String: UIView] = [:]
@@ -73,12 +73,18 @@ public final class ViewAnnotationManager {
     }
     private var _validatesViews = true
 
+    /// The list of view annotations added to the manager.
+    public var allAnnotations: [ViewAnnotation] {
+        Array(objectAnnotations.values)
+    }
+
     /// The complete list of annotations associated with the receiver.
-    @available(*, deprecated, message: "Use ViewAnnotation")
+    @available(*, deprecated, renamed: "allAnnotations", message: "Please use allAnnotations instead, or directly access ViewAnnotation itself")
     public var annotations: [UIView: ViewAnnotationOptions] {
-        idsByView.compactMapValues { [mapboxMap] id in
+        let values = idsByView.compactMapValues { [mapboxMap] id in
             try? mapboxMap.options(forViewAnnotationWithId: id)
         }
+        return values
     }
 
     internal init(containerView: UIView, mapboxMap: MapboxMapProtocol, displayLink: Signal<Void>) {
@@ -315,7 +321,7 @@ public final class ViewAnnotationManager {
     /// If an annotation has multiple ``ViewAnnotation/variableAnchors``, the last picked anchor configuration
     /// will we used for bounding box calculation. If annotation is not yet rendered, the first first confit from the list will be used.
     ///
-    /// - Parameter ids: The list of annotations ids to be framed.
+    /// - Parameter annotations: The list of annotations ids to be framed.
     /// - Parameter padding: See ``CameraOptions-swift.struct/padding``.
     /// - Parameter bearing: See ``CameraOptions-swift.struct/bearing``.
     /// - Parameter pitch: See ``CameraOptions-swift.struct/pitch``.
@@ -343,7 +349,7 @@ public final class ViewAnnotationManager {
     ///
     /// - Important: This API isn't supported by Globe projection.
     ///
-    /// - Parameter ids: The list of annotations ids to be framed.
+    /// - Parameter identifiers: The list of annotations ids to be framed.
     /// - Parameter padding: See ``CameraOptions-swift.struct/padding``.
     /// - Parameter bearing: See ``CameraOptions-swift.struct/bearing``.
     /// - Parameter pitch: See ``CameraOptions-swift.struct/pitch``.
@@ -354,6 +360,7 @@ public final class ViewAnnotationManager {
         bearing: CGFloat? = nil,
         pitch: CGFloat? = nil
     ) -> CameraOptions? {
+
         let corners: [CoordinateBoundsCorner] = identifiers.compactMap {
             guard
                 let options = try? mapboxMap.options(forViewAnnotationWithId: $0),
@@ -368,6 +375,7 @@ public final class ViewAnnotationManager {
     // MARK: - Private functions
 
     private func placeAnnotations(positions: [ViewAnnotationPositionDescriptor]) {
+        displaysAnnotations.value = !positions.isEmpty
         // Iterate through and update all view annotations
         // First update the position of the views based on the placement info from GL-Native
         // Then hide the views which are off screen

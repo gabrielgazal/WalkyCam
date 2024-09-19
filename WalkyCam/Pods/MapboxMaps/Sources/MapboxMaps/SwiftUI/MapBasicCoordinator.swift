@@ -88,12 +88,13 @@ final class MapBasicCoordinator {
         }
 
         mapView.styleManager.mapStyle = deps.mapStyle
+        mapView.styleManager.setMapContent(deps.mapContent)
         assign(&mapView, \.gestureManager.options, value: deps.gestureOptions)
         assign(&mapView, \.ornaments.options, value: deps.ornamentOptions)
         assign(&mapView, \.debugOptions, value: deps.debugOptions)
         assign(&mapView, \.isOpaque, value: deps.isOpaque)
         assign(&mapView, \.frameRate, value: deps.frameRate)
-        assign(&mapView, \.presentsWithTransaction, value: deps.presentsWithTransaction)
+        assign(&mapView, \.presentationTransactionMode, value: deps.presentationTransactionMode)
         assign(&mapView, \.viewportManager.options, value: deps.viewportOptions)
 
         cameraChangeHandlers = deps.cameraChangeHandlers
