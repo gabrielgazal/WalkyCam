@@ -22,9 +22,9 @@ struct AddPeopleTransmissionView<ViewModel:AddPeopleTransmissionViewModelProtoco
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.xlarge) {
                 headerView
-                Text("Puedes agregar hasta 200 asistentes más.")
+                Text(L10n.AddPeopleTransmissionView.description)
                     .font(.projectFont(size: Tokens.Size.Font.regular))
-                WCUIButton(title: "Invitar amigos de Walkycam",
+                WCUIButton(title: L10n.AddPeopleTransmissionView.InviteButton.title,
                            leftIcon: Asset.Icons.wIcon.name,
                            style: .outline,
                            descriptor: OrangeButtonStyleDescriptor(),
@@ -37,7 +37,7 @@ struct AddPeopleTransmissionView<ViewModel:AddPeopleTransmissionViewModelProtoco
                         .renderingMode(.template)
                         .foregroundColor(.naranja)
                         .frame(width: 24, height: 24)
-                    Text("O invitar amigos por...")
+                    Text(L10n.AddPeopleTransmissionView.inviteOptions)
                         .font(.projectFont(size: Tokens.Size.Font.regular))
                     Spacer()
                 }
@@ -55,7 +55,7 @@ struct AddPeopleTransmissionView<ViewModel:AddPeopleTransmissionViewModelProtoco
                     .frame(height: 24)
                 GeometryReader { proxy in
                     HStack {
-                        LinkButton(title: "Invitar luego",
+                        LinkButton(title: L10n.AddPeopleTransmissionView.LaterButton.title,
                                    color: .negro,
                                    action: {
                             router.routeToServiceDetails(
@@ -66,7 +66,7 @@ struct AddPeopleTransmissionView<ViewModel:AddPeopleTransmissionViewModelProtoco
                         })
                         .frame(width: proxy.size.width / 2)
                         .isHidden(true)
-                        WCUIButton(title: "Siguiente",
+                        WCUIButton(title: L10n.AddPeopleTransmissionView.NextButton.title,
                                    style: .standard,
                                    descriptor: BlackButtonStyleDescriptor(),
                                    action: {
@@ -95,7 +95,7 @@ struct AddPeopleTransmissionView<ViewModel:AddPeopleTransmissionViewModelProtoco
             .padding(.horizontal, Tokens.Size.Spacing.large)
             HStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {
-                Text("Agregar personas a la transmisión")
+                Text(L10n.AddPeopleTransmissionView.Header.title)
                     .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                 Spacer()
             }

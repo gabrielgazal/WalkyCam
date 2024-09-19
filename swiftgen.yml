@@ -1,6 +1,6 @@
  strings:
    inputs:
-     - WalkyCam/Resources/en.lproj
+     - WalkyCam/Resources/es.lproj
    outputs:
      - templateName: structured-swift5
        output: WalkyCam/Resources/Generated/Strings.swift

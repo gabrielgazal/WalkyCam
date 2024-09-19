@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct IOTMenuView<ViewModel:IOTMenuViewModelProtocol, Router: IOTMenuRouterProtocol>: View {
+struct IOTMenuView<ViewModel: IOTMenuViewModelProtocol, Router: IOTMenuRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -10,6 +10,7 @@ struct IOTMenuView<ViewModel:IOTMenuViewModelProtocol, Router: IOTMenuRouterProt
         GridItem(.flexible(), spacing: Tokens.Size.Spacing.large),
         GridItem(.flexible(), spacing: Tokens.Size.Spacing.large)
     ]
+
     // MARK: - Initialization
 
     init(viewModel: ViewModel,
@@ -24,11 +25,11 @@ struct IOTMenuView<ViewModel:IOTMenuViewModelProtocol, Router: IOTMenuRouterProt
         ScrollView(showsIndicators: false) {
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.regular) {
-                Text("Categorías IOT")
+                Text(L10n.IOTMenuView.CategoríasIOT.title)
                     .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                     .padding(.horizontal, Tokens.Size.Spacing.regular)
                 Group {
-                    Text("Mis Servicios Contratados")
+                    Text(L10n.IOTMenuView.MisServiciosContratados.title)
                         .font(.projectFont(size: Tokens.Size.Font.large))
                         .padding(.horizontal, Tokens.Size.Spacing.regular)
                     ScrollView(.horizontal,
@@ -48,7 +49,7 @@ struct IOTMenuView<ViewModel:IOTMenuViewModelProtocol, Router: IOTMenuRouterProt
                         )
                     }
                 }
-                Text("Contratar Nuevo")
+                Text(L10n.IOTMenuView.ContratarNuevo.title)
                     .font(.projectFont(size: Tokens.Size.Font.large))
                     .padding(.horizontal, Tokens.Size.Spacing.regular)
                 LazyVGrid(columns: columns,
@@ -63,22 +64,21 @@ struct IOTMenuView<ViewModel:IOTMenuViewModelProtocol, Router: IOTMenuRouterProt
                     itemCell(title: "Smart Home", icon: Asset.Icons.smartHome.name)
                     itemCell(title: "Farming", icon: Asset.Icons.farming.name)
                 }
-                          .padding(Tokens.Size.Spacing.regular)
-                          .shadow(
-                              color: Color.negro.opacity(0.1),
-                              radius: 10,
-                              x: 0,
-                              y: 2
-                          )
+                .padding(Tokens.Size.Spacing.regular)
+                .shadow(
+                    color: Color.negro.opacity(0.1),
+                    radius: 10,
+                    x: 0,
+                    y: 2
+                )
             }
         }
         .fullScreen(isPresented: $viewModel.displayQRCode) {
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.xlarge) {
-                HStack{
+                HStack {
                     Image(systemName: "arrow.backward")
                         .resizable()
-                        .scaledToFit()
                         .scaledToFit()
                         .fontWeight(.semibold)
                         .frame(width: 24, height: 24)
@@ -87,9 +87,9 @@ struct IOTMenuView<ViewModel:IOTMenuViewModelProtocol, Router: IOTMenuRouterProt
                         }
                     Spacer()
                 }
-                Text("Código QR")
+                Text(L10n.IOTMenuView.CódigoQR.title)
                     .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
-                Text("Scanea para autenticar tu ingreso al dashboard IOT Farming")
+                Text(L10n.IOTMenuView.ScanQRCode.title)
                     .font(.projectFont(size: Tokens.Size.Font.large))
                 HStack {
                     Spacer()
@@ -97,14 +97,14 @@ struct IOTMenuView<ViewModel:IOTMenuViewModelProtocol, Router: IOTMenuRouterProt
                     Spacer()
                 }
                 Spacer()
-                WCUIButton(title: "Scan QR",
+                WCUIButton(title: L10n.IOTMenuView.ScanQR.title,
                            style: .standard,
                            descriptor: OrangeButtonStyleDescriptor(),
                            action: {
                     viewModel.displayQRCode = false
                 })
             }
-                   .padding(Tokens.Size.Spacing.regular)
+            .padding(Tokens.Size.Spacing.regular)
         }
         .onAppear {
             UserDefaults.standard.set(FunctionType.iot.rawValue, forKey: "currentService")
@@ -124,7 +124,7 @@ struct IOTMenuView<ViewModel:IOTMenuViewModelProtocol, Router: IOTMenuRouterProt
                     .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
                     .multilineTextAlignment(.center)
             }
-                   .padding(Tokens.Size.Spacing.regular)
+            .padding(Tokens.Size.Spacing.regular)
         }
         .frame(minWidth: 135)
         .onTapGesture {

@@ -3,6 +3,16 @@
     {
       "filename" : "premium-2.pdf",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "Frame 863.pdf",
+      "idiom" : "universal",
+      "locale" : "en"
+    },
+    {
+      "filename" : "premium-2 1.pdf",
+      "idiom" : "universal",
+      "locale" : "es"
     }
   ],
   "info" : {
@@ -10,6 +20,7 @@
     "version" : 1
   },
   "properties" : {
+    "localizable" : true,
     "preserves-vector-representation" : true
   }
 }

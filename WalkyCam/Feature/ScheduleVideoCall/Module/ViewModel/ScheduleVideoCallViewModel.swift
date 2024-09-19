@@ -20,10 +20,10 @@ final class ScheduleVideoCallViewModel: ScheduleVideoCallViewModelProtocol {
     private func initializeTabs() {
         let tabs: [WCTopBarItem] = [
             .init(iconName: "",
-                  title: "Fecha",
+                  title: L10n.ScheduleVideoCallViewModel.Tabs.date,
                   destination: CalendarTabRoute(isPresented: .constant(false)).build()),
             .init(iconName: "",
-                  title: "Hora",
+                  title: L10n.ScheduleVideoCallViewModel.Tabs.time,
                   destination: VideocallTimeTabRoute(isPresented: .constant(false)).build())
         ]
         tabBarItems = tabs

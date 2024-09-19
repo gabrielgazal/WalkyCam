@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct FlightMenuView<ViewModel:FlightMenuViewModelProtocol, Router: FlightMenuRouterProtocol>: View {
+struct FlightMenuView<ViewModel: FlightMenuViewModelProtocol, Router: FlightMenuRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -27,24 +27,24 @@ struct FlightMenuView<ViewModel:FlightMenuViewModelProtocol, Router: FlightMenuR
                     .resizable()
                     .scaledToFit()
                     .frame(width: 170)
-                Text("Programa tu vuelo")
+                Text(L10n.FlightMenuView.ProgramaTuVuelo.title)
                     .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .bold))
                     .multilineTextAlignment(.center)
                 Spacer()
                     .frame(height: 24)
                 HStack(spacing: Tokens.Size.Spacing.regular) {
-                    verticalCard(title: "BUSCAR",
-                                 description: "Localiza tu Piloto más cercano.",
-                                 buttonTitle: "Buscar",
+                    verticalCard(title: L10n.FlightMenuView.Buscar.title,
+                                 description: L10n.FlightMenuView.LocalizaTuPiloto.title,
+                                 buttonTitle: L10n.FlightMenuView.Buscar.title,
                                  icon: Asset.Icons.location.name,
                                  action: {
                         isSearchLoading.toggle()
                         router.routeToSearchCammer()
                     })
                     .loading(isSearchLoading)
-                    verticalCard(title: "RESERVAR",
-                                 description: "Programa tu Vuelo con anterioridad.",
-                                 buttonTitle: "Reservar",
+                    verticalCard(title: L10n.FlightMenuView.Reservar.title,
+                                 description: L10n.FlightMenuView.ProgramaTuVuelo.title,
+                                 buttonTitle: L10n.FlightMenuView.Reservar.title,
                                  icon: Asset.Icons.calendar.name,
                                  action: {
                         isScheduleLoading.toggle()
@@ -59,12 +59,12 @@ struct FlightMenuView<ViewModel:FlightMenuViewModelProtocol, Router: FlightMenuR
                 })
             }
         }
-               .padding(Tokens.Size.Spacing.regular)
-               .background(Asset.Fondos.droneFondo.swiftUIImage
-                   .ignoresSafeArea())
-               .navigation(router)
-               .sheet(router)
-               .environment(\.colorScheme, .dark)
+        .padding(Tokens.Size.Spacing.regular)
+        .background(Asset.Fondos.droneFondo.swiftUIImage
+            .ignoresSafeArea())
+        .navigation(router)
+        .sheet(router)
+        .environment(\.colorScheme, .dark)
     }
 
     private func getFlightMenuImage() -> String {
@@ -104,12 +104,12 @@ struct FlightMenuView<ViewModel:FlightMenuViewModelProtocol, Router: FlightMenuR
                 action?()
             })
         }
-               .padding(Tokens.Size.Spacing.regular)
-               .background(
-                Color.negro
-                    .opacity(0.8)
-                    .cornerRadius(48)
-               )
+        .padding(Tokens.Size.Spacing.regular)
+        .background(
+            Color.negro
+                .opacity(0.8)
+                .cornerRadius(48)
+        )
     }
 
     private func horizontalCard(action: (() -> Void)?) -> some View {
@@ -120,14 +120,14 @@ struct FlightMenuView<ViewModel:FlightMenuViewModelProtocol, Router: FlightMenuR
                     .resizable()
                     .scaledToFit()
                     .frame(width: 40, height: 40)
-                Text("UNIRSE")
+                Text(L10n.FlightMenuView.Unirme.title)
                     .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .semibold))
             }
-            Text("Ingresa el código que has recebido.")
+            Text(L10n.FlightMenuView.IngresaElCodigo.title)
                 .font(.projectFont(size: Tokens.Size.Font.regular))
             HStack(spacing: Tokens.Size.Spacing.regular) {
                 TextInputView(text: .constant(""),
-                              placeholder: "Ingresar código")
+                              placeholder: L10n.FlightMenuView.IngresarCodigo.placeholder)
                 WCUIButton(title: "Unirme",
                            style: .outline,
                            descriptor: OrangeButtonStyleDescriptor(),
@@ -136,19 +136,19 @@ struct FlightMenuView<ViewModel:FlightMenuViewModelProtocol, Router: FlightMenuR
                 })
             }
         }
-               .padding(Tokens.Size.Spacing.regular)
-               .background(
-                Color.negro
-                    .opacity(0.8)
-                    .cornerRadius(48)
-               )
+        .padding(Tokens.Size.Spacing.regular)
+        .background(
+            Color.negro
+                .opacity(0.8)
+                .cornerRadius(48)
+        )
     }
 }
 
 struct FlightMenuView_Previews: PreviewProvider {
     static var previews: some View {
-    FlightMenuView(
-        viewModel: FlightMenuViewModel(menuMode: .rural),
+        FlightMenuView(
+            viewModel: FlightMenuViewModel(menuMode: .rural),
             router: FlightMenuRouter(isPresented: .constant(false))
         )
     }

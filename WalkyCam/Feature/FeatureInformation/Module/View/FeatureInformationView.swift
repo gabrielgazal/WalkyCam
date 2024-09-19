@@ -28,12 +28,12 @@ struct FeatureInformationView<ViewModel: FeatureInformationViewModelProtocol, Ro
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.regular) {
                 headerView
-                Text("Sube tus Licencias y Permisos relacionados a tus dispositivos y capacidades. ")
+                Text(L10n.FeatureInformationView.Description.uploadLicenses)
                     .font(.projectFont(size: Tokens.Size.Font.regular))
                 VStack(alignment: .center,
                        spacing: Tokens.Size.Spacing.regular) {
                     rovInformationView()
-                    LinkButton(title: "Agregar otro ROV Submarino",
+                    LinkButton(title: L10n.FeatureInformationView.Rov.addAnother,
                                icon: Asset.Icons.add.name,
                                color: .naranja,
                                action: {})
@@ -41,7 +41,7 @@ struct FeatureInformationView<ViewModel: FeatureInformationViewModelProtocol, Ro
                 VStack(alignment: .center,
                        spacing: Tokens.Size.Spacing.regular) {
                     smartphoneInformationView()
-                    LinkButton(title: "Agregar otro Smartphone",
+                    LinkButton(title: L10n.FeatureInformationView.Smartphone.addAnother,
                                icon: Asset.Icons.add.name,
                                color: .naranja,
                                action: {})
@@ -55,13 +55,13 @@ struct FeatureInformationView<ViewModel: FeatureInformationViewModelProtocol, Ro
             HStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {
                 WCUIButton(
-                    title: "Cancelar",
+                    title: L10n.FeatureInformationView.cancel,
                     style: .outline,
                     descriptor: OrangeButtonStyleDescriptor(),
                     action: {}
                 )
                 WCUIButton(
-                    title: "Siguiente",
+                    title: L10n.FeatureInformationView.next,
                     style: .standard,
                     descriptor: BlackButtonStyleDescriptor(),
                     action: {
@@ -82,33 +82,33 @@ struct FeatureInformationView<ViewModel: FeatureInformationViewModelProtocol, Ro
                 .resizable()
                 .scaledToFit()
                 .frame(width: 75, height: 75)
-            Text("ROV Submarino")
-                .font(.projectFont(size: Tokens.Size.Font.regular, 
+            Text(L10n.FeatureInformationView.Rov.title)
+                .font(.projectFont(size: Tokens.Size.Font.regular,
                                    weight: .bold))
             TextInputView(text: $rovName,
-                          topDescriptionText: "Nombre comercial",
-                          placeholder: "Nombre comercial",
+                          topDescriptionText: L10n.FeatureInformationView.Rov.name,
+                          placeholder: L10n.FeatureInformationView.Rov.name,
                           backgroundColor: .blancoGris)
             ListInputView(dataList: ["Teste", "Teste2"],
                           selection: $rovModel,
-                          topDescriptionText: "Modelo",
-                          placeholder: "Selecciona el modelo",
+                          topDescriptionText: L10n.FeatureInformationView.Rov.model,
+                          placeholder: L10n.FeatureInformationView.Rov.model,
                           backgroundColor: .blancoGris)
             HStack {
-                Text("Si tu modelo no aparece, no es un dispositivo admitido por WalkyCam")
+                Text(L10n.FeatureInformationView.Rov.modelNotSupported)
                     .font(.projectFont(size: Tokens.Size.Font.regular))
                 Spacer()
             }
             TextInputView(text: $rovSerialNumber,
-                          topDescriptionText: "N de serie",
-                          placeholder: "N de serie",
+                          topDescriptionText: L10n.FeatureInformationView.Rov.serialNumber,
+                          placeholder: L10n.FeatureInformationView.Rov.serialNumber,
                           backgroundColor: .blancoGris)
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.small) {
-                Text("Licencia y/o Permisos")
+                Text(L10n.FeatureInformationView.Rov.licenseAndPermissions)
                     .font(.projectFont(size: Tokens.Size.Font.regular,
                                        weight: .bold))
-                WCUIButton(title: "Subir licensas",
+                WCUIButton(title: L10n.FeatureInformationView.Rov.uploadLicenses,
                            style: .outline,
                            descriptor: OrangeButtonStyleDescriptor(),
                            action: {})
@@ -130,21 +130,21 @@ struct FeatureInformationView<ViewModel: FeatureInformationViewModelProtocol, Ro
                 .resizable()
                 .scaledToFit()
                 .frame(width: 75, height: 75)
-            Text("Móvil/Smartphone")
+            Text(L10n.FeatureInformationView.Smartphone.title)
                 .font(.projectFont(size: Tokens.Size.Font.regular,
                                    weight: .bold))
             TextInputView(text: $smartphoneBrand,
-                          topDescriptionText: "Nombre comercial",
-                          placeholder: "Nombre comercial",
+                          topDescriptionText: L10n.FeatureInformationView.Smartphone.name,
+                          placeholder: L10n.FeatureInformationView.Smartphone.name,
                           backgroundColor: .blancoGris)
             ListInputView(dataList: ["Teste", "Teste2"],
                           selection: $smartphoneBrand,
-                          topDescriptionText: "Modelo",
-                          placeholder: "Selecciona el modelo",
+                          topDescriptionText: L10n.FeatureInformationView.Smartphone.model,
+                          placeholder: L10n.FeatureInformationView.Smartphone.model,
                           backgroundColor: .blancoGris)
             TextInputView(text: $smartphoneSerialNumber,
-                          topDescriptionText: "N de serie",
-                          placeholder: "N de serie",
+                          topDescriptionText: L10n.FeatureInformationView.Smartphone.serialNumber,
+                          placeholder: L10n.FeatureInformationView.Smartphone.serialNumber,
                           backgroundColor: .blancoGris)
         }
                       .padding(Tokens.Size.Spacing.regular)
@@ -159,7 +159,7 @@ struct FeatureInformationView<ViewModel: FeatureInformationViewModelProtocol, Ro
     private func licenseInformationView() -> some View {
         return VStack(alignment: .leading,
                       spacing: Tokens.Size.Spacing.regular) {
-            Text("Con qué vehículo propio cuentas?")
+            Text(L10n.FeatureInformationView.Vehicle.question)
                 .font(.projectFont(size: Tokens.Size.Font.regular,
                                    weight: .bold))
             HStack(alignment: .center,
@@ -171,7 +171,7 @@ struct FeatureInformationView<ViewModel: FeatureInformationViewModelProtocol, Ro
                         }
                 }
             }
-            WCUIButton(title: "Subir licencia de conducir",
+            WCUIButton(title: L10n.FeatureInformationView.Vehicle.uploadDrivingLicense,
                        style: .outline,
                        descriptor: OrangeButtonStyleDescriptor(),
                        action: {})
@@ -188,7 +188,7 @@ struct FeatureInformationView<ViewModel: FeatureInformationViewModelProtocol, Ro
     private func deepnessInformationView() -> some View {
         return VStack(alignment: .leading,
                       spacing: Tokens.Size.Spacing.regular) {
-            Text("Capacidad en metros de profundidad en buceo.")
+            Text(L10n.FeatureInformationView.Deepness.depthCapacity)
                 .font(.projectFont(size: Tokens.Size.Font.regular,
                                    weight: .bold))
             HStack(alignment: .center,
@@ -200,7 +200,7 @@ struct FeatureInformationView<ViewModel: FeatureInformationViewModelProtocol, Ro
                         }
                 }
             }
-            WCUIButton(title: "Subir permiso de buceo",
+            WCUIButton(title: L10n.FeatureInformationView.Deepness.uploadDivingPermit,
                        style: .outline,
                        descriptor: OrangeButtonStyleDescriptor(),
                        action: {})
@@ -223,7 +223,7 @@ struct FeatureInformationView<ViewModel: FeatureInformationViewModelProtocol, Ro
             }
             HStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {
-                Text("Completa la información")
+                Text(L10n.FeatureInformationView.Header.completeInformation)
                     .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                 Spacer()
             }

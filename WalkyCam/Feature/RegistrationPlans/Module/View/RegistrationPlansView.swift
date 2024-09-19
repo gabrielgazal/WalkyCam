@@ -37,15 +37,15 @@ struct RegistrationPlansView<ViewModel:RegistrationPlansViewModelProtocol, Route
                 HStack(alignment: .center,
                        spacing: Tokens.Size.Spacing.regular) {
                     Toggle(isOn: $monthlyToggle) {
-                        Text("Toggle Test")
+                        Text(L10n.RegistrationPlansView.Toggle.test)
                     }
                     .toggleStyle(WCNamelessToggleStyle())
                     HStack(alignment: .center,
                            spacing: Tokens.Size.Spacing.xsmall) {
-                        Text("Plan anual")
+                        Text(L10n.RegistrationPlansView.Plan.annual)
                             .font(.projectFont(size: Tokens.Size.Font.medium, weight: .medium))
                             .foregroundColor(.blanco)
-                        Text("(ahora 5%)")
+                        Text(L10n.RegistrationPlansView.Plan.discount)
                             .font(.projectFont(size: Tokens.Size.Font.medium, weight: .bold))
                             .foregroundColor(monthlyToggle ? .naranja : .blanco)
                     }

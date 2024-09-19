@@ -81,7 +81,7 @@ struct CammerDetailsView<ViewModel:CammerDetailsViewModelProtocol, Router: Camme
         }
         .footer {
             VStack(spacing: Tokens.Size.Spacing.large) {
-                WCUIButton(title: "Seleccionar",
+                WCUIButton(title: L10n.CammerDetailsView.selectButton,
                            style: .standard,
                            descriptor: OrangeButtonStyleDescriptor(),
                            action: {
@@ -92,7 +92,7 @@ struct CammerDetailsView<ViewModel:CammerDetailsViewModelProtocol, Router: Camme
                         totalSteps: 4
                     )
                 })
-                LinkButton(title: "Chatea conmigo",
+                LinkButton(title: L10n.CammerDetailsView.chatButton,
                            icon: Asset.Icons.messageCircle.name,
                            color: .negro,
                            action: {})
@@ -132,7 +132,7 @@ struct CammerDetailsView<ViewModel:CammerDetailsViewModelProtocol, Router: Camme
                 HStack(alignment: .center,
                        spacing: Tokens.Size.Spacing.small) {
                     Asset.Icons.location.swiftUIImage
-                    Text("TESTE 123")
+                    Text(L10n.CammerDetailsView.testLocation)
                         .font(.projectFont(size: Tokens.Size.Font.medium))
                     Spacer()
                 }
@@ -155,27 +155,27 @@ struct CammerDetailsView<ViewModel:CammerDetailsViewModelProtocol, Router: Camme
                         alignment: .center,
                         spacing: Tokens.Size.Spacing.small
                     ) {
-                        Text("Costo por hora")
+                        Text(L10n.CammerDetailsView.hourlyCost)
                             .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
-                        Text("$ \(String(format: "%.f", availabilityInfo.hourlyCost))")
+                        Text("\(L10n.CammerDetailsView.currency) \(String(format: "%.f", availabilityInfo.hourlyCost))")
                         Spacer()
                     }
                     HStack(
                         alignment: .center,
                         spacing: Tokens.Size.Spacing.small
                     ) {
-                        Text("Tiempo de grabación")
+                        Text(L10n.CammerDetailsView.recordingTime)
                             .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
-                        Text("\(String(format: "%.f", availabilityInfo.recordingTime)) hs")
+                        Text("\(String(format: "%.f", availabilityInfo.recordingTime)) \(L10n.CammerDetailsView.hours)")
                         Spacer()
                     }
                     HStack(
                         alignment: .center,
                         spacing: Tokens.Size.Spacing.small
                     ) {
-                        Text("Disponibilidad")
+                        Text(L10n.CammerDetailsView.availability)
                             .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
-                        Text("\(String(format: "%.f", availabilityInfo.availabilityTime)) hs")
+                        Text("\(String(format: "%.f", availabilityInfo.availabilityTime)) \(L10n.CammerDetailsView.hours)")
                         Spacer()
                     }
                 }
@@ -195,7 +195,7 @@ struct CammerDetailsView<ViewModel:CammerDetailsViewModelProtocol, Router: Camme
             alignment: .leading,
             spacing: Tokens.Size.Spacing.regular) {
                 if let about = viewModel.cammerData.about {
-                    Text("Sobre \(viewModel.cammerData.name)")
+                    Text(String(format: L10n.CammerDetailsView.about(viewModel.cammerData.name)))
                         .font(.projectFont(size: Tokens.Size.Font.large))
                     Text(about)
                         .font(.projectFont(size: Tokens.Size.Font.regular))
@@ -215,7 +215,7 @@ struct CammerDetailsView<ViewModel:CammerDetailsViewModelProtocol, Router: Camme
         return VStack(
             alignment: .leading,
             spacing: Tokens.Size.Spacing.regular) {
-                Text("DISPOSITIVOS")
+                Text(L10n.CammerDetailsView.devices)
                     .font(.projectFont(size: Tokens.Size.Font.large))
                 ForEach(viewModel.cammerData.devices, id: \.self) { item in
                     itemView(icon: item.type.toIcon(), title: item.name)
@@ -235,10 +235,10 @@ struct CammerDetailsView<ViewModel:CammerDetailsViewModelProtocol, Router: Camme
         return VStack(
             alignment: .leading,
             spacing: Tokens.Size.Spacing.regular) {
-                Text("CAPACIDADES")
+                Text(L10n.CammerDetailsView.abilities)
                     .font(.projectFont(size: Tokens.Size.Font.large))
                 ForEach(viewModel.cammerData.abilities, id: \.self) { item in
-                    itemView(icon: item.icon, title: "Apto \(item.name)")
+                    itemView(icon: item.icon, title: String(format: L10n.CammerDetailsView.ability(item.name)))
                 }
             }
             .padding(Tokens.Size.Spacing.large)
@@ -291,39 +291,5 @@ struct CammerDetailsView<ViewModel:CammerDetailsViewModelProtocol, Router: Camme
             .aspectRatio(contentMode: .fit)
             .padding(Tokens.Size.Spacing.large)
             .cornerRadius(Tokens.Size.Border.Radius.medium)
-    }
-}
-
-struct CammerDetailsView_Previews: PreviewProvider {
-    static var previews: some View {
-    CammerDetailsView(
-        viewModel: CammerDetailsViewModel(
-            interactor: CammerDetailsInteractor(),
-            cammerData: .init(
-                id: 0,
-                name: "Camila Perez",
-                stars: 5,
-                description: "asdadasdazdasdDSDHJKgshjgajdvahjkgdhavhjksdgahjsvdhjagsdvagsdhvahjksdgvahjsvdjkvv",
-                profileImage: .womanMock1,
-                technologies: [],
-                coordinates: .init(latitude: -12.123123, longitude: -49.123),
-                devices: [
-                    .init(name: "Tese 1", type: .camera),
-                    .init(name: "Tese 2", type: .smartphone)
-                ],
-                availability: .init(
-                    hourlyCost: 60.0,
-                    recordingTime: 3,
-                    availabilityTime: 3
-                ),
-                abilities: [
-                    .init(name: "escaneo 3D", icon: Asset.Icons.scan3D.name),
-                    .init(name: "LIDAR", icon: Asset.Icons.lidar.name)
-                ]
-            ),
-            specialistMode: false
-        ),
-            router: CammerDetailsRouter(isPresented: .constant(false))
-        )
     }
 }

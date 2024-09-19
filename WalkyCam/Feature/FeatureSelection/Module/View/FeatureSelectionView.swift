@@ -29,26 +29,26 @@ struct FeatureSelectionView<ViewModel: FeatureSelectionViewModelProtocol, Router
                 devicesView
                 abilitiesView
             }
-                   .padding(Tokens.Size.Spacing.regular)
+            .padding(Tokens.Size.Spacing.regular)
         }
         .scrollIndicators(.hidden)
         .footer {
             HStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {
-                WCUIButton(title: "Cancelar",
+                WCUIButton(title: L10n.FeatureSelectionView.cancel,
                            style: .outline,
                            descriptor: OrangeButtonStyleDescriptor(),
                            action: {
                     router.dismiss()
                 })
-                WCUIButton(title: "Siguiente",
+                WCUIButton(title: L10n.FeatureSelectionView.next,
                            style: .standard,
                            descriptor: BlackButtonStyleDescriptor(),
                            action: {
                     router.routeToFeatureInformation()
                 })
             }
-                   .padding(Tokens.Size.Spacing.regular)
+            .padding(Tokens.Size.Spacing.regular)
         }
         .navigation(router)
     }
@@ -58,7 +58,7 @@ struct FeatureSelectionView<ViewModel: FeatureSelectionViewModelProtocol, Router
     private var devicesView: some View {
         VStack(alignment: .leading,
                spacing: Tokens.Size.Spacing.regular) {
-            Text("Dispositivos")
+            Text(L10n.FeatureSelectionView.devices)
                 .font(.projectFont(size: Tokens.Size.Font.large))
             LazyVGrid(columns: columns,
                       spacing: Tokens.Size.Spacing.large) {
@@ -94,16 +94,16 @@ struct FeatureSelectionView<ViewModel: FeatureSelectionViewModelProtocol, Router
         HStack(alignment: .center,
                spacing: Tokens.Size.Spacing.small) {
             Spacer()
-            Text("Ver \(dropDownOpen ? "menos" : "más")")
+            Text(L10n.FeatureSelectionView.viewMore(dropDownOpen ? "menos" : "más"))
                 .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
             Image(systemName: dropDownOpen ? "arrow.up": "arrow.down")
         }
-               .foregroundColor(.naranja)
-               .onTapGesture {
-                   withAnimation {
-                       dropDownOpen.toggle()
-                   }
-               }
+        .foregroundColor(.naranja)
+        .onTapGesture {
+            withAnimation {
+                dropDownOpen.toggle()
+            }
+        }
     }
     
     private func deviceItemCell(_ model: SelectorModel) -> some View {
@@ -127,7 +127,7 @@ struct FeatureSelectionView<ViewModel: FeatureSelectionViewModelProtocol, Router
                     .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
                     .multilineTextAlignment(.center)
             }
-                   .padding(!model.key.isEmpty ? Tokens.Size.Spacing.regular : Tokens.Size.Spacing.big)
+            .padding(!model.key.isEmpty ? Tokens.Size.Spacing.regular : Tokens.Size.Spacing.big)
             if model.isSelected {
                 VStack {
                     HStack {
@@ -153,7 +153,7 @@ struct FeatureSelectionView<ViewModel: FeatureSelectionViewModelProtocol, Router
             }
             HStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {
-                Text("Selecciona tus dispositivos y capacidades")
+                Text(L10n.FeatureSelectionView.title)
                     .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                 Spacer()
             }
@@ -163,7 +163,7 @@ struct FeatureSelectionView<ViewModel: FeatureSelectionViewModelProtocol, Router
     private var abilitiesView: some View {
         VStack(alignment: .leading,
                spacing: Tokens.Size.Spacing.regular) {
-            Text("Capacidades")
+            Text(L10n.FeatureSelectionView.abilities)
                 .font(.projectFont(size: Tokens.Size.Font.large))
             WrappingHStack(horizontalSpacing: Tokens.Size.Spacing.regular, verticalSpacing: Tokens.Size.Spacing.regular) {
                 ForEach(0..<viewModel.abilitiesModel.count, id: \.self) { index in
@@ -225,7 +225,7 @@ struct FeatureSelectionView<ViewModel: FeatureSelectionViewModelProtocol, Router
 
 struct FeatureSelectionView_Previews: PreviewProvider {
     static var previews: some View {
-    FeatureSelectionView(
+        FeatureSelectionView(
             viewModel: FeatureSelectionViewModel(),
             router: FeatureSelectionRouter(isPresented: .constant(false))
         )

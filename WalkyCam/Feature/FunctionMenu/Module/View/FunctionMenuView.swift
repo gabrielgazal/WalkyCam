@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct FunctionMenuView<ViewModel:FunctionMenuViewModelProtocol, Router: FunctionMenuRouterProtocol>: View {
+struct FunctionMenuView<ViewModel: FunctionMenuViewModelProtocol, Router: FunctionMenuRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -30,16 +30,16 @@ struct FunctionMenuView<ViewModel:FunctionMenuViewModelProtocol, Router: Functio
             Spacer()
                 .frame(height: 15)
             HStack(spacing: Tokens.Size.Spacing.regular) {
-                verticalCard(title: "BUSCAR",
-                             description: "Localiza tu WalkCamer más cercano.",
-                             buttonTitle: "Buscar",
+                verticalCard(title: L10n.FunctionMenuView.Buscar.title,
+                             description: L10n.FunctionMenuView.Buscar.description,
+                             buttonTitle: L10n.FunctionMenuView.Buscar.title,
                              icon: Asset.Icons.locationWhite.name,
                              action: {
                     router.routeToSearchCammer()
                 })
-                verticalCard(title: "RESERVAR",
-                             description: "Programa tu WalkCamer con anterioridad.",
-                             buttonTitle: "Reservar",
+                verticalCard(title: L10n.FunctionMenuView.Reservar.title,
+                             description: L10n.FunctionMenuView.Reservar.description,
+                             buttonTitle: L10n.FunctionMenuView.Reservar.title,
                              icon: Asset.Icons.calendar.name,
                              action: {
                     router.routeToScheduleCammer()
@@ -49,15 +49,15 @@ struct FunctionMenuView<ViewModel:FunctionMenuViewModelProtocol, Router: Functio
 
             horizontalCard(action: {})
         }
-               .padding(Tokens.Size.Spacing.regular)
-               .background(Image(viewModel.model.background)
-                   .ignoresSafeArea())
-               .navigation(router)
-               .sheet(router)
-               .environment(\.colorScheme, .dark)
-               .onAppear {
-                   UserDefaults.standard.set(viewModel.model.type.rawValue, forKey: "currentService")
-               }
+        .padding(Tokens.Size.Spacing.regular)
+        .background(Image(viewModel.model.background)
+            .ignoresSafeArea())
+        .navigation(router)
+        .sheet(router)
+        .environment(\.colorScheme, .dark)
+        .onAppear {
+            UserDefaults.standard.set(viewModel.model.type.rawValue, forKey: "currentService")
+        }
     }
 
     private func verticalCard(title: String,
@@ -83,12 +83,12 @@ struct FunctionMenuView<ViewModel:FunctionMenuViewModelProtocol, Router: Functio
                 action?()
             })
         }
-               .padding(Tokens.Size.Spacing.regular)
-               .background(
-                Color.negro
-                    .opacity(0.8)
-                    .cornerRadius(48)
-               )
+        .padding(Tokens.Size.Spacing.regular)
+        .background(
+            Color.negro
+                .opacity(0.8)
+                .cornerRadius(48)
+        )
     }
 
     private func horizontalCard(action: (() -> Void)?) -> some View {
@@ -99,15 +99,15 @@ struct FunctionMenuView<ViewModel:FunctionMenuViewModelProtocol, Router: Functio
                     .resizable()
                     .scaledToFit()
                     .frame(width: 40, height: 40)
-                Text("UNIRSE")
+                Text(L10n.FunctionMenuView.Unirse.title)
                     .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .semibold))
             }
-            Text("Ingresa el código que has recebido.")
+            Text(L10n.FunctionMenuView.IngresaElCodigo.title)
                 .font(.projectFont(size: Tokens.Size.Font.regular))
             HStack(spacing: Tokens.Size.Spacing.regular) {
                 TextInputView(text: .constant(""),
                               placeholder: "Ingresar código")
-                WCUIButton(title: "Unirme",
+                WCUIButton(title: L10n.FunctionMenuView.Unirme.title,
                            style: .outline,
                            descriptor: OrangeButtonStyleDescriptor(),
                            action: {
@@ -115,22 +115,22 @@ struct FunctionMenuView<ViewModel:FunctionMenuViewModelProtocol, Router: Functio
                 })
             }
         }
-               .padding(Tokens.Size.Spacing.regular)
-               .background(
-                Color.negro
-                    .opacity(0.8)
-                    .cornerRadius(48)
-               )
+        .padding(Tokens.Size.Spacing.regular)
+        .background(
+            Color.negro
+                .opacity(0.8)
+                .cornerRadius(48)
+        )
     }
 }
 
 struct FunctionMenuView_Previews: PreviewProvider {
     static var previews: some View {
-    FunctionMenuView(
-        viewModel: FunctionMenuViewModel(model: .init(type: .drone,
-                                                      title: "Teste",
-                                                      icon: Asset.Icons.drone.name,
-                                                      background: Asset.Fondos.videocallFondo.name)),
+        FunctionMenuView(
+            viewModel: FunctionMenuViewModel(model: .init(type: .drone,
+                                                          title: "Teste",
+                                                          icon: Asset.Icons.drone.name,
+                                                          background: Asset.Fondos.videocallFondo.name)),
             router: FunctionMenuRouter(isPresented: .constant(false))
         )
     }

@@ -32,7 +32,7 @@ struct ScheduleVideoCallView<ViewModel: ScheduleVideoCallViewModelProtocol, Rout
                 Spacer()
                 HStack {
                     Spacer()
-                    WCUIButton(title: "Siguiente",
+                    WCUIButton(title: L10n.ScheduleVideoCallView.next,
                                style: .standard,
                                descriptor: BlackButtonStyleDescriptor(),
                                action: {
@@ -59,7 +59,7 @@ struct ScheduleVideoCallView<ViewModel: ScheduleVideoCallViewModelProtocol, Rout
             .padding(.horizontal, Tokens.Size.Spacing.large)
             HStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {
-                Text("Selecciona fecha y hora de videollamada")
+                Text(L10n.ScheduleVideoCallView.selectDateAndTime)
                     .font(.projectFont(size: Tokens.Size.Font.larger, weight: .bold))
                 Spacer()
             }

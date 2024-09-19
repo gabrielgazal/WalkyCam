@@ -21,31 +21,32 @@ struct LegalDocumentationView<ViewModel: LegalDocumentationViewModelProtocol, Ro
     var body: some View {
         VStack(alignment: .leading,
                spacing: Tokens.Size.Spacing.regular) {
-            Text("Documentación legal")
+            Text(L10n.LegalDocumentationView.title)
                 .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
-            Text("Firma y acepta los contratos para poder comenzar a ser WalkCamer")
+            Text(L10n.LegalDocumentationView.subtitle)
                 .font(.projectFont(size: Tokens.Size.Font.small))
             Spacer()
-            uploadItem(title: "Declaración jurada", uploaded: uploadedDeclaration)
+            uploadItem(title: L10n.LegalDocumentationView.declaration, uploaded: uploadedDeclaration)
                 .onTapGesture {
                     uploadedDeclaration.toggle()
                 }
-            uploadItem(title: "Contrato", uploaded: uploadedContract)
+            uploadItem(title: L10n.LegalDocumentationView.contract, uploaded: uploadedContract)
                 .onTapGesture {
                     uploadedContract.toggle()
                 }
             Spacer()
             WCUIButton(
-                title: "Comenzar",
+                title: L10n.LegalDocumentationView.start,
                 style: .standard,
                 descriptor: OrangeButtonStyleDescriptor(),
                 action: {}
             )
             .disabled(!uploadedContract || !uploadedDeclaration)
-            WCUIButton(title: "Cancelar Registro",
-                       style: .standard,
-                       descriptor: BlackButtonStyleDescriptor(),
-                       action: {})
+            WCUIButton(
+                title: L10n.LegalDocumentationView.cancel,
+                style: .standard,
+                descriptor: BlackButtonStyleDescriptor(),
+                action: {})
         }
                .padding()
     }
@@ -70,7 +71,6 @@ struct LegalDocumentationView<ViewModel: LegalDocumentationViewModelProtocol, Ro
                               .fill(Color.blanco)
                               .shadow(color: .black.opacity(0.16), radius: 8, x: 0, y: 2)
                       }
-                      
     }
 }
 

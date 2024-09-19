@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct PrintMenuView<ViewModel:PrintMenuViewModelProtocol, Router: PrintMenuRouterProtocol>: View {
+struct PrintMenuView<ViewModel: PrintMenuViewModelProtocol, Router: PrintMenuRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -22,27 +22,27 @@ struct PrintMenuView<ViewModel:PrintMenuViewModelProtocol, Router: PrintMenuRout
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.large) {
                 HStack {
-                    Text("Print 3D")
+                    Text(L10n.PrintMenuView.Print3D.title)
                         .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                     Spacer()
                 }
-                itemCell(title: "Galeria", icon: Asset.Icons.scan3D.name)
+                itemCell(title: L10n.PrintMenuView.Galeria.title, icon: Asset.Icons.scan3D.name)
                     .onTapGesture {
                         router.routeToScan3d()
                     }
-                itemCell(title: "Escanear imagen", icon: Asset.Icons.scan3D.name)
+                itemCell(title: L10n.PrintMenuView.EscanearImagen.title, icon: Asset.Icons.scan3D.name)
                     .onTapGesture {
                         router.routeToScan3d()
                     }
-                itemCell(title: "Subir imagen", icon: Asset.Icons.uploadFolder.name)
+                itemCell(title: L10n.PrintMenuView.SubirImagen.title, icon: Asset.Icons.uploadFolder.name)
             }
-                   .padding(Tokens.Size.Spacing.large)
-                   .shadow(
-                    color: Color.negro.opacity(0.1),
-                    radius: 10,
-                    x: 0,
-                    y: 2
-                   )
+            .padding(Tokens.Size.Spacing.large)
+            .shadow(
+                color: Color.negro.opacity(0.1),
+                radius: 10,
+                x: 0,
+                y: 2
+            )
         }
         .navigation(router)
     }
@@ -62,7 +62,7 @@ struct PrintMenuView<ViewModel:PrintMenuViewModelProtocol, Router: PrintMenuRout
                     .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
                     .multilineTextAlignment(.center)
             }
-                   .padding(Tokens.Size.Spacing.regular)
+            .padding(Tokens.Size.Spacing.regular)
         }
         .frame(width: .infinity)
     }

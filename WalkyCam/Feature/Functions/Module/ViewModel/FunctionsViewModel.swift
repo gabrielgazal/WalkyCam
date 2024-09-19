@@ -26,50 +26,50 @@ final class FunctionsViewModel: FunctionsViewModelProtocol {
 
     private func fetchBasicFunctions() {
         basicFunctions = [
-            .init(title: "Video Call", icon: Asset.Icons.videoCall.name),
-            .init(title: "Street Cam", icon: Asset.Icons.streetCam.name),
-            .init(title: "AR Hands", icon: Asset.Icons.ar.name),
-            .init(title: "Scan 3D", icon: Asset.Icons.scan3D.name),
-            .init(title: "Cam 360º", icon: Asset.Icons._360Camera.name),
-            .init(title: "Certified Recording", icon: Asset.Icons.translate.name),
-            .init(title: "Games", icon: Asset.Icons.games.name),
-            .init(title: "Play & Business", icon: Asset.Icons.playBusiness.name),
+            .init(title: L10n.FunctionsViewModel.Function.videoCall, icon: Asset.Icons.videoCall.name),
+            .init(title: L10n.FunctionsViewModel.Function.streetCam, icon: Asset.Icons.streetCam.name),
+            .init(title: L10n.FunctionsViewModel.Function.arHands, icon: Asset.Icons.ar.name),
+            .init(title: L10n.FunctionsViewModel.Function.scan3D, icon: Asset.Icons.scan3D.name),
+            .init(title: L10n.FunctionsViewModel.Function.cam360, icon: Asset.Icons._360Camera.name),
+            .init(title: L10n.FunctionsViewModel.Function.certifiedRecording, icon: Asset.Icons.translate.name),
+            .init(title: L10n.FunctionsViewModel.Function.games, icon: Asset.Icons.games.name),
+            .init(title: L10n.FunctionsViewModel.Function.playBusiness, icon: Asset.Icons.playBusiness.name),
         ]
     }
 
     private func fetchOtherFunctions() {
         otherFunctions = [
-            .init(title: "Digital Twins", icon: Asset.Icons.digitalTwins.name),
-            .init(title: "IOT applications & Data Analysis", icon: Asset.Icons.iot.name),
-            .init(title: "3D Printer", icon: Asset.Icons._3dPrinting.name),
-            .init(title: "AI & Data Analysis", icon: Asset.Icons.aiAnalysis.name),
-            .init(title: "Drone Fly", icon: Asset.Icons.drone.name),
-            .init(title: "Alcohol & Drug test", icon: Asset.Icons.alcohol.name),
-            .init(title: "NFT platform", icon: Asset.Icons.nft.name),
-            .init(title: "Gestión Agrícola", icon: Asset.Icons.riego.name),
-            .init(title: "Crypto Wallet", icon: Asset.Icons.crypto.name)
+            .init(title: L10n.FunctionsViewModel.Function.digitalTwins, icon: Asset.Icons.digitalTwins.name),
+            .init(title: L10n.FunctionsViewModel.Function.iot, icon: Asset.Icons.iot.name),
+            .init(title: L10n.FunctionsViewModel.Function.printer3D, icon: Asset.Icons._3dPrinting.name),
+            .init(title: L10n.FunctionsViewModel.Function.ai, icon: Asset.Icons.aiAnalysis.name),
+            .init(title: L10n.FunctionsViewModel.Function.droneFly, icon: Asset.Icons.drone.name),
+            .init(title: L10n.FunctionsViewModel.Function.drugTest, icon: Asset.Icons.alcohol.name),
+            .init(title: L10n.FunctionsViewModel.Function.nft, icon: Asset.Icons.nft.name),
+            .init(title: L10n.FunctionsViewModel.Function.ruralDrone, icon: Asset.Icons.riego.name),
+            .init(title: L10n.FunctionsViewModel.Function.cryptoWallet, icon: Asset.Icons.crypto.name)
         ]
     }
 
     private func fetchPremiumFunctions() {
         premiumFunctions = [
-            .init(title: "R.O.V. Underwater Drone", icon: Asset.Icons.rov.name),
-            .init(title: "LIDAR Scan", icon: Asset.Icons.lidar.name),
-            .init(title: "Radar & Sensors", icon: Asset.Icons.radar.name),
-            .init(title: "Engineering (Consulting only)", icon: Asset.Icons.engineering.name),
-            .init(title: "Thermal Camera", icon: Asset.Icons.thermalCamera.name),
-            .init(title: "Backpack Screen Advertising", icon: Asset.Icons.backpack.name),
-            .init(title: "Link to CRM/ERP", icon: Asset.Icons.crm.name),
-            .init(title: "Ecografía", icon: Asset.Icons.ecografia.name),
-            .init(title: "Lawyer (Consulting only)", icon: Asset.Icons.lawyer.name),
-            .init(title: "Robótica", icon: Asset.Icons.robotica.name),
-            .init(title: "Detector de metales", icon: Asset.Icons.detectorMetales.name),
-            .init(title: "Georadar (GPR)", icon: Asset.Icons.radar.name),
-            .init(title: "Detector de Cables Enterrados", icon: Asset.Icons.cables.name),
-            .init(title: "Analizador de Redes Eléctricas", icon: Asset.Icons.analisadorRedes.name),
-            .init(title: "Robótica para Mascotas", icon: Asset.Icons.mascotas.name),
-            .init(title: "Dog Robot", icon: Asset.Icons.robotDog.name),
-            .init(title: "Robótica Telepresecia", icon: Asset.Icons.telepresencia.name)
+            .init(title: L10n.FunctionsViewModel.Function.rov, icon: Asset.Icons.rov.name),
+            .init(title: L10n.FunctionsViewModel.Function.lidar, icon: Asset.Icons.lidar.name),
+            .init(title: L10n.FunctionsViewModel.Function.radar, icon: Asset.Icons.radar.name),
+            .init(title: L10n.FunctionsViewModel.Function.engineering, icon: Asset.Icons.engineering.name),
+            .init(title: L10n.FunctionsViewModel.Function.thermalCamera, icon: Asset.Icons.thermalCamera.name),
+            .init(title: L10n.FunctionsViewModel.Function.screenAd, icon: Asset.Icons.backpack.name),
+            .init(title: L10n.FunctionsViewModel.Function.crm, icon: Asset.Icons.crm.name),
+            .init(title: L10n.FunctionsViewModel.Function.ecografia, icon: Asset.Icons.ecografia.name),
+            .init(title: L10n.FunctionsViewModel.Function.lawConsulting, icon: Asset.Icons.lawyer.name),
+            .init(title: L10n.FunctionsViewModel.Function.robot, icon: Asset.Icons.robotica.name),
+            .init(title: L10n.FunctionsViewModel.Function.metalDetector, icon: Asset.Icons.detectorMetales.name),
+            .init(title: L10n.FunctionsViewModel.Function.georadar, icon: Asset.Icons.radar.name),
+            .init(title: L10n.FunctionsViewModel.Function.cableDetector, icon: Asset.Icons.cables.name),
+            .init(title: L10n.FunctionsViewModel.Function.networkAnalyzer, icon: Asset.Icons.analisadorRedes.name),
+            .init(title: L10n.FunctionsViewModel.Function.mascotRobot, icon: Asset.Icons.mascotas.name),
+            .init(title: L10n.FunctionsViewModel.Function.dogRobot, icon: Asset.Icons.robotDog.name),
+            .init(title: L10n.FunctionsViewModel.Function.telepresenceRobot, icon: Asset.Icons.telepresencia.name)
         ]
     }
 }

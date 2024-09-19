@@ -20,13 +20,13 @@ final class BookWalkycamerViewModel: BookWalkycamerViewModelProtocol {
     private func initializeTabs() {
         let tabs: [WCTopBarItem] = [
             .init(iconName: "",
-                  title: "Fecha",
+                  title: L10n.BookWalkycamerViewModel.Fecha.title,
                   destination: CalendarTabRoute(isPresented: .constant(false)).build()),
             .init(iconName: "",
-                  title: "Hora",
+                  title: L10n.BookWalkycamerViewModel.Hora.title,
                   destination: TimeTabRoute(isPresented: .constant(false)).build()),
             .init(iconName: "",
-                  title: "Área",
+                  title: L10n.BookWalkycamerViewModel.Area.title,
                   destination: MapTabRoute(isPresented: .constant(false)).build())
         ]
         tabBarItems = tabs

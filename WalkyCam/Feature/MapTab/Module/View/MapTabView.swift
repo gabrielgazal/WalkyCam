@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct MapTabView<ViewModel:MapTabViewModelProtocol, Router: MapTabRouterProtocol>: View {
+struct MapTabView<ViewModel: MapTabViewModelProtocol, Router: MapTabRouterProtocol>: View {
     
     // MARK: - Dependencies
     
@@ -24,7 +24,7 @@ struct MapTabView<ViewModel:MapTabViewModelProtocol, Router: MapTabRouterProtoco
                 TextInputView(
                     text: $viewModel.locationText,
                     accessory: Image(systemName: "magnifyingglass"),
-                    placeholder: "Buscar WalkCamer",
+                    placeholder: L10n.MapTabView.BuscarWalkCamer.placeholder,
                     leftIcon: Asset.Icons.location.swiftUIImage,
                     rightIcon: Asset.Icons.filter.swiftUIImage,
                     backgroundColor: .blanco,

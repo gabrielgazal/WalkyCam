@@ -45,21 +45,21 @@ final class ServiceDetailsViewModel: ServiceDetailsViewModelProtocol {
         let cammerInfo = serviceManager.getServiceCammerInformation()
         
         detailItems.append(
-            .init(title: "Día", value: formatDateToDay(basicInfo.date))
+            .init(title: L10n.ServiceDetailsViewModel.Dia.title, value: formatDateToDay(basicInfo.date))
         )
         detailItems.append(
-            .init(title: "Hora", value: formatDateToTime(basicInfo.date))
+            .init(title: L10n.ServiceDetailsViewModel.Hora.title, value: formatDateToTime(basicInfo.date))
         )
         if let cammerName = cammerInfo?.name {
             detailItems.append(
-                .init(title: "WalkCamer", value: cammerName, image: cammerInfo?.profileImage)
+                .init(title: L10n.ServiceDetailsViewModel.WalkCamer.title, value: cammerName, image: cammerInfo?.profileImage)
             )
         }
         
         formatLocationToPlaceName(from: basicInfo.location) { name in
             if let servicePlaceName = name {
                 self.detailItems.append(
-                    .init(title: "Lugar de grabación", value: servicePlaceName)
+                    .init(title: L10n.ServiceDetailsViewModel.LugarDeGrabacion.title, value: servicePlaceName)
                 )
             }
         }
@@ -67,7 +67,7 @@ final class ServiceDetailsViewModel: ServiceDetailsViewModelProtocol {
         formatLocationToCity(from: basicInfo.location) { city in
             if let serviceCity = city {
                 self.detailItems.append(
-                    .init(title: "Ciudad", value: serviceCity)
+                    .init(title: L10n.ServiceDetailsViewModel.Ciudad.title, value: serviceCity)
                 )
             }
         }
@@ -75,7 +75,7 @@ final class ServiceDetailsViewModel: ServiceDetailsViewModelProtocol {
         formatLocationToCountry(from: basicInfo.location) { country in
             if let serviceCountry = country {
                 self.detailItems.append(
-                    .init(title: "País", value: serviceCountry)
+                    .init(title: L10n.ServiceDetailsViewModel.Pais.title, value: serviceCountry)
                 )
             }
         }
@@ -113,7 +113,7 @@ final class ServiceDetailsViewModel: ServiceDetailsViewModelProtocol {
     func formatLocationToPlaceName(from coordinates: CLLocationCoordinate2D, completion: @escaping (String?) -> Void) {
         let location = CLLocation(latitude: coordinates.latitude, longitude: coordinates.longitude)
         let geocoder = CLGeocoder()
-        geocoder.reverseGeocodeLocation(location, preferredLocale: Locale(identifier: "es_ES")) { (placemarks, error) in
+        geocoder.reverseGeocodeLocation(location, preferredLocale: Locale(identifier: L10n.Formater.locale)) { (placemarks, error) in
             if let error = error {
                 completion(nil)
             } else if let placemarks = placemarks, let placemark = placemarks.first {
@@ -128,7 +128,7 @@ final class ServiceDetailsViewModel: ServiceDetailsViewModelProtocol {
     func formatLocationToCity(from coordinates: CLLocationCoordinate2D, completion: @escaping (String?) -> Void) {
         let location = CLLocation(latitude: coordinates.latitude, longitude: coordinates.longitude)
         let geocoder = CLGeocoder()
-        geocoder.reverseGeocodeLocation(location, preferredLocale: Locale(identifier: "es_ES")) { (placemarks, error) in
+        geocoder.reverseGeocodeLocation(location, preferredLocale: Locale(identifier: L10n.Formater.locale)) { (placemarks, error) in
             if let error = error {
                 completion(nil)
             } else if let placemarks = placemarks, let placemark = placemarks.first {
@@ -143,7 +143,7 @@ final class ServiceDetailsViewModel: ServiceDetailsViewModelProtocol {
     func formatLocationToCountry(from coordinates: CLLocationCoordinate2D, completion: @escaping (String?) -> Void) {
         let location = CLLocation(latitude: coordinates.latitude, longitude: coordinates.longitude)
         let geocoder = CLGeocoder()
-        geocoder.reverseGeocodeLocation(location, preferredLocale: Locale(identifier: "es_ES")) { (placemarks, error) in
+        geocoder.reverseGeocodeLocation(location, preferredLocale: Locale(identifier: L10n.Formater.locale)) { (placemarks, error) in
             if let error = error {
                 completion(nil)
             } else if let placemarks = placemarks, let placemark = placemarks.first {
@@ -158,14 +158,14 @@ final class ServiceDetailsViewModel: ServiceDetailsViewModelProtocol {
     private func formatDateToDay(_ date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "d MMM yyyy"
-        dateFormatter.locale = Locale(identifier: "es_ES")
+        dateFormatter.locale = Locale(identifier: L10n.Formater.locale)
         return dateFormatter.string(from: date)
     }
     
     private func formatDateToTime(_ date: Date) -> String {
         let timeFormatter = DateFormatter()
         timeFormatter.dateFormat = "HH:mm 'h'"
-        timeFormatter.locale = Locale(identifier: "es_ES")
+        timeFormatter.locale = Locale(identifier: L10n.Formater.locale)
         return timeFormatter.string(from: date)
     }
 

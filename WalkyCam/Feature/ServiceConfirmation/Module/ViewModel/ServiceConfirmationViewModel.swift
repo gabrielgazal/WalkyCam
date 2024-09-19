@@ -52,18 +52,18 @@ final class ServiceConfirmationViewModel: ServiceConfirmationViewModelProtocol {
         let basicInfo = serviceManager.getServiceBasicInformation()
         
         detailItems.append(
-            .init(title: "Día", value: formatDateToDay(basicInfo.date))
+            .init(title: L10n.ServiceConfirmationViewModel.day, value: formatDateToDay(basicInfo.date))
         )
         detailItems.append(
-            .init(title: "Hora", value: formatDateToTime(basicInfo.date))
+            .init(title: L10n.ServiceConfirmationViewModel.time, value: formatDateToTime(basicInfo.date))
         )
         detailItems.append(
-            .init(title: "Asistentes", value: "3", image: Asset.Icons.eyeIcon.name)
+            .init(title: L10n.ServiceConfirmationViewModel.assistants, value: "3", image: Asset.Icons.eyeIcon.name)
         )
         if let userId = try? UserSession().user().id {
             detailItems.append(
                 .init(
-                    title: "Enlace",
+                    title: L10n.ServiceConfirmationViewModel.link,
                     value: "https://meet.walkycam.com/videocall/\(ServiceInformationManager.shared.getServiceBasicInformation().callId)/\(userId)",
                     image: Asset.Icons.share.name
                 )
@@ -75,14 +75,14 @@ final class ServiceConfirmationViewModel: ServiceConfirmationViewModelProtocol {
     private func formatDateToDay(_ date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "d MMM yyyy"
-        dateFormatter.locale = Locale(identifier: "es_ES")
+        dateFormatter.locale = Locale(identifier: L10n.Formater.locale)
         return dateFormatter.string(from: date)
     }
     
     private func formatDateToTime(_ date: Date) -> String {
         let timeFormatter = DateFormatter()
         timeFormatter.dateFormat = "HH:mm 'h'"
-        timeFormatter.locale = Locale(identifier: "es_ES")
+        timeFormatter.locale = Locale(identifier: L10n.Formater.locale)
         return timeFormatter.string(from: date)
     }
 }

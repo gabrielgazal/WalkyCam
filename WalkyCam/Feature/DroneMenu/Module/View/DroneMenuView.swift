@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct DroneMenuView<ViewModel:DroneMenuViewModelProtocol, Router: DroneMenuRouterProtocol>: View {
+struct DroneMenuView<ViewModel: DroneMenuViewModelProtocol, Router: DroneMenuRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -22,27 +22,27 @@ struct DroneMenuView<ViewModel:DroneMenuViewModelProtocol, Router: DroneMenuRout
             VStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.large) {
                 HStack {
-                    Text("Servicios Drone")
+                    Text(L10n.DroneMenuView.ServiciosDrone.title)
                         .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                     Spacer()
                 }
-                droneCell(title: "Fotos y Videos", image: Asset.Icons.drone.name)
+                droneCell(title: L10n.DroneMenuView.FotosYVideos.title, image: Asset.Icons.drone.name)
                     .onTapGesture {
                         UserDefaults.standard.set(FunctionType.drone.rawValue, forKey: "currentService")
                         router.routeToDrone()
                     }
-                droneCell(title: "Gestión Agrícola", image: Asset.Icons.riego.name)
+                droneCell(title: L10n.DroneMenuView.GestionAgricola.title, image: Asset.Icons.riego.name)
                     .onTapGesture {
                         UserDefaults.standard.set(FunctionType.ruralDrone.rawValue, forKey: "currentService")
                         router.routeToRuralDrone()
                     }
-                droneCell(title: "LIDAR - Mapeo Laser", image: Asset.Icons.lidar.name, premium: true)
+                droneCell(title: L10n.DroneMenuView.LIDARMapeoLaser.title, image: Asset.Icons.lidar.name, premium: true)
                     .onTapGesture {
                         UserDefaults.standard.set(FunctionType.lidar.rawValue, forKey: "currentService")
                         router.routeToLidar()
                     }
             }
-                   .padding(Tokens.Size.Spacing.large)
+            .padding(Tokens.Size.Spacing.large)
         }
         .navigation(router)
     }
@@ -68,7 +68,7 @@ struct DroneMenuView<ViewModel:DroneMenuViewModelProtocol, Router: DroneMenuRout
 
 struct DroneMenuView_Previews: PreviewProvider {
     static var previews: some View {
-    DroneMenuView(
+        DroneMenuView(
             viewModel: DroneMenuViewModel(),
             router: DroneMenuRouter(isPresented: .constant(false))
         )

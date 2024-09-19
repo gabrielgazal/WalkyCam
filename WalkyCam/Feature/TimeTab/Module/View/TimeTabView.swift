@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct TimeTabView<ViewModel:TimeTabViewModelProtocol, Router: TimeTabRouterProtocol>: View {
+struct TimeTabView<ViewModel: TimeTabViewModelProtocol, Router: TimeTabRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -28,7 +28,7 @@ struct TimeTabView<ViewModel:TimeTabViewModelProtocol, Router: TimeTabRouterProt
                 HStack {
                     Spacer()
                     VStack(alignment: .center) {
-                        Text("Desde")
+                        Text(L10n.TimeTabView.Desde.title)
                             .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .medium))
                         TimePicker(viewModel: .init(selectedTime: $startTimeSelected),
                                    timePickerStyle: .expanded)
@@ -46,7 +46,7 @@ struct TimeTabView<ViewModel:TimeTabViewModelProtocol, Router: TimeTabRouterProt
                 HStack {
                     Spacer()
                     VStack(alignment: .center) {
-                        Text("Hasta")
+                        Text(L10n.TimeTabView.Hasta.title)
                             .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .medium))
                         TimePicker(viewModel: .init(selectedTime: $endTimeSelected),
                                    timePickerStyle: .expanded)
@@ -60,7 +60,7 @@ struct TimeTabView<ViewModel:TimeTabViewModelProtocol, Router: TimeTabRouterProt
             .padding(.horizontal, Tokens.Size.Spacing.large)
             Spacer()
         }
-               .padding(Tokens.Size.Spacing.large)
+        .padding(Tokens.Size.Spacing.large)
     }
 }
 

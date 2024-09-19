@@ -9,10 +9,10 @@ final class CammerDetailsViewModel: CammerDetailsViewModelProtocol {
     private let serviceManager: ServiceInformationManagerProtocol
     @Published var cammerData: CammerData
     @Published var topBarItems: [WCTopBarItem] = [
-        .init(iconName: "", title: "Información"),
-        .init(iconName: "", title: "Reseñas (10)")
+        .init(iconName: "", title: L10n.CammerDetailsViewModel.TopBarItem.information),
+        .init(iconName: "", title: L10n.CammerDetailsViewModel.TopBarItem.reviews)
     ]
-    @Published var selection: WCTopBarItem = .init(iconName: "", title: "Información")
+    @Published var selection: WCTopBarItem = .init(iconName: "", title: L10n.CammerDetailsViewModel.TopBarItem.information)
     @Published var specialistMode: Bool
     
     // MARK: - Initialization
@@ -40,7 +40,7 @@ final class CammerDetailsViewModel: CammerDetailsViewModelProtocol {
             longitude: cammerData.coordinates.longitude
         )
         let geocoder = CLGeocoder()
-        geocoder.reverseGeocodeLocation(location, preferredLocale: Locale(identifier: "es_ES")) { (placemarks, error) in
+        geocoder.reverseGeocodeLocation(location, preferredLocale: Locale(identifier: L10n.Formater.locale)) { (placemarks, error) in
             if let placemarks = placemarks, let placemark = placemarks.first {
                 nameToReturn = placemark.name
             } else {

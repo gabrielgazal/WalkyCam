@@ -20,7 +20,7 @@ struct GalleryView<ViewModel: GalleryViewModelProtocol, Router: GalleryRouterPro
     var body: some View {
         VStack {
             HStack {
-                Text("Galería")
+                Text(L10n.GalleryView.title)
                     .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                 Spacer()
             }

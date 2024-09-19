@@ -12,7 +12,7 @@ final class SearchWalkyCammerViewModel: SearchWalkyCammerViewModelProtocol {
     @Published var mapView: MapView?
     @Published var locationText: String = ""
     @Published var currentStep: Int = 1
-    @Published var currentTitle: String = "Buscar zona"
+    @Published var currentTitle: String = L10n.SearchWalkyCammerViewModel.Title.searchZone
     @Published var walkyCammers: AsyncData<[CammerData], ErrorProtocol> = .idle
     @Published var shouldDisplayCammerList: Bool = false
     @Published var cammerSearch: String = ""
@@ -45,7 +45,7 @@ final class SearchWalkyCammerViewModel: SearchWalkyCammerViewModelProtocol {
                     duration: 1.0
                 )
                 self.currentStep = 2
-                self.currentTitle = "WalkCamers Disponibles"
+                self.currentTitle = L10n.SearchWalkyCammerViewModel.Title.availableWalkCammers
             }
         }
     }
@@ -105,7 +105,7 @@ final class SearchWalkyCammerViewModel: SearchWalkyCammerViewModelProtocol {
                 duration: 1.0
             )
             self.currentStep = 2
-            self.currentTitle = "WalkCamers Disponibles"
+            self.currentTitle = L10n.SearchWalkyCammerViewModel.Title.availableWalkCammers
         }
     }
     

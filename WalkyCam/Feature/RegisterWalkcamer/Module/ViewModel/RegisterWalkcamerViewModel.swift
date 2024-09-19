@@ -6,7 +6,7 @@ final class RegisterWalkcamerViewModel: RegisterWalkcamerViewModelProtocol {
     
     private let interactor: RegisterWalkcamerInteractorProtocol
     @Published var registrationData: CamerRegistrationData = .init()
-    @Published var acceptedTerms: SelectorModel = .init(value: "Acepto los Términos y Condiciones de WalkyCam")
+    @Published var acceptedTerms: SelectorModel = .init(value: L10n.RegisterWalkcamerView.acceptedTerms)
     
     // MARK: - Initialization
     
@@ -38,7 +38,7 @@ final class RegisterWalkcamerViewModel: RegisterWalkcamerViewModelProtocol {
             id: user?.id ?? "",
             name: user?.name ?? "",
             lastName: user?.lastName ?? "",
-            phoneNumber: user?.phone ?? "", 
+            phoneNumber: user?.phone ?? "",
             email: user?.email ?? ""
         )
     }

@@ -23,7 +23,7 @@ final class GalleryViewModel: GalleryViewModelProtocol {
             let tabs: [WCTopBarItem] = [
                 .init(
                     iconName: Asset.Icons.images.name,
-                    title: "Fotos",
+                    title: L10n.GalleryViewModel.Tab.photos,
                     destination: GalleryPhotosRoute(
                         isPresented: .constant(false),
                         galleryItems: galleryItems.filter { $0.tag == .image }
@@ -31,7 +31,7 @@ final class GalleryViewModel: GalleryViewModelProtocol {
                 ),
                 .init(
                     iconName: Asset.Icons.videos.name,
-                    title: "Videos",
+                    title: L10n.GalleryViewModel.Tab.videos,
                     destination:  GalleryPhotosRoute(
                         isPresented: .constant(false),
                         galleryItems: galleryItems.filter { $0.tag == .video }
@@ -39,7 +39,7 @@ final class GalleryViewModel: GalleryViewModelProtocol {
                 ),
                 .init(
                     iconName: Asset.Icons.files.name,
-                    title: "Archivos",
+                    title: L10n.GalleryViewModel.Tab.files,
                     destination:  GalleryPhotosRoute(
                         isPresented: .constant(false),
                         galleryItems: galleryItems

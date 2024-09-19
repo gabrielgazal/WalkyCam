@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct RuralDroneOnboardingView<ViewModel:RuralDroneOnboardingViewModelProtocol, Router: RuralDroneOnboardingRouterProtocol>: View {
+struct RuralDroneOnboardingView<ViewModel: RuralDroneOnboardingViewModelProtocol, Router: RuralDroneOnboardingRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -22,17 +22,17 @@ struct RuralDroneOnboardingView<ViewModel:RuralDroneOnboardingViewModelProtocol,
                spacing: Tokens.Size.Spacing.regular) {
             TabView(selection: $viewModel.currentPage) {
                 DroneOnboardingPageView(illustration: Asset.Illustrations.ruralDrone.swiftUIImage,
-                                        title: "Utiliza drones en tu cultivo",
-                                        description: "Mapeo de campos, IOT, vigilancia y monitoreo de los cultivos, agricultura ecológica, mediante Drone. \n\nContamos con profesionales acreditados y con experiencia.\nTu WalkCamer te guiará."
+                                        title: L10n.RuralDroneOnboardingView.UtilizaDronesEnTuCultivo.title,
+                                        description: L10n.RuralDroneOnboardingView.MapearCampos.title
                 ).tag(0)
                 DroneOnboardingPageView(
                     illustration: Asset.Icons.riego.swiftUIImage,
-                    title: "Consideraciones básicas",
-                    description: "No se permite volar a mas de 110 m de altura",
+                    title: L10n.RuralDroneOnboardingView.ConsideracionesBasicas.title,
+                    description: L10n.RuralDroneOnboardingView.NoSePermiteVolar.title,
                     secondDescription: [
-                        "Mantendremos la distancia legalmente regulada con áreas pobladas",
-                        "No está permitido el vuelvo en áreas restringidas.",
-                        "Si se requiere plan de vuelo, se coordinará con anticipación y con la autoridad aeronautica."
+                        L10n.RuralDroneOnboardingView.MantendremosLaDistancia.title,
+                        L10n.RuralDroneOnboardingView.NoEstaPermitido.title,
+                        L10n.RuralDroneOnboardingView.SiSeRequierePlan.title
                     ]
                 ).tag(1)
             }
@@ -65,8 +65,8 @@ struct RuralDroneOnboardingView<ViewModel:RuralDroneOnboardingViewModelProtocol,
                     }
 
                     WCUIButton(
-                        title: "Acepto términos y condiciones",
-                         style: .standard,
+                        title: L10n.RuralDroneOnboardingView.AceptoTerminos.title,
+                        style: .standard,
                         descriptor: OrangeButtonStyleDescriptor(),
                         action: {
                             router.routeToFlightMenu()
@@ -75,7 +75,7 @@ struct RuralDroneOnboardingView<ViewModel:RuralDroneOnboardingViewModelProtocol,
                     .frame(maxWidth: .infinity)
                     .disabled(!viewModel.acceptedTerms.isSelected)
                     WCUIButton(
-                        title: "Cancelar",
+                        title: L10n.RuralDroneOnboardingView.Cancelar.title,
                         style: .standard,
                         descriptor: BlackButtonStyleDescriptor(),
                         action: {
@@ -90,10 +90,10 @@ struct RuralDroneOnboardingView<ViewModel:RuralDroneOnboardingViewModelProtocol,
             }
             PageControl(numberOfPages: 2, currentPage: $viewModel.currentPage)
         }
-               .onAppear {
-                   setupAppearence()
-               }
-               .navigation(router)
+        .onAppear {
+            setupAppearence()
+        }
+        .navigation(router)
     }
 
     private func setupAppearence() {

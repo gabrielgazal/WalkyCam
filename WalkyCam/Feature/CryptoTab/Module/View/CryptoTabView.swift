@@ -54,7 +54,7 @@ struct CryptoTabView<ViewModel: CryptoTabViewModelProtocol, Router: CryptoTabRou
                 VStack(alignment: .leading,
                        spacing: Tokens.Size.Spacing.small) {
                     HStack {
-                        Text("Actividad")
+                        Text(L10n.CryptoTabView.activity)
                             .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .semibold))
                         Spacer()
                         Image(systemName: "magnifyingglass")
@@ -93,7 +93,7 @@ struct CryptoTabView<ViewModel: CryptoTabViewModelProtocol, Router: CryptoTabRou
                 .frame(width: 90, height: 35)
             HStack {
                 Spacer()
-                LinkButton(title: "Ver más",
+                LinkButton(title: L10n.CryptoTabView.seeMore,
                            color: Color.naranja,
                            action: {})
             }

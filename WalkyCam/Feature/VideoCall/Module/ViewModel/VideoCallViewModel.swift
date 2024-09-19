@@ -24,7 +24,7 @@ final class VideoCallViewModel: VideoCallViewModelProtocol {
             if videoCallLink.starts(with: "https://meet.walkycam.com/") {
                 return .success(videoCallLink)
             } else if videoCallLink.starts(with: "meet.walkycam.com/") {
-                return .success("httpS://\(videoCallLink)")
+                return .success("https://\(videoCallLink)")
             }
             
             let videoCallURL = "https://meet.walkycam.com/videocall/\(videoCallLink)/\(userId)"

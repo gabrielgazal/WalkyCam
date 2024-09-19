@@ -33,7 +33,7 @@ struct ServiceConfirmationView<ViewModel: ServiceConfirmationViewModelProtocol, 
         }
         .footer {
             VStack(spacing: Tokens.Size.Spacing.regular) {
-                WCUIButton(title: "Ok",
+                WCUIButton(title: L10n.ServiceConfirmationView.ok,
                            style: .standard,
                            descriptor: OrangeButtonStyleDescriptor(),
                            action: {
@@ -47,7 +47,7 @@ struct ServiceConfirmationView<ViewModel: ServiceConfirmationViewModelProtocol, 
                     }
                 })
                 .loading(viewModel.saveCallAsyncData.isLoading)
-                WCUIButton(title: "Quiero cancelar",
+                WCUIButton(title: L10n.ServiceConfirmationView.cancel,
                            style: .standard,
                            descriptor: BlackButtonStyleDescriptor(),
                            action: {
@@ -71,7 +71,7 @@ struct ServiceConfirmationView<ViewModel: ServiceConfirmationViewModelProtocol, 
                spacing: Tokens.Size.Spacing.regular) {
             HStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {
-                Text("Videollamada registrada con éxito!")
+                Text(L10n.ServiceConfirmationView.successMessage)
                     .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                 Spacer()
             }
@@ -87,7 +87,7 @@ struct ServiceConfirmationView<ViewModel: ServiceConfirmationViewModelProtocol, 
                 Text(data.value)
                     .font(.projectFont(size: Tokens.Size.Font.regular))
                 if let image = data.image,
-                   data.title == "Enlace",
+                   data.title == L10n.ServiceConfirmationView.link,
                    let userId = try? UserSession().user().id,
                    let url = URL(string: "https://meet.walkycam.com/videocall/\(ServiceInformationManager.shared.getServiceBasicInformation().callId)/\(userId)"){
                     ShareLink(item: url){
@@ -112,7 +112,7 @@ struct ServiceConfirmationView<ViewModel: ServiceConfirmationViewModelProtocol, 
             spacing: Tokens.Size.Spacing.regular) {
                 HStack(alignment: .center,
                        spacing: Tokens.Size.Spacing.small) {
-                    Text("Asistentes")
+                    Text(L10n.ServiceConfirmationView.assistants)
                         .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
                     Text("3")
                         .font(.projectFont(size: Tokens.Size.Font.regular))
@@ -123,7 +123,7 @@ struct ServiceConfirmationView<ViewModel: ServiceConfirmationViewModelProtocol, 
                         .frame(width: 24, height: 24)
                         .foregroundColor(.naranja)
                 }
-                Text("La invitación se enviará a los miembros de esta reunión al finalizar el proceso.")
+                Text(L10n.ServiceConfirmationView.invitationMessage)
                     .font(.projectFont(size: Tokens.Size.Font.regular))
                 Divider()
             }

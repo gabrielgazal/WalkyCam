@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct DigitalTwinsMenuView<ViewModel:DigitalTwinsMenuViewModelProtocol, Router: DigitalTwinsMenuRouterProtocol>: View {
+struct DigitalTwinsMenuView<ViewModel: DigitalTwinsMenuViewModelProtocol, Router: DigitalTwinsMenuRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -24,22 +24,22 @@ struct DigitalTwinsMenuView<ViewModel:DigitalTwinsMenuViewModelProtocol, Router:
                 .resizable()
                 .scaledToFit()
                 .frame(width: 100, height: 100)
-            Text("Digital Twins")
+            Text(L10n.DigitalTwinsMenuView.title)
                 .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .bold))
                 .multilineTextAlignment(.center)
             Spacer()
                 .frame(height: 30)
             HStack(spacing: Tokens.Size.Spacing.regular) {
-                verticalCard(title: "BUSCAR",
-                             description: "Localiza tu WalkCamer más cercano.",
-                             buttonTitle: "Buscar",
+                verticalCard(title: L10n.DigitalTwinsMenuView.search,
+                             description: L10n.DigitalTwinsMenuView.searchDescription,
+                             buttonTitle: L10n.DigitalTwinsMenuView.searchButton,
                              icon: Asset.Icons.locationWhite.name,
                              action: {
                     router.routeToSearchCammer()
                 })
-                verticalCard(title: "RESERVAR",
-                             description: "Programa tu WalkCamer con anterioridad.",
-                             buttonTitle: "Reservar",
+                verticalCard(title: L10n.DigitalTwinsMenuView.reserve,
+                             description: L10n.DigitalTwinsMenuView.reserveDescription,
+                             buttonTitle: L10n.DigitalTwinsMenuView.reserveButton,
                              icon: Asset.Icons.calendar.name,
                              action: {
                     router.routeToBookCammer()
@@ -47,15 +47,15 @@ struct DigitalTwinsMenuView<ViewModel:DigitalTwinsMenuViewModelProtocol, Router:
             }
             horizontalCard(action: {})
         }
-               .padding(Tokens.Size.Spacing.regular)
-               .background(Asset.Fondos.digitalTwinsfondo.swiftUIImage
-                   .ignoresSafeArea())
-               .navigation(router)
-               .sheet(router)
-               .environment(\.colorScheme, .dark)
-               .onAppear {
-                   UserDefaults.standard.set(FunctionType.digitalTwins.rawValue, forKey: "currentService")
-               }
+        .padding(Tokens.Size.Spacing.regular)
+        .background(Asset.Fondos.digitalTwinsfondo.swiftUIImage
+            .ignoresSafeArea())
+        .navigation(router)
+        .sheet(router)
+        .environment(\.colorScheme, .dark)
+        .onAppear {
+            UserDefaults.standard.set(FunctionType.digitalTwins.rawValue, forKey: "currentService")
+        }
     }
 
     private func verticalCard(title: String,
@@ -81,12 +81,12 @@ struct DigitalTwinsMenuView<ViewModel:DigitalTwinsMenuViewModelProtocol, Router:
                 action?()
             })
         }
-               .padding(Tokens.Size.Spacing.regular)
-               .background(
-                Color.negro
-                    .opacity(0.8)
-                    .cornerRadius(48)
-               )
+        .padding(Tokens.Size.Spacing.regular)
+        .background(
+            Color.negro
+                .opacity(0.8)
+                .cornerRadius(48)
+        )
     }
 
     private func horizontalCard(action: (() -> Void)?) -> some View {
@@ -100,12 +100,12 @@ struct DigitalTwinsMenuView<ViewModel:DigitalTwinsMenuViewModelProtocol, Router:
                 Text("UNIRSE")
                     .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .semibold))
             }
-            Text("Ingresa el código que has recebido.")
+            Text(L10n.DigitalTwinsMenuView.joinDescription)
                 .font(.projectFont(size: Tokens.Size.Font.regular))
             HStack(spacing: Tokens.Size.Spacing.regular) {
                 TextInputView(text: .constant(""),
-                              placeholder: "Ingresar código")
-                WCUIButton(title: "Unirme",
+                              placeholder: L10n.DigitalTwinsMenuView.codePlaceholder)
+                WCUIButton(title: L10n.DigitalTwinsMenuView.joinButton,
                            style: .outline,
                            descriptor: OrangeButtonStyleDescriptor(),
                            action: {
@@ -113,18 +113,18 @@ struct DigitalTwinsMenuView<ViewModel:DigitalTwinsMenuViewModelProtocol, Router:
                 })
             }
         }
-               .padding(Tokens.Size.Spacing.regular)
-               .background(
-                Color.negro
-                    .opacity(0.8)
-                    .cornerRadius(48)
-               )
+        .padding(Tokens.Size.Spacing.regular)
+        .background(
+            Color.negro
+                .opacity(0.8)
+                .cornerRadius(48)
+        )
     }
 }
 
 struct DigitalTwinsMenuView_Previews: PreviewProvider {
     static var previews: some View {
-    DigitalTwinsMenuView(
+        DigitalTwinsMenuView(
             viewModel: DigitalTwinsMenuViewModel(),
             router: DigitalTwinsMenuRouter(isPresented: .constant(false))
         )

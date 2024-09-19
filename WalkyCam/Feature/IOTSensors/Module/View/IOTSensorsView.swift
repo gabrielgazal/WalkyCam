@@ -21,15 +21,15 @@ struct IOTSensorsView<ViewModel: IOTSensorsViewModelProtocol, Router: IOTSensors
         ScrollView {
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.large) {
-                Text("Sensores IOT Farming")
+                Text(L10n.IOTSensorsView.title)
                     .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
-                Text("Activa los tipos de sensores e indica sus parámetros correspondientes.")
+                Text(L10n.IOTSensorsView.subtitle)
                     .font(.projectFont(size: Tokens.Size.Font.large))
                 TextInputView(
                     text: .constant(""),
                     status: .constant(.default),
-                    topDescriptionText: "Título Dashboard",
-                    placeholder: "Título Dashboard",
+                    topDescriptionText: L10n.IOTSensorsView.dashboardTitle,
+                    placeholder: L10n.IOTSensorsView.dashboardTitle,
                     backgroundColor: .blancoGris,
                     textColor: .negro
                 )
@@ -42,7 +42,7 @@ struct IOTSensorsView<ViewModel: IOTSensorsViewModelProtocol, Router: IOTSensors
             VStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {
                 WCUIButton(
-                    title: "Buscar WalkCamer",
+                    title: L10n.IOTSensorsView.search,
                     style: .standard,
                     descriptor: OrangeButtonStyleDescriptor(),
                     action: {
@@ -50,7 +50,7 @@ struct IOTSensorsView<ViewModel: IOTSensorsViewModelProtocol, Router: IOTSensors
                     }
                 )
                 WCUIButton(
-                    title: "Cancelar",
+                    title: L10n.IOTSensorsView.cancel,
                     style: .standard,
                     descriptor: BlackButtonStyleDescriptor(),
                     action: {
@@ -68,44 +68,44 @@ struct IOTSensorsView<ViewModel: IOTSensorsViewModelProtocol, Router: IOTSensors
                spacing: Tokens.Size.Spacing.regular) {
             HStack(spacing: Tokens.Size.Spacing.xlarge) {
                 Spacer()
-                Text("Nº Sensores")
+                Text(L10n.IOTSensorsView.Sensors.number)
                     .font(.projectFont(size: Tokens.Size.Font.small, weight: .bold))
-                Text("Rango")
+                Text(L10n.IOTSensorsView.Sensors.range)
                     .font(.projectFont(size: Tokens.Size.Font.small, weight: .bold))
-                Text("Unidad")
+                Text(L10n.IOTSensorsView.Sensors.unit)
                     .font(.projectFont(size: Tokens.Size.Font.small, weight: .bold))
             }
             Divider()
             SensorView(
-                name: "Temperatura",
+                name: L10n.IOTSensorsView.Sensors.temperature,
                 numberOfSensors: .constant("4"),
                 rangeOfSensor: .constant("0 a 50"),
                 sensorUnit: .constant("ºC"),
                 isOn: .constant(true)
             )
             SensorView(
-                name: "Humedad",
+                name: L10n.IOTSensorsView.Sensors.humidity,
                 numberOfSensors: .constant("6"),
                 rangeOfSensor: .constant("64"),
                 sensorUnit: .constant("%"),
                 isOn: .constant(true)
             )
             SensorView(
-                name: "Pésion A",
+                name: L10n.IOTSensorsView.Sensors.pressureA,
                 numberOfSensors: .constant("2"),
                 rangeOfSensor: .constant("200"),
                 sensorUnit: .constant("bar"),
                 isOn: .constant(true)
             )
             SensorView(
-                name: "Nivel",
+                name: L10n.IOTSensorsView.Sensors.level,
                 numberOfSensors: .constant("-"),
                 rangeOfSensor: .constant("-"),
                 sensorUnit: .constant("m"),
                 isOn: .constant(false)
             )
             SensorView(
-                name: "Proximidad",
+                name: L10n.IOTSensorsView.Sensors.proximity,
                 numberOfSensors: .constant("4"),
                 rangeOfSensor: .constant("10"),
                 sensorUnit: .constant("m"),

@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ChatListView<ViewModel:ChatListViewModelProtocol, Router: ChatListRouterProtocol>: View {
+struct ChatListView<ViewModel: ChatListViewModelProtocol, Router: ChatListRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -22,7 +22,7 @@ struct ChatListView<ViewModel:ChatListViewModelProtocol, Router: ChatListRouterP
             VStack {
                 Group {
                     HStack(spacing: Tokens.Size.Spacing.regular) {
-                        Text("Mensajes")
+                        Text(L10n.ChatListView.title)
                             .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                         Spacer()
                         Asset.Icons.filter.swiftUIImage
@@ -38,7 +38,7 @@ struct ChatListView<ViewModel:ChatListViewModelProtocol, Router: ChatListRouterP
                 AsyncDataView(viewModel.channels) { channels in
                     ForEach(channels, id: \.self) { item in
                         channelItem(item)
-                            .background(item.chatOpened ?  Color.blanco : Color.blancoGris)
+                            .background(item.chatOpened ? Color.blanco : Color.blancoGris)
                             .onTapGesture {
                                 if let detailChannel = viewModel.handleChatSelection(item.id) {
                                     router.routeToChatDetails(detailChannel)
@@ -94,7 +94,7 @@ struct ChatListView<ViewModel:ChatListViewModelProtocol, Router: ChatListRouterP
                     .font(.projectFont(size: Tokens.Size.Font.medium))
             }
         }
-                      .padding(Tokens.Size.Spacing.large)
+        .padding(Tokens.Size.Spacing.large)
     }
 
     private var placeholder: some View {
@@ -106,7 +106,7 @@ struct ChatListView<ViewModel:ChatListViewModelProtocol, Router: ChatListRouterP
     }
 
     private func convertUnixTimeToDate(_ time: Int64) -> String {
-        let date = Date(timeIntervalSince1970: TimeInterval(time/1000))
+        let date = Date(timeIntervalSince1970: TimeInterval(time / 1000))
         return date.relativeTimeFormatted(format: SharedDateFormat.standardDate)
     }
 }

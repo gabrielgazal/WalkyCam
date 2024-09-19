@@ -31,7 +31,7 @@ final class MenuViewModel: MenuViewModelProtocol {
                   title: L10n.MenuViewModel.Item.help,
                   routeToNavigate: nil),
             .init(icon: Asset.Menu.usdBlack.name,
-                  title: "Planes y Precios",
+                  title: L10n.MenuViewModel.Pricing.title,
                   routeToNavigate: RegistrationPlansRoute(isPresented: .constant(false))),
             .init(icon: Asset.Menu.bot.name,
                   title: L10n.MenuViewModel.Item.bot,
@@ -41,9 +41,9 @@ final class MenuViewModel: MenuViewModelProtocol {
     
     func assembleMenuBannnerData() -> [MenuPlanBannerModel] {
         return [
-            .init(title: "Basic", text: "Consigue mas beneficios!", color: .acentoFondoDark, action: navigateToBasic),
-            .init(title: "Standard", text: "Consigue mas beneficios. Vuela un Drone a distancia!", color: .naranja, action: navigateToStandard),
-            .init(title: "Premium", text: "Consigue TODOS los beneficios que WalkyCam ofrece ", color: .premium, action: navigateToPremium)
+            .init(title: L10n.MenuViewModel.Plans.Basic.title, text: L10n.MenuViewModel.Plans.Basic.text, color: .acentoFondoDark, action: navigateToBasic),
+            .init(title: L10n.MenuViewModel.Plans.Standard.title, text: L10n.MenuViewModel.Plans.Standard.text, color: .naranja, action: navigateToStandard),
+            .init(title: L10n.MenuViewModel.Plans.Premium.title, text: L10n.MenuViewModel.Plans.Premium.text, color: .premium, action: navigateToPremium)
         ]
     }
 

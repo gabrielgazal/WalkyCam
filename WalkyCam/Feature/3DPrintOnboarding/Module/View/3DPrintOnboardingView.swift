@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct _DPrintOnboardingView<ViewModel:_DPrintOnboardingViewModelProtocol, Router: _DPrintOnboardingRouterProtocol>: View {
+struct _DPrintOnboardingView<ViewModel: _DPrintOnboardingViewModelProtocol, Router: _DPrintOnboardingRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -23,13 +23,13 @@ struct _DPrintOnboardingView<ViewModel:_DPrintOnboardingViewModelProtocol, Route
             TabView(selection: $viewModel.currentPage) {
                 CashWalletOnboardingPageView(
                     illustration: Asset.Illustrations._3dModelingRafiki1.swiftUIImage,
-                    title: "Prepara tu archivo 3D",
-                    description: "Una vez escaneado, puedes editar el color y el tamaño.\n\nElegir el material y el acabado del objeto antes de enviarlo a imprimir en 3D."
+                    title: L10n.DPrintOnboardingView.PreparaTuArchivo3D.title,
+                    description: L10n.DPrintOnboardingView.DescripcionPreparaArchivo.title
                 ).tag(0)
                 CashWalletOnboardingPageView(
                     illustration: Asset.Illustrations.online3dPrintingProcessIsometricVector287067061.swiftUIImage,
-                    title: "Haz el pedido",
-                    description: "Elige la forma de envío más adecuada para ti.\n\nDisfruta de nuestro envio VIP, envíos frecuentes y mucho más."
+                    title: L10n.DPrintOnboardingView.HazElPedido.title,
+                    description: L10n.DPrintOnboardingView.DescripcionHazElPedido.title
                 ).tag(1)
             }
             .accentColor(.naranja)
@@ -54,7 +54,7 @@ struct _DPrintOnboardingView<ViewModel:_DPrintOnboardingViewModelProtocol, Route
                 .frame(maxWidth: .infinity)
                 .isHidden(viewModel.currentPage == 1)
                 WCUIButton(
-                    title: "Solicitar impresión 3D",
+                    title: L10n.DPrintOnboardingView.SolicitarImpresion3D.title,
                     style: .standard,
                     descriptor: OrangeButtonStyleDescriptor(),
                     action: handleRouteTo3DPrint)
@@ -65,10 +65,10 @@ struct _DPrintOnboardingView<ViewModel:_DPrintOnboardingViewModelProtocol, Route
             .padding(.horizontal, Tokens.Size.Spacing.regular)
             PageControl(numberOfPages: 2, currentPage: $viewModel.currentPage)
         }
-               .onAppear {
-                   setupAppearence()
-               }
-               .navigation(router)
+        .onAppear {
+            setupAppearence()
+        }
+        .navigation(router)
     }
 
     private func setupAppearence() {
@@ -83,7 +83,7 @@ struct _DPrintOnboardingView<ViewModel:_DPrintOnboardingViewModelProtocol, Route
 
 struct _DPrintOnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-    _DPrintOnboardingView(
+        _DPrintOnboardingView(
             viewModel: _DPrintOnboardingViewModel(),
             router: _DPrintOnboardingRouter(isPresented: .constant(false))
         )

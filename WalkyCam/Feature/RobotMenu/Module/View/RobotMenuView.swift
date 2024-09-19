@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct RobotMenuView<ViewModel:RobotMenuViewModelProtocol, Router: RobotMenuRouterProtocol>: View {
+struct RobotMenuView<ViewModel: RobotMenuViewModelProtocol, Router: RobotMenuRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -22,24 +22,27 @@ struct RobotMenuView<ViewModel:RobotMenuViewModelProtocol, Router: RobotMenuRout
             VStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.large) {
                 HStack {
-                    Text("Robótica")
+                    Text(L10n.RobotMenuView.title)
                         .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                     Spacer()
                 }
-                itemCell(title: "Telepresencia", image: Asset.Icons.telepresencia.name)
+                itemCell(title: L10n.RobotMenuView.telepresence,
+                         image: Asset.Icons.telepresencia.name)
                     .onTapGesture {
                         router.routeToTelepresenciaSuperbanner()
                     }
-                itemCell(title: "Dog Robot", image: Asset.Icons.robotDog.name)
+                itemCell(title: L10n.RobotMenuView.dogRobot,
+                         image: Asset.Icons.robotDog.name)
                     .onTapGesture {
                         router.routeToDogRobotSuperbanner()
                     }
-                itemCell(title: "Para Mascotas", image: Asset.Icons.mascotas.name)
+                itemCell(title: L10n.RobotMenuView.pets,
+                         image: Asset.Icons.mascotas.name)
                     .onTapGesture {
                         router.routeToMascotSuperbanner()
                     }
             }
-                   .padding(Tokens.Size.Spacing.large)
+            .padding(Tokens.Size.Spacing.large)
         }
         .navigation(router)
     }
@@ -49,7 +52,7 @@ struct RobotMenuView<ViewModel:RobotMenuViewModelProtocol, Router: RobotMenuRout
             RoundedRectangle(cornerRadius: 10)
                 .fill(Color.blanco)
             VStack(alignment: .center,
-                          spacing: Tokens.Size.Spacing.large) {
+                   spacing: Tokens.Size.Spacing.large) {
                 Image(image)
                     .resizable()
                     .scaledToFit()
@@ -57,7 +60,7 @@ struct RobotMenuView<ViewModel:RobotMenuViewModelProtocol, Router: RobotMenuRout
                 Text(title)
                     .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
             }
-                          .padding(Tokens.Size.Spacing.regular)
+            .padding(Tokens.Size.Spacing.regular)
         }
         .frame(height: 175)
         .shadow(color: .black.opacity(0.16), radius: 8, x: 0, y: 2)
@@ -66,7 +69,7 @@ struct RobotMenuView<ViewModel:RobotMenuViewModelProtocol, Router: RobotMenuRout
 
 struct RobotMenuView_Previews: PreviewProvider {
     static var previews: some View {
-    RobotMenuView(
+        RobotMenuView(
             viewModel: RobotMenuViewModel(),
             router: RobotMenuRouter(isPresented: .constant(false))
         )
