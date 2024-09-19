@@ -1,32 +1,32 @@
 import SwiftUI
 
 struct NotificationsView<ViewModel: NotificationsViewModelProtocol, Router: NotificationsRouterProtocol>: View {
-
+    
     // MARK: - Dependencies
-
+    
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
-
+    
     var notificationsGroupedByDate: [Date: [NotificationModel]] {
-        Dictionary(grouping: viewModel.notifications, by: { item in
+        Dictionary<Date, [NotificationModel]>(grouping: viewModel.notifications, by: { item in
             Calendar.current.startOfDay(for: item.date)
         })
     }
-
+    
     var headers: [Date] {
         notificationsGroupedByDate.map { $0.key }.sorted(by: { $0 > $1 })
     }
-
+    
     // MARK: - Initialization
-
+    
     init(viewModel: ViewModel,
          router: Router) {
         self.viewModel = viewModel
         self.router = router
     }
-
+    
     // MARK: - View Body
-
+    
     var body: some View {
         VStack(alignment: .leading) {
             headerView
@@ -53,7 +53,7 @@ struct NotificationsView<ViewModel: NotificationsViewModelProtocol, Router: Noti
             }
         }
     }
-
+    
     private var headerView: some View {
         HStack(alignment: .center,
                spacing: Tokens.Size.Spacing.regular) {
@@ -73,13 +73,13 @@ struct NotificationsView<ViewModel: NotificationsViewModelProtocol, Router: Noti
         }
                .padding(Tokens.Size.Spacing.large)
     }
-
+    
     private func formatDateInRelationToToday(_ date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: L10n.Formater.locale)
         dateFormatter.dateStyle = .full
         dateFormatter.dateFormat = "d 'de' MMMM 'de' yyyy"
-
+        
         if Calendar.current.isDateInToday(date) {
             return L10n.NotificationsView.Date.today
         } else {
