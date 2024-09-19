@@ -58,14 +58,28 @@ open class MapView: UIView, SizeTrackingLayerDelegate {
     /// If, however, the `MapView` is overlaid with a `UIKit` element which must
     /// be pinned to a particular lat-long, then setting this to `true` will
     /// result in better synchronization and less jitter.
+    @available(*, deprecated, message: "Use presentationTransactionMode instead")
     public var presentsWithTransaction: Bool {
-        get {
-            return metalView?.presentsWithTransaction ?? false
-        }
-        set {
-            metalView?.presentsWithTransaction = newValue
-        }
+        get { mapPresentation.presentsWithTransaction }
+        set { mapPresentation.presentsWithTransaction = newValue }
     }
+
+    /// Defines the map presentation mode.
+    ///
+    /// This setting determines whether the underlying `CAMetalLayer` presents its content using a CoreAnimation transaction, controlling `CAMetalLayer.presentsWithTransaction` property.
+    ///
+    /// By default, the value is ``PresentationTransactionMode/automatic``,  meaning the mode will be switched between async and sync depending on the map content, such as view annotations.
+    ///
+    /// If you use a custom View displayed on top of the map that should appear at specific map coordinates, set presentation mode to ``PresentationTransactionMode/sync`` to avoid jitter.
+    /// However, setting ``PresentationTransactionMode/async`` mode can result in faster rendering in some cases.
+    ///
+    /// For more information please refer to `CAMetalLayer.presentsWithTransaction` and ``PresentationTransactionMode``.
+    public var presentationTransactionMode: PresentationTransactionMode {
+        get { mapPresentation.mode }
+        set { mapPresentation.mode = newValue }
+    }
+
+    private let mapPresentation = MapPresentation()
 
     open override var isOpaque: Bool {
         didSet {
@@ -294,45 +308,22 @@ open class MapView: UIView, SizeTrackingLayerDelegate {
     private func commonInit(mapInitOptions: MapInitOptions, overridingStyleURI: URL?) {
         checkForMetalSupport()
 
-        let resolvedMapInitOptions: MapInitOptions
-        if mapInitOptions.mapOptions.size == nil {
-            // Update using the view's size
-            let original = mapInitOptions.mapOptions
-            let resolvedMapOptions = MapOptions(
-                __contextMode: original.__contextMode,
-                constrainMode: original.__constrainMode,
-                viewportMode: original.__viewportMode,
-                orientation: original.__orientation,
-                crossSourceCollisions: original.__crossSourceCollisions,
-                size: Size(width: Float(bounds.width), height: Float(bounds.height)),
-                pixelRatio: original.pixelRatio,
-                glyphsRasterizationOptions: original.glyphsRasterizationOptions)
-
-            // Use the overriding style URI if provided (currently from IB)
-            let resolvedStyleURI = overridingStyleURI.map { StyleURI(url: $0) } ?? mapInitOptions.styleURI
-
-            resolvedMapInitOptions = MapInitOptions(
-                mapOptions: resolvedMapOptions,
-                cameraOptions: mapInitOptions.cameraOptions,
-                styleURI: resolvedStyleURI,
-                styleJSON: mapInitOptions.styleJSON)
-        } else {
-            resolvedMapInitOptions = mapInitOptions
-        }
+        let resolvedMapInitOptions = mapInitOptions.resolved(
+            in: bounds,
+            overridingStyleURI: overridingStyleURI
+        )
 
         self.pixelRatio = CGFloat(resolvedMapInitOptions.mapOptions.pixelRatio)
 
-        let mapClient = DelegatingMapClient()
-        mapClient.delegate = self
-        mapboxMap = MapboxMap(
-            mapClient: mapClient,
-            mapInitOptions: resolvedMapInitOptions)
+        mapboxMap = makeMapboxMap(resolvedMapInitOptions: resolvedMapInitOptions)
 
         subscribeToLifecycleNotifications()
-        notificationCenter.addObserver(self,
-                                       selector: #selector(didReceiveMemoryWarning),
-                                       name: UIApplication.didReceiveMemoryWarningNotification,
-                                       object: nil)
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(didReceiveMemoryWarning),
+            name: UIApplication.didReceiveMemoryWarningNotification,
+            object: nil
+        )
 
         if let initialStyleJSON = resolvedMapInitOptions.styleJSON {
             mapboxMap.mapStyle = MapStyle(json: initialStyleJSON)
@@ -349,7 +340,6 @@ open class MapView: UIView, SizeTrackingLayerDelegate {
         }
 
         addConstrained(child: viewAnnotationContainerView, add: false)
-
         cameraViewContainerView.isHidden = true
         addSubview(cameraViewContainerView)
 
@@ -357,6 +347,14 @@ open class MapView: UIView, SizeTrackingLayerDelegate {
 
         // Set up managers
         setupManagers()
+    }
+
+    private func makeMapboxMap(resolvedMapInitOptions: MapInitOptions) -> MapboxMap {
+        let mapClient = DelegatingMapClient()
+        mapClient.delegate = self
+        let map = CoreMap(client: mapClient, mapOptions: resolvedMapInitOptions.mapOptions)
+
+        return MapboxMap(map: map, events: MapEvents(observable: map))
     }
 
     internal func sendInitialTelemetryEvents() {
@@ -383,10 +381,10 @@ open class MapView: UIView, SizeTrackingLayerDelegate {
             style: mapboxMap,
             displayLink: displayLinkSignalSubject.signal
         )
+
         annotations = AnnotationOrchestrator(
             impl: annotationsImpl
         )
-
         // Initialize/Configure gesture manager
         gestures = dependencyProvider.makeGestureManager(
             view: self,
@@ -425,6 +423,7 @@ open class MapView: UIView, SizeTrackingLayerDelegate {
             containerView: viewAnnotationContainerView,
             mapboxMap: mapboxMap,
             displayLink: displayLinkSignalSubject.signal)
+        mapPresentation.displaysAnnotations = viewAnnotations.displaysAnnotations.signal
 
         let safeAreaSignal = safeAreaSignalSubject.signal.skipRepeats()
 
@@ -647,6 +646,8 @@ open class MapView: UIView, SizeTrackingLayerDelegate {
         }
     }
 
+    private(set) var didMoveToCarPlayWindow = false
+
     open override func didMoveToWindow() {
         super.didMoveToWindow()
 
@@ -656,6 +657,11 @@ open class MapView: UIView, SizeTrackingLayerDelegate {
         guard let window = window else {
             cameraAnimatorsRunner.isEnabled = false
             return
+        }
+
+        if window.isCarPlay, !didMoveToCarPlayWindow {
+            didMoveToCarPlayWindow = true
+            sendTelemetry(\.carPlay)
         }
 
         displayLink = dependencyProvider.makeDisplayLink(
@@ -725,8 +731,8 @@ extension MapView: DelegatingMapClientDelegate {
         metalView.contentMode = .center
         metalView.isOpaque = isOpaque
         metalView.layer.isOpaque = isOpaque
-        metalView.presentsWithTransaction = false
         metalView.sampleCount = antialiasingSampleCount
+        mapPresentation.metalView = metalView
 
         // MapView should clip bounds to hide MTKView oversizing during the expand resizing animations
         clipsToBounds = true

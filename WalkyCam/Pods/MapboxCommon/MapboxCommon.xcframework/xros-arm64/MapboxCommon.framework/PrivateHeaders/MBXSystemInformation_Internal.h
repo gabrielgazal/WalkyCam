@@ -36,6 +36,11 @@ __attribute__((visibility ("default")))
  * `(architecture; deviceInfo)`, `(architecture)`, `(deviceInfo)` or empty in case all fields are empty.
  */
 - (nonnull NSString *)getPrettyDeviceName __attribute((ns_returns_retained));
+/**
+ * @return Application running time, in nanoseconds. The runinng time is calculated as the delta between the
+ * application start time point and the time point at the time the method is called.
+ */
+- (NSTimeInterval)runningTime;
 
 @property (nonatomic, readonly) MBXPlatform platform;
 @property (nonatomic, readonly, nonnull, copy) NSString *platformName;

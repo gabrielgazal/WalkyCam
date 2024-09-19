@@ -2,12 +2,12 @@ PODS:
   - DJI-SDK-iOS (4.16.2)
   - DJI-UXSDK-iOS (4.16.2)
   - DJIWidget (1.6.8)
-  - MapboxCommon (24.3.1)
-  - MapboxCoreMaps (11.3.0):
-    - MapboxCommon (~> 24.3)
-  - MapboxMaps (11.3.0):
-    - MapboxCommon (= 24.3.1)
-    - MapboxCoreMaps (= 11.3.0)
+  - MapboxCommon (24.6.1)
+  - MapboxCoreMaps (11.6.1):
+    - MapboxCommon (~> 24.6)
+  - MapboxMaps (11.6.1):
+    - MapboxCommon (= 24.6.1)
+    - MapboxCoreMaps (= 11.6.1)
     - Turf (= 2.8.0)
   - Turf (2.8.0)
 
@@ -15,7 +15,7 @@ DEPENDENCIES:
   - DJI-SDK-iOS
   - DJI-UXSDK-iOS
   - DJIWidget
-  - MapboxMaps (= 11.3.0)
+  - MapboxMaps (= 11.6.1)
 
 SPEC REPOS:
   trunk:
@@ -31,11 +31,11 @@ SPEC CHECKSUMS:
   DJI-SDK-iOS: 44308a021c3b95a912be52c4e7a8e0a27e5434f5
   DJI-UXSDK-iOS: 8a9db4bda9fcc38ccf9861fb7d7ba30d44c7791c
   DJIWidget: 9d92abb52888cd6296717c93feacd8a703bf678a
-  MapboxCommon: e6d0d15f1e34278e21bae28bdc548d378757b51e
-  MapboxCoreMaps: 0e3eab0bd5787e833d48261fa1d01f356d6c4ad8
-  MapboxMaps: 5aba2ba70a85d08e0ea00ad011ca3d2965e69a59
+  MapboxCommon: 38483a3edda397d8292eeb8759d1ea89db33c016
+  MapboxCoreMaps: 7a7d99161e819c1261f7cb84405798a7815d451d
+  MapboxMaps: 3bb2213da7e730f6d09a407b7fb89ee6ea195e40
   Turf: aa2ede4298009639d10db36aba1a7ebaad072a5e
 
-PODFILE CHECKSUM: 8f18c907065c0ff9b6c2917197d6891dc63f8157
+PODFILE CHECKSUM: a60918df5b82006d398ff4831c07e2210afbd267
 
 COCOAPODS: 1.14.3

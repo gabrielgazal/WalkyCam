@@ -8,9 +8,14 @@ protocol StyleProtocol: AnyObject {
     var styleDefaultCamera: CameraOptions { get }
     var uri: StyleURI? { get set }
     var mapStyle: MapStyle? { get set }
-    func addLayer(_ layer: Layer, layerPosition: LayerPosition?) throws
+    @available(iOS 13.0, *)
+    func setMapContent(_ content: () -> any MapContent)
+    @available(iOS 13.0, *)
+    func setMapContentDependencies(_ dependencies: MapContentDependencies)
     func addPersistentLayer(_ layer: Layer, layerPosition: LayerPosition?) throws
     func addPersistentLayer(with properties: [String: Any], layerPosition: LayerPosition?) throws
+    func addLayer(_ layer: Layer, layerPosition: LayerPosition?) throws
+    func moveLayer(withId id: String, to position: LayerPosition) throws
     func removeLayer(withId id: String) throws
     func layerExists(withId id: String) -> Bool
     func layerProperties(for layerId: String) throws -> [String: Any]
@@ -58,7 +63,7 @@ internal extension StyleProtocol {
 /// Use style manager to dynamically modify the map style. You can manage layers, sources, lights, terrain, and many more.
 /// Typically, you don’t create the style manager instances yourself. Instead you receive instance of this class from ``MapView`` as the ``MapView/mapboxMap`` property, or create an instance of ``Snapshotter``.
 ///
-/// To load the style use ``styleURI`` or ``styleJSON`` or new experimental ``mapStyle`` property. The latter
+/// To load the style use ``styleURI`` or ``styleJSON`` or ``mapStyle`` property. The latter
 /// allows not only load the style, but also modify the style configuration, for more information, see ``MapStyle``.
 ///
 /// - Important: `StyleManager` should only be used from the main thread.
@@ -66,14 +71,21 @@ public class StyleManager {
     private let sourceManager: StyleSourceManagerProtocol
     private let styleManager: StyleManagerProtocol
     private let styleReconciler: MapStyleReconciler
+    private let contentReconciler: AnyObject?
 
-    internal init(
-        with styleManager: StyleManagerProtocol,
-        sourceManager: StyleSourceManagerProtocol
-    ) {
-        self.styleManager = styleManager
+    init(with styleManager: StyleManagerProtocol, sourceManager: StyleSourceManagerProtocol) {
         self.sourceManager = sourceManager
-        styleReconciler = MapStyleReconciler(styleManager: styleManager)
+        self.styleManager = styleManager
+        self.styleReconciler = MapStyleReconciler(styleManager: styleManager)
+        self.contentReconciler = if #available(iOS 13.0, *) {
+            MapContentReconciler(
+                styleManager: styleManager,
+                sourceManager: sourceManager,
+                styleIsLoaded: styleReconciler.isStyleRootLoaded
+            )
+        } else {
+            nil
+        }
     }
 
     // MARK: - Layers
@@ -138,19 +150,6 @@ public class StyleManager {
     }
 
     /**
-     Moves a `layer` to a new layer position in the style.
-     - Parameter layerId: The layer to move
-     - Parameter position: Position to move the layer in the stack of layers on the map. Defaults to the top layer.
-
-     - Throws: `StyleError` on failure, or `NSError` with a _domain of "com.mapbox.bindgen"
-     */
-    public func moveLayer(withId id: String, to position: LayerPosition) throws {
-        try handleExpected {
-            styleManager.moveStyleLayer(forLayerId: id, layerPosition: position.corePosition)
-        }
-    }
-
-    /**
      Gets a `layer` from the map
      - Parameter id: The id of the layer to be fetched
      - Parameter type: The type of the layer that will be fetched
@@ -170,8 +169,7 @@ public class StyleManager {
      This function is useful if you do not know the concrete type of the layer
      you are fetching, or don't need to know for your situation.
 
-     - Parameter layerID: The id of the layer to be fetched
-
+     - Parameter id: The id of the layer to be fetched
      - Returns: The fully formed `layer` object.
      - Throws: Type conversion errors
      */
@@ -239,7 +237,6 @@ public class StyleManager {
     /**
      Adds a `source` to the map
      - Parameter source: The source to add to the map.
-     - Parameter identifier: A unique source identifier.
      - Parameter dataId: An optional data ID to filter ``MapboxMap/onSourceDataLoaded`` to only the specified data source. Applies only to ``GeoJSONSource``s.
 
      - Throws: ``StyleError`` if there is a problem adding the `source`.
@@ -411,11 +408,65 @@ public class StyleManager {
     /// MapStyle represents style configuration to load the style.
     ///
     /// It comprises from a StyleURI or style JSON complemented by style import configuration.
-    @_documentation(visibility: public)
-    @_spi(Experimental)
     public var mapStyle: MapStyle? {
         get { styleReconciler.mapStyle }
         set { styleReconciler.mapStyle = newValue }
+    }
+
+    /// Sets style content to the map.
+    ///
+    /// Use this method to declaratively specify which runtime styling components will be added to the style.
+    ///
+    /// ```swift
+    /// let mapView = MapView()
+    /// mapView.mapboxMap.setMapStyleContent {
+    ///     VectorSource(id: "traffic-source")
+    ///         .tiles(["traffic-tiles-url"])
+    ///     LineLayer(id: "traffic-layer", source: "traffic-source")
+    ///         .lineColor(.red)
+    /// }
+    /// ```
+    ///
+    /// - Note: Don't wait until the style is loaded, it is safe to set style content just when the map is created.
+    ///
+    /// Call this method whenever the app state changes, the style will be modified incrementally.
+    /// The style content is unique per map, make sure that all the styling components
+    /// you need are in the style content upon every call.
+    ///
+    /// ```swift
+    /// func onMapStateChanged(_ state: State) {
+    ///   mapView.mapboxMap.setMapStyleContent {
+    ///     if state.displayTraffic {
+    ///         VectorSource(id: "traffic-source")
+    ///             .tiles(["traffic-tiles-url"])
+    ///         LineLayer(id: "traffic-layer", source: "traffic-source")
+    ///             .lineColor(state.trafficColor)
+    ///     }
+    /// }
+    /// ```
+    ///
+    /// - Warning: Avoind having strong references to `MapboxMap` or `MapView` in your custom content as it will lead to strong reference cycles.
+    ///
+    /// See more information in the <doc:Declarative-Map-Styling>.
+    @available(iOS 13.0, *)
+    public func setMapStyleContent(@MapStyleContentBuilder content: () -> some MapStyleContent) {
+        setMapContent({
+            MapStyleContentAdapter(content())
+        })
+    }
+
+    @available(iOS 13.0, *)
+    func setMapContent(_ content: () -> any MapContent) {
+        if let contentReconciler = contentReconciler as? MapContentReconciler {
+            contentReconciler.content = content()
+        }
+    }
+
+    @available(iOS 13.0, *)
+    func setMapContentDependencies(_ dependencies: MapContentDependencies) {
+        if let contentReconciler = contentReconciler as? MapContentReconciler {
+            contentReconciler.setMapContentDependencies(dependencies)
+        }
     }
 
     /// Get or set the style URI
@@ -464,8 +515,6 @@ public class StyleManager {
     ///   - mapStyle: A style to load.
     ///   - transition: Options for the style transition.
     ///   - completion: Closure called when the style has been fully loaded.
-    @_documentation(visibility: public)
-    @_spi(Experimental)
     public func load(mapStyle: MapStyle,
                      transition: TransitionOptions? = nil,
                      completion: ((Error?) -> Void)? = nil) {
@@ -499,29 +548,16 @@ public class StyleManager {
     /// - SeeAlso: ``MapboxMap/onNext(event:handler:)``
     public var styleTransition: TransitionOptions {
         get {
-            styleManager.getStyleTransition()
+            TransitionOptions(styleManager.getStyleTransition())
         }
         set {
-            styleManager.setStyleTransitionFor(newValue)
+            styleManager.setStyleTransitionFor(newValue.coreOptions)
         }
     }
 
     /// Returns the list containing information about existing style import objects.
     public var styleImports: [StyleObjectInfo] {
         return styleManager.getStyleImports()
-    }
-
-    /// Removes an existing style import.
-    ///
-    ///  - Parameters:
-    ///   - importId: Identifier of the style import to remove.
-    ///
-    ///  - Throws:
-    ///   - An error describing why the operation was unsuccessful.
-    public func removeStyleImport(for importId: String) throws {
-        try handleExpected {
-            styleManager.removeStyleImport(forImportId: importId)
-        }
     }
 
     /// Gets the style import schema.
@@ -618,6 +654,20 @@ public class StyleManager {
         }
     }
 
+    /// Moves a style layer with given `layerId` to the new position.
+    ///
+    /// - Parameters:
+    ///   - id: Style layer id
+    ///   - position: Position to move the layer in the stack of layers on the map. Defaults to the top layer.
+    ///
+    /// - Throws:
+    ///     `StyleError` on failure, or `NSError` with a _domain of "com.mapbox.bindgen"
+    public func moveLayer(withId id: String, to position: LayerPosition) throws {
+        try handleExpected {
+            styleManager.moveStyleLayer(forLayerId: id, layerPosition: position.corePosition)
+        }
+    }
+
     /// Adds a new persistent style layer given its JSON properties
     ///
     /// Persistent style layers remain valid across style reloads.
@@ -708,11 +758,21 @@ public class StyleManager {
         return styleManager.styleLayerExists(forLayerId: id)
     }
 
+    /// The ordered list of the current style slots identifiers
+    public var allSlotIdentifiers: [Slot] {
+        styleManager.getStyleSlots().compactMap(Slot.init)
+    }
+
     /// The ordered list of the current style layers' identifiers and types
     public var allLayerIdentifiers: [LayerInfo] {
-        return styleManager.getStyleLayers().map { info in
+        styleManager.getStyleLayers().map { info in
             LayerInfo(id: info.id, type: LayerType(rawValue: info.type))
         }
+    }
+
+    /// The ordered list of the current style imports' identifiers
+    var allImportIdentifiers: [String] {
+        styleManager.getStyleImports().map(\.id)
     }
 
     // MARK: - Layer Properties
@@ -1010,27 +1070,14 @@ public class StyleManager {
     /// - Throws:
     ///     An error describing why the operation was unsuccessful.
     public func addImage(_ image: UIImage, id: String, sdf: Bool = false, contentInsets: UIEdgeInsets = .zero) throws {
-        let scale = Float(image.scale)
-        let stretchXFirst = Float(image.capInsets.left) * scale
-        let stretchXSecond = Float(image.size.width - image.capInsets.right) * scale
-        let stretchYFirst = Float(image.capInsets.top) * scale
-        let stretchYSecond = Float(image.size.height - image.capInsets.bottom) * scale
+        let imageProperties = ImageProperties(uiImage: image, contentInsets: contentInsets, id: id, sdf: sdf)
 
-        let contentBoxLeft = Float(contentInsets.left) * scale
-        let contentBoxRight = Float(image.size.width - contentInsets.right) * scale
-        let contentBoxTop = Float(contentInsets.top) * scale
-        let contentBoxBottom = Float(image.size.height - contentInsets.bottom) * scale
-
-        let contentBox = ImageContent(left: contentBoxLeft,
-                                      top: contentBoxTop,
-                                      right: contentBoxRight,
-                                      bottom: contentBoxBottom)
         try addImage(image,
                      id: id,
                      sdf: sdf,
-                     stretchX: [ImageStretches(first: stretchXFirst, second: stretchXSecond)],
-                     stretchY: [ImageStretches(first: stretchYFirst, second: stretchYSecond)],
-                     content: contentBox)
+                     stretchX: [ImageStretches(first: imageProperties.stretchXFirst, second: imageProperties.stretchXSecond)],
+                     stretchY: [ImageStretches(first: imageProperties.stretchYFirst, second: imageProperties.stretchYSecond)],
+                     content: imageProperties.contentBox)
     }
 
     /// Removes an image from the style.
@@ -1079,7 +1126,7 @@ public class StyleManager {
 
     /// Gets the value of a style light property.
     ///
-    /// - Parameter light: The unique identifier of the style light in lights list.
+    /// - Parameter lightId: The unique identifier of the style light in lights list.
     /// - Parameter property: The style light property name.
     public func lightProperty(for lightId: String, property: String) -> Any {
         styleManager.getStyleLightProperty(forId: lightId, property: property).value
@@ -1087,7 +1134,7 @@ public class StyleManager {
 
     /// Gets the value of a style light property.
     ///
-    /// - Parameter light: The unique identifier of the style light in lights list.
+    /// - Parameter lightId: The unique identifier of the style light in lights list.
     /// - Parameter property: The style light property name.
     public func lightPropertyValue(for lightId: String, property: String) -> StylePropertyValue {
         styleManager.getStyleLightProperty(forId: lightId, property: property)
@@ -1096,10 +1143,7 @@ public class StyleManager {
     /// Set global directional lightning.
     /// - Parameter flatLight: The flat light source.
     public func setLights(_ flatLight: FlatLight) throws {
-        let rawLight = try flatLight.allStyleProperties()
-        try handleExpected {
-            return styleManager.setStyleLightsForLights([rawLight])
-        }
+        try styleManager.setLights(flatLight)
     }
 
     /// Set dynamic lightning.
@@ -1107,16 +1151,12 @@ public class StyleManager {
     ///   - ambientLight: The ambient light source.
     ///   - directionalLight: The directional light source.
     public func setLights(ambient ambientLight: AmbientLight, directional directionalLight: DirectionalLight) throws {
-        let rawAmbientLight = try ambientLight.allStyleProperties()
-        let rawDirectionalLight = try directionalLight.allStyleProperties()
-        try handleExpected {
-            return styleManager.setStyleLightsForLights([rawAmbientLight, rawDirectionalLight])
-        }
+        try styleManager.setLights(ambient: ambientLight, directional: directionalLight)
     }
 
     /// Sets the value of a style light property in lights list.
     ///
-    /// - Parameter id: The unique identifier of the style light in lights list.
+    /// - Parameter lightId: The unique identifier of the style light in lights list.
     /// - Parameter property: The style light property name.
     /// - Parameter value: The style light property value.
     /// - throws: An error describing why the operation is unsuccessful.
@@ -1233,6 +1273,7 @@ public class StyleManager {
     /// - See Also [style-spec/fog](https://docs.mapbox.com/mapbox-gl-js/style-spec/fog/)
     ///
     /// - Parameter property: Style atmosphere property name.
+    /// - Parameter value: Style atmosphere property value.
     ///
     /// - Throws:
     ///     An error describing why the operation was unsuccessful.
@@ -1380,54 +1421,144 @@ public class StyleManager {
     }
 
     /// Note! This is an experimental feature. It can be changed or removed in future versions.
-    /// Set tile data for a raster tile. For custom raster source, we accept 32-bit RGBA data format.
-    /// This method can be used in conjunction with `fetchTileFunction` provided in `CustomRasterSourceOptions`,
-    /// i.e., fetch tile fetches the required data and then sets the data for the tile using this API.
-    /// Note: This API should be called from main thread.
+    /// Set tile data for raster tiles.
+    ///
+    /// The provided data is not cached, and the implementation will call the fetch callback each time the tile reappears.
     ///
     /// - Parameters:
     ///   - sourceId: A Style source identifier
-    ///   - tileId: A `canonicalTileId` of the tile.
-    ///   - square: `Image` content of the tile.
+    ///   - tiles: tiles Array with new tile data.
     ///
     /// - Throws:
     ///     An error describing why the operation was unsuccessful.
-    @_spi(Experimental) public func setCustomRasterSourceTileData(forSourceId sourceId: String, tileId: CanonicalTileID, image: UIImage) throws {
-        guard let mbmImage = CoreMapsImage(uiImage: image) else {
-            throw TypeConversionError.unexpectedType
-        }
+    @_spi(Experimental) public func setCustomRasterSourceTileData(forSourceId sourceId: String, tiles: [CustomRasterSourceTileData]) throws {
         try handleExpected {
-            return styleManager.setStyleCustomRasterSourceTileDataForSourceId(sourceId, tileId: tileId, image: mbmImage)
+            return styleManager.setStyleCustomRasterSourceTileDataForSourceId(sourceId, tiles: tiles)
         }
     }
 
-    /// Note! This is an experimental feature. It can be changed or removed in future versions.
-    /// Invalidate tile for provided custom raster source. This will make the source re-fetch the tile.
+    /// Adds style import with specified id using pre-defined Mapbox Style, or custom style bundled with the application, or over the network.
     ///
-    /// - Parameters:
-    ///   - sourceId: A Style source identifier
-    ///   - tileId : A `canonicalTileId` of the tile.
+    ///  - Parameters:
+    ///   - id: Identifier of the style import to move
+    ///   - uri: An instance of ``StyleURI`` pointing to a Mapbox Style URI (mapbox://styles/{user}/{style}), a full HTTPS URI, or a path to a local file.
+    ///   - config: Style import configuration to be applied on style load.
+    ///   - importPosition: Position at which import will be added in the imports stack. By default it will be added above everything.
     ///
-    /// - Throws:
-    ///     An error describing why the operation was unsuccessful.
-    @_spi(Experimental) public func invalidateCustomRasterSourceTile(forSourceId sourceId: String, tileId: CanonicalTileID) throws {
+    ///  - Throws:
+    ///   - An error describing why the operation was unsuccessful.
+    public func addStyleImport(withId id: String, uri: StyleURI, config: [String: Any]? = nil, importPosition: ImportPosition? = nil) throws {
         try handleExpected {
-            return styleManager.invalidateStyleCustomRasterSourceTile(forSourceId: sourceId, tileId: tileId)
+            return styleManager.addStyleImportFromURI(forImportId: id, uri: uri.rawValue, config: config, importPosition: importPosition?.corePosition)
         }
     }
 
-    /// Note! This is an experimental feature. It can be changed or removed in future versions.
-    /// Invalidates all the tiles in the given region for the provided custom raster source.
+    /// Adds style import with specified id using style JSON string and configuration.
     ///
-    /// - Parameters:
-    ///   - sourceId: A Style source identifier
-    ///   - bounds: A `coordinateBounds` object.
+    ///  - Parameters:
+    ///   - id: Identifier of the style import to move
+    ///   - json: Style JSON conforming to [Mapbox Style Specification](https://docs.mapbox.com/mapbox-gl-js/style-spec/).
+    ///   - config: Style import configuration to be applied on style load.
+    ///   - importPosition: Position at which import will be added in the imports stack. By default it will be added above everything.
     ///
-    /// - Throws:
-    ///     An error describing why the operation was unsuccessful.
-    @_spi(Experimental) public func invalidateCustomRasterSourceRegion(forSourceId sourceId: String, bounds: CoordinateBounds) throws {
+    ///  - Throws:
+    ///   - An error describing why the operation was unsuccessful.
+    public func addStyleImport(withId id: String, json: String, config: [String: Any]? = nil, importPosition: ImportPosition? = nil) throws {
         try handleExpected {
-            return styleManager.invalidateStyleCustomRasterSourceRegion(forSourceId: sourceId, bounds: bounds)
+            return styleManager.addStyleImportFromJSON(forImportId: id, json: json, config: config, importPosition: importPosition?.corePosition)
+        }
+    }
+
+    /// Updates style import with specified id using pre-defined Mapbox Style, or custom style bundled with the application, or over the network.
+    ///
+    /// - Important: For performance reasons, if you only need to update only configuration,  use ``StyleManager/setStyleImportConfigProperties(for:configs:)`` or ``StyleManager/setStyleImportConfigProperty(for:config:value:)```
+    ///
+    ///  - Parameters:
+    ///   - id: Identifier of the style import to move
+    ///   - uri: An instance of ``StyleURI`` pointing to a Mapbox Style URI (mapbox://styles/{user}/{style}), a full HTTPS URI, or a path to a local file.
+    ///   - config: Style import configuration to be applied on style load.
+    ///
+    ///  - Throws:
+    ///   - An error describing why the operation was unsuccessful.
+    public func updateStyleImport(withId id: String, uri: StyleURI, config: [String: Any]? = nil) throws {
+        try handleExpected {
+            return styleManager.updateStyleImportWithURI(forImportId: id, uri: uri.rawValue, config: config)
+        }
+    }
+
+    /// Updates style import with specified id using style JSON string and configuration.
+    ///
+    /// - Important: For performance reasons, if you only need to update only configuration,  use ``StyleManager/setStyleImportConfigProperties(for:configs:)`` or ``StyleManager/setStyleImportConfigProperty(for:config:value:)```
+    ///
+    ///  - Parameters:
+    ///   - id: Identifier of the style import to move
+    ///   - json: Style JSON conforming to [Mapbox Style Specification](https://docs.mapbox.com/mapbox-gl-js/style-spec/).
+    ///   - config: Style import configuration to be applied on style load.
+    ///
+    ///  - Throws:
+    ///   - An error describing why the operation was unsuccessful.
+    public func updateStyleImport(withId id: String, json: String, config: [String: Any]? = nil) throws {
+        try handleExpected {
+            return styleManager.updateStyleImportWithJSON(forImportId: id, json: json, config: config)
+        }
+    }
+
+    /// Move an existing style import to specified position in imports stack.
+    ///
+    ///  - Parameters:
+    ///   - id: Identifier of the style import to move
+    ///   - position: Position in the imports stack.
+    ///
+    ///  - Throws:
+    ///   - An error describing why the operation was unsuccessful.
+    public func moveStyleImport(withId id: String, to position: ImportPosition) throws {
+        try handleExpected {
+            return styleManager.moveStyleImport(forImportId: id, importPosition: position.corePosition)
+        }
+    }
+
+    /// Removes an existing style import.
+    ///
+    ///  - Parameters:
+    ///   - id: Identifier of the style import to remove.
+    ///
+    ///  - Throws:
+    ///   - An error describing why the operation was unsuccessful.
+    public func removeStyleImport(withId id: String) throws {
+        try handleExpected {
+            return styleManager.removeStyleImport(forImportId: id)
+        }
+    }
+
+    /// Removes an existing style import.
+    ///
+    ///  - Parameters:
+    ///   - importId: Identifier of the style import to remove.
+    ///
+    ///  - Throws:
+    ///   - An error describing why the operation was unsuccessful.
+    @available(*, deprecated, renamed: "removeStyleImport(withId:)", message: "Please use the removeStyleImport(withId:) version.")
+    public func removeStyleImport(for importId: String) throws {
+        try handleExpected {
+            styleManager.removeStyleImport(forImportId: importId)
+        }
+    }
+
+}
+
+extension StyleManagerProtocol {
+    func setLights(_ flatLight: FlatLight) throws {
+        let rawLight = try flatLight.allStyleProperties()
+        try handleExpected {
+            setStyleLightsForLights([rawLight])
+        }
+    }
+
+    func setLights(ambient ambientLight: AmbientLight, directional directionalLight: DirectionalLight) throws {
+        let rawAmbientLight = try ambientLight.allStyleProperties()
+        let rawDirectionalLight = try directionalLight.allStyleProperties()
+        try handleExpected {
+            setStyleLightsForLights([rawAmbientLight, rawDirectionalLight])
         }
     }
 }
@@ -1499,7 +1630,10 @@ extension StyleManager {
  A transition property controls timing for the interpolation between a
  transitionable style property's previous value and new value.
  */
-public struct StyleTransition: Codable {
+public struct StyleTransition: Codable, Equatable {
+
+    /// Disabled style transition
+    public static let zero = StyleTransition(duration: 0, delay: 0)
 
     internal enum CodingKeys: String, CodingKey {
         case duration

@@ -6,6 +6,8 @@ NS_SWIFT_NAME(HttpHeaders)
 __attribute__((visibility ("default")))
 @interface MBXHttpHeaders : NSObject
 
+    /** The Age HTTP header */
+    @property (nonatomic, class, readonly) NSString * Age;
     /** The Cache-Control HTTP header. */
     @property (nonatomic, class, readonly) NSString * CacheControl;
     /** The Content-Encoding representation header. */
@@ -14,6 +16,8 @@ __attribute__((visibility ("default")))
     @property (nonatomic, class, readonly) NSString * ContentLength;
     /** The Content-Type representation header. */
     @property (nonatomic, class, readonly) NSString * ContentType;
+    /** The Date response HTTP header. */
+    @property (nonatomic, class, readonly) NSString * Date;
     /** The Digest response HTTP header. */
     @property (nonatomic, class, readonly) NSString * Digest;
     /** The ETag (or entity tag) HTTP response header. */
@@ -24,6 +28,8 @@ __attribute__((visibility ("default")))
     @property (nonatomic, class, readonly) NSString * LastModified;
     /** The User-Agent request header. */
     @property (nonatomic, class, readonly) NSString * UserAgent;
+    /** The Retry-After response header. */
+    @property (nonatomic, class, readonly) NSString * RetryAfter;
     /** Custom Accept-Encoding request HTTP header. */
     @property (nonatomic, class, readonly) NSString * XAcceptEncoding;
     /** Custom Content-Encoding representation header. */

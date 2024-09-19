@@ -1,6 +1,7 @@
 // This file is generated and will be overwritten automatically.
 
 #import <MapboxCommon/MBXTileStore.h>
+#import <MapboxCommon/MBXAmbientCacheClearingCallback_Internal.h>
 #import <MapboxCommon/MBXResourceLoadProgressCallback_Internal.h>
 #import <MapboxCommon/MBXResourceLoadResultCallback_Internal.h>
 #import <MapboxCommon/MBXTileRegionBooleanCallback_Internal.h>
@@ -47,4 +48,7 @@
                      callback:(nonnull MBXTileRegionCallback)callback NS_REFINED_FOR_SWIFT;
 - (void)computeCoveredAreaForDescriptors:(nonnull NSArray<MBXTilesetDescriptor *> *)descriptors
                                 callback:(nonnull MBXTileRegionGeometryCallback)callback;
+- (void)clearAmbientCacheForCallback:(nonnull MBXAmbientCacheClearingCallback)callback
+                       filterOptions:(nonnull MBXTileStoreAmbientCacheFilterOptions *)filterOptions;
+- (void)clearAmbientCacheForCallback:(nonnull MBXAmbientCacheClearingCallback)callback;
 @end

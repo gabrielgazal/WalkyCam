@@ -30,4 +30,6 @@
 #import <MapboxCommon/MapboxMovement_Internal.h>
 #import <MapboxCommon/MapboxMetrics_Internal.h>
 #import <MapboxCommon/MapboxMetricsService_Internal.h>
+#import <MapboxCommon/MapboxPersistentStorage_Internal.h>
 #import <MapboxCommon/NSStream+MBXAdditions.h>
+#import <MapboxCommon/MapboxGeofencing_Internal.h>

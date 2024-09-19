@@ -20,6 +20,7 @@ __attribute__((visibility ("default")))
                                           height:(nullable NSNumber *)height
                                     allowOverlap:(nullable NSNumber *)allowOverlap
                             allowOverlapWithPuck:(nullable NSNumber *)allowOverlapWithPuck
+                                   allowZElevate:(nullable NSNumber *)allowZElevate
                                          visible:(nullable NSNumber *)visible
                                  variableAnchors:(nullable NSArray<MBMViewAnnotationAnchorConfig *> *)variableAnchors
                                         selected:(nullable NSNumber *)selected
@@ -47,6 +48,17 @@ __attribute__((visibility ("default")))
  * When updating existing annotations, if `allowOverlapWithPuck` is not explicitly set, the current value will be retained.
  */
 @property (nonatomic, readonly, nullable) NSNumber *allowOverlapWithPuck NS_REFINED_FOR_SWIFT;
+
+/**
+ * If true, position annotation on buildings' (both fill extrusions and models) rooftops.
+ *
+ * When adding new annotations, if `allowZElevate` is not explicitly set, default value `false` will be applied.
+ * When updating existing annotations, if `allowZElevate` is not explicitly set, the current value will be retained.
+ *
+ * Note: In case the annotation is associated with a symbol layer, and the annotation's `allowZElevate`
+ * is not explicitly set, its `allowZElevate` value will be overridden by the symbol layer's `symbol-z-elevate` value.
+ */
+@property (nonatomic, readonly, nullable) NSNumber *allowZElevate NS_REFINED_FOR_SWIFT;
 
 /**
  * Specifies if this view annotation is visible or not.

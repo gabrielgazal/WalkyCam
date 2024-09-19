@@ -2,7 +2,6 @@
 import Foundation
 import os
 @_implementationOnly import MapboxCommon_Private
-
 /// An instance of `CircleAnnotationManager` is responsible for a collection of `CircleAnnotation`s.
 public class CircleAnnotationManager: AnnotationManagerInternal {
     typealias OffsetCalculatorType = OffsetPointCalculator
@@ -14,6 +13,16 @@ public class CircleAnnotationManager: AnnotationManagerInternal {
     private var dragId: String { "\(id)_drag" }
 
     public let id: String
+
+    var layerPosition: LayerPosition? {
+        didSet {
+            do {
+                try style.moveLayer(withId: layerId, to: layerPosition ?? .default)
+            } catch {
+                Log.error(forMessage: "Failed to mover layer to a new position. Error: \(error)", category: "Annotations")
+            }
+        }
+    }
 
     /// The collection of ``CircleAnnotation`` being managed.
     ///
@@ -115,7 +124,23 @@ public class CircleAnnotationManager: AnnotationManagerInternal {
         }
     }
 
-    internal func destroy() {
+    var idsMap = [AnyHashable: String]()
+
+    func set(newAnnotations: [(AnyHashable, CircleAnnotation)]) {
+        var resolvedAnnotations = [CircleAnnotation]()
+        newAnnotations.forEach { elementId, annotation in
+            var annotation = annotation
+            let stringId = idsMap[elementId] ?? annotation.id
+            idsMap[elementId] = stringId
+            annotation.id = stringId
+            annotation.isDraggable = false
+            annotation.isSelected = false
+            resolvedAnnotations.append(annotation)
+        }
+        annotations = resolvedAnnotations
+    }
+
+    func destroy() {
         guard destroyOnce.continueOnce() else { return }
 
         displayLinkToken?.cancel()
@@ -215,8 +240,8 @@ public class CircleAnnotationManager: AnnotationManagerInternal {
 
     // MARK: - Common layer properties
 
-
     /// Controls the intensity of light emitted on the source features.
+    /// Default value: 0. Minimum value: 0.
     public var circleEmissiveStrength: Double? {
         get {
             return layerProperties["circle-emissive-strength"] as? Double
@@ -227,6 +252,7 @@ public class CircleAnnotationManager: AnnotationManagerInternal {
     }
 
     /// Orientation of circle when map is pitched.
+    /// Default value: "viewport".
     public var circlePitchAlignment: CirclePitchAlignment? {
         get {
             return layerProperties["circle-pitch-alignment"].flatMap { $0 as? String }.flatMap(CirclePitchAlignment.init(rawValue:))
@@ -237,6 +263,7 @@ public class CircleAnnotationManager: AnnotationManagerInternal {
     }
 
     /// Controls the scaling behavior of the circle when the map is pitched.
+    /// Default value: "map".
     public var circlePitchScale: CirclePitchScale? {
         get {
             return layerProperties["circle-pitch-scale"].flatMap { $0 as? String }.flatMap(CirclePitchScale.init(rawValue:))
@@ -247,6 +274,7 @@ public class CircleAnnotationManager: AnnotationManagerInternal {
     }
 
     /// The geometry's offset. Values are [x, y] where negatives indicate left and up, respectively.
+    /// Default value: [0,0].
     public var circleTranslate: [Double]? {
         get {
             return layerProperties["circle-translate"] as? [Double]
@@ -257,6 +285,7 @@ public class CircleAnnotationManager: AnnotationManagerInternal {
     }
 
     /// Controls the frame of reference for `circle-translate`.
+    /// Default value: "map".
     public var circleTranslateAnchor: CircleTranslateAnchor? {
         get {
             return layerProperties["circle-translate-anchor"].flatMap { $0 as? String }.flatMap(CircleTranslateAnchor.init(rawValue:))
@@ -266,7 +295,6 @@ public class CircleAnnotationManager: AnnotationManagerInternal {
         }
     }
 
-    /// 
     /// Slot for the underlying layer.
     ///
     /// Use this property to position the annotations relative to other map features if you use Mapbox Standard Style.
@@ -281,7 +309,6 @@ public class CircleAnnotationManager: AnnotationManagerInternal {
     }
 
     // MARK: - User interaction handling
-
 
     func handleTap(layerId: String, feature: Feature, context: MapContentGestureContext) -> Bool {
 
@@ -319,7 +346,7 @@ public class CircleAnnotationManager: AnnotationManagerInternal {
             annotation.id == featureId && annotation.isDraggable
         }
 
-        func tryBeginDragging(_ annotations: inout [CircleAnnotation], idx: Int) -> Bool  {
+        func tryBeginDragging(_ annotations: inout [CircleAnnotation], idx: Int) -> Bool {
             var annotation = annotations[idx]
             // If no drag handler set, the dragging is allowed
             let dragAllowed = annotation.dragBeginHandler?(&annotation, context) ?? true
@@ -403,6 +430,5 @@ public class CircleAnnotationManager: AnnotationManagerInternal {
         }
     }
 }
-
 
 // End of generated file.

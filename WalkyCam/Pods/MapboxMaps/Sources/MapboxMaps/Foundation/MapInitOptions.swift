@@ -43,6 +43,7 @@ public final class MapInitOptions: NSObject {
     ///   - styleURI: Style URI for the map to load. Defaults to `.streets`, but
     ///         can be `nil`.
     ///   - styleJSON: Style JSON in String representation. Has precedence over ``styleURI``.
+    ///   - antialiasingSampleCount: Sample count to control multisample anti-aliasing (MSAA) option for rendering.
     public init(
         mapOptions: MapOptions = MapOptions(),
         cameraOptions: CameraOptions? = nil,
@@ -82,5 +83,36 @@ public final class MapInitOptions: NSObject {
         hasher.combine(styleURI)
         hasher.combine(styleJSON)
         return hasher.finalize()
+    }
+}
+
+extension MapInitOptions {
+    func resolved(
+        in bounds: CGRect,
+        overridingStyleURI: URL?
+    ) -> MapInitOptions {
+        if self.mapOptions.size == nil {
+            // Update using the view's size
+            let resolvedMapOptions = MapOptions(
+                __contextMode: mapOptions.__contextMode,
+                constrainMode: mapOptions.__constrainMode,
+                viewportMode: mapOptions.__viewportMode,
+                orientation: mapOptions.__orientation,
+                crossSourceCollisions: mapOptions.__crossSourceCollisions,
+                size: Size(width: Float(bounds.width), height: Float(bounds.height)),
+                pixelRatio: mapOptions.pixelRatio,
+                glyphsRasterizationOptions: mapOptions.glyphsRasterizationOptions)
+
+            // Use the overriding style URI if provided (currently from IB)
+            let resolvedStyleURI = overridingStyleURI.map { StyleURI(url: $0) } ?? styleURI
+
+            return MapInitOptions(
+                mapOptions: resolvedMapOptions,
+                cameraOptions: cameraOptions,
+                styleURI: resolvedStyleURI,
+                styleJSON: styleJSON)
+        } else {
+            return self
+        }
     }
 }

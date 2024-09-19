@@ -10,10 +10,12 @@
 @class MBMCoordinateBounds;
 @class MBMCustomGeometrySourceOptions;
 @class MBMCustomRasterSourceOptions;
+@class MBMCustomRasterSourceTileData;
 @class MBMGeoJSONSourceData;
 @class MBMImage;
 @class MBMImageContent;
 @class MBMImageStretches;
+@class MBMImportPosition;
 @class MBMLayerPosition;
 @class MBMRuntimeStylingOptions;
 @class MBMStyleObjectInfo;
@@ -83,6 +85,22 @@ __attribute__((visibility ("default")))
  */
 - (nonnull NSArray<MBMStyleObjectInfo *> *)getStyleImports __attribute((ns_returns_retained));
 - (nonnull MBXExpected<NSNull *, NSString *> *)removeStyleImportForImportId:(nonnull NSString *)importId __attribute((ns_returns_retained));
+- (nonnull MBXExpected<NSNull *, NSString *> *)addStyleImportFromURIForImportId:(nonnull NSString *)importId
+                                                                            uri:(nonnull NSString *)uri
+                                                                         config:(nullable NSDictionary<NSString *, id> *)config
+                                                                 importPosition:(nullable MBMImportPosition *)importPosition __attribute((ns_returns_retained));
+- (nonnull MBXExpected<NSNull *, NSString *> *)addStyleImportFromJSONForImportId:(nonnull NSString *)importId
+                                                                            json:(nonnull NSString *)json
+                                                                          config:(nullable NSDictionary<NSString *, id> *)config
+                                                                  importPosition:(nullable MBMImportPosition *)importPosition __attribute((ns_returns_retained));
+- (nonnull MBXExpected<NSNull *, NSString *> *)updateStyleImportWithURIForImportId:(nonnull NSString *)importId
+                                                                               uri:(nonnull NSString *)uri
+                                                                            config:(nullable NSDictionary<NSString *, id> *)config __attribute((ns_returns_retained));
+- (nonnull MBXExpected<NSNull *, NSString *> *)updateStyleImportWithJSONForImportId:(nonnull NSString *)importId
+                                                                               json:(nonnull NSString *)json
+                                                                             config:(nullable NSDictionary<NSString *, id> *)config __attribute((ns_returns_retained));
+- (nonnull MBXExpected<NSNull *, NSString *> *)moveStyleImportForImportId:(nonnull NSString *)importId
+                                                           importPosition:(nullable MBMImportPosition *)importPosition __attribute((ns_returns_retained));
 - (nonnull MBXExpected<id, NSString *> *)getStyleImportSchemaForImportId:(nonnull NSString *)importId __attribute((ns_returns_retained));
 - (nonnull MBXExpected<NSDictionary<NSString *, MBMStylePropertyValue *> *, NSString *> *)getStyleImportConfigPropertiesForImportId:(nonnull NSString *)importId __attribute((ns_returns_retained));
 - (nonnull MBXExpected<MBMStylePropertyValue *, NSString *> *)getStyleImportConfigPropertyForImportId:(nonnull NSString *)importId
@@ -120,6 +138,12 @@ __attribute__((visibility ("default")))
  * @return The list containing the information about existing style layer objects.
  */
 - (nonnull NSArray<MBMStyleObjectInfo *> *)getStyleLayers __attribute((ns_returns_retained));
+/**
+ * Returns slots available in the style and its imports.
+ *
+ * @return The list of slots identifiers.
+ */
+- (nonnull NSArray<NSString *> *)getStyleSlots __attribute((ns_returns_retained));
 /**
  * Gets the value of style layer property.
  *
@@ -277,12 +301,7 @@ __attribute__((visibility ("default")))
 - (nonnull MBXExpected<NSNull *, NSString *> *)addStyleCustomRasterSourceForSourceId:(nonnull NSString *)sourceId
                                                                              options:(nonnull MBMCustomRasterSourceOptions *)options __attribute((ns_returns_retained));
 - (nonnull MBXExpected<NSNull *, NSString *> *)setStyleCustomRasterSourceTileDataForSourceId:(nonnull NSString *)sourceId
-                                                                                      tileId:(nonnull MBMCanonicalTileID *)tileId
-                                                                                       image:(nullable MBMImage *)image __attribute((ns_returns_retained));
-- (nonnull MBXExpected<NSNull *, NSString *> *)invalidateStyleCustomRasterSourceTileForSourceId:(nonnull NSString *)sourceId
-                                                                                         tileId:(nonnull MBMCanonicalTileID *)tileId __attribute((ns_returns_retained));
-- (nonnull MBXExpected<NSNull *, NSString *> *)invalidateStyleCustomRasterSourceRegionForSourceId:(nonnull NSString *)sourceId
-                                                                                           bounds:(nonnull MBMCoordinateBounds *)bounds __attribute((ns_returns_retained));
+                                                                                       tiles:(nonnull NSArray<MBMCustomRasterSourceTileData *> *)tiles __attribute((ns_returns_retained));
 /**
  * Check if the style is completely loaded.
  *

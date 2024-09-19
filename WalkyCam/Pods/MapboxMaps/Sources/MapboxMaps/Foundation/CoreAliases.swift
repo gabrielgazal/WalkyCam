@@ -1,4 +1,5 @@
 @_implementationOnly import MapboxCoreMaps_Private
+@_implementationOnly import MapboxCommon_Private
 
 typealias CoreCameraOptions = MapboxCoreMaps_Private.CameraOptions
 typealias CoreCameraState = MapboxCoreMaps_Private.CameraState
@@ -8,6 +9,7 @@ typealias CoreMapSnapshotOptions = MapboxCoreMaps_Private.MapSnapshotOptions
 typealias CoreMapSnapshot = MapboxCoreMaps_Private.MapSnapshot
 typealias CoreViewAnnotationOptions = MapboxCoreMaps_Private.ViewAnnotationOptions
 typealias CoreLayerPosition = MapboxCoreMaps_Private.LayerPosition
+typealias CoreImportPosition = MapboxCoreMaps_Private.ImportPosition
 typealias CoreTracing = MapboxCoreMaps_Private.Tracing
 typealias CoreAnnotatedFeature = MapboxCoreMaps_Private.AnnotatedFeature
 typealias CoreAnnotatedLayerFeature = MapboxCoreMaps_Private.AnnotatedLayerFeature
@@ -18,6 +20,7 @@ typealias CoreScreenBox = MapboxCoreMaps_Private.ScreenBox
 typealias CoreEdgeInsets = MapboxCoreMaps_Private.EdgeInsets
 typealias CoreTileCoverOptions = MapboxCoreMaps_Private.TileCoverOptions
 typealias CoreMapsImage = MapboxCoreMaps_Private.Image
+typealias CoreCustomRasterSourceTileData = MapboxCoreMaps_Private.CustomRasterSourceTileData
 typealias CoreStyleManager = MapboxCoreMaps_Private.StyleManager
 typealias CoreGeoJSONSourceData = MapboxCoreMaps_Private.GeoJSONSourceData
 typealias CoreMapRecorderOptions = MapboxCoreMaps_Private.MapRecorderOptions
@@ -31,3 +34,4 @@ typealias CoreObservable = MapboxCoreMaps_Private.Observable
 typealias CoreViewAnnotationPositionsUpdateListener = MapboxCoreMaps_Private.ViewAnnotationPositionsUpdateListener
 typealias CoreMapSnapshotter = MapboxCoreMaps_Private.MapSnapshotter
 typealias CorePerformanceSamplerOptions = MapboxCoreMaps_Private.PerformanceSamplerOptions
+typealias TelemetryCounter = MapboxCommon_Private.FeatureTelemetryCounter
