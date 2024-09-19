@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Scan3DMenuView<ViewModel:Scan3DMenuViewModelProtocol, Router: Scan3DMenuRouterProtocol>: View {
+struct Scan3DMenuView<ViewModel: Scan3DMenuViewModelProtocol, Router: Scan3DMenuRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -21,18 +21,18 @@ struct Scan3DMenuView<ViewModel:Scan3DMenuViewModelProtocol, Router: Scan3DMenuR
         ZStack {
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.large) {
-                Text("Scan 3D")
+                Text(L10n.Scan3DMenuView.Scan3D.title)
                     .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                 VStack(alignment: .leading,
                        spacing: Tokens.Size.Spacing.regular) {
-                    Text("Desde tu smartphone")
+                    Text(L10n.Scan3DMenuView.DesdeTuSmartphone.title)
                         .font(.projectFont(size: Tokens.Size.Font.large, weight: .medium))
                     HStack(spacing: Tokens.Size.Spacing.regular) {
-                        squaredCell(icon: Asset.Icons.scan3D.name, title: "Scan 3D")
+                        squaredCell(icon: Asset.Icons.scan3D.name, title: L10n.Scan3DMenuView.Scan3D.cellTitle)
                             .onTapGesture {
                                 router.routeTo3DScanner()
                             }
-                        squaredCell(icon: Asset.Icons.images.name, title: "Galería")
+                        squaredCell(icon: Asset.Icons.images.name, title: L10n.Scan3DMenuView.Galeria.cellTitle)
                             .onTapGesture {
                                 router.routeToGallery()
                             }
@@ -40,14 +40,14 @@ struct Scan3DMenuView<ViewModel:Scan3DMenuViewModelProtocol, Router: Scan3DMenuR
                 }
                 VStack(alignment: .leading,
                        spacing: Tokens.Size.Spacing.regular) {
-                    Text("A distancia")
+                    Text(L10n.Scan3DMenuView.ADistancia.title)
                         .font(.projectFont(size: Tokens.Size.Font.large, weight: .medium))
                     HStack(spacing: Tokens.Size.Spacing.regular) {
-                        squaredCell(icon: Asset.Icons.streetCam.name, title: "Buscar WalkCamer")
+                        squaredCell(icon: Asset.Icons.streetCam.name, title: L10n.Scan3DMenuView.BuscarWalkCamer.cellTitle)
                             .onTapGesture {
                                 router.routeToWalkCammer()
                             }
-                        squaredCell(icon: Asset.Icons.orangeShare.name, title: "Buscar un Contacto")
+                        squaredCell(icon: Asset.Icons.orangeShare.name, title: L10n.Scan3DMenuView.BuscarUnContacto.cellTitle)
                             .onTapGesture {
                                 router.routeToContact()
                             }
@@ -65,15 +65,15 @@ struct Scan3DMenuView<ViewModel:Scan3DMenuViewModelProtocol, Router: Scan3DMenuR
                             .resizable()
                             .scaledToFit()
                             .frame(height: 75)
-                        Text("FAQ's")
+                        Text(L10n.Scan3DMenuView.FAQs.title)
                             .font(.projectFont(size: Tokens.Size.Font.medium, weight: .bold))
                     }
                 }
             }
         }
-               .padding(Tokens.Size.Spacing.large)
-               .navigation(router)
-               .bottomSheet(router)
+        .padding(Tokens.Size.Spacing.large)
+        .navigation(router)
+        .bottomSheet(router)
     }
 
     private func squaredCell(icon: String, title: String) -> some View {
@@ -91,14 +91,14 @@ struct Scan3DMenuView<ViewModel:Scan3DMenuViewModelProtocol, Router: Scan3DMenuR
                 Text(title)
                     .font(.projectFont(size: Tokens.Size.Font.small, weight: .bold))
             }
-               .padding(Tokens.Size.Spacing.regular)
+            .padding(Tokens.Size.Spacing.regular)
         }
     }
 }
 
 struct Scan3DMenuView_Previews: PreviewProvider {
     static var previews: some View {
-    Scan3DMenuView(
+        Scan3DMenuView(
             viewModel: Scan3DMenuViewModel(),
             router: Scan3DMenuRouter(isPresented: .constant(false))
         )

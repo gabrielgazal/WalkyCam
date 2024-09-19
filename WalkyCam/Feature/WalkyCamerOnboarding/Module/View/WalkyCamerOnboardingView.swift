@@ -60,14 +60,14 @@ struct WalkyCamerOnboardingView<ViewModel: WalkyCamerOnboardingViewModelProtocol
                 .padding(.horizontal, Tokens.Size.Spacing.regular)
                 VStack(spacing: Tokens.Size.Spacing.big) {
                     WCUIButton(
-                        title: "Buscar WalkCamer",
+                        title: L10n.WalkyCamerOnboardingView.Button.search,
                         style: .standard,
                         descriptor: OrangeButtonStyleDescriptor(),
                         action: handleProceedToStreetCam
                     )
                     .frame(maxWidth: .infinity)
                     .loading(viewModel.isUpdating)
-                    LinkButton(title: "Salir",
+                    LinkButton(title: L10n.WalkyCamerOnboardingView.Button.exit,
                                color: .naranja,
                                action: {
                         router.dismiss()

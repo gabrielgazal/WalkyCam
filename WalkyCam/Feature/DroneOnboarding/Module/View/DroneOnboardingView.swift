@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct DroneOnboardingView<ViewModel:DroneOnboardingViewModelProtocol, Router: DroneOnboardingRouterProtocol>: View {
+struct DroneOnboardingView<ViewModel: DroneOnboardingViewModelProtocol, Router: DroneOnboardingRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -22,17 +22,17 @@ struct DroneOnboardingView<ViewModel:DroneOnboardingViewModelProtocol, Router: D
                spacing: Tokens.Size.Spacing.regular) {
             TabView(selection: $viewModel.currentPage) {
                 DroneOnboardingPageView(illustration: Asset.Illustrations.droneOnboarding1.swiftUIImage,
-                                        title: "Graba a distancia",
-                                        description: "Tu eliges donde grabar tus videos y/o capturar imágenes \n\nNosotros pilotamos por ti.\n\nContamos con profesionales acreditados y con expeciencia tu WalkCamer te guiará."
+                                        title: L10n.DroneOnboardingView.GrabaADistancia.title,
+                                        description: L10n.DroneOnboardingView.GrabaADistancia.description
                 ).tag(0)
                 DroneOnboardingPageView(
                     illustration: Asset.Icons.drone.swiftUIImage,
-                    title: "Consideraciones básicas",
-                    description: "No se permite volar a mas de 110 m de altura",
+                    title: L10n.DroneOnboardingView.ConsideracionesBasicas.title,
+                    description: L10n.DroneOnboardingView.ConsideracionesBasicas.description,
                     secondDescription: [
-                        "Mantendremos la distancia legalmente regulada con áreas pobladas",
-                        "No está permitido el vuelvo en áreas restringidas.",
-                        "Si se requiere plan de vuelo, se coordinará con anticipación y con la autoridad aeronautica."
+                        L10n.DroneOnboardingView.ConsideracionesBasicas.secondDescription1,
+                        L10n.DroneOnboardingView.ConsideracionesBasicas.secondDescription2,
+                        L10n.DroneOnboardingView.ConsideracionesBasicas.secondDescription3
                     ]
                 ).tag(1)
             }
@@ -65,8 +65,8 @@ struct DroneOnboardingView<ViewModel:DroneOnboardingViewModelProtocol, Router: D
                     }
 
                     WCUIButton(
-                        title: "Acepto términos y condiciones",
-                         style: .standard,
+                        title: L10n.DroneOnboardingView.AceptoTerminosYCondiciones.title,
+                        style: .standard,
                         descriptor: OrangeButtonStyleDescriptor(),
                         action: {
                             router.routeToFlightMenu()
@@ -75,7 +75,7 @@ struct DroneOnboardingView<ViewModel:DroneOnboardingViewModelProtocol, Router: D
                     .frame(maxWidth: .infinity)
                     .disabled(!viewModel.acceptedTerms.isSelected)
                     WCUIButton(
-                        title: "Cancelar",
+                        title: L10n.DroneOnboardingView.Cancelar.title,
                         style: .standard,
                         descriptor: BlackButtonStyleDescriptor(),
                         action: {
@@ -90,10 +90,10 @@ struct DroneOnboardingView<ViewModel:DroneOnboardingViewModelProtocol, Router: D
             }
             PageControl(numberOfPages: 2, currentPage: $viewModel.currentPage)
         }
-               .onAppear {
-                   setupAppearence()
-               }
-               .navigation(router)
+        .onAppear {
+            setupAppearence()
+        }
+        .navigation(router)
     }
 
     private func setupAppearence() {
@@ -104,7 +104,7 @@ struct DroneOnboardingView<ViewModel:DroneOnboardingViewModelProtocol, Router: D
 
 struct DroneOnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-    DroneOnboardingView(
+        DroneOnboardingView(
             viewModel: DroneOnboardingViewModel(),
             router: DroneOnboardingRouter(isPresented: .constant(false))
         )

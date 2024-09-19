@@ -61,7 +61,7 @@ struct GalleryPhotosView<ViewModel: GalleryPhotosViewModelProtocol, Router: Gall
 
     private func formatDateInRelationToToday(_ date: Date) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "es_ES")
+        dateFormatter.locale = Locale(identifier: L10n.Formater.locale)
         dateFormatter.dateStyle = .full
         dateFormatter.dateFormat = "d 'de' MMMM 'de' yyyy"
 

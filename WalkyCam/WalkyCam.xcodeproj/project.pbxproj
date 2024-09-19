@@ -1332,6 +1332,7 @@
 		56AF274F2BDAE00800DADC29 /* RegisterWalkcamerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWalkcamerView.swift; sourceTree = "<group>"; };
 		56AF27512BDAE00800DADC29 /* RegisterWalkcamerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWalkcamerViewModel.swift; sourceTree = "<group>"; };
 		56AF27522BDAE00800DADC29 /* RegisterWalkcamerViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWalkcamerViewModelProtocol.swift; sourceTree = "<group>"; };
+		56B2DC482C9B9F6200396732 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		56B3E4562C3D8442004A87FA /* ScheduleVideoCallModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVideoCallModel.swift; sourceTree = "<group>"; };
 		56B3E4592C3D8442004A87FA /* ScheduleVideoCallAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVideoCallAssembler.swift; sourceTree = "<group>"; };
 		56B3E45A2C3D8442004A87FA /* ScheduleVideoCallAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVideoCallAssemblerProtocol.swift; sourceTree = "<group>"; };
@@ -11176,10 +11177,11 @@
 			};
 			buildConfigurationList = 5637A80D2AD5DD72000586DF /* Build configuration list for PBXProject "WalkyCam" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = es;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				es,
 			);
 			mainGroup = 5637A8092AD5DD71000586DF;
 			packageReferences = (
@@ -12332,6 +12334,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				EA15B5752AD6DF2C00C03407 /* en */,
+				56B2DC482C9B9F6200396732 /* es */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -12343,6 +12346,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -12403,6 +12407,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct BookWalkycamerView<ViewModel:BookWalkycamerViewModelProtocol, Router: BookWalkycamerRouterProtocol>: View {
+struct BookWalkycamerView<ViewModel: BookWalkycamerViewModelProtocol, Router: BookWalkycamerRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -32,7 +32,7 @@ struct BookWalkycamerView<ViewModel:BookWalkycamerViewModelProtocol, Router: Boo
                 Spacer()
                 HStack {
                     Spacer()
-                    WCUIButton(title: "Siguiente",
+                    WCUIButton(title: L10n.BookWalkycamerView.Siguiente.title,
                                style: .standard,
                                descriptor: BlackButtonStyleDescriptor(),
                                action: {
@@ -59,14 +59,14 @@ struct BookWalkycamerView<ViewModel:BookWalkycamerViewModelProtocol, Router: Boo
             .padding(.horizontal, Tokens.Size.Spacing.large)
             HStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {
-                Text("Completa tu reserva")
+                Text(L10n.BookWalkycamerView.CompletaTuReserva.title)
                     .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                 Spacer()
             }
-            Text("Selecciona fecha, hora y área de grabación")
+            Text(L10n.BookWalkycamerView.SeleccionaFechaHoraArea.title)
                 .font(.projectFont(size: Tokens.Size.Font.regular))
         }
-               .padding(.horizontal, Tokens.Size.Spacing.large)
+        .padding(.horizontal, Tokens.Size.Spacing.large)
     }
 
     private func headerCounterView(_ index: Int, _ totalSteps: Int) -> some View {

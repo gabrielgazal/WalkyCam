@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct RadarMenuView<ViewModel:RadarMenuViewModelProtocol, Router: RadarMenuRouterProtocol>: View {
+struct RadarMenuView<ViewModel: RadarMenuViewModelProtocol, Router: RadarMenuRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -22,24 +22,24 @@ struct RadarMenuView<ViewModel:RadarMenuViewModelProtocol, Router: RadarMenuRout
             VStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.large) {
                 HStack {
-                    Text("Radares & Sensores")
+                    Text(L10n.RadarMenuView.title)
                         .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                     Spacer()
                 }
-                itemCell(title: "Georadar", image: Asset.Icons.radar.name)
+                itemCell(title: L10n.RadarMenuView.Georadar.title, image: Asset.Icons.radar.name)
                     .onTapGesture {
                         router.routeToGeoradarSuperbanner()
                     }
-                itemCell(title: "Detector de cables", image: Asset.Icons.cables.name)
+                itemCell(title: L10n.RadarMenuView.DetectorDeCables.title, image: Asset.Icons.cables.name)
                     .onTapGesture {
                         router.routeToDetectorSuperbanner()
                     }
-                itemCell(title: "Analizador de redes", image: Asset.Icons.analisadorRedes.name)
+                itemCell(title: L10n.RadarMenuView.AnalizadorDeRedes.title, image: Asset.Icons.analisadorRedes.name)
                     .onTapGesture {
                         router.routeToAnalysisSuperbanner()
                     }
             }
-                   .padding(Tokens.Size.Spacing.large)
+            .padding(Tokens.Size.Spacing.large)
         }
         .navigation(router)
     }
@@ -49,7 +49,7 @@ struct RadarMenuView<ViewModel:RadarMenuViewModelProtocol, Router: RadarMenuRout
             RoundedRectangle(cornerRadius: 10)
                 .fill(Color.blanco)
             VStack(alignment: .center,
-                          spacing: Tokens.Size.Spacing.large) {
+                   spacing: Tokens.Size.Spacing.large) {
                 Image(image)
                     .resizable()
                     .scaledToFit()
@@ -57,7 +57,7 @@ struct RadarMenuView<ViewModel:RadarMenuViewModelProtocol, Router: RadarMenuRout
                 Text(title)
                     .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
             }
-                          .padding(Tokens.Size.Spacing.regular)
+            .padding(Tokens.Size.Spacing.regular)
         }
         .frame(height: 175)
         .shadow(color: .black.opacity(0.16), radius: 8, x: 0, y: 2)
@@ -66,7 +66,7 @@ struct RadarMenuView<ViewModel:RadarMenuViewModelProtocol, Router: RadarMenuRout
 
 struct RadarMenuView_Previews: PreviewProvider {
     static var previews: some View {
-    RadarMenuView(
+        RadarMenuView(
             viewModel: RadarMenuViewModel(),
             router: RadarMenuRouter(isPresented: .constant(false))
         )

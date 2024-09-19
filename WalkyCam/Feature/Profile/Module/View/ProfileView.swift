@@ -55,23 +55,23 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
                                              text: viewModel.userData.lastName,
                                              editableText: $viewModel.temporaryLastname)
                             assembleItemView(
-                                title: "Número de celular",
+                                title: L10n.ProfileView.Field.phoneNumber,
                                 text: viewModel.userData.phoneNumber,
                                 editableText: $viewModel.temporaryPhoneNumber
                             )
                             assembleItemView(
-                                title: "Sexo",
+                                title: L10n.ProfileView.Field.gender,
                                 text: viewModel.userData.gender,
                                 editableText: $viewModel.temporaryGender
                             )
                             assembleItemView(title: L10n.ProfileView.Field.birthDate,
                                              text: viewModel.userData.birthDate,
                                              editableText: $viewModel.temporaryBirthDate)
-                            assembleItemView(title: "Domicilio",
+                            assembleItemView(title: L10n.ProfileView.Field.address,
                                              text: viewModel.userData.address,
                                              editableText: $viewModel.temporaryAddress)
                             assembleItemView(
-                                title: "Sobre mi",
+                                title: L10n.ProfileView.Field.aboutMe,
                                 text: viewModel.userData.additionalInfo,
                                 editableText: $viewModel.temporaryAdditionalInfo
                             )
@@ -132,7 +132,7 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
                     }
                     .padding(.horizontal, Tokens.Size.Spacing.regular)
                 }
-            } 
+            }
         }
                .background(Color.blanco)
                .navigation(router)
@@ -192,7 +192,7 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
             HStack(spacing: Tokens.Size.Spacing.regular) {
                 Text(title)
                     .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
-                Text(text.isEmpty ? "No informado" : text)
+                Text(text.isEmpty ? L10n.ProfileView.Field.notInformed : text)
                     .font(.projectFont(size: Tokens.Size.Font.regular))
                 Spacer()
             }
@@ -221,11 +221,11 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
                     .foregroundColor(Color.premium)
                 VStack(alignment: .leading,
                        spacing: Tokens.Size.Spacing.small) {
-                    Text("Upgrade Plan Premium")
+                    Text(L10n.ProfileView.Premium.upgradeTitle)
                         .underline()
                         .font(.projectFont(size: Tokens.Size.Font.medium, weight: .black))
                         .foregroundColor(Color.premium)
-                    Text("Consigure TODOS los beneficios que WalkyCam oferece")
+                    Text(L10n.ProfileView.Premium.upgradeDescription)
                         .font(.projectFont(size: Tokens.Size.Font.regular))
                         .foregroundColor(Color.blanco)
                 }
@@ -235,37 +235,5 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
         .onTapGesture {
             router.routeToPlans()
         }
-    }
-}
-
-struct ProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileView(
-            viewModel: ProfileViewModel(
-                interactor: ProfileInteractor(
-                    useCases: .init(
-                        fetchUserDataUseCase: .static(
-                            .init(
-                                id: "",
-                                userName: "username",
-                                name: "name",
-                                lastName: "lastname",
-                                email: "email",
-                                address: "address",
-                                phone: "12131231",
-                                birthDate: "12/20/2024",
-                                gender: "Masculino",
-                                additionalInfo: "additionalInfoadditionalInfoadditionalInfoadditionalInfoadditionalInfo",
-                                isWalkCamer: false,
-                                configurations: .init(),
-                                plan: .init()
-                            )
-                        ),
-                        updateInfo: .empty
-                    )
-                )
-            ),
-            router: ProfileRouter(state: RouterState(isPresented: .constant(false)))
-        )
     }
 }

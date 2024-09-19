@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct WalkyCammerListView<ViewModel:WalkyCammerListViewModelProtocol, Router: WalkyCammerListRouterProtocol>: View {
+struct WalkyCammerListView<ViewModel: WalkyCammerListViewModelProtocol, Router: WalkyCammerListRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -25,17 +25,17 @@ struct WalkyCammerListView<ViewModel:WalkyCammerListViewModelProtocol, Router: W
             TextInputView(
                 text: $searchText,
                 accessory: Image(systemName: "magnifyingglass"),
-                placeholder: "Buscar WalkCamer",
+                placeholder: L10n.WalkyCammerListView.BuscarWalkCamer.placeholder,
                 leftIcon: Asset.Icons.location.swiftUIImage,
                 rightIcon: Asset.Icons.filter.swiftUIImage,
                 backgroundColor: .blanco,
                 actions: .init()
             )
             .shadow(
-             color: Color.negro.opacity(0.1),
-             radius: 10,
-             x: 0,
-             y: 2
+                color: Color.negro.opacity(0.1),
+                radius: 10,
+                x: 0,
+                y: 2
             )
             .padding(.horizontal, Tokens.Size.Spacing.regular)
             AsyncDataView(viewModel.walkyCammers) { cammers in
@@ -53,13 +53,13 @@ struct WalkyCammerListView<ViewModel:WalkyCammerListViewModelProtocol, Router: W
                             }
                         }
                     }
-                           .padding(.horizontal, Tokens.Size.Spacing.regular)
+                    .padding(.horizontal, Tokens.Size.Spacing.regular)
                 }
             } errorAction: {}
         }
-               .padding([.top], Tokens.Size.Spacing.huge)
-               .ignoresSafeArea()
-               .navigation(router)
+        .padding([.top], Tokens.Size.Spacing.huge)
+        .ignoresSafeArea()
+        .navigation(router)
     }
 
     private var headerView: some View {
@@ -72,12 +72,12 @@ struct WalkyCammerListView<ViewModel:WalkyCammerListViewModelProtocol, Router: W
             .padding(.horizontal, Tokens.Size.Spacing.large)
             HStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {
-                Text("WalkCamers\ndisponibles")
+                Text(L10n.WalkyCammerListView.WalkCamersDisponibles.title)
                     .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                 Spacer()
             }
         }
-               .padding(.horizontal, Tokens.Size.Spacing.large)
+        .padding(.horizontal, Tokens.Size.Spacing.large)
     }
 
     private func headerCounterView(_ index: Int, _ totalSteps: Int) -> some View {

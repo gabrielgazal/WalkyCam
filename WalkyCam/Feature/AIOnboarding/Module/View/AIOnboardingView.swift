@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct AIOnboardingView<ViewModel:AIOnboardingViewModelProtocol, Router: AIOnboardingRouterProtocol>: View {
+struct AIOnboardingView<ViewModel: AIOnboardingViewModelProtocol, Router: AIOnboardingRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -23,13 +23,13 @@ struct AIOnboardingView<ViewModel:AIOnboardingViewModelProtocol, Router: AIOnboa
             TabView(selection: $viewModel.currentPage) {
                 CashWalletOnboardingPageView(
                     illustration: Asset.Illustrations.innovationPana1.swiftUIImage,
-                    title: "Walky, solo para ti",
-                    description: "Motor de AI entrenado sobre tus datos y tu comportamiento de uso dentro de WalkyCam."
+                    title: L10n.AIOnboardingView.WalkySoloParaTi.title,
+                    description: L10n.AIOnboardingView.DescripcionWalky.title
                 ).tag(0)
                 CashWalletOnboardingPageView(
                     illustration: Asset.Illustrations.dataExtractionPana1.swiftUIImage,
-                    title: "Permitir accesos",
-                    description: "Por única vez, antes de iniciar es necesario integrar y permitir accesos para poder ofrecer mejores recomendaciones, ahorrar trabajo y ofrecer soluciones/ alternativas a los problemas."
+                    title: L10n.AIOnboardingView.PermitirAccesos.title,
+                    description: L10n.AIOnboardingView.DescripcionPermitirAccesos.title
                 ).tag(1)
             }
             .accentColor(.naranja)
@@ -54,7 +54,7 @@ struct AIOnboardingView<ViewModel:AIOnboardingViewModelProtocol, Router: AIOnboa
                 .frame(maxWidth: .infinity)
                 .isHidden(viewModel.currentPage == 1)
                 WCUIButton(
-                    title: "Configurar accesos",
+                    title: L10n.AIOnboardingView.ConfigurarAccesos.title,
                     style: .standard,
                     descriptor: OrangeButtonStyleDescriptor(),
                     action: handleRouteToAI)
@@ -65,10 +65,10 @@ struct AIOnboardingView<ViewModel:AIOnboardingViewModelProtocol, Router: AIOnboa
             .padding(.horizontal, Tokens.Size.Spacing.regular)
             PageControl(numberOfPages: 2, currentPage: $viewModel.currentPage)
         }
-               .onAppear {
-                   setupAppearence()
-               }
-               .navigation(router)
+        .onAppear {
+            setupAppearence()
+        }
+        .navigation(router)
     }
 
     private func setupAppearence() {
@@ -83,7 +83,7 @@ struct AIOnboardingView<ViewModel:AIOnboardingViewModelProtocol, Router: AIOnboa
 
 struct AIOnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-    AIOnboardingView(
+        AIOnboardingView(
             viewModel: AIOnboardingViewModel(),
             router: AIOnboardingRouter(isPresented: .constant(false))
         )

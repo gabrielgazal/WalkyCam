@@ -114,7 +114,7 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
                 TextInputView(
                     text: $viewModel.locationText,
                     accessory: Asset.Icons.filter.swiftUIImage,
-                    placeholder: "Buscar WalkCamer",
+                    placeholder: L10n.SearchWalkyCammerView.Search.placeholder,
                     leftIcon: Asset.Icons.location.swiftUIImage,
                     rightIcon: Image(systemName: "magnifyingglass"),
                     backgroundColor: .blanco,
@@ -154,7 +154,7 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
                     TextInputView(
                         text: $viewModel.cammerSearch,
                         accessory: Asset.Icons.filter.swiftUIImage,
-                        placeholder: "Buscar WalkCamer",
+                        placeholder: L10n.SearchWalkyCammerView.Search.placeholder,
                         leftIcon: Asset.Icons.location.swiftUIImage,
                         rightIcon: Image(systemName: "magnifyingglass"),
                         backgroundColor: .blanco
@@ -178,7 +178,7 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
     }
 
     private func footerButtonTitle() -> String {
-        viewModel.shouldDisplayCammerList ? "Ver Mapa" : "Ver Listado"
+        viewModel.shouldDisplayCammerList ? L10n.SearchWalkyCammerView.Button.viewMap : L10n.SearchWalkyCammerView.Button.viewList
     }
 
     private var placeholder: some View {

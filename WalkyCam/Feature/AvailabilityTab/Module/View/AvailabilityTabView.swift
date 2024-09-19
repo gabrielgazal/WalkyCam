@@ -29,7 +29,7 @@ struct AvailabilityTabView<ViewModel: AvailabilityTabViewModelProtocol, Router: 
         }
         .scrollIndicators(.hidden)
         .onChange(of: viewModel.availableOptions) { newValue in
-            if let allDaysActive = viewModel.availableOptions.first(where: { $0.title == "Todos los dias"} )?.active,
+            if let allDaysActive = viewModel.availableOptions.first(where: { $0.title == L10n.AvailabilityTabView.allDays } )?.active,
             allDaysActive {
                 for index in 0..<viewModel.availableOptions.count {
                     viewModel.availableOptions[index].active = true

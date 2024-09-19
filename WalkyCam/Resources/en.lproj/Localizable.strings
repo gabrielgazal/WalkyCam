@@ -1,153 +1,154 @@
 // MARK: - General
-"copyright.text"= "@WalkyCam 2021 - All reserved copyright";
+"copyright.text" = "@WalkyCam 2021 - All rights reserved";
 
 // MARK: - LoginView
 
 "LoginView.title.text" = "Login";
-"LoginView.input.user.text" = "Usuario";
-"LoginView.input.user.placeholder" = "Usuario";
-"LoginView.input.password.text" = "Contraseña";
-"LoginView.input.password.placeholder" = "Contraseña";
-"LoginView.button.forgotPassword" = "He olvidado la contraseña";
+"LoginView.input.user.text" = "Username";
+"LoginView.input.user.placeholder" = "Username";
+"LoginView.input.password.text" = "Password";
+"LoginView.input.password.placeholder" = "Password";
+"LoginView.button.forgotPassword" = "Forgot password";
 "LoginView.button.login" = "Login";
-"LoginView.button.signup" = "Registrame";
+"LoginView.button.signup" = "Sign up";
 "LoginView.divider.text" = "Or Sign up with";
 
 // MARK: - OnboardingView
-"OnboardingView.Page1.title" = "Qué es?";
-"OnboardingView.Page1.subtitle" = "Tu STREETcam 24/7 \n\nStreaming en vivo donde quieras, cuando quieras. Ubica a tu WalkCamer y empieza a grabar. \n\nWalkyCam tiene mas de 20 servicios. Descúbrelos!";
-"OnboardingView.Page2.title" = "Universo WalkyCam";
-"OnboardingView.Page2.subtitle" = "Manos AR, PIXELADO de Caras, Escaneo 3D, DRONES Aéreos y R.O.V., IA especializada, IOT Service, \n\n**y mucho más!**";
-"OnboardingView.Page3.title" = "Experiencia Inmersiva";
-"OnboardingView.Page3.subtitle" = "Sumergete en otros lugares sin salir de casa.\n\nExplora nuevos entornos y viaja virtualmente.";
-"OnboardingView.Button.skip" = "Omitir";
-"OnboardingView.Button.next" = "Continuar";
-"OnboardingView.Button.start" = "Comenzar";
+"OnboardingView.Page1.title" = "What is it?";
+"OnboardingView.Page1.subtitle" = "Your STREETcam 24/7 \n\nLive streaming wherever, whenever. Locate your WalkCamer and start recording. \n\nWalkyCam has over 20 services. Discover them!";
+"OnboardingView.Page2.title" = "WalkyCam Universe";
+"OnboardingView.Page2.subtitle" = "AR Hands, Face PIXELATION, 3D Scanning, Aerial DRONES and R.O.V.s, specialized AI, IOT Service, \n\n**and much more!**";
+"OnboardingView.Page3.title" = "Immersive Experience";
+"OnboardingView.Page3.subtitle" = "Immerse yourself in other places without leaving home.\n\nExplore new environments and travel virtually.";
+"OnboardingView.Button.skip" = "Skip";
+"OnboardingView.Button.next" = "Continue";
+"OnboardingView.Button.start" = "Start";
 
 // MARK: - TabBarBuilder
 
 "TabBarBuilder.tab.home" = "Home";
-"TabBarBuilder.tab.functions" = "Funciones";
-"TabBarBuilder.tab.menu" = "Menú";
+"TabBarBuilder.tab.functions" = "Functions";
+"TabBarBuilder.tab.menu" = "Menu";
 
 // MARK: - MenuViewModel
 
 "MenuViewModel.item.wallet" = "Cash Wallet";
-"MenuViewModel.item.galery" = "Galería";
-"MenuViewModel.item.settings" = "Configuración";
-"MenuViewModel.item.help" = "Ayuda";
+"MenuViewModel.item.galery" = "Gallery";
+"MenuViewModel.item.settings" = "Settings";
+"MenuViewModel.item.help" = "Help";
 "MenuViewModel.item.bot" = "Walky";
 
 // MARK: - WalkyBotView
 
-"WalkyBotView.text" = "¿Qué hacemos hoy?";
-
+"WalkyBotView.text" = "What shall we do today?";
 
 // MARK: - RegistrationPlans
 
-"RegistrationPlans.title" = "Elige tu plan";
-"RegistrationPlans.description" = "Para comenzar elige un plan, luego puedes cambiarlo.";
-"RegistrationPlans.button.title" = "Comparar Planes";
-"RegistrationPlans.plan.button.title" = "Ver Plan";
+"RegistrationPlans.title" = "Choose your plan";
+"RegistrationPlans.description" = "To get started, choose a plan, then you can change it later.";
+"RegistrationPlans.button.title" = "Compare Plans";
+"RegistrationPlans.plan.button.title" = "View Plan";
 "RegistrationPlans.value.monthly" = "%@ €/mo";
 "RegistrationPlans.value.yearly" = "%@ €/yr";
 
 // MARK: - ProfileView
-"ProfileView.navigation.default.title" = "Perfil";
-"ProfileView.navigation.edit.title" = "Editar Perfil";
-"ProfileView.toggle.walkycamer" = "Soy WalkCamer";
-"ProfileView.field.name" = "Nombre";
-"ProfileView.field.lastname" = "Apellido";
-"ProfileView.field.birthDate" = "Fecha de nacimiento";
-"ProfileView.convert.walkycamer" = "Quiero ser WalkCamer";
-"ProfileView.section.logout" = "Cerrar Sesión";
-"ProfileView.button.save" = "Guardar cambios";
-"ProfileView.button.cancel" = "Cancelar";
+"ProfileView.navigation.default.title" = "Profile";
+"ProfileView.navigation.edit.title" = "Edit Profile";
+"ProfileView.toggle.walkycamer" = "I am a WalkCamer";
+"ProfileView.field.name" = "First Name";
+"ProfileView.field.lastname" = "Last Name";
+"ProfileView.field.birthDate" = "Date of Birth";
+"ProfileView.convert.walkycamer" = "I want to be a WalkCamer";
+"ProfileView.section.logout" = "Logout";
+"ProfileView.button.save" = "Save changes";
+"ProfileView.button.cancel" = "Cancel";
 
-//MARK: - ConfirmMailView
-"ConfirmMailView.title" = "Tu cuenta se registró con éxito.\nTe hemos enviado un correo para confirmar tu cuenta";
-"ConfirmMailView.button" = "Ir al correo";
+// MARK: - ConfirmMailView
+"ConfirmMailView.title" = "Your account has been successfully registered.\nWe have sent you an email to confirm your account";
+"ConfirmMailView.button" = "Go to email";
 
-//MARK: - StartupView
-"StartupView.title" = "Bienvenida %@!";
-"StartupView.subtitle" = "Tu cuenta ha sido validada.";
-"StartupView.button" = "Comenzar";
+// MARK: - StartupView
+"StartupView.title" = "Welcome %@!";
+"StartupView.subtitle" = "Your account has been validated.";
+"StartupView.button" = "Get Started";
 
-//MARK: - CashWalletOnboardingView
+// MARK: - CashWalletOnboardingView
 "CashWalletOnboardingView.Page1.title" = "Cash Wallet";
-"CashWalletOnboardingView.Page1.subtitle" = "Tu dinero de curso legal (Dinero FIAT), accede a tus cuentas bancarias y efectúa o recibe transferencias, con la máxima seguridad.";
+"CashWalletOnboardingView.Page1.subtitle" = "Your legal tender (FIAT money), access your bank accounts and make or receive transfers with the highest security.";
 "CashWalletOnboardingView.Page2.title" = "Crypto Wallet";
-"CashWalletOnboardingView.Page2.subtitle" = "Monedero de Criptomonedas: Opera sobre tus criptomonedas con total seguridad.";
-"CashWalletOnboardingView.Button.skip" = "Omitir";
-"CashWalletOnboardingView.Button.next" = "Continuar";
-"CashWalletOnboardingView.Button.start" = "Ingresar";
+"CashWalletOnboardingView.Page2.subtitle" = "Cryptocurrency Wallet: Manage your cryptocurrencies with complete security.";
+"CashWalletOnboardingView.Button.skip" = "Skip";
+"CashWalletOnboardingView.Button.next" = "Continue";
+"CashWalletOnboardingView.Button.start" = "Enter";
 
-//MARK: - WalkyCamerOnboardingView
-"WalkyCamerOnboardingView.Page1.title" = "Conéctate con el mundo";
-"WalkyCamerOnboardingView.Page1.subtitle" = "1. Indica la zona a grabar.\n\n2. Elige un WalkCamer acorde con tus necesidades.\n\n3. Tu WalkCamer aceptará la invitación para iniciar la videollamada.";
-"WalkyCamerOnboardingView.Page2.title" = "Su privacidad es importante para nosotros";
-"WalkyCamerOnboardingView.Page2.subtitle1" = "Para cuidar su privacidad, WalkyCam ofrece la posibilidad de pixelar el rostro de las personas y las placas de los autos que puedan aparecer en una transmisión.";
-"WalkyCamerOnboardingView.Page2.subtitle2"= "WalkyCam no se responsabiliza por las imagenes que se transmiten ni por la grabación realizada.";
+// MARK: - WalkyCamerOnboardingView
+"WalkyCamerOnboardingView.Page1.title" = "Connect with the World";
+"WalkyCamerOnboardingView.Page1.subtitle" = "1. Specify the area to record.\n\n2. Choose a WalkCamer according to your needs.\n\n3. Your WalkCamer will accept the invitation to start the video call.";
+"WalkyCamerOnboardingView.Page2.title" = "Your Privacy Matters to Us";
+"WalkyCamerOnboardingView.Page2.subtitle1" = "To protect your privacy, WalkyCam offers the option to pixelate people's faces and car license plates that may appear in a broadcast.";
+"WalkyCamerOnboardingView.Page2.subtitle2" = "WalkyCam is not responsible for the images transmitted or the recordings made.";
 
-//MARK: - VideocallOnboardingView
-"VideocallOnboardingView.Page.title" = "Videollamada";
-"VideocallOnboardingView.Page.subtitle" = "Crea una nueva reunión o programa para otro dia.\n\nTambién puedes unirte a una reunión ingresando el código que te han compartido.";
+// MARK: - VideocallOnboardingView
+"VideocallOnboardingView.Page.title" = "Video Call";
+"VideocallOnboardingView.Page.subtitle" = "Create a new meeting or schedule for another day.\n\nYou can also join a meeting by entering the code that was shared with you.";
 
 // MARK: - ErrorView
 
 "errorView.generic.icon" = "retry";
-"errorView.generic.message" = "Ops! Algo salió mal";
-"errorView.generic.description" = "Por alguna razón la información no cargó";
-"errorView.generic.buttonTitle" = "Intentar otra vez";
+"errorView.generic.message" = "Oops! Something went wrong";
+"errorView.generic.description" = "For some reason, the information did not load";
+"errorView.generic.buttonTitle" = "Try Again";
 
 // MARK: - Tooltips
 
-"Tooltip.VideoCall" = "Crea una nueva reunión o programa para otro día.\nTambién puedes unirte a una reunión ingresando el código que te han compartido.";
-"Tooltip.LIDAR" = "Mapea y digitaliza áreas en contrucción o descubre lo que hay debajo de la selva.\nVive la magia del escaneado con laser mediante la técnica LIDAR";
-"Tooltip.AsistenciaRemota" = "Selecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.\nO también puedes ingresar el código que te envíe tu asistente de confianza.";
-"Tooltip.Scan3D" = "Crea modelos 3D de objetos reales a partir de fotografías.\nSolicita un WalkCamer para efectuar el Scan 3D por ti, a distancia.\nUna vez escaneado, puedes editar color, tamaño y forma de la imagen escaneada del objeto. Realiza una impresión 3D del objeto y recibe el objeto.";
-"Tooltip.Print3D" = "Una vez escaneado, puedes editar el color y el tamaño.\nElige la forma de envío más adecuada.\nElegir el material y el acabado del objeto antes de enviarlo a imprimir en 3D.\nDisfruta de nuestro envio VIP, envíos frecuentes, y mucho más!";
-"Tooltip.PixelationFaces" = "Su privacidad es importante para nosotros.\nPara cuidar su privacidad, WalkyCam da la posibilidad de pixelar el rostro de las personas y placas de autos que puedan aparecer en una transmisión.\nWalkyCam no se responsabiliza por las imagenes que se transmiten ni por la grabación realizada.";
-"Tooltip.StreetCam" = "Conéctate con el mundo.\nIndica la zona a grabar.\nElige un WalkCamer acorde a tus requerimientos\nTu WalkCamer aceptará la invitación para iniciar la videollamada.";
-"Tooltip.IOT" = "Elige entre Farming, Industry, Agriculture, Fleet, Retail, Smart City y mucho más!\nSelecciona los sensores indicando su valor.\nLocaliza tu WalkCamer más cercano y gestiona tu IOT.";
-"Tooltip.DigitalTwins" = "Representación virtual de un objeto o sistema que abarca su ciclo de vida, se actualiza a partir de datos en tiempo real y utiliza simulación, machine learning y razonamiento para ayudar en la toma de decisiones.\nSelecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.";
-"Tooltip.Drone Fly" = "Tu eliges donde grabar tus videos y/o capturar imágenes.\nNosotros pilotamos por ti.\nUtiliza drones en tu cultivo: mapeo de campos, IOT, vigilancia y monitoreo de los cultivos, agricultura ecológica.\nContamos con profesionales acreditados y con experiencia. Tu WalkCamer te guiará.";
+"Tooltip.VideoCall" = "Create a new meeting or schedule for another day.\nYou can also join a meeting by entering the code that was shared with you.";
+"Tooltip.LIDAR" = "Map and digitize construction areas or discover what’s beneath the jungle.\nExperience the magic of laser scanning with LIDAR technology";
+"Tooltip.AsistenciaRemota" = "Select the area where you need assistance and we will provide the best specialized technicians.\nOr you can enter the code shared by your trusted assistant.";
+"Tooltip.Scan3D" = "Create 3D models of real objects from photographs.\nRequest a WalkCamer to perform the 3D scan remotely.\nOnce scanned, you can edit the color, size, and shape of the scanned image. Create a 3D print of the object and receive it.";
+"Tooltip.Print3D" = "Once scanned, you can edit the color and size.\nChoose the most suitable shipping method.\nSelect the material and finish of the object before sending it to 3D print.\nEnjoy our VIP shipping, frequent deliveries, and much more!";
+"Tooltip.PixelationFaces" = "Your privacy matters to us.\nTo protect your privacy, WalkyCam allows pixelating people's faces and car license plates that may appear in a broadcast.\nWalkyCam is not responsible for the images transmitted or the recordings made.";
+"Tooltip.StreetCam" = "Connect with the world.\nSpecify the area to record.\nChoose a WalkCamer according to your requirements\nYour WalkCamer will accept the invitation to start the video call.";
+"Tooltip.IOT" = "Choose from Farming, Industry, Agriculture, Fleet, Retail, Smart City, and much more!\nSelect the sensors by specifying their values.\nLocate your nearest WalkCamer and manage your IOT.";
+"Tooltip.DigitalTwins" = "Virtual representation of an object or system covering its life cycle, updated from real-time data, and using simulation, machine learning, and reasoning to aid decision-making.\nSelect the area where you need assistance and we will provide the best specialized technicians.";
+"Tooltip.Drone Fly" = "You choose where to record your videos and/or capture images.\nWe will pilot for you.\nUse drones in your farm: field mapping, IOT, surveillance, and monitoring of crops, ecological agriculture.\nWe have accredited professionals with experience. Your WalkCamer will guide you.";
+"Tooltip.IADataAnalysis" = "AI engine trained on your data and usage behavior within WalkyCam.\nOnce, before starting, it’s necessary to integrate and grant access to offer better recommendations, save work, and provide solutions/alternatives to problems.";
+"Tooltip.AlcoholDrugTest" = "Technical analysis of a biological sample, such as urine, hair, blood, breath, sweat, or oral fluid/saliva, to determine the presence or absence of specific drugs or their metabolites.\nSelect the area where you need assistance and we will provide the best specialized technicians.";
+"Tooltip.NFT" = "Create NFTs of your digital art or discover new NFTs in our store.";
+"Tooltip.CryptoWallet" = "Cryptocurrency Wallet: Manage your cryptocurrencies with complete security.";
+"Tooltip.Georadar" = "Ground Penetrating Radar:\nAllows mapping and locating structures and objects buried underground.\nSelect the area where you need assistance and we will provide the best specialized technicians.";
+"Tooltip.ROVDrone" = "Our R.O.V. Submarine Drones will be controlled by specialist WalkCamers.\nSelect the area where you need assistance and we will provide the best specialized technicians.\nImmerse yourself in deep waters and record your own videos with our R.O.V. Submarine Drones.\nYou can use its robotic arm to collect samples or manipulate objects.\nThe equipment ranges from a simple R.O.V. for video recording to deep-water equipment for naval industry and scientific research.";
 
-"Tooltip.IADataAnalysis" = "Motor de AI entrenado sobre tus datos y tu comportamiento de uso dentro de WalkyCam.\nPor única vez, antes de iniciar es necesario integrar y permitir accesos para poder ofrecer mejores recomendaciones, ahorrar trabajo y ofrecer soluciones/ alternativas a los problemas.";
-"Tooltip.AlcoholDrugTest" = "Análisis técnico de una muestra biológica, por ejemplo, orina, cabello, sangre, aliento, sudor o fluido oral/saliva, para determinar la presencia o ausencia de drogas originales específicas o sus metabolitos.\nSelecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.";
-"Tooltip.NFT" = "Crea NFT’s de tu arte digital o descubre nuevos NFT’s en nuestra tienda.";
-"Tooltip.CryptoWallet" = "Monedero de Criptomonedas: Opera sobre tus criptomonedas con total seguridad.";
-"Tooltip.Georadar" = "Radar de Penetración de Suelo:\nPermite Mapear y localizar estructuras y objetos enterrados en el subsuelo.\nSelecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.";
-"Tooltip.ROVDrone" = "Nuestros R.O.V. Drones Submarinos, serán controlados por WalkCamers especialistas.\nSelecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.\nSumerjete en aguas profundas y graba tus propios videos, con nuestros R.O.V. Drones Submarinos.\nPodrás usar su brazo robot, para recoger muestras, o manipular objetos.\nLos equipos van desde un simple R.O.V. para grabar video, hasta equipos de aguas profundas para la industria naval y la investigación científica";
-"Tooltip.DetectorCables" = "Mediante ondas electromagnéticas detecta y mapea, cables eléctricos y tuberías, enterrados hasta una profundidad de 7 mt con total precisión.\nSelecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.";
-"Tooltip.Analizador de Redes" = "Analiza Instalaciones y Sistemas eléctricos, mediante un computador que mide incidencias en tu red, consumos indebidos, entre otros.\nSelecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.";
-"Tooltip.BackPackScreenADversiting" = "Crea tu campaña publicitaria con Anuncios en Pantallas móviles.\nAumenta tu ratio de ventas.\nSelecciona el área en el que necesites asistencia.\nHaz que tu negocio se vea en la calle.\nAccede a zonas impensables y gana visibilidad.";
-"Tooltip.Ecografía" = "Ecografías a distancia efectuadas por profesionales.\nLlegamos a donde menos te lo esperas, con equipos de primera calidad.\nConsigue una segunda opinión\nPodrás ver las imágenes en directo.";
-"Tooltip.DetectorMetales" = "Encuentra tu anillo perdido.\nPuedes enviar a un experto a buscar por ti.\nDescubre increíbles tesoros desde la comodidad de tu hogar u oficina.";
-"Tooltip.DogRobot" = "Robot con forma de perro que utiliza sensores con (IA) para moverse e interaccionar con personas y objetos.\nPuede prestar ayuda en emergencias o como acompañante de personas dependientes, también puede monitorizar datos de su entorno de forma remota.";
-"Tooltip.RobóticaTelepresencia" = "Robot de vídeo online que permite que varios interlocutores se comuniquen.\nDesplázate por ferias y eventos como si estuvieras alli.\nInteractúa comercialmente o da clases y conferencias a distancia, mientras te mueves por el entorno.";
-"Tooltip.RobóticaMascotas" = "Vigila, Entrena o Alimenta a tus mascotas a distancia.\nPodrás controlar sus movimientos y su estado general, desde la comodidad de tu móvil.";
-"Tooltip.Karaoke" = "Disfruta de un karaoke en streaming con tu familia y amigos.";
-"Tooltip.Glasses Prove" = "Pruebate los ultimos modelos de gafas y obten grandes descuentos.";
-"Tooltip.Games" = "Juega a miles de videojuegos, gratis y de pago, en local o en linea.";
-"Tooltip.HairProve" = "Pruebate los más atrevedidos peinados, y reserva cita en una de nuestras peluquerías.";
-"Tooltip.DressProve" = "Tu provadro de ropa virtual, con grandes ofertas.";
-"Tooltip.RGBBulbParty." = "Convierte tu Laptop o tú móvil, en un show de luces de colores, mientras escuchas tu música favorita.";
-"Tooltip.Copyrights" = "Legaliza y protege tus derechos de autor, gratis(*) o de forma guiada.";
-"Tooltip.ScapeRoom" = "Monta las mejores fiestas de Scape Room, online o en una casa real.";
-"Tooltip.Mariachis" = "Envía un servicio de cantantes o mariachis a domicilio, para cumpleaños, bromas etc.";
-"Tooltip.FilmMaker" = "Conviertete en director/a de cine, crea tus propias películas con efectos y diálogos, gracias a nuestra AI.";
-"Tooltip.MuestraProductos" = "Expon tu propio show room de productos y envía muestras a tus clientes.";
-"Tooltip.IdeaNegocio" = "Registra tu know how de negocio con nosotros y pruebalo en privado o en publico.";
-"Tooltip.PulseraFitness" = "Participa en carreras en grupo por streaming, o ponle una pulsera a tu mascota.";
-"Tooltip.Famosos" = "Consigue tu sueño una videollamada de tu famoso/a preferido/a.";
-"Tooltip.PersonalShopper" = "Si no tienes tiempo, compramos lo que necesites para ti, y te lo llevamos a casa o a donde tu quieras, todo ello en streaming.";
-"Tooltip.PatenteInvención" = "Te ayudamos a presentar tus patentes de invención,o nos hacemos socios si así lo deseas.";
-"Tooltip.Gymkhana" = "Monta tus mejores juegos de busqueda del tesoro con nosotros en ubicaciones increibles o en streaming. Participa y pasalo bien en grupo o desde casa.";
-"Tooltip.CajaSorpresa" = "Regalate o regala a otros nuestras alucinantes cajas sorpresa.";
-"Tooltip.CertifiedRecording" = "Grabación certificada de Documentos,Videos y Navegación Online";
-"Tooltip.Engineering" = "Consultores en ingeniería para resolver tus dudas, de legalizaciones, instalaciones, obras, etc";
-"Tooltip.Lawyer" = "Consultores legales para resolver tus dudas, sobre temas laborales, fiscales, contables, etc";
-"Tooltip.Camara360" = "Graba videos con visión 360º, o crea Gemelos Digitales, para formación o mantenimiento.";
-"Tooltip.CRM" = "Conecta y sincroniza tus CRM con WalkyCam,de forma segura. Comparte y almacena información en ambas plataformas.";
-"Tooltip.ThermalCamera" = "Detecta y visualiza el calor emitido por objetos y personas\nProblemas eléctricos y de aislamiento térmico";
+// MARK: - Tooltips
+
+"Tooltip.DetectorCables" = "Uses electromagnetic waves to detect and map electrical cables and pipes buried up to a depth of 7 meters with complete accuracy.\nSelect the area where you need assistance, and we will provide the best specialized technicians.";
+"Tooltip.NetworkAnalyzer" = "Analyzes electrical installations and systems using a computer that measures incidents in your network, improper consumption, and more.\nSelect the area where you need assistance, and we will provide the best specialized technicians.";
+"Tooltip.BackPackScreenAdvertising" = "Create your advertising campaign with mobile screen ads.\nIncrease your sales ratio.\nSelect the area where you need assistance.\nMake your business visible on the street.\nAccess unimaginable areas and gain visibility.";
+"Tooltip.Ultrasound" = "Remote ultrasounds performed by professionals.\nWe reach you where you least expect it, with top-quality equipment.\nGet a second opinion.\nYou can view the images live.";
+"Tooltip.MetalDetector" = "Find your lost ring.\nYou can send an expert to search for you.\nDiscover incredible treasures from the comfort of your home or office.";
+"Tooltip.DogRobot" = "Dog-shaped robot using sensors with AI to move and interact with people and objects.\nCan assist in emergencies or as a companion for dependent individuals, and can also monitor environmental data remotely.";
+"Tooltip.TelepresenceRobotics" = "Online video robot allowing multiple users to communicate.\nMove around fairs and events as if you were there.\nInteract commercially or give remote classes and lectures while moving around the environment.";
+"Tooltip.PetRobotics" = "Monitor, train, or feed your pets remotely.\nControl their movements and overall condition from the comfort of your mobile device.";
+"Tooltip.Karaoke" = "Enjoy streaming karaoke with your family and friends.";
+"Tooltip.GlassesProve" = "Try on the latest glasses models and get great discounts.";
+"Tooltip.Games" = "Play thousands of video games, both free and paid, locally or online.";
+"Tooltip.HairProve" = "Try out the boldest hairstyles and book an appointment at one of our hair salons.";
+"Tooltip.DressProve" = "Your virtual clothing fitting room, with great offers.";
+"Tooltip.RGBBulbParty" = "Turn your laptop or mobile device into a color light show while listening to your favorite music.";
+"Tooltip.Copyrights" = "Legalize and protect your copyrights, for free(*) or with guidance.";
+"Tooltip.EscapeRoom" = "Host the best escape room parties, online or in a real location.";
+"Tooltip.Mariachis" = "Send a mariachi or singer service to your home for birthdays, pranks, etc.";
+"Tooltip.FilmMaker" = "Become a film director, create your own movies with effects and dialogues, thanks to our AI.";
+"Tooltip.ProductShowcase" = "Showcase your own product showroom and send samples to your clients.";
+"Tooltip.BusinessIdea" = "Register your business know-how with us and test it privately or publicly.";
+"Tooltip.FitnessBracelet" = "Join group races via streaming, or put a bracelet on your pet.";
+"Tooltip.Celebrities" = "Fulfill your dream of a video call with your favorite celebrity.";
+"Tooltip.PersonalShopper" = "If you don't have time, we buy what you need for you and deliver it to your home or wherever you want, all via streaming.";
+"Tooltip.InventionPatent" = "We help you present your invention patents or become partners if you wish.";
+"Tooltip.ScavengerHunt" = "Host your best treasure hunt games with us in amazing locations or via streaming. Participate and have fun in groups or from home.";
+"Tooltip.SurpriseBox" = "Treat yourself or others to our amazing surprise boxes.";
+"Tooltip.CertifiedRecording" = "Certified recording of documents, videos, and online navigation.";
+"Tooltip.Engineering" = "Engineering consultants to resolve your questions about legalizations, installations, construction, etc.";
+"Tooltip.Lawyer" = "Legal consultants to address your questions about labor, tax, accounting, etc.";
+"Tooltip.360Camera" = "Record videos with 360º vision or create Digital Twins for training or maintenance.";
+"Tooltip.CRM" = "Connect and sync your CRMs with WalkyCam securely. Share and store information on both platforms.";
+"Tooltip.ThermalCamera" = "Detect and visualize heat emitted by objects and people.\nElectrical issues and thermal insulation problems.";

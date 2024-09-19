@@ -43,10 +43,10 @@ final class CamerAvailabilityViewModel: CamerAvailabilityViewModelProtocol {
     private func initializeTabs() {
         let tabs: [WCTopBarItem] = [
             .init(iconName: "",
-                  title: "Disponibilidad",
+                  title: L10n.CamerAvailabilityViewModel.Tabs.availability,
                   destination: AvailabilityTabRoute(isPresented: .constant(false)).build()),
             .init(iconName: "",
-                  title: "Área preferida",
+                  title: L10n.CamerAvailabilityViewModel.Tabs.preferredArea,
                   destination: MapTabRoute(isPresented: .constant(false)).build())
         ]
         tabBarItems = tabs

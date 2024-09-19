@@ -22,19 +22,19 @@ struct RegisterWalkcamerView<ViewModel: RegisterWalkcamerViewModelProtocol, Rout
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.regular) {
                 Group {
-                    Text("Genera ganancias, hazte ")
+                    Text(L10n.RegisterWalkcamerView.gainText)
                         .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                         .foregroundStyle(Color.blanco) +
-                    Text("WalkCamer")
+                    Text(L10n.RegisterWalkcamerView.walkcamer)
                         .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                         .foregroundStyle(Color.naranja)
                 }
-                Text("Registrate hoy!")
+                Text(L10n.RegisterWalkcamerView.registerToday)
                     .font(.projectFont(size: Tokens.Size.Font.small, weight: .regular))
                     .foregroundStyle(Color.blanco)
                 registrationCard
             }
-                   .padding(Tokens.Size.Spacing.regular)
+            .padding(Tokens.Size.Spacing.regular)
         }
         .scrollIndicators(.hidden)
         .background {
@@ -49,20 +49,20 @@ struct RegisterWalkcamerView<ViewModel: RegisterWalkcamerViewModelProtocol, Rout
         VStack(alignment: .leading,
                spacing: Tokens.Size.Spacing.regular) {
             TextInputView(text: $viewModel.registrationData.email,
-                          topDescriptionText: "Email",
-                          placeholder: "nombre@email.com",
+                          topDescriptionText: L10n.RegisterWalkcamerView.email,
+                          placeholder: L10n.RegisterWalkcamerView.emailPlaceholder,
                           textColor: .negro)
             TextInputView(text: $viewModel.registrationData.name,
-                          topDescriptionText: "Nombre",
-                          placeholder: "Nombre",
+                          topDescriptionText: L10n.RegisterWalkcamerView.name,
+                          placeholder: L10n.RegisterWalkcamerView.namePlaceholder,
                           textColor: .negro)
             TextInputView(text: $viewModel.registrationData.lastName,
-                          topDescriptionText: "Apellido",
-                          placeholder: "Apellido",
+                          topDescriptionText: L10n.RegisterWalkcamerView.lastName,
+                          placeholder: L10n.RegisterWalkcamerView.lastNamePlaceholder,
                           textColor: .negro)
             TextInputView(text: $viewModel.registrationData.phoneNumber,
-                          topDescriptionText: "Telefono",
-                          placeholder: "Telefono",
+                          topDescriptionText: L10n.RegisterWalkcamerView.phone,
+                          placeholder: L10n.RegisterWalkcamerView.phonePlaceholder,
                           textColor: .negro)
         
             CheckBoxToggle(model: viewModel.acceptedTerms,
@@ -70,7 +70,7 @@ struct RegisterWalkcamerView<ViewModel: RegisterWalkcamerViewModelProtocol, Rout
                 .onTapGesture {
                     viewModel.acceptedTerms.isSelected.toggle()
                 }
-            WCUIButton(title: "Registrame",
+            WCUIButton(title: L10n.RegisterWalkcamerView.register,
                        style: .standard,
                        descriptor: OrangeButtonStyleDescriptor(),
                        action: {
@@ -80,11 +80,11 @@ struct RegisterWalkcamerView<ViewModel: RegisterWalkcamerViewModelProtocol, Rout
             })
             .disabled(viewModel.isRegisterButtonDisabled())
         }
-               .padding(Tokens.Size.Spacing.xlarge)
-               .background {
-                   RoundedRectangle(cornerRadius: 16)
-                       .fill(Color.blanco)
-               }
+        .padding(Tokens.Size.Spacing.xlarge)
+        .background {
+            RoundedRectangle(cornerRadius: 16)
+                .fill(Color.blanco)
+        }
     }
     
     private func saveUserPhone() {
@@ -98,7 +98,7 @@ struct RegisterWalkcamerView<ViewModel: RegisterWalkcamerViewModelProtocol, Rout
 
 struct RegisterWalkcamerView_Previews: PreviewProvider {
     static var previews: some View {
-    RegisterWalkcamerView(
+        RegisterWalkcamerView(
             viewModel: RegisterWalkcamerViewModel(),
             router: RegisterWalkcamerRouter(isPresented: .constant(false))
         )

@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct LidarOnboardingView<ViewModel:LidarOnboardingViewModelProtocol, Router: LidarOnboardingRouterProtocol>: View {
+struct LidarOnboardingView<ViewModel: LidarOnboardingViewModelProtocol, Router: LidarOnboardingRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -22,17 +22,17 @@ struct LidarOnboardingView<ViewModel:LidarOnboardingViewModelProtocol, Router: L
                spacing: Tokens.Size.Spacing.regular) {
             TabView(selection: $viewModel.currentPage) {
                 DroneOnboardingPageView(illustration: Asset.Illustrations.lidarDrone.swiftUIImage,
-                                        title: "LIDAR Scan",
-                                        description: "Mapea y digitaliza áreas en contrucción o descubre lo que hay debajo de la selva.\n\nVive la magia del escaneado con laser mediante la técnica LIDAR"
+                                        title: L10n.LidarOnboardingView.LIDARScan.title,
+                                        description: L10n.LidarOnboardingView.DescripcionLIDARScan.title
                 ).tag(0)
                 DroneOnboardingPageView(
                     illustration: Asset.Icons.lidar.swiftUIImage,
-                    title: "Consideraciones básicas",
-                    description: "No se permite volar a mas de 110 m de altura",
+                    title: L10n.LidarOnboardingView.ConsideracionesBasicas.title,
+                    description: L10n.LidarOnboardingView.DescripcionConsideraciones.title,
                     secondDescription: [
-                        "Mantendremos la distancia legalmente regulada con áreas pobladas",
-                        "No está permitido el vuelvo en áreas restringidas.",
-                        "Si se requiere plan de vuelo, se coordinará con anticipación y con la autoridad aeronautica."
+                        L10n.LidarOnboardingView.MantendremosDistancia.title,
+                        L10n.LidarOnboardingView.NoEstaPermitido.title,
+                        L10n.LidarOnboardingView.PlanDeVuelo.title
                     ]
                 ).tag(1)
             }
@@ -65,8 +65,8 @@ struct LidarOnboardingView<ViewModel:LidarOnboardingViewModelProtocol, Router: L
                     }
 
                     WCUIButton(
-                        title: "Acepto términos y condiciones",
-                         style: .standard,
+                        title: L10n.LidarOnboardingView.AceptoTerminos.title,
+                        style: .standard,
                         descriptor: OrangeButtonStyleDescriptor(),
                         action: {
                             router.routeToFlightMenu()
@@ -75,7 +75,7 @@ struct LidarOnboardingView<ViewModel:LidarOnboardingViewModelProtocol, Router: L
                     .frame(maxWidth: .infinity)
                     .disabled(!viewModel.acceptedTerms.isSelected)
                     WCUIButton(
-                        title: "Cancelar",
+                        title: L10n.LidarOnboardingView.Cancelar.title,
                         style: .standard,
                         descriptor: BlackButtonStyleDescriptor(),
                         action: {
@@ -90,10 +90,10 @@ struct LidarOnboardingView<ViewModel:LidarOnboardingViewModelProtocol, Router: L
             }
             PageControl(numberOfPages: 2, currentPage: $viewModel.currentPage)
         }
-               .onAppear {
-                   setupAppearence()
-               }
-               .navigation(router)
+        .onAppear {
+            setupAppearence()
+        }
+        .navigation(router)
     }
 
     private func setupAppearence() {
@@ -104,7 +104,7 @@ struct LidarOnboardingView<ViewModel:LidarOnboardingViewModelProtocol, Router: L
 
 struct LidarOnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-    LidarOnboardingView(
+        LidarOnboardingView(
             viewModel: LidarOnboardingViewModel(),
             router: LidarOnboardingRouter(isPresented: .constant(false))
         )

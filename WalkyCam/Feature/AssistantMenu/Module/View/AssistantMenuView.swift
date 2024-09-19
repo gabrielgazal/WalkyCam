@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct AssistantMenuView<ViewModel:AssistantMenuViewModelProtocol, Router: AssistantMenuRouterProtocol>: View {
+struct AssistantMenuView<ViewModel: AssistantMenuViewModelProtocol, Router: AssistantMenuRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -40,7 +40,7 @@ struct AssistantMenuView<ViewModel:AssistantMenuViewModelProtocol, Router: Assis
                     .frame(height: 150)
                 VStack(alignment: .leading,
                        spacing: Tokens.Size.Spacing.regular) {
-                    Text("Especialista")
+                    Text(L10n.AssistantMenuView.Especialista.title)
                         .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
                     ListInputView(
                         dataList: [
@@ -52,17 +52,17 @@ struct AssistantMenuView<ViewModel:AssistantMenuViewModelProtocol, Router: Assis
                         ],
                         selection: $selection,
                         rightIcon: Image(systemName: "chevron.down"),
-                        placeholder: "Selecciona especialista",
+                        placeholder: L10n.AssistantMenuView.SeleccionaEspecialista.placeholder,
                         backgroundColor: .blanco)
                 }
-                       .padding(Tokens.Size.Spacing.large)
+                .padding(Tokens.Size.Spacing.large)
                 Spacer()
             }
             VStack {
                 Spacer()
                 HStack {
                     Spacer()
-                    WCUIButton(title: "Siguiente",
+                    WCUIButton(title: L10n.AssistantMenuView.Siguiente.title,
                                style: .standard,
                                descriptor: BlackButtonStyleDescriptor(),
                                action: {
@@ -87,7 +87,7 @@ struct AssistantMenuView<ViewModel:AssistantMenuViewModelProtocol, Router: Assis
             .padding(.horizontal, Tokens.Size.Spacing.large)
             HStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {
-                Text("En qué necesitas ser asistido/a?")
+                Text(L10n.AssistantMenuView.EnQueNecesitasSerAsistido.title)
                     .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                 Spacer()
             }

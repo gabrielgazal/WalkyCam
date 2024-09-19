@@ -1,10 +1,3 @@
-//
-//  PlanPageView.swift
-//  WalkyCam
-//
-//  Created by Gabriel Rodrigues Gazal Rocha on 20/11/23.
-//
-
 import Foundation
 import SwiftUI
 
@@ -43,9 +36,9 @@ struct PlanPageView: View {
                     .toggleStyle(WCNamelessToggleStyle(accentColor: planData.accentColor))
                     HStack(alignment: .center,
                            spacing: Tokens.Size.Spacing.xsmall) {
-                        Text("Plan anual")
+                        Text(L10n.PlanPageView.Plan.annual)
                             .font(.projectFont(size: Tokens.Size.Font.medium, weight: .medium))
-                        Text("(ahora 5%)")
+                        Text(L10n.PlanPageView.Plan.discount)
                             .font(.projectFont(size: Tokens.Size.Font.medium, weight: .bold))
                             .foregroundColor(monthlyToggle ? planData.accentColor : .blanco)
                     }
@@ -57,7 +50,7 @@ struct PlanPageView: View {
                             .foregroundColor(lastPlan.accentColor)
                             .fontWeight(.bold)
                             .preferredColorScheme(.dark)
-                        Text("Incluye **\(lastPlan.title.uppercased())** más:")
+                        Text(String(format: L10n.PlanPageView.Plan.includes(lastPlan.title.uppercased())))
                             .font(.projectFont(size: Tokens.Size.Font.large, weight: .medium))
                             .foregroundColor(Color.blanco)
                     }
@@ -103,7 +96,7 @@ struct PlanPageView_Previews: PreviewProvider {
         PlanPageView(
             planData: .init(
                 title: "Basic",
-                monthlyPrice: "10.0", 
+                monthlyPrice: "10.0",
                 yearlyPrice: "20.0",
                 backgroundImage: "",
                 accentColor: .acentoFondoDark,

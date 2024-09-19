@@ -58,7 +58,7 @@ struct NotificationsView<ViewModel: NotificationsViewModelProtocol, Router: Noti
     private var headerView: some View {
         HStack(alignment: .center,
                spacing: Tokens.Size.Spacing.regular) {
-            Text("Notificaciones")
+            Text(L10n.NotificationsView.Header.title)
                 .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
             Spacer()
             Image(Asset.Icons.filter.name)
@@ -77,12 +77,12 @@ struct NotificationsView<ViewModel: NotificationsViewModelProtocol, Router: Noti
 
     private func formatDateInRelationToToday(_ date: Date) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "es_ES")
+        dateFormatter.locale = Locale(identifier: L10n.Formater.locale)
         dateFormatter.dateStyle = .full
         dateFormatter.dateFormat = "d 'de' MMMM 'de' yyyy"
 
         if Calendar.current.isDateInToday(date) {
-            return "Hoy"
+            return L10n.NotificationsView.Date.today
         } else {
             return dateFormatter.string(from: date).capitalized
         }

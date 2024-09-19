@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Scan3DOnboardingView<ViewModel:Scan3DOnboardingViewModelProtocol, Router: Scan3DOnboardingRouterProtocol>: View {
+struct Scan3DOnboardingView<ViewModel: Scan3DOnboardingViewModelProtocol, Router: Scan3DOnboardingRouterProtocol>: View {
     
     // MARK: - Dependencies
     
@@ -23,22 +23,22 @@ struct Scan3DOnboardingView<ViewModel:Scan3DOnboardingViewModelProtocol, Router:
             TabView(selection: $viewModel.currentPage) {
                 Scan3DOnboardingPageView(
                     illustration: Asset.Illustrations.scan3dOnboarding1.swiftUIImage,
-                    title: "Crea modelos 3D de objetos reales a partir de fotografias",
+                    title: L10n.Scan3DOnboardingView.CreaModelos3D.title,
                     description: "Muévete alrededor del objeto.\n\nNo muevas el objeto.\n\nVerifica que cada parte sea capturada por al menos 2 imágenes.\n\nCaptura imágenes con iluminación tenue.\n\nEvita objetivos en movimiento."
                 ).tag(0)
                 Scan3DOnboardingPageView(
                     illustration: Asset.Illustrations.scan3dOnboarding2.swiftUIImage,
-                    title: "Solicita un WalkCamer",
+                    title: L10n.Scan3DOnboardingView.SolicitaUnWalkCamer.title,
                     description: "Tu WalkCamer efectuará el Scan 3D por ti, a distancia.\n\nTe enviará las imágenes y los videos creados."
                 ).tag(1)
                 Scan3DOnboardingPageView(
                     illustration: Asset.Illustrations.scan3dOnboarding3.swiftUIImage,
-                    title: "Modifica la imagen",
+                    title: L10n.Scan3DOnboardingView.ModificaLaImagen.title,
                     description: "Una vez escaneado, puedes editar color, tamaño y forma de la imagen escaneada del objeto."
                 ).tag(2)
                 Scan3DOnboardingPageView(
                     illustration: Asset.Illustrations.scan3dOnboarding4.swiftUIImage,
-                    title: "Realiza una impresión 3D del objeto",
+                    title: L10n.Scan3DOnboardingView.RealizaUnaImpresion.title,
                     description: "Envía la imagen y el archivo generados para efectuar una impresión 3D y entrega el objeto en el destino final."
                 ).tag(3)
             }
@@ -69,7 +69,7 @@ struct Scan3DOnboardingView<ViewModel:Scan3DOnboardingViewModelProtocol, Router:
                 .padding(.horizontal, Tokens.Size.Spacing.regular)
                 VStack(spacing: Tokens.Size.Spacing.big) {
                     WCUIButton(
-                        title: "Comenzar",
+                        title: L10n.Scan3DOnboardingView.Comenzar.title,
                         style: .standard,
                         descriptor: OrangeButtonStyleDescriptor(),
                         action: handleScan3dStart
@@ -83,10 +83,10 @@ struct Scan3DOnboardingView<ViewModel:Scan3DOnboardingViewModelProtocol, Router:
             }
             PageControl(numberOfPages: 4, currentPage: $viewModel.currentPage)
         }
-               .onAppear {
-                   setupAppearence()
-               }
-               .navigation(router)
+        .onAppear {
+            setupAppearence()
+        }
+        .navigation(router)
     }
     
     private func setupAppearence() {

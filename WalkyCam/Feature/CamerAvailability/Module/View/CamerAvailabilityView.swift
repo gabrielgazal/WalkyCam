@@ -37,13 +37,13 @@ struct CamerAvailabilityView<ViewModel: CamerAvailabilityViewModelProtocol, Rout
                    HStack(alignment: .center,
                           spacing: Tokens.Size.Spacing.regular) {
                        WCUIButton(
-                        title: "Cancelar",
+                        title: L10n.CamerAvailabilityView.cancel,
                         style: .outline,
                         descriptor: OrangeButtonStyleDescriptor(),
                         action: {}
                        )
                        WCUIButton(
-                        title: "Finalizar",
+                        title: L10n.CamerAvailabilityView.finish,
                         style: .standard,
                         descriptor: OrangeButtonStyleDescriptor(),
                         action: {
@@ -65,7 +65,7 @@ struct CamerAvailabilityView<ViewModel: CamerAvailabilityViewModelProtocol, Rout
             }
             HStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {
-                Text("Indica disponibilidad y área de trabajo")
+                Text(L10n.CamerAvailabilityView.Header.title)
                     .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                 Spacer()
             }

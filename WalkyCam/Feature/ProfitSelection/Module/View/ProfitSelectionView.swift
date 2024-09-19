@@ -22,25 +22,24 @@ struct ProfitSelectionView<ViewModel: ProfitSelectionViewModelProtocol, Router: 
         ScrollView {
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.regular) {
-                Text("Elige como quieres generar ganancias")
+                Text(L10n.ProfitSelectionView.title)
                     .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
-                profitCell(title: "Freelance: Independiente",
-                           description: "Danos tu tiempo y tus medios y te haremos ganar dinero",
+                profitCell(title: L10n.ProfitSelectionView.freelanceTitle,
+                           description: L10n.ProfitSelectionView.freelanceDescription,
                            icon: Asset.Icons.workFromHome.name,
                            index: 1)
-                profitCell(title: "Empleado: de WalkyCam",
-                           description: "Trabaja con nosostros, únete al Staff de WalkyCam.",
+                profitCell(title: L10n.ProfitSelectionView.employeeTitle,
+                           description: L10n.ProfitSelectionView.employeeDescription,
                            icon: Asset.Icons.frame1584.name,
                            index: 2)
-                profitCell(title: "Partner B2B: de Empresa a Empresa",
-                           description: "Completa nuestros pedidos y servicios y factura con nosotros.",
+                profitCell(title: L10n.ProfitSelectionView.b2bTitle,
+                           description: L10n.ProfitSelectionView.b2bDescription,
                            icon: Asset.Icons.reload.name,
                            index: 3)
-                WCUIButton(title: "Comenzar!",
+                WCUIButton(title: L10n.ProfitSelectionView.startButton,
                            style: .standard,
                            descriptor: OrangeButtonStyleDescriptor(),
                            action: {
-                    
                     var type: CamerContractType?
                     switch selectedIndex {
                     case 1:
@@ -56,15 +55,14 @@ struct ProfitSelectionView<ViewModel: ProfitSelectionViewModelProtocol, Router: 
                     router.routeToIdentityUpload(data: viewModel.registrationData)
                 })
                 .isHidden(selectedIndex == 0)
-                WCUIButton(title: "Cancelar",
+                WCUIButton(title: L10n.ProfitSelectionView.cancelButton,
                            style: .standard,
                            descriptor: BlackButtonStyleDescriptor(),
                            action: {
                     router.dismiss()
                 })
-                
             }
-                   .padding(Tokens.Size.Spacing.regular)
+            .padding(Tokens.Size.Spacing.regular)
         }
         .scrollIndicators(.hidden)
         .navigation(router)
@@ -89,22 +87,22 @@ struct ProfitSelectionView<ViewModel: ProfitSelectionViewModelProtocol, Router: 
                 Spacer()
             }
         }
-                      .padding()
-                      .background {
-                          RoundedRectangle(cornerRadius: 16)
-                              .stroke(index == selectedIndex ? Color.naranja : Color.grisOscuro, lineWidth: 3.0)
-                      }
-                      .onTapGesture {
-                          selectedIndex = index
-                      }
-                      .frame(width: .infinity)
+        .padding()
+        .background {
+            RoundedRectangle(cornerRadius: 16)
+                .stroke(index == selectedIndex ? Color.naranja : Color.grisOscuro, lineWidth: 3.0)
+        }
+        .onTapGesture {
+            selectedIndex = index
+        }
+        .frame(width: .infinity)
     }
 }
 
 struct ProfitSelectionView_Previews: PreviewProvider {
     static var previews: some View {
-    ProfitSelectionView(
-        viewModel: ProfitSelectionViewModel(registrationData: .init()),
+        ProfitSelectionView(
+            viewModel: ProfitSelectionViewModel(registrationData: .init()),
             router: ProfitSelectionRouter(isPresented: .constant(false))
         )
     }
