@@ -3,10 +3,23 @@
     {
       "filename" : "premium-4.pdf",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "Publicidad (3).pdf",
+      "idiom" : "universal",
+      "locale" : "en"
+    },
+    {
+      "filename" : "premium-4 1.pdf",
+      "idiom" : "universal",
+      "locale" : "es"
     }
   ],
   "info" : {
     "author" : "xcode",
     "version" : 1
+  },
+  "properties" : {
+    "localizable" : true
   }
 }

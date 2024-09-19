@@ -1,3 +1,4 @@
+"Formater.locale" = "en_US";
 
 // MARK: - General
 "copyright.text" = "@WalkyCam 2021 - All reserved copyright";
@@ -756,4 +757,6 @@
 "ServiceConfirmationViewModel.assistants" = "Participants";
 "ServiceConfirmationViewModel.link" = "Link";
 
-"Formater.locale" = "en_US";
+"ReminderCardView.dayAndTime" = "Day and time";
+"ReminderCardView.walkCamer" = "WalkCamer";
+"ReminderCardView.goToStreetCam" = "Go to Street Cam";

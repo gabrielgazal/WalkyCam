@@ -1444,6 +1444,14 @@ internal enum L10n {
       internal static let test = L10n.tr("Localizable", "RegistrationPlansView.toggle.test", fallback: "Toggle Test")
     }
   }
+  internal enum ReminderCardView {
+    /// Día y hora
+    internal static let dayAndTime = L10n.tr("Localizable", "ReminderCardView.dayAndTime", fallback: "Día y hora")
+    /// Go to Street Cam
+    internal static let goToStreetCam = L10n.tr("Localizable", "ReminderCardView.goToStreetCam", fallback: "Go to Street Cam")
+    /// WalkCamer
+    internal static let walkCamer = L10n.tr("Localizable", "ReminderCardView.walkCamer", fallback: "WalkCamer")
+  }
   internal enum RobotMenuView {
     /// Dog Robot
     internal static let dogRobot = L10n.tr("Localizable", "RobotMenuView.dogRobot", fallback: "Dog Robot")

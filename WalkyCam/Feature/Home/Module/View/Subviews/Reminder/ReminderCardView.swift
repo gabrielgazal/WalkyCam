@@ -1,10 +1,3 @@
-//
-//  ReminderCardView.swift
-//  WalkyCam
-//
-//  Created by Gabriel Rodrigues Gazal Rocha on 17/10/23.
-//
-
 import Foundation
 import SwiftUI
 
@@ -30,19 +23,19 @@ struct ReminderCardView: View {
                 .frame(width: 55)
             HStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {
-                Text("Día y hora")
+                Text(L10n.ReminderCardView.dayAndTime)
                     .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
                 Text(date)
                     .font(.projectFont(size: Tokens.Size.Font.regular))
             }
             HStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {
-                Text("WalkCamer")
+                Text(L10n.ReminderCardView.walkCamer)
                     .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
                 Text(camerName)
                     .font(.projectFont(size: Tokens.Size.Font.regular))
             }
-            WCUIButton(title: "Go to Street Cam",
+            WCUIButton(title: L10n.ReminderCardView.goToStreetCam,
                        style: .outline,
                        descriptor: OrangeButtonStyleDescriptor(),
                        action: {})
