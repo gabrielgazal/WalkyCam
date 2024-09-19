@@ -763,3 +763,53 @@
 "ReminderCardView.dayAndTime" = "Día y hora";
 "ReminderCardView.walkCamer" = "WalkCamer";
 "ReminderCardView.goToStreetCam" = "Go to Street Cam";
+
+"CashTabView.balance" = "Balance";
+"CashTabView.enterMoney" = "Ingresar dinero";
+"CashTabView.withdrawMoney" = "Retirar dinero";
+"CashTabView.convertTo" = "O convetirlo en";
+"CashTabView.activity" = "Actividad";
+"CashTabView.pi" = "PI";
+"CashTabView.rc2" = "RC2";
+"CashTabView.functions" = "Funciones";
+"CashTabView.market" = "Market";
+
+"CryptoTabView.activity" = "Actividad";
+"CryptoTabView.seeMore" = "Ver más";
+
+"CryptoTabViewModel.piNetwork" = "PI network";
+"CryptoTabViewModel.recamerCoin" = "RECAMER Coin";
+"CryptoTabViewModel.cryptoGainPi" = "Ganancia Crypto PI";
+"CryptoTabViewModel.drone" = "Drone";
+"CryptoTabViewModel.iot" = "IOT";
+"CryptoTabViewModel.streetCam" = "Street Cam";
+
+"ShopTabView.changeYourMoney" = "Cambia tu dinero en la";
+"ShopTabView.shop" = "Tienda";
+"ShopTabView.categories" = "Categorías";
+"ShopTabView.dailyOffers" = "Ofertas del día";
+"ShopTabView.offer" = "Oferta";
+"ShopTabView.get" = "Obtener";
+
+"ShopTabViewModel.fashion" = "Moda";
+"ShopTabViewModel.functions" = "Funciones\nWalkyCam";
+"ShopTabViewModel.travel" = "Viajes";
+"ShopTabViewModel.nft" = "NFT's";
+"ShopTabViewModel.music" = "Música";
+"ShopTabViewModel.technology" = "Tecnología";
+"ShopTabViewModel.art" = "Arte";
+"ShopTabViewModel.iphoneOffer" = "2x1 en iPhone 13";
+"ShopTabViewModel.cancunOffer" = "50%% de descuento en All inclusive en Cancún";
+"ShopTabViewModel.walkcamersOffer" = "Consigue los mejores WalkCamers a precio de oferta";
+"ShopTabViewModel.flightOffer" = "20%% de descuento en vuelos a América del Sur";
+
+"CryptoDetailsView.balance" = "Balance";
+"CryptoDetailsView.convertTo" = "O convertirlo en";
+"CryptoDetailsView.usd" = "USD";
+"CryptoDetailsView.functions" = "Funciones";
+"CryptoDetailsView.market" = "Market";
+"CryptoDetailsView.year" = "AÑO";
+"CryptoDetailsView.month" = "MES";
+"CryptoDetailsView.week" = "SEMANA";
+"CryptoDetailsView.day" = "DÍA";
+"CryptoDetailsView.hour" = "HORA";

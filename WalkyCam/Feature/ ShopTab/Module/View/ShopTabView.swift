@@ -8,9 +8,9 @@ struct ShopTabView<ViewModel: ShopTabViewModelProtocol, Router: ShopTabRouterPro
     @ObservedObject private var router: Router
 
     private var headerTitle: AttributedString {
-        var initialString = AttributedString("Cambia tu dinero en la")
+        var initialString = AttributedString(L10n.ShopTabView.changeYourMoney)
         initialString.foregroundColor = .negro
-        var secondaryString = AttributedString(" Tienda")
+        var secondaryString = AttributedString(L10n.ShopTabView.shop)
         secondaryString.foregroundColor = .naranja
 
         return initialString + secondaryString
@@ -32,7 +32,7 @@ struct ShopTabView<ViewModel: ShopTabViewModelProtocol, Router: ShopTabRouterPro
                    spacing: Tokens.Size.Spacing.large) {
                 Text(headerTitle)
                     .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
-                HomeSectionView(title: "Categorías") {
+                HomeSectionView(title: L10n.ShopTabView.categories) {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: Tokens.Size.Spacing.regular) {
                             ForEach(viewModel.categories, id: \.self) { item in
@@ -42,7 +42,7 @@ struct ShopTabView<ViewModel: ShopTabViewModelProtocol, Router: ShopTabRouterPro
                         .padding()
                     }
                 }
-                HomeSectionView(title: "Ofertas del día") {
+                HomeSectionView(title: L10n.ShopTabView.dailyOffers) {
                     ForEach(viewModel.offers, id: \.self) { item in
                         offerView(item)
                             .padding()
@@ -68,7 +68,7 @@ struct ShopTabView<ViewModel: ShopTabViewModelProtocol, Router: ShopTabRouterPro
                                 Image(systemName: "star.fill")
                                     .resizable()
                                     .frame(width: 12, height: 12)
-                                Text("Oferta")
+                                Text(L10n.ShopTabView.offer)
                                     .font(.projectFont(size: Tokens.Size.Font.xsmall, weight: .bold))
                             }
                             .background(
@@ -100,7 +100,7 @@ struct ShopTabView<ViewModel: ShopTabViewModelProtocol, Router: ShopTabRouterPro
                         Text(data.title)
                             .font(.projectFont(size: Tokens.Size.Font.regular))
                         HStack{
-                            WCUIButton(title: "Obtener",
+                            WCUIButton(title: L10n.ShopTabView.get,
                                        style: .standard,
                                        descriptor: BlackButtonStyleDescriptor(),
                                        action: {})

@@ -21,7 +21,7 @@ struct CryptoDetailsView<ViewModel: CryptoDetailsViewModelProtocol, Router: Cryp
         VStack(alignment: .center,
                spacing: Tokens.Size.Spacing.regular) {
             VStack(spacing: Tokens.Size.Spacing.small) {
-                Text("Balance")
+                Text(L10n.CryptoDetailsView.balance)
                     .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .semibold))
                 HStack {
                     Text("\(String(format: "%.f", viewModel.cryptoData.balance))")
@@ -35,14 +35,14 @@ struct CryptoDetailsView<ViewModel: CryptoDetailsViewModelProtocol, Router: Cryp
 
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.small) {
-                Text("O convetirlo en")
+                Text(L10n.CryptoDetailsView.convertTo)
                     .font(.projectFont(size: Tokens.Size.Font.large, weight: .semibold))
                     .padding(.horizontal, 10)
                 HStack(spacing: Tokens.Size.Spacing.regular) {
-                    convertionCell(title: "USD", icon: Asset.Icons.usd.name)
+                    convertionCell(title: L10n.CryptoDetailsView.usd, icon: Asset.Icons.usd.name)
                     convertionCell(title: getOtherCryptoTypeName(), icon: Asset.Icons.rc2.name)
-                    convertionCell(title: "Funciones", icon: Asset.Icons.funciones.name)
-                    convertionCell(title: "Market", icon: Asset.Icons.market.name)
+                    convertionCell(title: L10n.CryptoDetailsView.functions, icon: Asset.Icons.funciones.name)
+                    convertionCell(title: L10n.CryptoDetailsView.market, icon: Asset.Icons.market.name)
                 }
                 .padding(.horizontal, 10)
             }
@@ -105,20 +105,20 @@ struct CryptoDetailsView<ViewModel: CryptoDetailsViewModelProtocol, Router: Cryp
                 }
             }
             HStack(alignment: .center) {
-                Text("YEAR")
+                Text(L10n.CryptoDetailsView.year)
                     .font(.projectFont(size: Tokens.Size.Font.small))
                     .frame(maxWidth: .infinity)
                     .foregroundColor(Color.naranja)
-                Text("MONTH")
+                Text(L10n.CryptoDetailsView.month)
                     .font(.projectFont(size: Tokens.Size.Font.small))
                     .frame(maxWidth: .infinity)
-                Text("WEEK")
+                Text(L10n.CryptoDetailsView.week)
                     .font(.projectFont(size: Tokens.Size.Font.small))
                     .frame(maxWidth: .infinity)
-                Text("DAY")
+                Text(L10n.CryptoDetailsView.day)
                     .font(.projectFont(size: Tokens.Size.Font.small))
                     .frame(maxWidth: .infinity)
-                Text("HOUR")
+                Text(L10n.CryptoDetailsView.hour)
                     .font(.projectFont(size: Tokens.Size.Font.small))
                     .frame(maxWidth: .infinity)
             }

@@ -40,38 +40,38 @@ struct CashTabView<ViewModel: CashTabViewModelProtocol, Router: CashTabRouterPro
             VStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {
                 VStack {
-                    Text("Balance")
+                    Text(L10n.CashTabView.balance)
                         .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .semibold))
                     Text("200 $")
                         .font(.projectFont(size: Tokens.Size.Font.xgiant, weight: .bold))
                     Text("USD")
                         .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .semibold))
                 }
-                LinkButton(title: "Ingresar dinero",
+                LinkButton(title: L10n.CashTabView.enterMoney,
                            color: .naranja,
                            action: {})
-                WCUIButton(title: "Retirar dinero",
+                WCUIButton(title: L10n.CashTabView.withdrawMoney,
                            style: .standard,
                            descriptor: OrangeButtonStyleDescriptor(),
                            action: {})
                 .frame(maxWidth: 165)
                 VStack(alignment: .leading,
                        spacing: Tokens.Size.Spacing.small) {
-                    Text("O convetirlo en")
+                    Text(L10n.CashTabView.convertTo)
                         .font(.projectFont(size: Tokens.Size.Font.large, weight: .semibold))
                         .padding(.horizontal, 10)
                     HStack(spacing: Tokens.Size.Spacing.regular) {
-                        convertionCell(title: "PI", icon: Asset.Icons.pi.name)
-                        convertionCell(title: "RC2", icon: Asset.Icons.rc2.name)
-                        convertionCell(title: "Funciones", icon: Asset.Icons.funciones.name)
-                        convertionCell(title: "Market", icon: Asset.Icons.market.name)
+                        convertionCell(title: L10n.CashTabView.pi, icon: Asset.Icons.pi.name)
+                        convertionCell(title: L10n.CashTabView.rc2, icon: Asset.Icons.rc2.name)
+                        convertionCell(title: L10n.CashTabView.functions, icon: Asset.Icons.funciones.name)
+                        convertionCell(title: L10n.CashTabView.market, icon: Asset.Icons.market.name)
                     }
                     .padding(.horizontal, 10)
                 }
                 VStack(alignment: .leading,
                        spacing: Tokens.Size.Spacing.small) {
                     HStack {
-                        Text("Actividad")
+                        Text(L10n.CashTabView.activity)
                             .font(.projectFont(size: Tokens.Size.Font.large, weight: .semibold))
                         Spacer()
                         Image(systemName: "magnifyingglass")

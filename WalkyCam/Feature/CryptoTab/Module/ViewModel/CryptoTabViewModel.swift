@@ -20,13 +20,13 @@ final class CryptoTabViewModel: CryptoTabViewModelProtocol {
 
     private func initializeCryptoActivities() {
         cryptoActivities = [
-            .init(title: "PI network",
+            .init(title: L10n.CryptoTabViewModel.piNetwork,
                   currentValue: 27.45,
                   variation: -0.16,
                   graph: Asset.Miscelaneous.piGraph.name,
                   balance: 168,
                   type: .pi),
-            .init(title: "RECAMER Coin",
+            .init(title: L10n.CryptoTabViewModel.recamerCoin,
                   currentValue: 0.032,
                   variation: 0.24,
                   graph: Asset.Miscelaneous.recamerGraph.name,
@@ -37,9 +37,9 @@ final class CryptoTabViewModel: CryptoTabViewModelProtocol {
 
     private func initializeActivities() {
         activities = [
-            .init(date: Date(), title: "Ganancia Crypto PI", description: "Drone", value: 0.000017),
-            .init(date: Date(), title: "Ganancia Crypto PI", description: "IOT", value: -0.000017),
-            .init(date: Date(), title: "Ganancia Crypto PI", description: "Street Cam", value: 0.000017)
+            .init(date: Date(), title: L10n.CryptoTabViewModel.cryptoGainPi, description: L10n.CryptoTabViewModel.drone, value: 0.000017),
+            .init(date: Date(), title: L10n.CryptoTabViewModel.cryptoGainPi, description: L10n.CryptoTabViewModel.iot, value: -0.000017),
+            .init(date: Date(), title: L10n.CryptoTabViewModel.cryptoGainPi, description: L10n.CryptoTabViewModel.streetCam, value: 0.000017)
         ]
     }
 }

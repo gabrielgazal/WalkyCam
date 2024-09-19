@@ -239,6 +239,26 @@ internal enum L10n {
       internal static let reviews = L10n.tr("Localizable", "CammerDetailsViewModel.topBarItem.reviews", fallback: "Reseñas (10)")
     }
   }
+  internal enum CashTabView {
+    /// Actividad
+    internal static let activity = L10n.tr("Localizable", "CashTabView.activity", fallback: "Actividad")
+    /// Balance
+    internal static let balance = L10n.tr("Localizable", "CashTabView.balance", fallback: "Balance")
+    /// O convetirlo en
+    internal static let convertTo = L10n.tr("Localizable", "CashTabView.convertTo", fallback: "O convetirlo en")
+    /// Ingresar dinero
+    internal static let enterMoney = L10n.tr("Localizable", "CashTabView.enterMoney", fallback: "Ingresar dinero")
+    /// Funciones
+    internal static let functions = L10n.tr("Localizable", "CashTabView.functions", fallback: "Funciones")
+    /// Market
+    internal static let market = L10n.tr("Localizable", "CashTabView.market", fallback: "Market")
+    /// PI
+    internal static let pi = L10n.tr("Localizable", "CashTabView.pi", fallback: "PI")
+    /// RC2
+    internal static let rc2 = L10n.tr("Localizable", "CashTabView.rc2", fallback: "RC2")
+    /// Retirar dinero
+    internal static let withdrawMoney = L10n.tr("Localizable", "CashTabView.withdrawMoney", fallback: "Retirar dinero")
+  }
   internal enum CashWalletOnboardingView {
     internal enum Button {
       /// Continuar
@@ -305,6 +325,48 @@ internal enum L10n {
     /// Tu cuenta se registró con éxito.
     /// Te hemos enviado un correo para confirmar tu cuenta
     internal static let title = L10n.tr("Localizable", "ConfirmMailView.title", fallback: "Tu cuenta se registró con éxito.\nTe hemos enviado un correo para confirmar tu cuenta")
+  }
+  internal enum CryptoDetailsView {
+    /// Balance
+    internal static let balance = L10n.tr("Localizable", "CryptoDetailsView.balance", fallback: "Balance")
+    /// O convertirlo en
+    internal static let convertTo = L10n.tr("Localizable", "CryptoDetailsView.convertTo", fallback: "O convertirlo en")
+    /// DÍA
+    internal static let day = L10n.tr("Localizable", "CryptoDetailsView.day", fallback: "DÍA")
+    /// Funciones
+    internal static let functions = L10n.tr("Localizable", "CryptoDetailsView.functions", fallback: "Funciones")
+    /// HORA
+    internal static let hour = L10n.tr("Localizable", "CryptoDetailsView.hour", fallback: "HORA")
+    /// Market
+    internal static let market = L10n.tr("Localizable", "CryptoDetailsView.market", fallback: "Market")
+    /// MES
+    internal static let month = L10n.tr("Localizable", "CryptoDetailsView.month", fallback: "MES")
+    /// USD
+    internal static let usd = L10n.tr("Localizable", "CryptoDetailsView.usd", fallback: "USD")
+    /// SEMANA
+    internal static let week = L10n.tr("Localizable", "CryptoDetailsView.week", fallback: "SEMANA")
+    /// AÑO
+    internal static let year = L10n.tr("Localizable", "CryptoDetailsView.year", fallback: "AÑO")
+  }
+  internal enum CryptoTabView {
+    /// Actividad
+    internal static let activity = L10n.tr("Localizable", "CryptoTabView.activity", fallback: "Actividad")
+    /// Ver más
+    internal static let seeMore = L10n.tr("Localizable", "CryptoTabView.seeMore", fallback: "Ver más")
+  }
+  internal enum CryptoTabViewModel {
+    /// Ganancia Crypto PI
+    internal static let cryptoGainPi = L10n.tr("Localizable", "CryptoTabViewModel.cryptoGainPi", fallback: "Ganancia Crypto PI")
+    /// Drone
+    internal static let drone = L10n.tr("Localizable", "CryptoTabViewModel.drone", fallback: "Drone")
+    /// IOT
+    internal static let iot = L10n.tr("Localizable", "CryptoTabViewModel.iot", fallback: "IOT")
+    /// PI network
+    internal static let piNetwork = L10n.tr("Localizable", "CryptoTabViewModel.piNetwork", fallback: "PI network")
+    /// RECAMER Coin
+    internal static let recamerCoin = L10n.tr("Localizable", "CryptoTabViewModel.recamerCoin", fallback: "RECAMER Coin")
+    /// Street Cam
+    internal static let streetCam = L10n.tr("Localizable", "CryptoTabViewModel.streetCam", fallback: "Street Cam")
   }
   internal enum DPrintOnboardingView {
     internal enum DescripcionHazElPedido {
@@ -1662,6 +1724,45 @@ internal enum L10n {
       /// WalkCamer
       internal static let title = L10n.tr("Localizable", "ServiceDetailsViewModel.WalkCamer.title", fallback: "WalkCamer")
     }
+  }
+  internal enum ShopTabView {
+    /// Categorías
+    internal static let categories = L10n.tr("Localizable", "ShopTabView.categories", fallback: "Categorías")
+    /// Cambia tu dinero en la
+    internal static let changeYourMoney = L10n.tr("Localizable", "ShopTabView.changeYourMoney", fallback: "Cambia tu dinero en la")
+    /// Ofertas del día
+    internal static let dailyOffers = L10n.tr("Localizable", "ShopTabView.dailyOffers", fallback: "Ofertas del día")
+    /// Obtener
+    internal static let `get` = L10n.tr("Localizable", "ShopTabView.get", fallback: "Obtener")
+    /// Oferta
+    internal static let offer = L10n.tr("Localizable", "ShopTabView.offer", fallback: "Oferta")
+    /// Tienda
+    internal static let shop = L10n.tr("Localizable", "ShopTabView.shop", fallback: "Tienda")
+  }
+  internal enum ShopTabViewModel {
+    /// Arte
+    internal static let art = L10n.tr("Localizable", "ShopTabViewModel.art", fallback: "Arte")
+    /// 50%% de descuento en All inclusive en Cancún
+    internal static let cancunOffer = L10n.tr("Localizable", "ShopTabViewModel.cancunOffer", fallback: "50%% de descuento en All inclusive en Cancún")
+    /// Moda
+    internal static let fashion = L10n.tr("Localizable", "ShopTabViewModel.fashion", fallback: "Moda")
+    /// 20%% de descuento en vuelos a América del Sur
+    internal static let flightOffer = L10n.tr("Localizable", "ShopTabViewModel.flightOffer", fallback: "20%% de descuento en vuelos a América del Sur")
+    /// Funciones
+    /// WalkyCam
+    internal static let functions = L10n.tr("Localizable", "ShopTabViewModel.functions", fallback: "Funciones\nWalkyCam")
+    /// 2x1 en iPhone 13
+    internal static let iphoneOffer = L10n.tr("Localizable", "ShopTabViewModel.iphoneOffer", fallback: "2x1 en iPhone 13")
+    /// Música
+    internal static let music = L10n.tr("Localizable", "ShopTabViewModel.music", fallback: "Música")
+    /// NFT's
+    internal static let nft = L10n.tr("Localizable", "ShopTabViewModel.nft", fallback: "NFT's")
+    /// Tecnología
+    internal static let technology = L10n.tr("Localizable", "ShopTabViewModel.technology", fallback: "Tecnología")
+    /// Viajes
+    internal static let travel = L10n.tr("Localizable", "ShopTabViewModel.travel", fallback: "Viajes")
+    /// Consigue los mejores WalkCamers a precio de oferta
+    internal static let walkcamersOffer = L10n.tr("Localizable", "ShopTabViewModel.walkcamersOffer", fallback: "Consigue los mejores WalkCamers a precio de oferta")
   }
   internal enum SpecialistNotifiedView {
     internal enum Aceptar {
