@@ -121,6 +121,7 @@
 		56459FA82BFFB4D300776F68 /* SnackBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56459FA02BFFB4D300776F68 /* SnackBarView.swift */; };
 		56459FAC2BFFB5FD00776F68 /* InformationViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56459FAA2BFFB5FC00776F68 /* InformationViewStyle.swift */; };
 		56459FAD2BFFB5FD00776F68 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56459FAB2BFFB5FD00776F68 /* InformationView.swift */; };
+		5652B10D2C96BE1E000D32FD /* WatchPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5652B10C2C96BE1E000D32FD /* WatchPageView.swift */; };
 		565343682C08D9BC002C2F36 /* UpdateARHandsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565343672C08D9BC002C2F36 /* UpdateARHandsConfiguration.swift */; };
 		5653436B2C08F03D002C2F36 /* UpdateScan3DConfigurationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5653436A2C08F03D002C2F36 /* UpdateScan3DConfigurationUseCase.swift */; };
 		565909642BF2A016002FD2B5 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 565909632BF2A016002FD2B5 /* PrivacyInfo.xcprivacy */; };
@@ -152,6 +153,27 @@
 		567CB7782C51885600112F05 /* ServiceConfirmationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567CB76B2C51885500112F05 /* ServiceConfirmationViewModel.swift */; };
 		567CB7792C51885600112F05 /* ServiceConfirmationViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567CB76C2C51885500112F05 /* ServiceConfirmationViewModelProtocol.swift */; };
 		568685D92C7D52550027709E /* UserFileOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568685D82C7D52550027709E /* UserFileOutput.swift */; };
+		568974A72C90B24C001A214E /* WalkyCamWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568974A62C90B24C001A214E /* WalkyCamWatchApp.swift */; };
+		568974AB2C90B24F001A214E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 568974AA2C90B24F001A214E /* Assets.xcassets */; };
+		568974B12C90B24F001A214E /* WalkyCamWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 568974A42C90B24C001A214E /* WalkyCamWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		568974BB2C90B454001A214E /* WatchNavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568974B92C90B454001A214E /* WatchNavigatorProtocol.swift */; };
+		568974BC2C90B454001A214E /* WatchNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568974BA2C90B454001A214E /* WatchNavigator.swift */; };
+		568974C72C90B575001A214E /* KeychainPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8EF8D82B67E24400136D1F /* KeychainPersistence.swift */; };
+		568974C82C90B575001A214E /* KeychainPersistenceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8EF8D92B67E24400136D1F /* KeychainPersistenceProtocol.swift */; };
+		568974C92C90B575001A214E /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8EF8D52B67E24400136D1F /* KeychainError.swift */; };
+		568974CA2C90B575001A214E /* KeychainProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8EF8D62B67E24400136D1F /* KeychainProtocol.swift */; };
+		568974CB2C90B575001A214E /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8EF8D72B67E24400136D1F /* Keychain.swift */; };
+		568974CC2C90B57B001A214E /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8EF8D22B67E14300136D1F /* UserSession.swift */; };
+		568974CD2C90B57B001A214E /* UserSessionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8EF8E82B67E71B00136D1F /* UserSessionData.swift */; };
+		568974CE2C90B57B001A214E /* UserSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8EF8CF2B67E12400136D1F /* UserSessionProtocol.swift */; };
+		568974EF2C90B7EB001A214E /* WatchMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568974DC2C90B7EA001A214E /* WatchMenuView.swift */; };
+		568975172C90C7EA001A214E /* Tokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E1D922AD71ABB00738A8F /* Tokens.swift */; };
+		568975182C90C842001A214E /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E1D9B2AD8A3DA00738A8F /* Assets.swift */; };
+		568975192C90C845001A214E /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E1D9C2AD8A3DA00738A8F /* Strings.swift */; };
+		5689751A2C90C84E001A214E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5637A8192AD5DD73000586DF /* Assets.xcassets */; };
+		5689751B2C90CB1F001A214E /* ProjectColors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA5E1D672AD70BC800738A8F /* ProjectColors.xcassets */; };
+		5689751C2C90CC71001A214E /* ProjectFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E1D732AD716A500738A8F /* ProjectFont.swift */; };
+		568FE8102C9366B9000AD6AE /*  WatchMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568FE80F2C9366B9000AD6AE /*  WatchMenuViewModel.swift */; };
 		569889AA2C462E2D006D5997 /* TimedLoadingScreenAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889952C462E2C006D5997 /* TimedLoadingScreenAssembler.swift */; };
 		569889AB2C462E2D006D5997 /* TimedLoadingScreenAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889962C462E2C006D5997 /* TimedLoadingScreenAssemblerProtocol.swift */; };
 		569889AC2C462E2D006D5997 /* TimedLoadingScreenRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889982C462E2C006D5997 /* TimedLoadingScreenRoute.swift */; };
@@ -201,6 +223,19 @@
 		56A2999A2C46116600D437C5 /* GetUserPlanUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A299992C46116600D437C5 /* GetUserPlanUseCase.swift */; };
 		56A2999C2C4611BA00D437C5 /* UserPlanOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A2999B2C4611BA00D437C5 /* UserPlanOutput.swift */; };
 		56A2999E2C46265900D437C5 /* IconModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A2999D2C46265900D437C5 /* IconModifier.swift */; };
+		56A322C12C969C4300B5FE4B /* WatchSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A322C02C969C4300B5FE4B /* WatchSearchView.swift */; };
+		56A322C62C96A6F800B5FE4B /* RoundedCornerShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E1D832AD7183700738A8F /* RoundedCornerShape.swift */; };
+		56A322C92C96A72100B5FE4B /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A322C82C96A72100B5FE4B /* View+Extension.swift */; };
+		56A322CB2C96ACF000B5FE4B /* WatchSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A322CA2C96ACF000B5FE4B /* WatchSearchViewModel.swift */; };
+		56A322CD2C96AFDC00B5FE4B /* Mulish-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA910F1D2AD8AA8400584B98 /* Mulish-Light.ttf */; };
+		56A322CE2C96AFDC00B5FE4B /* Mulish-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA910F1E2AD8AA8400584B98 /* Mulish-ExtraLight.ttf */; };
+		56A322CF2C96AFDC00B5FE4B /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA910F202AD8AA8400584B98 /* Mulish-Regular.ttf */; };
+		56A322D02C96AFDC00B5FE4B /* Mulish-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA910F1F2AD8AA8400584B98 /* Mulish-SemiBold.ttf */; };
+		56A322D12C96AFDC00B5FE4B /* Mulish-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA910F212AD8AA8500584B98 /* Mulish-Medium.ttf */; };
+		56A322D22C96AFDC00B5FE4B /* Mulish-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA910F222AD8AA8500584B98 /* Mulish-Bold.ttf */; };
+		56A322D32C96AFDC00B5FE4B /* Mulish-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA910F1B2AD8AA6400584B98 /* Mulish-Black.ttf */; };
+		56A322D62C96B40600B5FE4B /* WatchLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A322D52C96B40600B5FE4B /* WatchLocationView.swift */; };
+		56A322D82C96B45300B5FE4B /* WatchLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A322D72C96B45300B5FE4B /* WatchLocationViewModel.swift */; };
 		56A5522C2B2F6135006B1B17 /* WalkyCamerOnboardingRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552192B2F6134006B1B17 /* WalkyCamerOnboardingRoute.swift */; };
 		56A5522D2B2F6135006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5521B2B2F6134006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift */; };
 		56A5522E2B2F6135006B1B17 /* WalkyCamerOnboardingAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5521C2B2F6134006B1B17 /* WalkyCamerOnboardingAssembler.swift */; };
@@ -1090,6 +1125,30 @@
 		EAF47C8B2B839308003F8B86 /* FlightMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF47C802B839308003F8B86 /* FlightMenuModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		568974AF2C90B24F001A214E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5637A80A2AD5DD72000586DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 568974A32C90B24C001A214E;
+			remoteInfo = "WalkyCamWatch Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		568974B22C90B24F001A214E /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				568974B12C90B24F001A214E /* WalkyCamWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		01210015DB17D27A5A6A4908 /* Pods-WalkyCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkyCam.debug.xcconfig"; path = "Target Support Files/Pods-WalkyCam/Pods-WalkyCam.debug.xcconfig"; sourceTree = "<group>"; };
 		1657E0E09B4F0512C50B8036 /* Pods-WalkyCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkyCam.release.xcconfig"; path = "Target Support Files/Pods-WalkyCam/Pods-WalkyCam.release.xcconfig"; sourceTree = "<group>"; };
@@ -1207,6 +1266,7 @@
 		56459FA02BFFB4D300776F68 /* SnackBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnackBarView.swift; sourceTree = "<group>"; };
 		56459FAA2BFFB5FC00776F68 /* InformationViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewStyle.swift; sourceTree = "<group>"; };
 		56459FAB2BFFB5FD00776F68 /* InformationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		5652B10C2C96BE1E000D32FD /* WatchPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPageView.swift; sourceTree = "<group>"; };
 		565343672C08D9BC002C2F36 /* UpdateARHandsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateARHandsConfiguration.swift; sourceTree = "<group>"; };
 		5653436A2C08F03D002C2F36 /* UpdateScan3DConfigurationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateScan3DConfigurationUseCase.swift; sourceTree = "<group>"; };
 		565909632BF2A016002FD2B5 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
@@ -1238,6 +1298,14 @@
 		567CB76B2C51885500112F05 /* ServiceConfirmationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfirmationViewModel.swift; sourceTree = "<group>"; };
 		567CB76C2C51885500112F05 /* ServiceConfirmationViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfirmationViewModelProtocol.swift; sourceTree = "<group>"; };
 		568685D82C7D52550027709E /* UserFileOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFileOutput.swift; sourceTree = "<group>"; };
+		568974A42C90B24C001A214E /* WalkyCamWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WalkyCamWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		568974A62C90B24C001A214E /* WalkyCamWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkyCamWatchApp.swift; sourceTree = "<group>"; };
+		568974AA2C90B24F001A214E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		568974B92C90B454001A214E /* WatchNavigatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchNavigatorProtocol.swift; sourceTree = "<group>"; };
+		568974BA2C90B454001A214E /* WatchNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchNavigator.swift; sourceTree = "<group>"; };
+		568974DC2C90B7EA001A214E /* WatchMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchMenuView.swift; sourceTree = "<group>"; };
+		568FE80F2C9366B9000AD6AE /*  WatchMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " WatchMenuViewModel.swift"; sourceTree = "<group>"; };
+		568FE8112C9370C7000AD6AE /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		569889952C462E2C006D5997 /* TimedLoadingScreenAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenAssembler.swift; sourceTree = "<group>"; };
 		569889962C462E2C006D5997 /* TimedLoadingScreenAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenAssemblerProtocol.swift; sourceTree = "<group>"; };
 		569889982C462E2C006D5997 /* TimedLoadingScreenRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenRoute.swift; sourceTree = "<group>"; };
@@ -1287,6 +1355,12 @@
 		56A299992C46116600D437C5 /* GetUserPlanUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserPlanUseCase.swift; sourceTree = "<group>"; };
 		56A2999B2C4611BA00D437C5 /* UserPlanOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPlanOutput.swift; sourceTree = "<group>"; };
 		56A2999D2C46265900D437C5 /* IconModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconModifier.swift; sourceTree = "<group>"; };
+		56A322C02C969C4300B5FE4B /* WatchSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSearchView.swift; sourceTree = "<group>"; };
+		56A322C82C96A72100B5FE4B /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		56A322CA2C96ACF000B5FE4B /* WatchSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSearchViewModel.swift; sourceTree = "<group>"; };
+		56A322CC2C96AEDB00B5FE4B /* WalkyCamWatch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "WalkyCamWatch-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		56A322D52C96B40600B5FE4B /* WatchLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchLocationView.swift; sourceTree = "<group>"; };
+		56A322D72C96B45300B5FE4B /* WatchLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchLocationViewModel.swift; sourceTree = "<group>"; };
 		56A552192B2F6134006B1B17 /* WalkyCamerOnboardingRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingRoute.swift; sourceTree = "<group>"; };
 		56A5521B2B2F6134006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingAssemblerProtocol.swift; sourceTree = "<group>"; };
 		56A5521C2B2F6134006B1B17 /* WalkyCamerOnboardingAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingAssembler.swift; sourceTree = "<group>"; };
@@ -2190,6 +2264,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		568974A12C90B24C001A214E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -3002,6 +3083,7 @@
 				EA15B57A2AD6E41400C03407 /* Feature */,
 				56DADB1D2AD5EA3400710618 /* Main */,
 				5637A8142AD5DD72000586DF /* Resources */,
+				568974A52C90B24C001A214E /* WalkyCamWatch Watch App */,
 				5637A8132AD5DD72000586DF /* Products */,
 				807AEB6FAACDE981024C5B50 /* Pods */,
 				18AFFFBF0B915044209EF546 /* Frameworks */,
@@ -3012,6 +3094,7 @@
 			isa = PBXGroup;
 			children = (
 				5637A8122AD5DD72000586DF /* WalkyCam.app */,
+				568974A42C90B24C001A214E /* WalkyCamWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -3079,6 +3162,14 @@
 				56459FAA2BFFB5FC00776F68 /* InformationViewStyle.swift */,
 			);
 			path = InformationView;
+			sourceTree = "<group>";
+		};
+		5652B10B2C96BE10000D32FD /* WatchPageView */ = {
+			isa = PBXGroup;
+			children = (
+				5652B10C2C96BE1E000D32FD /* WatchPageView.swift */,
+			);
+			path = WatchPageView;
 			sourceTree = "<group>";
 		};
 		565343662C08D9A4002C2F36 /* UseCase */ = {
@@ -3325,6 +3416,56 @@
 				567CB76D2C51885500112F05 /* ViewModel */,
 			);
 			path = Module;
+			sourceTree = "<group>";
+		};
+		568974A52C90B24C001A214E /* WalkyCamWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				56A322CC2C96AEDB00B5FE4B /* WalkyCamWatch-Watch-App-Info.plist */,
+				568974B82C90B454001A214E /* WatchNavigator */,
+				568974B72C90B44D001A214E /* Feature */,
+				568974B62C90B444001A214E /* Main */,
+				568974AA2C90B24F001A214E /* Assets.xcassets */,
+			);
+			path = "WalkyCamWatch Watch App";
+			sourceTree = "<group>";
+		};
+		568974B62C90B444001A214E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				56A322C72C96A70E00B5FE4B /* Helpers */,
+				568974A62C90B24C001A214E /* WalkyCamWatchApp.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		568974B72C90B44D001A214E /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				5652B10B2C96BE10000D32FD /* WatchPageView */,
+				56A322D42C96B3F900B5FE4B /* WatchLocationView */,
+				56A322BF2C969C2700B5FE4B /* WatchSearchView */,
+				568974CF2C90B7BD001A214E /* WatchMenu */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		568974B82C90B454001A214E /* WatchNavigator */ = {
+			isa = PBXGroup;
+			children = (
+				568974B92C90B454001A214E /* WatchNavigatorProtocol.swift */,
+				568974BA2C90B454001A214E /* WatchNavigator.swift */,
+			);
+			path = WatchNavigator;
+			sourceTree = "<group>";
+		};
+		568974CF2C90B7BD001A214E /* WatchMenu */ = {
+			isa = PBXGroup;
+			children = (
+				568974DC2C90B7EA001A214E /* WatchMenuView.swift */,
+				568FE80F2C9366B9000AD6AE /*  WatchMenuViewModel.swift */,
+			);
+			path = WatchMenu;
 			sourceTree = "<group>";
 		};
 		5698898E2C462E04006D5997 /* TimedLoadingScreen */ = {
@@ -3708,6 +3849,32 @@
 				569BA7912C2DF57E00E4CCF1 /* ViewModel */,
 			);
 			path = Module;
+			sourceTree = "<group>";
+		};
+		56A322BF2C969C2700B5FE4B /* WatchSearchView */ = {
+			isa = PBXGroup;
+			children = (
+				56A322C02C969C4300B5FE4B /* WatchSearchView.swift */,
+				56A322CA2C96ACF000B5FE4B /* WatchSearchViewModel.swift */,
+			);
+			path = WatchSearchView;
+			sourceTree = "<group>";
+		};
+		56A322C72C96A70E00B5FE4B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				56A322C82C96A72100B5FE4B /* View+Extension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		56A322D42C96B3F900B5FE4B /* WatchLocationView */ = {
+			isa = PBXGroup;
+			children = (
+				56A322D52C96B40600B5FE4B /* WatchLocationView.swift */,
+				56A322D72C96B45300B5FE4B /* WatchLocationViewModel.swift */,
+			);
+			path = WatchLocationView;
 			sourceTree = "<group>";
 		};
 		56A552102B2F5FE7006B1B17 /* WalkyCamerOnboarding */ = {
@@ -11137,10 +11304,12 @@
 				5637A80F2AD5DD72000586DF /* Frameworks */,
 				5637A8102AD5DD72000586DF /* Resources */,
 				2AD57F133F47F00769773B17 /* [CP] Embed Pods Frameworks */,
+				568974B22C90B24F001A214E /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				568974B02C90B24F001A214E /* PBXTargetDependency */,
 			);
 			name = WalkyCam;
 			packageProductDependencies = (
@@ -11159,6 +11328,23 @@
 			productReference = 5637A8122AD5DD72000586DF /* WalkyCam.app */;
 			productType = "com.apple.product-type.application";
 		};
+		568974A32C90B24C001A214E /* WalkyCamWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 568974B52C90B24F001A214E /* Build configuration list for PBXNativeTarget "WalkyCamWatch Watch App" */;
+			buildPhases = (
+				568974A02C90B24C001A214E /* Sources */,
+				568974A12C90B24C001A214E /* Frameworks */,
+				568974A22C90B24C001A214E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WalkyCamWatch Watch App";
+			productName = "WalkyCamWatch Watch App";
+			productReference = 568974A42C90B24C001A214E /* WalkyCamWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -11166,20 +11352,24 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					5637A8112AD5DD72000586DF = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
+					568974A32C90B24C001A214E = {
+						CreatedOnToolsVersion = 15.4;
+					};
 				};
 			};
 			buildConfigurationList = 5637A80D2AD5DD72000586DF /* Build configuration list for PBXProject "WalkyCam" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = es;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				es,
 			);
 			mainGroup = 5637A8092AD5DD71000586DF;
 			packageReferences = (
@@ -11191,6 +11381,7 @@
 			projectRoot = "";
 			targets = (
 				5637A8112AD5DD72000586DF /* WalkyCam */,
+				568974A32C90B24C001A214E /* WalkyCamWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -11211,6 +11402,23 @@
 				EA5E1D682AD70BC800738A8F /* ProjectColors.xcassets in Resources */,
 				EA910F272AD8AA8500584B98 /* Mulish-Medium.ttf in Resources */,
 				EA910F262AD8AA8500584B98 /* Mulish-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		568974A22C90B24C001A214E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5689751A2C90C84E001A214E /* Assets.xcassets in Resources */,
+				568974AB2C90B24F001A214E /* Assets.xcassets in Resources */,
+				5689751B2C90CB1F001A214E /* ProjectColors.xcassets in Resources */,
+				56A322CD2C96AFDC00B5FE4B /* Mulish-Light.ttf in Resources */,
+				56A322CE2C96AFDC00B5FE4B /* Mulish-ExtraLight.ttf in Resources */,
+				56A322CF2C96AFDC00B5FE4B /* Mulish-Regular.ttf in Resources */,
+				56A322D02C96AFDC00B5FE4B /* Mulish-SemiBold.ttf in Resources */,
+				56A322D12C96AFDC00B5FE4B /* Mulish-Medium.ttf in Resources */,
+				56A322D22C96AFDC00B5FE4B /* Mulish-Bold.ttf in Resources */,
+				56A322D32C96AFDC00B5FE4B /* Mulish-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -12325,13 +12533,53 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		568974A02C90B24C001A214E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				568974C72C90B575001A214E /* KeychainPersistence.swift in Sources */,
+				568974C82C90B575001A214E /* KeychainPersistenceProtocol.swift in Sources */,
+				56A322C92C96A72100B5FE4B /* View+Extension.swift in Sources */,
+				56A322D82C96B45300B5FE4B /* WatchLocationViewModel.swift in Sources */,
+				568974C92C90B575001A214E /* KeychainError.swift in Sources */,
+				5652B10D2C96BE1E000D32FD /* WatchPageView.swift in Sources */,
+				56A322C12C969C4300B5FE4B /* WatchSearchView.swift in Sources */,
+				568974CA2C90B575001A214E /* KeychainProtocol.swift in Sources */,
+				56A322CB2C96ACF000B5FE4B /* WatchSearchViewModel.swift in Sources */,
+				568974EF2C90B7EB001A214E /* WatchMenuView.swift in Sources */,
+				568FE8102C9366B9000AD6AE /*  WatchMenuViewModel.swift in Sources */,
+				568974CB2C90B575001A214E /* Keychain.swift in Sources */,
+				568974BC2C90B454001A214E /* WatchNavigator.swift in Sources */,
+				568975192C90C845001A214E /* Strings.swift in Sources */,
+				56A322C62C96A6F800B5FE4B /* RoundedCornerShape.swift in Sources */,
+				568974BB2C90B454001A214E /* WatchNavigatorProtocol.swift in Sources */,
+				568975182C90C842001A214E /* Assets.swift in Sources */,
+				56A322D62C96B40600B5FE4B /* WatchLocationView.swift in Sources */,
+				5689751C2C90CC71001A214E /* ProjectFont.swift in Sources */,
+				568974CC2C90B57B001A214E /* UserSession.swift in Sources */,
+				568974CD2C90B57B001A214E /* UserSessionData.swift in Sources */,
+				568974CE2C90B57B001A214E /* UserSessionProtocol.swift in Sources */,
+				568974A72C90B24C001A214E /* WalkyCamWatchApp.swift in Sources */,
+				568975172C90C7EA001A214E /* Tokens.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		568974B02C90B24F001A214E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 568974A32C90B24C001A214E /* WalkyCamWatch Watch App */;
+			targetProxy = 568974AF2C90B24F001A214E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EA15B5742AD6DF2C00C03407 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				EA15B5752AD6DF2C00C03407 /* en */,
+				568FE8112C9370C7000AD6AE /* es */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -12343,6 +12591,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -12403,6 +12652,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -12457,6 +12707,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 01210015DB17D27A5A6A4908 /* Pods-WalkyCam.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -12503,6 +12754,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1657E0E09B4F0512C50B8036 /* Pods-WalkyCam.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -12538,6 +12790,81 @@
 			};
 			name = Release;
 		};
+		568974B32C90B24F001A214E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WalkyCamWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 7994PXZY59;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WalkyCamWatch-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = WalkyCamWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.walkycam.WalkyCam;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.walkycam.WalkyCam.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		568974B42C90B24F001A214E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WalkyCamWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 7994PXZY59;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WalkyCamWatch-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = WalkyCamWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.walkycam.WalkyCam;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.walkycam.WalkyCam.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -12555,6 +12882,15 @@
 			buildConfigurations = (
 				5637A8372AD5DD74000586DF /* Debug */,
 				5637A8382AD5DD74000586DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		568974B52C90B24F001A214E /* Build configuration list for PBXNativeTarget "WalkyCamWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				568974B32C90B24F001A214E /* Debug */,
+				568974B42C90B24F001A214E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

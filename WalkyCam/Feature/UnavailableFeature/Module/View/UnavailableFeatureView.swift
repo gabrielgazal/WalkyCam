@@ -56,7 +56,7 @@ struct UnavailableFeatureView<ViewModel: UnavailableFeatureViewModelProtocol, Ro
                .ignoresSafeArea()
                .navigation(router)
                .sheet(router)
-//               .environment(\.colorScheme, .dark)
+               .environment(\.colorScheme, .dark)
     }
 }
 
