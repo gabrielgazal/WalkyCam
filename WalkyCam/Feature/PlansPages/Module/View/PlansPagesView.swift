@@ -35,6 +35,15 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
                             .foregroundColor(.naranja)
                             .isHidden(viewModel.currentPage == 4)
                         Spacer()
+                        if viewModel.currentPage == 3 {
+                            Image(systemName: "crown.fill")
+                                .renderingMode(.template)
+                                .resizable()
+                                .scaledToFit()
+                                .foregroundColor(Color.premium)
+                                .frame(width: 50, height: 50)
+                            Spacer()
+                        }
                         WCUIButton(title: L10n.PlansPagesView.Button.compare,
                                    rightIcon: Asset.Icons.compare.name,
                                    style: .standard,

@@ -207,7 +207,7 @@
 
 "RegistrationPlansView.toggle.test" = "Toggle Test";
 "RegistrationPlansView.plan.annual" = "Annual plan";
-"RegistrationPlansView.plan.discount" = "(now 5%)";
+"RegistrationPlansView.plan.discount" = "(now 5%%)";
 
 "ProfileView.field.phoneNumber" = "Cell phone number";
 "ProfileView.field.gender" = "Gender";
@@ -306,6 +306,13 @@
 "PlanPageView.plan.annual" = "Annual plan";
 "PlanPageView.plan.discount" = "(now 5%)";
 "PlanPageView.plan.includes" = "Includes **%@** more:";
+
+"PlansComparisonPageView.planAnual" = "Annual Plan";
+"PlansComparisonPageView.save5Percent" = "(now 5%%)";
+"PlansComparisonPageView.includedFeatures" = "All plans include features like: White Board, Share to, Chat, REC, etc.";
+"PlansComparisonPageView.start" = "Start";
+"PlansComparisonPageView.convertToUSD" = "Or convert to USD";
+
 
 "VideoCallView.title" = "Video call";
 "VideoCallView.new.title" = "NEW";

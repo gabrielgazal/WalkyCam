@@ -1278,8 +1278,8 @@ internal enum L10n {
     internal enum Plan {
       /// Plan anual
       internal static let annual = L10n.tr("Localizable", "PlanPageView.plan.annual", fallback: "Plan anual")
-      /// (ahora 5%)
-      internal static let discount = L10n.tr("Localizable", "PlanPageView.plan.discount", fallback: "(ahora 5%)")
+      /// (ahorra 5%%)
+      internal static let discount = L10n.tr("Localizable", "PlanPageView.plan.discount", fallback: "(ahorra 5%%)")
       /// Incluye **%@** más:
       internal static func includes(_ p1: Any) -> String {
         return L10n.tr("Localizable", "PlanPageView.plan.includes", String(describing: p1), fallback: "Incluye **%@** más:")
@@ -1289,6 +1289,18 @@ internal enum L10n {
       /// Toggle Test
       internal static let test = L10n.tr("Localizable", "PlanPageView.toggle.test", fallback: "Toggle Test")
     }
+  }
+  internal enum PlansComparisonPageView {
+    /// O convertirlo en
+    internal static let convertToUSD = L10n.tr("Localizable", "PlansComparisonPageView.convertToUSD", fallback: "O convertirlo en")
+    /// En todos los planes se incluyen funciones como: White Board, Share to, Chat, REC, etc.
+    internal static let includedFeatures = L10n.tr("Localizable", "PlansComparisonPageView.includedFeatures", fallback: "En todos los planes se incluyen funciones como: White Board, Share to, Chat, REC, etc.")
+    /// Plan anual
+    internal static let planAnual = L10n.tr("Localizable", "PlansComparisonPageView.planAnual", fallback: "Plan anual")
+    /// (ahora 5%%)
+    internal static let save5Percent = L10n.tr("Localizable", "PlansComparisonPageView.save5Percent", fallback: "(ahora 5%%)")
+    /// Start
+    internal static let start = L10n.tr("Localizable", "PlansComparisonPageView.start", fallback: "Start")
   }
   internal enum PlansPagesView {
     internal enum Button {
@@ -1498,8 +1510,8 @@ internal enum L10n {
     internal enum Plan {
       /// Plan anual
       internal static let annual = L10n.tr("Localizable", "RegistrationPlansView.plan.annual", fallback: "Plan anual")
-      /// (ahora 5%)
-      internal static let discount = L10n.tr("Localizable", "RegistrationPlansView.plan.discount", fallback: "(ahora 5%)")
+      /// (ahorra 5%%)
+      internal static let discount = L10n.tr("Localizable", "RegistrationPlansView.plan.discount", fallback: "(ahorra 5%%)")
     }
     internal enum Toggle {
       /// Toggle Test

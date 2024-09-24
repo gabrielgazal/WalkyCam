@@ -36,7 +36,7 @@ class ChatBotClient: NSObject {
     }
     
     private func configureClient() {
-        if let url = URL(string: "https://meet.walkycam.com:3000") {
+        if let url = URL(string: "https://meet.walkycam.com:2096") {
             manager = SocketManager(socketURL: url)
             socket = manager?.defaultSocket
         }

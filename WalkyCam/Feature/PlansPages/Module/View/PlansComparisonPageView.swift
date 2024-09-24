@@ -1,11 +1,3 @@
-//
-//  PlansComparisonPageView.swift
-//  WalkyCam
-//
-//  Created by Gabriel Rodrigues Gazal Rocha on 23/11/23.
-//
-
-import Foundation
 import SwiftUI
 
 struct PlansComparisonPageView: View {
@@ -36,10 +28,10 @@ struct PlansComparisonPageView: View {
                 .toggleStyle(WCNamelessToggleStyle())
                 HStack(alignment: .center,
                        spacing: Tokens.Size.Spacing.xsmall) {
-                    Text("Plan anual")
+                    Text(L10n.PlansComparisonPageView.planAnual)
                         .font(.projectFont(size: Tokens.Size.Font.medium, weight: .medium))
-                        .foregroundColor(monthlyToggle ? .naranja : .negro)
-                    Text("(ahora 5%)")
+                        .foregroundColor(.negro)
+                    Text(L10n.PlansComparisonPageView.save5Percent)
                         .font(.projectFont(size: Tokens.Size.Font.medium, weight: .bold))
                         .foregroundColor(monthlyToggle ? .naranja : .negro)
                 }
@@ -54,13 +46,12 @@ struct PlansComparisonPageView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 190)
                         .foregroundColor(.naranja)
-                    Text("En todos los planes se incluyen funciones como: White Board, Share to, Chat, REC, etc.")
+                    Text(L10n.PlansComparisonPageView.includedFeatures)
                         .font(.projectFont(size: Tokens.Size.Font.xsmall, weight: .semibold))
                     VStack(alignment: .leading,
                            spacing: Tokens.Size.Spacing.small) {
                         ForEach(plansData.first(where: { $0.title == "premium"})?.features ?? []) { item in
-                            featureItem(item)
-                                .frame(width: 190, height: 50)
+                            PlanComparisonStackItem(data: item)
                         }
                     }
                 }
@@ -103,33 +94,33 @@ struct PlansComparisonPageView: View {
         }
     }
     
-    private func featureItem(_ item: FunctionData) -> some View {
-        HStack(alignment: .center,
-               spacing: Tokens.Size.Spacing.small) {
-            if !item.icon.isEmpty {
-                Image(item.icon)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 50, height: 50)
-            }
-            Text(item.title)
-                .font(.projectFont(size: Tokens.Size.Font.xsmall, weight: .medium))
-                .foregroundColor(Color.negro)
-                .lineLimit(3)
-                .layoutPriority(1)
-            Spacer()
-                .frame(width: .infinity)
-            Image(systemName: "info.circle.fill")
-                .resizable()
-                .frame(width: 15, height: 15)
-                .onTapGesture {
-                    tooltipTitle = item.title
-                    tooltipText = item.getTooltipText()
-                    isAlertShown = true
-                }
-            Spacer()
-        }
-    }
+//    private func featureItem(_ item: FunctionData) -> some View {
+//        HStack(alignment: .center,
+//               spacing: Tokens.Size.Spacing.small) {
+//            if !item.icon.isEmpty {
+//                Image(item.icon)
+//                    .resizable()
+//                    .aspectRatio(contentMode: .fit)
+//                    .frame(width: 50, height: 50)
+//            }
+//            Text(item.title)
+//                .font(.projectFont(size: Tokens.Size.Font.xsmall, weight: .medium))
+//                .foregroundColor(Color.negro)
+//                .lineLimit(3)
+//                .layoutPriority(1)
+//            Spacer()
+//                .frame(width: .infinity)
+//            Image(systemName: "info.circle.fill")
+//                .resizable()
+//                .frame(width: 15, height: 15)
+//                .onTapGesture {
+//                    tooltipTitle = item.title
+//                    tooltipText = item.getTooltipText()
+//                    isAlertShown = true
+//                }
+//            Spacer()
+//        }
+//    }
     
     private func planItem(_ plan: PlansPagesModel) -> some View {
         VStack(alignment: .center,
@@ -284,5 +275,92 @@ struct PlansComparisonPageView_Previews: PreviewProvider {
             ],
             startPlanAction: nil
         )
+    }
+}
+
+struct PlanComparisonStackItem: View {
+    
+    var data: FunctionData
+    @State private var showDropDownMenu = false
+    
+    public init(data: FunctionData) {
+        self.data = data
+    }
+    
+    var body: some View {
+        VStack(alignment: .leading,
+               spacing: Tokens.Size.Spacing.regular)  {
+            HStack(alignment: .center,
+                   spacing: Tokens.Size.Spacing.small) {
+                if !data.icon.isEmpty {
+                    Image(data.icon)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 50, height: 50)
+                }
+                Text(data.title)
+                    .font(.projectFont(size: Tokens.Size.Font.xsmall, weight: .medium))
+                    .foregroundColor(Color.negro)
+                    .lineLimit(3)
+                    .layoutPriority(1)
+                Spacer()
+                    .frame(width: .infinity)
+                Image(systemName: "info.circle.fill")
+                    .resizable()
+                    .frame(width: 15, height: 15)
+                    .onTapGesture {
+    //                    tooltipTitle = item.title
+    //                    tooltipText = item.getTooltipText()
+    //                    isAlertShown = true
+                    }
+                if !data.subfunction.isEmpty {
+                    Image(systemName: "plus")
+                        .renderingMode(.template)
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundColor(.naranja)
+                        .frame(width: 20, height: 20)
+                }
+                Spacer()
+            }
+                   .onTapGesture {
+                       withAnimation(.easeInOut) {
+                           showDropDownMenu.toggle()
+                       }
+                   }
+                   .frame(width: 190, height: 50)
+            if showDropDownMenu {
+                VStack(alignment: .leading, spacing: 0) {
+                    ForEach(data.subfunction, id: \.self) { subitem in
+                        HStack(alignment: .center,
+                               spacing: Tokens.Size.Spacing.small) {
+                            if !subitem.icon.isEmpty {
+                                Image(subitem.icon)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 50, height: 50)
+                            }
+                            Text(subitem.title)
+                                .font(.projectFont(size: Tokens.Size.Font.xsmall, weight: .medium))
+                                .foregroundColor(Color.negro)
+                                .lineLimit(3)
+                                .layoutPriority(1)
+                            Spacer()
+                                .frame(width: .infinity)
+                            Image(systemName: "info.circle.fill")
+                                .resizable()
+                                .frame(width: 15, height: 15)
+                                .onTapGesture {
+                //                    tooltipTitle = item.title
+                //                    tooltipText = item.getTooltipText()
+                //                    isAlertShown = true
+                                }
+                            Spacer()
+                        }
+                    }
+                }
+                .padding([.leading], Tokens.Size.Spacing.regular)
+            }
+        }
     }
 }
