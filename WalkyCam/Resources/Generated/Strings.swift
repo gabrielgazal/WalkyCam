@@ -881,6 +881,12 @@ internal enum L10n {
       /// Novedades
       internal static let title = L10n.tr("Localizable", "HomeView.news.title", fallback: "Novedades")
     }
+    internal enum Profile {
+      /// Hola %@!
+      internal static func hello(_ p1: Any) -> String {
+        return L10n.tr("Localizable", "HomeView.profile.hello", String(describing: p1), fallback: "Hola %@!")
+      }
+    }
     internal enum RecentFunctions {
       /// Recientes
       internal static let title = L10n.tr("Localizable", "HomeView.recentFunctions.title", fallback: "Recientes")
@@ -888,6 +894,10 @@ internal enum L10n {
     internal enum Reminders {
       /// Recordatorios
       internal static let title = L10n.tr("Localizable", "HomeView.reminders.title", fallback: "Recordatorios")
+    }
+    internal enum Section {
+      /// Ver más
+      internal static let seeMore = L10n.tr("Localizable", "HomeView.section.seeMore", fallback: "Ver más")
     }
   }
   internal enum HomeViewModel {

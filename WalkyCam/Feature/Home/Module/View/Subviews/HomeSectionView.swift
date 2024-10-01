@@ -43,7 +43,7 @@ struct HomeSectionView<Content: View>: View {
                     .foregroundColor(.negro)
                 Spacer()
                 if let action = action {
-                    LinkButton(title: "Ver más",
+                    LinkButton(title: L10n.HomeView.Section.seeMore,
                                color: .naranja,
                                action: {
                         action()

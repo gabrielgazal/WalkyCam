@@ -32,6 +32,8 @@
 "HomeView.news.title" = "News";
 "HomeView.favorites.title" = "Favorites";
 "HomeView.files.title" = "File Gallery";
+"HomeView.profile.hello" = "Hello %@!";
+"HomeView.section.seeMore" = "See more";
 
 // MARK: - TabBarBuilder
 

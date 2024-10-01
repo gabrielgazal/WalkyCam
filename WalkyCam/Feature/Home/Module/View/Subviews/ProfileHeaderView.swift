@@ -45,7 +45,7 @@ struct ProfileHeaderView: View {
     var body: some View {
         HStack(alignment: .center,
                spacing: Tokens.Size.Spacing.regular) {
-            Text("Hola \(name)!")
+            Text(L10n.HomeView.Profile.hello(name))
                 .font(.projectFont(size: Tokens.Size.Font.large, weight: .bold))
                 .foregroundColor(.negro)
             Spacer()
