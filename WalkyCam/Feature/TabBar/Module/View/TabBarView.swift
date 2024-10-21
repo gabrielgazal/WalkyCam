@@ -33,5 +33,6 @@ struct TabBarView<ViewModel: TabBarViewModelProtocol, Router: TabBarRouterProtoc
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
         .environmentObject(viewModel)
+        .id(LanguageManager.shared.language.rawValue)
     }
 }

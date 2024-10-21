@@ -26,6 +26,7 @@ struct WalkyCamApp: App {
                 ZStack {
                     appNavigator
                         .view
+                        .id(LanguageManager.shared.language.rawValue)
                 }
             }
             .accentColor(Color.red)

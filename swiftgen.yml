@@ -3,6 +3,8 @@
      - WalkyCam/Resources/es.lproj
    outputs:
      - templateName: structured-swift5
+       params:
+        lookupFunction: switchLocalizationBundleDuringRuntime(forKey:table:fallbackValue:)
        output: WalkyCam/Resources/Generated/Strings.swift
 
  xcassets:

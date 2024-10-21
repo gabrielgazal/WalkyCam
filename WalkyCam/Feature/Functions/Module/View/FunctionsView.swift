@@ -167,6 +167,7 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
             .padding([.top], Tokens.Size.Spacing.large)
         }
         .navigation(router)
+        .id(LanguageManager.shared.language.rawValue)
     }
 }
 

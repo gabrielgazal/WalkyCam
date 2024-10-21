@@ -51,6 +51,7 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
             }
         }
         .navigation(router)
+        .id(LanguageManager.shared.language.rawValue)
     }
     
     private func recentFunctionsView(_ proxy: GeometryProxy) -> some View {
