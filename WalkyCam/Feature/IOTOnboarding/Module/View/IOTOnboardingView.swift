@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct IOTOnboardingView<ViewModel:IOTOnboardingViewModelProtocol, Router: IOTOnboardingRouterProtocol>: View {
+struct IOTOnboardingView<ViewModel: IOTOnboardingViewModelProtocol, Router: IOTOnboardingRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -23,19 +23,19 @@ struct IOTOnboardingView<ViewModel:IOTOnboardingViewModelProtocol, Router: IOTOn
             TabView(selection: $viewModel.currentPage) {
                 CashWalletOnboardingPageView(
                     illustration: Asset.Illustrations.cropMonitoringViaMobileDevice.swiftUIImage,
-                    title: "Selecionar Categoría IOT",
-                    description: "Elige entre: Farming, Industry, Agriculture, Fleet, Retail, Smart City y mucho más!"
+                    title: L10n.IOTOnboardingView.SelecionarCategoria.title,
+                    description: L10n.IOTOnboardingView.DescripcionSeleccionarCategoria.title
                 ).tag(0)
                 CashWalletOnboardingPageView(
                     illustration: Asset.Illustrations.farmingUsingAutonomousCultivator.swiftUIImage,
-                    title: "Selecionar sensores",
-                    description: "Los sensores deberán ser seleccionados previamente, indicando su valor."
+                    title: L10n.IOTOnboardingView.SelecionarSensores.title,
+                    description: L10n.IOTOnboardingView.DescripcionSeleccionarSensores.title
                 ).tag(1)
                 CashWalletOnboardingPageView(
                     illustration: Asset.Illustrations.farmerUsingSmartFarmApplication.swiftUIImage,
-                    title: "Buscar WalkCamer",
-                    description: "Localiza tu WalkCamer más cercano y gestiona tu IOT."
-                ).tag(1)
+                    title: L10n.IOTOnboardingView.BuscarWalkCamer.title,
+                    description: L10n.IOTOnboardingView.DescripcionBuscarWalkCamer.title
+                ).tag(2)
             }
             .accentColor(.naranja)
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
@@ -59,7 +59,7 @@ struct IOTOnboardingView<ViewModel:IOTOnboardingViewModelProtocol, Router: IOTOn
                 .frame(maxWidth: .infinity)
                 .isHidden(viewModel.currentPage == 2)
                 WCUIButton(
-                    title: "Comenzar",
+                    title: L10n.IOTOnboardingView.Comenzar.title,
                     style: .standard,
                     descriptor: OrangeButtonStyleDescriptor(),
                     action: handleNavigateToIOT)
@@ -70,10 +70,10 @@ struct IOTOnboardingView<ViewModel:IOTOnboardingViewModelProtocol, Router: IOTOn
             .padding(.horizontal, Tokens.Size.Spacing.regular)
             PageControl(numberOfPages: 3, currentPage: $viewModel.currentPage)
         }
-               .onAppear {
-                   setupAppearence()
-               }
-               .navigation(router)
+        .onAppear {
+            setupAppearence()
+        }
+        .navigation(router)
     }
 
     private func setupAppearence() {
@@ -88,7 +88,7 @@ struct IOTOnboardingView<ViewModel:IOTOnboardingViewModelProtocol, Router: IOTOn
 
 struct IOTOnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-    IOTOnboardingView(
+        IOTOnboardingView(
             viewModel: IOTOnboardingViewModel(),
             router: IOTOnboardingRouter(isPresented: .constant(false))
         )

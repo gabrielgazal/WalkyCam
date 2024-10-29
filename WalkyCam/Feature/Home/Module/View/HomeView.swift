@@ -1,31 +1,31 @@
 import SwiftUI
 
 struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: View {
-
+    
     // swiftlint:disable line_length
     // MARK: - Dependencies
-
+    
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
-
+    
     @EnvironmentObject var tabBar: TabBarViewModel
-
+    
     private let recentFunctionsColumns = [
         GridItem(.flexible()),
         GridItem(.flexible()),
         GridItem(.flexible())
     ]
-
+    
     // MARK: - Initialization
-
+    
     init(viewModel: ViewModel,
          router: Router) {
         self.viewModel = viewModel
         self.router = router
     }
-
+    
     // MARK: - View Body
-
+    
     var body: some View {
         GeometryReader { proxy in
             ScrollView(showsIndicators: false) {
@@ -51,10 +51,11 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
             }
         }
         .navigation(router)
+        .id(LanguageManager.shared.language.rawValue)
     }
-
+    
     private func recentFunctionsView(_ proxy: GeometryProxy) -> some View {
-        HomeSectionView(title: "Recientes", icon: Asset.Icons.recent.name) {
+        HomeSectionView(title: L10n.HomeView.RecentFunctions.title, icon: Asset.Icons.recent.name) {
             LazyVGrid(columns: recentFunctionsColumns,
                       spacing: 16) {
                 ForEach(viewModel.homeData.recentFunctions, id: \.self) { item in
@@ -85,9 +86,9 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                       .padding([.leading, .trailing], Tokens.Size.Spacing.regular)
         }
     }
-
+    
     private func remindersView() -> some View {
-        HomeSectionView(title: "Recordatorios", icon: Asset.Icons.notes.name) {
+        HomeSectionView(title: L10n.HomeView.Reminders.title, icon: Asset.Icons.notes.name) {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .center,
                        spacing: Tokens.Size.Spacing.regular) {
@@ -111,9 +112,9 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
             .navigation(router)
         }
     }
-
+    
     private func newsView() -> some View {
-        HomeSectionView(title: "Novedades", icon: Asset.Icons.newspaper.name) {
+        HomeSectionView(title: L10n.HomeView.News.title, icon: Asset.Icons.newspaper.name) {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .center,
                        spacing: Tokens.Size.Spacing.regular) {
@@ -137,9 +138,9 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
             }
         }
     }
-
+    
     private func favoritesView() -> some View {
-        HomeSectionView(title: "Favoritos",
+        HomeSectionView(title: L10n.HomeView.Favorites.title,
                         icon: Asset.Icons.heart.name,
                         action: {}) {
             ScrollView(.horizontal, showsIndicators: false) {
@@ -157,9 +158,9 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
             }
         }
     }
-
+    
     private func filesView() -> some View {
-        HomeSectionView(title: "Galeria de archivos",
+        HomeSectionView(title: L10n.HomeView.Files.title,
                         icon: Asset.Icons.images.name,
                         action: {
             router.routeToGallery()
@@ -194,19 +195,19 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
             }
         }
     }
-
+    
     private func isLastRecentsItem(itemId: Int) -> Bool {
         return itemId == (viewModel.homeData.recentFunctions.count - 1)
     }
-
+    
     private func handleNotificationsAction() {
         router.routeToNotifications()
     }
-
+    
     private func handleProfileAction() {
         router.routeToProfile()
     }
-
+    
     private func handleChatAction() {
         router.routeToChat()
     }

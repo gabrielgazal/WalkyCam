@@ -35,7 +35,7 @@ struct TimedLoadingScreenView<ViewModel: TimedLoadingScreenViewModelProtocol, Ro
                     .foregroundColor(Color.blanco)
                 Spacer()
                     .frame(height: 15)
-                Text("Cargando...")
+                Text(L10n.TimedLoadingScreenView.loading)
                     .font(.projectFont(size: Tokens.Size.Font.regular, weight: .regular))
                     .foregroundColor(Color.blanco)
             }

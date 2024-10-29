@@ -98,7 +98,7 @@ extension CalendarView: Equatable {
 public extension DateFormatter {
     static var monthAndYear: DateFormatter {
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "es_ES")
+        formatter.locale = Locale(identifier: L10n.Formater.locale)
         formatter.dateFormat = "MMMM yyyy"
         return formatter
     }
@@ -111,7 +111,7 @@ public extension DateFormatter {
 
     static var weekDay: DateFormatter {
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "es_ES")
+        formatter.locale = Locale(identifier: L10n.Formater.locale)
         formatter.dateFormat = "EEE"
         return formatter
     }

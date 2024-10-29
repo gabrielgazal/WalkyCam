@@ -22,12 +22,12 @@ struct PlayBusinessView<ViewModel: PlayBusinessViewModelProtocol, Router: PlayBu
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.large) {
                 Group {
-                    Text("Play & Business")
+                    Text(L10n.PlayBusinessView.title)
                         .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                     HStack {
                         Image(Asset.Icons.lock.name)
                             .renderingMode(.template)
-                        Text("WalkyCam baja demanda")
+                        Text(L10n.PlayBusinessView.lowDemand)
                             .font(.projectFont(size: Tokens.Size.Font.small, weight: .bold))
                     }
                     .foregroundColor(Color.grisOscuro)
@@ -37,24 +37,24 @@ struct PlayBusinessView<ViewModel: PlayBusinessViewModelProtocol, Router: PlayBu
                        spacing: Tokens.Size.Spacing.regular) {
                     Group {
                         HStack(spacing: Tokens.Size.Spacing.regular) {
-                            squaredCell(icon: Asset.Icons.scapeRoom.name, title: "Scape Room")
-                            squaredCell(icon: Asset.Icons.mariachis2.name, title: "Mariachis")
+                            squaredCell(icon: Asset.Icons.scapeRoom.name, title: L10n.PlayBusinessView.scapeRoom)
+                            squaredCell(icon: Asset.Icons.mariachis2.name, title: L10n.PlayBusinessView.mariachis)
                         }
                         HStack(spacing: Tokens.Size.Spacing.regular) {
-                            squaredCell(icon: Asset.Icons.filmMaker.name, title: "Film Maker")
-                            squaredCell(icon: Asset.Icons.derechosDeAutor.name, title: "Copyright")
+                            squaredCell(icon: Asset.Icons.filmMaker.name, title: L10n.PlayBusinessView.filmMaker)
+                            squaredCell(icon: Asset.Icons.derechosDeAutor.name, title: L10n.PlayBusinessView.copyright)
                         }
                         HStack(spacing: Tokens.Size.Spacing.regular) {
-                            squaredCell(icon: Asset.Icons.productos.name, title: "Muestra de Productos")
-                            squaredCell(icon: Asset.Icons.patenteDeIdea.name, title: "Idea de Negocio")
+                            squaredCell(icon: Asset.Icons.productos.name, title: L10n.PlayBusinessView.productSample)
+                            squaredCell(icon: Asset.Icons.patenteDeIdea.name, title: L10n.PlayBusinessView.businessIdea)
                         }
                         HStack(spacing: Tokens.Size.Spacing.regular) {
-                            squaredCell(icon: Asset.Icons.fitnessWatch.name, title: "Pulsera Fitness")
-                            squaredCell(icon: Asset.Icons.surpriseBox.name, title: "Caja Surpresa")
+                            squaredCell(icon: Asset.Icons.fitnessWatch.name, title: L10n.PlayBusinessView.fitnessBracelet)
+                            squaredCell(icon: Asset.Icons.surpriseBox.name, title: L10n.PlayBusinessView.surpriseBox)
                         }
                     }
                     HStack(spacing: Tokens.Size.Spacing.small) {
-                        Text("Plan Premium")
+                        Text(L10n.PlayBusinessView.premiumPlan)
                             .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
                         Image(Asset.Icons.lock.name)
                             .renderingMode(.template)
@@ -68,12 +68,12 @@ struct PlayBusinessView<ViewModel: PlayBusinessViewModelProtocol, Router: PlayBu
                     .padding([.top], Tokens.Size.Spacing.large)
                     Group {
                         HStack(spacing: Tokens.Size.Spacing.regular) {
-                            squaredCell(icon: Asset.Icons.playBusiness.name, title: "Famosos", premium: true)
-                            squaredCell(icon: Asset.Icons.personalShopper.name, title: "Personal Shopper", premium: true)
+                            squaredCell(icon: Asset.Icons.playBusiness.name, title: L10n.PlayBusinessView.celebrities, premium: true)
+                            squaredCell(icon: Asset.Icons.personalShopper.name, title: L10n.PlayBusinessView.personalShopper, premium: true)
                         }
                         HStack(spacing: Tokens.Size.Spacing.regular) {
-                            squaredCell(icon: Asset.Icons.patenteDeInvencion.name, title: "Patente de Invención", premium: true)
-                            squaredCell(icon: Asset.Icons.gymkhana.name, title: "Gymkhana", premium: true)
+                            squaredCell(icon: Asset.Icons.patenteDeInvencion.name, title: L10n.PlayBusinessView.inventionPatent, premium: true)
+                            squaredCell(icon: Asset.Icons.gymkhana.name, title: L10n.PlayBusinessView.gymkhana, premium: true)
                         }
                     }
                 }

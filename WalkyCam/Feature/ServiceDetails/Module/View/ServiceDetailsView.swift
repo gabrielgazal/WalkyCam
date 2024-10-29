@@ -22,9 +22,9 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.large) {
                 headerView
-                Text("La invitación se enviará a los miembros de esta reunión al finalizar el proceso.")
+                Text(L10n.ServiceDetails.invitacionEnviada)
                     .font(.projectFont(size: Tokens.Size.Font.regular))
-                    .isHidden(viewModel.service.title != "Videollamada")
+                    .isHidden(viewModel.service.title != L10n.ServiceDetails.videollamada)
                 HStack(spacing: Tokens.Size.Spacing.regular) {
                     Image(viewModel.service.icon)
                         .resizable()
@@ -57,7 +57,7 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
         }
         .footer {
             VStack(spacing: Tokens.Size.Spacing.regular) {
-                WCUIButton(title: "Finalizar y Enviar",
+                WCUIButton(title: L10n.ServiceDetails.finalizarEnviar,
                            style: .standard,
                            descriptor: OrangeButtonStyleDescriptor(),
                            action: {
@@ -71,7 +71,7 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
                     }
                 })
                 .loading(viewModel.updateCallAsyncData.isLoading)
-                WCUIButton(title: "Cancelar",
+                WCUIButton(title: L10n.ServiceDetails.cancelar,
                            style: .standard,
                            descriptor: BlackButtonStyleDescriptor(),
                            action: {
@@ -102,7 +102,7 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
             .padding(.horizontal, Tokens.Size.Spacing.large)
             HStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {
-                Text("Detalles del Servicio")
+                Text(L10n.ServiceDetails.detallesServicio)
                     .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                 Spacer()
             }
@@ -162,28 +162,28 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
         return VStack(
             alignment: .leading,
             spacing: Tokens.Size.Spacing.regular) {
-                Text("Dispositivos")
+                Text(L10n.ServiceDetails.dispositivos)
                     .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
                 ForEach(viewModel.devices, id: \.self) { item in
                     itemView(icon: item.type.toIcon(), title: item.name)
                 }
                 Divider()
             }
-            .isHidden(viewModel.devices.isEmpty || viewModel.service.title == "Videollamada")
+            .isHidden(viewModel.devices.isEmpty || viewModel.service.title == L10n.ServiceDetails.videollamada)
     }
     
     private func abilitiesView() -> some View {
         return VStack(
             alignment: .leading,
             spacing: Tokens.Size.Spacing.regular) {
-                Text("Capacidades")
+                Text(L10n.ServiceDetails.capacidades)
                     .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
                 ForEach(viewModel.abilities, id: \.self) { item in
                     itemView(icon: item.icon, title: "Apto \(item.name)")
                 }
                 Divider()
             }
-            .isHidden(viewModel.abilities.isEmpty || viewModel.service.title == "Videollamada")
+            .isHidden(viewModel.abilities.isEmpty || viewModel.service.title == L10n.ServiceDetails.videollamada)
     }
     
     private func itemView(icon: String, title: String) -> some View {
@@ -205,7 +205,7 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
             spacing: Tokens.Size.Spacing.regular) {
                 HStack(alignment: .center,
                        spacing: Tokens.Size.Spacing.small) {
-                    Text("Asistentes")
+                    Text(L10n.ServiceDetails.asistentes)
                         .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
                     Text("3")
                         .font(.projectFont(size: Tokens.Size.Font.regular))
@@ -216,7 +216,7 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
                         .frame(width: 24, height: 24)
                         .foregroundColor(.naranja)
                 }
-                Text("La invitación se enviará a los miembros de esta reunión al finalizar el proceso.")
+                Text(L10n.ServiceDetails.invitacionEnviada)
                     .font(.projectFont(size: Tokens.Size.Font.regular))
                 Divider()
             }
@@ -232,12 +232,12 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
                         .resizable()
                         .scaledToFit()
                         .frame(width: 24)
-                    Text("Pixelado facial activado")
+                    Text(L10n.ServiceDetails.pixeladoActivado)
                         .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
                     Toggle(isOn: $viewModel.pixelationActive, label: {})
                         .toggleStyle(WCNamelessToggleStyle())
                 }
-                Text("Al apagar este selector, estarás dejando de ocultar los rostros de las personas.")
+                Text(L10n.ServiceDetails.apagarSelector)
                     .font(.projectFont(size: Tokens.Size.Font.regular))
             }
             .padding(Tokens.Size.Spacing.large)

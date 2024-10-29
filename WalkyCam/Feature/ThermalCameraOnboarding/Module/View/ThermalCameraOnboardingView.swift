@@ -23,13 +23,13 @@ struct ThermalCameraOnboardingView<ViewModel: ThermalCameraOnboardingViewModelPr
             TabView(selection: $viewModel.currentPage) {
                 ThermalCameraPageView(
                     illustration: Asset.Illustrations.thermalOnboarding1.swiftUIImage,
-                    title: "Thermal Camera",
-                    description: "Detecta y visualiza el calor emitido por objetos y personas, permitiendo ver diferencias de temperatura, identificar problemas de aislamiento, detectar animales en la oscuridad y explorar el entorno."
+                    title: L10n.ThermalCameraOnboardingView.title,
+                    description: L10n.ThermalCameraOnboardingView.description1
                 ).tag(0)
                 ThermalCameraPageView(
                     illustration: Asset.Illustrations.thermalOnboarding2.swiftUIImage,
-                    title: "Thermal Camera",
-                    description: "Enfoca la cámara hacia el área u objeto que deseas analizar y toma una foto o graba un video.\n\nObserva las diferencias de temperatura visualizadas en colores, desde los tonos más fríos (azules) a los más cálidos (rojos)."
+                    title: L10n.ThermalCameraOnboardingView.title,
+                    description: L10n.ThermalCameraOnboardingView.description2
                 ).tag(1)
             }
             .accentColor(.naranja)
@@ -54,7 +54,7 @@ struct ThermalCameraOnboardingView<ViewModel: ThermalCameraOnboardingViewModelPr
                 .frame(maxWidth: .infinity)
                 .isHidden(viewModel.currentPage == 1)
                 WCUIButton(
-                    title: "Comenzar",
+                    title: L10n.ThermalCameraOnboardingView.start,
                     style: .standard,
                     descriptor: OrangeButtonStyleDescriptor(),
                     action: handleNavigateToDigitalTwins)
@@ -82,7 +82,7 @@ struct ThermalCameraOnboardingView<ViewModel: ThermalCameraOnboardingViewModelPr
                 isPresented: router.isNavigating,
                 model: .init(
                     type: .thermalCamera,
-                    title: "Thermal Camera",
+                    title: L10n.ThermalCameraOnboardingView.title,
                     icon: Asset.Icons.thermalCamera.name,
                     background: Asset.Fondos.videocallFondo.name
                 )

@@ -40,7 +40,7 @@ struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouter
                 HStack(spacing: Tokens.Size.Spacing.regular) {
                     Asset.Icons.smileFace.swiftUIImage
                     TextInputView(text: $viewModel.message,
-                                  placeholder: "Escribe aquí...",
+                                  placeholder: L10n.WalkyBotView.Input.placeholder,
                                   backgroundColor: .clear)
                     Asset.Icons.sendIcon.swiftUIImage
                         .renderingMode(.template)
@@ -74,9 +74,9 @@ struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouter
                 .frame(width: 75)
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.tiny) {
-                Text("Walky Bot FAQ's")
+                Text(L10n.WalkyBotView.Header.title)
                     .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .bold))
-                Text("Asistente automático")
+                Text(L10n.WalkyBotView.Header.subtitle)
                     .font(.projectFont(size: Tokens.Size.Font.medium))
                     .foregroundColor(Color.grisOscuro)
             }

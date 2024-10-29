@@ -1,10 +1,3 @@
-//
-//  PlanPageView.swift
-//  WalkyCam
-//
-//  Created by Gabriel Rodrigues Gazal Rocha on 20/11/23.
-//
-
 import Foundation
 import SwiftUI
 
@@ -13,6 +6,9 @@ struct PlanPageView: View {
     private var planData: PlansPagesModel
     private var lastPlan: PlansPagesModel?
     @State var monthlyToggle: Bool = false
+    @State var tooltipTitle: String = ""
+    @State var tooltipText: String = ""
+    @State var isAlertShown = false
     
     public init(
         planData: PlansPagesModel,
@@ -43,9 +39,9 @@ struct PlanPageView: View {
                     .toggleStyle(WCNamelessToggleStyle(accentColor: planData.accentColor))
                     HStack(alignment: .center,
                            spacing: Tokens.Size.Spacing.xsmall) {
-                        Text("Plan anual")
+                        Text(L10n.PlanPageView.Plan.annual)
                             .font(.projectFont(size: Tokens.Size.Font.medium, weight: .medium))
-                        Text("(ahora 5%)")
+                        Text(L10n.PlanPageView.Plan.discount)
                             .font(.projectFont(size: Tokens.Size.Font.medium, weight: .bold))
                             .foregroundColor(monthlyToggle ? planData.accentColor : .blanco)
                     }
@@ -57,39 +53,18 @@ struct PlanPageView: View {
                             .foregroundColor(lastPlan.accentColor)
                             .fontWeight(.bold)
                             .preferredColorScheme(.dark)
-                        Text("Incluye **\(lastPlan.title.uppercased())** más:")
+                        Text(String(format: L10n.PlanPageView.Plan.includes(lastPlan.title.uppercased())).toMarkdown())
                             .font(.projectFont(size: Tokens.Size.Font.large, weight: .medium))
                             .foregroundColor(Color.blanco)
+                            .accentColor(lastPlan.accentColor)
                     }
                 }
                 ForEach(planData.features, id: \.self) { item in
-                    featureItem(item)
+                    PlanStackItem(data: item, accentColor: planData.accentColor)
                 }
             }
         }
                .padding(Tokens.Size.Spacing.large)
-    }
-
-    private func featureItem(_ item: FunctionData) -> some View {
-        HStack(spacing: Tokens.Size.Spacing.small) {
-            if item.icon.isEmpty {
-                Image(Asset.Icons.check.name)
-                    .resizable()
-                    .renderingMode(.template)
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 40, height: 40)
-                    .foregroundColor(planData.accentColor)
-            } else {
-                Image(item.icon)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 70, height: 70)
-            }
-            Text(item.title)
-                .font(.projectFont(size: Tokens.Size.Font.large, weight: .medium))
-                .foregroundColor(Color.blanco)
-            Spacer()
-        }
     }
     
     private func formatDouble(_ data: String) -> String {
@@ -103,7 +78,7 @@ struct PlanPageView_Previews: PreviewProvider {
         PlanPageView(
             planData: .init(
                 title: "Basic",
-                monthlyPrice: "10.0", 
+                monthlyPrice: "10.0",
                 yearlyPrice: "20.0",
                 backgroundImage: "",
                 accentColor: .acentoFondoDark,
@@ -122,5 +97,94 @@ struct PlanPageView_Previews: PreviewProvider {
                             features: [])
         )
         .background(Color.black)
+    }
+}
+
+struct PlanStackItem: View {
+    
+    var data: FunctionData
+    var accentColor: Color
+    @State private var showDropDownMenu = false
+    
+    public init(
+        data: FunctionData,
+        accentColor: Color
+    ) {
+        self.data = data
+        self.accentColor = accentColor
+    }
+    
+    var body: some View {
+        VStack(alignment: .leading,
+               spacing: Tokens.Size.Spacing.regular) {
+            HStack(spacing: Tokens.Size.Spacing.small) {
+                if data.icon.isEmpty {
+                    Image(Asset.Icons.check.name)
+                        .resizable()
+                        .renderingMode(.template)
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 40, height: 40)
+                        .foregroundColor(accentColor)
+                } else {
+                    Image(data.icon)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 70, height: 70)
+                }
+                Text(data.title)
+                    .font(.projectFont(size: Tokens.Size.Font.large, weight: .medium))
+                    .foregroundColor(Color.blanco)
+                Image(systemName: "info.circle.fill")
+                    .resizable()
+                    .frame(width: 15, height: 15)
+                Spacer()
+                if !data.subfunction.isEmpty {
+                    Image(systemName: "plus")
+                        .renderingMode(.template)
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundColor(accentColor)
+                        .frame(width: 30, height: 30)
+                }
+            }
+            .onTapGesture {
+                withAnimation(.easeInOut) {
+                    showDropDownMenu.toggle()
+                }
+            }
+            if showDropDownMenu {
+                VStack(alignment: .leading,
+                       spacing: 0) {
+                    ForEach(data.subfunction, id: \.self) { subitem in
+                        HStack(spacing: Tokens.Size.Spacing.small) {
+                            if subitem.icon.isEmpty {
+                                Image(Asset.Icons.check.name)
+                                    .resizable()
+                                    .renderingMode(.template)
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 40, height: 40)
+                                    .foregroundColor(accentColor)
+                            } else {
+                                Image(subitem.icon)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 70, height: 70)
+                            }
+                            Text(subitem.title)
+                                .font(.projectFont(size: Tokens.Size.Font.large, weight: .medium))
+                                .foregroundColor(Color.blanco)
+//                            Image(systemName: "info.circle.fill")
+//                                .resizable()
+//                                .frame(width: 15, height: 15)
+                            Spacer()
+                        }
+                        .padding(Tokens.Size.Spacing.regular)
+                        .background(
+                            accentColor.opacity(0.5)
+                        )
+                    }
+                }
+            }
+        }
     }
 }

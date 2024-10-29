@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct AIMenuView<ViewModel:AIMenuViewModelProtocol, Router: AIMenuRouterProtocol>: View {
+struct AIMenuView<ViewModel: AIMenuViewModelProtocol, Router: AIMenuRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -22,17 +22,17 @@ struct AIMenuView<ViewModel:AIMenuViewModelProtocol, Router: AIMenuRouterProtoco
             VStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.large) {
                 HStack {
-                    Text("AI & Data Analysis")
+                    Text(L10n.AIMenuView.title)
                         .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                     Spacer()
                 }
-                itemCell(title: "Walky, solo para ti", image: Asset.Icons.walkybot.name)
+                itemCell(title: L10n.AIMenuView.WalkySoloParaTi.title, image: Asset.Icons.walkybot.name)
                     .onTapGesture {
                         router.routeToWalkyBot()
                     }
-                itemCell(title: "Configuración", image: Asset.Icons.settings.name)
+                itemCell(title: L10n.AIMenuView.Configuracao.title, image: Asset.Icons.settings.name)
             }
-                   .padding(Tokens.Size.Spacing.large)
+            .padding(Tokens.Size.Spacing.large)
         }
         .navigation(router)
     }
@@ -42,7 +42,7 @@ struct AIMenuView<ViewModel:AIMenuViewModelProtocol, Router: AIMenuRouterProtoco
             RoundedRectangle(cornerRadius: 45)
                 .fill(Color.blanco)
             VStack(alignment: .center,
-                          spacing: Tokens.Size.Spacing.large) {
+                   spacing: Tokens.Size.Spacing.large) {
                 Image(image)
                     .resizable()
                     .scaledToFit()
@@ -50,7 +50,7 @@ struct AIMenuView<ViewModel:AIMenuViewModelProtocol, Router: AIMenuRouterProtoco
                 Text(title)
                     .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
             }
-                          .padding(Tokens.Size.Spacing.large)
+            .padding(Tokens.Size.Spacing.large)
         }
         .frame(height: 175)
         .shadow(color: .black.opacity(0.16), radius: 8, x: 0, y: 2)
@@ -59,7 +59,7 @@ struct AIMenuView<ViewModel:AIMenuViewModelProtocol, Router: AIMenuRouterProtoco
 
 struct AIMenuView_Previews: PreviewProvider {
     static var previews: some View {
-    AIMenuView(
+        AIMenuView(
             viewModel: AIMenuViewModel(),
             router: AIMenuRouter(isPresented: .constant(false))
         )

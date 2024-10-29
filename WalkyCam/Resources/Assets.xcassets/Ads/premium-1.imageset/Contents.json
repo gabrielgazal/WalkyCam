@@ -3,6 +3,16 @@
     {
       "filename" : "premium-1.pdf",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "Card Info.pdf",
+      "idiom" : "universal",
+      "locale" : "en"
+    },
+    {
+      "filename" : "premium-1 1.pdf",
+      "idiom" : "universal",
+      "locale" : "es"
     }
   ],
   "info" : {
@@ -10,6 +20,7 @@
     "version" : 1
   },
   "properties" : {
+    "localizable" : true,
     "preserves-vector-representation" : true
   }
 }

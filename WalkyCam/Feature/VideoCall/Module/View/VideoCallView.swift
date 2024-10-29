@@ -24,15 +24,15 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
                 .resizable()
                 .scaledToFit()
                 .frame(width: 150)
-            Text("Videollamada")
+            Text(L10n.VideoCallView.title)
                 .font(.projectFont(size: Tokens.Size.Font.larger, weight: .bold))
                 .multilineTextAlignment(.center)
             Spacer()
                 .frame(height: 15)
             HStack(spacing: Tokens.Size.Spacing.regular) {
-                verticalCard(title: "NUEVA",
-                             description: "Crea una nueva para compartir.",
-                             buttonTitle: "Crear",
+                verticalCard(title: L10n.VideoCallView.New.title,
+                             description: L10n.VideoCallView.New.description,
+                             buttonTitle: L10n.VideoCallView.New.button,
                              icon: Asset.Icons.link.name,
                              action: {
                     Task {
@@ -49,9 +49,9 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
                     }
                 })
                 .loading(viewModel.createVideoCallAsyncData.isLoading)
-                verticalCard(title: "PROGRAMAR",
-                             description: "Programar con anterioridad.",
-                             buttonTitle: "Programar",
+                verticalCard(title: L10n.VideoCallView.Schedule.title,
+                             description: L10n.VideoCallView.Schedule.description,
+                             buttonTitle: L10n.VideoCallView.Schedule.button,
                              icon: Asset.Icons.calendar.name,
                              action: {
                     Task {
@@ -127,15 +127,15 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
                     .resizable()
                     .scaledToFit()
                     .frame(width: 40, height: 40)
-                Text("UNIRSE")
+                Text(L10n.VideoCallView.Join.title)
                     .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .semibold))
             }
-            Text("Ingresa el código que has recebido.")
+            Text(L10n.VideoCallView.Join.description)
                 .font(.projectFont(size: Tokens.Size.Font.regular))
             HStack(spacing: Tokens.Size.Spacing.regular) {
                 TextInputView(text: $viewModel.videoCallLink,
-                              placeholder: "Ingresar código")
-                WCUIButton(title: "Unirme",
+                              placeholder: L10n.VideoCallView.Join.inputPlaceholder)
+                WCUIButton(title: L10n.VideoCallView.Join.button,
                            style: .outline,
                            descriptor: OrangeButtonStyleDescriptor(),
                            action: {
@@ -157,7 +157,7 @@ struct VideoCallView_Previews: PreviewProvider {
     VideoCallView(
         viewModel: VideoCallViewModel(
             interactor: VideoCallInteractor(
-                useCases: .init(createVideoCall: .empty, 
+                useCases: .init(createVideoCall: .empty,
                                 startSchedule: .empty)
             )
         ),

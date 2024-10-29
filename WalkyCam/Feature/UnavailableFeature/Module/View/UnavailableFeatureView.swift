@@ -36,13 +36,13 @@ struct UnavailableFeatureView<ViewModel: UnavailableFeatureViewModelProtocol, Ro
                 .foregroundColor(Color.blanco)
             Spacer()
                 .frame(height: 30)
-            Text("¡Ups! Parece que esta función aún no está disponible")
+            Text(L10n.UnavailableFeatureView.message)
                 .font(.projectFont(size: Tokens.Size.Font.xlarge))
                 .multilineTextAlignment(.center)
                 .foregroundColor(Color.blanco)
             Spacer()
             WCUIButton(
-                title: "Ir a Home",
+                title: L10n.UnavailableFeatureView.goHome,
                 style: .standard,
                 descriptor: OrangeButtonStyleDescriptor(),
                 action: {
@@ -56,7 +56,6 @@ struct UnavailableFeatureView<ViewModel: UnavailableFeatureViewModelProtocol, Ro
                .ignoresSafeArea()
                .navigation(router)
                .sheet(router)
-//               .environment(\.colorScheme, .dark)
     }
 }
 

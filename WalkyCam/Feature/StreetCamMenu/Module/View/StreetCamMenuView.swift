@@ -24,19 +24,19 @@ struct StreetCamMenuView<ViewModel: StreetCamMenuViewModelProtocol, Router: Stre
                 .resizable()
                 .scaledToFit()
                 .frame(height: 124)
-            Text("Conecta con cualquier lugar!")
+            Text(L10n.StreetCamMenuView.title)
                 .font(.projectFont(size: Tokens.Size.Font.larger, weight: .bold))
                 .multilineTextAlignment(.center)
             HStack(spacing: Tokens.Size.Spacing.regular) {
-                verticalCard(title: "BUSCAR",
-                             description: "Localiza tu WalkCamer más cercano.",
-                             buttonTitle: "Buscar",
+                verticalCard(title: L10n.StreetCamMenuView.Search.title,
+                             description: L10n.StreetCamMenuView.Search.description,
+                             buttonTitle: L10n.StreetCamMenuView.Search.button,
                              icon: Asset.Icons.locationWhite.name,
                              action: handleCreateStreetcam)
                 .loading(viewModel.createStreetcamAsyncData.isLoading)
-                verticalCard(title: "RESERVAR",
-                             description: "Programa tu WalkCamer con anterioridad.",
-                             buttonTitle: "Reservar",
+                verticalCard(title: L10n.StreetCamMenuView.Schedule.title,
+                             description: L10n.StreetCamMenuView.Schedule.description,
+                             buttonTitle: L10n.StreetCamMenuView.Schedule.button,
                              icon: Asset.Icons.calendar.name,
                              action: handleScheduleStreetcam)
                 .loading(viewModel.scheduleStreetcamAsyncData.isLoading)
@@ -93,15 +93,15 @@ struct StreetCamMenuView<ViewModel: StreetCamMenuViewModelProtocol, Router: Stre
                     .resizable()
                     .scaledToFit()
                     .frame(width: 40, height: 40)
-                Text("UNIRSE")
+                Text(L10n.StreetCamMenuView.Join.title)
                     .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .semibold))
             }
-            Text("Ingresa el código que has recebido.")
+            Text(L10n.StreetCamMenuView.Join.description)
                 .font(.projectFont(size: Tokens.Size.Font.regular))
             HStack(spacing: Tokens.Size.Spacing.regular) {
                 TextInputView(text: .constant(""),
-                              placeholder: "Ingresar código")
-                WCUIButton(title: "Unirme",
+                              placeholder: L10n.StreetCamMenuView.Join.inputPlaceholder)
+                WCUIButton(title: L10n.StreetCamMenuView.Join.button,
                            style: .outline,
                            descriptor: OrangeButtonStyleDescriptor(),
                            action: {

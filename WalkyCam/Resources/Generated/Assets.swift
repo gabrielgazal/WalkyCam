@@ -463,7 +463,6 @@ internal enum Asset {
     internal static let pi = ImageAsset(name: "pi")
     internal static let pixelation = ImageAsset(name: "pixelation")
     internal static let plane = ImageAsset(name: "plane")
-    internal static let playBusiness1 = ImageAsset(name: "playBusiness 1")
     internal static let playBusiness = ImageAsset(name: "playBusiness")
     internal static let radar = ImageAsset(name: "radar")
     internal static let rc2 = ImageAsset(name: "rc2")

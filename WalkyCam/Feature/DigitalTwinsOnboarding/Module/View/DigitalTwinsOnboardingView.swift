@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct DigitalTwinsOnboardingView<ViewModel:DigitalTwinsOnboardingViewModelProtocol, Router: DigitalTwinsOnboardingRouterProtocol>: View {
+struct DigitalTwinsOnboardingView<ViewModel: DigitalTwinsOnboardingViewModelProtocol, Router: DigitalTwinsOnboardingRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -23,13 +23,13 @@ struct DigitalTwinsOnboardingView<ViewModel:DigitalTwinsOnboardingViewModelProto
             TabView(selection: $viewModel.currentPage) {
                 DigitalTwinsPageView(
                     illustration: Asset.Illustrations.dt1Onboarding.swiftUIImage,
-                    title: "Digital Twins",
-                    description: "Representación virtual de un objeto o sistema que abarca su ciclo de vida, se actualiza a partir de datos en tiempo real y utiliza simulación, machine learning y razonamiento para ayudar en la toma de decisiones."
+                    title: L10n.DigitalTwinsOnboardingView.title,
+                    description: L10n.DigitalTwinsOnboardingView.description1
                 ).tag(0)
                 DigitalTwinsPageView(
                     illustration: Asset.Illustrations.dt2OnboardingPdf.swiftUIImage,
-                    title: "Digital Twins",
-                    description: "Selecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.\n\nO también puedes ingresar el código que te envíe tu asistente de confianza."
+                    title: L10n.DigitalTwinsOnboardingView.title,
+                    description: L10n.DigitalTwinsOnboardingView.description2
                 ).tag(1)
             }
             .accentColor(.naranja)
@@ -54,7 +54,7 @@ struct DigitalTwinsOnboardingView<ViewModel:DigitalTwinsOnboardingViewModelProto
                 .frame(maxWidth: .infinity)
                 .isHidden(viewModel.currentPage == 1)
                 WCUIButton(
-                    title: "Comenzar",
+                    title: L10n.DigitalTwinsOnboardingView.start,
                     style: .standard,
                     descriptor: OrangeButtonStyleDescriptor(),
                     action: handleNavigateToDigitalTwins)
@@ -65,10 +65,10 @@ struct DigitalTwinsOnboardingView<ViewModel:DigitalTwinsOnboardingViewModelProto
             .padding(.horizontal, Tokens.Size.Spacing.regular)
             PageControl(numberOfPages: 2, currentPage: $viewModel.currentPage)
         }
-               .onAppear {
-                   setupAppearence()
-               }
-               .navigation(router)
+        .onAppear {
+            setupAppearence()
+        }
+        .navigation(router)
     }
 
     private func setupAppearence() {
@@ -83,7 +83,7 @@ struct DigitalTwinsOnboardingView<ViewModel:DigitalTwinsOnboardingViewModelProto
 
 struct DigitalTwinsOnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-    DigitalTwinsOnboardingView(
+        DigitalTwinsOnboardingView(
             viewModel: DigitalTwinsOnboardingViewModel(),
             router: DigitalTwinsOnboardingRouter(isPresented: .constant(false))
         )

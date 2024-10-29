@@ -6,33 +6,33 @@ final class FeatureSelectionViewModel: FeatureSelectionViewModelProtocol {
 
     private let interactor: FeatureSelectionInteractorProtocol
     @Published var devicesModel: [SelectorModel] = [
-        .init(key: Asset.Icons.lidar.name, value: "LIDAR", isSelected: false),
-        .init(key: Asset.Icons.smartphone.name, value: "Móvil/Smartphone", isSelected: false),
-        .init(key: Asset.Icons.drone.name, value: "Drone", isSelected: false),
-        .init(key: Asset.Icons.camera.name, value: "Videocámara", isSelected: false),
-        .init(key: Asset.Icons.rov.name, value: "ROV Submarino", isSelected: false),
-        .init(key: Asset.Icons._360Camera.name, value: "Cámara 360º", isSelected: false),
-        .init(key: Asset.Icons.scan3D.name, value: "Escaner 3D", isSelected: false),
-        .init(key: Asset.Icons.alcohol.name, value: "Test alcohol y drogas", isSelected: false),
-        .init(key: Asset.Icons.thermalCamera.name, value: "Camara termografica", isSelected: false),
-        .init(key: Asset.Icons.detectorMetales.name, value: "Detector de metales", isSelected: false),
-        .init(key: Asset.Icons.analisadorRedes.name, value: "Analizador de redes electricas", isSelected: false),
-        .init(key: Asset.Icons.cables.name, value: "Detector de cables", isSelected: false),
-        .init(key: Asset.Icons._3dPrinting.name, value: "3D Printer", isSelected: false),
-        .init(key: Asset.Icons.robotDog.name, value: "Robot Dog", isSelected: false),
-        .init(key: "", value: "Sin dispositivo", isSelected: false)
+        .init(key: Asset.Icons.lidar.name, value: L10n.FeatureSelectionViewModel.DevicesModel.lidar, isSelected: false),
+        .init(key: Asset.Icons.smartphone.name, value: L10n.FeatureSelectionViewModel.DevicesModel.smartphone, isSelected: false),
+        .init(key: Asset.Icons.drone.name, value: L10n.FeatureSelectionViewModel.DevicesModel.drone, isSelected: false),
+        .init(key: Asset.Icons.camera.name, value: L10n.FeatureSelectionViewModel.DevicesModel.videocamera, isSelected: false),
+        .init(key: Asset.Icons.rov.name, value: L10n.FeatureSelectionViewModel.DevicesModel.rov, isSelected: false),
+        .init(key: Asset.Icons._360Camera.name, value: L10n.FeatureSelectionViewModel.DevicesModel.camera360, isSelected: false),
+        .init(key: Asset.Icons.scan3D.name, value: L10n.FeatureSelectionViewModel.DevicesModel.scan3D, isSelected: false),
+        .init(key: Asset.Icons.alcohol.name, value: L10n.FeatureSelectionViewModel.DevicesModel.alcoholTest, isSelected: false),
+        .init(key: Asset.Icons.thermalCamera.name, value: L10n.FeatureSelectionViewModel.DevicesModel.thermalCamera, isSelected: false),
+        .init(key: Asset.Icons.detectorMetales.name, value: L10n.FeatureSelectionViewModel.DevicesModel.metalDetector, isSelected: false),
+        .init(key: Asset.Icons.analisadorRedes.name, value: L10n.FeatureSelectionViewModel.DevicesModel.networkAnalyzer, isSelected: false),
+        .init(key: Asset.Icons.cables.name, value: L10n.FeatureSelectionViewModel.DevicesModel.cableDetector, isSelected: false),
+        .init(key: Asset.Icons._3dPrinting.name, value: L10n.FeatureSelectionViewModel.DevicesModel.printer3D, isSelected: false),
+        .init(key: Asset.Icons.robotDog.name, value: L10n.FeatureSelectionViewModel.DevicesModel.robotDog, isSelected: false),
+        .init(key: "", value: L10n.FeatureSelectionViewModel.DevicesModel.noDevice, isSelected: false)
     ]
     
     @Published var abilitiesModel: [SelectorModel] = [
-        .init(key: "scan3d", value: "Escaneo 3D"),
-        .init(key: "3dprint", value: "Impresiones 3D"),
-        .init(key: "lidar", value: "Escaneo LIDAR"),
-        .init(key: "subPhoto", value: "Fotografía submarina"),
-        .init(key: "dive", value: "Buceo"),
-        .init(key: "highWork", value: "Trabajo en altura"),
-        .init(key: "publicTalking", value: "Hablar en público"),
-        .init(key: "vehicle", value: "Cuento con vehículo propio"),
-        .init(key: "acting", value: "Actuar (animador de fiestas)")
+        .init(key: "scan3d", value: L10n.FeatureSelectionViewModel.AbilitiesModel.scan3d),
+        .init(key: "3dprint", value: L10n.FeatureSelectionViewModel.AbilitiesModel._3dprint),
+        .init(key: "lidar", value: L10n.FeatureSelectionViewModel.AbilitiesModel.lidar),
+        .init(key: "subPhoto", value: L10n.FeatureSelectionViewModel.AbilitiesModel.subPhoto),
+        .init(key: "dive", value: L10n.FeatureSelectionViewModel.AbilitiesModel.dive),
+        .init(key: "highWork", value: L10n.FeatureSelectionViewModel.AbilitiesModel.highWork),
+        .init(key: "publicTalking", value: L10n.FeatureSelectionViewModel.AbilitiesModel.publicTalking),
+        .init(key: "vehicle", value: L10n.FeatureSelectionViewModel.AbilitiesModel.vehicle),
+        .init(key: "acting", value: L10n.FeatureSelectionViewModel.AbilitiesModel.acting)
     ]
     
     // MARK: - Initialization

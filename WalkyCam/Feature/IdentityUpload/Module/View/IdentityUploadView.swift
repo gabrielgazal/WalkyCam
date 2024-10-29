@@ -22,24 +22,24 @@ struct IdentityUploadView<ViewModel: IdentityUploadViewModelProtocol, Router: Id
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.regular) {
                 headerView
-                Text("Asegúrate que el ID esté vigente y que todos los campos sean legibles y nítidos.")
+                Text(L10n.IdentityUploadView.instruction)
                     .font(.projectFont(size: Tokens.Size.Font.regular))
-                uploadItem(title: "Frente", uploaded: viewModel.frontUploaded)
+                uploadItem(title: L10n.IdentityUploadView.front, uploaded: viewModel.frontUploaded)
                     .onTapGesture {
                         viewModel.frontUploaded = true
                     }
-                uploadItem(title: "Dorso", uploaded: viewModel.backUploaded)
+                uploadItem(title: L10n.IdentityUploadView.back, uploaded: viewModel.backUploaded)
                     .onTapGesture {
                         viewModel.backUploaded = true
                     }
                 Spacer()
                 VStack(alignment: .center,
                        spacing: Tokens.Size.Spacing.regular) {
-                    WCUIButton(title: "Subir fotos",
+                    WCUIButton(title: L10n.IdentityUploadView.uploadPhotos,
                                style: .standard,
                                descriptor: OrangeButtonStyleDescriptor(),
                                action: {})
-                    LinkButton(title: "Cancelar Registro",
+                    LinkButton(title: L10n.IdentityUploadView.cancelRegistration,
                                color: .naranja,
                                action: {})
                 }
@@ -47,11 +47,11 @@ struct IdentityUploadView<ViewModel: IdentityUploadViewModelProtocol, Router: Id
                 
                 HStack(alignment: .center,
                        spacing: Tokens.Size.Spacing.regular) {
-                    WCUIButton(title: "Cancelar",
+                    WCUIButton(title: L10n.IdentityUploadView.cancel,
                                style: .outline,
                                descriptor: OrangeButtonStyleDescriptor(),
                                action: {})
-                    WCUIButton(title: "Siguiente",
+                    WCUIButton(title: L10n.IdentityUploadView.next,
                                style: .standard,
                                descriptor: BlackButtonStyleDescriptor(),
                                action: {
@@ -60,7 +60,7 @@ struct IdentityUploadView<ViewModel: IdentityUploadViewModelProtocol, Router: Id
                 }
                 .isHidden(!viewModel.frontUploaded || !viewModel.backUploaded)
             }
-                   .padding(.horizontal, Tokens.Size.Spacing.large)
+            .padding(.horizontal, Tokens.Size.Spacing.large)
         }
         .navigation(router)
     }
@@ -74,7 +74,7 @@ struct IdentityUploadView<ViewModel: IdentityUploadViewModelProtocol, Router: Id
             }
             HStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {
-                Text("Carga tu documento de identidad")
+                Text(L10n.IdentityUploadView.title)
                     .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                 Spacer()
             }
@@ -144,7 +144,7 @@ struct IdentityUploadView<ViewModel: IdentityUploadViewModelProtocol, Router: Id
 
 struct IdentityUploadView_Previews: PreviewProvider {
     static var previews: some View {
-    IdentityUploadView(
+        IdentityUploadView(
             viewModel: IdentityUploadViewModel(),
             router: IdentityUploadRouter(isPresented: .constant(false))
         )

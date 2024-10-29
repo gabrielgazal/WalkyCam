@@ -8,10 +8,9 @@ struct GalleryPhotosView<ViewModel: GalleryPhotosViewModelProtocol, Router: Gall
     @ObservedObject private var router: Router
 
     var notificationsGroupedByDate: [Date: [GalleryItemModel]] {
-        Dictionary(grouping: viewModel.photosData) { item in
-            let convertedDate = Calendar.current.startOfDay(for: item.creationDate)
-            return convertedDate
-        }
+        Dictionary<Date, [GalleryItemModel]>(grouping: viewModel.photosData, by: { item in
+            Calendar.current.startOfDay(for: item.creationDate)
+        })
     }
 
     var headers: [Date] {
@@ -61,7 +60,7 @@ struct GalleryPhotosView<ViewModel: GalleryPhotosViewModelProtocol, Router: Gall
 
     private func formatDateInRelationToToday(_ date: Date) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "es_ES")
+        dateFormatter.locale = Locale(identifier: L10n.Formater.locale)
         dateFormatter.dateStyle = .full
         dateFormatter.dateFormat = "d 'de' MMMM 'de' yyyy"
 

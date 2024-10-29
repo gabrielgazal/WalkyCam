@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct SpecialistNotifiedView<ViewModel:SpecialistNotifiedViewModelProtocol, Router: SpecialistNotifiedRouterProtocol>: View {
+struct SpecialistNotifiedView<ViewModel: SpecialistNotifiedViewModelProtocol, Router: SpecialistNotifiedRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -21,7 +21,7 @@ struct SpecialistNotifiedView<ViewModel:SpecialistNotifiedViewModelProtocol, Rou
         VStack(alignment: .leading,
                spacing: Tokens.Size.Spacing.regular) {
             headerView
-            Text("Cuando el técnico confirme, **te enviaremos el enlace de la videollamada** para poder ser asistido.")
+            Text(L10n.SpecialistNotifiedView.CuandoElTecnicoConfirme.title)
                 .font(.projectFont(size: Tokens.Size.Font.regular))
             Spacer()
             HStack {
@@ -34,21 +34,21 @@ struct SpecialistNotifiedView<ViewModel:SpecialistNotifiedViewModelProtocol, Rou
             }
             Spacer()
                 .frame(height: 64)
-            WCUIButton(title: "Aceptar",
+            WCUIButton(title: L10n.SpecialistNotifiedView.Aceptar.title,
                        style: .standard,
                        descriptor: OrangeButtonStyleDescriptor(),
                        action: {
                 router.routeToARHands()
             })
-            WCUIButton(title: "Cancelar asistencia",
+            WCUIButton(title: L10n.SpecialistNotifiedView.CancelarAsistencia.title,
                        style: .standard,
                        descriptor: BlackButtonStyleDescriptor(),
                        action: {
                 router.dismiss()
             })
         }
-               .padding(.horizontal, Tokens.Size.Spacing.large)
-               .navigation(router)
+        .padding(.horizontal, Tokens.Size.Spacing.large)
+        .navigation(router)
     }
 
     private var headerView: some View {
@@ -61,7 +61,7 @@ struct SpecialistNotifiedView<ViewModel:SpecialistNotifiedViewModelProtocol, Rou
             .padding(.horizontal, Tokens.Size.Spacing.large)
             HStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {
-                Text("El especialista ha sido notificado")
+                Text(L10n.SpecialistNotifiedView.ElEspecialistaHaSidoNotificado.title)
                     .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                 Spacer()
             }

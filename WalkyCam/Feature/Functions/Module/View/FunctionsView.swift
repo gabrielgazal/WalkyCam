@@ -27,31 +27,31 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading,
                        spacing: Tokens.Size.Spacing.regular) {
-                    Text("Todo lo que puedes hacer!")
+                    Text(L10n.FunctionsView.Header.title)
                         .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                         .padding(Tokens.Size.Spacing.regular)
-                    HomeSectionView(title: "Básicas") {
+                    HomeSectionView(title: L10n.FunctionsView.Section.basic) {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(spacing: -8) {
                                 ForEach(viewModel.basicFunctions, id: \.self) { item in
                                     FunctionCell(title: item.title, icon: item.icon, lastItem: false)
                                         .onTapGesture {
                                             switch item.title {
-                                            case "Video Call":
+                                            case L10n.FunctionsView.Function.videoCall:
                                                 router.routeToVideoCall()
-                                            case "Street Cam":
+                                            case L10n.FunctionsView.Function.streetCam:
                                                 router.routeToWalkCamer()
-                                            case "AR Hands":
+                                            case L10n.FunctionsView.Function.arHands:
                                                 router.routeToARHands()
-                                            case "Scan 3D":
+                                            case L10n.FunctionsView.Function.scan3D:
                                                 router.routeToScan3D()
-                                            case "Cam 360º":
+                                            case L10n.FunctionsView.Function.cam360:
                                                 router.routeToCamera360()
-                                            case "Games":
+                                            case L10n.FunctionsView.Function.games:
                                                 router.routeToGames()
-                                            case "Play & Business":
+                                            case L10n.FunctionsView.Function.playBusiness:
                                                 router.routeToPlayBusiness()
-                                            case "Certified Recording":
+                                            case L10n.FunctionsView.Function.certifiedRecording:
                                                 router.routeToCertifiedRecording()
                                             default: break
                                             }
@@ -68,30 +68,30 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
                             router.routeToRegistrationPlans()
                         }
                         .navigation(router)
-                    HomeSectionView(title: "Descubre más") {
+                    HomeSectionView(title: L10n.FunctionsView.Section.discoverMore) {
                         LazyVGrid(columns: otherFunctionsColumns,
                                   spacing: 16) {
                             ForEach(viewModel.otherFunctions, id: \.self) { item in
                                 FunctionCell(title: item.title, icon: item.icon, lastItem: false)
                                     .onTapGesture {
                                         switch item.title {
-                                        case "Digital Twins":
+                                        case L10n.FunctionsView.Function.digitalTwins:
                                             router.routeToDigitalTwins()
-                                        case "IOT applications & Data Analysis":
+                                        case L10n.FunctionsView.Function.iot:
                                             router.routeToIOT()
-                                        case "3D Printer":
+                                        case L10n.FunctionsView.Function.printer3D:
                                             router.routeTo3DPrinting()
-                                        case "AI & Data Analysis":
+                                        case L10n.FunctionsView.Function.ai:
                                             router.routeToAI()
-                                        case "Drone Fly":
+                                        case L10n.FunctionsView.Function.droneFly:
                                             router.routeToDrone()
-                                        case "Alcohol & Drug test":
+                                        case L10n.FunctionsView.Function.drugTest:
                                             router.routeToDrugTest()
-                                        case "NFT platform":
+                                        case L10n.FunctionsView.Function.nft:
                                             router.routeToNFT()
-                                        case "Crypto Wallet":
+                                        case L10n.FunctionsView.Function.cryptoWallet:
                                             router.routeToCryptoWallet()
-                                        case "Gestión Agrícola":
+                                        case L10n.FunctionsView.Function.ruralDrone:
                                             router.routeToRuralDrone()
                                         default: break
                                         }
@@ -122,39 +122,39 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
                             }
                             .onTapGesture {
                                 switch item.title {
-                                case "Radar & Sensors":
+                                case L10n.FunctionsView.Function.radar:
                                     router.routeToRadar()
-                                case "R.O.V. Underwater Drone":
+                                case L10n.FunctionsView.Function.rov:
                                     router.routeToROV()
-                                case "Backpack Screen Advertising":
+                                case L10n.FunctionsView.Function.screenAd:
                                     router.routeToScreenAd()
-                                case "Robótica":
+                                case L10n.FunctionsView.Function.robot:
                                     router.routeToRobot()
-                                case "LIDAR Scan":
+                                case L10n.FunctionsView.Function.lidar:
                                     router.routeToLidar()
-                                case "Engineering (Consulting only)":
+                                case L10n.FunctionsView.Function.engineering:
                                     router.routeToConsulting()
-                                case "Lawyer (Consulting only)":
+                                case L10n.FunctionsView.Function.lawConsulting:
                                     router.routeToLawConsulting()
-                                case "Link to CRM/ERP":
+                                case L10n.FunctionsView.Function.crm:
                                     router.routeToCRM()
-                                case "Ecografía":
+                                case L10n.FunctionsView.Function.ecografia:
                                     router.routeToEcografia()
-                                case "Detector de metales":
+                                case L10n.FunctionsView.Function.metalDetector:
                                     router.routeToDetectorMetales()
-                                case "Thermal Camera":
+                                case L10n.FunctionsView.Function.thermalCamera:
                                     router.routeToThermalCamera()
-                                case "Georadar (GPR)":
+                                case L10n.FunctionsView.Function.georadar:
                                     router.routeToGeoradarSuperbanner()
-                                case "Detector de Cables Enterrados":
+                                case L10n.FunctionsView.Function.detector:
                                     router.routeToDetectorSuperbanner()
-                                case "Analizador de Redes Eléctricas":
+                                case L10n.FunctionsView.Function.networkAnalysis:
                                     router.routeToAnalysisSuperbanner()
-                                case "Robótica para Mascotas":
+                                case L10n.FunctionsView.Function.mascotRobot:
                                     router.routeToMascotSuperbanner()
-                                case "Dog Robot":
+                                case L10n.FunctionsView.Function.dogRobot:
                                     router.routeToDogRobotSuperbanner()
-                                case "Robótica Telepresecia":
+                                case L10n.FunctionsView.Function.telepresenceRobot:
                                     router.routeToTelepresenciaSuperbanner()
                                 default: break
                                 }
@@ -167,6 +167,7 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
             .padding([.top], Tokens.Size.Spacing.large)
         }
         .navigation(router)
+        .id(LanguageManager.shared.language.rawValue)
     }
 }
 

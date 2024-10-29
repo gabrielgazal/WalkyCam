@@ -33,14 +33,14 @@ struct VideocallOnboardingView<ViewModel: VideocallOnboardingViewModelProtocol, 
             .disabled(true)
             VStack(spacing: Tokens.Size.Spacing.big) {
                 WCUIButton(
-                    title: "Comenzar",
+                    title: L10n.VideocallOnboardingView.Comenzar.title,
                     style: .standard,
                     descriptor: OrangeButtonStyleDescriptor(),
                     action: handleProceedToStreetCam
                 )
                 .frame(maxWidth: .infinity)
                 .loading(viewModel.isUpdating)
-                LinkButton(title: "Salir",
+                LinkButton(title: L10n.VideocallOnboardingView.Salir.title,
                            color: .naranja,
                            action: {
                     router.dismiss()
@@ -50,10 +50,10 @@ struct VideocallOnboardingView<ViewModel: VideocallOnboardingViewModelProtocol, 
             .animation(.easeInOut, value: viewModel.currentPage)
             .padding(.horizontal, Tokens.Size.Spacing.regular)
         }
-               .onAppear {
-                   setupAppearence()
-               }
-               .navigation(router)
+        .onAppear {
+            setupAppearence()
+        }
+        .navigation(router)
     }
 
     private func setupAppearence() {
@@ -72,14 +72,14 @@ struct VideocallOnboardingView<ViewModel: VideocallOnboardingViewModelProtocol, 
 
 struct VideocallOnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-    VideocallOnboardingView(
-        viewModel: VideocallOnboardingViewModel(
-            interactor: VideocallOnboardingInteractor(
-                useCases: .init(
-                    updateVideocallConfiguration: .empty
+        VideocallOnboardingView(
+            viewModel: VideocallOnboardingViewModel(
+                interactor: VideocallOnboardingInteractor(
+                    useCases: .init(
+                        updateVideocallConfiguration: .empty
+                    )
                 )
-            )
-        ),
+            ),
             router: VideocallOnboardingRouter(isPresented: .constant(false))
         )
     }

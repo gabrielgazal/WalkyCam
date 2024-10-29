@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ARHandsOnboardingView<ViewModel:ARHandsOnboardingViewModelProtocol, Router: ARHandsOnboardingRouterProtocol>: View {
+struct ARHandsOnboardingView<ViewModel: ARHandsOnboardingViewModelProtocol, Router: ARHandsOnboardingRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -23,24 +23,24 @@ struct ARHandsOnboardingView<ViewModel:ARHandsOnboardingViewModelProtocol, Route
             Asset.Illustrations.asistenteRemoto.swiftUIImage
                 .resizable()
                 .scaledToFit()
-            Text("Recibe ayuda a distancia")
+            Text(L10n.ARHandsOnboardingView.RecibeAyudaADistancia.title)
                 .multilineTextAlignment(.center)
                 .font(.projectFont(size: Tokens.Size.Font.large,
                                    weight: .bold))
                 .foregroundColor(.negro)
                 .multilineTextAlignment(.center)
-            Text("Selecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.\n\nO también puedes ingresar el código que te envíe tu asistente de confianza.")
+            Text(L10n.ARHandsOnboardingView.SeleccionaArea.title)
                 .font(.projectFont(size: Tokens.Size.Font.regular))
                 .multilineTextAlignment(.center)
             Spacer()
-            WCUIButton(title: "Comenzar",
+            WCUIButton(title: L10n.ARHandsOnboardingView.Comenzar.title,
                        style: .standard,
                        descriptor: OrangeButtonStyleDescriptor(),
                        action: handleRouteToARHands)
             .loading(viewModel.isUpdating)
         }
-               .padding(Tokens.Size.Spacing.large)
-               .navigation(router)
+        .padding(Tokens.Size.Spacing.large)
+        .navigation(router)
     }
     
     private func handleRouteToARHands() {

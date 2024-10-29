@@ -1,153 +1,821 @@
+"Formater.locale" = "en_US";
+
 // MARK: - General
-"copyright.text"= "@WalkyCam 2021 - All reserved copyright";
+"copyright.text" = "@WalkyCam 2021 - All reserved copyright";
 
 // MARK: - LoginView
 
 "LoginView.title.text" = "Login";
-"LoginView.input.user.text" = "Usuario";
-"LoginView.input.user.placeholder" = "Usuario";
-"LoginView.input.password.text" = "Contraseña";
-"LoginView.input.password.placeholder" = "Contraseña";
-"LoginView.button.forgotPassword" = "He olvidado la contraseña";
+"LoginView.input.user.text" = "User";
+"LoginView.input.user.placeholder" = "User";
+"LoginView.input.password.text" = "Password";
+"LoginView.input.password.placeholder" = "Password";
+"LoginView.button.forgotPassword" = "I forgot my password";
 "LoginView.button.login" = "Login";
-"LoginView.button.signup" = "Registrame";
+"LoginView.button.signup" = "Sign up";
 "LoginView.divider.text" = "Or Sign up with";
 
 // MARK: - OnboardingView
-"OnboardingView.Page1.title" = "Qué es?";
-"OnboardingView.Page1.subtitle" = "Tu STREETcam 24/7 \n\nStreaming en vivo donde quieras, cuando quieras. Ubica a tu WalkCamer y empieza a grabar. \n\nWalkyCam tiene mas de 20 servicios. Descúbrelos!";
-"OnboardingView.Page2.title" = "Universo WalkyCam";
-"OnboardingView.Page2.subtitle" = "Manos AR, PIXELADO de Caras, Escaneo 3D, DRONES Aéreos y R.O.V., IA especializada, IOT Service, \n\n**y mucho más!**";
-"OnboardingView.Page3.title" = "Experiencia Inmersiva";
-"OnboardingView.Page3.subtitle" = "Sumergete en otros lugares sin salir de casa.\n\nExplora nuevos entornos y viaja virtualmente.";
-"OnboardingView.Button.skip" = "Omitir";
-"OnboardingView.Button.next" = "Continuar";
-"OnboardingView.Button.start" = "Comenzar";
+"OnboardingView.Page1.title" = "What is it?";
+"OnboardingView.Page1.subtitle" = "Your STREETcam 24/7 \n\nLive streaming anywhere, anytime. Locate your WalkCamer and start recording. \n\nWalkyCam has over 20 services. Discover them!";
+"OnboardingView.Page2.title" = "WalkyCam Universe";
+"OnboardingView.Page2.subtitle" = "AR Hands, FACE PIXELATION, 3D Scanning, Aerial DRONES and R.O.V., Specialized AI, IOT Service, \n\n**and much more!**";
+"OnboardingView.Page3.title" = "Immersive Experience";
+"OnboardingView.Page3.subtitle" = "Dive into other places without leaving home.\n\nExplore new environments and travel virtually.";
+"OnboardingView.Button.skip" = "Skip";
+"OnboardingView.Button.next" = "Continue";
+"OnboardingView.Button.start" = "Start";
+
+// MARK: - HomeView
+"HomeView.recentFunctions.title" = "Recent";
+"HomeView.reminders.title" = "Reminders";
+"HomeView.news.title" = "News";
+"HomeView.favorites.title" = "Favorites";
+"HomeView.files.title" = "File Gallery";
+"HomeView.profile.hello" = "Hello %@!";
+"HomeView.section.seeMore" = "See more";
 
 // MARK: - TabBarBuilder
 
 "TabBarBuilder.tab.home" = "Home";
-"TabBarBuilder.tab.functions" = "Funciones";
-"TabBarBuilder.tab.menu" = "Menú";
+"TabBarBuilder.tab.functions" = "Functions";
+"TabBarBuilder.tab.menu" = "Menu";
 
 // MARK: - MenuViewModel
 
 "MenuViewModel.item.wallet" = "Cash Wallet";
-"MenuViewModel.item.galery" = "Galería";
-"MenuViewModel.item.settings" = "Configuración";
-"MenuViewModel.item.help" = "Ayuda";
+"MenuViewModel.item.galery" = "Gallery";
+"MenuViewModel.item.settings" = "Settings";
+"MenuViewModel.item.help" = "Help";
 "MenuViewModel.item.bot" = "Walky";
 
 // MARK: - WalkyBotView
 
-"WalkyBotView.text" = "¿Qué hacemos hoy?";
-
+"WalkyBotView.text" = "What shall we do today?";
 
 // MARK: - RegistrationPlans
 
-"RegistrationPlans.title" = "Elige tu plan";
-"RegistrationPlans.description" = "Para comenzar elige un plan, luego puedes cambiarlo.";
-"RegistrationPlans.button.title" = "Comparar Planes";
-"RegistrationPlans.plan.button.title" = "Ver Plan";
+"RegistrationPlans.title" = "Choose your plan";
+"RegistrationPlans.description" = "To get started, choose a plan. You can change it later.";
+"RegistrationPlans.button.title" = "Compare Plans";
+"RegistrationPlans.plan.button.title" = "View Plan";
 "RegistrationPlans.value.monthly" = "%@ €/mo";
 "RegistrationPlans.value.yearly" = "%@ €/yr";
 
 // MARK: - ProfileView
-"ProfileView.navigation.default.title" = "Perfil";
-"ProfileView.navigation.edit.title" = "Editar Perfil";
-"ProfileView.toggle.walkycamer" = "Soy WalkCamer";
-"ProfileView.field.name" = "Nombre";
-"ProfileView.field.lastname" = "Apellido";
-"ProfileView.field.birthDate" = "Fecha de nacimiento";
-"ProfileView.convert.walkycamer" = "Quiero ser WalkCamer";
-"ProfileView.section.logout" = "Cerrar Sesión";
-"ProfileView.button.save" = "Guardar cambios";
-"ProfileView.button.cancel" = "Cancelar";
+"ProfileView.navigation.default.title" = "Profile";
+"ProfileView.navigation.edit.title" = "Edit Profile";
+"ProfileView.toggle.walkycamer" = "I am a WalkCamer";
+"ProfileView.field.name" = "Name";
+"ProfileView.field.lastname" = "Last Name";
+"ProfileView.field.birthDate" = "Birth Date";
+"ProfileView.convert.walkycamer" = "I want to be a WalkCamer";
+"ProfileView.section.logout" = "Log Out";
+"ProfileView.button.save" = "Save Changes";
+"ProfileView.button.cancel" = "Cancel";
 
-//MARK: - ConfirmMailView
-"ConfirmMailView.title" = "Tu cuenta se registró con éxito.\nTe hemos enviado un correo para confirmar tu cuenta";
-"ConfirmMailView.button" = "Ir al correo";
+// MARK: - ConfirmMailView
+"ConfirmMailView.title" = "Your account has been successfully registered.\nWe have sent you an email to confirm your account";
+"ConfirmMailView.button" = "Go to Email";
 
-//MARK: - StartupView
-"StartupView.title" = "Bienvenida %@!";
-"StartupView.subtitle" = "Tu cuenta ha sido validada.";
-"StartupView.button" = "Comenzar";
+// MARK: - StartupView
+"StartupView.title" = "Welcome %@!";
+"StartupView.subtitle" = "Your account has been validated.";
+"StartupView.button" = "Start";
 
-//MARK: - CashWalletOnboardingView
+// MARK: - CashWalletOnboardingView
 "CashWalletOnboardingView.Page1.title" = "Cash Wallet";
-"CashWalletOnboardingView.Page1.subtitle" = "Tu dinero de curso legal (Dinero FIAT), accede a tus cuentas bancarias y efectúa o recibe transferencias, con la máxima seguridad.";
+"CashWalletOnboardingView.Page1.subtitle" = "Your legal tender money (FIAT), access your bank accounts, and make or receive transfers with maximum security.";
 "CashWalletOnboardingView.Page2.title" = "Crypto Wallet";
-"CashWalletOnboardingView.Page2.subtitle" = "Monedero de Criptomonedas: Opera sobre tus criptomonedas con total seguridad.";
-"CashWalletOnboardingView.Button.skip" = "Omitir";
-"CashWalletOnboardingView.Button.next" = "Continuar";
-"CashWalletOnboardingView.Button.start" = "Ingresar";
+"CashWalletOnboardingView.Page2.subtitle" = "Cryptocurrency Wallet: Operate on your cryptocurrencies with total security.";
+"CashWalletOnboardingView.Button.skip" = "Skip";
+"CashWalletOnboardingView.Button.next" = "Continue";
+"CashWalletOnboardingView.Button.start" = "Enter";
 
-//MARK: - WalkyCamerOnboardingView
-"WalkyCamerOnboardingView.Page1.title" = "Conéctate con el mundo";
-"WalkyCamerOnboardingView.Page1.subtitle" = "1. Indica la zona a grabar.\n\n2. Elige un WalkCamer acorde con tus necesidades.\n\n3. Tu WalkCamer aceptará la invitación para iniciar la videollamada.";
-"WalkyCamerOnboardingView.Page2.title" = "Su privacidad es importante para nosotros";
-"WalkyCamerOnboardingView.Page2.subtitle1" = "Para cuidar su privacidad, WalkyCam ofrece la posibilidad de pixelar el rostro de las personas y las placas de los autos que puedan aparecer en una transmisión.";
-"WalkyCamerOnboardingView.Page2.subtitle2"= "WalkyCam no se responsabiliza por las imagenes que se transmiten ni por la grabación realizada.";
+// MARK: - WalkyCamerOnboardingView
+"WalkyCamerOnboardingView.Page1.title" = "Connect with the world";
+"WalkyCamerOnboardingView.Page1.subtitle" = "1. Indicate the area to record.\n\n2. Choose a WalkCamer according to your needs.\n\n3. Your WalkCamer will accept the invitation to start the video call.";
+"WalkyCamerOnboardingView.Page2.title" = "Your privacy is important to us";
+"WalkyCamerOnboardingView.Page2.subtitle1" = "To protect your privacy, WalkyCam offers the option to pixelate the faces of people and license plates of cars that may appear in a broadcast.";
+"WalkyCamerOnboardingView.Page2.subtitle2" = "WalkyCam is not responsible for the images transmitted or the recording made.";
 
-//MARK: - VideocallOnboardingView
-"VideocallOnboardingView.Page.title" = "Videollamada";
-"VideocallOnboardingView.Page.subtitle" = "Crea una nueva reunión o programa para otro dia.\n\nTambién puedes unirte a una reunión ingresando el código que te han compartido.";
+// MARK: - VideocallOnboardingView
+"VideocallOnboardingView.Page.title" = "Video Call";
+"VideocallOnboardingView.Page.subtitle" = "Create a new meeting or schedule for another day.\n\nYou can also join a meeting by entering the code that was shared with you.";
 
 // MARK: - ErrorView
 
 "errorView.generic.icon" = "retry";
-"errorView.generic.message" = "Ops! Algo salió mal";
-"errorView.generic.description" = "Por alguna razón la información no cargó";
-"errorView.generic.buttonTitle" = "Intentar otra vez";
+"errorView.generic.message" = "Oops! Something went wrong";
+"errorView.generic.description" = "For some reason, the information did not load";
+"errorView.generic.buttonTitle" = "Try Again";
 
 // MARK: - Tooltips
 
-"Tooltip.VideoCall" = "Crea una nueva reunión o programa para otro día.\nTambién puedes unirte a una reunión ingresando el código que te han compartido.";
-"Tooltip.LIDAR" = "Mapea y digitaliza áreas en contrucción o descubre lo que hay debajo de la selva.\nVive la magia del escaneado con laser mediante la técnica LIDAR";
-"Tooltip.AsistenciaRemota" = "Selecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.\nO también puedes ingresar el código que te envíe tu asistente de confianza.";
-"Tooltip.Scan3D" = "Crea modelos 3D de objetos reales a partir de fotografías.\nSolicita un WalkCamer para efectuar el Scan 3D por ti, a distancia.\nUna vez escaneado, puedes editar color, tamaño y forma de la imagen escaneada del objeto. Realiza una impresión 3D del objeto y recibe el objeto.";
-"Tooltip.Print3D" = "Una vez escaneado, puedes editar el color y el tamaño.\nElige la forma de envío más adecuada.\nElegir el material y el acabado del objeto antes de enviarlo a imprimir en 3D.\nDisfruta de nuestro envio VIP, envíos frecuentes, y mucho más!";
-"Tooltip.PixelationFaces" = "Su privacidad es importante para nosotros.\nPara cuidar su privacidad, WalkyCam da la posibilidad de pixelar el rostro de las personas y placas de autos que puedan aparecer en una transmisión.\nWalkyCam no se responsabiliza por las imagenes que se transmiten ni por la grabación realizada.";
-"Tooltip.StreetCam" = "Conéctate con el mundo.\nIndica la zona a grabar.\nElige un WalkCamer acorde a tus requerimientos\nTu WalkCamer aceptará la invitación para iniciar la videollamada.";
-"Tooltip.IOT" = "Elige entre Farming, Industry, Agriculture, Fleet, Retail, Smart City y mucho más!\nSelecciona los sensores indicando su valor.\nLocaliza tu WalkCamer más cercano y gestiona tu IOT.";
-"Tooltip.DigitalTwins" = "Representación virtual de un objeto o sistema que abarca su ciclo de vida, se actualiza a partir de datos en tiempo real y utiliza simulación, machine learning y razonamiento para ayudar en la toma de decisiones.\nSelecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.";
-"Tooltip.Drone Fly" = "Tu eliges donde grabar tus videos y/o capturar imágenes.\nNosotros pilotamos por ti.\nUtiliza drones en tu cultivo: mapeo de campos, IOT, vigilancia y monitoreo de los cultivos, agricultura ecológica.\nContamos con profesionales acreditados y con experiencia. Tu WalkCamer te guiará.";
+"Tooltip.VideoCall" = "Create a new meeting or schedule for another day.\nYou can also join a meeting by entering the code shared with you.";
+"Tooltip.LIDAR" = "Map and digitize construction areas or discover what's beneath the jungle.\nExperience the magic of laser scanning using LIDAR technology.";
+"Tooltip.AsistenciaRemota" = "Select the area where you need assistance, and we will provide the best specialized technicians.\nOr you can enter the code sent to you by your trusted assistant.";
+"Tooltip.Scan3D" = "Create 3D models of real objects from photographs.\nRequest a WalkCamer to perform the 3D Scan for you remotely.\nOnce scanned, you can edit the color, size, and shape of the scanned image of the object. 3D print the object and receive it.";
+"Tooltip.Print3D" = "Once scanned, you can edit the color and size.\nChoose the most suitable shipping method.\nSelect the material and finish of the object before sending it to be 3D printed.\nEnjoy our VIP delivery, frequent shipments, and much more!";
+"Tooltip.PixelationFaces" = "Your privacy is important to us.\nTo protect your privacy, WalkyCam offers the option to pixelate the faces of people and car plates that may appear in a transmission.\nWalkyCam is not responsible for the images transmitted or for the recordings made.";
+"Tooltip.StreetCam" = "Connect with the world.\nIndicate the area to be filmed.\nChoose a WalkCamer according to your requirements.\nYour WalkCamer will accept the invitation to start the video call.";
+"Tooltip.IOT" = "Choose from Farming, Industry, Agriculture, Fleet, Retail, Smart City, and much more!\nSelect the sensors by specifying their value.\nLocate your nearest WalkCamer and manage your IOT.";
+"Tooltip.DigitalTwins" = "A virtual representation of an object or system that encompasses its life cycle, updates from real-time data, and uses simulation, machine learning, and reasoning to assist decision-making.\nSelect the area where you need assistance, and we will provide the best specialized technicians.";
+"Tooltip.Drone Fly" = "You choose where to record your videos and/or capture images.\nWe pilot for you.\nUse drones in your crops: field mapping, IOT, surveillance, and monitoring of crops, eco-friendly agriculture.\nWe have accredited and experienced professionals. Your WalkCamer will guide you.";
 
-"Tooltip.IADataAnalysis" = "Motor de AI entrenado sobre tus datos y tu comportamiento de uso dentro de WalkyCam.\nPor única vez, antes de iniciar es necesario integrar y permitir accesos para poder ofrecer mejores recomendaciones, ahorrar trabajo y ofrecer soluciones/ alternativas a los problemas.";
-"Tooltip.AlcoholDrugTest" = "Análisis técnico de una muestra biológica, por ejemplo, orina, cabello, sangre, aliento, sudor o fluido oral/saliva, para determinar la presencia o ausencia de drogas originales específicas o sus metabolitos.\nSelecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.";
-"Tooltip.NFT" = "Crea NFT’s de tu arte digital o descubre nuevos NFT’s en nuestra tienda.";
-"Tooltip.CryptoWallet" = "Monedero de Criptomonedas: Opera sobre tus criptomonedas con total seguridad.";
-"Tooltip.Georadar" = "Radar de Penetración de Suelo:\nPermite Mapear y localizar estructuras y objetos enterrados en el subsuelo.\nSelecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.";
-"Tooltip.ROVDrone" = "Nuestros R.O.V. Drones Submarinos, serán controlados por WalkCamers especialistas.\nSelecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.\nSumerjete en aguas profundas y graba tus propios videos, con nuestros R.O.V. Drones Submarinos.\nPodrás usar su brazo robot, para recoger muestras, o manipular objetos.\nLos equipos van desde un simple R.O.V. para grabar video, hasta equipos de aguas profundas para la industria naval y la investigación científica";
-"Tooltip.DetectorCables" = "Mediante ondas electromagnéticas detecta y mapea, cables eléctricos y tuberías, enterrados hasta una profundidad de 7 mt con total precisión.\nSelecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.";
-"Tooltip.Analizador de Redes" = "Analiza Instalaciones y Sistemas eléctricos, mediante un computador que mide incidencias en tu red, consumos indebidos, entre otros.\nSelecciona el área en el que necesites asistencia y nosotros te brindaremos los mejores técnicos especializados.";
-"Tooltip.BackPackScreenADversiting" = "Crea tu campaña publicitaria con Anuncios en Pantallas móviles.\nAumenta tu ratio de ventas.\nSelecciona el área en el que necesites asistencia.\nHaz que tu negocio se vea en la calle.\nAccede a zonas impensables y gana visibilidad.";
-"Tooltip.Ecografía" = "Ecografías a distancia efectuadas por profesionales.\nLlegamos a donde menos te lo esperas, con equipos de primera calidad.\nConsigue una segunda opinión\nPodrás ver las imágenes en directo.";
-"Tooltip.DetectorMetales" = "Encuentra tu anillo perdido.\nPuedes enviar a un experto a buscar por ti.\nDescubre increíbles tesoros desde la comodidad de tu hogar u oficina.";
-"Tooltip.DogRobot" = "Robot con forma de perro que utiliza sensores con (IA) para moverse e interaccionar con personas y objetos.\nPuede prestar ayuda en emergencias o como acompañante de personas dependientes, también puede monitorizar datos de su entorno de forma remota.";
-"Tooltip.RobóticaTelepresencia" = "Robot de vídeo online que permite que varios interlocutores se comuniquen.\nDesplázate por ferias y eventos como si estuvieras alli.\nInteractúa comercialmente o da clases y conferencias a distancia, mientras te mueves por el entorno.";
-"Tooltip.RobóticaMascotas" = "Vigila, Entrena o Alimenta a tus mascotas a distancia.\nPodrás controlar sus movimientos y su estado general, desde la comodidad de tu móvil.";
-"Tooltip.Karaoke" = "Disfruta de un karaoke en streaming con tu familia y amigos.";
-"Tooltip.Glasses Prove" = "Pruebate los ultimos modelos de gafas y obten grandes descuentos.";
-"Tooltip.Games" = "Juega a miles de videojuegos, gratis y de pago, en local o en linea.";
-"Tooltip.HairProve" = "Pruebate los más atrevedidos peinados, y reserva cita en una de nuestras peluquerías.";
-"Tooltip.DressProve" = "Tu provadro de ropa virtual, con grandes ofertas.";
-"Tooltip.RGBBulbParty." = "Convierte tu Laptop o tú móvil, en un show de luces de colores, mientras escuchas tu música favorita.";
-"Tooltip.Copyrights" = "Legaliza y protege tus derechos de autor, gratis(*) o de forma guiada.";
-"Tooltip.ScapeRoom" = "Monta las mejores fiestas de Scape Room, online o en una casa real.";
-"Tooltip.Mariachis" = "Envía un servicio de cantantes o mariachis a domicilio, para cumpleaños, bromas etc.";
-"Tooltip.FilmMaker" = "Conviertete en director/a de cine, crea tus propias películas con efectos y diálogos, gracias a nuestra AI.";
-"Tooltip.MuestraProductos" = "Expon tu propio show room de productos y envía muestras a tus clientes.";
-"Tooltip.IdeaNegocio" = "Registra tu know how de negocio con nosotros y pruebalo en privado o en publico.";
-"Tooltip.PulseraFitness" = "Participa en carreras en grupo por streaming, o ponle una pulsera a tu mascota.";
-"Tooltip.Famosos" = "Consigue tu sueño una videollamada de tu famoso/a preferido/a.";
-"Tooltip.PersonalShopper" = "Si no tienes tiempo, compramos lo que necesites para ti, y te lo llevamos a casa o a donde tu quieras, todo ello en streaming.";
-"Tooltip.PatenteInvención" = "Te ayudamos a presentar tus patentes de invención,o nos hacemos socios si así lo deseas.";
-"Tooltip.Gymkhana" = "Monta tus mejores juegos de busqueda del tesoro con nosotros en ubicaciones increibles o en streaming. Participa y pasalo bien en grupo o desde casa.";
-"Tooltip.CajaSorpresa" = "Regalate o regala a otros nuestras alucinantes cajas sorpresa.";
-"Tooltip.CertifiedRecording" = "Grabación certificada de Documentos,Videos y Navegación Online";
-"Tooltip.Engineering" = "Consultores en ingeniería para resolver tus dudas, de legalizaciones, instalaciones, obras, etc";
-"Tooltip.Lawyer" = "Consultores legales para resolver tus dudas, sobre temas laborales, fiscales, contables, etc";
-"Tooltip.Camara360" = "Graba videos con visión 360º, o crea Gemelos Digitales, para formación o mantenimiento.";
-"Tooltip.CRM" = "Conecta y sincroniza tus CRM con WalkyCam,de forma segura. Comparte y almacena información en ambas plataformas.";
-"Tooltip.ThermalCamera" = "Detecta y visualiza el calor emitido por objetos y personas\nProblemas eléctricos y de aislamiento térmico";
+"Tooltip.IADataAnalysis" = "AI engine trained on your data and usage behavior within WalkyCam.\nBefore starting, it's necessary to integrate and grant access to offer better recommendations, save work, and provide solutions/alternatives to problems.";
+"Tooltip.AlcoholDrugTest" = "Technical analysis of a biological sample, such as urine, hair, blood, breath, sweat, or oral/saliva fluid, to determine the presence or absence of specific original drugs or their metabolites.\nSelect the area where you need assistance, and we will provide the best specialized technicians.";
+"Tooltip.NFT" = "Create NFTs of your digital art or discover new NFTs in our store.";
+"Tooltip.CryptoWallet" = "Cryptocurrency Wallet: Operate your cryptocurrencies with total security.";
+"Tooltip.Georadar" = "Ground Penetration Radar:\nAllows mapping and locating structures and objects buried underground.\nSelect the area where you need assistance, and we will provide the best specialized technicians.";
+"Tooltip.ROVDrone" = "Our R.O.V. Underwater Drones will be controlled by specialized WalkCamers.\nSelect the area where you need assistance, and we will provide the best specialized technicians.\nDive into deep waters and record your own videos with our R.O.V. Underwater Drones.\nYou can use its robotic arm to collect samples or manipulate objects.\nThe equipment ranges from a simple R.O.V. for video recording to deepwater equipment for naval industry and scientific research.";
+"Tooltip.DetectorCables" = "Using electromagnetic waves, detect and map buried electrical cables and pipes with total precision up to a depth of 7 meters.\nSelect the area where you need assistance, and we will provide the best specialized technicians.";
+"Tooltip.Analizador de Redes" = "Analyze electrical installations and systems using a computer that measures incidences in your network, improper consumption, and more.\nSelect the area where you need assistance, and we will provide the best specialized technicians.";
+"Tooltip.BackPackScreenADversiting" = "Create your advertising campaign with mobile Screen Ads.\nIncrease your sales ratio.\nSelect the area where you need assistance.\nMake your business visible on the street.\nAccess unexpected areas and gain visibility.";
+"Tooltip.Ecografía" = "Remote ultrasound performed by professionals.\nWe reach where you least expect it, with top-quality equipment.\nGet a second opinion.\nYou will be able to see the images live.";
+"Tooltip.DetectorMetales" = "Find your lost ring.\nYou can send an expert to search for it on your behalf.\nDiscover incredible treasures from the comfort of your home or office.";
+"Tooltip.DogRobot" = "Dog-shaped robot that uses AI sensors to move and interact with people and objects.\nIt can assist in emergencies or accompany dependent individuals, and it can also remotely monitor environmental data.";
+"Tooltip.RobóticaTelepresencia" = "Online video robot that allows multiple interlocutors to communicate.\nMove through fairs and events as if you were there.\nInteract commercially or give classes and lectures remotely while moving through the environment.";
+"Tooltip.RobóticaMascotas" = "Monitor, Train, or Feed your pets remotely.\nYou can control their movements and general condition from the comfort of your mobile device.";
+"Tooltip.Karaoke" = "Enjoy a karaoke in streaming with your family and friends.";
+"Tooltip.Glasses Prove" = "Try on the latest glasses models and get great discounts.";
+"Tooltip.Games" = "Play thousands of games, free and paid, locally or online.";
+"Tooltip.HairProve" = "Try the boldest hairstyles and book an appointment at one of our salons.";
+"Tooltip.DressProve" = "Your virtual dressing room, with great deals.";
+"Tooltip.RGBBulbParty" = "Turn your laptop or mobile into a light show while listening to your favorite music.";
+"Tooltip.Copyrights" = "Legalize and protect your copyrights, free(*) or with guided assistance.";
+"Tooltip.ScapeRoom" = "Host the best Scape Room parties, online or in a real house.";
+"Tooltip.Mariachis" = "Send a service of singers or mariachis to someone's home for birthdays, pranks, etc.";
+"Tooltip.FilmMaker" = "Become a director, create your own films with effects and dialogues, thanks to our AI.";
+"Tooltip.MuestraProductos" = "Display your own product showroom and send samples to your customers.";
+"Tooltip.IdeaNegocio" = "Register your business know-how with us and test it in private or public.";
+"Tooltip.PulseraFitness" = "Join group races via streaming or put a bracelet on your pet.";
+"Tooltip.Famosos" = "Fulfill your dream of a video call with your favorite celebrity.";
+"Tooltip.PersonalShopper" = "If you don't have time, we'll shop for what you need and deliver it to your home or wherever you want, all in streaming.";
+"Tooltip.PatenteInvención" = "We help you file your invention patents, or we become partners if you wish.";
+"Tooltip.Gymkhana" = "Host your best treasure hunt games with us in amazing locations or online. Participate and have fun in a group or from home.";
+"Tooltip.CajaSorpresa" = "Give yourself or others our amazing surprise boxes.";
+"Tooltip.CertifiedRecording" = "Certified recording of Documents, Videos, and Online Browsing.";
+"Tooltip.Engineering" = "Engineering consultants to answer your questions about legalizations, installations, works, etc.";
+"Tooltip.Lawyer" = "Legal consultants to answer your questions about labor, fiscal, accounting issues, etc.";
+"Tooltip.Camara360" = "Record videos with 360º vision or create Digital Twins for training or maintenance.";
+"Tooltip.CRM" = "Connect and sync your CRM with WalkyCam securely. Share and store information on both platforms.";
+"Tooltip.ThermalCamera" = "Detect and visualize the heat emitted by objects and people.\nElectrical and thermal insulation problems.";
+
+// MARK: - MenuViewModel
+
+"MenuViewModel.item.wallet" = "Wallet";
+"MenuViewModel.item.galery" = "Gallery";
+"MenuViewModel.item.settings" = "Settings";
+"MenuViewModel.item.help" = "Help";
+"MenuViewModel.item.bot" = "Bot";
+"MenuViewModel.plans.basic.title" = "Basic";
+"MenuViewModel.plans.basic.text" = "Get more benefits!";
+"MenuViewModel.plans.standard.title" = "Standard";
+"MenuViewModel.plans.standard.text" = "Get more benefits. Fly a Drone remotely!";
+"MenuViewModel.plans.premium.title" = "Premium";
+"MenuViewModel.plans.premium.text" = "Get ALL the benefits WalkyCam offers";
+"MenuViewModel.pricing.title" = "Plans and Pricing";
+
+// MARK: - HomeViewModel
+"HomeViewModel.recentFunctions.videoCall.title" = "Video Call";
+"HomeViewModel.recentFunctions.streetCam.title" = "Street Cam";
+"HomeViewModel.recentFunctions.scan3D.title" = "Scan 3D";
+"HomeViewModel.recentFunctions.arHands.title" = "AR Hands";
+"HomeViewModel.recentFunctions.droneFly.title" = "Drone Fly";
+"HomeViewModel.recentFunctions.mas.title" = "More";
+"HomeViewModel.reminders.hoy.date" = "Today - 13:00 h.";
+"HomeViewModel.reminders.camila.date" = "30 Oct 2023 - 10:00 h.";
+"HomeViewModel.news.sap.title" = "Your SAP connection failed";
+"HomeViewModel.news.sap.description" = "Your credentials have expired.";
+"HomeViewModel.news.iot.title" = "WALKY helps with your IOT";
+"HomeViewModel.news.iot.description" = "You need to regularly calibrate the sensors.";
+"HomeViewModel.news.drone.description" = "Remember, your flight plan is only for Cajamarca. It expires today at 20:00 h.";
+"HomeViewModel.favorites.lali.name" = "Lali Espósito";
+"HomeViewModel.favorites.diego.name" = "Diego Salas";
+"HomeViewModel.favorites.camila.name" = "Camila Cabello";
+"HomeViewModel.favorites.thiago.name" = "Thiago Guirao";
+"HomeViewModel.favorites.bogota.location" = "Bogotá, Colombia";
+"HomeViewModel.favorites.cdmx.location" = "CDMX, Mexico";
+"HomeViewModel.favorites.marDelPlata.location" = "Mar del Plata, Argentina";
+"HomeViewModel.files.scan3D.title" = "My 3D Scans";
+"HomeViewModel.files.walkCamer.title" = "My WalkCamer videos";
+"HomeViewModel.files.iot.title" = "My IOT services";
+"HomeViewModel.files.drone.title" = "My Drone videos";
+
+// MARK: - NotificationsView
+"NotificationsView.header.title" = "Notifications";
+"NotificationsView.date.today" = "Today";
+
+"RegistrationPlansView.toggle.test" = "Toggle Test";
+"RegistrationPlansView.plan.annual" = "Annual plan";
+"RegistrationPlansView.plan.discount" = "(now 5%%)";
+
+"ProfileView.field.phoneNumber" = "Cell phone number";
+"ProfileView.field.gender" = "Gender";
+"ProfileView.field.address" = "Address";
+"ProfileView.field.aboutMe" = "About me";
+"ProfileView.field.notInformed" = "Not informed";
+"ProfileView.Premium.upgradeTitle" = "Upgrade Premium Plan";
+"ProfileView.Premium.upgradeDescription" = "Get ALL the benefits that WalkyCam offers";
+
+"FunctionsView.header.title" = "Everything you can do!";
+"FunctionsView.section.basic" = "Basic";
+"FunctionsView.section.discoverMore" = "Discover more";
+"FunctionsView.function.videoCall" = "Video Call";
+"FunctionsView.function.streetCam" = "Street Cam";
+"FunctionsView.function.arHands" = "AR Hands";
+"FunctionsView.function.scan3D" = "Scan 3D";
+"FunctionsView.function.cam360" = "Cam 360º";
+"FunctionsView.function.games" = "Games";
+"FunctionsView.function.playBusiness" = "Play & Business";
+"FunctionsView.function.certifiedRecording" = "Certified Recording";
+"FunctionsView.function.digitalTwins" = "Digital Twins";
+"FunctionsView.function.iot" = "IOT applications & Data Analysis";
+"FunctionsView.function.printer3D" = "3D Printer";
+"FunctionsView.function.ai" = "AI & Data Analysis";
+"FunctionsView.function.droneFly" = "Drone Fly";
+"FunctionsView.function.drugTest" = "Alcohol & Drug test";
+"FunctionsView.function.nft" = "NFT platform";
+"FunctionsView.function.cryptoWallet" = "Crypto Wallet";
+"FunctionsView.function.ruralDrone" = "Agricultural Management";
+"FunctionsView.function.radar" = "Radar & Sensors";
+"FunctionsView.function.rov" = "R.O.V. Underwater Drone";
+"FunctionsView.function.screenAd" = "Backpack Screen Advertising";
+"FunctionsView.function.robot" = "Robotics";
+"FunctionsView.function.lidar" = "LIDAR Scan";
+"FunctionsView.function.engineering" = "Engineering (Consulting only)";
+"FunctionsView.function.lawConsulting" = "Lawyer (Consulting only)";
+"FunctionsView.function.crm" = "Link to CRM/ERP";
+"FunctionsView.function.ecografia" = "Ultrasound";
+"FunctionsView.function.metalDetector" = "Metal Detector";
+"FunctionsView.function.thermalCamera" = "Thermal Camera";
+"FunctionsView.function.georadar" = "Georadar (GPR)";
+"FunctionsView.function.detector" = "Buried Cable Detector";
+"FunctionsView.function.networkAnalysis" = "Electrical Network Analyzer";
+"FunctionsView.function.mascotRobot" = "Robotics for Pets";
+"FunctionsView.function.dogRobot" = "Dog Robot";
+"FunctionsView.function.telepresenceRobot" = "Telepresence Robotics";
+
+"FunctionsViewModel.Function.videoCall" = "Video Call";
+"FunctionsViewModel.Function.streetCam" = "Street Cam";
+"FunctionsViewModel.Function.arHands" = "AR Hands";
+"FunctionsViewModel.Function.scan3D" = "Scan 3D";
+"FunctionsViewModel.Function.cam360" = "Cam 360º";
+"FunctionsViewModel.Function.certifiedRecording" = "Certified Recording";
+"FunctionsViewModel.Function.games" = "Games";
+"FunctionsViewModel.Function.playBusiness" = "Play & Business";
+"FunctionsViewModel.Function.digitalTwins" = "Digital Twins";
+"FunctionsViewModel.Function.iot" = "IOT applications & Data Analysis";
+"FunctionsViewModel.Function.printer3D" = "3D Printer";
+"FunctionsViewModel.Function.ai" = "AI & Data Analysis";
+"FunctionsViewModel.Function.droneFly" = "Drone Fly";
+"FunctionsViewModel.Function.drugTest" = "Alcohol & Drug test";
+"FunctionsViewModel.Function.nft" = "NFT platform";
+"FunctionsViewModel.Function.ruralDrone" = "Agricultural Management";
+"FunctionsViewModel.Function.cryptoWallet" = "Crypto Wallet";
+"FunctionsViewModel.Function.rov" = "R.O.V. Underwater Drone";
+"FunctionsViewModel.Function.lidar" = "LIDAR Scan";
+"FunctionsViewModel.Function.radar" = "Radar & Sensors";
+"FunctionsViewModel.Function.engineering" = "Engineering (Consulting only)";
+"FunctionsViewModel.Function.thermalCamera" = "Thermal Camera";
+"FunctionsViewModel.Function.screenAd" = "Backpack Screen Advertising";
+"FunctionsViewModel.Function.crm" = "Link to CRM/ERP";
+"FunctionsViewModel.Function.ecografia" = "Ultrasound";
+"FunctionsViewModel.Function.lawConsulting" = "Lawyer (Consulting only)";
+"FunctionsViewModel.Function.robot" = "Robotics";
+"FunctionsViewModel.Function.metalDetector" = "Metal Detector";
+"FunctionsViewModel.Function.georadar" = "Georadar (GPR)";
+"FunctionsViewModel.Function.cableDetector" = "Buried Cable Detector";
+"FunctionsViewModel.Function.networkAnalyzer" = "Electrical Network Analyzer";
+"FunctionsViewModel.Function.mascotRobot" = "Robotics for Pets";
+"FunctionsViewModel.Function.dogRobot" = "Dog Robot";
+"FunctionsViewModel.Function.telepresenceRobot" = "Telepresence Robotics";
+
+"GalleryViewModel.Tab.photos" = "Photos";
+"GalleryViewModel.Tab.videos" = "Videos";
+"GalleryViewModel.Tab.files" = "Files";
+
+"GalleryView.title" = "Gallery";
+"WalkyBotView.header.title" = "Walky Bot FAQ's";
+"WalkyBotView.header.subtitle" = "Automatic Assistant";
+"WalkyBotView.input.placeholder" = "Write here...";
+
+"PlansPagesView.button.compare" = "Compare";
+"PlansPagesView.button.start" = "Start %@";
+
+"PlanPageView.toggle.test" = "Toggle Test";
+"PlanPageView.plan.annual" = "Annual plan";
+"PlanPageView.plan.discount" = "(now 5%)";
+"PlanPageView.plan.includes" = "Includes **%@** more:";
+
+"PlansComparisonPageView.planAnual" = "Annual Plan";
+"PlansComparisonPageView.save5Percent" = "(now 5%%)";
+"PlansComparisonPageView.includedFeatures" = "All plans include features like: White Board, Share to, Chat, REC, etc.";
+"PlansComparisonPageView.start" = "Start";
+"PlansComparisonPageView.convertToUSD" = "Or convert to USD";
+
+
+"VideoCallView.title" = "Video call";
+"VideoCallView.new.title" = "NEW";
+"VideoCallView.new.description" = "Create a new one to share.";
+"VideoCallView.new.button" = "Create";
+"VideoCallView.schedule.title" = "SCHEDULE";
+"VideoCallView.schedule.description" = "Schedule in advance.";
+"VideoCallView.schedule.button" = "Schedule";
+"VideoCallView.join.title" = "JOIN";
+"VideoCallView.join.description" = "Enter the code you received.";
+"VideoCallView.join.inputPlaceholder" = "Enter code";
+"VideoCallView.join.button" = "Join";
+
+"WalkyCamerOnboardingView.button.search" = "Search WalkCamer";
+"WalkyCamerOnboardingView.button.exit" = "Exit";
+
+"StreetCamMenuView.title" = "Connect anywhere!";
+"StreetCamMenuView.search.title" = "SEARCH";
+"StreetCamMenuView.search.description" = "Locate your nearest WalkCamer.";
+"StreetCamMenuView.search.button" = "Search";
+"StreetCamMenuView.schedule.title" = "BOOK";
+"StreetCamMenuView.schedule.description" = "Schedule your WalkCamer in advance.";
+"StreetCamMenuView.schedule.button" = "Book";
+"StreetCamMenuView.join.title" = "JOIN";
+"StreetCamMenuView.join.description" = "Enter the code you received.";
+"StreetCamMenuView.join.inputPlaceholder" = "Enter code";
+"StreetCamMenuView.join.button" = "Join";
+
+"SearchWalkyCammerView.search.placeholder" = "Search WalkCamer";
+"SearchWalkyCammerView.button.viewMap" = "View Map";
+"SearchWalkyCammerView.button.viewList" = "View List";
+
+"SearchWalkyCammerViewModel.title.searchZone" = "Search zone";
+"SearchWalkyCammerViewModel.title.availableWalkCammers" = "Available WalkCamers";
+
+"CammerDetailsView.selectButton" = "Select";
+"CammerDetailsView.chatButton" = "Chat with me";
+"CammerDetailsView.testLocation" = "TEST 123";
+"CammerDetailsView.hourlyCost" = "Hourly cost";
+"CammerDetailsView.currency" = "$";
+"CammerDetailsView.recordingTime" = "Recording time";
+"CammerDetailsView.hours" = "hrs";
+"CammerDetailsView.availability" = "Availability";
+"CammerDetailsView.about" = "About %@";
+"CammerDetailsView.devices" = "DEVICES";
+"CammerDetailsView.abilities" = "ABILITIES";
+"CammerDetailsView.ability" = "Able %@";
+
+"CammerDetailsViewModel.topBarItem.information" = "Information";
+"CammerDetailsViewModel.topBarItem.reviews" = "Reviews (10)";
+
+"AddPeopleTransmissionView.header.title" = "Add people to the transmission";
+"AddPeopleTransmissionView.description" = "You can add up to 200 more participants.";
+"AddPeopleTransmissionView.inviteButton.title" = "Invite Walkycam friends";
+"AddPeopleTransmissionView.inviteOptions" = "Or invite friends via...";
+"AddPeopleTransmissionView.laterButton.title" = "Invite later";
+"AddPeopleTransmissionView.nextButton.title" = "Next";
+
+"ServiceDetails.invitacionEnviada" = "The invitation will be sent to the members of this meeting once the process is completed.";
+"ServiceDetails.videollamada" = "Video call";
+"ServiceDetails.finalizarEnviar" = "Finish and Send";
+"ServiceDetails.cancelar" = "Cancel";
+"ServiceDetails.detallesServicio" = "Service Details";
+"ServiceDetails.asistentes" = "Participants";
+"ServiceDetails.pixeladoActivado" = "Face pixelation enabled";
+"ServiceDetails.apagarSelector" = "Turning off this switch will stop hiding people's faces.";
+"ServiceDetails.dispositivos" = "Devices";
+"ServiceDetails.capacidades" = "Abilities";
+
+"ServiceDetailsViewModel.Dia.title" = "Day";
+"ServiceDetailsViewModel.Hora.title" = "Time";
+"ServiceDetailsViewModel.WalkCamer.title" = "WalkCamer";
+"ServiceDetailsViewModel.LugarDeGrabacion.title" = "Recording location";
+"ServiceDetailsViewModel.Ciudad.title" = "City";
+"ServiceDetailsViewModel.Pais.title" = "Country";
+
+"DroneOnboardingView.GrabaADistancia.title" = "Record remotely";
+"DroneOnboardingView.GrabaADistancia.description" = "You choose where to record your videos and/or capture images \n\nWe pilot for you.\n\nWe have accredited and experienced professionals, your WalkCamer will guide you.";
+"DroneOnboardingView.ConsideracionesBasicas.title" = "Basic considerations";
+"DroneOnboardingView.ConsideracionesBasicas.description" = "Flying over 110m is not allowed";
+"DroneOnboardingView.ConsideracionesBasicas.secondDescription1" = "We will maintain the legally regulated distance from populated areas";
+"DroneOnboardingView.ConsideracionesBasicas.secondDescription2" = "Flying in restricted areas is not allowed.";
+"DroneOnboardingView.ConsideracionesBasicas.secondDescription3" = "If a flight plan is required, it will be coordinated in advance with the aeronautical authority.";
+"DroneOnboardingView.AceptoTerminosYCondiciones.title" = "I accept terms and conditions";
+"DroneOnboardingView.Cancelar.title" = "Cancel";
+
+"VideocallOnboardingView.Comenzar.title" = "Start";
+"VideocallOnboardingView.Salir.title" = "Exit";
+
+"BookWalkycamerView.CompletaTuReserva.title" = "Complete your reservation";
+"BookWalkycamerView.SeleccionaFechaHoraArea.title" = "Select date, time, and recording area";
+"BookWalkycamerView.Siguiente.title" = "Next";
+
+"BookWalkycamerViewModel.Fecha.title" = "Date";
+"BookWalkycamerViewModel.Hora.title" = "Time";
+"BookWalkycamerViewModel.Area.title" = "Area";
+
+"CalendarTabView.SeleccionaUnaFecha.title" = "Select a date";
+
+"TimeTabView.Desde.title" = "From";
+"TimeTabView.Hasta.title" = "Until";
+"MapTabView.BuscarWalkCamer.placeholder" = "Search WalkCamer";
+
+"WalkyCammerListView.BuscarWalkCamer.placeholder" = "Search WalkCamer";
+"WalkyCammerListView.WalkCamersDisponibles.title" = "Available\nWalkCamers";
+
+"DroneMenuView.ServiciosDrone.title" = "Drone Services";
+"DroneMenuView.FotosYVideos.title" = "Photos and Videos";
+"DroneMenuView.GestionAgricola.title" = "Agricultural Management";
+"DroneMenuView.LIDARMapeoLaser.title" = "LIDAR - Laser Mapping";
+
+"FlightMenuView.ProgramaTuVuelo.title" = "Schedule your flight";
+"FlightMenuView.Buscar.title" = "SEARCH";
+"FlightMenuView.LocalizaTuPiloto.title" = "Locate your nearest Pilot.";
+"FlightMenuView.Reservar.title" = "BOOK";
+"FlightMenuView.ProgramaTuVuelo.title" = "Schedule your flight in advance.";
+"FlightMenuView.IngresarCodigo.placeholder" = "Enter code";
+"FlightMenuView.Unirme.title" = "Join";
+"FlightMenuView.IngresaElCodigo.title" = "Enter the code you received.";
+
+"ARHandsOnboardingView.RecibeAyudaADistancia.title" = "Receive remote help";
+"ARHandsOnboardingView.SeleccionaArea.title" = "Select the area where you need assistance, and we will provide the best specialized technicians.\n\nOr you can enter the code your trusted assistant sent you.";
+"ARHandsOnboardingView.Comenzar.title" = "Start";
+
+"ARHandsMenuView.AsistenciaRemota.title" = "Remote Assistance";
+"ARHandsMenuView.AsistenteWalkyCam.title" = "WalkyCam Assistant";
+"ARHandsMenuView.AsistenteExterno.title" = "External Assistant";
+"ARHandsMenuView.GemeloDigital.title" = "Digital Twin";
+
+"AssistantMenuView.EnQueNecesitasSerAsistido.title" = "What do you need assistance with?";
+"AssistantMenuView.Especialista.title" = "Specialist";
+"AssistantMenuView.SeleccionaEspecialista.placeholder" = "Select specialist";
+"AssistantMenuView.Siguiente.title" = "Next";
+
+"AvailableAssistantsView.EspecialistasDisponibles.title" = "Available\nspecialists";
+
+"SpecialistNotifiedView.ElEspecialistaHaSidoNotificado.title" = "The specialist has been notified";
+"SpecialistNotifiedView.CuandoElTecnicoConfirme.title" = "When the technician confirms, **we will send you the video call link** so you can be assisted.";
+"SpecialistNotifiedView.Aceptar.title" = "Accept";
+"SpecialistNotifiedView.CancelarAsistencia.title" = "Cancel assistance";
+
+"ExternalAssistantView.IngresaElCodigo.title" = "**Enter the code** that your assistant has sent you for assistance.";
+"ExternalAssistantView.Codigo.title" = "Code";
+"ExternalAssistantView.IngresarCodigo.placeholder" = "Enter code";
+"ExternalAssistantView.RecibeAsistencia.title" = "Receive assistance from anywhere";
+"ExternalAssistantView.Unirme.title" = "Join";
+
+"RuralDroneOnboardingView.UtilizaDronesEnTuCultivo.title" = "Use drones in your farming";
+"RuralDroneOnboardingView.MapearCampos.title" = "Field mapping, IOT, monitoring, and ecological farming through Drone.\n\nWe have accredited and experienced professionals.\nYour WalkCamer will guide you.";
+"RuralDroneOnboardingView.ConsideracionesBasicas.title" = "Basic considerations";
+"RuralDroneOnboardingView.NoSePermiteVolar.title" = "Flying over 110m is not allowed";
+"RuralDroneOnboardingView.MantendremosLaDistancia.title" = "We will maintain the legally regulated distance from populated areas";
+"RuralDroneOnboardingView.NoEstaPermitido.title" = "Flying in restricted areas is not allowed.";
+"RuralDroneOnboardingView.SiSeRequierePlan.title" = "If a flight plan is required, it will be coordinated in advance with the aeronautical authority.";
+"RuralDroneOnboardingView.AceptoTerminos.title" = "I accept terms and conditions";
+"RuralDroneOnboardingView.Cancelar.title" = "Cancel";
+
+"Scan3DOnboardingView.CreaModelos3D.title" = "Create 3D models of real objects from photos";
+"Scan3DOnboardingView.SolicitaUnWalkCamer.title" = "Request a WalkCamer";
+"Scan3DOnboardingView.ModificaLaImagen.title" = "Edit the image";
+"Scan3DOnboardingView.RealizaUnaImpresion.title" = "Make a 3D print of the object";
+"Scan3DOnboardingView.Comenzar.title" = "Start";
+
+"Scan3DMenuView.Scan3D.title" = "Scan 3D";
+"Scan3DMenuView.DesdeTuSmartphone.title" = "From your smartphone";
+"Scan3DMenuView.ADistancia.title" = "Remotely";
+"Scan3DMenuView.FAQs.title" = "FAQ's";
+"Scan3DMenuView.Scan3D.cellTitle" = "Scan 3D";
+"Scan3DMenuView.Galeria.cellTitle" = "Gallery";
+"Scan3DMenuView.BuscarWalkCamer.cellTitle" = "Search WalkCamer";
+"Scan3DMenuView.BuscarUnContacto.cellTitle" = "Search a Contact";
+
+"FunctionMenuView.Buscar.title" = "SEARCH";
+"FunctionMenuView.Buscar.description" = "Locate your nearest WalkCamer.";
+"FunctionMenuView.Reservar.title" = "BOOK";
+"FunctionMenuView.Reservar.description" = "Schedule your WalkCamer in advance.";
+"FunctionMenuView.Unirse.title" = "JOIN";
+"FunctionMenuView.IngresaElCodigo.title" = "Enter the code you received.";
+"FunctionMenuView.Unirme.title" = "Join";
+
+"IOTMenuView.CategoríasIOT.title" = "IOT Categories";
+"IOTMenuView.MisServiciosContratados.title" = "My Contracted Services";
+"IOTMenuView.ContratarNuevo.title" = "Hire New";
+"IOTMenuView.CódigoQR.title" = "QR Code";
+"IOTMenuView.ScanQRCode.title" = "Scan to authenticate your entry to the IOT Farming dashboard";
+"IOTMenuView.ScanQR.title" = "Scan QR";
+
+"IOTOnboardingView.SelecionarCategoria.title" = "Select IOT Category";
+"IOTOnboardingView.DescripcionSeleccionarCategoria.title" = "Choose between: Farming, Industry, Agriculture, Fleet, Retail, Smart City, and much more!";
+"IOTOnboardingView.SelecionarSensores.title" = "Select sensors";
+"IOTOnboardingView.DescripcionSeleccionarSensores.title" = "Sensors must be selected in advance, indicating their value.";
+"IOTOnboardingView.BuscarWalkCamer.title" = "Search WalkCamer";
+"IOTOnboardingView.DescripcionBuscarWalkCamer.title" = "Locate your nearest WalkCamer and manage your IOT.";
+"IOTOnboardingView.Comenzar.title" = "Start";
+
+"DPrintOnboardingView.PreparaTuArchivo3D.title" = "Prepare your 3D file";
+"DPrintOnboardingView.DescripcionPreparaArchivo.title" = "Once scanned, you can edit the color and size.\n\nChoose the material and finish of the object before sending it for 3D printing.";
+"DPrintOnboardingView.HazElPedido.title" = "Place the order";
+"DPrintOnboardingView.DescripcionHazElPedido.title" = "Choose the most convenient shipping method for you.\n\nEnjoy our VIP shipping, frequent deliveries, and much more.";
+"DPrintOnboardingView.SolicitarImpresion3D.title" = "Request 3D printing";
+
+"PrintMenuView.Print3D.title" = "Print 3D";
+"PrintMenuView.Galeria.title" = "Gallery";
+"PrintMenuView.EscanearImagen.title" = "Scan image";
+"PrintMenuView.SubirImagen.title" = "Upload image";
+
+"LidarOnboardingView.LIDARScan.title" = "LIDAR Scan";
+"LidarOnboardingView.DescripcionLIDARScan.title" = "Map and digitize construction areas or discover what lies beneath the jungle.\n\nExperience the magic of scanning with LIDAR technology";
+"LidarOnboardingView.ConsideracionesBasicas.title" = "Basic considerations";
+"LidarOnboardingView.DescripcionConsideraciones.title" = "Flying over 110m is not allowed";
+"LidarOnboardingView.MantendremosDistancia.title" = "We will maintain the legally regulated distance from populated areas";
+"LidarOnboardingView.NoEstaPermitido.title" = "Flying in restricted areas is not allowed.";
+"LidarOnboardingView.PlanDeVuelo.title" = "If a flight plan is required, it will be coordinated in advance with the aeronautical authority.";
+"LidarOnboardingView.AceptoTerminos.title" = "I accept terms and conditions";
+"LidarOnboardingView.Cancelar.title" = "Cancel";
+
+"AIOnboardingView.WalkySoloParaTi.title" = "Walky, just for you";
+"AIOnboardingView.DescripcionWalky.title" = "AI engine trained on your data and usage behavior within WalkyCam.";
+"AIOnboardingView.PermitirAccesos.title" = "Allow access";
+"AIOnboardingView.DescripcionPermitirAccesos.title" = "One-time only, before starting it is necessary to integrate and allow access to provide better recommendations, save work, and offer solutions/alternatives to problems.";
+"AIOnboardingView.ConfigurarAccesos.title" = "Configure access";
+
+"ConfigureAccessView.HolaSoyWalky.title" = "Hello! I'm Walky";
+"ConfigureAccessView.SeraTuAsistente.title" = "I will be your assistant to offer the best recommendations.";
+"ConfigureAccessView.PermisosExternos.title" = "External permissions";
+"ConfigureAccessView.PermisosInternos.title" = "Internal permissions";
+"ConfigureAccessView.NivelDeExperiencia.title" = "Experience level";
+"ConfigureAccessView.NivelOptimo.title" = "Based on your permissions, the experience level with me will be OPTIMAL";
+"ConfigureAccessView.Continuar.title" = "Continue";
+"ConfigureAccessView.IntegrarRedes.title" = "You can also integrate your social and business networks to improve my suggestions";
+
+"AIMenuView.Title" = "AI & Data Analysis";
+"AIMenuView.WalkySoloParaTi.title" = "Walky, just for you";
+"AIMenuView.Configuracao.title" = "Configuration";
+
+"ChatListView.Title" = "Messages";
+
+"RadarMenuView.Title" = "Radars & Sensors";
+"RadarMenuView.Georadar.title" = "Georadar";
+"RadarMenuView.DetectorDeCables.title" = "Cable detector";
+"RadarMenuView.AnalizadorDeRedes.title" = "Network analyzer";
+
+"DigitalTwinsOnboardingView.title" = "Digital Twins";
+"DigitalTwinsOnboardingView.description1" = "Virtual representation of an object or system covering its lifecycle, updated with real-time data, and using simulation, machine learning, and reasoning to help with decision-making.";
+"DigitalTwinsOnboardingView.description2" = "Select the area where you need assistance and we will provide the best specialized technicians.";
+"DigitalTwinsOnboardingView.start" = "Start";
+
+"DigitalTwinsMenuView.title" = "Digital Twins";
+"DigitalTwinsMenuView.search" = "SEARCH";
+"DigitalTwinsMenuView.searchDescription" = "Locate your nearest WalkCamer.";
+"DigitalTwinsMenuView.searchButton" = "Search";
+"DigitalTwinsMenuView.reserve" = "BOOK";
+"DigitalTwinsMenuView.reserveDescription" = "Schedule your WalkCamer in advance.";
+"DigitalTwinsMenuView.reserveButton" = "Book";
+"DigitalTwinsMenuView.joinDescription" = "Enter the code you received.";
+"DigitalTwinsMenuView.codePlaceholder" = "Enter code";
+"DigitalTwinsMenuView.joinButton" = "Join";
+
+"RobotMenuView.title" = "Robotics";
+"RobotMenuView.telepresence" = "Telepresence";
+"RobotMenuView.dogRobot" = "Dog Robot";
+"RobotMenuView.pets" = "For Pets";
+
+"RegisterWalkcamerView.gainText" = "Earn money, become a ";
+"RegisterWalkcamerView.walkcamer" = "WalkCamer";
+"RegisterWalkcamerView.registerToday" = "Register today!";
+"RegisterWalkcamerView.email" = "Email";
+"RegisterWalkcamerView.emailPlaceholder" = "name@email.com";
+"RegisterWalkcamerView.name" = "Name";
+"RegisterWalkcamerView.namePlaceholder" = "Name";
+"RegisterWalkcamerView.lastName" = "Last name";
+"RegisterWalkcamerView.lastNamePlaceholder" = "Last name";
+"RegisterWalkcamerView.phone" = "Phone";
+"RegisterWalkcamerView.phonePlaceholder" = "Phone";
+"RegisterWalkcamerView.register" = "Register me";
+
+"RegisterWalkcamerView.acceptedTerms" = "I accept the Terms and Conditions of WalkyCam";
+
+"ProfitSelectionView.title" = "Choose how you want to earn money";
+"ProfitSelectionView.freelanceTitle" = "Freelance: Independent";
+"ProfitSelectionView.freelanceDescription" = "Give us your time and resources, and we'll help you earn money";
+"ProfitSelectionView.employeeTitle" = "Employee: of WalkyCam";
+"ProfitSelectionView.employeeDescription" = "Work with us, join the WalkyCam Staff.";
+"ProfitSelectionView.b2bTitle" = "Partner B2B: Business to Business";
+"ProfitSelectionView.b2bDescription" = "Complete our orders and services and invoice with us.";
+"ProfitSelectionView.startButton" = "Start!";
+"ProfitSelectionView.cancelButton" = "Cancel";
+
+"IdentityUploadView.title" = "Upload your identity document";
+"IdentityUploadView.instruction" = "Make sure the ID is valid and all fields are clear and readable.";
+"IdentityUploadView.front" = "Front";
+"IdentityUploadView.back" = "Back";
+"IdentityUploadView.uploadPhotos" = "Upload photos";
+"IdentityUploadView.cancelRegistration" = "Cancel Registration";
+"IdentityUploadView.cancel" = "Cancel";
+"IdentityUploadView.next" = "Next";
+
+"FeatureSelectionView.title" = "Select your devices and abilities";
+"FeatureSelectionView.devices" = "Devices";
+"FeatureSelectionView.abilities" = "Abilities";
+"FeatureSelectionView.cancel" = "Cancel";
+"FeatureSelectionView.next" = "Next";
+"FeatureSelectionView.viewMore" = "View %@";
+
+"FeatureSelectionViewModel.devicesModel.lidar" = "LIDAR";
+"FeatureSelectionViewModel.devicesModel.smartphone" = "Mobile/Smartphone";
+"FeatureSelectionViewModel.devicesModel.drone" = "Drone";
+"FeatureSelectionViewModel.devicesModel.videocamera" = "Video camera";
+"FeatureSelectionViewModel.devicesModel.rov" = "Submarine ROV";
+"FeatureSelectionViewModel.devicesModel.camera360" = "360º Camera";
+"FeatureSelectionViewModel.devicesModel.scan3D" = "3D Scanner";
+"FeatureSelectionViewModel.devicesModel.alcoholTest" = "Alcohol and drug test";
+"FeatureSelectionViewModel.devicesModel.thermalCamera" = "Thermal camera";
+"FeatureSelectionViewModel.devicesModel.metalDetector" = "Metal detector";
+"FeatureSelectionViewModel.devicesModel.networkAnalyzer" = "Network analyzer";
+"FeatureSelectionViewModel.devicesModel.cableDetector" = "Cable detector";
+"FeatureSelectionViewModel.devicesModel.printer3D" = "3D Printer";
+"FeatureSelectionViewModel.devicesModel.robotDog" = "Robot Dog";
+"FeatureSelectionViewModel.devicesModel.noDevice" = "No device";
+
+"FeatureSelectionViewModel.abilitiesModel.scan3d" = "3D Scanning";
+"FeatureSelectionViewModel.abilitiesModel.3dprint" = "3D Printing";
+"FeatureSelectionViewModel.abilitiesModel.lidar" = "LIDAR Scanning";
+"FeatureSelectionViewModel.abilitiesModel.subPhoto" = "Underwater photography";
+"FeatureSelectionViewModel.abilitiesModel.dive" = "Diving";
+"FeatureSelectionViewModel.abilitiesModel.highWork" = "High work";
+"FeatureSelectionViewModel.abilitiesModel.publicTalking" = "Public speaking";
+"FeatureSelectionViewModel.abilitiesModel.vehicle" = "I own a vehicle";
+"FeatureSelectionViewModel.abilitiesModel.acting" = "Acting (party host)";
+
+"FeatureInformationView.header.completeInformation" = "Complete the information";
+"FeatureInformationView.description.uploadLicenses" = "Upload your Licenses and Permits related to your devices and abilities.";
+"FeatureInformationView.rov.title" = "Submarine ROV";
+"FeatureInformationView.rov.addAnother" = "Add another Submarine ROV";
+"FeatureInformationView.smartphone.title" = "Mobile/Smartphone";
+"FeatureInformationView.smartphone.addAnother" = "Add another Smartphone";
+"FeatureInformationView.cancel" = "Cancel";
+"FeatureInformationView.next" = "Next";
+"FeatureInformationView.rov.name" = "Commercial name";
+"FeatureInformationView.rov.model" = "Model";
+"FeatureInformationView.rov.serialNumber" = "Serial number";
+"FeatureInformationView.rov.licenseAndPermissions" = "License and/or Permissions";
+"FeatureInformationView.rov.uploadLicenses" = "Upload licenses";
+"FeatureInformationView.rov.modelNotSupported" = "If your model does not appear, it is not supported by WalkyCam";
+"FeatureInformationView.smartphone.name" = "Commercial name";
+"FeatureInformationView.smartphone.model" = "Model";
+"FeatureInformationView.smartphone.serialNumber" = "Serial number";
+"FeatureInformationView.vehicle.question" = "What personal vehicle do you own?";
+"FeatureInformationView.vehicle.uploadDrivingLicense" = "Upload driving license";
+"FeatureInformationView.deepness.depthCapacity" = "Depth capacity in meters for diving.";
+"FeatureInformationView.deepness.uploadDivingPermit" = "Upload diving permit";
+
+"CamerAvailabilityView.cancel" = "Cancel";
+"CamerAvailabilityView.finish" = "Finish";
+"CamerAvailabilityView.header.title" = "Indicate availability and working area";
+
+"CamerAvailabilityViewModel.tabs.availability" = "Availability";
+"CamerAvailabilityViewModel.tabs.preferredArea" = "Preferred area";
+
+"AvailabilityTabViewModel.days.everyday" = "Every day";
+"AvailabilityTabViewModel.days.sunday" = "Sunday";
+"AvailabilityTabViewModel.days.monday" = "Monday";
+"AvailabilityTabViewModel.days.tuesday" = "Tuesday";
+"AvailabilityTabViewModel.days.wednesday" = "Wednesday";
+"AvailabilityTabViewModel.days.thursday" = "Thursday";
+"AvailabilityTabViewModel.days.friday" = "Friday";
+"AvailabilityTabViewModel.days.saturday" = "Saturday";
+
+"AvailabilityTabView.allDays" = "Every day";
+
+"LegalDocumentationView.title" = "Legal Documentation";
+"LegalDocumentationView.subtitle" = "Sign and accept the contracts to start as a WalkCamer";
+"LegalDocumentationView.declaration" = "Sworn declaration";
+"LegalDocumentationView.contract" = "Contract";
+"LegalDocumentationView.start" = "Start";
+"LegalDocumentationView.cancel" = "Cancel Registration";
+
+"IOTSensorsView.title" = "IOT Farming Sensors";
+"IOTSensorsView.subtitle" = "Activate sensor types and indicate their corresponding parameters.";
+"IOTSensorsView.dashboardTitle" = "Dashboard Title";
+"IOTSensorsView.search" = "Search WalkCamer";
+"IOTSensorsView.cancel" = "Cancel";
+"IOTSensorsView.sensors.number" = "Number of Sensors";
+"IOTSensorsView.sensors.range" = "Range";
+"IOTSensorsView.sensors.unit" = "Unit";
+"IOTSensorsView.sensors.temperature" = "Temperature";
+"IOTSensorsView.sensors.humidity" = "Humidity";
+"IOTSensorsView.sensors.pressureA" = "Pressure A";
+"IOTSensorsView.sensors.level" = "Level";
+"IOTSensorsView.sensors.proximity" = "Proximity";
+
+"GamesView.title" = "Games";
+"GamesView.karaoke" = "Karaoke";
+"GamesView.glassesProve" = "Glasses Prove";
+"GamesView.games" = "Games";
+"GamesView.hairProve" = "Hair Prove";
+"GamesView.dressProve" = "Dress Prove";
+"GamesView.rgbBulbParty" = "RGB Bulb Party";
+
+"PlayBusinessView.title" = "Play & Business";
+"PlayBusinessView.lowDemand" = "Low-demand WalkyCam";
+"PlayBusinessView.scapeRoom" = "Scape Room";
+"PlayBusinessView.mariachis" = "Mariachis";
+"PlayBusinessView.filmMaker" = "Film Maker";
+"PlayBusinessView.copyright" = "Copyright";
+"PlayBusinessView.productSample" = "Product Sample";
+"PlayBusinessView.businessIdea" = "Business Idea";
+"PlayBusinessView.fitnessBracelet" = "Fitness Bracelet";
+"PlayBusinessView.surpriseBox" = "Surprise Box";
+"PlayBusinessView.premiumPlan" = "Premium Plan";
+"PlayBusinessView.celebrities" = "Celebrities";
+"PlayBusinessView.personalShopper" = "Personal Shopper";
+"PlayBusinessView.inventionPatent" = "Invention Patent";
+"PlayBusinessView.gymkhana" = "Gymkhana";
+
+"UnavailableFeatureView.message" = "Oops! It seems that this feature is not available yet";
+"UnavailableFeatureView.goHome" = "Go to Home";
+
+"ScheduleVideoCallView.selectDateAndTime" = "Select video call date and time";
+"ScheduleVideoCallView.next" = "Next";
+
+"ScheduleVideoCallViewModel.tabs.date" = "Date";
+"ScheduleVideoCallViewModel.tabs.time" = "Time";
+
+"VideocallTimeTabView.time" = "Time";
+"VideocallTimeTabView.duration" = "Duration";
+"VideocallTimeTabView.durationSelection" = "Select a duration";
+"VideocallTimeTabView.duration.40Minutes" = "40 minutes";
+"VideocallTimeTabView.duration.60Minutes" = "60 minutes";
+"VideocallTimeTabView.duration.90Minutes" = "90 minutes";
+"VideocallTimeTabView.duration.120Minutes" = "120 minutes";
+
+"TimedLoadingScreenView.loading" = "Loading...";
+
+"ThermalCameraOnboardingView.title" = "Thermal Camera";
+"ThermalCameraOnboardingView.description1" = "Detect and visualize the heat emitted by objects and people, allowing you to see temperature differences, identify insulation problems, detect animals in the dark, and explore the environment.";
+"ThermalCameraOnboardingView.description2" = "Point the camera at the area or object you want to analyze, then take a photo or record a video.\n\nObserve the temperature differences visualized in colors, ranging from cooler tones (blues) to warmer tones (reds).";
+"ThermalCameraOnboardingView.start" = "Start";
+
+"ServiceConfirmationView.successMessage" = "Video call successfully registered!";
+"ServiceConfirmationView.ok" = "Ok";
+"ServiceConfirmationView.cancel" = "I want to cancel";
+"ServiceConfirmationView.assistants" = "Participants";
+"ServiceConfirmationView.invitationMessage" = "The invitation will be sent to the members of this meeting once the process is completed.";
+"ServiceConfirmationView.link" = "Link";
+
+"ServiceConfirmationViewModel.day" = "Day";
+"ServiceConfirmationViewModel.time" = "Time";
+"ServiceConfirmationViewModel.assistants" = "Participants";
+"ServiceConfirmationViewModel.link" = "Link";
+
+"ReminderCardView.dayAndTime" = "Day and time";
+"ReminderCardView.walkCamer" = "WalkCamer";
+"ReminderCardView.goToStreetCam" = "Go to Street Cam";
+
+"CashTabView.balance" = "Balance";
+"CashTabView.enterMoney" = "Enter money";
+"CashTabView.withdrawMoney" = "Withdraw money";
+"CashTabView.convertTo" = "Or convert it to";
+"CashTabView.activity" = "Activity";
+"CashTabView.pi" = "PI";
+"CashTabView.rc2" = "RC2";
+"CashTabView.functions" = "Functions";
+"CashTabView.market" = "Market";
+
+"CryptoTabView.activity" = "Activity";
+"CryptoTabView.seeMore" = "See more";
+
+"CryptoTabViewModel.piNetwork" = "PI network";
+"CryptoTabViewModel.recamerCoin" = "RECAMER Coin";
+"CryptoTabViewModel.cryptoGainPi" = "Crypto Gain PI";
+"CryptoTabViewModel.drone" = "Drone";
+"CryptoTabViewModel.iot" = "IOT";
+"CryptoTabViewModel.streetCam" = "Street Cam";
+
+"ShopTabView.changeYourMoney" = "Change your money in the";
+"ShopTabView.shop" = "Shop";
+"ShopTabView.categories" = "Categories";
+"ShopTabView.dailyOffers" = "Daily Offers";
+"ShopTabView.offer" = "Offer";
+"ShopTabView.get" = "Get";
+
+"ShopTabViewModel.fashion" = "Fashion";
+"ShopTabViewModel.functions" = "Functions\nWalkyCam";
+"ShopTabViewModel.travel" = "Travel";
+"ShopTabViewModel.nft" = "NFT's";
+"ShopTabViewModel.music" = "Music";
+"ShopTabViewModel.technology" = "Technology";
+"ShopTabViewModel.art" = "Art";
+"ShopTabViewModel.iphoneOffer" = "2x1 on iPhone 13";
+"ShopTabViewModel.cancunOffer" = "50%% discount on All-inclusive in Cancun";
+"ShopTabViewModel.walkcamersOffer" = "Get the best WalkCamers at a discount";
+"ShopTabViewModel.flightOffer" = "20%% discount on flights to South America";
+
+"CryptoDetailsView.balance" = "Balance";
+"CryptoDetailsView.convertTo" = "Or convert it to";
+"CryptoDetailsView.usd" = "USD";
+"CryptoDetailsView.functions" = "Functions";
+"CryptoDetailsView.market" = "Market";
+"CryptoDetailsView.year" = "YEAR";
+"CryptoDetailsView.month" = "MONTH";
+"CryptoDetailsView.week" = "WEEK";
+"CryptoDetailsView.day" = "DAY";
+"CryptoDetailsView.hour" = "HOUR";

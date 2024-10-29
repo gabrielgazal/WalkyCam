@@ -35,7 +35,16 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
                             .foregroundColor(.naranja)
                             .isHidden(viewModel.currentPage == 4)
                         Spacer()
-                        WCUIButton(title: "Comparar",
+                        if viewModel.currentPage == 3 {
+                            Image(systemName: "crown.fill")
+                                .renderingMode(.template)
+                                .resizable()
+                                .scaledToFit()
+                                .foregroundColor(Color.premium)
+                                .frame(width: 50, height: 50)
+                            Spacer()
+                        }
+                        WCUIButton(title: L10n.PlansPagesView.Button.compare,
                                    rightIcon: Asset.Icons.compare.name,
                                    style: .standard,
                                    descriptor: BlackButtonStyleDescriptor(),
@@ -64,7 +73,7 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
 
                     if let title = currentPlan()?.title {
                         WCUIButton(
-                            title: "Start \(title)",
+                            title: String(format: L10n.PlansPagesView.Button.start(title)),
                             style: .standard,
                             descriptor: getButtonDescriptor(),
                             action: {

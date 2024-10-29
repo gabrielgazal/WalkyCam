@@ -11,6 +11,17 @@ struct FunctionData: Hashable, Identifiable {
     let id: UUID = .init()
     let title: String
     let icon: String
+    let subfunction: [FunctionData]
+    
+    public init(
+        title: String,
+        icon: String,
+        subfunction: [FunctionData] = []
+    ) {
+        self.title = title
+        self.icon = icon
+        self.subfunction = subfunction
+    }
 }
 
 extension FunctionData {

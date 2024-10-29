@@ -20,9 +20,9 @@ struct CalendarTabView<ViewModel: CalendarTabViewModelProtocol, Router: Calendar
 
     var body: some View {
         VStack {
-            DatePicker("Selecciona una fecha", selection: $selectedDate, in: Date()..., displayedComponents: .date)
+            DatePicker(L10n.CalendarTabView.SeleccionaUnaFecha.title, selection: $selectedDate, in: Date()..., displayedComponents: .date)
                 .datePickerStyle(.graphical)
-                .environment(\.locale, Locale(identifier: "es_ES"))
+                .environment(\.locale, Locale(identifier: L10n.Formater.locale))
                 .accentColor(.naranja)
                 .onChange(of: selectedDate) { _, newValue in
                     viewModel.updateSelectedDate(newValue)

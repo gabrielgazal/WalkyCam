@@ -20,25 +20,21 @@ struct GamesView<ViewModel: GamesViewModelProtocol, Router: GamesRouterProtocol>
     var body: some View {
         VStack(alignment: .leading,
                spacing: Tokens.Size.Spacing.large) {
-            Text("Games")
+            Text(L10n.GamesView.title)
                 .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.regular) {
                 HStack(spacing: Tokens.Size.Spacing.regular) {
-                    squaredCell(icon: Asset.Icons.karaoke2.name, title: "Karaoke")
-                    squaredCell(icon: Asset.Icons.glasses.name, title: "Glasses Prove")
+                    squaredCell(icon: Asset.Icons.karaoke2.name, title: L10n.GamesView.karaoke)
+                    squaredCell(icon: Asset.Icons.glasses.name, title: L10n.GamesView.glassesProve)
                 }
                 HStack(spacing: Tokens.Size.Spacing.regular) {
-                    squaredCell(icon: Asset.Icons.games.name, title: "Games")
-                    
-                    squaredCell(icon: Asset.Icons.hair.name, title: "Hair Prove")
-                    
+                    squaredCell(icon: Asset.Icons.games.name, title: L10n.GamesView.games)
+                    squaredCell(icon: Asset.Icons.hair.name, title: L10n.GamesView.hairProve)
                 }
                 HStack(spacing: Tokens.Size.Spacing.regular) {
-                    squaredCell(icon: Asset.Icons.tShirt.name, title: "Dress Prove")
-                    
-                    squaredCell(icon: Asset.Icons.rgb.name, title: "RGB Bulb Party")
-                    
+                    squaredCell(icon: Asset.Icons.tShirt.name, title: L10n.GamesView.dressProve)
+                    squaredCell(icon: Asset.Icons.rgb.name, title: L10n.GamesView.rgbBulbParty)
                 }
             }
             Spacer()

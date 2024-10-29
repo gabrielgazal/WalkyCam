@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct AvailableAssistantsView<ViewModel:AvailableAssistantsViewModelProtocol, Router: AvailableAssistantsRouterProtocol>: View {
+struct AvailableAssistantsView<ViewModel: AvailableAssistantsViewModelProtocol, Router: AvailableAssistantsRouterProtocol>: View {
 
     // MARK: - Dependencies
 
@@ -38,11 +38,11 @@ struct AvailableAssistantsView<ViewModel:AvailableAssistantsViewModelProtocol, R
             .padding(.horizontal, Tokens.Size.Spacing.large)
             HStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {
-                Text("Especialistas\ndisponibles")
+                Text(L10n.AvailableAssistantsView.EspecialistasDisponibles.title)
                     .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                 Spacer()
             }
-                   .padding(.horizontal, Tokens.Size.Spacing.large)
+            .padding(.horizontal, Tokens.Size.Spacing.large)
         }
     }
 
@@ -94,7 +94,7 @@ struct AvailableAssistantsView<ViewModel:AvailableAssistantsViewModelProtocol, R
                         }
                     }
                 }
-                       .padding(.horizontal, Tokens.Size.Spacing.regular)
+                .padding(.horizontal, Tokens.Size.Spacing.regular)
             }
         } errorAction: {}
     }
@@ -102,7 +102,7 @@ struct AvailableAssistantsView<ViewModel:AvailableAssistantsViewModelProtocol, R
 
 struct AvailableAssistantsView_Previews: PreviewProvider {
     static var previews: some View {
-    AvailableAssistantsView(
+        AvailableAssistantsView(
             viewModel: AvailableAssistantsViewModel(),
             router: AvailableAssistantsRouter(isPresented: .constant(false))
         )
