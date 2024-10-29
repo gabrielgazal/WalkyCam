@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "mascotaPremium.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

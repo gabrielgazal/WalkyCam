@@ -533,6 +533,55 @@ internal enum Asset {
     internal static let piGraph = ImageAsset(name: "piGraph")
     internal static let recamerGraph = ImageAsset(name: "recamerGraph")
   }
+  internal enum PlansIcons {
+    internal enum Basic {
+      internal static let arHandsBasic = ImageAsset(name: "arHandsBasic")
+      internal static let camera360Basic = ImageAsset(name: "camera360Basic")
+      internal static let gamesBasic = ImageAsset(name: "gamesBasic")
+      internal static let pixeladoBasic = ImageAsset(name: "pixeladoBasic")
+      internal static let print3DBasic = ImageAsset(name: "print3DBasic")
+      internal static let recordingBasic = ImageAsset(name: "recordingBasic")
+      internal static let streetcamBasic = ImageAsset(name: "streetcamBasic")
+      internal static let viodecallBasic = ImageAsset(name: "viodecallBasic")
+    }
+    internal enum Free {
+      internal static let arHandsFree = ImageAsset(name: "arHandsFree")
+      internal static let gamesFree = ImageAsset(name: "gamesFree")
+      internal static let pixeladoFree = ImageAsset(name: "pixeladoFree")
+      internal static let videocallFree = ImageAsset(name: "videocallFree")
+    }
+    internal enum Premium {
+      internal static let adPremium = ImageAsset(name: "adPremium")
+      internal static let aiPremium = ImageAsset(name: "aiPremium")
+      internal static let alcoholPremium = ImageAsset(name: "alcoholPremium")
+      internal static let arhandsPremium = ImageAsset(name: "arhandsPremium")
+      internal static let bitcoinPremium = ImageAsset(name: "bitcoinPremium")
+      internal static let camera360Premium = ImageAsset(name: "camera360Premium")
+      internal static let crmPremium = ImageAsset(name: "crmPremium")
+      internal static let detectorCablesPremium = ImageAsset(name: "detectorCablesPremium")
+      internal static let detectorMetalesPremium = ImageAsset(name: "detectorMetalesPremium")
+      internal static let dogRobotPremium = ImageAsset(name: "dogRobotPremium")
+      internal static let dronePremium = ImageAsset(name: "dronePremium")
+      internal static let ecografiaPremium = ImageAsset(name: "ecografiaPremium")
+      internal static let gamesPremium = ImageAsset(name: "gamesPremium")
+      internal static let georradarPremium = ImageAsset(name: "georradarPremium")
+      internal static let iotPremium = ImageAsset(name: "iotPremium")
+      internal static let lawPremium = ImageAsset(name: "lawPremium")
+      internal static let lidarPremium = ImageAsset(name: "lidarPremium")
+      internal static let mascotaPremium = ImageAsset(name: "mascotaPremium")
+      internal static let nftPremium = ImageAsset(name: "nftPremium")
+      internal static let pixeladoPremium = ImageAsset(name: "pixeladoPremium")
+      internal static let print3dPremium = ImageAsset(name: "print3dPremium")
+      internal static let recordingPremium = ImageAsset(name: "recordingPremium")
+      internal static let roboticaPremium = ImageAsset(name: "roboticaPremium")
+      internal static let rovPremium = ImageAsset(name: "rovPremium")
+      internal static let streetcamPremium = ImageAsset(name: "streetcamPremium")
+      internal static let telepresenciaPremium = ImageAsset(name: "telepresenciaPremium")
+      internal static let thermalCameraPremium = ImageAsset(name: "thermalCameraPremium")
+      internal static let twinsPremium = ImageAsset(name: "twinsPremium")
+      internal static let videocallPremium = ImageAsset(name: "videocallPremium")
+    }
+  }
   internal enum SocialMedia {
     internal static let apple = ImageAsset(name: "apple")
     internal static let facebook = ImageAsset(name: "facebook")
