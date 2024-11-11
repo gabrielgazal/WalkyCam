@@ -51,6 +51,44 @@ extension StartStreetcamUseCase {
         }
     }
     
+    static func createScan3d(repository: Scan3DRepositoryProtocol) -> Self {
+        Self.init { input in
+            Deferred {
+                Future { promise in
+                    repository.startCreate(userId: input) { result in
+                        switch result {
+                        case let .failure(error):
+                            promise(.failure(error))
+                        case let .success(response):
+                            promise(.success(convertToObject(response)))
+                        }
+                        return
+                    }
+                }
+            }
+            .eraseToAnyPublisher()
+        }
+    }
+    
+    static func scheduleScan3d(repository: Scan3DRepositoryProtocol) -> Self {
+        Self.init { input in
+            Deferred {
+                Future { promise in
+                    repository.startSchedule(userId: input) { result in
+                        switch result {
+                        case let .failure(error):
+                            promise(.failure(error))
+                        case let .success(response):
+                            promise(.success(convertToObject(response)))
+                        }
+                        return
+                    }
+                }
+            }
+            .eraseToAnyPublisher()
+        }
+    }
+    
     private static func convertToObject(_ response: VideoCallResponse) -> VideoCallOutput {
         return .init(
             id: response.id,

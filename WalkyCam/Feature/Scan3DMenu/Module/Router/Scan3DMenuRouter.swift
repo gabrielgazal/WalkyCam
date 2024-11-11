@@ -21,6 +21,7 @@ final class Scan3DMenuRouter: Router, Scan3DMenuRouterProtocol {
         navigateTo(
             FunctionMenuRoute(
                 isPresented: isNavigating,
+                assembler: Scan3dMenuAssembler(),
                 model: .init(
                     type: .scan3d,
                     title: "Scan 3D",
@@ -38,4 +39,3 @@ final class Scan3DMenuRouter: Router, Scan3DMenuRouterProtocol {
         )
     }
 }
-

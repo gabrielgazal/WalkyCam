@@ -34,16 +34,14 @@ struct FunctionMenuView<ViewModel: FunctionMenuViewModelProtocol, Router: Functi
                              description: L10n.FunctionMenuView.Buscar.description,
                              buttonTitle: L10n.FunctionMenuView.Buscar.title,
                              icon: Asset.Icons.locationWhite.name,
-                             action: {
-                    router.routeToSearchCammer()
-                })
+                             action: handleCreateAction)
+                .loading(viewModel.createAsyncData.isLoading)
                 verticalCard(title: L10n.FunctionMenuView.Reservar.title,
                              description: L10n.FunctionMenuView.Reservar.description,
                              buttonTitle: L10n.FunctionMenuView.Reservar.title,
                              icon: Asset.Icons.calendar.name,
-                             action: {
-                    router.routeToScheduleCammer()
-                })
+                             action: handleScheduleAction)
+                .loading(viewModel.scheduleAsyncData.isLoading)
             }
             .layoutPriority(1)
 
@@ -122,15 +120,43 @@ struct FunctionMenuView<ViewModel: FunctionMenuViewModelProtocol, Router: Functi
                 .cornerRadius(48)
         )
     }
+    
+    private func handleCreateAction() {
+        Task {
+            await viewModel.createAction(
+                onSuccess: {
+                    router.routeToSearchCammer()
+                },
+                onFailure: {}
+            )
+        }
+    }
+    
+    private func handleScheduleAction() {
+        Task {
+            await viewModel.scheduleAction(
+                onSuccess: { callId in
+                    ServiceInformationManager.shared.updateCallId(callId)
+                    router.routeToScheduleCammer()
+                },
+                onFailure: {}
+            )
+        }
+    }
 }
 
 struct FunctionMenuView_Previews: PreviewProvider {
     static var previews: some View {
         FunctionMenuView(
-            viewModel: FunctionMenuViewModel(model: .init(type: .drone,
-                                                          title: "Teste",
-                                                          icon: Asset.Icons.drone.name,
-                                                          background: Asset.Fondos.videocallFondo.name)),
+            viewModel: FunctionMenuViewModel(
+                interactor: FunctionMenuInteractor(
+                    useCases: .init(startCreate: .empty, startSchedule: .empty)
+                ),
+                model: .init(type: .drone,
+                             title: "Teste",
+                             icon: Asset.Icons.drone.name,
+                             background: Asset.Fondos.videocallFondo.name)
+            ),
             router: FunctionMenuRouter(isPresented: .constant(false))
         )
     }

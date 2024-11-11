@@ -6,10 +6,12 @@ final class FunctionMenuViewModel: FunctionMenuViewModelProtocol {
 
     private let interactor: FunctionMenuInteractorProtocol
     @Published var model: FunctionMenuModel
-
+    @Published var createAsyncData: AsyncData<VideoCallOutput, ErrorProtocol> = .idle
+    @Published var scheduleAsyncData: AsyncData<VideoCallOutput, ErrorProtocol> = .idle
+    
     // MARK: - Initialization
 
-    init(interactor: FunctionMenuInteractorProtocol = FunctionMenuInteractor(),
+    init(interactor: FunctionMenuInteractorProtocol,
          model: FunctionMenuModel) {
         self.interactor = interactor
         self.model = model
@@ -17,15 +19,27 @@ final class FunctionMenuViewModel: FunctionMenuViewModelProtocol {
 
     // MARK: - Public API
 
-    #warning("Example function. Rename or remove it")
-    func someAction() {
-
+    @MainActor func createAction(onSuccess: (() -> Void)?, onFailure: (() -> Void)?) async {
+        createAsyncData = .loading
+        do {
+            let output = try await interactor.startCreation()
+            createAsyncData = .loaded(output)
+            onSuccess?()
+        } catch {
+            createAsyncData = .failed(GenericError())
+            onFailure?()
+        }
     }
-
-    // MARK: - Private Methods
-
-    #warning("Example function. Rename or remove it")
-    private func somePrivateMethod() {
-
+    
+    @MainActor func scheduleAction(onSuccess: ((String) -> Void)?, onFailure: (() -> Void)?) async {
+        scheduleAsyncData = .loading
+        do {
+            let output = try await interactor.startSchedule()
+            scheduleAsyncData = .loaded(output)
+            onSuccess?(output.id)
+        } catch {
+            scheduleAsyncData = .failed(GenericError())
+            onFailure?()
+        }
     }
 }

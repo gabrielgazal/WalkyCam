@@ -62,10 +62,28 @@ struct GamesView<ViewModel: GamesViewModelProtocol, Router: GamesRouterProtocol>
                    .padding(Tokens.Size.Spacing.regular)
         }
         .onTapGesture {
-            router.navigateTo(
-                UnavailableFeatureRoute(isPresented: router.isNavigating, icon: icon, title: title)
-            )
+            switch title {
+            case "Glasses Prove":
+                routeToGlassesProve()
+            default:
+                routeToUnavailableFunction(title, icon)
+            }
         }
+    }
+    
+    private func routeToUnavailableFunction(_ title: String, _ icon: String) {
+        router.navigateTo(
+            UnavailableFeatureRoute(isPresented: router.isNavigating, icon: icon, title: title)
+        )
+    }
+    
+    private func routeToGlassesProve() {
+        router.navigateTo(
+            WebRoute(
+                isPreseted: router.isNavigating,
+                webViewURL: "https://api.walkycam.com/view/prove/v2/glasses"
+            )
+        )
     }
 }
 

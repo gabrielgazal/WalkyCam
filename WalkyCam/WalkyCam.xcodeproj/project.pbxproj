@@ -23,6 +23,7 @@
 		5604D0E42C11FA050069C0D6 /* FPVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5604D0E32C11FA040069C0D6 /* FPVManager.swift */; };
 		5604D0E62C11FA590069C0D6 /* FPUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5604D0E52C11FA590069C0D6 /* FPUIView.swift */; };
 		5615ECD22C503018002D31FA /* MenuPlanBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615ECD12C503018002D31FA /* MenuPlanBannerView.swift */; };
+		561846C82CE2825E00C53A23 /* Scan3dMenuCammerAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561846C72CE2825E00C53A23 /* Scan3dMenuCammerAssembler.swift */; };
 		561853AA2C589F5E00CBD687 /* StartScheduleVideocallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561853A92C589F5E00CBD687 /* StartScheduleVideocallUseCase.swift */; };
 		561853AF2C58AC8900CBD687 /* ScheduleVideoCallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561853AE2C58AC8900CBD687 /* ScheduleVideoCallUseCase.swift */; };
 		561853B12C58AC9D00CBD687 /* CancelVideoCallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561853B02C58AC9D00CBD687 /* CancelVideoCallUseCase.swift */; };
@@ -1111,6 +1112,7 @@
 		5604D0E32C11FA040069C0D6 /* FPVManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPVManager.swift; sourceTree = "<group>"; };
 		5604D0E52C11FA590069C0D6 /* FPUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPUIView.swift; sourceTree = "<group>"; };
 		5615ECD12C503018002D31FA /* MenuPlanBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPlanBannerView.swift; sourceTree = "<group>"; };
+		561846C72CE2825E00C53A23 /* Scan3dMenuCammerAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scan3dMenuCammerAssembler.swift; sourceTree = "<group>"; };
 		561853A92C589F5E00CBD687 /* StartScheduleVideocallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScheduleVideocallUseCase.swift; sourceTree = "<group>"; };
 		561853AE2C58AC8900CBD687 /* ScheduleVideoCallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVideoCallUseCase.swift; sourceTree = "<group>"; };
 		561853B02C58AC9D00CBD687 /* CancelVideoCallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelVideoCallUseCase.swift; sourceTree = "<group>"; };
@@ -2343,6 +2345,21 @@
 				569BA7652C2DF55100E4CCF1 /* Module */,
 			);
 			path = Games;
+			sourceTree = "<group>";
+		};
+		561846C52CE27FE900C53A23 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		561846C62CE2824700C53A23 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				561846C72CE2825E00C53A23 /* Scan3dMenuCammerAssembler.swift */,
+			);
+			path = Functions;
 			sourceTree = "<group>";
 		};
 		561A73F62C80BAE100EFB083 /* UseCase */ = {
@@ -7727,6 +7744,7 @@
 		EA8652332B902E4B00B86A54 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				561846C52CE27FE900C53A23 /* UseCase */,
 				EA8652342B902E4B00B86A54 /* Model */,
 			);
 			path = Domain;
@@ -7760,6 +7778,7 @@
 		EA8652392B902E4B00B86A54 /* Assembler */ = {
 			isa = PBXGroup;
 			children = (
+				561846C62CE2824700C53A23 /* Functions */,
 				EA86523A2B902E4B00B86A54 /* FunctionMenuAssembler.swift */,
 				EA86523B2B902E4B00B86A54 /* FunctionMenuAssemblerProtocol.swift */,
 			);
@@ -12021,6 +12040,7 @@
 				569889B22C462E2D006D5997 /* TimedLoadingScreenView.swift in Sources */,
 				EA0E408F2AF69771002B7437 /* CashWalletOnboardingInteractor.swift in Sources */,
 				EA8653032B90E0FB00B86A54 /* LidarOnboardingInteractorProtocol.swift in Sources */,
+				561846C82CE2825E00C53A23 /* Scan3dMenuCammerAssembler.swift in Sources */,
 				56F8AE2A2C247BE000EC7D4F /* IOTSensorsView.swift in Sources */,
 				EAB63BC22B83D63A0017BDA4 /* ARHandsMenuRouterProtocol.swift in Sources */,
 				EAE401D72BBA452900B1311E /* DigitalTwinsMenuView.swift in Sources */,

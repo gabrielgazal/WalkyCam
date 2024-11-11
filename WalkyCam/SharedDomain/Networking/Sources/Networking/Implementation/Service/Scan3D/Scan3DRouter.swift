@@ -46,8 +46,10 @@ extension Scan3DRouter: TargetType {
     
     var method: Moya.Method {
         switch self {
-        case .startCreate, .create, .startSchedule, .update, .cancel, .schedule:
+        case .startCreate, .startSchedule:
             return .post
+        case .create, .update, .cancel, .schedule:
+            return .put
         }
     }
     

@@ -8,7 +8,10 @@ final class FunctionMenuAssembler: FunctionMenuAssemblerProtocol {
         let router = FunctionMenuRouter(isPresented: route.isPresented)
 
         let interactor = FunctionMenuInteractor(
-            useCases: .init()
+            useCases: .init(
+                startCreate: .empty,
+                startSchedule: .empty
+            )
         )
         let viewModel = FunctionMenuViewModel(interactor: interactor,
                                               model: route.model)
