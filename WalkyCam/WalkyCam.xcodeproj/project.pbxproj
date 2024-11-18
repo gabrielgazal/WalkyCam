@@ -24,6 +24,19 @@
 		5604D0E62C11FA590069C0D6 /* FPUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5604D0E52C11FA590069C0D6 /* FPUIView.swift */; };
 		5615ECD22C503018002D31FA /* MenuPlanBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615ECD12C503018002D31FA /* MenuPlanBannerView.swift */; };
 		561846C82CE2825E00C53A23 /* Scan3dMenuCammerAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561846C72CE2825E00C53A23 /* Scan3dMenuCammerAssembler.swift */; };
+		561846E52CE2DA7B00C53A23 /* Scanner3dModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561846D02CE2DA7B00C53A23 /* Scanner3dModel.swift */; };
+		561846E62CE2DA7B00C53A23 /* Scanner3dAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561846D32CE2DA7B00C53A23 /* Scanner3dAssembler.swift */; };
+		561846E72CE2DA7B00C53A23 /* Scanner3dAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561846D42CE2DA7B00C53A23 /* Scanner3dAssemblerProtocol.swift */; };
+		561846E82CE2DA7B00C53A23 /* Scanner3dRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561846D62CE2DA7B00C53A23 /* Scanner3dRoute.swift */; };
+		561846E92CE2DA7B00C53A23 /* Scanner3dInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561846D92CE2DA7B00C53A23 /* Scanner3dInteractor.swift */; };
+		561846EA2CE2DA7B00C53A23 /* Scanner3dInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561846DA2CE2DA7B00C53A23 /* Scanner3dInteractorProtocol.swift */; };
+		561846EB2CE2DA7B00C53A23 /* Scanner3dRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561846DC2CE2DA7B00C53A23 /* Scanner3dRouter.swift */; };
+		561846EC2CE2DA7B00C53A23 /* Scanner3dRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561846DD2CE2DA7B00C53A23 /* Scanner3dRouterProtocol.swift */; };
+		561846ED2CE2DA7B00C53A23 /* Scanner3dView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561846DF2CE2DA7B00C53A23 /* Scanner3dView.swift */; };
+		561846EE2CE2DA7B00C53A23 /* Scanner3dViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561846E12CE2DA7B00C53A23 /* Scanner3dViewModel.swift */; };
+		561846EF2CE2DA7B00C53A23 /* Scanner3dViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561846E22CE2DA7B00C53A23 /* Scanner3dViewModelProtocol.swift */; };
+		561846F12CE2DB1200C53A23 /* VideoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561846F02CE2DB1200C53A23 /* VideoPicker.swift */; };
+		561846F32CE2E0FE00C53A23 /* CameraBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561846F22CE2E0FE00C53A23 /* CameraBackground.swift */; };
 		561853AA2C589F5E00CBD687 /* StartScheduleVideocallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561853A92C589F5E00CBD687 /* StartScheduleVideocallUseCase.swift */; };
 		561853AF2C58AC8900CBD687 /* ScheduleVideoCallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561853AE2C58AC8900CBD687 /* ScheduleVideoCallUseCase.swift */; };
 		561853B12C58AC9D00CBD687 /* CancelVideoCallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561853B02C58AC9D00CBD687 /* CancelVideoCallUseCase.swift */; };
@@ -154,6 +167,7 @@
 		567CB7772C51885600112F05 /* ServiceConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567CB7692C51885500112F05 /* ServiceConfirmationView.swift */; };
 		567CB7782C51885600112F05 /* ServiceConfirmationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567CB76B2C51885500112F05 /* ServiceConfirmationViewModel.swift */; };
 		567CB7792C51885600112F05 /* ServiceConfirmationViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567CB76C2C51885500112F05 /* ServiceConfirmationViewModelProtocol.swift */; };
+		568338C72CE64E4F0046CA9D /* Scan3dFromVideoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568338C62CE64E4F0046CA9D /* Scan3dFromVideoUseCase.swift */; };
 		568685D92C7D52550027709E /* UserFileOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568685D82C7D52550027709E /* UserFileOutput.swift */; };
 		569889AA2C462E2D006D5997 /* TimedLoadingScreenAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889952C462E2C006D5997 /* TimedLoadingScreenAssembler.swift */; };
 		569889AB2C462E2D006D5997 /* TimedLoadingScreenAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889962C462E2C006D5997 /* TimedLoadingScreenAssemblerProtocol.swift */; };
@@ -1113,6 +1127,19 @@
 		5604D0E52C11FA590069C0D6 /* FPUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPUIView.swift; sourceTree = "<group>"; };
 		5615ECD12C503018002D31FA /* MenuPlanBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPlanBannerView.swift; sourceTree = "<group>"; };
 		561846C72CE2825E00C53A23 /* Scan3dMenuCammerAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scan3dMenuCammerAssembler.swift; sourceTree = "<group>"; };
+		561846D02CE2DA7B00C53A23 /* Scanner3dModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scanner3dModel.swift; sourceTree = "<group>"; };
+		561846D32CE2DA7B00C53A23 /* Scanner3dAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scanner3dAssembler.swift; sourceTree = "<group>"; };
+		561846D42CE2DA7B00C53A23 /* Scanner3dAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scanner3dAssemblerProtocol.swift; sourceTree = "<group>"; };
+		561846D62CE2DA7B00C53A23 /* Scanner3dRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scanner3dRoute.swift; sourceTree = "<group>"; };
+		561846D92CE2DA7B00C53A23 /* Scanner3dInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scanner3dInteractor.swift; sourceTree = "<group>"; };
+		561846DA2CE2DA7B00C53A23 /* Scanner3dInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scanner3dInteractorProtocol.swift; sourceTree = "<group>"; };
+		561846DC2CE2DA7B00C53A23 /* Scanner3dRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scanner3dRouter.swift; sourceTree = "<group>"; };
+		561846DD2CE2DA7B00C53A23 /* Scanner3dRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scanner3dRouterProtocol.swift; sourceTree = "<group>"; };
+		561846DF2CE2DA7B00C53A23 /* Scanner3dView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scanner3dView.swift; sourceTree = "<group>"; };
+		561846E12CE2DA7B00C53A23 /* Scanner3dViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scanner3dViewModel.swift; sourceTree = "<group>"; };
+		561846E22CE2DA7B00C53A23 /* Scanner3dViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scanner3dViewModelProtocol.swift; sourceTree = "<group>"; };
+		561846F02CE2DB1200C53A23 /* VideoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPicker.swift; sourceTree = "<group>"; };
+		561846F22CE2E0FE00C53A23 /* CameraBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraBackground.swift; sourceTree = "<group>"; };
 		561853A92C589F5E00CBD687 /* StartScheduleVideocallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScheduleVideocallUseCase.swift; sourceTree = "<group>"; };
 		561853AE2C58AC8900CBD687 /* ScheduleVideoCallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVideoCallUseCase.swift; sourceTree = "<group>"; };
 		561853B02C58AC9D00CBD687 /* CancelVideoCallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelVideoCallUseCase.swift; sourceTree = "<group>"; };
@@ -1243,6 +1270,7 @@
 		567CB7692C51885500112F05 /* ServiceConfirmationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfirmationView.swift; sourceTree = "<group>"; };
 		567CB76B2C51885500112F05 /* ServiceConfirmationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfirmationViewModel.swift; sourceTree = "<group>"; };
 		567CB76C2C51885500112F05 /* ServiceConfirmationViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfirmationViewModelProtocol.swift; sourceTree = "<group>"; };
+		568338C62CE64E4F0046CA9D /* Scan3dFromVideoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scan3dFromVideoUseCase.swift; sourceTree = "<group>"; };
 		568685D82C7D52550027709E /* UserFileOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFileOutput.swift; sourceTree = "<group>"; };
 		569889952C462E2C006D5997 /* TimedLoadingScreenAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenAssembler.swift; sourceTree = "<group>"; };
 		569889962C462E2C006D5997 /* TimedLoadingScreenAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenAssemblerProtocol.swift; sourceTree = "<group>"; };
@@ -2362,6 +2390,107 @@
 			path = Functions;
 			sourceTree = "<group>";
 		};
+		561846C92CE2DA3900C53A23 /* Scanner3d */ = {
+			isa = PBXGroup;
+			children = (
+				561846D82CE2DA7B00C53A23 /* Configuration */,
+				561846D22CE2DA7B00C53A23 /* Domain */,
+				561846E42CE2DA7B00C53A23 /* Module */,
+			);
+			path = Scanner3d;
+			sourceTree = "<group>";
+		};
+		561846D12CE2DA7B00C53A23 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				561846D02CE2DA7B00C53A23 /* Scanner3dModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		561846D22CE2DA7B00C53A23 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				568338C52CE64E3A0046CA9D /* UseCase */,
+				561846D12CE2DA7B00C53A23 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		561846D52CE2DA7B00C53A23 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				561846D32CE2DA7B00C53A23 /* Scanner3dAssembler.swift */,
+				561846D42CE2DA7B00C53A23 /* Scanner3dAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		561846D72CE2DA7B00C53A23 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				561846D62CE2DA7B00C53A23 /* Scanner3dRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		561846D82CE2DA7B00C53A23 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				561846D52CE2DA7B00C53A23 /* Assembler */,
+				561846D72CE2DA7B00C53A23 /* Route */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		561846DB2CE2DA7B00C53A23 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				561846D92CE2DA7B00C53A23 /* Scanner3dInteractor.swift */,
+				561846DA2CE2DA7B00C53A23 /* Scanner3dInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		561846DE2CE2DA7B00C53A23 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				561846DC2CE2DA7B00C53A23 /* Scanner3dRouter.swift */,
+				561846DD2CE2DA7B00C53A23 /* Scanner3dRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		561846E02CE2DA7B00C53A23 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				561846DF2CE2DA7B00C53A23 /* Scanner3dView.swift */,
+				561846F02CE2DB1200C53A23 /* VideoPicker.swift */,
+				561846F22CE2E0FE00C53A23 /* CameraBackground.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		561846E32CE2DA7B00C53A23 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				561846E12CE2DA7B00C53A23 /* Scanner3dViewModel.swift */,
+				561846E22CE2DA7B00C53A23 /* Scanner3dViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		561846E42CE2DA7B00C53A23 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				561846DB2CE2DA7B00C53A23 /* Interactor */,
+				561846DE2CE2DA7B00C53A23 /* Router */,
+				561846E02CE2DA7B00C53A23 /* View */,
+				561846E32CE2DA7B00C53A23 /* ViewModel */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
 		561A73F62C80BAE100EFB083 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
@@ -3356,6 +3485,14 @@
 				567CB76D2C51885500112F05 /* ViewModel */,
 			);
 			path = Module;
+			sourceTree = "<group>";
+		};
+		568338C52CE64E3A0046CA9D /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				568338C62CE64E4F0046CA9D /* Scan3dFromVideoUseCase.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 		5698898E2C462E04006D5997 /* TimedLoadingScreen */ = {
@@ -4884,6 +5021,7 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				561846C92CE2DA3900C53A23 /* Scanner3d */,
 				567CB7532C51880D00112F05 /* ServiceConfirmation */,
 				569889B52C46AE45006D5997 /* ThermalCameraOnboarding */,
 				5698898E2C462E04006D5997 /* TimedLoadingScreen */,
@@ -11340,6 +11478,7 @@
 				56AF275F2BDAE00800DADC29 /* RegisterWalkcamerViewModelProtocol.swift in Sources */,
 				EACFDF1E2BA7EF3E00B08990 /* UnreleasedFeatureAssemblerProtocol.swift in Sources */,
 				EA4A1C1E2B87799100B5FC59 /* AvailableAssistantsAssemblerProtocol.swift in Sources */,
+				561846EA2CE2DA7B00C53A23 /* Scanner3dInteractorProtocol.swift in Sources */,
 				EA94A5322B7160EF00EC3037 /* ServiceDetailsInteractorProtocol.swift in Sources */,
 				EA910FC62ADC495700584B98 /* TabBarAssemblerProtocol.swift in Sources */,
 				EAE401AD2BBA3D6100B1311E /* DigitalTwinsOnboardingViewModelProtocol.swift in Sources */,
@@ -11365,6 +11504,7 @@
 				EAA1E6452AFB03FD00A42174 /* CashTabModel.swift in Sources */,
 				569BA7992C2DF57E00E4CCF1 /* PlayBusinessRouter.swift in Sources */,
 				EA0E40952AF69771002B7437 /* CashWalletOnboardingAssembler.swift in Sources */,
+				561846E82CE2DA7B00C53A23 /* Scanner3dRoute.swift in Sources */,
 				EA86532E2B90E9CA00B86A54 /* AIOnboardingAssemblerProtocol.swift in Sources */,
 				EAF47C412B838D74003F8B86 /* DroneMenuInteractor.swift in Sources */,
 				EA51030F2BA7E9DA00A2DE2E /* AppDelegate+Payment.swift in Sources */,
@@ -11421,6 +11561,7 @@
 				EACFDF1B2BA7EF3E00B08990 /* UnreleasedFeatureRouterProtocol.swift in Sources */,
 				EA3E5C922B87692400158207 /* AssistantMenuAssemblerProtocol.swift in Sources */,
 				5604D0D92C1157C60069C0D6 /* DroneConnectionRouterProtocol.swift in Sources */,
+				561846EF2CE2DA7B00C53A23 /* Scanner3dViewModelProtocol.swift in Sources */,
 				EA94A52D2B7160EF00EC3037 /* ServiceDetailsAssembler.swift in Sources */,
 				561FC8B52B5C66F7005B6006 /* WebView.swift in Sources */,
 				EA60838C2B01CD0A00295069 /* ShopTabAssembler.swift in Sources */,
@@ -11529,6 +11670,7 @@
 				EA94A5342B7160EF00EC3037 /* ServiceDetailsRouter.swift in Sources */,
 				EA6083642B01981800295069 /* CryptoDetailsViewModel.swift in Sources */,
 				EAB63BBB2B83D6390017BDA4 /* ARHandsMenuModel.swift in Sources */,
+				561846EB2CE2DA7B00C53A23 /* Scanner3dRouter.swift in Sources */,
 				EAF47C172B830C80003F8B86 /* WalkyCammerListView.swift in Sources */,
 				5621B6FF2C2E605100BFD923 /* UnavailableFeatureRouter.swift in Sources */,
 				EAE8EC4C2B9574840003AE96 /* ChatDetailInteractorProtocol.swift in Sources */,
@@ -11641,6 +11783,7 @@
 				EA6083E12B01DBE000295069 /* GalleryPhotosAssemblerProtocol.swift in Sources */,
 				567CB7722C51885600112F05 /* ServiceConfirmationRoute.swift in Sources */,
 				561D83C12BE916D70045C540 /* AvailabilityTabRouter.swift in Sources */,
+				568338C72CE64E4F0046CA9D /* Scan3dFromVideoUseCase.swift in Sources */,
 				EA5E1D742AD716A500738A8F /* ProjectFont.swift in Sources */,
 				EAA1E6402AFB03FD00A42174 /* CashTabView.swift in Sources */,
 				56AF27552BDAE00800DADC29 /* RegisterWalkcamerAssembler.swift in Sources */,
@@ -11765,6 +11908,7 @@
 				EA910F692AD9B57400584B98 /* OnboardingPageView.swift in Sources */,
 				EADB5CA62B190819005863E1 /* VideoCallAssemblerProtocol.swift in Sources */,
 				EAA1E63E2AFB03FD00A42174 /* CashTabViewModelProtocol.swift in Sources */,
+				561846EC2CE2DA7B00C53A23 /* Scanner3dRouterProtocol.swift in Sources */,
 				5668BB3B2BDFD5FB00A6E05D /* ProfitSelectionView.swift in Sources */,
 				56AF27592BDAE00800DADC29 /* RegisterWalkcamerInteractor.swift in Sources */,
 				EA6083662B01981800295069 /* CryptoDetailsInteractor.swift in Sources */,
@@ -11921,6 +12065,7 @@
 				EAE401D92BBA452900B1311E /* DigitalTwinsMenuInteractor.swift in Sources */,
 				56F8AE242C247BE000EC7D4F /* IOTSensorsAssemblerProtocol.swift in Sources */,
 				EAA1E6412AFB03FD00A42174 /* CashTabInteractorProtocol.swift in Sources */,
+				561846E92CE2DA7B00C53A23 /* Scanner3dInteractor.swift in Sources */,
 				EA0655472BB5DA5D006148E7 /* RadarMenuRoute.swift in Sources */,
 				EAB63B982B83D2ED0017BDA4 /* ARHandsOnboardingView.swift in Sources */,
 				EA172B232AF06EF600EB1514 /* StartupView.swift in Sources */,
@@ -11981,6 +12126,7 @@
 				EA6083B12B01D9E100295069 /* GalleryRoute.swift in Sources */,
 				EA20A4F12B87C3B5006662FA /* Scan3DOnboardingAssemblerProtocol.swift in Sources */,
 				EA6083432AFD58A900295069 /* CryptoTabInteractor.swift in Sources */,
+				561846EE2CE2DA7B00C53A23 /* Scanner3dViewModel.swift in Sources */,
 				EAF47C152B830C80003F8B86 /* WalkyCammerListViewModelProtocol.swift in Sources */,
 				561AA6F12BE3A6B500393CEF /* FeatureInformationRouterProtocol.swift in Sources */,
 				5668BB3F2BE0233200A6E05D /* CamerRegistrationData.swift in Sources */,
@@ -12015,6 +12161,7 @@
 				561AA6C22BE30A9800393CEF /* FeatureSelectionInteractor.swift in Sources */,
 				EAF47B9D2B82FFF2003F8B86 /* CalendarTabViewModel.swift in Sources */,
 				EA20A4E92B87C3B4006662FA /* Scan3DOnboardingViewModel.swift in Sources */,
+				561846F32CE2E0FE00C53A23 /* CameraBackground.swift in Sources */,
 				EA282ED62AEB532800B90920 /* RecentFunctionsCell.swift in Sources */,
 				EA72199C2B05612900BE2D93 /* WalkyBotInteractorProtocol.swift in Sources */,
 				EA5A88062B68039400BBB7F9 /* LoginUseCase.swift in Sources */,
@@ -12205,6 +12352,7 @@
 				561D83C52BE916D70045C540 /* AvailabilityTabViewModelProtocol.swift in Sources */,
 				56FEECF92B5C802C003FA686 /* SearchWalkyCammerRouterProtocol.swift in Sources */,
 				EAE401AC2BBA3D6100B1311E /* DigitalTwinsOnboardingViewModel.swift in Sources */,
+				561846E52CE2DA7B00C53A23 /* Scanner3dModel.swift in Sources */,
 				EA15B5982AD6E44D00C03407 /* LoginViewModelProtocol.swift in Sources */,
 				561AA6F52BE3A6B500393CEF /* FeatureInformationModel.swift in Sources */,
 				EA57A7822B6BFD09006247DD /* CammerData.swift in Sources */,
@@ -12231,6 +12379,7 @@
 				EA8653552B90EBE800B86A54 /* ConfigureAccessRoute.swift in Sources */,
 				56FEECF42B5C802C003FA686 /* SearchWalkyCammerViewModelProtocol.swift in Sources */,
 				EA8653772B90FA8800B86A54 /* AIMenuModel.swift in Sources */,
+				561846ED2CE2DA7B00C53A23 /* Scanner3dView.swift in Sources */,
 				EA6083BB2B01D9E100295069 /* GalleryRouter.swift in Sources */,
 				EA8EF8EC2B67E8B800136D1F /* FetchUserHeaderDataUseCase.swift in Sources */,
 				EA9110222ADDADE100584B98 /* HomeRoute.swift in Sources */,
@@ -12310,9 +12459,11 @@
 				569BA7982C2DF57E00E4CCF1 /* PlayBusinessInteractorProtocol.swift in Sources */,
 				569BA76E2C2DF55200E4CCF1 /* GamesInteractorProtocol.swift in Sources */,
 				EA172AFB2AF06BDE00EB1514 /* ConfirmMailViewModelProtocol.swift in Sources */,
+				561846F12CE2DB1200C53A23 /* VideoPicker.swift in Sources */,
 				EA9110232ADDADE100584B98 /* HomeAssemblerProtocol.swift in Sources */,
 				56B3E4732C3D8443004A87FA /* ScheduleVideoCallView.swift in Sources */,
 				56A552382B2F6168006B1B17 /* WalkyCamerOnboardingPageView.swift in Sources */,
+				561846E72CE2DA7B00C53A23 /* Scanner3dAssemblerProtocol.swift in Sources */,
 				EA8652912B90ACC200B86A54 /* IOTOnboardingInteractor.swift in Sources */,
 				EA15B5A22AD6E44D00C03407 /* LoginAssemblerProtocol.swift in Sources */,
 				EA8EF8DC2B67E24400136D1F /* Keychain.swift in Sources */,
@@ -12347,6 +12498,7 @@
 				EA910FC92ADC495700584B98 /* TabBarViewModel.swift in Sources */,
 				561853B52C58B13200CBD687 /* UpdateVideoCallInput.swift in Sources */,
 				5663D66B2BFBB2C800C6655E /* VideoCallOutput.swift in Sources */,
+				561846E62CE2DA7B00C53A23 /* Scanner3dAssembler.swift in Sources */,
 				EA8652402B902E4B00B86A54 /* FunctionMenuInteractor.swift in Sources */,
 				EA94A5362B7160EF00EC3037 /* ServiceDetailsItemModel.swift in Sources */,
 				56A5525B2B2F6E3D006B1B17 /* StreetCamMenuInteractorProtocol.swift in Sources */,

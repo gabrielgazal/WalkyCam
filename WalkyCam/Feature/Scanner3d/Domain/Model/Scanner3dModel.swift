@@ -1,0 +1,3 @@
+struct Scanner3dModel {
+
+}

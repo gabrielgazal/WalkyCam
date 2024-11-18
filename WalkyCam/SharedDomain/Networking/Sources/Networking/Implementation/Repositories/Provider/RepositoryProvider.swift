@@ -63,6 +63,7 @@ public final class RepositoryProvider: RepositoryRegistering, RepositoryResolvin
         let streetcamRepositoryFactory = { StreetcamRepository(service: StreetcamService()) }
         let videoCallRepositoryFactory = { VideoCallRepository(service: VideoCallService()) }
         let scan3dRepositoryFactory = { Scan3DRepository(service: Scan3DService()) }
+        let tridimensionalModelFactory = { TridimensionalModelRepository(service: TridimensionalModelService())}
 
         try? register(authRepositoryFactory, forType: AuthRepositoryProtocol.self)
         try? register(configurationRepositoryFactory, forType: ConfigurationRepositoryProtocol.self)
@@ -72,6 +73,7 @@ public final class RepositoryProvider: RepositoryRegistering, RepositoryResolvin
         try? register(streetcamRepositoryFactory, forType: StreetcamRepositoryProtocol.self)
         try? register(videoCallRepositoryFactory, forType: VideoCallRepositoryProtocol.self)
         try? register(scan3dRepositoryFactory, forType: Scan3DRepositoryProtocol.self)
+        try? register(tridimensionalModelFactory, forType: TridimensionalModelRepositoryProtocol.self)
     }
 }
 

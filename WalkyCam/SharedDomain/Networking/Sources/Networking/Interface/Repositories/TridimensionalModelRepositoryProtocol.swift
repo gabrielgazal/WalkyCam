@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol TridimensionalModelRepositoryProtocol {
+public protocol TridimensionalModelRepositoryProtocol {
     typealias GenerateModelFromImagesResult = Result<Void, RepositoryError>
     typealias GenerateModelFromVideoResult = Result<Void, RepositoryError>
     typealias FinishModelGenerationResult = Result<Void, RepositoryError>

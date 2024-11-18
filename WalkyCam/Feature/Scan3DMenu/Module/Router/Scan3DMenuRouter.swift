@@ -6,8 +6,9 @@ final class Scan3DMenuRouter: Router, Scan3DMenuRouterProtocol {
 
     func routeTo3DScanner() {
         navigateTo(
-            WebRoute(isPreseted: isNavigating,
-                            webViewURL: "https://api.walkycam.com/view/3d/66886285ad0c294c1608e5b2/66c3e57f97345")
+            Scanner3dRoute(
+                isPresented: isNavigating
+            )
         )
     }
 

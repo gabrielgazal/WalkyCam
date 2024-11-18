@@ -62,16 +62,16 @@ extension TridimensionalModelRouter: TargetType {
     }
     
     private func generateModelFromVideo(_ userId: String, _ video: Data) -> Task {
+        let userIdPart = MultipartFormData(provider: .data(userId.data(using: .utf8)!), name: "id_user")
         
-            let parameters = [
-                "id_user": userId,
-                "video": video
-            ] as [String:Any]
-
-            return .requestParameters(
-                parameters: parameters,
-                encoding: JSONEncoding.default
-            )
+        let videoPart = MultipartFormData(
+            provider: .data(video),
+            name: "video",
+            fileName: "video.mov",
+            mimeType: "video/quicktime"
+        )
+        
+        return .uploadMultipart([userIdPart, videoPart])
     }
     
     private func finishModelGeneration(_ userId: String, _ modelId: String) -> Task {
