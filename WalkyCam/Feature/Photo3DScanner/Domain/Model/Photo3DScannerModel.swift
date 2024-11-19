@@ -1,0 +1,3 @@
+struct Photo3DScannerModel {
+
+}

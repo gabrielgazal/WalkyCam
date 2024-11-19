@@ -49,16 +49,24 @@ extension TridimensionalModelRouter: TargetType {
     }
     
     private func generateModelFromImages(_ userId: String, _ images: [Data]) -> Task {
-    
-        let parameters = [
-            "id_user": userId,
-            "images": images
-        ] as [String:Any]
+        var formData: [MultipartFormData] = []
 
-        return .requestParameters(
-            parameters: parameters,
-            encoding: JSONEncoding.default
-        )
+        // Adiciona o userId como parte do formulário
+        let userIdPart = MultipartFormData(provider: .data(userId.data(using: .utf8)!), name: "id_user")
+        formData.append(userIdPart)
+
+        // Adiciona cada imagem como uma parte do formulário
+        for (index, imageData) in images.enumerated() {
+            let imagePart = MultipartFormData(
+                provider: .data(imageData),
+                name: "images[\(index)]", // Nome da chave no formato de array
+                fileName: "image\(index).jpg", // Nome do arquivo
+                mimeType: "image/jpeg" // Tipo MIME adequado
+            )
+            formData.append(imagePart)
+        }
+
+        return .uploadMultipart(formData)
     }
     
     private func generateModelFromVideo(_ userId: String, _ video: Data) -> Task {
@@ -67,8 +75,8 @@ extension TridimensionalModelRouter: TargetType {
         let videoPart = MultipartFormData(
             provider: .data(video),
             name: "video",
-            fileName: "video.mov",
-            mimeType: "video/quicktime"
+            fileName: "video.mp4",
+            mimeType: "video/mp4"
         )
         
         return .uploadMultipart([userIdPart, videoPart])

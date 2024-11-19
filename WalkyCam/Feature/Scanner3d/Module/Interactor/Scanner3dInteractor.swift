@@ -7,6 +7,7 @@ final class Scanner3dInteractor: Scanner3dInteractorProtocol {
 
     struct UseCases {
         let scan3dFromVideo: Scan3dFromVideoUseCase
+        let scan3dFromPhotos: Scan3dFromPhotosUseCase
     }
 
     // MARK: - Dependencies
@@ -25,6 +26,26 @@ final class Scanner3dInteractor: Scanner3dInteractorProtocol {
     func generateModelFromVideo(input: Data) async throws {
         return try await withCheckedThrowingContinuation { continuation in
             useCases.scan3dFromVideo(input)
+            .sink(
+                receiveCompletion: { completion in
+                    switch completion {
+                    case .finished:
+                        break
+                    case .failure(let failure):
+                        continuation.resume(with: .failure(failure))
+                    }
+                },
+                receiveValue: { _ in
+                    continuation.resume()
+                }
+            )
+            .store(in: &bag)
+        }
+    }
+    
+    func generateModelFromPhotos(input: [Data]) async throws {
+        return try await withCheckedThrowingContinuation { continuation in
+            useCases.scan3dFromPhotos(input)
             .sink(
                 receiveCompletion: { completion in
                     switch completion {

@@ -7,8 +7,7 @@ struct Scanner3dView<ViewModel: Scanner3dViewModelProtocol, Router: Scanner3dRou
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
     
-    
-    @StateObject private var cameraManager = CameraManager()
+    @StateObject private var videoManager = VideoManager()
 
     // MARK: - Initialization
 
@@ -21,14 +20,9 @@ struct Scanner3dView<ViewModel: Scanner3dViewModelProtocol, Router: Scanner3dRou
     // MARK: - View Body
 
     var body: some View {
-        AsyncDataView(viewModel.scanState) { item in
-            Text("Save state")
-        } errorAction: {}
-            .isHidden(!viewModel.scanState.isLoading)
         ZStack {
-            CameraBackground(session: cameraManager.session)
+            CameraBackground(session: videoManager.session)
                 .ignoresSafeArea()
-                .isHidden(viewModel.scanState.isLoading)
             VStack {
                 HStack {
                     Spacer()
@@ -41,11 +35,23 @@ struct Scanner3dView<ViewModel: Scanner3dViewModelProtocol, Router: Scanner3dRou
                     spacing: Tokens.Size.Spacing.regular
                 ) {
                     WCUIButton(
-                        title: "Iniciar escaneo",
+                        title: "VIDEO SCAN",
                         style: .standard,
                         descriptor: OrangeButtonStyleDescriptor()
                     ) {
-                        viewModel.isVideoPickerPresented = true
+                        router.navigateTo(
+                            Video3DScannerRoute(isPresented: router.isNavigating)
+                        )
+                    }
+                    
+                    WCUIButton(
+                        title: "PHOTO SCAN",
+                        style: .standard,
+                        descriptor: OrangeButtonStyleDescriptor()
+                    ) {
+                        router.navigateTo(
+                            Photo3DScannerRoute(isPresented: router.isNavigating)
+                        )
                     }
                     
                     WCUIButton(
@@ -59,29 +65,7 @@ struct Scanner3dView<ViewModel: Scanner3dViewModelProtocol, Router: Scanner3dRou
             }
             .padding()
         }
-        .isHidden(viewModel.scanState.isLoading)
-        .fullScreenCover(isPresented: $viewModel.isVideoPickerPresented) {
-            VideoPicker(
-                isPresented: $viewModel.isVideoPickerPresented,
-                videoData: $viewModel.videoData
-            )
-        }
-        .onChange(of: viewModel.isVideoPickerPresented) {
-            oldValue,
-            newValue in
-            if !newValue {
-                Task {
-                    await viewModel.generateModelFromVideo(
-                        onSuccess: {
-                            print("AA SUCCESS")
-                        },
-                        onFailure: {
-                            print("AA FAILURE")
-                        }
-                    )
-                }
-            }
-        }
+        .navigation(router)
     }
     
     private func headerCounterView(_ index: Int, _ totalSteps: Int) -> some View {
@@ -114,20 +98,5 @@ struct Scanner3dView<ViewModel: Scanner3dViewModelProtocol, Router: Scanner3dRou
             }
         }
         .frame(width: 190)
-    }
-}
-
-struct Scanner3dView_Previews: PreviewProvider {
-    static var previews: some View {
-    Scanner3dView(
-        viewModel: Scanner3dViewModel(
-            interactor: Scanner3dInteractor(
-                useCases: .init(
-                    scan3dFromVideo: .empty
-                )
-            )
-        ),
-            router: Scanner3dRouter(isPresented: .constant(false))
-        )
     }
 }

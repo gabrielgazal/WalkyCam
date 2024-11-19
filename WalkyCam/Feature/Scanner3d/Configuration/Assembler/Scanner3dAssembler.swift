@@ -15,7 +15,8 @@ final class Scanner3dAssembler: Scanner3dAssemblerProtocol {
         
         let interactor = Scanner3dInteractor(
             useCases: .init(
-                scan3dFromVideo: .live(repository: repository)
+                scan3dFromVideo: .empty, 
+                scan3dFromPhotos: .empty
             )
         )
         let viewModel = Scanner3dViewModel(interactor: interactor)

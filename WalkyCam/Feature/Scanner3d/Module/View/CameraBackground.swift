@@ -23,29 +23,3 @@ struct CameraBackground: UIViewRepresentable {
 
     func updateUIView(_ uiView: UIView, context: Context) {}
 }
-
-class CameraManager: ObservableObject {
-    let session = AVCaptureSession()
-
-    init() {
-        setupSession()
-    }
-
-    private func setupSession() {
-        session.sessionPreset = .high
-        
-        // Configuração da câmera traseira
-        guard let camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) else { return }
-        
-        do {
-            let input = try AVCaptureDeviceInput(device: camera)
-            if session.canAddInput(input) {
-                session.addInput(input)
-            }
-        } catch {
-            print("Erro ao configurar entrada da câmera: \(error)")
-        }
-        
-        session.startRunning()
-    }
-}
