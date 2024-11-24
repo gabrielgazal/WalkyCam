@@ -312,6 +312,7 @@
 		56C890332CED0267004B21CD /* Photo3DScannerAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C890252CED0267004B21CD /* Photo3DScannerAssemblerProtocol.swift */; };
 		56C890342CED0267004B21CD /* Photo3DScannerRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C890272CED0267004B21CD /* Photo3DScannerRoute.swift */; };
 		56C890362CED0E7F004B21CD /* Scan3dFromPhotosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C890352CED0E7F004B21CD /* Scan3dFromPhotosUseCase.swift */; };
+		56C890382CEFB7C5004B21CD /* VideoPreviewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C890372CEFB7C5004B21CD /* VideoPreviewer.swift */; };
 		56DADB202AD5EA7200710618 /* AppNavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB1F2AD5EA7200710618 /* AppNavigatorProtocol.swift */; };
 		56DADB222AD5EAA400710618 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB212AD5EAA400710618 /* AppNavigator.swift */; };
 		56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB232AD5EB3800710618 /* AppDelegate.swift */; };
@@ -1441,6 +1442,7 @@
 		56C890252CED0267004B21CD /* Photo3DScannerAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo3DScannerAssemblerProtocol.swift; sourceTree = "<group>"; };
 		56C890272CED0267004B21CD /* Photo3DScannerRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo3DScannerRoute.swift; sourceTree = "<group>"; };
 		56C890352CED0E7F004B21CD /* Scan3dFromPhotosUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scan3dFromPhotosUseCase.swift; sourceTree = "<group>"; };
+		56C890372CEFB7C5004B21CD /* VideoPreviewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreviewer.swift; sourceTree = "<group>"; };
 		56DADB1F2AD5EA7200710618 /* AppNavigatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigatorProtocol.swift; sourceTree = "<group>"; };
 		56DADB212AD5EAA400710618 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		56DADB232AD5EB3800710618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -4543,6 +4545,7 @@
 				56C88FE32CECF615004B21CD /* VideoManager.swift */,
 				561846F02CE2DB1200C53A23 /* VideoPicker.swift */,
 				56C88FF42CED01DE004B21CD /* Video3DScannerView.swift */,
+				56C890372CEFB7C5004B21CD /* VideoPreviewer.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -11712,6 +11715,7 @@
 				EA20A5142B87C913006662FA /* Scan3DMenuAssemblerProtocol.swift in Sources */,
 				EA8653752B90FA8800B86A54 /* AIMenuAssembler.swift in Sources */,
 				561D83C82BE916D70045C540 /* AvailabilityTabRoute.swift in Sources */,
+				56C890382CEFB7C5004B21CD /* VideoPreviewer.swift in Sources */,
 				EA282E582AE952F700B90920 /* ProfileInteractorProtocol.swift in Sources */,
 				56FEECF02B5C802C003FA686 /* SearchWalkyCammerAssembler.swift in Sources */,
 				EA3E5C932B87692400158207 /* AssistantMenuModel.swift in Sources */,

@@ -6,7 +6,12 @@ struct Photo3DScannerView<ViewModel: Photo3DScannerViewModelProtocol, Router: Ph
 
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
-
+    private let columns = [
+        GridItem(.flexible(), spacing: Tokens.Size.Spacing.large),
+        GridItem(.flexible(), spacing: Tokens.Size.Spacing.large),
+        GridItem(.flexible(), spacing: Tokens.Size.Spacing.large)
+    ]
+    
     // MARK: - Initialization
 
     init(viewModel: ViewModel,
@@ -18,50 +23,61 @@ struct Photo3DScannerView<ViewModel: Photo3DScannerViewModelProtocol, Router: Ph
     // MARK: - View Body
 
     var body: some View {
-        VStack {
-            if viewModel.capturedImages.isEmpty {
-                Text("Nenhuma foto capturada")
-                    .font(.headline)
-                    .foregroundColor(.gray)
-            } else {
-                ScrollView(.horizontal) {
-                    HStack {
-                        ForEach(viewModel.capturedImages, id: \.self) { image in
-                            Image(uiImage: image)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 100, height: 100)
-                                .cornerRadius(8)
+        ScrollView {
+            VStack(
+                alignment: .leading,
+                spacing: Tokens.Size.Spacing.regular) {
+                    Text("Modelado 3D")
+                        .font(.projectFont(size: Tokens.Size.Font.huge, weight: .bold))
+                    if viewModel.capturedImages.isEmpty {
+                        Text("Nenhuma foto capturada")
+                            .font(.headline)
+                            .foregroundColor(.gray)
+                    } else {
+                        LazyVGrid(columns: columns,
+                                  spacing: Tokens.Size.Spacing.large) {
+                            ForEach(viewModel.capturedImages, id: \.self) { image in
+                                Image(uiImage: image)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 100, height: 100)
+                                    .cornerRadius(8)
+                                    .clipped()
+                            }
                         }
                     }
-                    .padding()
                 }
-            }
-            
-            Button(action: {
-                viewModel.showImagePicker = true
-            }) {
-                Text("Tirar Foto")
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-            }
-            .padding()
-            
-            Button("Enviar fotos") {
-                Task {
-                    await viewModel.generateModelFromPhotos(
-                        onSuccess: {
-                            print("AA SUCCESS")
-                        },
-                        onFailure: {
-                            print("AA FAILURE")
+                .padding()
+        }
+        .snackbar(router)
+        .footer {
+            VStack(
+                alignment: .center,
+                spacing: Tokens.Size.Spacing.regular) {
+                    WCUIButton(
+                        title: "Tirar foto",
+                        style: .standard,
+                        descriptor: OrangeButtonStyleDescriptor()) {
+                            viewModel.showImagePicker = true
                         }
-                    )
+                    WCUIButton(
+                        title: "Enviar fotos",
+                        style: .standard,
+                        descriptor: BlackButtonStyleDescriptor()) {
+                            Task {
+                                await viewModel.generateModelFromPhotos(
+                                    onSuccess: {
+                                        print("AA SUCCESS")
+                                    },
+                                    onFailure: {
+                                        print("AA FAILURE")
+                                    }
+                                )
+                            }
+                        }
+                        .loading(viewModel.scanState.isLoading)
                 }
-            }
+                .padding()
         }
         .fullScreenCover(isPresented: $viewModel.showImagePicker) {
             ImagePicker(sourceType: .camera) { image in
@@ -70,5 +86,22 @@ struct Photo3DScannerView<ViewModel: Photo3DScannerViewModelProtocol, Router: Ph
                 }
             }
         }
+        .onChange(of: viewModel.scanState) { oldValue, newValue in
+            switch newValue {
+            case .failed:
+                presentSnackbar()
+            default: break
+            }
+        }
+    }
+    
+    private func presentSnackbar() {
+        router.presentSnackbar(
+            SnackBarRoute(
+                isPresented: router.isPresentingSnackbar,
+                title: "error generating 3d model",
+                style: InformationViewErrorStyle()
+            )
+        )
     }
 }

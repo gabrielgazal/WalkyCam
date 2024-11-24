@@ -7,7 +7,7 @@ final class Photo3DScannerViewModel: Photo3DScannerViewModelProtocol {
     private let interactor: Scanner3dInteractorProtocol
     
     @Published var capturedImages: [UIImage] = []
-    @Published var showImagePicker: Bool = false
+    @Published var showImagePicker: Bool = true
     @Published var scanState: AsyncData<Data, ErrorProtocol> = .idle
     
     // MARK: - Initialization

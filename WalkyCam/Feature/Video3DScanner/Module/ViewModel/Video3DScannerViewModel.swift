@@ -5,7 +5,7 @@ final class Video3DScannerViewModel: Video3DScannerViewModelProtocol {
     // MARK: - Dependencies
 
     private let interactor: Scanner3dInteractorProtocol
-    @Published var isVideoPickerPresented: Bool = false
+    @Published var isVideoPickerPresented: Bool = true
     @Published var videoData: Data? = nil
     @Published var scanState: AsyncData<Data, ErrorProtocol> = .idle
     
