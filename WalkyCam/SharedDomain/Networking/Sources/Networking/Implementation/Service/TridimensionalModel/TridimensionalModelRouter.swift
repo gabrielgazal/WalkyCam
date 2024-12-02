@@ -11,7 +11,6 @@ import Moya
 enum TridimensionalModelRouter {
     case generateModelFromImages(userId: String, images: [Data])
     case generateModelFromVideo(userId: String, video: Data)
-    case finishModelGeneration(userId: String, modelId: String)
 }
 
 extension TridimensionalModelRouter: TargetType {
@@ -25,14 +24,12 @@ extension TridimensionalModelRouter: TargetType {
             return "user/3d/generate-obj-model-from-images"
         case .generateModelFromVideo:
             return "user/3d/generate-obj-model-from-video"
-        case .finishModelGeneration:
-            return "user/3d/finish-model-generation"
         }
     }
 
     var method: Moya.Method {
         switch self {
-        case .generateModelFromImages, .generateModelFromVideo, .finishModelGeneration:
+        case .generateModelFromImages, .generateModelFromVideo:
             return .post
         }
     }
@@ -43,8 +40,6 @@ extension TridimensionalModelRouter: TargetType {
             return generateModelFromImages(userId, images)
         case let .generateModelFromVideo(userId, video):
             return generateModelFromVideo(userId, video)
-        case let .finishModelGeneration(userId, modelId):
-            return finishModelGeneration(userId, modelId)
         }
     }
     
@@ -80,18 +75,5 @@ extension TridimensionalModelRouter: TargetType {
         )
         
         return .uploadMultipart([userIdPart, videoPart])
-    }
-    
-    private func finishModelGeneration(_ userId: String, _ modelId: String) -> Task {
-        
-            let parameters = [
-                "id_user": userId,
-                "model_id": modelId
-            ] as [String:Any]
-
-            return .requestParameters(
-                parameters: parameters,
-                encoding: JSONEncoding.default
-            )
     }
 }

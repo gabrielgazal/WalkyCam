@@ -10,7 +10,6 @@ import Foundation
 public protocol TridimensionalModelRepositoryProtocol {
     typealias GenerateModelFromImagesResult = Result<Void, RepositoryError>
     typealias GenerateModelFromVideoResult = Result<Void, RepositoryError>
-    typealias FinishModelGenerationResult = Result<Void, RepositoryError>
 
 
     func generateModelFromImages(
@@ -22,10 +21,5 @@ public protocol TridimensionalModelRepositoryProtocol {
         userId: String,
         video: Data,
         completion: @escaping (GenerateModelFromVideoResult) -> Void
-    )
-    func finishModelGeneration(
-        userId: String,
-        modelId: String,
-        completion: @escaping (FinishModelGenerationResult) -> Void
     )
 }

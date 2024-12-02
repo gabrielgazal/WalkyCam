@@ -45,14 +45,4 @@ final class TridimensionalModelService: TridimensionalModelServiceProtocol {
             completion: completion
         )
     }
-    
-    func finishModelGeneration(userId: String, modelId: String, completion: @escaping Completion) {
-        provider.request(
-            .finishModelGeneration(
-                userId: userId,
-                modelId: modelId
-            ),
-            completion: completion
-        )
-    }
 }

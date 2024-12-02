@@ -46,14 +46,4 @@ final class TridimensionalModelRepository: TridimensionalModelRepositoryProtocol
             }
         )
     }
-    
-    func finishModelGeneration(userId: String, modelId: String, completion: @escaping (FinishModelGenerationResult) -> Void) {
-        service.finishModelGeneration(
-            userId: userId,
-            modelId: modelId,
-            completion: { result in
-                completion(result.mapToRepositoryResult(with: self.requestHandler))
-            }
-        )
-    }
 }

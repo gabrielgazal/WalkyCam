@@ -11,24 +11,29 @@ import SwiftUI
 
 struct VideoPlayerView: UIViewControllerRepresentable {
     let videoData: Data
-    
+
     func makeUIViewController(context: Context) -> AVPlayerViewController {
         let playerViewController = AVPlayerViewController()
-        playerViewController.player = makePlayer(from: videoData)
+        if let player = makePlayer(from: videoData) {
+            playerViewController.player = player
+            playerViewController.player?.play() // Opcional: iniciar reprodução automática
+        }
         playerViewController.showsPlaybackControls = true
         return playerViewController
     }
-    
+
     func updateUIViewController(_ uiViewController: AVPlayerViewController, context: Context) {
-        // Não há necessidade de atualização dinâmica
+        // Não precisa atualizar dinamicamente para este caso
     }
-    
+
     private func makePlayer(from data: Data) -> AVPlayer? {
-        // Salve o arquivo temporário
-        let tempURL = FileManager.default.temporaryDirectory.appendingPathComponent("tempVideo.mp4")
-        
+        // Gere o caminho do arquivo temporário
+        let tempURL = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString + ".mov")
+
         do {
+            // Salve o `Data` como um arquivo de vídeo
             try data.write(to: tempURL)
+            print("Vídeo salvo em: \(tempURL)") // Para depuração
             return AVPlayer(url: tempURL)
         } catch {
             print("Erro ao salvar o arquivo temporário: \(error)")

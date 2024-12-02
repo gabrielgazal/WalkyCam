@@ -25,8 +25,9 @@ struct Video3DScannerView<ViewModel: Video3DScannerViewModelProtocol, Router: Vi
                     Text("Modelado 3D")
                         .font(.projectFont(size: Tokens.Size.Font.huge, weight: .bold))
                     if let video = viewModel.videoData {
-                        VideoPlayerView(videoData: video)
-                            .cornerRadius(12, corners: .allCorners)
+                        Text("Vídeo capturado")
+                            .font(.headline)
+                            .foregroundColor(.gray)
                     } else {
                         Text("Nenhum vídeo capturado")
                             .font(.headline)
@@ -74,13 +75,15 @@ struct Video3DScannerView<ViewModel: Video3DScannerViewModelProtocol, Router: Vi
         .onChange(of: viewModel.scanState) { oldValue, newValue in
             switch newValue {
             case .failed:
-                presentSnackbar()
+                presentErrorSnackbar()
+            case .loaded:
+                presentSuccessSnackbar()
             default: break
             }
         }
     }
     
-    private func presentSnackbar() {
+    private func presentErrorSnackbar() {
         router.presentSnackbar(
             SnackBarRoute(
                 isPresented: router.isPresentingSnackbar,
@@ -89,18 +92,14 @@ struct Video3DScannerView<ViewModel: Video3DScannerViewModelProtocol, Router: Vi
             )
         )
     }
-/*
-    var body: some View {
-        VStack {
-            if viewModel.videoData != nil {
-                Text("Vídeo gravado com sucesso!")
-            } else {
-                Text("Nenhum vídeo gravado.")
-            }
-            
-            Button("Gravar Vídeo") {
-                viewModel.isVideoPickerPresented = true
-            }
-        }
-    }*/
+    
+    private func presentSuccessSnackbar() {
+        router.presentSnackbar(
+            SnackBarRoute(
+                isPresented: router.isPresentingSnackbar,
+                title: "error generating 3d model",
+                style: InformationViewSuccessStyle()
+            )
+        )
+    }
 }
