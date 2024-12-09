@@ -11,7 +11,11 @@ class HomeKitManager: NSObject, ObservableObject {
     private var homeManager: HMHomeManager = HMHomeManager()
     public static let shared = HomeKitManager()
 
-    @Published var devices: [HMAccessory] = []
+    @Published var devices: [HMAccessory] = [] {
+        didSet {
+            self.devices = devices.sorted(by: { $0.name > $1.name })
+        }
+    }
     
     override init() {
         super.init()
