@@ -11,11 +11,7 @@ class HomeKitManager: NSObject, ObservableObject {
     private var homeManager: HMHomeManager = HMHomeManager()
     public static let shared = HomeKitManager()
 
-    @Published var devices: [HMAccessory] = [] {
-        didSet {
-            self.devices = devices.sorted(by: { $0.name > $1.name })
-        }
-    }
+    @Published var devices: [HMAccessory] = []
     
     override init() {
         super.init()
@@ -32,6 +28,16 @@ class HomeKitManager: NSObject, ObservableObject {
     
     func fetchRGBLights() -> [HMAccessory] {
         return devices.filter { $0.isLightbulb }
+    }
+    
+    func updateColor(deviceId: String, hue: CGFloat) {
+        guard let accessory = devices.first(where: { $0.uniqueIdentifier.uuidString == deviceId }) else { return }
+        if let characteristic = accessory.findCharacteristicType(serviceType: HMServiceTypeLightbulb, characteristicType: HMCharacteristicTypeHue) {
+            characteristic.writeValue(hue) { (error) in
+                print("ERROR WRITING \(error?.localizedDescription)")
+                return
+            }
+        }
     }
 }
 
@@ -53,5 +59,12 @@ extension HMAccessory {
             .filter { $0.serviceType == serviceType }
             .flatMap { $0.characteristics }
             .first { $0.metadata?.format == characteristicType }
+    }
+    
+    func findCharacteristicType(serviceType: String, characteristicType: String) -> HMCharacteristic? {
+        return services.lazy
+            .filter { $0.serviceType == serviceType }
+            .flatMap { $0.characteristics }
+            .first { $0.characteristicType == characteristicType }
     }
 }
