@@ -65,6 +65,8 @@ struct GamesView<ViewModel: GamesViewModelProtocol, Router: GamesRouterProtocol>
             switch title {
             case "Glasses Prove":
                 routeToGlassesProve()
+            case "RGB Bulb Party":
+                router.routeToBulbParty()
             default:
                 routeToUnavailableFunction(title, icon)
             }
