@@ -59,4 +59,18 @@ final class WalkcamerService: WalkcamerServiceProtocol {
         provider.request(.updateAvailability(userId: userId), 
                          completion: completion)
     }
+    
+    func getNearWalkcammers(completion: @escaping Completion) {
+        provider.request(
+            .getNearWalkcammers,
+            completion: completion
+        )
+    }
+    
+    func searchWalkcammer(input: String, completion: @escaping Completion) {
+        provider.request(
+            .searchWalkcammer(input: input),
+            completion: completion
+        )
+    }
 }
