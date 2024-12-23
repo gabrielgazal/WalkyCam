@@ -25,4 +25,6 @@ protocol WalkcamerServiceProtocol {
     
     func updateAvailability(userId: String,
                             completion: @escaping Completion)
+    func getNearWalkcammers(completion: @escaping Completion)
+    func searchWalkcammer(input: String, completion: @escaping Completion)
 }

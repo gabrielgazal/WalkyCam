@@ -169,6 +169,7 @@
 		567CB7792C51885600112F05 /* ServiceConfirmationViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567CB76C2C51885500112F05 /* ServiceConfirmationViewModelProtocol.swift */; };
 		568338C72CE64E4F0046CA9D /* Scan3dFromVideoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568338C62CE64E4F0046CA9D /* Scan3dFromVideoUseCase.swift */; };
 		568685D92C7D52550027709E /* UserFileOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568685D82C7D52550027709E /* UserFileOutput.swift */; };
+		568B3BCD2D172CA900F28CC1 /* GetNearWalkyCammersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568B3BCC2D172CA900F28CC1 /* GetNearWalkyCammersUseCase.swift */; };
 		569889AA2C462E2D006D5997 /* TimedLoadingScreenAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889952C462E2C006D5997 /* TimedLoadingScreenAssembler.swift */; };
 		569889AB2C462E2D006D5997 /* TimedLoadingScreenAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889962C462E2C006D5997 /* TimedLoadingScreenAssemblerProtocol.swift */; };
 		569889AC2C462E2D006D5997 /* TimedLoadingScreenRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569889982C462E2C006D5997 /* TimedLoadingScreenRoute.swift */; };
@@ -1298,6 +1299,7 @@
 		567CB76C2C51885500112F05 /* ServiceConfirmationViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfirmationViewModelProtocol.swift; sourceTree = "<group>"; };
 		568338C62CE64E4F0046CA9D /* Scan3dFromVideoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scan3dFromVideoUseCase.swift; sourceTree = "<group>"; };
 		568685D82C7D52550027709E /* UserFileOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFileOutput.swift; sourceTree = "<group>"; };
+		568B3BCC2D172CA900F28CC1 /* GetNearWalkyCammersUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNearWalkyCammersUseCase.swift; sourceTree = "<group>"; };
 		569889952C462E2C006D5997 /* TimedLoadingScreenAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenAssembler.swift; sourceTree = "<group>"; };
 		569889962C462E2C006D5997 /* TimedLoadingScreenAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenAssemblerProtocol.swift; sourceTree = "<group>"; };
 		569889982C462E2C006D5997 /* TimedLoadingScreenRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedLoadingScreenRoute.swift; sourceTree = "<group>"; };
@@ -3547,6 +3549,14 @@
 			path = UseCase;
 			sourceTree = "<group>";
 		};
+		568B3BCB2D172C9600F28CC1 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				568B3BCC2D172CA900F28CC1 /* GetNearWalkyCammersUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
 		5698898E2C462E04006D5997 /* TimedLoadingScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -4897,6 +4907,7 @@
 		56FEECE02B5C802C003FA686 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				568B3BCB2D172C9600F28CC1 /* UseCase */,
 				56FEECE12B5C802C003FA686 /* Model */,
 			);
 			path = Domain;
@@ -11871,6 +11882,7 @@
 				EA890A292B61EDE500FC369B /* Dependency.swift in Sources */,
 				EAF47B782B82FCE8003F8B86 /* BookWalkycamerInteractor.swift in Sources */,
 				EA57A7AA2B6C1558006247DD /* CammerDetailsAssemblerProtocol.swift in Sources */,
+				568B3BCD2D172CA900F28CC1 /* GetNearWalkyCammersUseCase.swift in Sources */,
 				EA910FCF2ADC495700584B98 /* TabBarModel.swift in Sources */,
 				EAF47C432B838D74003F8B86 /* DroneMenuRouter.swift in Sources */,
 				EA910F8B2ADA06F500584B98 /* RegistrationRoute.swift in Sources */,

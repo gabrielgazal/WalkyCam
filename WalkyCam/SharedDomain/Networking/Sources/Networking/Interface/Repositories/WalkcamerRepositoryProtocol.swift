@@ -10,6 +10,8 @@ import Foundation
 public protocol WalkcamerRepositoryProtocol {
     typealias ConvertUserResult = Result<Void, RepositoryError>
     typealias UpdateUserAvailabilityResult = Result<Void, RepositoryError>
+    typealias GetNearWalkCamersResult = Result<[WalkyCammersResponse], RepositoryError>
+    typealias SearchWalkCamersResult = Result<[WalkyCammersResponse], RepositoryError>
     
     func convertUser(userId: String,
                      phoneNumber: String,
@@ -25,4 +27,6 @@ public protocol WalkcamerRepositoryProtocol {
     
     func updateAvailability(userId: String,
                             completion: @escaping (UpdateUserAvailabilityResult) -> Void)
+    func getNearWalkcammers(completion: @escaping (GetNearWalkCamersResult) -> Void)
+    func searchWalkcammer(input: String, completion: @escaping (SearchWalkCamersResult) -> Void)
 }

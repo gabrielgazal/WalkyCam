@@ -62,4 +62,16 @@ final class WalkcamerRepository: WalkcamerRepositoryProtocol {
             completion(result.mapToRepositoryResult(with: self.requestHandler))
         }
     }
+    
+    func getNearWalkcammers(completion: @escaping (GetNearWalkCamersResult) -> Void) {
+        service.getNearWalkcammers { result in
+            completion(result.mapToRepositoryResult(with: DefaultRequestHandler(at: "walkcamers")))
+        }
+    }
+    
+    func searchWalkcammer(input: String, completion: @escaping (SearchWalkCamersResult) -> Void) {
+        service.searchWalkcammer(input: input) { result in
+            completion(result.mapToRepositoryResult(with: DefaultRequestHandler(at: "walkcamers")))
+        }
+    }
 }
