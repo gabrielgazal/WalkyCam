@@ -111,7 +111,7 @@ struct Photo3DScannerView<ViewModel: Photo3DScannerViewModelProtocol, Router: Ph
         router.presentSnackbar(
             SnackBarRoute(
                 isPresented: router.isPresentingSnackbar,
-                title: "Modelo 3D generado exitosamente! Su escaneo estará disponible una vez que se complete el procesamiento.",
+                title: "Modelo 3D generado exitosamente! Su escaneo estará disponible en la galería una vez que se complete el procesamiento.",
                 style: InformationViewSuccessStyle()
             ) {
                 router.routeToHome()
