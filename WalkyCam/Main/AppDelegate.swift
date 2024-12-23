@@ -17,6 +17,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         initializeChatSDK()
         initializePaymentSDK()
         registerDroneDependencies()
+        HomeKitManager.shared.fetchDevices()
         return true
     }
 }
