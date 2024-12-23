@@ -1,6 +1,6 @@
 import SwiftUI
 
 protocol Photo3DScannerRouterProtocol: Router {
-    func routeToSomething()
+    func routeToHome()
 }
 

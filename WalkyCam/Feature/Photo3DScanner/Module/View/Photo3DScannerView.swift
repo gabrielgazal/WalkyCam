@@ -89,19 +89,33 @@ struct Photo3DScannerView<ViewModel: Photo3DScannerViewModelProtocol, Router: Ph
         .onChange(of: viewModel.scanState) { oldValue, newValue in
             switch newValue {
             case .failed:
-                presentSnackbar()
+                presentErrorSnackbar()
+            case .loaded:
+                presentSuccessSnackbar()
             default: break
             }
         }
     }
     
-    private func presentSnackbar() {
+    private func presentErrorSnackbar() {
         router.presentSnackbar(
             SnackBarRoute(
                 isPresented: router.isPresentingSnackbar,
                 title: "error generating 3d model",
                 style: InformationViewErrorStyle()
             )
+        )
+    }
+    
+    private func presentSuccessSnackbar() {
+        router.presentSnackbar(
+            SnackBarRoute(
+                isPresented: router.isPresentingSnackbar,
+                title: "Modelo 3D generado exitosamente! Su escaneo estará disponible una vez que se complete el procesamiento.",
+                style: InformationViewSuccessStyle()
+            ) {
+                router.routeToHome()
+            }
         )
     }
 }

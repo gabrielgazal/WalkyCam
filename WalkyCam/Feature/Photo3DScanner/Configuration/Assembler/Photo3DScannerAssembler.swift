@@ -9,7 +9,9 @@ final class Photo3DScannerAssembler: Photo3DScannerAssemblerProtocol {
         route: Photo3DScannerRoute
     ) -> Photo3DScannerView<Photo3DScannerViewModel, Photo3DScannerRouter> {
 
-        let router = Photo3DScannerRouter(isPresented: route.isPresented)
+        let router = Photo3DScannerRouter(
+            state: RouterState(isPresented: route.isPresented)
+        )
         
         let repository = retailRepository.resolve(TridimensionalModelRepositoryProtocol.self)
 

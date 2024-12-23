@@ -87,7 +87,7 @@ struct Video3DScannerView<ViewModel: Video3DScannerViewModelProtocol, Router: Vi
         router.presentSnackbar(
             SnackBarRoute(
                 isPresented: router.isPresentingSnackbar,
-                title: "error generating 3d model",
+                title: "Error generating 3d model",
                 style: InformationViewErrorStyle()
             )
         )
@@ -97,9 +97,11 @@ struct Video3DScannerView<ViewModel: Video3DScannerViewModelProtocol, Router: Vi
         router.presentSnackbar(
             SnackBarRoute(
                 isPresented: router.isPresentingSnackbar,
-                title: "error generating 3d model",
+                title: "Modelo 3D generado exitosamente! Su escaneo estará disponible una vez que se complete el procesamiento.",
                 style: InformationViewSuccessStyle()
-            )
+            ) {
+                router.routeToHome()
+            }
         )
     }
 }

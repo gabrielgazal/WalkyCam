@@ -9,7 +9,9 @@ final class Video3DScannerAssembler: Video3DScannerAssemblerProtocol {
         route: Video3DScannerRoute
     ) -> Video3DScannerView<Video3DScannerViewModel, Video3DScannerRouter> {
 
-        let router = Video3DScannerRouter(isPresented: route.isPresented)
+        let router = Video3DScannerRouter(
+            state: RouterState(isPresented: route.isPresented)
+        )
 
         let repository = retailRepository.resolve(TridimensionalModelRepositoryProtocol.self)
         
@@ -21,6 +23,7 @@ final class Video3DScannerAssembler: Video3DScannerAssemblerProtocol {
         )
         
         let viewModel = Video3DScannerViewModel(interactor: interactor)
+        
         let view = Video3DScannerView(viewModel: viewModel, router: router)
 
         return view
