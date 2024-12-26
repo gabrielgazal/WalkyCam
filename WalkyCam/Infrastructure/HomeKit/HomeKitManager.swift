@@ -30,13 +30,16 @@ class HomeKitManager: NSObject, ObservableObject {
         return devices.filter { $0.isLightbulb }
     }
     
-    func updateColor(deviceId: String, hue: CGFloat) {
+    func updateColor(deviceId: String, hue: CGFloat) async {
         guard let accessory = devices.first(where: { $0.uniqueIdentifier.uuidString == deviceId }) else { return }
-        if let characteristic = accessory.findCharacteristicType(serviceType: HMServiceTypeLightbulb, characteristicType: HMCharacteristicTypeHue) {
-            characteristic.writeValue(hue) { (error) in
-                print("ERROR WRITING \(error?.localizedDescription)")
-                return
+        if let characteristic = accessory.findCharacteristicType(serviceType: HMServiceTypeLightbulb, characteristicType: HMCharacteristicTypeHue),
+           accessory.isReachable {
+            do {
+                _ = try await characteristic.writeValue(hue)
+            } catch {
+                print("ERROR WRITING \(error.localizedDescription)")
             }
+
         }
     }
 }

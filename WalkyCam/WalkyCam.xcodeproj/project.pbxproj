@@ -325,6 +325,7 @@
 		56C890342CED0267004B21CD /* Photo3DScannerRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C890272CED0267004B21CD /* Photo3DScannerRoute.swift */; };
 		56C890362CED0E7F004B21CD /* Scan3dFromPhotosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C890352CED0E7F004B21CD /* Scan3dFromPhotosUseCase.swift */; };
 		56C890382CEFB7C5004B21CD /* VideoPreviewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C890372CEFB7C5004B21CD /* VideoPreviewer.swift */; };
+		56D4DF442D19E050009E4222 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4DF432D19E050009E4222 /* AudioManager.swift */; };
 		56DADB202AD5EA7200710618 /* AppNavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB1F2AD5EA7200710618 /* AppNavigatorProtocol.swift */; };
 		56DADB222AD5EAA400710618 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB212AD5EAA400710618 /* AppNavigator.swift */; };
 		56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB232AD5EB3800710618 /* AppDelegate.swift */; };
@@ -1468,6 +1469,7 @@
 		56C890272CED0267004B21CD /* Photo3DScannerRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo3DScannerRoute.swift; sourceTree = "<group>"; };
 		56C890352CED0E7F004B21CD /* Scan3dFromPhotosUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scan3dFromPhotosUseCase.swift; sourceTree = "<group>"; };
 		56C890372CEFB7C5004B21CD /* VideoPreviewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreviewer.swift; sourceTree = "<group>"; };
+		56D4DF432D19E050009E4222 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		56DADB1F2AD5EA7200710618 /* AppNavigatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigatorProtocol.swift; sourceTree = "<group>"; };
 		56DADB212AD5EAA400710618 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		56DADB232AD5EB3800710618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -4843,6 +4845,14 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		56D4DF422D19E040009E4222 /* AudioManager */ = {
+			isa = PBXGroup;
+			children = (
+				56D4DF432D19E050009E4222 /* AudioManager.swift */,
+			);
+			path = AudioManager;
+			sourceTree = "<group>";
+		};
 		56DADB1D2AD5EA3400710618 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -5570,6 +5580,7 @@
 		EA15B5A52AD7067400C03407 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				56D4DF422D19E040009E4222 /* AudioManager */,
 				56298DF82D06311500CF407F /* HomeKit */,
 				5602E9CB2CAF164F00D6009B /* Localization */,
 				5604D0B52C1157890069C0D6 /* DJI */,
@@ -12412,6 +12423,7 @@
 				EA910FD22ADC499500584B98 /* TabBarBuilder.swift in Sources */,
 				EA5E1D762AD716D200738A8F /* ButtonStyleDescriptor.swift in Sources */,
 				EA8653262B90E9CA00B86A54 /* AIOnboardingViewModelProtocol.swift in Sources */,
+				56D4DF442D19E050009E4222 /* AudioManager.swift in Sources */,
 				EA8652B22B90DA9600B86A54 /* 3DPrintOnboardingRoute.swift in Sources */,
 				EA4A1C6A2B87909F00B5FC59 /* ExternalAssistantModel.swift in Sources */,
 				EA8653092B90E0FB00B86A54 /* LidarOnboardingAssembler.swift in Sources */,

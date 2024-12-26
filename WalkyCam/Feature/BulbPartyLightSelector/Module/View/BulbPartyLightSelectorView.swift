@@ -6,10 +6,6 @@ struct BulbPartyLightSelectorView<ViewModel: BulbPartyLightSelectorViewModelProt
     
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
-    @StateObject var homekitManager = HomeKitManager.shared
-    @State var selectedDevices: [String] = []
-    @State var timer: Timer?
-    @State var isRunning = false
     
     // MARK: - Initialization
     
@@ -23,9 +19,9 @@ struct BulbPartyLightSelectorView<ViewModel: BulbPartyLightSelectorViewModelProt
     
     var body: some View {
         VStack {
-            Text("Seleccione dispositivos para activar RGB Bulb Party")
+            Text(viewModel.screenTitle())
                 .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
-            List(homekitManager.fetchRGBLights(), id: \.uniqueIdentifier) { item in
+            List(viewModel.fetchRgbDevices(), id: \.uniqueIdentifier) { item in
                 HStack {
                     Image(systemName: "lightbulb")
                     Toggle(
@@ -36,57 +32,49 @@ struct BulbPartyLightSelectorView<ViewModel: BulbPartyLightSelectorViewModelProt
                     .toggleStyle(WCToggleStyle())
                 }
             }
+            Text(viewModel.isRunningLightParty ? "Procesando audio...": "Presione start para comenzar")
             Spacer()
+        }
+        .footer {
             WCUIButton(
-                title: isRunning ? "Stop": "Start",
+                title: viewModel.isRunningLightParty ? "Stop": "Start",
                 style: .standard,
                 descriptor: OrangeButtonStyleDescriptor(),
                 action:  {
-                    isRunning.toggle()
+                    viewModel.isRunningLightParty.toggle()
                 }
             )
+            .padding()
         }
-        .onChange(of: isRunning) { oldValue, newValue in
+        .onChange(of: viewModel.isRunningLightParty) { oldValue, newValue in
             if newValue {
-                startColorChange()
+                Task {
+                    await viewModel.startColorChange()
+                }
             } else {
-                stopColorChange()
+                viewModel.stopColorChange()
             }
+        }
+        .onDisappear {
+            viewModel.stopColorChange()
         }
     }
     
     private func bindingForDevice(_ device: String) -> Binding<Bool> {
         Binding(
             get: {
-                selectedDevices.contains(device)
+                viewModel.selectedDevices.contains(device)
             },
             set: { isSelected in
                 if isSelected {
-                    if !selectedDevices.contains(device) {
-                        selectedDevices.append(device)
+                    if !viewModel.selectedDevices.contains(device) {
+                        viewModel.selectedDevices.append(device)
                     }
                 } else {
-                    selectedDevices.removeAll { $0 == device }
+                    viewModel.selectedDevices.removeAll { $0 == device }
                 }
             }
         )
-    }
-    
-    private func startColorChange() {
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-            self.updateColors()
-        }
-    }
-    
-    private func stopColorChange() {
-        timer?.invalidate()
-        timer = nil
-    }
-    
-    private func updateColors() {
-        for device in selectedDevices {
-            homekitManager.updateColor(deviceId: device, hue: CGFloat.random(in: 0...360))
-        }
     }
 }
 
