@@ -127,6 +127,18 @@
 		5621B70C2C2EF32100BFD923 /* ChatBotClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621B70B2C2EF32100BFD923 /* ChatBotClient.swift */; };
 		5621B70F2C2F478300BFD923 /* CreateVideoCallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621B70E2C2F478200BFD923 /* CreateVideoCallUseCase.swift */; };
 		5626C3962C74D9B600CC8004 /* WalkcamerRegistrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5626C3952C74D9B600CC8004 /* WalkcamerRegistrationManager.swift */; };
+		56298DFA2D06312200CF407F /* HomeKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56298DF92D06312200CF407F /* HomeKitManager.swift */; };
+		56298E172D0632BF00CF407F /* BulbPartyLightSelectorAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56298E022D0632BE00CF407F /* BulbPartyLightSelectorAssembler.swift */; };
+		56298E182D0632BF00CF407F /* BulbPartyLightSelectorAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56298E032D0632BE00CF407F /* BulbPartyLightSelectorAssemblerProtocol.swift */; };
+		56298E192D0632BF00CF407F /* BulbPartyLightSelectorRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56298E052D0632BE00CF407F /* BulbPartyLightSelectorRoute.swift */; };
+		56298E1A2D0632BF00CF407F /* BulbPartyLightSelectorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56298E082D0632BE00CF407F /* BulbPartyLightSelectorInteractor.swift */; };
+		56298E1B2D0632BF00CF407F /* BulbPartyLightSelectorInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56298E092D0632BE00CF407F /* BulbPartyLightSelectorInteractorProtocol.swift */; };
+		56298E1C2D0632BF00CF407F /* BulbPartyLightSelectorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56298E0B2D0632BE00CF407F /* BulbPartyLightSelectorRouter.swift */; };
+		56298E1D2D0632BF00CF407F /* BulbPartyLightSelectorRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56298E0C2D0632BE00CF407F /* BulbPartyLightSelectorRouterProtocol.swift */; };
+		56298E1E2D0632BF00CF407F /* BulbPartyLightSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56298E0E2D0632BE00CF407F /* BulbPartyLightSelectorView.swift */; };
+		56298E1F2D0632BF00CF407F /* BulbPartyLightSelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56298E102D0632BE00CF407F /* BulbPartyLightSelectorViewModel.swift */; };
+		56298E202D0632BF00CF407F /* BulbPartyLightSelectorViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56298E112D0632BE00CF407F /* BulbPartyLightSelectorViewModelProtocol.swift */; };
+		56298E212D0632BF00CF407F /* BulbPartyLightSelectorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56298E142D0632BF00CF407F /* BulbPartyLightSelectorModel.swift */; };
 		5637A8162AD5DD72000586DF /* WalkyCamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5637A8152AD5DD72000586DF /* WalkyCamApp.swift */; };
 		5637A81A2AD5DD73000586DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5637A8192AD5DD73000586DF /* Assets.xcassets */; };
 		56459FA32BFFB4D300776F68 /* SnackBarAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56459F982BFFB4D300776F68 /* SnackBarAssembler.swift */; };
@@ -314,6 +326,7 @@
 		56C890342CED0267004B21CD /* Photo3DScannerRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C890272CED0267004B21CD /* Photo3DScannerRoute.swift */; };
 		56C890362CED0E7F004B21CD /* Scan3dFromPhotosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C890352CED0E7F004B21CD /* Scan3dFromPhotosUseCase.swift */; };
 		56C890382CEFB7C5004B21CD /* VideoPreviewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C890372CEFB7C5004B21CD /* VideoPreviewer.swift */; };
+		56D4DF442D19E050009E4222 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4DF432D19E050009E4222 /* AudioManager.swift */; };
 		56DADB202AD5EA7200710618 /* AppNavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB1F2AD5EA7200710618 /* AppNavigatorProtocol.swift */; };
 		56DADB222AD5EAA400710618 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB212AD5EAA400710618 /* AppNavigator.swift */; };
 		56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB232AD5EB3800710618 /* AppDelegate.swift */; };
@@ -1256,6 +1269,19 @@
 		5621B70B2C2EF32100BFD923 /* ChatBotClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotClient.swift; sourceTree = "<group>"; };
 		5621B70E2C2F478200BFD923 /* CreateVideoCallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateVideoCallUseCase.swift; sourceTree = "<group>"; };
 		5626C3952C74D9B600CC8004 /* WalkcamerRegistrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkcamerRegistrationManager.swift; sourceTree = "<group>"; };
+		56298DF72D062FC100CF407F /* WalkyCam.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WalkyCam.entitlements; sourceTree = "<group>"; };
+		56298DF92D06312200CF407F /* HomeKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeKitManager.swift; sourceTree = "<group>"; };
+		56298E022D0632BE00CF407F /* BulbPartyLightSelectorAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulbPartyLightSelectorAssembler.swift; sourceTree = "<group>"; };
+		56298E032D0632BE00CF407F /* BulbPartyLightSelectorAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulbPartyLightSelectorAssemblerProtocol.swift; sourceTree = "<group>"; };
+		56298E052D0632BE00CF407F /* BulbPartyLightSelectorRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulbPartyLightSelectorRoute.swift; sourceTree = "<group>"; };
+		56298E082D0632BE00CF407F /* BulbPartyLightSelectorInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulbPartyLightSelectorInteractor.swift; sourceTree = "<group>"; };
+		56298E092D0632BE00CF407F /* BulbPartyLightSelectorInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulbPartyLightSelectorInteractorProtocol.swift; sourceTree = "<group>"; };
+		56298E0B2D0632BE00CF407F /* BulbPartyLightSelectorRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulbPartyLightSelectorRouter.swift; sourceTree = "<group>"; };
+		56298E0C2D0632BE00CF407F /* BulbPartyLightSelectorRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulbPartyLightSelectorRouterProtocol.swift; sourceTree = "<group>"; };
+		56298E0E2D0632BE00CF407F /* BulbPartyLightSelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulbPartyLightSelectorView.swift; sourceTree = "<group>"; };
+		56298E102D0632BE00CF407F /* BulbPartyLightSelectorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulbPartyLightSelectorViewModel.swift; sourceTree = "<group>"; };
+		56298E112D0632BE00CF407F /* BulbPartyLightSelectorViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulbPartyLightSelectorViewModelProtocol.swift; sourceTree = "<group>"; };
+		56298E142D0632BF00CF407F /* BulbPartyLightSelectorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulbPartyLightSelectorModel.swift; sourceTree = "<group>"; };
 		5637A8122AD5DD72000586DF /* WalkyCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkyCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5637A8152AD5DD72000586DF /* WalkyCamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkyCamApp.swift; sourceTree = "<group>"; };
 		5637A8192AD5DD73000586DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1445,6 +1471,7 @@
 		56C890272CED0267004B21CD /* Photo3DScannerRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo3DScannerRoute.swift; sourceTree = "<group>"; };
 		56C890352CED0E7F004B21CD /* Scan3dFromPhotosUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scan3dFromPhotosUseCase.swift; sourceTree = "<group>"; };
 		56C890372CEFB7C5004B21CD /* VideoPreviewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreviewer.swift; sourceTree = "<group>"; };
+		56D4DF432D19E050009E4222 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		56DADB1F2AD5EA7200710618 /* AppNavigatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigatorProtocol.swift; sourceTree = "<group>"; };
 		56DADB212AD5EAA400710618 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		56DADB232AD5EB3800710618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -3205,9 +3232,116 @@
 			path = WalkcamerRegistrationManager;
 			sourceTree = "<group>";
 		};
+		56298DF82D06311500CF407F /* HomeKit */ = {
+			isa = PBXGroup;
+			children = (
+				56298DF92D06312200CF407F /* HomeKitManager.swift */,
+			);
+			path = HomeKit;
+			sourceTree = "<group>";
+		};
+		56298DFB2D06329D00CF407F /* BulbPartyLightSelector */ = {
+			isa = PBXGroup;
+			children = (
+				56298E072D0632BE00CF407F /* Configuration */,
+				56298E162D0632BF00CF407F /* Domain */,
+				56298E132D0632BE00CF407F /* Module */,
+			);
+			path = BulbPartyLightSelector;
+			sourceTree = "<group>";
+		};
+		56298E042D0632BE00CF407F /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				56298E022D0632BE00CF407F /* BulbPartyLightSelectorAssembler.swift */,
+				56298E032D0632BE00CF407F /* BulbPartyLightSelectorAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		56298E062D0632BE00CF407F /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				56298E052D0632BE00CF407F /* BulbPartyLightSelectorRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		56298E072D0632BE00CF407F /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				56298E042D0632BE00CF407F /* Assembler */,
+				56298E062D0632BE00CF407F /* Route */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		56298E0A2D0632BE00CF407F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				56298E082D0632BE00CF407F /* BulbPartyLightSelectorInteractor.swift */,
+				56298E092D0632BE00CF407F /* BulbPartyLightSelectorInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		56298E0D2D0632BE00CF407F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				56298E0B2D0632BE00CF407F /* BulbPartyLightSelectorRouter.swift */,
+				56298E0C2D0632BE00CF407F /* BulbPartyLightSelectorRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		56298E0F2D0632BE00CF407F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				56298E0E2D0632BE00CF407F /* BulbPartyLightSelectorView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		56298E122D0632BE00CF407F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				56298E102D0632BE00CF407F /* BulbPartyLightSelectorViewModel.swift */,
+				56298E112D0632BE00CF407F /* BulbPartyLightSelectorViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		56298E132D0632BE00CF407F /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				56298E0A2D0632BE00CF407F /* Interactor */,
+				56298E0D2D0632BE00CF407F /* Router */,
+				56298E0F2D0632BE00CF407F /* View */,
+				56298E122D0632BE00CF407F /* ViewModel */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		56298E152D0632BF00CF407F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				56298E142D0632BF00CF407F /* BulbPartyLightSelectorModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		56298E162D0632BF00CF407F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				56298E152D0632BF00CF407F /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		5637A8092AD5DD71000586DF = {
 			isa = PBXGroup;
 			children = (
+				56298DF72D062FC100CF407F /* WalkyCam.entitlements */,
 				565909632BF2A016002FD2B5 /* PrivacyInfo.xcprivacy */,
 				EA15B5BF2AD709B000C03407 /* WalkyCam-Info.plist */,
 				EA15B5A52AD7067400C03407 /* Infrastructure */,
@@ -4721,6 +4855,14 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		56D4DF422D19E040009E4222 /* AudioManager */ = {
+			isa = PBXGroup;
+			children = (
+				56D4DF432D19E050009E4222 /* AudioManager.swift */,
+			);
+			path = AudioManager;
+			sourceTree = "<group>";
+		};
 		56DADB1D2AD5EA3400710618 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -5284,6 +5426,7 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				56298DFB2D06329D00CF407F /* BulbPartyLightSelector */,
 				56C8900E2CED0210004B21CD /* Photo3DScanner */,
 				56C88FE72CED01A7004B21CD /* Video3DScanner */,
 				561846C92CE2DA3900C53A23 /* Scanner3d */,
@@ -5448,6 +5591,8 @@
 		EA15B5A52AD7067400C03407 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				56D4DF422D19E040009E4222 /* AudioManager */,
+				56298DF82D06311500CF407F /* HomeKit */,
 				5602E9CB2CAF164F00D6009B /* Localization */,
 				5604D0B52C1157890069C0D6 /* DJI */,
 				5626C3942C74D9A000CC8004 /* WalkcamerRegistrationManager */,
@@ -11738,6 +11883,7 @@
 				EA6083922B01CD0A00295069 /* ShopTabInteractorProtocol.swift in Sources */,
 				EA72199A2B05612900BE2D93 /* WalkyBotView.swift in Sources */,
 				EA7219992B05612900BE2D93 /* WalkyBotViewModel.swift in Sources */,
+				56298E1A2D0632BF00CF407F /* BulbPartyLightSelectorInteractor.swift in Sources */,
 				EA20A5612B87D35B006662FA /* ShareSheetAssemblerProtocol.swift in Sources */,
 				EA86532D2B90E9CA00B86A54 /* AIOnboardingRoute.swift in Sources */,
 				EA8652E02B90DCE900B86A54 /* PrintMenuInteractor.swift in Sources */,
@@ -11924,6 +12070,7 @@
 				569889D82C46AE85006D5997 /* ThermalCameraOnboardingAssembler.swift in Sources */,
 				EAE401FF2BBAFB0900B1311E /* RobotMenuRouter.swift in Sources */,
 				EA910FF02ADCBCC000584B98 /* MenuRoute.swift in Sources */,
+				56298DFA2D06312200CF407F /* HomeKitManager.swift in Sources */,
 				569889D32C46AE85006D5997 /* ThermalCameraOnboardingRouter.swift in Sources */,
 				EAF47BF12B83099F003F8B86 /* MapTabView.swift in Sources */,
 				EA86537D2B90FA8800B86A54 /* AIMenuRouter.swift in Sources */,
@@ -11978,6 +12125,7 @@
 				569BA7762C2DF55200E4CCF1 /* GamesRoute.swift in Sources */,
 				EA910F672AD9B20600584B98 /* NavigationController+Extension.swift in Sources */,
 				EA0E40BB2AF70E86002B7437 /* CashWalletViewModelProtocol.swift in Sources */,
+				56298E192D0632BF00CF407F /* BulbPartyLightSelectorRoute.swift in Sources */,
 				EA60836C2B01981800295069 /* CryptoDetailsAssemblerProtocol.swift in Sources */,
 				EA6083402AFD58A900295069 /* CryptoTabViewModel.swift in Sources */,
 				EAF47BC82B8306E9003F8B86 /* TimeTabInteractor.swift in Sources */,
@@ -12064,6 +12212,7 @@
 				568338C72CE64E4F0046CA9D /* Scan3dFromVideoUseCase.swift in Sources */,
 				EA5E1D742AD716A500738A8F /* ProjectFont.swift in Sources */,
 				EAA1E6402AFB03FD00A42174 /* CashTabView.swift in Sources */,
+				56298E1E2D0632BF00CF407F /* BulbPartyLightSelectorView.swift in Sources */,
 				56AF27552BDAE00800DADC29 /* RegisterWalkcamerAssembler.swift in Sources */,
 				EA4A1C6C2B87909F00B5FC59 /* ExternalAssistantAssembler.swift in Sources */,
 				EA5A87FC2B68002A00BBB7F9 /* RegistrationOutput.swift in Sources */,
@@ -12131,6 +12280,7 @@
 				565909672BF67742002FD2B5 /* TextMask.swift in Sources */,
 				EA57A7A92B6C1558006247DD /* CammerDetailsRoute.swift in Sources */,
 				EAF47BED2B83099F003F8B86 /* MapTabAssemblerProtocol.swift in Sources */,
+				56298E1D2D0632BF00CF407F /* BulbPartyLightSelectorRouterProtocol.swift in Sources */,
 				EA9110312ADDB95C00584B98 /* ImageCache.swift in Sources */,
 				EA86528B2B90ACC200B86A54 /* IOTOnboardingAssembler.swift in Sources */,
 				56B3E4752C3D8443004A87FA /* ScheduleVideoCallViewModelProtocol.swift in Sources */,
@@ -12207,6 +12357,7 @@
 				56C8900C2CED01DE004B21CD /* Video3DScannerAssemblerProtocol.swift in Sources */,
 				56A2999E2C46265900D437C5 /* IconModifier.swift in Sources */,
 				EA2E65212BA8AEB60092A135 /* SubscriptionIntentInput.swift in Sources */,
+				56298E202D0632BF00CF407F /* BulbPartyLightSelectorViewModelProtocol.swift in Sources */,
 				EA6083B72B01D9E100295069 /* GalleryView.swift in Sources */,
 				EA0655482BB5DA5D006148E7 /* RadarMenuAssembler.swift in Sources */,
 				EACFDF172BA7EF3E00B08990 /* UnreleasedFeatureViewModelProtocol.swift in Sources */,
@@ -12223,6 +12374,7 @@
 				569BA7722C2DF55200E4CCF1 /* GamesViewModel.swift in Sources */,
 				5621B7052C2E605100BFD923 /* UnavailableFeatureAssemblerProtocol.swift in Sources */,
 				EA8652DE2B90DCE900B86A54 /* PrintMenuView.swift in Sources */,
+				56298E1B2D0632BF00CF407F /* BulbPartyLightSelectorInteractorProtocol.swift in Sources */,
 				EA910FFA2ADCBCC000584B98 /* MenuRouter.swift in Sources */,
 				561AA6EF2BE3A6B500393CEF /* FeatureInformationInteractorProtocol.swift in Sources */,
 				EA57A7A62B6C1558006247DD /* CammerDetailsRouter.swift in Sources */,
@@ -12283,6 +12435,7 @@
 				EA910FD22ADC499500584B98 /* TabBarBuilder.swift in Sources */,
 				EA5E1D762AD716D200738A8F /* ButtonStyleDescriptor.swift in Sources */,
 				EA8653262B90E9CA00B86A54 /* AIOnboardingViewModelProtocol.swift in Sources */,
+				56D4DF442D19E050009E4222 /* AudioManager.swift in Sources */,
 				EA8652B22B90DA9600B86A54 /* 3DPrintOnboardingRoute.swift in Sources */,
 				EA4A1C6A2B87909F00B5FC59 /* ExternalAssistantModel.swift in Sources */,
 				EA8653092B90E0FB00B86A54 /* LidarOnboardingAssembler.swift in Sources */,
@@ -12342,6 +12495,7 @@
 				569889D12C46AE85006D5997 /* ThermalCameraOnboardingInteractor.swift in Sources */,
 				EA06554C2BB5DA5D006148E7 /* RadarMenuViewModel.swift in Sources */,
 				EA910F362AD976F600584B98 /* CheckboxToggle.swift in Sources */,
+				56298E212D0632BF00CF407F /* BulbPartyLightSelectorModel.swift in Sources */,
 				EA6083932B01CD0A00295069 /* ShopTabRouterProtocol.swift in Sources */,
 				EAE401D92BBA452900B1311E /* DigitalTwinsMenuInteractor.swift in Sources */,
 				56F8AE242C247BE000EC7D4F /* IOTSensorsAssemblerProtocol.swift in Sources */,
@@ -12404,6 +12558,7 @@
 				EAF47C812B839308003F8B86 /* FlightMenuRoute.swift in Sources */,
 				EACFDF222BA85E9C00B08990 /* LocationPermissionManager.swift in Sources */,
 				EAF47BA02B82FFF2003F8B86 /* CalendarTabInteractor.swift in Sources */,
+				56298E182D0632BF00CF407F /* BulbPartyLightSelectorAssemblerProtocol.swift in Sources */,
 				5602E9CF2CAF17C900D6009B /* LanguageManager.swift in Sources */,
 				EA1235162B99FC1100443CF8 /* FlippedUpsideDown.swift in Sources */,
 				EA6083B12B01D9E100295069 /* GalleryRoute.swift in Sources */,
@@ -12425,6 +12580,7 @@
 				EA910F8C2ADA06F500584B98 /* RegistrationAssemblerProtocol.swift in Sources */,
 				EA910F9E2ADC43B200584B98 /* FullScreenWrapper.swift in Sources */,
 				56B3E46D2C3D8443004A87FA /* ScheduleVideoCallAssemblerProtocol.swift in Sources */,
+				56298E1F2D0632BF00CF407F /* BulbPartyLightSelectorViewModel.swift in Sources */,
 				561D83E92BE91EDF0045C540 /* LegalDocumentationRouterProtocol.swift in Sources */,
 				56DADB272AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift in Sources */,
 				EAF47B742B82FCE8003F8B86 /* BookWalkycamerModel.swift in Sources */,
@@ -12561,6 +12717,7 @@
 				EAF47BA52B82FFF2003F8B86 /* CalendarTabAssembler.swift in Sources */,
 				EA15B59F2AD6E44D00C03407 /* LoginRouterProtocol.swift in Sources */,
 				EA4A1C3D2B8788DB00B5FC59 /* SpecialistNotifiedAssemblerProtocol.swift in Sources */,
+				56298E172D0632BF00CF407F /* BulbPartyLightSelectorAssembler.swift in Sources */,
 				EA20A51A2B87C913006662FA /* Scan3DMenuRouterProtocol.swift in Sources */,
 				561D83E82BE91EDF0045C540 /* LegalDocumentationRouter.swift in Sources */,
 				EAF47BEE2B83099F003F8B86 /* MapTabAssembler.swift in Sources */,
@@ -12672,6 +12829,7 @@
 				EA6083BB2B01D9E100295069 /* GalleryRouter.swift in Sources */,
 				EA8EF8EC2B67E8B800136D1F /* FetchUserHeaderDataUseCase.swift in Sources */,
 				EA9110222ADDADE100584B98 /* HomeRoute.swift in Sources */,
+				56298E1C2D0632BF00CF407F /* BulbPartyLightSelectorRouter.swift in Sources */,
 				56C8900A2CED01DE004B21CD /* Video3DScannerModel.swift in Sources */,
 				EA8653532B90EBE800B86A54 /* ConfigureAccessRouterProtocol.swift in Sources */,
 				56B3E4932C3DA041004A87FA /* VideocallTimeTabInteractor.swift in Sources */,
@@ -12944,6 +13102,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WalkyCam.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7994PXZY59;
@@ -12960,6 +13119,7 @@
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "We need to connect to your bluetooth to enable app functions";
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "Our application needs permission to access the calendar";
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need to access your camera to enable app functions";
+				INFOPLIST_KEY_NSHomeKitUsageDescription = "We need to access your home data to enable app functions";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need to access your location to enable app functions";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need to access your location to enable app functions";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need to access your microphone to enable app functions";
@@ -12990,6 +13150,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WalkyCam.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7994PXZY59;
@@ -12999,6 +13160,7 @@
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "We need to connect to your bluetooth to enable app functions";
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "Our application needs permission to access the calendar";
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need to access your camera to enable app functions";
+				INFOPLIST_KEY_NSHomeKitUsageDescription = "We need to access your home data to enable app functions";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need to access your location to enable app functions";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need to access your location to enable app functions";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need to access your microphone to enable app functions";

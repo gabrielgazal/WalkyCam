@@ -1,0 +1,3 @@
+protocol BulbPartyLightSelectorInteractorProtocol {
+    func someFunction()
+}

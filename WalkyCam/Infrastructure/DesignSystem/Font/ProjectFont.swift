@@ -26,9 +26,7 @@ extension Font {
             fontNameToReturn = "Mulish-Black"
         case .bold:
             fontNameToReturn = "Mulish-Bold"
-        case .semibold:
-            fontNameToReturn = "Mulish-SemiBold"
-        case .medium:
+        case .medium, .semibold:
             fontNameToReturn = "Mulish-Medium"
         case .regular:
             fontNameToReturn = "Mulish-Regular"
