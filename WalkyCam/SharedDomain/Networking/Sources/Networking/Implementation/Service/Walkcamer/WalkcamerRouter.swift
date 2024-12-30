@@ -20,6 +20,8 @@ enum WalkcamerRouter {
                      driveInfo: [String],
                      days: [String])
     case updateAvailability(userId: String)
+    case getNearWalkcammers
+    case searchWalkcammer(input: String)
     
 }
 
@@ -34,6 +36,10 @@ extension WalkcamerRouter: TargetType {
             return "walkcamer/convert-user-to-walkcamer"
         case .updateAvailability:
             return "walkcamer/convert-user-to-walkcamer"
+        case .getNearWalkcammers:
+            return "walkcamer/get-near-walkcamers"
+        case let .searchWalkcammer(input):
+            return "walkcamer/search/\(input)"
         }
     }
     
@@ -41,6 +47,8 @@ extension WalkcamerRouter: TargetType {
         switch self {
         case .convertUser, .updateAvailability:
             return .post
+        case .getNearWalkcammers, .searchWalkcammer:
+            return .get
         }
     }
     
@@ -70,6 +78,8 @@ extension WalkcamerRouter: TargetType {
             )
         case let .updateAvailability(userId):
             return updateAvailability(userId: userId)
+        case .getNearWalkcammers, .searchWalkcammer:
+            return .requestPlain
         }
     }
     
