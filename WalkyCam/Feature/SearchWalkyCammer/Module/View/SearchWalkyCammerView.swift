@@ -194,7 +194,11 @@ struct SearchWalkyCammerView_Previews: PreviewProvider {
     static var previews: some View {
         SearchWalkyCammerView(
             viewModel: SearchWalkyCammerViewModel(
-                interactor: SearchWalkyCammerInteractor(useCases: .init()),
+                interactor: SearchWalkyCammerInteractor(
+                    useCases: .init(
+                        getNearWalkyCammers: .empty
+                    )
+                ),
                 router: SearchWalkyCammerRouter(isPresented: .constant(false))
             ),
             router: SearchWalkyCammerRouter(isPresented: .constant(false))

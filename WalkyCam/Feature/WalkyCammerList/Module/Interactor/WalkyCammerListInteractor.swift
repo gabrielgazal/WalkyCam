@@ -24,7 +24,7 @@ final class WalkyCammerListInteractor: WalkyCammerListInteractorProtocol {
     func getCammersOnLocation() -> [CammerData] {
         return [
             .init(
-                id: 0,
+                id: "0",
                 name: "Camila Pérez",
                 stars: 5,
                 description: "*4 min* de distancia - Desde $6",
@@ -51,7 +51,7 @@ final class WalkyCammerListInteractor: WalkyCammerListInteractorProtocol {
                 ]
             ),
             .init(
-                id: 1,
+                id: "1",
                 name: "Lali Espósito",
                 stars: 4,
                 description: "*16 min* de distancia - Desde $4",
@@ -78,7 +78,7 @@ final class WalkyCammerListInteractor: WalkyCammerListInteractorProtocol {
                 ]
             ),
             .init(
-                id: 2,
+                id: "2",
                 name: "Diego Salas",
                 stars: 4,
                 description: "*4 min* de distancia - Desde %6",
@@ -105,7 +105,7 @@ final class WalkyCammerListInteractor: WalkyCammerListInteractorProtocol {
                 ]
             ),
             .init(
-                id: 3,
+                id: "3",
                 name: "Maria Casas",
                 stars: 5,
                 description: "*4 min* de distancia - Desde %6",
@@ -131,7 +131,7 @@ final class WalkyCammerListInteractor: WalkyCammerListInteractorProtocol {
                   .init(name: "LIDAR", icon: Asset.Icons.lidar.name)
                 ]
             ),
-            .init(id: 4,
+            .init(id: "4",
 
                   name: "Gabriel Silva",
                   stars: 3,
