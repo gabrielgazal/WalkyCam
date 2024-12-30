@@ -34,5 +34,10 @@ struct TabBarView<ViewModel: TabBarViewModelProtocol, Router: TabBarRouterProtoc
         .navigationBarBackButtonHidden(true)
         .environmentObject(viewModel)
         .id(LanguageManager.shared.language.rawValue)
+        .onAppear {
+            Task {
+                await viewModel.fetchStreetcammers()
+            }
+        }
     }
 }

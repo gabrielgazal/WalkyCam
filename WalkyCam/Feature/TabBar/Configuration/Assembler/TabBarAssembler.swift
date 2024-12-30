@@ -14,9 +14,12 @@ final class TabBarAssembler: TabBarAssemblerProtocol {
         let router = TabBarRouter(isPresented: route.isPresented)
 
         let repository = route.retailRepository.resolve(ConfigurationRepositoryProtocol.self)
+        let cammerRepository = route.retailRepository.resolve(WalkcamerRepositoryProtocol.self)
 
         let interactor = TabBarInteractor(
-            useCases: .init()
+            useCases: .init(
+                getNearWalkyCammers: .live(repository: cammerRepository)
+            )
         )
 
         let viewModel = TabBarViewModel(

@@ -10,7 +10,7 @@ import MapKit
 import SwiftUI
 
 struct CammerData: Hashable {
-    let id: Int
+    let id: String
     let name: String
     let stars: Int
     let description: String
@@ -23,7 +23,7 @@ struct CammerData: Hashable {
     let abilities: [AbilityInfo]
 
     public init(
-        id: Int,
+        id: String,
         name: String,
         stars: Int,
         description: String,

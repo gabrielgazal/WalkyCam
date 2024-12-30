@@ -265,6 +265,7 @@
 		56A6BE9C2BE2EFC7007EBF13 /* IdentityUploadAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A6BE8E2BE2EFC7007EBF13 /* IdentityUploadAssembler.swift */; };
 		56A6BE9D2BE2EFC7007EBF13 /* IdentityUploadAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A6BE8F2BE2EFC7007EBF13 /* IdentityUploadAssemblerProtocol.swift */; };
 		56A6BE9E2BE2EFC7007EBF13 /* IdentityUploadRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A6BE912BE2EFC7007EBF13 /* IdentityUploadRoute.swift */; };
+		56A95B782D22F61200D31B43 /* StreetcammerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A95B772D22F61200D31B43 /* StreetcammerManager.swift */; };
 		56AF27552BDAE00800DADC29 /* RegisterWalkcamerAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF27402BDAE00700DADC29 /* RegisterWalkcamerAssembler.swift */; };
 		56AF27562BDAE00800DADC29 /* RegisterWalkcamerAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF27412BDAE00700DADC29 /* RegisterWalkcamerAssemblerProtocol.swift */; };
 		56AF27572BDAE00800DADC29 /* RegisterWalkcamerRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF27432BDAE00700DADC29 /* RegisterWalkcamerRoute.swift */; };
@@ -1409,6 +1410,7 @@
 		56A6BE8E2BE2EFC7007EBF13 /* IdentityUploadAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentityUploadAssembler.swift; sourceTree = "<group>"; };
 		56A6BE8F2BE2EFC7007EBF13 /* IdentityUploadAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentityUploadAssemblerProtocol.swift; sourceTree = "<group>"; };
 		56A6BE912BE2EFC7007EBF13 /* IdentityUploadRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentityUploadRoute.swift; sourceTree = "<group>"; };
+		56A95B772D22F61200D31B43 /* StreetcammerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetcammerManager.swift; sourceTree = "<group>"; };
 		56AF27402BDAE00700DADC29 /* RegisterWalkcamerAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWalkcamerAssembler.swift; sourceTree = "<group>"; };
 		56AF27412BDAE00700DADC29 /* RegisterWalkcamerAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWalkcamerAssemblerProtocol.swift; sourceTree = "<group>"; };
 		56AF27432BDAE00700DADC29 /* RegisterWalkcamerRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWalkcamerRoute.swift; sourceTree = "<group>"; };
@@ -4371,6 +4373,14 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		56A95B762D22F60100D31B43 /* Streetcammers */ = {
+			isa = PBXGroup;
+			children = (
+				56A95B772D22F61200D31B43 /* StreetcammerManager.swift */,
+			);
+			path = Streetcammers;
+			sourceTree = "<group>";
+		};
 		56AF27422BDAE00700DADC29 /* Assembler */ = {
 			isa = PBXGroup;
 			children = (
@@ -5591,6 +5601,7 @@
 		EA15B5A52AD7067400C03407 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				56A95B762D22F60100D31B43 /* Streetcammers */,
 				56D4DF422D19E040009E4222 /* AudioManager */,
 				56298DF82D06311500CF407F /* HomeKit */,
 				5602E9CB2CAF164F00D6009B /* Localization */,
@@ -12466,6 +12477,7 @@
 				EA91101A2ADDADE100584B98 /* HomeViewModel.swift in Sources */,
 				56F8AE292C247BE000EC7D4F /* IOTSensorsRouterProtocol.swift in Sources */,
 				569889AA2C462E2D006D5997 /* TimedLoadingScreenAssembler.swift in Sources */,
+				56A95B782D22F61200D31B43 /* StreetcammerManager.swift in Sources */,
 				EAF47C1C2B830C80003F8B86 /* WalkyCammerListModel.swift in Sources */,
 				EA0E40BF2AF70E86002B7437 /* CashWalletInteractor.swift in Sources */,
 				EA0E40902AF69771002B7437 /* CashWalletOnboardingInteractorProtocol.swift in Sources */,

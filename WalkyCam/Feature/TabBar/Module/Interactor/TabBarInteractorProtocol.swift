@@ -5,4 +5,6 @@
 //  Created by Gabriel Rodrigues Gazal Rocha on 08/02/24.
 //
 
-protocol TabBarInteractorProtocol {}
+protocol TabBarInteractorProtocol {
+    func fetchStreetcammers() async throws -> [CammerData]
+}

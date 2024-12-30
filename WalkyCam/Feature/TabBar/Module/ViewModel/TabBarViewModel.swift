@@ -12,6 +12,7 @@ final class TabBarViewModel: TabBarViewModelProtocol {
         }
     }
     private var allTabBarItems: [WCTabBarItem]
+    private let streetcammerManager = StreetcammerManager.shared
     @Published var tabBarItems: [WCTabBarItem]
 
     // MARK: - Initialization
@@ -41,5 +42,14 @@ final class TabBarViewModel: TabBarViewModelProtocol {
             let tabBarItemIndex = tabBarItems.firstIndex(of: tabBarItem)
         else { return }
         tabBarItems[tabBarItemIndex].destination = tabBarItem.destination
+    }
+    
+    // MARK: - Public API
+    
+    @MainActor func fetchStreetcammers() async {
+        do {
+            let cammers = try await interactor.fetchStreetcammers()
+            streetcammerManager.saveStreetCammers(cammers)
+        } catch {}
     }
 }

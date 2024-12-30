@@ -8,6 +8,7 @@
 import Foundation
 import Networking
 import Combine
+import MapKit
 
 typealias GetNearWalkyCammersUseCase = GenericUseCase<String, [CammerData]>
 
@@ -36,17 +37,67 @@ extension GetNearWalkyCammersUseCase {
 
     static func mapResponseToCammerData(_ input: WalkyCammersResponse) -> CammerData {
         return .init(
-            id: Int(input.id) ?? -1,
+            id: input.id,
             name: "\(input.name) \(input.lastName)",
             stars: 5,
-            description: "",
-            about: "",
-            profileImage: "",
-            technologies: [],
-            coordinates: .init(),
-            devices: [],
-            availability: .none,
+            description: mapDescription(input),
+            about: input.aboutMe,
+            profileImage: input.urlProfilePicture,
+            technologies: mapTechnologies(input),
+            coordinates: .init(
+                latitude: Double(input.locationLatitude) ?? 0.0,
+                longitude: Double(input.locationLongitude) ?? 0.0
+            ),
+            devices: mapDevices(input),
+            availability: .init(
+                hourlyCost: 100.0,
+                recordingTime: 10.0,
+                availabilityTime: 10.0
+            ),
             abilities: []
         )
+    }
+    
+    static func mapTechnologies(_ input: WalkyCammersResponse) -> [CammerTechnology] {
+        var technologiesToReturn: [CammerTechnology] = []
+        if let smartphones = input.walkycamerInfo.smartphonesInfo,
+            !smartphones.isEmpty {
+            technologiesToReturn.append(.camera)
+            technologiesToReturn.append(.scan)
+            technologiesToReturn.append(.smartphone)
+            technologiesToReturn.append(.video)
+        }
+        
+        if let rovs = input.walkycamerInfo.rovsInfo,
+            !rovs.isEmpty {
+            technologiesToReturn.append(.drone)
+        }
+        return technologiesToReturn
+    }
+    
+    static func mapDevices(_ input: WalkyCammersResponse) -> [DevicesInfo] {
+        var devicesToReturn: [DevicesInfo] = []
+        devicesToReturn.append(
+            contentsOf: input.walkycamerInfo.smartphonesInfo?.compactMap { device in
+                return DevicesInfo(
+                    name: "\(device.brand) - \(device.model)",
+                    type: .smartphone
+                )
+            } ?? []
+        )
+        devicesToReturn.append(
+            contentsOf: input.walkycamerInfo.rovsInfo?.compactMap {
+                device in
+                return DevicesInfo(
+                    name: "\(device.brand) - \(device.model)",
+                    type: .drone
+                )
+            } ?? []
+        )
+        return devicesToReturn
+    }
+    
+    static func mapDescription(_ input: WalkyCammersResponse) -> String {
+        return "\(4) min de distancia - Desde $\(10)"
     }
 }
