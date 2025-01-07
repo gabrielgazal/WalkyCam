@@ -50,7 +50,7 @@ struct PlansComparisonPageView: View {
                         .font(.projectFont(size: Tokens.Size.Font.xsmall, weight: .semibold))
                     VStack(alignment: .leading,
                            spacing: Tokens.Size.Spacing.small) {
-                        ForEach(plansData.first(where: { $0.title == "premium"})?.features ?? []) { item in
+                        ForEach(assembleComparisonPlanFeatures()) { item in
                             PlanComparisonStackItem(data: item)
                         }
                     }
@@ -93,34 +93,6 @@ struct PlansComparisonPageView: View {
                    .isHidden(!isAlertShown)
         }
     }
-    
-//    private func featureItem(_ item: FunctionData) -> some View {
-//        HStack(alignment: .center,
-//               spacing: Tokens.Size.Spacing.small) {
-//            if !item.icon.isEmpty {
-//                Image(item.icon)
-//                    .resizable()
-//                    .aspectRatio(contentMode: .fit)
-//                    .frame(width: 50, height: 50)
-//            }
-//            Text(item.title)
-//                .font(.projectFont(size: Tokens.Size.Font.xsmall, weight: .medium))
-//                .foregroundColor(Color.negro)
-//                .lineLimit(3)
-//                .layoutPriority(1)
-//            Spacer()
-//                .frame(width: .infinity)
-//            Image(systemName: "info.circle.fill")
-//                .resizable()
-//                .frame(width: 15, height: 15)
-//                .onTapGesture {
-//                    tooltipTitle = item.title
-//                    tooltipText = item.getTooltipText()
-//                    isAlertShown = true
-//                }
-//            Spacer()
-//        }
-//    }
     
     private func planItem(_ plan: PlansPagesModel) -> some View {
         VStack(alignment: .center,
@@ -177,104 +149,63 @@ struct PlansComparisonPageView: View {
         let stringnDouble = Double(data) ?? 0.0
         return String(format: "%.f", stringnDouble)
     }
-}
-
-struct PlansComparisonPageView_Previews: PreviewProvider {
-    static var previews: some View {
-        PlansComparisonPageView(
-            plansData: [
-                .init(title: "free",
-                      monthlyPrice: "0.0",
-                      yearlyPrice: "0.0",
-                      backgroundImage: Asset.Fondos.planFondo.name,
-                      accentColor: .plateado,
-                      features: [
-                        .init(title: "Video Call: 100 personas, 45 min.", icon: Asset.Icons.videoCall.name),
-                        .init(title: "AR Hands", icon: Asset.Icons.ar.name),
-                        .init(title: "Scan 3D", icon: Asset.Icons.scan3D.name),
-                        .init(title: "Pixelation Faces", icon: Asset.Icons.pixelation.name),
-                        .init(title: "Juegos y otros", icon: Asset.Icons.games.name),
-                        .init(title: "Se incluye funciones como: White board, Share to, Chat, REC, etc.", icon: ""),
-                        .init(title: "Disfruta mas de 20 funciones adicionales", icon: "")
-                      ]),
-                .init(title: "basic",
-                      monthlyPrice: "30.0",
-                      yearlyPrice: "60.0",
-                      backgroundImage: Asset.Fondos.planFondo.name,
-                      accentColor: .acentoFondoDark,
-                      features: [
-                        .init(title: "Street Cam (WalkCamer)", icon: Asset.Icons.streetCam.name),
-                        .init(title: "360º Camera", icon: Asset.Icons._360Camera.name),
-                        .init(title: "Certified Recording", icon: Asset.Icons.translate.name),
-                        .init(title: "3D Printer", icon: Asset.Icons._3dPrinting.name),
-                        .init(title: "Video Call: 200 Personas con duración ilimitada.", icon: Asset.Icons.videoCall.name),
-                        .init(title: "AR Hands", icon: Asset.Icons.ar.name),
-                        .init(title: "Scan 3D", icon: Asset.Icons.scan3D.name),
-                        .init(title: "Pixelation Faces", icon: Asset.Icons.pixelation.name),
-                        .init(title: "Juegos y otros", icon: Asset.Icons.games.name),
-                        .init(title: "Se incluye funciones como: White board, Share to, Chat, REC, etc.", icon: "")
-                      ]),
-                .init(title: "standard",
-                      monthlyPrice: "60.0", 
-                      yearlyPrice: "120.0",
-                      backgroundImage: Asset.Fondos.planFondo.name,
-                      accentColor: .naranja,
-                      features: [
-                        .init(title: "IOT applications & Data analysis", icon: Asset.Icons.iot.name),
-                        .init(title: "Digital Twin", icon: Asset.Icons.digitalTwins.name),
-                        .init(title: "Drone Fly", icon: Asset.Icons.drone.name),
-                        .init(title: "IA & Data Analysis", icon: Asset.Icons.aiAnalysis.name),
-                        .init(title: "Alcohol & Drug test", icon: Asset.Icons.alcohol.name),
-                        .init(title: "NFT (Pictures)", icon: Asset.Icons.nft.name),
-                        .init(title: "CryptoWallet", icon: Asset.Icons.crypto.name),
-                        .init(title: "Video Call: 200 Personas con duración ilimitada.", icon: Asset.Icons.videoCall.name),
-                        .init(title: "Street Cam (WalkCamer)", icon: Asset.Icons.streetCam.name),
-                        .init(title: "AR Hands", icon: Asset.Icons.ar.name),
-                        .init(title: "Scan 3D", icon: Asset.Icons.scan3D.name),
-                        .init(title: "Pixelation Faces", icon: Asset.Icons.pixelation.name),
-                        .init(title: "360º Camera", icon: Asset.Icons._360Camera.name),
-                        .init(title: "Certified Recording", icon: Asset.Icons.translate.name),
-                        .init(title: "Juegos y otros", icon: Asset.Icons.games.name),
-                        .init(title: "Se incluye funciones como: White board, Share to, Chat, REC, etc.", icon: "")
-                      ]),
-                .init(title: "premium",
-                      monthlyPrice: "180.0", 
-                      yearlyPrice: "360.0",
-                      backgroundImage: Asset.Fondos.planFondo.name,
-                      accentColor: .premium,
-                      features: [
-                        .init(title: "Georradar", icon: Asset.Icons.radar.name),
-                        .init(title: "Roto LIDAR Scan", icon: Asset.Icons.lidar.name),
-                        .init(title: "R.O.V. Underwater Drone", icon: Asset.Icons.rov.name),
-                        .init(title: "Dog Robot", icon: Asset.Icons.robotDog.name),
-                        .init(title: "Robótica Telepresencia", icon: Asset.Icons.telepresencia.name),
-                        .init(title: "Robótica para Mascotas", icon: Asset.Icons.mascotas.name),
-                        .init(title: "Ecografía", icon: Asset.Icons.ecografia.name),
-                        .init(title: "Robótica", icon: Asset.Icons.robotica.name),
-                        .init(title: "Detector de metales", icon: Asset.Icons.detectorMetales.name),
-                        .init(title: "Detector de cables", icon: Asset.Icons.cables.name),
-                        .init(title: "Analizador de redes", icon: Asset.Icons.analisadorRedes.name),
-                        .init(title: "Thermal Camara", icon: Asset.Icons.thermalCamera.name),
-                        .init(title: "Link to CRM/ERP", icon: Asset.Icons.crm.name),
-                        .init(title: "Digital Twin", icon: Asset.Icons.digitalTwins.name),
-                        .init(title: "IOT applications & Data analysis", icon: Asset.Icons.iot.name),
-                        .init(title: "Drone Fly", icon: Asset.Icons.drone.name),
-                        .init(title: "IA & Data Analysis", icon: Asset.Icons.aiAnalysis.name),
-                        .init(title: "NFT (Pictures)", icon: Asset.Icons.nft.name),
-                        .init(title: "CryptoWallet", icon: Asset.Icons.crypto.name),
-                        .init(title: "Video Call: 200 Personas con duración ilimitada.", icon: Asset.Icons.videoCall.name),
-                        .init(title: "Street Cam (WalkCamer)", icon: Asset.Icons.streetCam.name),
-                        .init(title: "AR Hands", icon: Asset.Icons.ar.name),
-                        .init(title: "Scan 3D", icon: Asset.Icons.scan3D.name),
-                        .init(title: "Pixelation Faces", icon: Asset.Icons.pixelation.name),
-                        .init(title: "360º Camera", icon: Asset.Icons._360Camera.name),
-                        .init(title: "Certified Recording", icon: Asset.Icons.translate.name),
-                        .init(title: "Alcohol & Drug test", icon: Asset.Icons.alcohol.name),
-                        .init(title: "Juegos y otros", icon: Asset.Icons.games.name)
-                      ])
-            ],
-            startPlanAction: nil
-        )
+    
+    private func assembleComparisonPlanFeatures() -> [FunctionData] {
+        return [
+            .init(title: "Georradar", icon: Asset.Icons.radar.name),
+            .init(title: "Roto LIDAR Scan", icon: Asset.Icons.lidar.name),
+            .init(title: "R.O.V. Underwater Drone", icon: Asset.Icons.rov.name),
+            .init(title: "Dog Robot", icon: Asset.Icons.robotDog.name),
+            .init(title: "Robótica Telepresencia", icon: Asset.Icons.telepresencia.name),
+            .init(title: "Robótica para Mascotas", icon: Asset.Icons.mascotas.name),
+            .init(title: "Ecografía", icon: Asset.Icons.ecografia.name),
+            .init(title: "Robótica", icon: Asset.Icons.robotica.name),
+            .init(title: "Detector de metales", icon: Asset.Icons.detectorMetales.name),
+            .init(title: "Detector de cables", icon: Asset.Icons.cables.name),
+            .init(title: "Analizador de redes", icon: Asset.Icons.analisadorRedes.name),
+            .init(title: "Thermal Camara", icon: Asset.Icons.thermalCamera.name),
+            .init(title: "Link to CRM/ERP", icon: Asset.Icons.crm.name),
+            .init(title: "Engineering & Lawyer (Consulting only)", icon: Asset.Icons.lawyer.name),
+            .init(title: "Backpack Screen advertising", icon: Asset.Icons.backpack.name),
+            .init(title: "IOT applications & Data analysis", icon: Asset.Icons.iot.name),
+            .init(title: "Digital Twin", icon: Asset.Icons.digitalTwins.name),
+            .init(title: "Drone Fly", icon: Asset.Icons.drone.name),
+            .init(title: "IA & Data Analysis", icon: Asset.Icons.aiAnalysis.name),
+            .init(title: "Alcohol & Drug test", icon: Asset.Icons.alcohol.name),
+            .init(title: "NFT (Pictures)", icon: Asset.Icons.nft.name),
+            .init(title: "CriptoWallet", icon: Asset.Icons.crypto.name),
+            .init(title: "Video Call: 200 personas con duración ilimitada.", icon: Asset.Icons.videoCall.name),
+            .init(title: "Street Cam (WalkCamer)", icon: Asset.Icons.streetCam.name),
+            .init(title: "AR Hands", icon: Asset.Icons.ar.name),
+            .init(title: "Scan 3D", icon: Asset.Icons.scan3D.name),
+            .init(title: "Pixelation Faces", icon: Asset.Icons.pixelation.name),
+            .init(title: "360º Camera", icon: Asset.Icons._360Camera.name),
+            .init(title: "Certified Recording", icon: Asset.Icons.translate.name),
+            .init(title: "3D Printer", icon: Asset.Icons._3dPrinting.name),
+            .init(title: "Juegos y otros", icon: Asset.Icons.games.name, subfunction: [
+                .init(title: "Karaoke", icon: Asset.Icons.karaoke.name),
+                .init(title: "Glasses Prove", icon: Asset.Icons.glasses.name),
+                .init(title: "Hair Prove", icon: Asset.Icons.hair.name),
+                .init(title: "Dress Prove", icon: Asset.Icons.tShirt.name),
+                .init(title: "RGB Bulb Party", icon: Asset.Icons.rgb.name),
+                .init(title: "Games", icon: Asset.Icons.games.name)
+            ]),
+            .init(title: "Play & Business", icon: Asset.Icons.playBusiness.name, subfunction: [
+                .init(title: "Scape Room", icon: Asset.Icons.scapeRoom.name),
+                .init(title: "Mariachis", icon: Asset.Icons.mariachis2.name),
+                .init(title: "Film Maker", icon: Asset.Icons.filmMaker.name),
+                .init(title: "Copyrights", icon: Asset.Icons.derechosDeAutor.name),
+                .init(title: "Muestra de Productos", icon: Asset.Icons.productos.name),
+                .init(title: "Idea de Negocio", icon: Asset.Icons.patenteDeIdea.name),
+                .init(title: "Pulsera Fitness", icon: Asset.Icons.fitnessWatch.name),
+                .init(title: "Caja Sorpresa", icon: Asset.Icons.surpriseBox.name),
+                .init(title: "Famosos", icon: Asset.Icons.playBusiness.name),
+                .init(title: "Personal Shopper", icon: Asset.Icons.personalShopper.name),
+                .init(title: "Patente de Invención", icon: Asset.Icons.patenteDeInvencion.name),
+                .init(title: "Gymkhana", icon: Asset.Icons.gymkhana.name),
+            ]),
+            .init(title: "Se incluye funciones como: White board, Share to, Chat, REC, etc", icon: "")
+        ]
     }
 }
 
