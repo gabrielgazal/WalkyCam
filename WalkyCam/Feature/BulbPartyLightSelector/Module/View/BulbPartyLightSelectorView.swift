@@ -21,19 +21,36 @@ struct BulbPartyLightSelectorView<ViewModel: BulbPartyLightSelectorViewModelProt
         VStack {
             Text(viewModel.screenTitle())
                 .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
-            List(viewModel.fetchRgbDevices(), id: \.uniqueIdentifier) { item in
-                HStack {
-                    Image(systemName: "lightbulb")
-                    Toggle(
-                        isOn: bindingForDevice(item.uniqueIdentifier.uuidString)
-                    ) {
-                        Text(item.name)
+            if !viewModel.fetchRgbDevices().isEmpty {
+                List(viewModel.fetchRgbDevices(), id: \.uniqueIdentifier) { item in
+                    HStack {
+                        Image(systemName: "lightbulb")
+                        Toggle(
+                            isOn: bindingForDevice(item.uniqueIdentifier.uuidString)
+                        ) {
+                            Text(item.name)
+                        }
+                        .toggleStyle(WCToggleStyle())
                     }
-                    .toggleStyle(WCToggleStyle())
                 }
+                Text(viewModel.isRunningLightParty ? "Procesando audio...": "Presione start para comenzar")
+                    .font(
+                        .projectFont(
+                            size: Tokens.Size.Font.large
+                        )
+                    )
+                Spacer()
+            } else {
+                Spacer()
+                Text("No se encontraron dispositivos compatibles")
+                    .font(
+                        .projectFont(
+                            size: Tokens.Size.Font.large,
+                            weight: .bold
+                        )
+                    )
+                Spacer()
             }
-            Text(viewModel.isRunningLightParty ? "Procesando audio...": "Presione start para comenzar")
-            Spacer()
         }
         .footer {
             WCUIButton(
@@ -45,6 +62,7 @@ struct BulbPartyLightSelectorView<ViewModel: BulbPartyLightSelectorViewModelProt
                 }
             )
             .padding()
+            .isHidden(viewModel.fetchRgbDevices().isEmpty)
         }
         .onChange(of: viewModel.isRunningLightParty) { oldValue, newValue in
             if newValue {
