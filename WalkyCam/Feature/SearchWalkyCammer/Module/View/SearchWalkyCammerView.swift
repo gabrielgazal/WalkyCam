@@ -120,7 +120,7 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
                     backgroundColor: .blanco,
                     actions: .init(
                         onCommitAction: {
-                            viewModel.updateUserRegionGeocoder()
+                            viewModel.getUserRegion()
                         })
                 )
                 Spacer()
