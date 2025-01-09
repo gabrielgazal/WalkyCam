@@ -70,19 +70,6 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
                     }
                     .accentColor(.naranja)
                     .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-                    .gesture(
-                        DragGesture()
-                            .onEnded { value in
-                                let dragThreshold: CGFloat = 50 // Ajuste o limite de sensibilidade ao arrasto.
-                                if value.translation.width < -dragThreshold && viewModel.currentPage < viewModel.plans.count {
-                                    // Arrastou para a esquerda
-                                    viewModel.currentPage += 1
-                                } else if value.translation.width > dragThreshold && viewModel.currentPage > 0 {
-                                    // Arrastou para a direita
-                                    viewModel.currentPage -= 1
-                                }
-                            }
-                    )
 
                     if let title = currentPlan()?.title {
                         WCUIButton(
@@ -145,6 +132,23 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
                 }
             }
         }
+        .simultaneousGesture(
+            DragGesture()
+                .onEnded { value in
+                    let dragThreshold: CGFloat = 0 // Ajuste o limite de sensibilidade ao arrasto.
+                    if value.translation.width < -dragThreshold && viewModel.currentPage < viewModel.plans.count {
+                        // Arrastou para a esquerda
+                        withAnimation {
+                            viewModel.currentPage += 1
+                        }
+                    } else if value.translation.width > dragThreshold && viewModel.currentPage > 0 {
+                        // Arrastou para a direita
+                        withAnimation {
+                            viewModel.currentPage -= 1
+                        }
+                    }
+                }
+        )
     }
 
     private func setupAppearence() {

@@ -72,7 +72,7 @@ struct PlansComparisonPageView: View {
                     }
                 }
             }
-            .padding()
+                   .padding()
         }
         .simultaneousGesture(
             DragGesture().onChanged({ _ in
@@ -81,7 +81,7 @@ struct PlansComparisonPageView: View {
         .onTapGesture {
             isAlertShown = false
         }
-        .overlay(alignment: .center) {
+        .overlay {
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.regular) {
                 Text(tooltipTitle)
@@ -107,7 +107,7 @@ struct PlansComparisonPageView: View {
                 .foregroundColor(plan.accentColor)
             Text(monthlyToggle ?
                  L10n.RegistrationPlans.Value.yearly(formatDouble(plan.yearlyPrice)): L10n.RegistrationPlans.Value.monthly(formatDouble(plan.monthlyPrice)))
-                .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .bold))
+            .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .bold))
             WCUIButton(title: "Start \(plan.title)",
                        style: .standard,
                        descriptor: getButtonDescriptor(plan.title),

@@ -71,7 +71,6 @@ struct PlanPageView: View {
             }
         }
         .padding(Tokens.Size.Spacing.large)
-        
         .simultaneousGesture(
             DragGesture().onChanged({ _ in
                 isAlertShown = false
