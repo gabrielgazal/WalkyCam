@@ -2,7 +2,7 @@ import Foundation
 import SwiftUI
 
 struct PlanPageView: View {
-
+    
     private var planData: PlansPagesModel
     private var lastPlan: PlansPagesModel?
     @State var monthlyToggle: Bool = false
@@ -17,7 +17,7 @@ struct PlanPageView: View {
         self.planData = planData
         self.lastPlan = lastPlan
     }
-
+    
     var body: some View {
         ScrollView(showsIndicators: false)  {
             VStack(alignment: .center,
@@ -28,7 +28,7 @@ struct PlanPageView: View {
                     Spacer()
                     Text(monthlyToggle ?
                          L10n.RegistrationPlans.Value.yearly(formatDouble(planData.yearlyPrice)): L10n.RegistrationPlans.Value.monthly(formatDouble(planData.monthlyPrice)))
-                        .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
+                    .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                 }
                 .foregroundColor(planData.accentColor)
                 HStack(alignment: .center,
@@ -60,11 +60,41 @@ struct PlanPageView: View {
                     }
                 }
                 ForEach(planData.features, id: \.self) { item in
-                    PlanStackItem(data: item, accentColor: planData.accentColor)
+                    PlanStackItem(
+                        data: item,
+                        accentColor: planData.accentColor,
+                        tooltipTitle: $tooltipTitle,
+                        tooltipText: $tooltipText,
+                        isAlertShown: $isAlertShown
+                    )
                 }
             }
         }
-               .padding(Tokens.Size.Spacing.large)
+        .padding(Tokens.Size.Spacing.large)
+        
+        .simultaneousGesture(
+            DragGesture().onChanged({ _ in
+                isAlertShown = false
+            }))
+        .onTapGesture {
+            isAlertShown = false
+        }
+        .overlay {
+            VStack(alignment: .leading,
+                   spacing: Tokens.Size.Spacing.regular) {
+                Text(tooltipTitle)
+                    .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                Text(tooltipText)
+                    .font(.projectFont(size: Tokens.Size.Font.regular))
+            }
+                   .foregroundColor(Color.blanco)
+                   .padding(Tokens.Size.Spacing.large)
+                   .background(
+                    RoundedRectangle(cornerRadius: 8)
+                        .fill(Color.negro.opacity(0.96))
+                   )
+                   .isHidden(!isAlertShown)
+        }
     }
     
     private func formatDouble(_ data: String) -> String {
@@ -73,45 +103,27 @@ struct PlanPageView: View {
     }
 }
 
-struct PlanPageView_Previews: PreviewProvider {
-    static var previews: some View {
-        PlanPageView(
-            planData: .init(
-                title: "Basic",
-                monthlyPrice: "10.0",
-                yearlyPrice: "20.0",
-                backgroundImage: "",
-                accentColor: .acentoFondoDark,
-                features: [
-                    .init(title: "Street Cam (WalkCamer)", icon: Asset.Icons.streetCam.name),
-                    .init(title: "360º Camera", icon: Asset.Icons.camera.name),
-                    .init(title: "Certified Recordning", icon: Asset.Icons.translate.name),
-                    .init(title: "3D Printer", icon: Asset.Icons._3dPrinting.name),
-                    .init(title: "Video Call: 200 Personas con duración ilimitada.", icon: "")
-                ]),
-            lastPlan: .init(title: "Free",
-                            monthlyPrice: "10.0",
-                            yearlyPrice: "20.0",
-                            backgroundImage: "",
-                            accentColor: .plateado,
-                            features: [])
-        )
-        .background(Color.black)
-    }
-}
-
 struct PlanStackItem: View {
     
     var data: FunctionData
     var accentColor: Color
     @State private var showDropDownMenu = false
+    @Binding private var tooltipTitle: String
+    @Binding private var tooltipText: String
+    @Binding private var isAlertShown: Bool
     
     public init(
         data: FunctionData,
-        accentColor: Color
+        accentColor: Color,
+        tooltipTitle: Binding<String>,
+        tooltipText: Binding<String>,
+        isAlertShown: Binding<Bool>
     ) {
         self.data = data
         self.accentColor = accentColor
+        self._tooltipTitle = tooltipTitle
+        self._tooltipText = tooltipText
+        self._isAlertShown = isAlertShown
     }
     
     var body: some View {
@@ -137,6 +149,11 @@ struct PlanStackItem: View {
                 Image(systemName: "info.circle.fill")
                     .resizable()
                     .frame(width: 15, height: 15)
+                    .onTapGesture {
+                        tooltipTitle = data.title
+                        tooltipText = data.getTooltipText()
+                        isAlertShown = true
+                    }
                 Spacer()
                 if !data.subfunction.isEmpty {
                     Image(systemName: "plus")
@@ -148,8 +165,10 @@ struct PlanStackItem: View {
                 }
             }
             .onTapGesture {
-                withAnimation(.easeInOut) {
-                    showDropDownMenu.toggle()
+                if !data.subfunction.isEmpty {
+                    withAnimation(.easeInOut) {
+                        showDropDownMenu.toggle()
+                    }
                 }
             }
             if showDropDownMenu {
@@ -173,9 +192,6 @@ struct PlanStackItem: View {
                             Text(subitem.title)
                                 .font(.projectFont(size: Tokens.Size.Font.large, weight: .medium))
                                 .foregroundColor(Color.blanco)
-//                            Image(systemName: "info.circle.fill")
-//                                .resizable()
-//                                .frame(width: 15, height: 15)
                             Spacer()
                         }
                         .padding(Tokens.Size.Spacing.regular)

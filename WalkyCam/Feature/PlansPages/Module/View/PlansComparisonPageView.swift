@@ -51,7 +51,12 @@ struct PlansComparisonPageView: View {
                     VStack(alignment: .leading,
                            spacing: Tokens.Size.Spacing.small) {
                         ForEach(assembleComparisonPlanFeatures()) { item in
-                            PlanComparisonStackItem(data: item)
+                            PlanComparisonStackItem(
+                                data: item,
+                                tooltipTitle: $tooltipTitle,
+                                tooltipText: $tooltipText,
+                                isAlertShown: $isAlertShown
+                            )
                         }
                     }
                 }
@@ -213,9 +218,20 @@ struct PlanComparisonStackItem: View {
     
     var data: FunctionData
     @State private var showDropDownMenu = false
+    @Binding private var tooltipTitle: String
+    @Binding private var tooltipText: String
+    @Binding private var isAlertShown: Bool
     
-    public init(data: FunctionData) {
+    public init(
+        data: FunctionData,
+        tooltipTitle: Binding<String>,
+        tooltipText: Binding<String>,
+        isAlertShown: Binding<Bool>
+    ) {
         self.data = data
+        self._tooltipTitle = tooltipTitle
+        self._tooltipText = tooltipText
+        self._isAlertShown = isAlertShown
     }
     
     var body: some View {
@@ -240,9 +256,9 @@ struct PlanComparisonStackItem: View {
                     .resizable()
                     .frame(width: 15, height: 15)
                     .onTapGesture {
-    //                    tooltipTitle = item.title
-    //                    tooltipText = item.getTooltipText()
-    //                    isAlertShown = true
+                        tooltipTitle = data.title
+                        tooltipText = data.getTooltipText()
+                        isAlertShown = true
                     }
                 if !data.subfunction.isEmpty {
                     Image(systemName: "plus")
@@ -282,9 +298,9 @@ struct PlanComparisonStackItem: View {
                                 .resizable()
                                 .frame(width: 15, height: 15)
                                 .onTapGesture {
-                //                    tooltipTitle = item.title
-                //                    tooltipText = item.getTooltipText()
-                //                    isAlertShown = true
+                                    tooltipTitle = subitem.title
+                                    tooltipText = subitem.getTooltipText()
+                                    isAlertShown = true
                                 }
                             Spacer()
                         }
