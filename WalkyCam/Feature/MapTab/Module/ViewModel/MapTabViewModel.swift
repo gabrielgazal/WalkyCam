@@ -39,36 +39,79 @@ final class MapTabViewModel: MapTabViewModelProtocol {
             guard let placemarks = placemarks,
                   let location = placemarks.first?.location?.coordinate else { return }
             self.coordinates = location
-            self.mapView?.camera.ease(
-                to: CameraOptions(
-                    center: location,
-                    zoom: 15,
-                    bearing: 0,
-                    pitch: 0
-                ),
-                duration: 1.0
-            )
+            self.getWalkyCammersOnLocation(coordinates: location) {
+                self.mapView?.camera.ease(
+                    to: CameraOptions(
+                        center: location,
+                        zoom: 15,
+                        bearing: 0,
+                        pitch: 0
+                    ),
+                    duration: 1.0
+                )
+            }
         }
     }
-    
+
     func updateUserViewPort(manager: LocationPermissionManager) {
-        if isFirstUpdate {
-            guard let location = manager.coordinates else { return }
-            self.mapView?.camera.ease(
-                to: CameraOptions(
-                    center: location,
-                    zoom: 15,
-                    bearing: 0,
-                    pitch: 0
+        guard let location = manager.coordinates else { return }
+        self.mapView?.camera.ease(
+            to: CameraOptions(
+                center: location,
+                zoom: 15,
+                bearing: 0,
+                pitch: 0
+            ),
+            duration: 1.0
+        )
+    }
+
+    private func getWalkyCammersOnLocation(coordinates: CLLocationCoordinate2D, completion: @escaping () -> Void) {
+        let cammers = interactor.getCammersOnLocation(location: coordinates)
+        for index in 0..<cammers.count {
+            let item = cammers[index]
+            let annotation = ViewAnnotation(
+                coordinate: .init(
+                    latitude: item.coordinates.latitude,
+                    longitude: item.coordinates.longitude
                 ),
-                duration: 1.0
+                view: assembleAnnotationView(item)
             )
-            isFirstUpdate = false
+            mapView?.viewAnnotations.add(annotation)
         }
+        completion()
     }
     
     func updateUserRegionGeocoder() {
-        let coordinates = mapView?.mapboxMap.cameraState.center
-        print(coordinates)
+        guard let location = mapView?.mapboxMap.cameraState.center else { return }
+        getWalkyCammersOnLocation(coordinates: location) {
+            self.mapView?.camera.ease(
+                to: CameraOptions(
+                    center: location,
+                    bearing: 0,
+                    pitch: 0
+                ),
+                duration: 1.0
+            )
+        }
+    }
+    
+    func panCameraToLocation() {
+        guard let location = mapView?.mapboxMap.cameraState.center else { return }
+        self.mapView?.camera.ease(
+            to: CameraOptions(
+                center: location,
+                zoom: 20,
+                bearing: 0,
+                pitch: 0
+            ),
+            duration: 1.0
+        )
+    }
+    
+    private func assembleAnnotationView(_ item: CammerData) -> UIView {
+        let profileImageView = ProfileImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        profileImageView.profileImageURL = URL(string: item.profileImage)
+        return profileImageView
     }
 }

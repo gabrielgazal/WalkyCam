@@ -37,6 +37,12 @@ struct Scan3DMenuView<ViewModel: Scan3DMenuViewModelProtocol, Router: Scan3DMenu
                                 router.routeToGallery()
                             }
                     }
+                    .isHidden(UserDefaults.standard.string(forKey: "currentService") == FunctionType.print.rawValue)
+                    rectangleCell(icon: Asset.Icons.scan3D.name, title: L10n.Scan3DMenuView.Scan3D.cellTitle)
+                        .onTapGesture {
+                            router.routeTo3DScanner()
+                        }
+                        .isHidden(UserDefaults.standard.string(forKey: "currentService") != FunctionType.print.rawValue)
                 }
                 VStack(alignment: .leading,
                        spacing: Tokens.Size.Spacing.regular) {
@@ -93,6 +99,25 @@ struct Scan3DMenuView<ViewModel: Scan3DMenuViewModelProtocol, Router: Scan3DMenu
             }
             .padding(Tokens.Size.Spacing.regular)
         }
+    }
+    
+    private func rectangleCell(icon: String, title: String) -> some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 12)
+                .fill(Color.blanco)
+                .shadow(color: .black.opacity(0.16), radius: 8, x: 0, y: 2)
+            VStack(alignment: .center,
+                   spacing: Tokens.Size.Spacing.small) {
+                Image(icon)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(maxHeight: 64)
+                Text(title)
+                    .font(.projectFont(size: Tokens.Size.Font.small, weight: .bold))
+            }
+            .padding(Tokens.Size.Spacing.regular)
+        }
+        .frame(maxHeight: 130)
     }
 }
 

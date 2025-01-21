@@ -1,3 +1,5 @@
+import MapKit
+
 protocol MapTabInteractorProtocol {
-    func someFunction()
+    func getCammersOnLocation(location: CLLocationCoordinate2D) -> [CammerData]
 }

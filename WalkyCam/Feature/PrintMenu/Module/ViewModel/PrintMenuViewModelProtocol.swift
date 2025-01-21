@@ -1,5 +1,7 @@
 import SwiftUI
 
 protocol PrintMenuViewModelProtocol: ViewModelProtocol {
-    func someAction()
+    var galleryItems: [GalleryItemModel] { get set }
+    
+    func fetchGalleryItems(onComplete: (() -> Void)?)
 }

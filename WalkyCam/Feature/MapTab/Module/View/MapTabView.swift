@@ -7,6 +7,7 @@ struct MapTabView<ViewModel: MapTabViewModelProtocol, Router: MapTabRouterProtoc
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
     @StateObject var locationManager = LocationPermissionManager()
+    @State private var isFirstUpdate = true
 
     // MARK: - Initialization
     
@@ -23,10 +24,10 @@ struct MapTabView<ViewModel: MapTabViewModelProtocol, Router: MapTabRouterProtoc
             VStack {
                 TextInputView(
                     text: $viewModel.locationText,
-                    accessory: Image(systemName: "magnifyingglass"),
-                    placeholder: L10n.MapTabView.BuscarWalkCamer.placeholder,
+                    accessory: Asset.Icons.filter.swiftUIImage,
+                    placeholder: L10n.SearchWalkyCammerView.Search.placeholder,
                     leftIcon: Asset.Icons.location.swiftUIImage,
-                    rightIcon: Asset.Icons.filter.swiftUIImage,
+                    rightIcon: Image(systemName: "magnifyingglass"),
                     backgroundColor: .blanco,
                     actions: .init(
                         onCommitAction: {
@@ -53,11 +54,11 @@ struct MapTabView<ViewModel: MapTabViewModelProtocol, Router: MapTabRouterProtoc
             }
         }
         .ignoresSafeArea()
-        .onChange(of: locationManager.coordinates) { _, newValue in
-            viewModel.updateUserViewPort(manager: locationManager)
-        }
-        .onDisappear {
-            viewModel.updateCamerLocation()
+        .onChange(of: locationManager.coordinates) { newValue in
+            if isFirstUpdate {
+                viewModel.updateUserViewPort(manager: locationManager)
+                isFirstUpdate = false
+            }
         }
     }
 }

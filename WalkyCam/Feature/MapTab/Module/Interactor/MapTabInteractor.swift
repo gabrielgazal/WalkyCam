@@ -1,4 +1,6 @@
 import Combine
+import MapKit
+import CoreLocation
 
 final class MapTabInteractor: MapTabInteractorProtocol {
 
@@ -21,8 +23,7 @@ final class MapTabInteractor: MapTabInteractorProtocol {
 
     // MARK: - Public API
 
-    #warning("Example function. Rename or remove it")
-    func someFunction() {
-
+    func getCammersOnLocation(location: CLLocationCoordinate2D) -> [CammerData] {
+        return StreetcammerManager.shared.streetCammers
     }
 }

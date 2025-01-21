@@ -52,6 +52,19 @@ struct StreetCamMenuView<ViewModel: StreetCamMenuViewModelProtocol, Router: Stre
                .onAppear {
                    UserDefaults.standard.set(FunctionType.streetcam.rawValue, forKey: "currentService")
                }
+               .navigationBarBackButtonHidden()
+               .toolbar {
+                   ToolbarItem(
+                    placement: .topBarLeading) {
+                        Button {
+                            router.dismiss()
+                        } label: {
+                            Image(systemName: "arrow.backward")
+                                .foregroundColor(Color.blanco)
+                                .fontWeight(.bold)
+                        }
+                    }
+               }
     }
 
     private func verticalCard(title: String,

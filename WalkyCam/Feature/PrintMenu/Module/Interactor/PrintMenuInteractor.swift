@@ -5,7 +5,7 @@ final class PrintMenuInteractor: PrintMenuInteractorProtocol {
     // MARK: - Inner Types
 
     struct UseCases {
-        
+        let fetchUserFiles: FetchUserFilesUseCase
     }
 
     // MARK: - Dependencies
@@ -15,14 +15,30 @@ final class PrintMenuInteractor: PrintMenuInteractorProtocol {
 
     // MARK: - Initialization
 
-    init(useCases: UseCases = UseCases()) {
+    init(useCases: UseCases) {
         self.useCases = useCases
     }
 
     // MARK: - Public API
 
-    #warning("Example function. Rename or remove it")
-    func someFunction() {
-
+    func fetchGalleryItems() async throws -> [GalleryItemModel] {
+        let userId = try UserSession().user().id
+        
+        return try await withCheckedThrowingContinuation { continuation in
+            useCases.fetchUserFiles(userId)
+                .sink(
+                    receiveCompletion: { completion in
+                        switch completion {
+                        case let .failure(error):
+                            continuation.resume(throwing: error)
+                        case .finished: break
+                        }
+                    },
+                    receiveValue: { plans in
+                        continuation.resume(returning: plans)
+                    }
+                )
+                .store(in: &bag)
+        }
     }
 }

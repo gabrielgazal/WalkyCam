@@ -26,13 +26,15 @@ struct PrintMenuView<ViewModel: PrintMenuViewModelProtocol, Router: PrintMenuRou
                         .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                     Spacer()
                 }
-                itemCell(title: L10n.PrintMenuView.Galeria.title, icon: Asset.Icons.scan3D.name)
-                    .onTapGesture {
-                        router.routeToScan3d()
-                    }
                 itemCell(title: L10n.PrintMenuView.EscanearImagen.title, icon: Asset.Icons.scan3D.name)
                     .onTapGesture {
                         router.routeToScan3d()
+                    }
+                itemCell(title: L10n.PrintMenuView.Galeria.title, icon: Asset.Icons.images.name)
+                    .onTapGesture {
+                        viewModel.fetchGalleryItems {
+                            router.routeToGallery(items: viewModel.galleryItems)
+                        }
                     }
                 itemCell(title: L10n.PrintMenuView.SubirImagen.title, icon: Asset.Icons.uploadFolder.name)
             }
@@ -45,6 +47,9 @@ struct PrintMenuView<ViewModel: PrintMenuViewModelProtocol, Router: PrintMenuRou
             )
         }
         .navigation(router)
+        .onAppear {
+            UserDefaults.standard.set(FunctionType.print.rawValue, forKey: "currentService")
+        }
     }
 
     private func itemCell(title: String, icon: String) -> some View {
@@ -65,14 +70,5 @@ struct PrintMenuView<ViewModel: PrintMenuViewModelProtocol, Router: PrintMenuRou
             .padding(Tokens.Size.Spacing.regular)
         }
         .frame(width: .infinity)
-    }
-}
-
-struct PrintMenuView_Previews: PreviewProvider {
-    static var previews: some View {
-        PrintMenuView(
-            viewModel: PrintMenuViewModel(),
-            router: PrintMenuRouter(isPresented: .constant(false))
-        )
     }
 }

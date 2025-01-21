@@ -3,26 +3,28 @@ import SwiftUI
 final class PrintMenuViewModel: PrintMenuViewModelProtocol {
 
     // MARK: - Dependencies
+    @Published var galleryItems: [GalleryItemModel] = []
 
     private let interactor: PrintMenuInteractorProtocol
 
     // MARK: - Initialization
 
-    init(interactor: PrintMenuInteractorProtocol = PrintMenuInteractor()) {
+    init(interactor: PrintMenuInteractorProtocol) {
         self.interactor = interactor
     }
 
     // MARK: - Public API
 
-    #warning("Example function. Rename or remove it")
-    func someAction() {
-
-    }
-
-    // MARK: - Private Methods
-
-    #warning("Example function. Rename or remove it")
-    private func somePrivateMethod() {
-
+    func fetchGalleryItems(onComplete: (() -> Void)?) {
+        Task { 
+            do {
+                let items = try await interactor.fetchGalleryItems()
+                galleryItems = items.filter { $0.tag == .model }
+                onComplete?()
+            } catch {
+                galleryItems = []
+                onComplete?()
+            }
+        }
     }
 }

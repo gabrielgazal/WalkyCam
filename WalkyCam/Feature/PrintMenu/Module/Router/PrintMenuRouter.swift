@@ -9,5 +9,14 @@ final class PrintMenuRouter: Router, PrintMenuRouterProtocol {
             Scan3DMenuRoute(isPresented: isNavigating)
         )
     }
+    
+    func routeToGallery(items: [GalleryItemModel]) {
+        navigateTo(
+            GalleryPhotosRoute(
+                isPresented: isNavigating,
+                galleryItems: items
+            )
+        )
+    }
 }
 

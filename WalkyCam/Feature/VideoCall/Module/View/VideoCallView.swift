@@ -67,7 +67,7 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
                 .loading(viewModel.scheduleVideoCallAsyncData.isLoading)
             }
             .layoutPriority(1)
-
+            
             horizontalCard(action: {
                 switch viewModel.assembleVideoCallLink() {
                 case let .success(meetUrl):
@@ -79,15 +79,28 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
         }
                .padding(Tokens.Size.Spacing.regular)
                .background(Asset.Fondos.videocallFondo .swiftUIImage
-                   .ignoresSafeArea())
+                .ignoresSafeArea())
                .navigation(router)
                .sheet(router)
                .environment(\.colorScheme, .dark)
                .onAppear {
                    UserDefaults.standard.set(FunctionType.videocall.rawValue, forKey: "currentService")
                }
+               .navigationBarBackButtonHidden()
+               .toolbar {
+                   ToolbarItem(
+                    placement: .topBarLeading) {
+                        Button {
+                            router.dismiss()
+                        } label: {
+                            Image(systemName: "arrow.backward")
+                                .foregroundColor(Color.blanco)
+                                .fontWeight(.bold)
+                        }
+                    }
+               }
     }
-
+    
     private func verticalCard(title: String,
                               description: String,
                               buttonTitle: String,
@@ -118,7 +131,7 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
                     .cornerRadius(48)
                )
     }
-
+    
     private func horizontalCard(action: (() -> Void)?) -> some View {
         VStack(alignment: .center,
                spacing: Tokens.Size.Spacing.regular) {
@@ -149,19 +162,5 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
                     .opacity(0.8)
                     .cornerRadius(48)
                )
-    }
-}
-
-struct VideoCallView_Previews: PreviewProvider {
-    static var previews: some View {
-    VideoCallView(
-        viewModel: VideoCallViewModel(
-            interactor: VideoCallInteractor(
-                useCases: .init(createVideoCall: .empty,
-                                startSchedule: .empty)
-            )
-        ),
-            router: VideoCallRouter(isPresented: .constant(false))
-        )
     }
 }

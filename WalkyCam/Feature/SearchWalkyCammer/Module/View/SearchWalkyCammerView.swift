@@ -26,7 +26,6 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
             headerView
             ZStack {
                 mapView()
-//                    .isHidden(viewModel.shouldDisplayCammerList)
                 cammerListView()
                     .isHidden(!viewModel.shouldDisplayCammerList)
                 VStack {
