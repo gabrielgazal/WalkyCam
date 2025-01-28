@@ -63,6 +63,7 @@ struct BulbPartyLightSelectorView<ViewModel: BulbPartyLightSelectorViewModelProt
             )
             .padding()
             .isHidden(viewModel.fetchRgbDevices().isEmpty)
+            .disabled(viewModel.fetchRgbDevices().isEmpty)
         }
         .onChange(of: viewModel.isRunningLightParty) { oldValue, newValue in
             if newValue {

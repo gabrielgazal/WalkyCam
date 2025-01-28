@@ -59,6 +59,14 @@ internal enum Asset {
       internal static let analisador8 = ImageAsset(name: "Analisador8")
       internal static let analisador9 = ImageAsset(name: "Analisador9")
     }
+    internal enum AppleWatchSimulator {
+      internal static let watch1 = ImageAsset(name: "watch1")
+      internal static let watch2 = ImageAsset(name: "watch2")
+      internal static let watch3 = ImageAsset(name: "watch3")
+      internal static let watch4 = ImageAsset(name: "watch4")
+      internal static let watch5 = ImageAsset(name: "watch5")
+      internal static let watch6 = ImageAsset(name: "watch6")
+    }
     internal enum BackpackScreenAd {
       internal static let backpackScreenAd1 = ImageAsset(name: "BackpackScreenAd1")
       internal static let backpackScreenAd10 = ImageAsset(name: "BackpackScreenAd10")
@@ -360,6 +368,7 @@ internal enum Asset {
     internal static let loginFondo = ImageAsset(name: "login_fondo")
     internal static let planFondo = ImageAsset(name: "plan_fondo")
     internal static let videocallFondo = ImageAsset(name: "videocall_fondo")
+    internal static let watchBackground = ImageAsset(name: "watchBackground")
   }
   internal enum Icons {
     internal static let _360Camera = ImageAsset(name: "360Camera")
@@ -477,6 +486,7 @@ internal enum Asset {
     internal static let smartphone = ImageAsset(name: "smartphone")
     internal static let smileFace = ImageAsset(name: "smileFace")
     internal static let socialsGrid = ImageAsset(name: "socialsGrid")
+    internal static let soundwave = ImageAsset(name: "soundwave")
     internal static let telepresencia = ImageAsset(name: "telepresencia")
     internal static let thermalCamera = ImageAsset(name: "thermalCamera")
     internal static let translate = ImageAsset(name: "translate")

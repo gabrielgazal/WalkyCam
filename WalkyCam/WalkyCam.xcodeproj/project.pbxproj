@@ -334,6 +334,21 @@
 		56DADB272AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB262AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift */; };
 		56F2AF8E2BEC7A2F00C458DE /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F2AF8D2BEC7A2F00C458DE /* TimePicker.swift */; };
 		56F2AF902BEC896000C458DE /* AvailableDayItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F2AF8F2BEC896000C458DE /* AvailableDayItemView.swift */; };
+		56F3D3C72D42B2E6009F5A6D /* WatchLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3D3C62D42B2E6009F5A6D /* WatchLocationView.swift */; };
+		56F3D3C92D42B32B009F5A6D /* WatchMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3D3C82D42B32B009F5A6D /* WatchMenuView.swift */; };
+		56F3D3CC2D42B398009F5A6D /* WatchPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3D3CB2D42B398009F5A6D /* WatchPageView.swift */; };
+		56F3D3CE2D42B3BA009F5A6D /* WatchSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3D3CD2D42B3BA009F5A6D /* WatchSearchView.swift */; };
+		56F3D3EA2D42B4BD009F5A6D /* AppleWatchSimulatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3D3D52D42B4BC009F5A6D /* AppleWatchSimulatorModel.swift */; };
+		56F3D3EB2D42B4BD009F5A6D /* AppleWatchSimulatorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3D3D82D42B4BC009F5A6D /* AppleWatchSimulatorInteractor.swift */; };
+		56F3D3EC2D42B4BD009F5A6D /* AppleWatchSimulatorInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3D3D92D42B4BC009F5A6D /* AppleWatchSimulatorInteractorProtocol.swift */; };
+		56F3D3ED2D42B4BD009F5A6D /* AppleWatchSimulatorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3D3DB2D42B4BC009F5A6D /* AppleWatchSimulatorRouter.swift */; };
+		56F3D3EE2D42B4BD009F5A6D /* AppleWatchSimulatorRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3D3DC2D42B4BC009F5A6D /* AppleWatchSimulatorRouterProtocol.swift */; };
+		56F3D3EF2D42B4BD009F5A6D /* AppleWatchSimulatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3D3DE2D42B4BC009F5A6D /* AppleWatchSimulatorView.swift */; };
+		56F3D3F02D42B4BD009F5A6D /* AppleWatchSimulatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3D3E02D42B4BC009F5A6D /* AppleWatchSimulatorViewModel.swift */; };
+		56F3D3F12D42B4BD009F5A6D /* AppleWatchSimulatorViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3D3E12D42B4BC009F5A6D /* AppleWatchSimulatorViewModelProtocol.swift */; };
+		56F3D3F22D42B4BD009F5A6D /* AppleWatchSimulatorAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3D3E42D42B4BD009F5A6D /* AppleWatchSimulatorAssembler.swift */; };
+		56F3D3F32D42B4BD009F5A6D /* AppleWatchSimulatorAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3D3E52D42B4BD009F5A6D /* AppleWatchSimulatorAssemblerProtocol.swift */; };
+		56F3D3F42D42B4BD009F5A6D /* AppleWatchSimulatorRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3D3E72D42B4BD009F5A6D /* AppleWatchSimulatorRoute.swift */; };
 		56F3D4682C16B8EA008CFE1B /* DroneDefaultLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3D4672C16B8EA008CFE1B /* DroneDefaultLayoutViewController.swift */; };
 		56F3D46A2C16B9E0008CFE1B /* AppDelegate+DeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3D4692C16B9E0008CFE1B /* AppDelegate+DeviceOrientation.swift */; };
 		56F8AE232C247BE000EC7D4F /* IOTSensorsAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F8AE0E2C247BE000EC7D4F /* IOTSensorsAssembler.swift */; };
@@ -1480,6 +1495,21 @@
 		56DADB262AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+DependencyRegistration.swift"; sourceTree = "<group>"; };
 		56F2AF8D2BEC7A2F00C458DE /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
 		56F2AF8F2BEC896000C458DE /* AvailableDayItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableDayItemView.swift; sourceTree = "<group>"; };
+		56F3D3C62D42B2E6009F5A6D /* WatchLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchLocationView.swift; sourceTree = "<group>"; };
+		56F3D3C82D42B32B009F5A6D /* WatchMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchMenuView.swift; sourceTree = "<group>"; };
+		56F3D3CB2D42B398009F5A6D /* WatchPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPageView.swift; sourceTree = "<group>"; };
+		56F3D3CD2D42B3BA009F5A6D /* WatchSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSearchView.swift; sourceTree = "<group>"; };
+		56F3D3D52D42B4BC009F5A6D /* AppleWatchSimulatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleWatchSimulatorModel.swift; sourceTree = "<group>"; };
+		56F3D3D82D42B4BC009F5A6D /* AppleWatchSimulatorInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleWatchSimulatorInteractor.swift; sourceTree = "<group>"; };
+		56F3D3D92D42B4BC009F5A6D /* AppleWatchSimulatorInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleWatchSimulatorInteractorProtocol.swift; sourceTree = "<group>"; };
+		56F3D3DB2D42B4BC009F5A6D /* AppleWatchSimulatorRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleWatchSimulatorRouter.swift; sourceTree = "<group>"; };
+		56F3D3DC2D42B4BC009F5A6D /* AppleWatchSimulatorRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleWatchSimulatorRouterProtocol.swift; sourceTree = "<group>"; };
+		56F3D3DE2D42B4BC009F5A6D /* AppleWatchSimulatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleWatchSimulatorView.swift; sourceTree = "<group>"; };
+		56F3D3E02D42B4BC009F5A6D /* AppleWatchSimulatorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleWatchSimulatorViewModel.swift; sourceTree = "<group>"; };
+		56F3D3E12D42B4BC009F5A6D /* AppleWatchSimulatorViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleWatchSimulatorViewModelProtocol.swift; sourceTree = "<group>"; };
+		56F3D3E42D42B4BD009F5A6D /* AppleWatchSimulatorAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleWatchSimulatorAssembler.swift; sourceTree = "<group>"; };
+		56F3D3E52D42B4BD009F5A6D /* AppleWatchSimulatorAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleWatchSimulatorAssemblerProtocol.swift; sourceTree = "<group>"; };
+		56F3D3E72D42B4BD009F5A6D /* AppleWatchSimulatorRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleWatchSimulatorRoute.swift; sourceTree = "<group>"; };
 		56F3D4672C16B8EA008CFE1B /* DroneDefaultLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneDefaultLayoutViewController.swift; sourceTree = "<group>"; };
 		56F3D4692C16B9E0008CFE1B /* AppDelegate+DeviceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+DeviceOrientation.swift"; sourceTree = "<group>"; };
 		56F8AE0E2C247BE000EC7D4F /* IOTSensorsAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOTSensorsAssembler.swift; sourceTree = "<group>"; };
@@ -4914,6 +4944,116 @@
 			path = TimePicker;
 			sourceTree = "<group>";
 		};
+		56F3D3C52D42B2CB009F5A6D /* AppleWatchSimulator */ = {
+			isa = PBXGroup;
+			children = (
+				56F3D3E92D42B4BD009F5A6D /* Configuration */,
+				56F3D3D72D42B4BC009F5A6D /* Domain */,
+				56F3D3E32D42B4BC009F5A6D /* Module */,
+			);
+			path = AppleWatchSimulator;
+			sourceTree = "<group>";
+		};
+		56F3D3CA2D42B334009F5A6D /* SimulatorViews */ = {
+			isa = PBXGroup;
+			children = (
+				56F3D3C62D42B2E6009F5A6D /* WatchLocationView.swift */,
+				56F3D3C82D42B32B009F5A6D /* WatchMenuView.swift */,
+				56F3D3CB2D42B398009F5A6D /* WatchPageView.swift */,
+				56F3D3CD2D42B3BA009F5A6D /* WatchSearchView.swift */,
+			);
+			path = SimulatorViews;
+			sourceTree = "<group>";
+		};
+		56F3D3D62D42B4BC009F5A6D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				56F3D3D52D42B4BC009F5A6D /* AppleWatchSimulatorModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		56F3D3D72D42B4BC009F5A6D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				56F3D3D62D42B4BC009F5A6D /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		56F3D3DA2D42B4BC009F5A6D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				56F3D3D82D42B4BC009F5A6D /* AppleWatchSimulatorInteractor.swift */,
+				56F3D3D92D42B4BC009F5A6D /* AppleWatchSimulatorInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		56F3D3DD2D42B4BC009F5A6D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				56F3D3DB2D42B4BC009F5A6D /* AppleWatchSimulatorRouter.swift */,
+				56F3D3DC2D42B4BC009F5A6D /* AppleWatchSimulatorRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		56F3D3DF2D42B4BC009F5A6D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				56F3D3CA2D42B334009F5A6D /* SimulatorViews */,
+				56F3D3DE2D42B4BC009F5A6D /* AppleWatchSimulatorView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		56F3D3E22D42B4BC009F5A6D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				56F3D3E02D42B4BC009F5A6D /* AppleWatchSimulatorViewModel.swift */,
+				56F3D3E12D42B4BC009F5A6D /* AppleWatchSimulatorViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		56F3D3E32D42B4BC009F5A6D /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				56F3D3DA2D42B4BC009F5A6D /* Interactor */,
+				56F3D3DD2D42B4BC009F5A6D /* Router */,
+				56F3D3DF2D42B4BC009F5A6D /* View */,
+				56F3D3E22D42B4BC009F5A6D /* ViewModel */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		56F3D3E62D42B4BD009F5A6D /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				56F3D3E42D42B4BD009F5A6D /* AppleWatchSimulatorAssembler.swift */,
+				56F3D3E52D42B4BD009F5A6D /* AppleWatchSimulatorAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		56F3D3E82D42B4BD009F5A6D /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				56F3D3E72D42B4BD009F5A6D /* AppleWatchSimulatorRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		56F3D3E92D42B4BD009F5A6D /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				56F3D3E62D42B4BD009F5A6D /* Assembler */,
+				56F3D3E82D42B4BD009F5A6D /* Route */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		56F3D4662C16B88D008CFE1B /* UXComponents */ = {
 			isa = PBXGroup;
 			children = (
@@ -5436,6 +5576,7 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				56F3D3C52D42B2CB009F5A6D /* AppleWatchSimulator */,
 				56298DFB2D06329D00CF407F /* BulbPartyLightSelector */,
 				56C8900E2CED0210004B21CD /* Photo3DScanner */,
 				56C88FE72CED01A7004B21CD /* Video3DScanner */,
@@ -11867,6 +12008,7 @@
 				EA172AFF2AF06BDE00EB1514 /* ConfirmMailRouterProtocol.swift in Sources */,
 				561D83A12BE90D930045C540 /* CamerAvailabilityViewModel.swift in Sources */,
 				EA910FCD2ADC495700584B98 /* TabBarRouterProtocol.swift in Sources */,
+				56F3D3F02D42B4BD009F5A6D /* AppleWatchSimulatorViewModel.swift in Sources */,
 				EA4A1C162B87799100B5FC59 /* AvailableAssistantsViewModelProtocol.swift in Sources */,
 				569889DA2C46AE85006D5997 /* ThermalCameraOnboardingRoute.swift in Sources */,
 				56C890032CED01DE004B21CD /* Video3DScannerInteractor.swift in Sources */,
@@ -11897,6 +12039,7 @@
 				56298E1A2D0632BF00CF407F /* BulbPartyLightSelectorInteractor.swift in Sources */,
 				EA20A5612B87D35B006662FA /* ShareSheetAssemblerProtocol.swift in Sources */,
 				EA86532D2B90E9CA00B86A54 /* AIOnboardingRoute.swift in Sources */,
+				56F3D3EB2D42B4BD009F5A6D /* AppleWatchSimulatorInteractor.swift in Sources */,
 				EA8652E02B90DCE900B86A54 /* PrintMenuInteractor.swift in Sources */,
 				EA57A7A22B6C1558006247DD /* CammerDetailsViewModelProtocol.swift in Sources */,
 				5621B7042C2E605100BFD923 /* UnavailableFeatureAssembler.swift in Sources */,
@@ -11942,6 +12085,7 @@
 				EA86534F2B90EBE800B86A54 /* ConfigureAccessView.swift in Sources */,
 				567CB7792C51885600112F05 /* ServiceConfirmationViewModelProtocol.swift in Sources */,
 				EA50A0882B0BC77F0042B238 /* PlansPagesInteractorProtocol.swift in Sources */,
+				56F3D3F32D42B4BD009F5A6D /* AppleWatchSimulatorAssemblerProtocol.swift in Sources */,
 				EADB5CA42B190819005863E1 /* VideoCallRoute.swift in Sources */,
 				EAF47BF42B83099F003F8B86 /* MapTabRouterProtocol.swift in Sources */,
 				EA86526A2B90AC8300B86A54 /* IOTMenuInteractorProtocol.swift in Sources */,
@@ -11992,6 +12136,7 @@
 				EA3E5C922B87692400158207 /* AssistantMenuAssemblerProtocol.swift in Sources */,
 				5604D0D92C1157C60069C0D6 /* DroneConnectionRouterProtocol.swift in Sources */,
 				561846EF2CE2DA7B00C53A23 /* Scanner3dViewModelProtocol.swift in Sources */,
+				56F3D3EC2D42B4BD009F5A6D /* AppleWatchSimulatorInteractorProtocol.swift in Sources */,
 				EA94A52D2B7160EF00EC3037 /* ServiceDetailsAssembler.swift in Sources */,
 				561FC8B52B5C66F7005B6006 /* WebView.swift in Sources */,
 				EA60838C2B01CD0A00295069 /* ShopTabAssembler.swift in Sources */,
@@ -12010,6 +12155,7 @@
 				EAF47BCA2B8306E9003F8B86 /* TimeTabRouterProtocol.swift in Sources */,
 				EA20A5602B87D35B006662FA /* ShareSheetAssembler.swift in Sources */,
 				56AF275B2BDAE00800DADC29 /* RegisterWalkcamerRouter.swift in Sources */,
+				56F3D3F42D42B4BD009F5A6D /* AppleWatchSimulatorRoute.swift in Sources */,
 				EAE402022BBAFB0900B1311E /* RobotMenuAssembler.swift in Sources */,
 				56F8AE2C2C247BE000EC7D4F /* IOTSensorsViewModelProtocol.swift in Sources */,
 				EAB63BBE2B83D6390017BDA4 /* ARHandsMenuView.swift in Sources */,
@@ -12066,6 +12212,7 @@
 				EA20A5692B87D35B006662FA /* ShareSheetModel.swift in Sources */,
 				561D83EA2BE91EDF0045C540 /* LegalDocumentationView.swift in Sources */,
 				EA06554B2BB5DA5D006148E7 /* RadarMenuViewModelProtocol.swift in Sources */,
+				56F3D3CE2D42B3BA009F5A6D /* WatchSearchView.swift in Sources */,
 				EA282ECB2AEB531100B90920 /* FunctionsViewModelProtocol.swift in Sources */,
 				EAF47C892B839308003F8B86 /* FlightMenuRouter.swift in Sources */,
 				561FC8B72B5C66F7005B6006 /* WebViewSwiftUI.swift in Sources */,
@@ -12078,6 +12225,7 @@
 				EAA1E63B2AFB03FD00A42174 /* CashTabRoute.swift in Sources */,
 				56C890302CED0267004B21CD /* Photo3DScannerViewModel.swift in Sources */,
 				EA8EF8DE2B67E24400136D1F /* KeychainPersistenceProtocol.swift in Sources */,
+				56F3D3CC2D42B398009F5A6D /* WatchPageView.swift in Sources */,
 				569889D82C46AE85006D5997 /* ThermalCameraOnboardingAssembler.swift in Sources */,
 				EAE401FF2BBAFB0900B1311E /* RobotMenuRouter.swift in Sources */,
 				EA910FF02ADCBCC000584B98 /* MenuRoute.swift in Sources */,
@@ -12221,6 +12369,7 @@
 				567CB7722C51885600112F05 /* ServiceConfirmationRoute.swift in Sources */,
 				561D83C12BE916D70045C540 /* AvailabilityTabRouter.swift in Sources */,
 				568338C72CE64E4F0046CA9D /* Scan3dFromVideoUseCase.swift in Sources */,
+				56F3D3F12D42B4BD009F5A6D /* AppleWatchSimulatorViewModelProtocol.swift in Sources */,
 				EA5E1D742AD716A500738A8F /* ProjectFont.swift in Sources */,
 				EAA1E6402AFB03FD00A42174 /* CashTabView.swift in Sources */,
 				56298E1E2D0632BF00CF407F /* BulbPartyLightSelectorView.swift in Sources */,
@@ -12422,6 +12571,7 @@
 				56C8902D2CED0267004B21CD /* Photo3DScannerRouter.swift in Sources */,
 				EA9110242ADDADE100584B98 /* HomeAssembler.swift in Sources */,
 				56459FA72BFFB4D300776F68 /* SnackBarRouterProtocol.swift in Sources */,
+				56F3D3ED2D42B4BD009F5A6D /* AppleWatchSimulatorRouter.swift in Sources */,
 				561FC8C62B5C6854005B6006 /* ExternalURL.swift in Sources */,
 				EA910F962ADA06F500584B98 /* RegistrationInput.swift in Sources */,
 				56B3E49B2C3DA041004A87FA /* VideocallTimeTabAssemblerProtocol.swift in Sources */,
@@ -12460,6 +12610,7 @@
 				567CB7732C51885600112F05 /* ServiceConfirmationInteractor.swift in Sources */,
 				EA57A7A82B6C1558006247DD /* CammerDetailsModel.swift in Sources */,
 				EAE8EC552B9574840003AE96 /* ChatListView.swift in Sources */,
+				56F3D3F22D42B4BD009F5A6D /* AppleWatchSimulatorAssembler.swift in Sources */,
 				EA8652452B902E4B00B86A54 /* FunctionMenuAssembler.swift in Sources */,
 				EAF47B7B2B82FCE8003F8B86 /* BookWalkycamerRouter.swift in Sources */,
 				EA20A5192B87C913006662FA /* Scan3DMenuInteractorProtocol.swift in Sources */,
@@ -12592,6 +12743,7 @@
 				EA910F8C2ADA06F500584B98 /* RegistrationAssemblerProtocol.swift in Sources */,
 				EA910F9E2ADC43B200584B98 /* FullScreenWrapper.swift in Sources */,
 				56B3E46D2C3D8443004A87FA /* ScheduleVideoCallAssemblerProtocol.swift in Sources */,
+				56F3D3EE2D42B4BD009F5A6D /* AppleWatchSimulatorRouterProtocol.swift in Sources */,
 				56298E1F2D0632BF00CF407F /* BulbPartyLightSelectorViewModel.swift in Sources */,
 				561D83E92BE91EDF0045C540 /* LegalDocumentationRouterProtocol.swift in Sources */,
 				56DADB272AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift in Sources */,
@@ -12713,6 +12865,7 @@
 				EA8652BA2B90DA9600B86A54 /* 3DPrintOnboardingRouter.swift in Sources */,
 				569BA79B2C2DF57E00E4CCF1 /* PlayBusinessView.swift in Sources */,
 				EA8652462B902E4B00B86A54 /* FunctionMenuAssemblerProtocol.swift in Sources */,
+				56F3D3C92D42B32B009F5A6D /* WatchMenuView.swift in Sources */,
 				56A552342B2F6135006B1B17 /* WalkyCamerOnboardingRouter.swift in Sources */,
 				EA910F2E2AD8B14C00584B98 /* WCUIButton.swift in Sources */,
 				EAE401DB2BBA452900B1311E /* DigitalTwinsMenuRouter.swift in Sources */,
@@ -12749,6 +12902,7 @@
 				EAB63BC32B83D63A0017BDA4 /* ARHandsMenuRoute.swift in Sources */,
 				56A2999C2C4611BA00D437C5 /* UserPlanOutput.swift in Sources */,
 				EAF47BF02B83099F003F8B86 /* MapTabViewModelProtocol.swift in Sources */,
+				56F3D3C72D42B2E6009F5A6D /* WatchLocationView.swift in Sources */,
 				EA5E1D8C2AD719C400738A8F /* TextInputView.swift in Sources */,
 				56FEECF62B5C802C003FA686 /* SearchWalkyCammerInteractorProtocol.swift in Sources */,
 				EAF47C3E2B838D74003F8B86 /* DroneMenuViewModelProtocol.swift in Sources */,
@@ -12826,6 +12980,7 @@
 				561AA6C62BE30A9900393CEF /* FeatureSelectionView.swift in Sources */,
 				EAF47BF32B83099F003F8B86 /* MapTabInteractorProtocol.swift in Sources */,
 				EADB5CA72B190819005863E1 /* VideoCallViewModelProtocol.swift in Sources */,
+				56F3D3EA2D42B4BD009F5A6D /* AppleWatchSimulatorModel.swift in Sources */,
 				567CB7702C51885600112F05 /* ServiceConfirmationAssembler.swift in Sources */,
 				EA4A1C682B87909F00B5FC59 /* ExternalAssistantRouter.swift in Sources */,
 				EA282E132AE832F100B90920 /* Date+Extension.swift in Sources */,
@@ -12862,6 +13017,7 @@
 				56B3E4722C3D8443004A87FA /* ScheduleVideoCallRouterProtocol.swift in Sources */,
 				EA4165462AE706C6008CE66A /* NotificationsRouter.swift in Sources */,
 				56FEECEF2B5C802C003FA686 /* SearchWalkyCammerRoute.swift in Sources */,
+				56F3D3EF2D42B4BD009F5A6D /* AppleWatchSimulatorView.swift in Sources */,
 				EA8652DA2B90DCE900B86A54 /* PrintMenuAssembler.swift in Sources */,
 				EAE401DA2BBA452900B1311E /* DigitalTwinsMenuRouterProtocol.swift in Sources */,
 				EA0E40BE2AF70E86002B7437 /* CashWalletInteractorProtocol.swift in Sources */,

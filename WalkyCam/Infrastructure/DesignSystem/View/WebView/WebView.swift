@@ -57,18 +57,6 @@ struct WebView: View {
         .onAppear {
             viewModel.loadUrl()
         }
-//        .padding(padding)
         .edgesIgnoringSafeArea(.all)
-    }
-}
-
-struct WebView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            WebView(
-                url: URL(string: "https://github.com")!,
-                actions: .init()
-            )
-        }
     }
 }

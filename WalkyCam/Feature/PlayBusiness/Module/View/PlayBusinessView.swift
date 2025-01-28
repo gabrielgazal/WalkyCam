@@ -117,10 +117,21 @@ struct PlayBusinessView<ViewModel: PlayBusinessViewModelProtocol, Router: PlayBu
             .padding()
         }
         .onTapGesture {
-            router.navigateTo(
-                UnavailableFeatureRoute(isPresented: router.isNavigating, icon: icon, title: title)
-            )
+            switch title {
+            case L10n.PlayBusinessView.fitnessBracelet:
+               routeToWatchSimulator()
+            default:
+                router.navigateTo(
+                    UnavailableFeatureRoute(isPresented: router.isNavigating, icon: icon, title: title)
+                )
+            }
         }
+    }
+    
+    private func routeToWatchSimulator() {
+        router.navigateTo(
+            AppleWatchSimulatorRoute(isPresented: router.isNavigating)
+        )
     }
 }
 

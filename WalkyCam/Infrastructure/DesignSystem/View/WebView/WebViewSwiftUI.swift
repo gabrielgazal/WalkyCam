@@ -16,11 +16,12 @@ struct WebViewSwiftUI: UIViewRepresentable {
         configuration.defaultWebpagePreferences.allowsContentJavaScript = true
         configuration.setValue(true, forKey: "allowUniversalAccessFromFileURLs")
         
-        // Retorna uma instância configurada do WKWebView
+        // Configuração de User-Agent personalizado
         let webView = WKWebView(frame: .zero, configuration: configuration)
+        webView.customUserAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1"
         
-        // Definir User-Agent personalizado para compatibilidade
-        webView.customUserAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
+        // Habilitar gestos de navegação
+        webView.allowsBackForwardNavigationGestures = true
         
         return webView
     }()) {
@@ -33,7 +34,9 @@ struct WebViewSwiftUI: UIViewRepresentable {
         return webView
     }
 
-    func updateUIView(_ webView: WKWebView, context: Context) {}
+    func updateUIView(_ webView: WKWebView, context: Context) {
+        // Pode ser usado para atualizar o conteúdo ou ajustar configurações dinamicamente
+    }
 
     func makeCoordinator() -> Coordinator {
         Coordinator()
@@ -46,10 +49,26 @@ struct WebViewSwiftUI: UIViewRepresentable {
             decisionHandler(.allow)
         }
 
-        // Tratamento de permissões de mídia (câmera e microfone)
+        // Tratamento de alertas de JavaScript
         func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
             print("JavaScript Alert: \(message)")
             completionHandler()
+        }
+
+        // Tratamento de erros de navegação
+        func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+            print("Falha ao carregar: \(error.localizedDescription)")
+        }
+
+        // Tratamento de carregamento concluído
+        func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+            print("Página carregada com sucesso.")
+        }
+
+        // Permissões de mídia (câmera e microfone)
+        func webView(_ webView: WKWebView, requestMediaCapturePermissionFor origin: WKSecurityOrigin, initiatedByFrame frame: WKFrameInfo, type: WKMediaCaptureType, decisionHandler: @escaping (WKPermissionDecision) -> Void) {
+            print("Solicitação de permissão de mídia: \(type.rawValue)")
+            decisionHandler(.grant)
         }
     }
 }

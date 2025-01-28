@@ -1,0 +1,3 @@
+protocol AppleWatchSimulatorInteractorProtocol {
+    func someFunction()
+}
