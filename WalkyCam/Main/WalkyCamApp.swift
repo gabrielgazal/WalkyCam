@@ -29,6 +29,7 @@ struct WalkyCamApp: App {
                         .id(LanguageManager.shared.language.rawValue)
                 }
             }
+            .dynamicTypeSize(.medium)
             .accentColor(Color.red)
             .navigationViewStyle(.stack)
             .environment(\.colorScheme, .light)

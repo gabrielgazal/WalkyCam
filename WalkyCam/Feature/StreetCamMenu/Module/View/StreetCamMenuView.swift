@@ -41,7 +41,14 @@ struct StreetCamMenuView<ViewModel: StreetCamMenuViewModelProtocol, Router: Stre
                              action: handleScheduleStreetcam)
                 .loading(viewModel.scheduleStreetcamAsyncData.isLoading)
             }
-            horizontalCard(action: {})
+            horizontalCard(action: {
+                switch viewModel.assembleVideoCallLink() {
+                case let .success(meetUrl):
+                    router.routeToMeetRoom(meetUrl)
+                case .failure:
+                    return
+                }
+            })
         }
                .padding(Tokens.Size.Spacing.regular)
                .background(Asset.Fondos.videocallFondo .swiftUIImage
@@ -112,7 +119,7 @@ struct StreetCamMenuView<ViewModel: StreetCamMenuViewModelProtocol, Router: Stre
             Text(L10n.StreetCamMenuView.Join.description)
                 .font(.projectFont(size: Tokens.Size.Font.regular))
             HStack(spacing: Tokens.Size.Spacing.regular) {
-                TextInputView(text: .constant(""),
+                TextInputView(text: $viewModel.videoCallLink,
                               placeholder: L10n.StreetCamMenuView.Join.inputPlaceholder)
                 WCUIButton(title: L10n.StreetCamMenuView.Join.button,
                            style: .outline,
@@ -120,6 +127,7 @@ struct StreetCamMenuView<ViewModel: StreetCamMenuViewModelProtocol, Router: Stre
                            action: {
                     action?()
                 })
+                .disabled(viewModel.videoCallLink.isEmpty)
             }
         }
                .padding(Tokens.Size.Spacing.regular)

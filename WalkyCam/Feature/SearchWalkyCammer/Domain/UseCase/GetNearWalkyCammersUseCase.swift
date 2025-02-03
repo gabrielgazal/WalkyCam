@@ -45,8 +45,8 @@ extension GetNearWalkyCammersUseCase {
             profileImage: input.urlProfilePicture,
             technologies: mapTechnologies(input),
             coordinates: .init(
-                latitude: Double(input.locationLatitude) ?? 0.0,
-                longitude: Double(input.locationLongitude) ?? 0.0
+                latitude: Double(input.walkycamerInfo.preferredLocation.coordinates[0]),
+                longitude: Double(input.walkycamerInfo.preferredLocation.coordinates[1])
             ),
             devices: mapDevices(input),
             availability: .init(

@@ -10,11 +10,11 @@ final class CammerDetailsViewModel: CammerDetailsViewModelProtocol {
     @Published var cammerData: CammerData
     @Published var topBarItems: [WCTopBarItem] = [
         .init(iconName: "", title: L10n.CammerDetailsViewModel.TopBarItem.information),
-        .init(iconName: "", title: L10n.CammerDetailsViewModel.TopBarItem.reviews)
+//        .init(iconName: "", title: L10n.CammerDetailsViewModel.TopBarItem.reviews)
     ]
     @Published var selection: WCTopBarItem = .init(iconName: "", title: L10n.CammerDetailsViewModel.TopBarItem.information)
     @Published var specialistMode: Bool
-    
+
     // MARK: - Initialization
     
     init(interactor: CammerDetailsInteractorProtocol,

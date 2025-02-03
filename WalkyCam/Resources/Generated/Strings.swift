@@ -642,8 +642,8 @@ internal enum L10n {
       internal static var title: String { return L10n.tr("Localizable", "FlightMenuView.LocalizaTuPiloto.title", fallback: "Localiza tu Piloto más cercano.") }
     }
     internal enum ProgramaTuVuelo {
-      /// Programa tu Vuelo con anterioridad.
-      internal static var title: String { return L10n.tr("Localizable", "FlightMenuView.ProgramaTuVuelo.title", fallback: "Programa tu Vuelo con anterioridad.") }
+      /// Programa tu vuelo
+      internal static var title: String { return L10n.tr("Localizable", "FlightMenuView.ProgramaTuVuelo.title", fallback: "Programa tu vuelo") }
     }
     internal enum Reservar {
       /// RESERVAR

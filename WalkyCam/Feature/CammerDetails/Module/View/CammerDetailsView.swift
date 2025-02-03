@@ -34,6 +34,7 @@ struct CammerDetailsView<ViewModel:CammerDetailsViewModelProtocol, Router: Camme
                         viewBody
                         availabilityView()
                         descriptionView()
+                            .isHidden(viewModel.cammerData.description.isEmpty)
                         devicesView()
                         abilitiesView()
                     }
@@ -96,6 +97,7 @@ struct CammerDetailsView<ViewModel:CammerDetailsViewModelProtocol, Router: Camme
                            icon: Asset.Icons.messageCircle.name,
                            color: .negro,
                            action: {})
+                .isHidden(true)
             }
             .padding(Tokens.Size.Spacing.large)
         }
@@ -132,7 +134,7 @@ struct CammerDetailsView<ViewModel:CammerDetailsViewModelProtocol, Router: Camme
                 HStack(alignment: .center,
                        spacing: Tokens.Size.Spacing.small) {
                     Asset.Icons.location.swiftUIImage
-                    Text(L10n.CammerDetailsView.testLocation)
+                    Text(viewModel.getCammerLocation() ?? "")
                         .font(.projectFont(size: Tokens.Size.Font.medium))
                     Spacer()
                 }
@@ -191,24 +193,29 @@ struct CammerDetailsView<ViewModel:CammerDetailsViewModelProtocol, Router: Camme
     }
     
     private func descriptionView() -> some View {
-        return VStack(
-            alignment: .leading,
-            spacing: Tokens.Size.Spacing.regular) {
-                if let about = viewModel.cammerData.about {
-                    Text(String(format: L10n.CammerDetailsView.about(viewModel.cammerData.name)))
-                        .font(.projectFont(size: Tokens.Size.Font.large))
-                    Text(about)
-                        .font(.projectFont(size: Tokens.Size.Font.regular))
-                }
+        return VStack {
+            if let aboutMe = viewModel.cammerData.about,
+               !aboutMe.isEmpty {
+                VStack(
+                    alignment: .leading,
+                    spacing: Tokens.Size.Spacing.regular) {
+                        HStack {
+                            Text(String(format: L10n.CammerDetailsView.about(viewModel.cammerData.name)))
+                                .font(.projectFont(size: Tokens.Size.Font.large))
+                            Spacer()
+                        }
+                        Text(aboutMe)
+                            .font(.projectFont(size: Tokens.Size.Font.regular))
+                    }
+                    .padding(Tokens.Size.Spacing.large)
+                    .background(
+                        RoundedRectangle(cornerRadius: Tokens.Size.Border.Radius.medium)
+                            .fill(Color.blanco)
+                            .shadow(color: .black.opacity(0.16), radius: 8, x: 0, y: 2)
+                    )
+                    .padding(.horizontal, Tokens.Size.Spacing.regular)
             }
-            .padding(Tokens.Size.Spacing.large)
-            .background(
-                RoundedRectangle(cornerRadius: Tokens.Size.Border.Radius.medium)
-                    .fill(Color.blanco)
-                    .shadow(color: .black.opacity(0.16), radius: 8, x: 0, y: 2)
-            )
-            .padding(.horizontal, Tokens.Size.Spacing.regular)
-            .isHidden(viewModel.cammerData.about == nil)
+        }
     }
     
     private func devicesView() -> some View {

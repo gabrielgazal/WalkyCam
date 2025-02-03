@@ -45,6 +45,7 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                     newsView()
                     favoritesView()
                     filesView()
+                    planView
                 }
                        .padding([.bottom], Tokens.Size.Spacing.large)
                        .padding([.top], Tokens.Size.Spacing.huge)
@@ -210,6 +211,42 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
     
     private func handleChatAction() {
         router.routeToChat()
+    }
+    
+    private var planView: some View {
+            HStack(alignment: .top,
+                   spacing: Tokens.Size.Spacing.regular) {
+                Image(systemName: "crown.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .foregroundColor(.blanco)
+                    .frame(width: 24, height: 24)
+                VStack(alignment: .leading,
+                       spacing: Tokens.Size.Spacing.regular) {
+                    Text("Compara beneficios")
+                        .font(.projectFont(size: Tokens.Size.Font.medium))
+                        .foregroundColor(.blanco)
+                    Text("Ver todos los planes")
+                        .underline()
+                        .font(.projectFont(size: Tokens.Size.Font.medium, weight: .black))
+                        .foregroundColor(Color.naranja)
+                }
+                Spacer()
+            }
+               .padding()
+               .background(
+                ZStack {
+                    Asset.Fondos.planFondo.swiftUIImage
+                        .resizable()
+                        .scaledToFill()
+                        .frame(height: 130)
+                        .clipped()
+                    Color.negro.opacity(0.5)
+                }
+               )
+               .onTapGesture {
+                   router.routeToRegistrationPlans()
+               }
     }
 }
 

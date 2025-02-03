@@ -41,9 +41,13 @@ struct PlanPageView: View {
                            spacing: Tokens.Size.Spacing.xsmall) {
                         Text(L10n.PlanPageView.Plan.annual)
                             .font(.projectFont(size: Tokens.Size.Font.medium, weight: .medium))
+                            .minimumScaleFactor(0.7)
+                            .lineLimit(1)
                         Text(L10n.PlanPageView.Plan.discount)
                             .font(.projectFont(size: Tokens.Size.Font.medium, weight: .bold))
                             .foregroundColor(monthlyToggle ? planData.accentColor : .blanco)
+                            .minimumScaleFactor(0.7)
+                            .lineLimit(1)
                     }
                     Spacer()
                 }

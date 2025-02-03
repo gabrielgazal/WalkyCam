@@ -432,7 +432,6 @@
 "FlightMenuView.Buscar.title" = "BUSCAR";
 "FlightMenuView.LocalizaTuPiloto.title" = "Localiza tu Piloto más cercano.";
 "FlightMenuView.Reservar.title" = "RESERVAR";
-"FlightMenuView.ProgramaTuVuelo.title" = "Programa tu Vuelo con anterioridad.";
 "FlightMenuView.IngresarCodigo.placeholder" = "Ingresar código";
 "FlightMenuView.Unirme.title" = "Unirme";
 "FlightMenuView.IngresaElCodigo.title" = "Ingresa el código que has recebido.";

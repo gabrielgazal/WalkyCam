@@ -15,5 +15,12 @@ final class StreetCamMenuRouter: Router, StreetCamMenuRouterProtocol {
             BookWalkycamerRoute(isPresented: isNavigating)
         )
     }
+    
+    func routeToMeetRoom(_ link: String) {
+        navigateTo(
+            WebRoute(isPreseted: isNavigating,
+                     webViewURL: link)
+        )
+    }
 }
 

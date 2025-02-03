@@ -5,9 +5,8 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
     // MARK: - Public API
     
     func routeToVideoCall() {
-        let seenOnboarding: Bool = (try? UserSession().user().configurations.streetcamConfiguration) ?? false
         navigateTo(
-            seenOnboarding ? VideoCallRoute(isPresented: isNavigating) : VideocallOnboardingRoute(isPresented: isNavigating)
+            VideocallOnboardingRoute(isPresented: isNavigating)
         )
     }
     
@@ -18,9 +17,8 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
     }
     
     func routeToARHands() {
-        let seenOnboarding: Bool = (try? UserSession().user().configurations.arHandsConfiguration) ?? false
         navigateTo(
-            seenOnboarding ? ARHandsMenuRoute(isPresented: isNavigating) : ARHandsOnboardingRoute(isPresented: isNavigating)
+            ARHandsOnboardingRoute(isPresented: isNavigating)
         )
     }
     
@@ -31,9 +29,8 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
     }
     
     func routeToScan3D() {
-        let seenOnboarding: Bool = (try? UserSession().user().configurations.scan3dConfiguration) ?? false
         navigateTo(
-            seenOnboarding ? Scan3DMenuRoute(isPresented: isNavigating) : Scan3DOnboardingRoute(isPresented: isNavigating)
+            Scan3DOnboardingRoute(isPresented: isNavigating)
         )
     }
     
@@ -60,9 +57,8 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
     }
     
     func routeToDigitalTwins() {
-        let seenOnboarding: Bool = (try? UserSession().user().configurations.digitalTwinsConfiguration) ?? false
         navigateTo(
-            seenOnboarding ? DigitalTwinsMenuRoute(isPresented: isNavigating) : DigitalTwinsOnboardingRoute(isPresented: isNavigating)
+            DigitalTwinsOnboardingRoute(isPresented: isNavigating)
         )
     }
     
@@ -437,7 +433,7 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
             )
         )
     }
-
+    
     func routeToDogRobotSuperbanner() {
         navigateTo(
             UnreleasedFeatureRoute(
@@ -466,7 +462,7 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
             )
         )
     }
-
+    
     func routeToMascotSuperbanner() {
         navigateTo(
             UnreleasedFeatureRoute(
@@ -508,7 +504,7 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
             )
         )
     }
-
+    
     func routeToDetectorSuperbanner() {
         navigateTo(
             UnreleasedFeatureRoute(
@@ -537,7 +533,7 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
             )
         )
     }
-
+    
     func routeToAnalysisSuperbanner() {
         navigateTo(
             UnreleasedFeatureRoute(

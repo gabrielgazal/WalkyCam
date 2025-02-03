@@ -77,7 +77,7 @@ struct DroneOnboardingPageView: View {
                                     .font(.projectFont(size: Tokens.Size.Font.medium,
                                                        weight: .medium))
                                     .foregroundColor(.negro)
-                                    .lineLimit(nil)
+                                    .lineLimit(2)
                                 Spacer()
                             }
                         }

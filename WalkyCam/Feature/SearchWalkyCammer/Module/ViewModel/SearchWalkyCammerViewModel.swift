@@ -17,13 +17,16 @@ final class SearchWalkyCammerViewModel: SearchWalkyCammerViewModelProtocol {
     @Published var shouldDisplayCammerList: Bool = false
     @Published var cammerSearch: String = ""
     @State var coordinates: CLLocationCoordinate2D = .init()
-    
+    private let serviceManager: ServiceInformationManagerProtocol
+
     // MARK: - Initialization
 
     init(interactor: SearchWalkyCammerInteractorProtocol,
-         router: SearchWalkyCammerRouterProtocol) {
+         router: SearchWalkyCammerRouterProtocol,
+         serviceManager: ServiceInformationManagerProtocol = ServiceInformationManager.shared) {
         self.interactor = interactor
         self.router = router
+        self.serviceManager = serviceManager
     }
 
     // MARK: - Public API
@@ -91,6 +94,7 @@ final class SearchWalkyCammerViewModel: SearchWalkyCammerViewModelProtocol {
         }
         completion()
         walkyCammers = .loaded(cammers)
+        serviceManager.updateLocation(coordinates)
     }
     
     func updateUserRegionGeocoder() {

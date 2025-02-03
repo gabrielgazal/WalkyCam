@@ -21,8 +21,9 @@ struct SpecialistNotifiedView<ViewModel: SpecialistNotifiedViewModelProtocol, Ro
         VStack(alignment: .leading,
                spacing: Tokens.Size.Spacing.regular) {
             headerView
-            Text(L10n.SpecialistNotifiedView.CuandoElTecnicoConfirme.title)
+            Text(L10n.SpecialistNotifiedView.CuandoElTecnicoConfirme.title.toMarkdown())
                 .font(.projectFont(size: Tokens.Size.Font.regular))
+            
             Spacer()
             HStack {
                 Spacer()

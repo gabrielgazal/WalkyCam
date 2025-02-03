@@ -8,6 +8,7 @@ final class StreetCamMenuViewModel: StreetCamMenuViewModelProtocol {
 
     @Published var createStreetcamAsyncData: AsyncData<VideoCallOutput, ErrorProtocol> = .idle
     @Published var scheduleStreetcamAsyncData: AsyncData<VideoCallOutput, ErrorProtocol> = .idle
+    @Published var videoCallLink: String = ""
     
     // MARK: - Initialization
 
@@ -38,6 +39,23 @@ final class StreetCamMenuViewModel: StreetCamMenuViewModelProtocol {
         } catch {
             scheduleStreetcamAsyncData = .failed(GenericError())
             onFailure?()
+        }
+    }
+    
+    func assembleVideoCallLink() -> Result<String, Error> {
+        do {
+            let userId = try UserSession().user().id
+
+            if videoCallLink.starts(with: "https://meet.walkycam.com/") {
+                return .success(videoCallLink)
+            } else if videoCallLink.starts(with: "meet.walkycam.com/") {
+                return .success("https://\(videoCallLink)")
+            }
+            
+            let videoCallURL = "https://meet.walkycam.com/videocall/\(videoCallLink)/\(userId)"
+            return .success(videoCallURL)
+        } catch {
+            return .failure(error)
         }
     }
 }

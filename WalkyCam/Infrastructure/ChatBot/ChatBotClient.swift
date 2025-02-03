@@ -71,7 +71,7 @@ class ChatBotClient: NSObject {
         socket?.on("receiveWalkyMessage") { data, ack in
             print(data)
             if let messageData = data.first as? [String: Any],
-               let message = messageData["message"] as? String {
+               let message = messageData["answer"] as? String {
                 completion(message)
             }
         }

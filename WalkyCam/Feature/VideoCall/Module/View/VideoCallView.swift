@@ -6,7 +6,7 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
     
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
-    
+    @State var isAlertPresented = false
     // MARK: - Initialization
     
     init(viewModel: ViewModel,
@@ -37,7 +37,8 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
                              action: {
                     Task {
                         await viewModel.createVideoCall(
-                            onSuccess: { callId in
+                            onSuccess: {
+                                callId in
                                 if let userId = try? UserSession().user().id {
                                     router.routeToMeetRoom(
                                         "https://meet.walkycam.com/videocall/\(callId)/\(userId)"
@@ -77,6 +78,27 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
                 }
             })
         }
+               .alert(isPresented: $isAlertPresented) {
+                   VStack(
+                    alignment: .center,
+                    spacing: Tokens.Size.Spacing.regular) {
+                         Text("Salir de la videollamada?")
+                        HStack {
+                            WCUIButton(
+                                title: "Salir",
+                                style: .standard,
+                                descriptor: OrangeButtonStyleDescriptor(),
+                                action: { router.dismiss() }
+                            )
+                            WCUIButton(
+                                title: "Cancelar",
+                                style: .outline,
+                                descriptor: OrangeButtonStyleDescriptor(),
+                                action: { isAlertPresented = false }
+                            )
+                        }
+                    }
+               }
                .padding(Tokens.Size.Spacing.regular)
                .background(Asset.Fondos.videocallFondo .swiftUIImage
                 .ignoresSafeArea())
@@ -154,6 +176,7 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
                            action: {
                     action?()
                 })
+                .disabled(viewModel.videoCallLink.isEmpty)
             }
         }
                .padding(Tokens.Size.Spacing.regular)

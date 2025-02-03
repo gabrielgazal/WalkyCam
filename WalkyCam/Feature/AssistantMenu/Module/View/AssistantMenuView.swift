@@ -45,7 +45,7 @@ struct AssistantMenuView<ViewModel: AssistantMenuViewModelProtocol, Router: Assi
                     ListInputView(
                         dataList: [
                             "Carpintero",
-                            "Eletricista",
+                            "Electricista",
                             "Informático/a",
                             "Mecánico/a",
                             "Veterinario"
