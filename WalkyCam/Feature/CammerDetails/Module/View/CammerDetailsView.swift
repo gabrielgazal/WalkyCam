@@ -134,7 +134,7 @@ struct CammerDetailsView<ViewModel:CammerDetailsViewModelProtocol, Router: Camme
                 HStack(alignment: .center,
                        spacing: Tokens.Size.Spacing.small) {
                     Asset.Icons.location.swiftUIImage
-                    Text(viewModel.getCammerLocation() ?? "")
+                    Text(viewModel.locationName)
                         .font(.projectFont(size: Tokens.Size.Font.medium))
                     Spacer()
                 }

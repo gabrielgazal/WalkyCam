@@ -14,7 +14,8 @@ final class CammerDetailsViewModel: CammerDetailsViewModelProtocol {
     ]
     @Published var selection: WCTopBarItem = .init(iconName: "", title: L10n.CammerDetailsViewModel.TopBarItem.information)
     @Published var specialistMode: Bool
-
+    @Published var locationName: String = ""
+    
     // MARK: - Initialization
     
     init(interactor: CammerDetailsInteractorProtocol,
@@ -25,6 +26,7 @@ final class CammerDetailsViewModel: CammerDetailsViewModelProtocol {
         self.serviceManager = serviceManager
         self.cammerData = cammerData
         self.specialistMode = specialistMode
+        getCammerLocation()
     }
     
     // MARK: - Public API
@@ -33,20 +35,18 @@ final class CammerDetailsViewModel: CammerDetailsViewModelProtocol {
         serviceManager.updateCammerInformation(cammerData)
     }
     
-    func getCammerLocation() -> String? {
-        var nameToReturn: String?
+    func getCammerLocation() {
         let location = CLLocation(
             latitude: cammerData.coordinates.latitude,
             longitude: cammerData.coordinates.longitude
         )
         let geocoder = CLGeocoder()
         geocoder.reverseGeocodeLocation(location, preferredLocale: Locale(identifier: L10n.Formater.locale)) { (placemarks, error) in
-            if let placemarks = placemarks, let placemark = placemarks.first {
-                nameToReturn = placemark.name
-            } else {
-                nameToReturn = nil
+            if let placemarks = placemarks, 
+                let placemark = placemarks.first,
+               let name = placemark.name {
+                self.locationName = name
             }
         }
-        return nameToReturn
     }
 }

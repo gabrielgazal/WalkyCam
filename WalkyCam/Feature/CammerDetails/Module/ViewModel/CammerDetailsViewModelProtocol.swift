@@ -5,7 +5,8 @@ protocol CammerDetailsViewModelProtocol: ViewModelProtocol {
     var specialistMode: Bool { get set }
     var topBarItems: [WCTopBarItem] { get set }
     var selection: WCTopBarItem { get set }
+    var locationName: String { get set }
     
     func updateSelectedCammer()
-    func getCammerLocation() -> String?
+    func getCammerLocation()
 }
