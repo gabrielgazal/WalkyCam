@@ -67,15 +67,21 @@ class ChatBotClient: NSObject {
     struct Response: Decodable {
         let message: String
     }
+    
     func receiveMessage(_ completion: @escaping (String) -> Void) {
         socket?.on("receiveWalkyMessage") { data, ack in
             print(data)
+            
             if let messageData = data.first as? [String: Any],
-               let message = messageData["answer"] as? String {
+               let chatData = messageData["chat"] as? [String: Any],
+               let messages = chatData["messages"] as? [[String: Any]],
+               let firstMessage = messages.first,
+               let message = firstMessage["message"] as? String {
                 completion(message)
             }
         }
     }
+
     
     func receiveNewUser(_ completion: @escaping (String, [String:String]) -> Void) {
         socket?.on("receiveNewUser") { data, _ in

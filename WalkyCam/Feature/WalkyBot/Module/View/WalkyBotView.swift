@@ -7,7 +7,9 @@ struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouter
     
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
-    
+    @State var isLoadingMessage: Bool = false
+    @State private var value = 1.0
+
     // MARK: - Initializationr
     
     init(viewModel: ViewModel,
@@ -20,9 +22,22 @@ struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouter
     
     var body: some View {
         ZStack {
-            VStack(spacing: Tokens.Size.Spacing.regular) {
+            VStack(spacing: Tokens.Size.Spacing.small) {
                 header
                 ScrollView(showsIndicators: false) {
+                    HStack {
+                        Spacer()
+                        Asset.Menu.bot.swiftUIImage
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 45)
+                            .opacity(value)
+                            .animation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: true))
+                            .onAppear { self.value = 0.3 }
+                            .flippedUpsideDown()
+                        Spacer()
+                    }
+                    .isHidden(!isLoadingMessage)
                     ForEach(viewModel.messages.reversed(), id: \.self) { message in
                         if message.username == viewModel.userName {
                             userMessage(message.text)
@@ -48,6 +63,7 @@ struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouter
                         .onTapGesture {
                             if !viewModel.message.isEmpty  {
                                 sendMessage()
+                                isLoadingMessage = true
                             }
                         }
                     Spacer()
@@ -163,6 +179,7 @@ struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouter
     
     func receiveMessage(text: String) {
         viewModel.messages.append(MessageModel(id: UUID(), username: "walky", text: text))
+        isLoadingMessage = false
     }
     
     func receiveNewUser(username: String, users: [String:String]) {
