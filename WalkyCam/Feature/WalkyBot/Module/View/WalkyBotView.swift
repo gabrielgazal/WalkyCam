@@ -47,7 +47,8 @@ struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouter
                                 .flippedUpsideDown()
                         }
                     }
-                    .padding(Tokens.Size.Spacing.large)
+                    .padding(.horizontal, Tokens.Size.Spacing.large)
+                    .padding(.vertical, Tokens.Size.Spacing.tiny)
                 }
                 .flippedUpsideDown()
             }
