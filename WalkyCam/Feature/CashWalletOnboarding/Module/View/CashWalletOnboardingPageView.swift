@@ -27,13 +27,11 @@ struct CashWalletOnboardingPageView: View {
     var body: some View {
         VStack(alignment: .center,
                spacing: Tokens.Size.Spacing.large) {
-            Spacer()
-                .frame(height: 32)
             illustration
                 .resizable()
                 .scaledToFit()
-                .frame(width: 280,
-                       height: 280)
+                .frame(width: 320,
+                       height: 320)
             Text(title)
                 .multilineTextAlignment(.center)
                 .font(.projectFont(size: Tokens.Size.Font.large,

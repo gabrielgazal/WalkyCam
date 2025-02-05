@@ -6,6 +6,7 @@ struct BulbPartyLightSelectorView<ViewModel: BulbPartyLightSelectorViewModelProt
     
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
+    private var switcher = ImageSwitcher()
     
     // MARK: - Initialization
     
@@ -24,7 +25,13 @@ struct BulbPartyLightSelectorView<ViewModel: BulbPartyLightSelectorViewModelProt
             if !viewModel.fetchRgbDevices().isEmpty {
                 List(viewModel.fetchRgbDevices(), id: \.uniqueIdentifier) { item in
                     HStack {
-                        Image(systemName: "lightbulb")
+                        switcher.nextImage()
+                            .resizable()
+                            .scaledToFit()
+                            .frame(
+                                width: 12,
+                                height: 12
+                            )
                         Toggle(
                             isOn: bindingForDevice(item.uniqueIdentifier.uuidString)
                         ) {
@@ -97,11 +104,18 @@ struct BulbPartyLightSelectorView<ViewModel: BulbPartyLightSelectorViewModelProt
     }
 }
 
-struct BulbPartyLightSelectorView_Previews: PreviewProvider {
-    static var previews: some View {
-        BulbPartyLightSelectorView(
-            viewModel: BulbPartyLightSelectorViewModel(),
-            router: BulbPartyLightSelectorRouter(isPresented: .constant(false))
-        )
+class ImageSwitcher {
+    private var index = 0
+    private let images = [
+        Asset.BulbParty.rgbBulb1.swiftUIImage,
+        Asset.BulbParty.rgbBulb2.swiftUIImage,
+        Asset.BulbParty.rgbBulb3.swiftUIImage
+    ]
+    
+    func nextImage() -> Image {
+        let shuffledIndex = (index + Int.random(in: 1...2)) % images.count
+        let image = images[shuffledIndex]
+        index = shuffledIndex
+        return image
     }
 }

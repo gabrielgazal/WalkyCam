@@ -81,7 +81,11 @@ struct GamesView<ViewModel: GamesViewModelProtocol, Router: GamesRouterProtocol>
     
     private func routeToGlassesProve() {
         router.navigateTo(
-            WebRoute(
+//            WebRoute(
+//                isPreseted: router.isNavigating,
+//                webViewURL: "https://api.walkycam.com/view/prove/v2/glasses"
+//            )
+            SafariViewRoute(
                 isPreseted: router.isNavigating,
                 webViewURL: "https://api.walkycam.com/view/prove/v2/glasses"
             )

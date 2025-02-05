@@ -357,6 +357,11 @@ internal enum Asset {
       internal static let telepresence3 = ImageAsset(name: "Telepresence3")
     }
   }
+  internal enum BulbParty {
+    internal static let rgbBulb1 = ImageAsset(name: "rgbBulb1")
+    internal static let rgbBulb2 = ImageAsset(name: "rgbBulb2")
+    internal static let rgbBulb3 = ImageAsset(name: "rgbBulb3")
+  }
   internal enum DevicesIcons {
     internal static let camera = ImageAsset(name: "camera")
     internal static let smartphone2 = ImageAsset(name: "smartphone-2")

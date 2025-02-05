@@ -17,7 +17,8 @@ struct WatchMenuView: View {
     @State private var isAnimating = false
     @State private var scale: CGFloat = 1.0
     @State private var path = NavigationPath() // Para gerenciar a navegação
-
+    @State private var isButtonHidden = false
+    
     var body: some View {
         ZStack {
             Color.blancoGris // Fundo da simulação
@@ -103,16 +104,7 @@ struct WatchMenuView: View {
                                         }
                                         .isHidden(isAnimating)
                                         .onTapGesture {
-                                            withAnimation(.easeInOut(duration: 1)) {
-                                                isAnimating = true
-                                            }
-                                            withAnimation(.easeInOut(duration: 1.5)) {
-                                                scale = 0
-                                            }
-
-                                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                                                path.append("WatchSearchView")
-                                            }
+                                            startAnimation()
                                         }
                                 }
                             }
@@ -128,7 +120,30 @@ struct WatchMenuView: View {
                     .frame(width: 234, height: 299) // Ajuste para caber no simulador
                     .cornerRadius(32) // Bordas arredondadas para o "mostrador"
                 }
+                
+                WCUIButton(
+                    title: "Start Watch Simulation",
+                    style: .standard,
+                    descriptor: OrangeButtonStyleDescriptor(),
+                    action: { startAnimation() }
+                )
+                .padding()
+                .isHidden(isButtonHidden)
             }
+        }
+    }
+    
+    private func startAnimation() {
+        isButtonHidden = true
+        withAnimation(.easeInOut(duration: 1)) {
+            isAnimating = true
+        }
+        withAnimation(.easeInOut(duration: 1.5)) {
+            scale = 0
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            path.append("WatchSearchView")
         }
     }
 }

@@ -26,7 +26,16 @@ final class BulbPartyLightSelectorViewModel: BulbPartyLightSelectorViewModelProt
     }
     
     func fetchRgbDevices() -> [HMAccessory] {
-        return homekitManager.fetchRGBLights()
+        if homekitManager.fetchRGBLights().isEmpty {
+            // THIS IS FOR MOCKING PURPOSES ONLY
+            return [
+                .mock(name: "Teste 1"),
+                .mock(name: "Teste 2"),
+                .mock(name: "Teste 3"),
+            ]
+        } else {
+            return homekitManager.fetchRGBLights()
+        }
     }
     
     @MainActor func startColorChange() async {
@@ -48,5 +57,15 @@ final class BulbPartyLightSelectorViewModel: BulbPartyLightSelectorViewModelProt
         for device in selectedDevices {
             await homekitManager.updateColor(deviceId: device, hue: color)
         }
+    }
+}
+
+extension HMAccessory {
+    static func mock(name: String) -> HMAccessory {
+        let accessory = HMAccessory()
+        accessory.updateName(name) { error in
+            print("error")
+        }
+        return accessory
     }
 }

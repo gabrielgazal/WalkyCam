@@ -101,6 +101,8 @@
 		561D83EE2BE91EE00045C540 /* LegalDocumentationAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D83DE2BE91EDF0045C540 /* LegalDocumentationAssemblerProtocol.swift */; };
 		561D83EF2BE91EE00045C540 /* LegalDocumentationRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D83E02BE91EDF0045C540 /* LegalDocumentationRoute.swift */; };
 		561D83F02BE91EE00045C540 /* LegalDocumentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D83E32BE91EDF0045C540 /* LegalDocumentationModel.swift */; };
+		561F91A02D52922F00B0955B /* SafariViewSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561F919F2D52922F00B0955B /* SafariViewSwiftUI.swift */; };
+		561F91A22D52926400B0955B /* SafariViewRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561F91A12D52926400B0955B /* SafariViewRoute.swift */; };
 		561FC8B42B5C66F7005B6006 /* WebView+PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FC8B02B5C66F7005B6006 /* WebView+PullToRefresh.swift */; };
 		561FC8B52B5C66F7005B6006 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FC8B12B5C66F7005B6006 /* WebView.swift */; };
 		561FC8B62B5C66F7005B6006 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FC8B22B5C66F7005B6006 /* WebViewModel.swift */; };
@@ -1260,6 +1262,8 @@
 		561D83DE2BE91EDF0045C540 /* LegalDocumentationAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegalDocumentationAssemblerProtocol.swift; sourceTree = "<group>"; };
 		561D83E02BE91EDF0045C540 /* LegalDocumentationRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegalDocumentationRoute.swift; sourceTree = "<group>"; };
 		561D83E32BE91EDF0045C540 /* LegalDocumentationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegalDocumentationModel.swift; sourceTree = "<group>"; };
+		561F919F2D52922F00B0955B /* SafariViewSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariViewSwiftUI.swift; sourceTree = "<group>"; };
+		561F91A12D52926400B0955B /* SafariViewRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariViewRoute.swift; sourceTree = "<group>"; };
 		561FC8B02B5C66F7005B6006 /* WebView+PullToRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebView+PullToRefresh.swift"; sourceTree = "<group>"; };
 		561FC8B12B5C66F7005B6006 /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		561FC8B22B5C66F7005B6006 /* WebViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
@@ -3106,10 +3110,12 @@
 			isa = PBXGroup;
 			children = (
 				561FC8B82B5C6787005B6006 /* WebViewRoute.swift */,
+				561F91A12D52926400B0955B /* SafariViewRoute.swift */,
 				561FC8B02B5C66F7005B6006 /* WebView+PullToRefresh.swift */,
 				561FC8B12B5C66F7005B6006 /* WebView.swift */,
 				561FC8B22B5C66F7005B6006 /* WebViewModel.swift */,
 				561FC8B32B5C66F7005B6006 /* WebViewSwiftUI.swift */,
+				561F919F2D52922F00B0955B /* SafariViewSwiftUI.swift */,
 			);
 			path = WebView;
 			sourceTree = "<group>";
@@ -12080,6 +12086,7 @@
 				EA51030F2BA7E9DA00A2DE2E /* AppDelegate+Payment.swift in Sources */,
 				561D839E2BE90D930045C540 /* CamerAvailabilityRouter.swift in Sources */,
 				56C88FE42CECF615004B21CD /* VideoManager.swift in Sources */,
+				561F91A02D52922F00B0955B /* SafariViewSwiftUI.swift in Sources */,
 				56A552362B2F6135006B1B17 /* WalkyCamerOnboardingModel.swift in Sources */,
 				EA2C4C222B7E5C4300F1EE26 /* DroneOnboardingView.swift in Sources */,
 				EA86534F2B90EBE800B86A54 /* ConfigureAccessView.swift in Sources */,
@@ -12979,6 +12986,7 @@
 				EA82DB502ADF4DBB00E6B39A /* HomeSectionView.swift in Sources */,
 				561AA6C62BE30A9900393CEF /* FeatureSelectionView.swift in Sources */,
 				EAF47BF32B83099F003F8B86 /* MapTabInteractorProtocol.swift in Sources */,
+				561F91A22D52926400B0955B /* SafariViewRoute.swift in Sources */,
 				EADB5CA72B190819005863E1 /* VideoCallViewModelProtocol.swift in Sources */,
 				56F3D3EA2D42B4BD009F5A6D /* AppleWatchSimulatorModel.swift in Sources */,
 				567CB7702C51885600112F05 /* ServiceConfirmationAssembler.swift in Sources */,

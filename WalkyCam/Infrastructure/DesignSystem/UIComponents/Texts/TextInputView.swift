@@ -150,6 +150,7 @@ public struct TextInputView: View {
                 }
             }
         )
+        .font(.projectFont(size: Tokens.Size.Font.regular))
         .foregroundColor(Color.negro)
         .environment(\.colorScheme, .light)
     }

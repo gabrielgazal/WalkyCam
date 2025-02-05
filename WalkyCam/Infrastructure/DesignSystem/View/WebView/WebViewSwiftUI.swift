@@ -10,7 +10,8 @@ struct WebViewSwiftUI: UIViewRepresentable {
         // Configuração de mídia
         configuration.mediaTypesRequiringUserActionForPlayback = []
         configuration.allowsInlineMediaPlayback = true
-        
+        configuration.websiteDataStore = .nonPersistent()
+
         // Configuração de JavaScript e acesso universal
         configuration.preferences.javaScriptEnabled = true
         configuration.defaultWebpagePreferences.allowsContentJavaScript = true
