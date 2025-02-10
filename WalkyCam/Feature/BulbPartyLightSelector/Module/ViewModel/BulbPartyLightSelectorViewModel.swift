@@ -22,7 +22,7 @@ final class BulbPartyLightSelectorViewModel: BulbPartyLightSelectorViewModelProt
     // MARK: - Public API
 
     func screenTitle() -> String {
-        return isRunningLightParty ? "Seleccione dispositivos para activar RGB Bulb Party" : "RBG Bulb Party"
+        return !isRunningLightParty ? "Seleccione dispositivos para activar RGB Bulb Party" : "RBG Bulb Party"
     }
     
     func fetchRgbDevices() -> [HMAccessory] {
@@ -63,9 +63,6 @@ final class BulbPartyLightSelectorViewModel: BulbPartyLightSelectorViewModelProt
 extension HMAccessory {
     static func mock(name: String) -> HMAccessory {
         let accessory = HMAccessory()
-        accessory.updateName(name) { error in
-            print("error")
-        }
         return accessory
     }
 }

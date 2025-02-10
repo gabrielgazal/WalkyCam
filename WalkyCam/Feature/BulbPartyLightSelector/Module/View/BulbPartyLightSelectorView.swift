@@ -29,13 +29,13 @@ struct BulbPartyLightSelectorView<ViewModel: BulbPartyLightSelectorViewModelProt
                             .resizable()
                             .scaledToFit()
                             .frame(
-                                width: 12,
-                                height: 12
+                                width: 100,
+                                height: 100
                             )
                         Toggle(
                             isOn: bindingForDevice(item.uniqueIdentifier.uuidString)
                         ) {
-                            Text(item.name)
+                            Text(item.name.isEmpty ? "Dispositivo Test" : item.name)
                         }
                         .toggleStyle(WCToggleStyle())
                     }
