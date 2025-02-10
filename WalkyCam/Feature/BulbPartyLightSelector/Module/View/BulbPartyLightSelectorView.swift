@@ -6,7 +6,6 @@ struct BulbPartyLightSelectorView<ViewModel: BulbPartyLightSelectorViewModelProt
     
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
-    private var switcher = ImageSwitcher()
     
     // MARK: - Initialization
     
@@ -22,15 +21,15 @@ struct BulbPartyLightSelectorView<ViewModel: BulbPartyLightSelectorViewModelProt
         VStack {
             Text(viewModel.screenTitle())
                 .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
-            if !viewModel.fetchRgbDevices().isEmpty {
-                List(viewModel.fetchRgbDevices(), id: \.uniqueIdentifier) { item in
+            if !viewModel.availableDevices.isEmpty {
+                List(viewModel.availableDevices, id: \.uniqueIdentifier) { item in
                     HStack {
-                        switcher.nextImage()
+                        viewModel.returnImage(item: item)
                             .resizable()
                             .scaledToFit()
                             .frame(
-                                width: 100,
-                                height: 100
+                                width: 120,
+                                height: 120
                             )
                         Toggle(
                             isOn: bindingForDevice(item.uniqueIdentifier.uuidString)
@@ -69,8 +68,8 @@ struct BulbPartyLightSelectorView<ViewModel: BulbPartyLightSelectorViewModelProt
                 }
             )
             .padding()
-            .isHidden(viewModel.fetchRgbDevices().isEmpty)
-            .disabled(viewModel.fetchRgbDevices().isEmpty)
+            .isHidden(viewModel.availableDevices.isEmpty)
+            .disabled(viewModel.availableDevices.isEmpty)
         }
         .onChange(of: viewModel.isRunningLightParty) { oldValue, newValue in
             if newValue {
@@ -101,21 +100,5 @@ struct BulbPartyLightSelectorView<ViewModel: BulbPartyLightSelectorViewModelProt
                 }
             }
         )
-    }
-}
-
-class ImageSwitcher {
-    private var index = 0
-    private let images = [
-        Asset.BulbParty.rgbBulb1.swiftUIImage,
-        Asset.BulbParty.rgbBulb2.swiftUIImage,
-        Asset.BulbParty.rgbBulb3.swiftUIImage
-    ]
-    
-    func nextImage() -> Image {
-        let shuffledIndex = (index + Int.random(in: 1...2)) % images.count
-        let image = images[shuffledIndex]
-        index = shuffledIndex
-        return image
     }
 }

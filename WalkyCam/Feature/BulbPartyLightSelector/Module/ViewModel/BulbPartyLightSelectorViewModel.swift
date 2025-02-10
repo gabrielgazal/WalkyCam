@@ -12,11 +12,13 @@ final class BulbPartyLightSelectorViewModel: BulbPartyLightSelectorViewModelProt
     var audioManager = AudioManager.shared
     @Published var selectedDevices: [String] = []
     @State var timer: Timer?
+    @Published var availableDevices: [HMAccessory] = []
 
     // MARK: - Initialization
 
     init(interactor: BulbPartyLightSelectorInteractorProtocol = BulbPartyLightSelectorInteractor()) {
         self.interactor = interactor
+        fetchRgbDevices()
     }
 
     // MARK: - Public API
@@ -25,16 +27,16 @@ final class BulbPartyLightSelectorViewModel: BulbPartyLightSelectorViewModelProt
         return !isRunningLightParty ? "Seleccione dispositivos para activar RGB Bulb Party" : "RBG Bulb Party"
     }
     
-    func fetchRgbDevices() -> [HMAccessory] {
+    func fetchRgbDevices() {
         if homekitManager.fetchRGBLights().isEmpty {
             // THIS IS FOR MOCKING PURPOSES ONLY
-            return [
+            availableDevices = [
                 .mock(name: "Teste 1"),
                 .mock(name: "Teste 2"),
                 .mock(name: "Teste 3"),
             ]
         } else {
-            return homekitManager.fetchRGBLights()
+            availableDevices = homekitManager.fetchRGBLights()
         }
     }
     
@@ -49,6 +51,23 @@ final class BulbPartyLightSelectorViewModel: BulbPartyLightSelectorViewModelProt
     
     func stopColorChange() {
         audioManager.stopListening()
+    }
+    
+    func returnImage(item: HMAccessory) -> Image {
+        guard let index = availableDevices.firstIndex(of: item) else {
+            return Asset.BulbParty.rgbBulb1.swiftUIImage
+        }
+        
+        switch (index % 3) {
+            case 0:
+                return Asset.BulbParty.rgbBulb1.swiftUIImage
+            case 1:
+                return Asset.BulbParty.rgbBulb2.swiftUIImage
+            case 2:
+                return Asset.BulbParty.rgbBulb3.swiftUIImage
+            default:
+                return Asset.BulbParty.rgbBulb1.swiftUIImage
+            }
     }
     
     // MARK: - Private Methods
