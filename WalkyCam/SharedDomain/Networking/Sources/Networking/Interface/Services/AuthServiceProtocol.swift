@@ -38,4 +38,9 @@ protocol AuthServiceProtocol {
         userId: String,
         completion: @escaping Completion
     )
+    
+    func getUserChatbotId(
+        userId: String,
+        completion: @escaping Completion
+    )
 }

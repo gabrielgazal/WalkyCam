@@ -9,7 +9,9 @@ struct TabBarView<ViewModel: TabBarViewModelProtocol, Router: TabBarRouterProtoc
 
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
-
+    @State var languageSelected = false
+    @AppStorage("language")
+    private var language = LanguageManager.shared.language
     private let viewMetrics: ViewMetrics = .init()
 
     // MARK: - Initialization
@@ -33,7 +35,7 @@ struct TabBarView<ViewModel: TabBarViewModelProtocol, Router: TabBarRouterProtoc
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
         .environmentObject(viewModel)
-        .id(LanguageManager.shared.language.rawValue)
+        .environment(\.locale, LanguageManager.shared.language.locale)
         .onAppear {
             Task {
                 await viewModel.fetchStreetcammers()

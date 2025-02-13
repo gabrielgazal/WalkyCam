@@ -5,7 +5,7 @@ final class WalkyBotInteractor: WalkyBotInteractorProtocol {
     // MARK: - Inner Types
 
     struct UseCases {
-        
+        let getUserChatId: GetUserChatIdUseCase
     }
 
     // MARK: - Dependencies
@@ -15,14 +15,29 @@ final class WalkyBotInteractor: WalkyBotInteractorProtocol {
 
     // MARK: - Initialization
 
-    init(useCases: UseCases = UseCases()) {
+    init(useCases: UseCases) {
         self.useCases = useCases
     }
 
     // MARK: - Public API
 
-    #warning("Example function. Rename or remove it")
-    func someFunction() {
-
+    func getUserChatId(userId: String) async throws -> String {
+        return try await withCheckedThrowingContinuation { continuation in
+            useCases.getUserChatId(userId)
+                .sink(
+                    receiveCompletion: { completion in
+                        switch completion {
+                        case let .failure(error):
+                            continuation.resume(throwing: error)
+                        case .finished:
+                            break
+                        }
+                    },
+                    receiveValue: { cammers in
+                        continuation.resume(returning: cammers)
+                    }
+                )
+                .store(in: &bag)
+        }
     }
 }

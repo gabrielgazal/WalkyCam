@@ -14,7 +14,7 @@ public protocol AuthRepositoryProtocol {
     typealias UserPlanResponse = Result<PlanResponse, RepositoryError>
     typealias UpdateUserInfoResponse = Result<UserResponse, RepositoryError>
     typealias GetUserFilesResponse = Result<[UserFileReponse], RepositoryError>
-
+    typealias GetUserChatbotIdResponse = Result<String, RepositoryError>
     func login(userName: String,
                password: String,
                completion: @escaping (LoginResult) -> Void)
@@ -44,5 +44,9 @@ public protocol AuthRepositoryProtocol {
     func getUserFiles(
         userId: String,
         completion: @escaping (GetUserFilesResponse) -> Void
+    )
+    func getUserChatbotId(
+        userId: String,
+        completion: @escaping (GetUserChatbotIdResponse) -> Void
     )
 }

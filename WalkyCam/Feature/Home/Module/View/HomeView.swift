@@ -244,6 +244,7 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                     Color.negro.opacity(0.5)
                 }
                )
+               .clipped()
                .onTapGesture {
                    router.routeToRegistrationPlans()
                }

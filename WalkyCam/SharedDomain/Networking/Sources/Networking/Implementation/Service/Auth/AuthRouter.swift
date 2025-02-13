@@ -14,6 +14,7 @@ enum AuthRouter {
     case verifyByEmail(email: String, verificationCode: String)
     case updateInfo(userId: String, name: String?, lastName: String?, gender: String?, cellphone: String?, address: String?, additionalInfo: String?, birthdate: String?)
     case getUserFiles(userId: String)
+    case getUserChatbotId(userId: String)
 }
 
 extension AuthRouter: TargetType {
@@ -33,6 +34,8 @@ extension AuthRouter: TargetType {
             return "user/update"
         case let .getUserFiles(userId):
             return "user/get-files/\(userId)"
+        case let .getUserChatbotId(userId):
+            return "chat/get-walkybot-user-chat/\(userId)"
         }
     }
     
@@ -40,7 +43,7 @@ extension AuthRouter: TargetType {
         switch self {
         case .login, .register:
             return .post
-        case .verifyByEmail, .getUserFiles:
+        case .verifyByEmail, .getUserFiles, .getUserChatbotId:
             return .get
         case .updateInfo:
             return .put
@@ -66,7 +69,7 @@ extension AuthRouter: TargetType {
                 additionalInfo: additionalInfo,
                 birthdate: birthdate
             )
-        case .getUserFiles:
+        case .getUserFiles, .getUserChatbotId:
             return .requestPlain
         }
     }

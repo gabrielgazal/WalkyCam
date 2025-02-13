@@ -32,7 +32,7 @@ struct SnackBarView<Router: SnackBarRouterProtocol>: View {
         router: Router,
         title: String,
         style: InformationViewStyle,
-        dismissTime: CGFloat? = 3.5,
+        dismissTime: CGFloat? = 3,
         onDismiss: SnackbarOnDismiss? = nil
     ) {
         self.router = router

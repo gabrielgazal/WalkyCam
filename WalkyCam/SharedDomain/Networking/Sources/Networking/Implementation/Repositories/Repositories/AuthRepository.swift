@@ -89,4 +89,10 @@ final class AuthRepository: AuthRepositoryProtocol {
                 completion(result.mapToRepositoryResult(with:  DefaultRequestHandler(at: "files")))
             }
     }
+    
+    func getUserChatbotId(userId: String, completion: @escaping (GetUserChatbotIdResponse) -> Void) {
+        service.getUserChatbotId(userId: userId) { result in
+            completion(result.mapToRepositoryResult(with: DefaultRequestHandler(at: "chat")))
+        }
+    }
 }

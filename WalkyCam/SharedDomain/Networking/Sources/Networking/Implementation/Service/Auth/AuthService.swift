@@ -85,4 +85,11 @@ final class AuthService: AuthServiceProtocol {
             completion: completion
         )
     }
+    
+    func getUserChatbotId(userId: String, completion: @escaping Completion) {
+        provider.request(
+            .getUserChatbotId(userId: userId),
+            completion: completion
+        )
+    }
 }

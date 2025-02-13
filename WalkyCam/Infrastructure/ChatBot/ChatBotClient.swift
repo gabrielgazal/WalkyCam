@@ -23,9 +23,9 @@ class ChatBotClient: NSObject {
         
         func socketRepresentation() -> SocketData {
             return [
-                "idUserSender": userId,
-                "message": userMessage,
-                "chatId": connectionId
+                "userId": userId,
+                "userMessage": userMessage,
+                "connectionId": connectionId
             ]
         }
     }
@@ -69,15 +69,20 @@ class ChatBotClient: NSObject {
     }
     
     func receiveMessage(_ completion: @escaping (String) -> Void) {
-        
-        socket?.on("receiveWalkyMessage") { data, ack in
-            print(data)
+        socket?.on("receiveWalkyMessage") { [weak self] data, ack in
+            guard let self = self else { return }
             
             if let messageData = data.first as? [String: Any],
-               let chatData = messageData["chat"] as? [String: Any],
-               let messages = chatData["messages"] as? [[String: Any]],
-               let firstMessage = messages.first,
-               let message = firstMessage["message"] as? String {
+               let message = messageData["answer_message"] as? String {
+                completion(message)
+            }
+        }
+        
+        socket?.on("receiveMyStoredMessage") { [weak self] data, ack in
+            guard let self = self else { return }
+            
+            if let messageData = data.first as? [String: Any],
+               let message = messageData["stored_message"] as? String {
                 completion(message)
             }
         }

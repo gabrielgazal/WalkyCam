@@ -35,7 +35,7 @@ final class TabBarBuilder: TabBarBuilderProtocol {
     private func buildTabBarItemHome() -> WCTabBarItem {
         return WCTabBarItem(
             iconName: Asset.TabBar.home.name,
-            title: L10n.TabBarBuilder.Tab.home,
+            title: L10n.TabBarBuilder.Tab.home.localized(),
             destination: HomeRoute(isPresented: .constant(false)).build()
         )
     }
@@ -43,7 +43,7 @@ final class TabBarBuilder: TabBarBuilderProtocol {
     private func buildTabBarItemFunctions() -> WCTabBarItem {
         return WCTabBarItem(
             iconName: Asset.TabBar.grid.name,
-            title: L10n.TabBarBuilder.Tab.functions,
+            title: L10n.TabBarBuilder.Tab.functions.localized(),
             destination: FunctionsRoute(isPresented: .constant(false)).build()
         )
     }
@@ -51,7 +51,7 @@ final class TabBarBuilder: TabBarBuilderProtocol {
     private func buildTabBarItemMenu() -> WCTabBarItem {
         return WCTabBarItem(
             iconName: Asset.TabBar.menu.name,
-            title: L10n.TabBarBuilder.Tab.menu,
+            title: L10n.TabBarBuilder.Tab.menu.localized(),
             destination: MenuRoute(isPresented: .constant(false)).build()
         )
     }

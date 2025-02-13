@@ -13,10 +13,11 @@ final class WalkyBotViewModel: WalkyBotViewModelProtocol {
     @Published var isShowingNewUserAlert = false
     @Published var userName: String = ""
     @Published var userID: String = ""
+    @Published var asyncLoading: AsyncData<String, ErrorProtocol> = .idle
     
     // MARK: - Initialization
 
-    init(interactor: WalkyBotInteractorProtocol = WalkyBotInteractor()) {
+    init(interactor: WalkyBotInteractorProtocol) {
         self.interactor = interactor
         getUserCredentials()
     }
@@ -33,5 +34,12 @@ final class WalkyBotViewModel: WalkyBotViewModelProtocol {
             userName = "developer"
             userID = "developer"
         }
+    }
+    
+    @MainActor func getUserChatId() async {
+        do {
+            let chatbotId = try await interactor.getUserChatId(userId: userID)
+            
+        } catch {}
     }
 }

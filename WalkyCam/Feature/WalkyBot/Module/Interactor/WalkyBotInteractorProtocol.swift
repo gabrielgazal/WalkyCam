@@ -1,3 +1,3 @@
 protocol WalkyBotInteractorProtocol {
-    func someFunction()
+    func getUserChatId(userId: String) async throws -> String
 }

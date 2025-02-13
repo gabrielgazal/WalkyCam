@@ -6,9 +6,6 @@ struct MenuView<ViewModel: MenuViewModelProtocol, Router: MenuRouterProtocol>: V
 
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
-    @State var languageSelected = false
-    @AppStorage("language")
-    private var language = LanguageManager.shared.language
 
     // MARK: - Initialization
 
@@ -44,33 +41,6 @@ struct MenuView<ViewModel: MenuViewModelProtocol, Router: MenuRouterProtocol>: V
                         .isHidden(index == viewModel.menuItems.count - 1)
                 }
                 .padding([.leading, .trailing], Tokens.Size.Spacing.large)
-                Menu {
-                    Button {
-                        LanguageManager.shared.language = .spanish
-                    } label: {
-                        Text("Español 🇪🇸")
-                    }
-                    Button {
-                        LanguageManager.shared.language = .english_us
-                    } label: {
-                        Text("English 🇺🇸")
-                    }
-                } label: {
-                    HStack(spacing: Tokens.Size.Spacing.regular) {
-                        Text("Selected language: \(LanguageManager.shared.language.emoji)")
-                            .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
-                            .foregroundColor(Color.negro)
-                        Image(systemName: "chevron.down")
-                            .fontWeight(.bold)
-                            .foregroundColor(Color.negro)
-                    }
-                    .padding()
-                    .background(
-                        RoundedRectangle(cornerRadius: 8)
-                            .fill(Color.blancoGris)
-                    )
-                }
-                .padding([.leading, .trailing], Tokens.Size.Spacing.large)
                 Spacer()
                 MenuPlanBannerView(pages: viewModel.assembleMenuBannnerData())
             }
@@ -79,15 +49,5 @@ struct MenuView<ViewModel: MenuViewModelProtocol, Router: MenuRouterProtocol>: V
         .padding([.bottom], Tokens.Size.Spacing.large)
         .padding([.top], Tokens.Size.Spacing.xlarge)
         .navigation(router)
-        .id(LanguageManager.shared.language.rawValue)
-    }
-}
-
-struct MenuView_Previews: PreviewProvider {
-    static var previews: some View {
-    MenuView(
-            viewModel: MenuViewModel(router: MenuRouter(isPresented: .constant(false))),
-            router: MenuRouter(isPresented: .constant(false))
-        )
     }
 }

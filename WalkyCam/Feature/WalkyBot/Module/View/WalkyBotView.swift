@@ -190,12 +190,3 @@ struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouter
         viewModel.isShowingNewUserAlert = viewModel.userName != username
     }
 }
-
-struct WalkyBotView_Previews: PreviewProvider {
-    static var previews: some View {
-        WalkyBotView(
-            viewModel: WalkyBotViewModel(),
-            router: WalkyBotRouter(isPresented: .constant(false))
-        )
-    }
-}

@@ -7,12 +7,12 @@
 
 import Foundation
 
-public enum Language: String {
+public enum Language: String, CaseIterable {
     case english_us = "en"
     case spanish = "es"
 }
 
-class LanguageManager {
+class LanguageManager: ObservableObject {
 
     static let shared = LanguageManager()
     static let changedLanguage = Notification.Name("changedLanguage")
@@ -32,6 +32,11 @@ class LanguageManager {
             }
         }
     }
+    
+    public func changeLanguage(language: Language) {
+        self.language = language
+        NotificationCenter.default.post(name: LanguageManager.changedLanguage, object: nil)
+    }
 }
 
 public extension Language {
@@ -43,4 +48,33 @@ public extension Language {
             return "🇪🇸"
         }
     }
+    
+    var title: String {
+        switch self {
+        case .english_us:
+            return "English"
+        case .spanish:
+            return "Español"
+        }
+    }
+    
+    var locale: Locale {
+        switch self {
+        case .english_us:
+            return Locale(identifier: "en_US")
+        case .spanish:
+            return Locale(identifier: "es_ES")
+        }
+    }
 }
+
+extension LanguageManager {
+    var bundle: Bundle {
+        guard let path = Bundle.main.path(forResource: language.rawValue, ofType: "lproj"),
+              let bundle = Bundle(path: path) else {
+            return Bundle.main
+        }
+        return bundle
+    }
+}
+

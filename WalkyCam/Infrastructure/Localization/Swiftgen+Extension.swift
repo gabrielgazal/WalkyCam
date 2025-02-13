@@ -9,9 +9,7 @@ import Foundation
 
 extension L10n {
     static func switchLocalizationBundleDuringRuntime(forKey: String, table: String, fallbackValue: String) -> String {
-        let resource = LanguageManager.shared.language.rawValue
-        let bundle = Bundle(path: Bundle.main.path(forResource: resource, ofType: "lproj")!)
-        let format = NSLocalizedString(forKey, tableName: table, bundle: bundle ?? Bundle(for: BundleToken.self), comment: "")
+        let format = NSLocalizedString(forKey, tableName: table, bundle: LanguageManager.shared.bundle, comment: "")
         return format
     }
 }

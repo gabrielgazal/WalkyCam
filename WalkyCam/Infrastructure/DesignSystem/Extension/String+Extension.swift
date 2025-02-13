@@ -26,4 +26,10 @@ extension String {
         
         return date
     }
+    
+    func localized() -> String {
+        let resource = LanguageManager.shared.language.rawValue
+        let bundle = Bundle(path: Bundle.main.path(forResource: resource, ofType: "lproj")!)
+        return NSLocalizedString(self, tableName: nil, bundle: bundle ?? .main, value: "", comment: "")
+    }
 }

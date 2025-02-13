@@ -9,4 +9,7 @@ protocol WalkyBotViewModelProtocol: ViewModelProtocol {
     var isShowingNewUserAlert: Bool { get set }
     var userName: String { get set }
     var userID: String { get set }
+    var asyncLoading: AsyncData<String, ErrorProtocol> { get set }
+    
+    func getUserChatId() async
 }

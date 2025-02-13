@@ -26,7 +26,7 @@ final class MenuViewModel: MenuViewModelProtocol {
                   routeToNavigate: GalleryRoute(isPresented: .constant(false))),
             .init(icon: Asset.Menu.settings.name,
                   title: L10n.MenuViewModel.Item.settings,
-                  routeToNavigate: nil),
+                  routeToNavigate: SettingsRoute(isPresented: .constant(false))),
             .init(icon: Asset.Menu.help.name,
                   title: L10n.MenuViewModel.Item.help,
                   routeToNavigate: nil),

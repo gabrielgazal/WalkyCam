@@ -27,6 +27,7 @@ struct WalkyCamApp: App {
                     appNavigator
                         .view
                         .id(LanguageManager.shared.language.rawValue)
+                        .environment(\.locale, LanguageManager.shared.language.locale)
                 }
             }
             .dynamicTypeSize(.medium)
