@@ -10,4 +10,5 @@ protocol BulbPartyLightSelectorViewModelProtocol: ViewModelProtocol {
     func startColorChange() async
     func stopColorChange()
     func returnImage(item: HMAccessory) -> Image
+    func returnBulbName(item: HMAccessory) -> String
 }

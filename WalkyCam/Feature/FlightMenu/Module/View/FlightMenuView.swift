@@ -53,9 +53,7 @@ struct FlightMenuView<ViewModel: FlightMenuViewModelProtocol, Router: FlightMenu
                     .loading(isScheduleLoading)
                 }
                 horizontalCard(action: {
-//                    router.navigateTo(
-//                        DroneConnectionRoute(isPresented: router.isNavigating)
-//                    )
+                    router.routeToJoinDrone()
                 })
             }
         }

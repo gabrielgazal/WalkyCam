@@ -34,12 +34,12 @@ struct BulbPartyLightSelectorView<ViewModel: BulbPartyLightSelectorViewModelProt
                         Toggle(
                             isOn: bindingForDevice(item.uniqueIdentifier.uuidString)
                         ) {
-                            Text(item.name.isEmpty ? "Dispositivo Test" : item.name)
+                            Text(item.name.isEmpty ? viewModel.returnBulbName(item: item) : item.name)
                         }
                         .toggleStyle(WCToggleStyle())
                     }
                 }
-                Text(viewModel.isRunningLightParty ? "Procesando audio...": "Presione start para comenzar")
+                Text(viewModel.isRunningLightParty ? "Conectando...": "Presione start para comenzar")
                     .font(
                         .projectFont(
                             size: Tokens.Size.Font.large

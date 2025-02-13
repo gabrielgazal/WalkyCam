@@ -15,5 +15,11 @@ final class FlightMenuRouter: Router, FlightMenuRouterProtocol {
             BookWalkycamerRoute(isPresented: isNavigating)
         )
     }
+    
+    func routeToJoinDrone() {
+        navigateTo(
+            DroneConnectionRoute(isPresented: isNavigating)
+        )
+    }
 }
 

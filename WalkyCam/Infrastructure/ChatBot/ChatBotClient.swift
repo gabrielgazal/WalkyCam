@@ -23,9 +23,9 @@ class ChatBotClient: NSObject {
         
         func socketRepresentation() -> SocketData {
             return [
-                "userId": userId,
-                "userMessage": userMessage,
-                "connectionId": connectionId
+                "idUserSender": userId,
+                "message": userMessage,
+                "chatId": connectionId
             ]
         }
     }
@@ -69,6 +69,7 @@ class ChatBotClient: NSObject {
     }
     
     func receiveMessage(_ completion: @escaping (String) -> Void) {
+        
         socket?.on("receiveWalkyMessage") { data, ack in
             print(data)
             

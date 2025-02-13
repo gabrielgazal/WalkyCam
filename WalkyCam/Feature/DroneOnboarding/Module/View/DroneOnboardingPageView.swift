@@ -34,7 +34,7 @@ struct DroneOnboardingPageView: View {
             illustration
                 .resizable()
                 .scaledToFit()
-                .frame(width: 170)
+                .frame(width: 300)
             Text(title)
                 .multilineTextAlignment(.center)
                 .font(.projectFont(size: Tokens.Size.Font.large,

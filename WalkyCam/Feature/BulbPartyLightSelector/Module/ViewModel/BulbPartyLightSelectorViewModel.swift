@@ -59,15 +59,32 @@ final class BulbPartyLightSelectorViewModel: BulbPartyLightSelectorViewModelProt
         }
         
         switch (index % 3) {
-            case 0:
-                return Asset.BulbParty.rgbBulb1.swiftUIImage
-            case 1:
-                return Asset.BulbParty.rgbBulb2.swiftUIImage
-            case 2:
-                return Asset.BulbParty.rgbBulb3.swiftUIImage
-            default:
-                return Asset.BulbParty.rgbBulb1.swiftUIImage
-            }
+        case 0:
+            return Asset.BulbParty.rgbBulb1.swiftUIImage
+        case 1:
+            return Asset.BulbParty.rgbBulb2.swiftUIImage
+        case 2:
+            return Asset.BulbParty.rgbBulb3.swiftUIImage
+        default:
+            return Asset.BulbParty.rgbBulb1.swiftUIImage
+        }
+    }
+    
+    func returnBulbName(item: HMAccessory) -> String {
+        guard let index = availableDevices.firstIndex(of: item) else {
+            return "Bombilla 1"
+        }
+        
+        switch (index % 3) {
+        case 0:
+            return "Bombilla 1"
+        case 1:
+            return "Bombilla 2"
+        case 2:
+            return "Bombilla 3"
+        default:
+            return "Bombilla 1"
+        }
     }
     
     // MARK: - Private Methods
