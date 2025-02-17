@@ -40,9 +40,9 @@ final class GalleryViewModel: GalleryViewModelProtocol {
                 .init(
                     iconName: Asset.Icons.files.name,
                     title: L10n.GalleryViewModel.Tab.files,
-                    destination:  GalleryPhotosRoute(
+                    destination:  GalleryModelsRoute(
                         isPresented: .constant(false),
-                        galleryItems: galleryItems
+                        galleryItems: galleryItems.filter { $0.tag == .model }
                     ).build()
                 )
             ]
