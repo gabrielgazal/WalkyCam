@@ -374,6 +374,7 @@ internal enum Asset {
     internal static let planFondo = ImageAsset(name: "plan_fondo")
     internal static let videocallFondo = ImageAsset(name: "videocall_fondo")
     internal static let watchBackground = ImageAsset(name: "watchBackground")
+    internal static let watchForeground = ImageAsset(name: "watchForeground")
   }
   internal enum Icons {
     internal static let _360Camera = ImageAsset(name: "360Camera")

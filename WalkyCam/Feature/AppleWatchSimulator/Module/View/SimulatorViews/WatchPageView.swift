@@ -59,6 +59,7 @@ struct WatchPageView: View {
                 }
                 Spacer()
             }
+            .padding()
             
         }
         .navigationBarTitleDisplayMode(.inline) // Mantém o título no modo inline, se usado

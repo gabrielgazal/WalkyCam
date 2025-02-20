@@ -80,7 +80,7 @@ struct WatchSearchView: View {
                     }
                     .hidden()
                 }
-                .padding()
+                .padding(30)
             }
             .navigationBarTitle("")
             .navigationBarHidden(true)

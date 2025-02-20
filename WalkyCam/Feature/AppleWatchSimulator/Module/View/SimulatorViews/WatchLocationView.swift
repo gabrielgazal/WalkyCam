@@ -59,8 +59,6 @@ struct WatchLocationView: View {
                         .onTapGesture {
                             navigateToNextView = true
                         }
-
-                    // Navegação condicional
                     NavigationLink(
                         destination: WatchPageView(),
                         isActive: $navigateToNextView
@@ -71,7 +69,7 @@ struct WatchLocationView: View {
                 }
                 .padding()
             }
-            .frame(width: 300, height: 350)
+            .frame(width: 300, height: 340)
             .navigationBarTitle("")
             .navigationBarHidden(true)
         }

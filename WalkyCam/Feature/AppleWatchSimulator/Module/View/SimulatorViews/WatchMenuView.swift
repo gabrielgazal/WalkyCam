@@ -16,33 +16,32 @@ struct WatchMenuView: View {
 
     @State private var isAnimating = false
     @State private var scale: CGFloat = 1.0
-    @State private var path = NavigationPath() // Para gerenciar a navegação
+    @State private var path = NavigationPath()
     @State private var isButtonHidden = false
     
     var body: some View {
         ZStack {
-            Color.blancoGris // Fundo da simulação
+            Color.blancoGris
                 .ignoresSafeArea()
 
             VStack {
-                // Contêiner simulando o corpo do Apple Watch
                 ZStack {
-                    RoundedRectangle(cornerRadius: 40)
-                        .fill(Color.gray.opacity(0.3)) // Simula o corpo do relógio
-                        .frame(width: 250, height: 315) // Tamanho proporcional ao Apple Watch
+                    Asset.Fondos.watchForeground.swiftUIImage
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 285)
+                        .padding([.trailing], -15)
 
-                    // Conteúdo da WatchMenuView
                     NavigationStack(path: $path) {
                         ZStack {
                             Color.negro
-                                .cornerRadius(32)
+                                .cornerRadius(55)
                                 .ignoresSafeArea()
 
                             VStack(
                                 alignment: .center,
                                 spacing: Tokens.Size.Spacing.small) {
 
-                                // Saudação e ícone de usuário
                                 HStack {
                                     Text("Hi, \(viewModel.getUserName())")
                                         .font(.projectFont(size: Tokens.Size.Font.regular))
@@ -58,16 +57,12 @@ struct WatchMenuView: View {
                                         )
                                 }
                                 .isHidden(isAnimating)
-
-                                // Logo
                                 Asset.logo.swiftUIImage
                                     .renderingMode(.template)
                                     .resizable()
                                     .scaledToFit()
                                     .foregroundColor(Color.naranja)
                                     .isHidden(isAnimating)
-
-                                // Ícone animado e linha
                                 VStack(alignment: .center, spacing: 0) {
                                     Asset.Icons.streetCam.swiftUIImage
                                         .resizable()
@@ -89,8 +84,6 @@ struct WatchMenuView: View {
                                         .frame(height: 1)
                                     }
                                 }
-
-                                // Botão de navegação
                                 HStack {
                                     Spacer()
 
@@ -117,8 +110,8 @@ struct WatchMenuView: View {
                             }
                         }
                     }
-                    .frame(width: 234, height: 299) // Ajuste para caber no simulador
-                    .cornerRadius(32) // Bordas arredondadas para o "mostrador"
+                    .frame(width: 234, height: 270)
+                    .cornerRadius(55)
                 }
                 
                 WCUIButton(
