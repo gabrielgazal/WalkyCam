@@ -37,9 +37,12 @@ final class WalkyBotViewModel: WalkyBotViewModelProtocol {
     }
     
     @MainActor func getUserChatId() async {
+        asyncLoading = .loading
         do {
             let chatbotId = try await interactor.getUserChatId(userId: userID)
-            
-        } catch {}
+            asyncLoading = .loaded(chatbotId)
+        } catch {
+            asyncLoading = .failed(GenericError())
+        }
     }
 }

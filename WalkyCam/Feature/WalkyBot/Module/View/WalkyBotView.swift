@@ -9,7 +9,7 @@ struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouter
     @ObservedObject private var router: Router
     @State var isLoadingMessage: Bool = false
     @State private var value = 1.0
-
+    
     // MARK: - Initializationr
     
     init(viewModel: ViewModel,
@@ -21,65 +21,72 @@ struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouter
     // MARK: - View Body
     
     var body: some View {
-        ZStack {
-            VStack(spacing: Tokens.Size.Spacing.small) {
-                header
-                ScrollView(showsIndicators: false) {
-                    HStack {
-                        Spacer()
-                        Asset.Menu.bot.swiftUIImage
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 45)
-                            .opacity(value)
-                            .animation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: true))
-                            .onAppear { self.value = 0.3 }
-                            .flippedUpsideDown()
-                        Spacer()
-                    }
-                    .isHidden(!isLoadingMessage)
-                    ForEach(viewModel.messages.reversed(), id: \.self) { message in
-                        if message.username == viewModel.userName {
-                            userMessage(message.text)
+        AsyncDataView(
+            viewModel.asyncLoading,
+            content: { chatId in
+                VStack(spacing: Tokens.Size.Spacing.small) {
+                    header
+                    ScrollView(showsIndicators: false) {
+                        HStack {
+                            Spacer()
+                            Asset.Menu.bot.swiftUIImage
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 45)
+                                .opacity(value)
+                                .animation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: true))
+                                .onAppear { self.value = 0.3 }
                                 .flippedUpsideDown()
-                        } else {
-                            channelMessage(message.text)
-                                .flippedUpsideDown()
+                            Spacer()
                         }
-                    }
-                    .padding(.horizontal, Tokens.Size.Spacing.large)
-                    .padding(.vertical, Tokens.Size.Spacing.tiny)
-                }
-                .flippedUpsideDown()
-            }
-            .footer {
-                HStack(spacing: Tokens.Size.Spacing.regular) {
-                    Asset.Icons.smileFace.swiftUIImage
-                    TextInputView(text: $viewModel.message,
-                                  placeholder: L10n.WalkyBotView.Input.placeholder,
-                                  backgroundColor: .clear)
-                    Asset.Icons.sendIcon.swiftUIImage
-                        .renderingMode(.template)
-                        .foregroundColor(viewModel.message.isEmpty ? .grisOscuro : .naranja)
-                        .onTapGesture {
-                            if !viewModel.message.isEmpty  {
-                                sendMessage()
-                                isLoadingMessage = true
+                        .isHidden(!isLoadingMessage)
+                        ForEach(viewModel.messages.reversed(), id: \.self) { message in
+                            if message.username == viewModel.userName {
+                                userMessage(message.text)
+                                    .flippedUpsideDown()
+                            } else {
+                                channelMessage(message.text)
+                                    .flippedUpsideDown()
                             }
                         }
-                    Spacer()
+                        .padding(.horizontal, Tokens.Size.Spacing.large)
+                        .padding(.vertical, Tokens.Size.Spacing.tiny)
+                    }
+                    .flippedUpsideDown()
                 }
-                .padding(Tokens.Size.Spacing.regular)
+                .onAppear {
+                    connect(chatId: chatId)
+                }
+                .onDisappear {
+                    ChatBotClient.shared.disconnect()
+                }
+                .onChange(of: viewModel.messages) { _, _ in
+                    print(viewModel.messages)
+                }
+            },
+            errorAction: {}
+        )
+        .footer {
+            HStack(spacing: Tokens.Size.Spacing.regular) {
+                Asset.Icons.smileFace.swiftUIImage
+                TextInputView(text: $viewModel.message,
+                              placeholder: L10n.WalkyBotView.Input.placeholder,
+                              backgroundColor: .clear)
+                Asset.Icons.sendIcon.swiftUIImage
+                    .renderingMode(.template)
+                    .foregroundColor(viewModel.message.isEmpty ? .grisOscuro : .naranja)
+                    .onTapGesture {
+                        if !viewModel.message.isEmpty  {
+                            sendMessage()
+                            isLoadingMessage = true
+                        }
+                    }
+                Spacer()
             }
-            .onAppear {
-                connect()
-            }
-            .onDisappear {
-                ChatBotClient.shared.disconnect()
-            }
-            .onChange(of: viewModel.messages) { _, _ in
-                print(viewModel.messages)
-            }
+            .padding(Tokens.Size.Spacing.regular)
+        }
+        .task {
+            await viewModel.getUserChatId()
         }
     }
     
@@ -161,8 +168,8 @@ struct WalkyBotView<ViewModel: WalkyBotViewModelProtocol, Router: WalkyBotRouter
     
     // MARK: - WebSocket Methods
     
-    func connect() {
-        ChatBotClient.shared.connect(username: viewModel.userName, userID: viewModel.userID)
+    func connect(chatId: String) {
+        ChatBotClient.shared.connect(username: viewModel.userName, userID: viewModel.userID, chatId: chatId)
         ChatBotClient.shared.receiveMessage { text in
             self.receiveMessage(text: text)
         }

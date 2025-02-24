@@ -15,18 +15,43 @@ class ChatBotClient: NSObject {
     var socket: SocketIOClient?
     var username: String?
     var userId: String?
+    var chatId: String?
     
     struct UserMessageModel: SocketData {
-        let userId: String
-        let userMessage: String
-        let connectionId: String
+        let userSenderId: String
+        let message: String
+        let chatId: String
         
         func socketRepresentation() -> SocketData {
             return [
-                "userId": userId,
-                "userMessage": userMessage,
-                "connectionId": connectionId
+                "userSenderId": userSenderId,
+                "message": message,
+                "chatId": chatId
             ]
+        }
+    }
+    
+    struct ResponseMessage: Codable {
+        let id: Int
+        let userSender: String
+        let sentAt: String
+        let receivedBy: [String]
+        let readedBy: [String]
+        let deletedBy: [String]
+        let message: String
+        let deletedFor: [String]
+        let reaction: [String]
+        
+        enum CodingKeys: String, CodingKey {
+            case id = "_id"
+            case userSender = "id_user_sender"
+            case sentAt = "sent_at"
+            case receivedBy = "received_by"
+            case readedBy = "readed_by"
+            case deletedBy = "deleted_by"
+            case message
+            case deletedFor = "deleted_for"
+            case reaction
         }
     }
     
@@ -42,9 +67,10 @@ class ChatBotClient: NSObject {
         }
     }
     
-    func connect(username: String, userID: String) {
+    func connect(username: String, userID: String, chatId: String) {
         self.username = username
         self.userId = userID
+        self.chatId = chatId
         socket?.connect(withPayload: ["username": username])
     }
     
@@ -54,8 +80,8 @@ class ChatBotClient: NSObject {
     
     func sendMessage(_ message: String) {
         guard let userId = userId,
-        let socketId = socket?.sid else { return }
-        let model = UserMessageModel(userId: userId, userMessage: message, connectionId: socketId)
+        let chatId = chatId else { return }
+        let model = UserMessageModel(userSenderId: userId, message: message, chatId: chatId)
         print(model)
         socket?.emit("sendWalkyMessage", model)
     }
@@ -72,21 +98,15 @@ class ChatBotClient: NSObject {
         socket?.on("receiveWalkyMessage") { [weak self] data, ack in
             guard let self = self else { return }
             
-            if let messageData = data.first as? [String: Any],
-               let message = messageData["answer_message"] as? String {
-                completion(message)
+            guard let messageData = data.first as? [String: Any],
+                  let answerMessage = messageData["answer_message"] as? [String: Any],
+                  let firstMessage = answerMessage["message"] as? String else {
+                return
             }
-        }
-        
-        socket?.on("receiveMyStoredMessage") { [weak self] data, ack in
-            guard let self = self else { return }
-            
-            if let messageData = data.first as? [String: Any],
-               let message = messageData["stored_message"] as? String {
-                completion(message)
-            }
+            completion(firstMessage)
         }
     }
+
 
     
     func receiveNewUser(_ completion: @escaping (String, [String:String]) -> Void) {

@@ -25,7 +25,7 @@ extension GetUserChatIdUseCase {
                         case let .failure(error):
                             promise(.failure(error))
                         case let .success(response):
-                            promise(.success(response))
+                            promise(.success(response.chatId))
                         }
                         return
                     }
