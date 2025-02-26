@@ -3,6 +3,11 @@
     {
       "filename" : "32.7 Certified recording _ WalkCamers disponibles lista.pdf",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "32.7 Certified recording _ WalkCamers disponibles lista 1.pdf",
+      "idiom" : "universal",
+      "locale" : "en"
     }
   ],
   "info" : {
@@ -10,6 +15,7 @@
     "version" : 1
   },
   "properties" : {
+    "localizable" : true,
     "preserves-vector-representation" : true
   }
 }
