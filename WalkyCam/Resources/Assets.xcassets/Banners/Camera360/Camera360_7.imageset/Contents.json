@@ -3,6 +3,11 @@
     {
       "filename" : "Camera360_7.png",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "33.7 Camara 360 _ WalkCamer.pdf",
+      "idiom" : "universal",
+      "locale" : "en"
     }
   ],
   "info" : {
@@ -10,6 +15,7 @@
     "version" : 1
   },
   "properties" : {
+    "localizable" : true,
     "preserves-vector-representation" : true
   }
 }

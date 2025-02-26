@@ -3,6 +3,11 @@
     {
       "filename" : "Camera360_2.png",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "33.2 Camara 360 _ Onboarding Pixelado.pdf",
+      "idiom" : "universal",
+      "locale" : "en"
     }
   ],
   "info" : {
@@ -10,6 +15,7 @@
     "version" : 1
   },
   "properties" : {
+    "localizable" : true,
     "preserves-vector-representation" : true
   }
 }

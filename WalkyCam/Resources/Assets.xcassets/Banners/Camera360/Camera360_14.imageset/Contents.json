@@ -3,6 +3,11 @@
     {
       "filename" : "Camera360_14.png",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "33.14 Camara 360 _ Transmision recorrido.pdf",
+      "idiom" : "universal",
+      "locale" : "en"
     }
   ],
   "info" : {
@@ -10,6 +15,7 @@
     "version" : 1
   },
   "properties" : {
+    "localizable" : true,
     "preserves-vector-representation" : true
   }
 }

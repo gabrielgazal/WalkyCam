@@ -3,6 +3,11 @@
     {
       "filename" : "BackpackScreenAd18.png",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "26.18 Backpack Screen ad _ videollamada 3.pdf",
+      "idiom" : "universal",
+      "locale" : "en"
     }
   ],
   "info" : {
@@ -10,6 +15,7 @@
     "version" : 1
   },
   "properties" : {
+    "localizable" : true,
     "preserves-vector-representation" : true
   }
 }

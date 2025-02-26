@@ -3,6 +3,11 @@
     {
       "filename" : "Analisador10.png",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "23.11 Analizador de redes electricas invitacion llamda.pdf",
+      "idiom" : "universal",
+      "locale" : "en"
     }
   ],
   "info" : {
@@ -10,6 +15,7 @@
     "version" : 1
   },
   "properties" : {
+    "localizable" : true,
     "preserves-vector-representation" : true
   }
 }

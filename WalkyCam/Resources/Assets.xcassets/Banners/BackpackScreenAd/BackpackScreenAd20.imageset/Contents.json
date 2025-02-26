@@ -3,6 +3,11 @@
     {
       "filename" : "BackpackScreenAd20.png",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "26.20 Backpack Screen ad _ Editar AD.pdf",
+      "idiom" : "universal",
+      "locale" : "en"
     }
   ],
   "info" : {
@@ -10,6 +15,7 @@
     "version" : 1
   },
   "properties" : {
+    "localizable" : true,
     "preserves-vector-representation" : true
   }
 }

@@ -3,6 +3,11 @@
     {
       "filename" : "Camera360_9.png",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "33.9 Camara 360 _ Detalles del servicio.pdf",
+      "idiom" : "universal",
+      "locale" : "en"
     }
   ],
   "info" : {
@@ -10,6 +15,7 @@
     "version" : 1
   },
   "properties" : {
+    "localizable" : true,
     "preserves-vector-representation" : true
   }
 }
