@@ -3,6 +3,11 @@
     {
       "filename" : "LawConsulting4.png",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "35B.4 Consulting _ ChatBot3 _ Recomendaciones.pdf",
+      "idiom" : "universal",
+      "locale" : "en"
     }
   ],
   "info" : {
@@ -10,6 +15,7 @@
     "version" : 1
   },
   "properties" : {
+    "localizable" : true,
     "preserves-vector-representation" : true
   }
 }

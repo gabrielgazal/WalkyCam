@@ -3,6 +3,11 @@
     {
       "filename" : "DogRobot19.png",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "29.19 Dog robot _ Controles basicos.pdf",
+      "idiom" : "universal",
+      "locale" : "en"
     }
   ],
   "info" : {
@@ -10,6 +15,7 @@
     "version" : 1
   },
   "properties" : {
+    "localizable" : true,
     "preserves-vector-representation" : true
   }
 }

@@ -3,6 +3,11 @@
     {
       "filename" : "LawConsulting9.png",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "35B.9 Consulting paso 3 agregar personas.pdf",
+      "idiom" : "universal",
+      "locale" : "en"
     }
   ],
   "info" : {
@@ -10,6 +15,7 @@
     "version" : 1
   },
   "properties" : {
+    "localizable" : true,
     "preserves-vector-representation" : true
   }
 }

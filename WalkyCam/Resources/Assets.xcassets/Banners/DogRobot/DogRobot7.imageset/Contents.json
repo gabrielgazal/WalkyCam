@@ -3,6 +3,11 @@
     {
       "filename" : "DogRobot7.png",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "29.8 Dog Robot _ WalkCamer.pdf",
+      "idiom" : "universal",
+      "locale" : "en"
     }
   ],
   "info" : {
@@ -10,6 +15,7 @@
     "version" : 1
   },
   "properties" : {
+    "localizable" : true,
     "preserves-vector-representation" : true
   }
 }

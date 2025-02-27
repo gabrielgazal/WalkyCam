@@ -3,6 +3,11 @@
     {
       "filename" : "DrugTest12.png",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "27.12 Alcohol & Drug Test _ invitacion acceso.pdf",
+      "idiom" : "universal",
+      "locale" : "en"
     }
   ],
   "info" : {
@@ -10,6 +15,7 @@
     "version" : 1
   },
   "properties" : {
+    "localizable" : true,
     "preserves-vector-representation" : true
   }
 }

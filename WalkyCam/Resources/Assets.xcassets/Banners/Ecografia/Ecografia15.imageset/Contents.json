@@ -3,6 +3,11 @@
     {
       "filename" : "Ecografia15.png",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "31.15 Ecografia _ Rotar cel.pdf",
+      "idiom" : "universal",
+      "locale" : "en"
     }
   ],
   "info" : {
@@ -10,6 +15,7 @@
     "version" : 1
   },
   "properties" : {
+    "localizable" : true,
     "preserves-vector-representation" : true
   }
 }

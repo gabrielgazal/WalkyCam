@@ -3,6 +3,11 @@
     {
       "filename" : "DogRobot13.png",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "29.14 Dog Robot _ Videollamada 2.pdf",
+      "idiom" : "universal",
+      "locale" : "en"
     }
   ],
   "info" : {
@@ -10,6 +15,7 @@
     "version" : 1
   },
   "properties" : {
+    "localizable" : true,
     "preserves-vector-representation" : true
   }
 }

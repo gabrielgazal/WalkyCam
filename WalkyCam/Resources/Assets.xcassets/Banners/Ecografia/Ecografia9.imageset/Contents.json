@@ -3,6 +3,11 @@
     {
       "filename" : "Ecografia9.png",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "31.9 Ecografia _ Detalles del servicio.pdf",
+      "idiom" : "universal",
+      "locale" : "en"
     }
   ],
   "info" : {
@@ -10,6 +15,7 @@
     "version" : 1
   },
   "properties" : {
+    "localizable" : true,
     "preserves-vector-representation" : true
   }
 }

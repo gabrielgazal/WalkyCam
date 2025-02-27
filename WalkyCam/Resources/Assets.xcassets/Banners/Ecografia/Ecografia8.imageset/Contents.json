@@ -3,6 +3,11 @@
     {
       "filename" : "Ecografia8.png",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "31.8 Ecografia _ Agregar personas.pdf",
+      "idiom" : "universal",
+      "locale" : "en"
     }
   ],
   "info" : {
@@ -10,6 +15,7 @@
     "version" : 1
   },
   "properties" : {
+    "localizable" : true,
     "preserves-vector-representation" : true
   }
 }

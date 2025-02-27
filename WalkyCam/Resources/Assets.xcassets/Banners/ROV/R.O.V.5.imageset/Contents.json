@@ -3,6 +3,11 @@
     {
       "filename" : "R.O.V.5.png",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "24.5 Buscar zona.pdf",
+      "idiom" : "universal",
+      "locale" : "en"
     }
   ],
   "info" : {
@@ -10,6 +15,7 @@
     "version" : 1
   },
   "properties" : {
+    "localizable" : true,
     "preserves-vector-representation" : true
   }
 }
