@@ -3,6 +3,11 @@
     {
       "filename" : "CRM2.png",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "34.2 CRM _ Configuracion accesos.pdf",
+      "idiom" : "universal",
+      "locale" : "en"
     }
   ],
   "info" : {
@@ -10,6 +15,7 @@
     "version" : 1
   },
   "properties" : {
+    "localizable" : true,
     "preserves-vector-representation" : true
   }
 }

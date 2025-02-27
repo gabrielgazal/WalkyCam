@@ -3,6 +3,11 @@
     {
       "filename" : "DetectorCables7.pdf",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "22.7 Perfil WalkCamer.pdf",
+      "idiom" : "universal",
+      "locale" : "en"
     }
   ],
   "info" : {
@@ -10,6 +15,7 @@
     "version" : 1
   },
   "properties" : {
+    "localizable" : true,
     "preserves-vector-representation" : true
   }
 }

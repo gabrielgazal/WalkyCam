@@ -3,6 +3,11 @@
     {
       "filename" : "CRM5.png",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "34.5 CRM _ Mis CRM.pdf",
+      "idiom" : "universal",
+      "locale" : "en"
     }
   ],
   "info" : {
@@ -10,6 +15,7 @@
     "version" : 1
   },
   "properties" : {
+    "localizable" : true,
     "preserves-vector-representation" : true
   }
 }

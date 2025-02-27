@@ -3,6 +3,11 @@
     {
       "filename" : "DetectorCables14.pdf",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "22.14 Detector de cables rotar.pdf",
+      "idiom" : "universal",
+      "locale" : "en"
     }
   ],
   "info" : {
@@ -10,6 +15,7 @@
     "version" : 1
   },
   "properties" : {
+    "localizable" : true,
     "preserves-vector-representation" : true
   }
 }

@@ -3,6 +3,11 @@
     {
       "filename" : "DetectorMetales13.png",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "30.13 Detector de Metales _ llamada 2.pdf",
+      "idiom" : "universal",
+      "locale" : "en"
     }
   ],
   "info" : {
@@ -10,6 +15,7 @@
     "version" : 1
   },
   "properties" : {
+    "localizable" : true,
     "preserves-vector-representation" : true
   }
 }
