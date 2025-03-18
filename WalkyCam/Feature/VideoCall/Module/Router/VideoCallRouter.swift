@@ -1,15 +1,18 @@
 import SwiftUI
 
 final class VideoCallRouter: Router, VideoCallRouterProtocol {
-
+    
     // MARK: - Public API
-
-    func routeToMeetRoom(_ link: String) {
+    
+    func routeToMeetRoom(_ callId: String) {
+        //        navigateTo(
+        //            WebRoute(
+        //                isPreseted: isNavigating,
+        //                webViewURL: link
+        //            )
+        //        )
         navigateTo(
-            WebRoute(
-                isPreseted: isNavigating,
-                webViewURL: link
-            )
+            NativeVideoCallRoute(videoCallId: callId, isPresented: isNavigating)
         )
     }
     
