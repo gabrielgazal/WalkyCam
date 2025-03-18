@@ -10,4 +10,5 @@ target 'WalkyCam' do
   pod 'DJI-SDK-iOS'
   pod 'DJI-UXSDK-iOS'
   pod 'DJIWidget'
+  pod 'GoogleWebRTC'
 end
