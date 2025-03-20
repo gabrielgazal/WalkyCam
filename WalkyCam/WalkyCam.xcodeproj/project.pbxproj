@@ -166,7 +166,6 @@
 		564E7A022D88D6BF003100BD /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564E7A012D88D6BF003100BD /* WebSocketManager.swift */; };
 		564E7A042D88D6DF003100BD /* WebRTCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564E7A032D88D6DF003100BD /* WebRTCManager.swift */; };
 		564E7A062D88ECC1003100BD /* Participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564E7A052D88ECC1003100BD /* Participant.swift */; };
-		564E7A082D88F924003100BD /* MediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564E7A072D88F924003100BD /* MediaManager.swift */; };
 		564E7A0A2D88F97A003100BD /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564E7A092D88F97A003100BD /* VideoView.swift */; };
 		565343682C08D9BC002C2F36 /* UpdateARHandsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565343672C08D9BC002C2F36 /* UpdateARHandsConfiguration.swift */; };
 		5653436B2C08F03D002C2F36 /* UpdateScan3DConfigurationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5653436A2C08F03D002C2F36 /* UpdateScan3DConfigurationUseCase.swift */; };
@@ -1368,7 +1367,6 @@
 		564E7A012D88D6BF003100BD /* WebSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketManager.swift; sourceTree = "<group>"; };
 		564E7A032D88D6DF003100BD /* WebRTCManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRTCManager.swift; sourceTree = "<group>"; };
 		564E7A052D88ECC1003100BD /* Participant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participant.swift; sourceTree = "<group>"; };
-		564E7A072D88F924003100BD /* MediaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaManager.swift; sourceTree = "<group>"; };
 		564E7A092D88F97A003100BD /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		565343672C08D9BC002C2F36 /* UpdateARHandsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateARHandsConfiguration.swift; sourceTree = "<group>"; };
 		5653436A2C08F03D002C2F36 /* UpdateScan3DConfigurationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateScan3DConfigurationUseCase.swift; sourceTree = "<group>"; };
@@ -3660,7 +3658,6 @@
 				564E7A012D88D6BF003100BD /* WebSocketManager.swift */,
 				564E7A032D88D6DF003100BD /* WebRTCManager.swift */,
 				564E7A052D88ECC1003100BD /* Participant.swift */,
-				564E7A072D88F924003100BD /* MediaManager.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -12683,7 +12680,6 @@
 				EAE8EC4C2B9574840003AE96 /* ChatDetailInteractorProtocol.swift in Sources */,
 				EA94A52C2B7160EF00EC3037 /* ServiceDetailsRoute.swift in Sources */,
 				565343682C08D9BC002C2F36 /* UpdateARHandsConfiguration.swift in Sources */,
-				564E7A082D88F924003100BD /* MediaManager.swift in Sources */,
 				EA47D0E02B0FAE6500E5C4FC /* PlansComparisonPageView.swift in Sources */,
 				EA282E512AE952F700B90920 /* ProfileRoute.swift in Sources */,
 				EA4165452AE706C6008CE66A /* NotificationsInteractor.swift in Sources */,
@@ -13730,6 +13726,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7994PXZY59;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -13778,6 +13775,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7994PXZY59;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "WalkyCam-Info.plist";

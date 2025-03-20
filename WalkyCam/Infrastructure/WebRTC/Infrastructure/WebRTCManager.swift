@@ -13,7 +13,7 @@ class WebRTCManager: NSObject, ObservableObject {
     
     private var peerConnectionFactory: RTCPeerConnectionFactory
     private var peerConnections: [String: RTCPeerConnection] = [:]
-    
+
     override init() {
         self.peerConnectionFactory = RTCPeerConnectionFactory()
         super.init()
@@ -25,19 +25,6 @@ class WebRTCManager: NSObject, ObservableObject {
         
         let constraints = RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil)
         let connection = peerConnectionFactory.peerConnection(with: config, constraints: constraints, delegate: nil)
-        
-        // Adiciona a captura local de vídeo e áudio ao PeerConnection
-        if let videoTrack = MediaManager.shared.localVideoTrack {
-            let stream = peerConnectionFactory.mediaStream(withStreamId: "stream0")
-            stream.addVideoTrack(videoTrack)
-            connection.add(stream)
-        }
-        
-        if let audioTrack = MediaManager.shared.localAudioTrack {
-            let stream = peerConnectionFactory.mediaStream(withStreamId: "stream0")
-            stream.addAudioTrack(audioTrack)
-            connection.add(stream)
-        }
         
         peerConnections[participant.connectionId] = connection
         participant.peerConnection = connection

@@ -43,7 +43,8 @@ class SocketManagerService: ObservableObject {
                         let participant = Participant(
                             connectionId: user["connectionId"] as! String,
                             userId: user["userId"] as! String,
-                            userName: user["userName"] as! String
+                            userName: user["userName"] as! String,
+                            isHandRaised: user["isHandRaised"] as! Bool
                         )
                         self.participants.append(participant)
                         WebRTCManager.shared.createPeerConnection(for: participant)
@@ -57,7 +58,8 @@ class SocketManagerService: ObservableObject {
                 let participant = Participant(
                     connectionId: info["connectionId"] as! String,
                     userId: info["userId"] as! String,
-                    userName: info["userName"] as! String
+                    userName: info["userName"] as! String,
+                    isHandRaised: info["isHandRaised"] as! Bool
                 )
                 DispatchQueue.main.async {
                     self.participants.append(participant)
@@ -95,6 +97,8 @@ class SocketManagerService: ObservableObject {
     
     func disconnect() {
         socket.disconnect()
+        participants.removeAll()
+        callId = ""
     }
     
     func joinVideoCall() {

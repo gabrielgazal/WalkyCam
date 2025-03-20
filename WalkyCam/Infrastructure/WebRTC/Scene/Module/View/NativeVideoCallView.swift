@@ -9,7 +9,6 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
     @ObservedObject private var router: Router
     
     @StateObject private var socketManager = SocketManagerService.shared
-    @StateObject private var mediaManager = MediaManager.shared
 
     // MARK: - Initialization
     
