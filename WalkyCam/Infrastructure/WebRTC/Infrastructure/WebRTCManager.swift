@@ -28,7 +28,7 @@ class WebRTCManager: NSObject, ObservableObject {
         
         peerConnections[participant.connectionId] = connection
         participant.peerConnection = connection
-        return connection
+        return connection!
     }
     
     func generateOffer(for userId: String, completion: @escaping (RTCSessionDescription?) -> Void) {

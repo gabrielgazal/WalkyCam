@@ -343,6 +343,7 @@
 		56B3E49C2C3DA041004A87FA /* VideocallTimeTabRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B3E48F2C3DA041004A87FA /* VideocallTimeTabRoute.swift */; };
 		56B3E49E2C3DAD65004A87FA /* HeaderCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B3E49D2C3DAD65004A87FA /* HeaderCounterView.swift */; };
 		56B448752BFED03A0007D872 /* AppDelegate+DJI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B448742BFED0390007D872 /* AppDelegate+DJI.swift */; };
+		56C283852D91D57C0041C33C /* ParticipantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C283842D91D57C0041C33C /* ParticipantView.swift */; };
 		56C88FE22CECF5DD004B21CD /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C88FE12CECF5DD004B21CD /* ImagePicker.swift */; };
 		56C88FE42CECF615004B21CD /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C88FE32CECF615004B21CD /* VideoManager.swift */; };
 		56C890032CED01DE004B21CD /* Video3DScannerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C88FEE2CED01DE004B21CD /* Video3DScannerInteractor.swift */; };
@@ -1545,6 +1546,7 @@
 		56B3E48F2C3DA041004A87FA /* VideocallTimeTabRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideocallTimeTabRoute.swift; sourceTree = "<group>"; };
 		56B3E49D2C3DAD65004A87FA /* HeaderCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCounterView.swift; sourceTree = "<group>"; };
 		56B448742BFED0390007D872 /* AppDelegate+DJI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+DJI.swift"; sourceTree = "<group>"; };
+		56C283842D91D57C0041C33C /* ParticipantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantView.swift; sourceTree = "<group>"; };
 		56C88FE12CECF5DD004B21CD /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		56C88FE32CECF615004B21CD /* VideoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
 		56C88FEE2CED01DE004B21CD /* Video3DScannerInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video3DScannerInteractor.swift; sourceTree = "<group>"; };
@@ -3630,6 +3632,7 @@
 			children = (
 				564E79C92D80B041003100BD /* NativeVideoCallView.swift */,
 				564E7A092D88F97A003100BD /* VideoView.swift */,
+				56C283842D91D57C0041C33C /* ParticipantView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -12477,6 +12480,7 @@
 				EA910FA22ADC466400584B98 /* WCTabBarItem.swift in Sources */,
 				EA910FCE2ADC495700584B98 /* TabBarRouter.swift in Sources */,
 				EAE401B22BBA3D6100B1311E /* DigitalTwinsOnboardingRouterProtocol.swift in Sources */,
+				56C283852D91D57C0041C33C /* ParticipantView.swift in Sources */,
 				5668BB3A2BDFD5FB00A6E05D /* ProfitSelectionRouterProtocol.swift in Sources */,
 				56872C9F2D5E752F002FAE9A /* GalleryModelsInteractorProtocol.swift in Sources */,
 				EA4165442AE706C6008CE66A /* NotificationsInteractorProtocol.swift in Sources */,

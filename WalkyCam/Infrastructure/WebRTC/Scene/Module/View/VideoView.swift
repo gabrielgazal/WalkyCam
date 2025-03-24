@@ -9,16 +9,14 @@ import SwiftUI
 import WebRTC
 
 struct VideoView: UIViewRepresentable {
-    
-    var remoteVideoTrack: RTCVideoTrack?
-    
-    func makeUIView(context: Context) -> RTCEAGLVideoView {
-        let view = RTCEAGLVideoView()
-        view.backgroundColor = .blue
-        return view
-    }
-    
-    func updateUIView(_ uiView: RTCEAGLVideoView, context: Context) {
-        remoteVideoTrack?.add(uiView)
-    }
+    let videoTrack: RTCVideoTrack
+
+        func makeUIView(context: Context) -> RTCMTLVideoView {
+            let view = RTCMTLVideoView()
+            view.videoContentMode = .scaleAspectFill
+            videoTrack.add(view)
+            return view
+        }
+
+        func updateUIView(_ uiView: RTCMTLVideoView, context: Context) {}
 }

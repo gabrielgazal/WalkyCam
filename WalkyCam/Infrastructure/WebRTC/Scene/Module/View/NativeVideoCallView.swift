@@ -9,7 +9,7 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
     @ObservedObject private var router: Router
     
     @StateObject private var socketManager = SocketManagerService.shared
-
+        
     // MARK: - Initialization
     
     init(viewModel: ViewModel,
@@ -21,24 +21,84 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
     // MARK: - View Body
     
     var body: some View {
-            VStack {
-                Text("Participantes")
-                    .font(.headline)
-                
-                List(socketManager.participants, id: \.connectionId) { participant in
-                    Text(participant.userName)
+        VStack {
+            // Todo - Botar o video local
+            Spacer()
+            ScrollView(
+                .horizontal,
+                showsIndicators: false
+            ) {
+                HStack(spacing: 0) {
+                    ForEach(socketManager.participants, id: \.connectionId) { participant in
+                            ParticipantView(participant: participant)
+                    }
                 }
-                
-                Button("Entrar na Chamada") {
-                    socketManager.connect()
-                }
-                .padding()
             }
-            .onAppear {
-                socketManager.updateVideocallId(videocallId: viewModel.videoCallId)
-            }
-            .onDisappear {
-                socketManager.disconnect()
-            }
+            toolbarView
         }
+        .onAppear {
+            socketManager.connect()
+            socketManager.updateVideocallId(videocallId: viewModel.videoCallId)
+        }
+        .onDisappear {
+            socketManager.disconnect()
+        }
+        .background {
+            Color.negro
+                .ignoresSafeArea()
+        }
+    }
+    
+    private var toolbarView: some View {
+        HStack(
+            alignment: .center,
+            spacing: 20) {
+                HStack(
+                    alignment: .center,
+                    spacing: 20) {
+                        Image(systemName: "microphone.slash.fill")
+                            .resizable()
+                            .foregroundColor(Color.white)
+                            .scaledToFit()
+                            .frame(width: 25)
+                        Image(systemName: "video.slash")
+                            .resizable()
+                            .foregroundColor(Color.white)
+                            .scaledToFit()
+                            .frame(width: 25)
+                        Image(systemName: "hand.raised.fill")
+                            .resizable()
+                            .foregroundColor(Color.white)
+                            .scaledToFit()
+                            .frame(width: 25)
+                        Image(systemName: "person")
+                            .resizable()
+                            .foregroundColor(Color.white)
+                            .scaledToFit()
+                            .frame(width: 25)
+                        Image(systemName: "ellipsis")
+                            .resizable()
+                            .foregroundColor(Color.white)
+                            .scaledToFit()
+                            .frame(width: 25)
+                    }
+                    .padding(15)
+                    .background {
+                        RoundedRectangle(cornerRadius: 25)
+                            .fill(Color.grisOscuro)
+                            .frame(height: 50)
+                    }
+                
+                Image(systemName: "phone.circle.fill")
+                    .renderingMode(.template)
+                    .resizable()
+                    .foregroundColor(Color.red)
+                    .scaledToFit()
+                    .frame(height: 60)
+                    .background(Color.blanco.cornerRadius(50))
+                    .onTapGesture {
+                        router.dismiss()
+                    }
+            }
+    }
 }
