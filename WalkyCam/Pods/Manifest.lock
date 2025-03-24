@@ -2,7 +2,6 @@ PODS:
   - DJI-SDK-iOS (4.16.2)
   - DJI-UXSDK-iOS (4.16.2)
   - DJIWidget (1.6.8)
-  - GoogleWebRTC (1.1.32000)
   - MapboxCommon (24.6.1)
   - MapboxCoreMaps (11.6.1):
     - MapboxCommon (~> 24.6)
@@ -16,7 +15,6 @@ DEPENDENCIES:
   - DJI-SDK-iOS
   - DJI-UXSDK-iOS
   - DJIWidget
-  - GoogleWebRTC
   - MapboxMaps (= 11.6.1)
 
 SPEC REPOS:
@@ -24,7 +22,6 @@ SPEC REPOS:
     - DJI-SDK-iOS
     - DJI-UXSDK-iOS
     - DJIWidget
-    - GoogleWebRTC
     - MapboxCommon
     - MapboxCoreMaps
     - MapboxMaps
@@ -34,12 +31,11 @@ SPEC CHECKSUMS:
   DJI-SDK-iOS: 44308a021c3b95a912be52c4e7a8e0a27e5434f5
   DJI-UXSDK-iOS: 8a9db4bda9fcc38ccf9861fb7d7ba30d44c7791c
   DJIWidget: 9d92abb52888cd6296717c93feacd8a703bf678a
-  GoogleWebRTC: 4d261187b30512efdb711d21fa961a6adf138717
   MapboxCommon: 38483a3edda397d8292eeb8759d1ea89db33c016
   MapboxCoreMaps: 7a7d99161e819c1261f7cb84405798a7815d451d
   MapboxMaps: 3bb2213da7e730f6d09a407b7fb89ee6ea195e40
   Turf: aa2ede4298009639d10db36aba1a7ebaad072a5e
 
-PODFILE CHECKSUM: 09ff07ed2cc211a38958975f93856c64e13bbe27
+PODFILE CHECKSUM: a60918df5b82006d398ff4831c07e2210afbd267
 
 COCOAPODS: 1.14.3

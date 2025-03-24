@@ -295,6 +295,7 @@
 		56A5525D2B2F6E3D006B1B17 /* StreetCamMenuRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552502B2F6E3D006B1B17 /* StreetCamMenuRouterProtocol.swift */; };
 		56A5525E2B2F6E3D006B1B17 /* StreetCamMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552512B2F6E3D006B1B17 /* StreetCamMenuRouter.swift */; };
 		56A5525F2B2F6E3D006B1B17 /* StreetCamMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552542B2F6E3D006B1B17 /* StreetCamMenuModel.swift */; };
+		56A5E2AC2D91C86000833FE2 /* WebRTC in Frameworks */ = {isa = PBXBuildFile; productRef = 56A5E2AB2D91C86000833FE2 /* WebRTC */; };
 		56A6BE942BE2EFC7007EBF13 /* IdentityUploadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A6BE7F2BE2EFC7007EBF13 /* IdentityUploadModel.swift */; };
 		56A6BE952BE2EFC7007EBF13 /* IdentityUploadInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A6BE822BE2EFC7007EBF13 /* IdentityUploadInteractor.swift */; };
 		56A6BE962BE2EFC7007EBF13 /* IdentityUploadInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A6BE832BE2EFC7007EBF13 /* IdentityUploadInteractorProtocol.swift */; };
@@ -2407,6 +2408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA51031E2BA7EA3200A2DE2E /* StripePayments in Frameworks */,
+				56A5E2AC2D91C86000833FE2 /* WebRTC in Frameworks */,
 				EA5103162BA7EA3200A2DE2E /* StripeCardScan in Frameworks */,
 				EA5103142BA7EA3200A2DE2E /* StripeApplePay in Frameworks */,
 				EA5103202BA7EA3200A2DE2E /* StripePaymentsUI in Frameworks */,
@@ -12299,6 +12301,7 @@
 				EA51031D2BA7EA3200A2DE2E /* StripePayments */,
 				EA51031F2BA7EA3200A2DE2E /* StripePaymentsUI */,
 				5621B7082C2EF25400BFD923 /* SocketIO */,
+				56A5E2AB2D91C86000833FE2 /* WebRTC */,
 			);
 			productName = WalkyCam;
 			productReference = 5637A8122AD5DD72000586DF /* WalkyCam.app */;
@@ -12331,6 +12334,7 @@
 			packageReferences = (
 				EA5103102BA7EA3200A2DE2E /* XCRemoteSwiftPackageReference "stripe-ios-spm" */,
 				5621B7072C2EF25400BFD923 /* XCRemoteSwiftPackageReference "socket" */,
+				56A5E2AA2D91C86000833FE2 /* XCRemoteSwiftPackageReference "WebRTC" */,
 			);
 			productRefGroup = 5637A8132AD5DD72000586DF /* Products */;
 			projectDirPath = "";
@@ -13839,6 +13843,14 @@
 				kind = branch;
 			};
 		};
+		56A5E2AA2D91C86000833FE2 /* XCRemoteSwiftPackageReference "WebRTC" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stasel/WebRTC.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 134.0.0;
+			};
+		};
 		EA5103102BA7EA3200A2DE2E /* XCRemoteSwiftPackageReference "stripe-ios-spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/stripe/stripe-ios-spm";
@@ -13854,6 +13866,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5621B7072C2EF25400BFD923 /* XCRemoteSwiftPackageReference "socket" */;
 			productName = SocketIO;
+		};
+		56A5E2AB2D91C86000833FE2 /* WebRTC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 56A5E2AA2D91C86000833FE2 /* XCRemoteSwiftPackageReference "WebRTC" */;
+			productName = WebRTC;
 		};
 		EA5103112BA7EA3200A2DE2E /* Stripe */ = {
 			isa = XCSwiftPackageProductDependency;
