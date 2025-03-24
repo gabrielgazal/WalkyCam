@@ -29,8 +29,8 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
                 showsIndicators: false
             ) {
                 HStack(spacing: 0) {
-                    ForEach(socketManager.participants, id: \.connectionId) { participant in
-                            ParticipantView(participant: participant)
+                    ForEach($socketManager.participants, id: \.connectionId) { $participant in
+                            ParticipantView(participant: $participant)
                     }
                 }
             }

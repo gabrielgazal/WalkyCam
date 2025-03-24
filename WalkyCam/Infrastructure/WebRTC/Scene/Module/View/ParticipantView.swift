@@ -10,12 +10,12 @@ import SwiftUI
 
 struct ParticipantView: View {
     
-    private let participant: Participant
+    @Binding private var participant: Participant
     
     public init(
-        participant: Participant
+        participant: Binding<Participant>
     ) {
-        self.participant = participant
+        self._participant = participant
     }
     
     var body: some View {

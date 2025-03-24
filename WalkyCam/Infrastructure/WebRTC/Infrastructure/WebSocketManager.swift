@@ -48,6 +48,17 @@ class SocketManagerService: ObservableObject {
                         )
                         self.participants.append(participant)
                         WebRTCManager.shared.createPeerConnection(for: participant)
+                        WebRTCManager.shared.generateOffer(for: participant.connectionId) { offer in
+                            guard let offer = offer else { return }
+
+                            let data: [String: Any] = [
+                                "connectionId": participant.connectionId,
+                                "sdpOffer": offer.sdp
+                            ]
+
+                            self.socket.emit("receiveVideoFrom", data)
+                        }
+
                     }
                 }
             }
@@ -64,6 +75,17 @@ class SocketManagerService: ObservableObject {
                 DispatchQueue.main.async {
                     self.participants.append(participant)
                     WebRTCManager.shared.createPeerConnection(for: participant)
+                    WebRTCManager.shared.generateOffer(for: participant.connectionId) { offer in
+                        guard let offer = offer else { return }
+
+                        let data: [String: Any] = [
+                            "connectionId": participant.connectionId,
+                            "sdpOffer": offer.sdp
+                        ]
+
+                        self.socket.emit("receiveVideoFrom", data)
+                    }
+
                 }
             }
         }
@@ -89,6 +111,16 @@ class SocketManagerService: ObservableObject {
                 }
             }
         }
+        
+        socket.on("receiveVideoAnswer") { data, _ in
+            guard let info = data.first as? [String: Any],
+                  let connectionId = info["connectionId"] as? String,
+                  let sdpAnswer = info["sdpAnswer"] as? String else { return }
+
+            let sessionDescription = RTCSessionDescription(type: .answer, sdp: sdpAnswer)
+            WebRTCManager.shared.handleAnswer(sessionDescription, for: connectionId)
+        }
+
     }
     
     func connect() {

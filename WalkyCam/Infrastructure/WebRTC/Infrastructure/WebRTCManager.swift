@@ -13,6 +13,7 @@ class WebRTCManager: NSObject, ObservableObject {
     
     private var peerConnectionFactory: RTCPeerConnectionFactory
     private var peerConnections: [String: RTCPeerConnection] = [:]
+    private var peerDelegates: [String: RTCPeerConnectionDelegate] = [:]
 
     override init() {
         self.peerConnectionFactory = RTCPeerConnectionFactory()
@@ -24,8 +25,14 @@ class WebRTCManager: NSObject, ObservableObject {
         config.iceServers = [RTCIceServer(urlStrings: ["stun:stun.l.google.com:19302"])]
         
         let constraints = RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil)
-        let connection = peerConnectionFactory.peerConnection(with: config, constraints: constraints, delegate: nil)
+        let delegate = PeerConnectionDelegate(participant: participant)
+        peerDelegates[participant.connectionId] = delegate
+        let connection = peerConnectionFactory.peerConnection(with: config, constraints: constraints, delegate: delegate)
         
+        let videoTransceiverInit = RTCRtpTransceiverInit()
+        videoTransceiverInit.direction = .recvOnly
+        connection?.addTransceiver(of: .video, init: videoTransceiverInit)
+
         peerConnections[participant.connectionId] = connection
         participant.peerConnection = connection
         return connection!
@@ -56,4 +63,47 @@ class WebRTCManager: NSObject, ObservableObject {
         guard let peerConnection = participant.peerConnection else { return }
         peerConnection.add(candidate)
     }
+}
+
+class PeerConnectionDelegate: NSObject, RTCPeerConnectionDelegate {
+    
+    let participant: Participant
+
+    init(participant: Participant) {
+        self.participant = participant
+    }
+
+    func peerConnection(_ peerConnection: RTCPeerConnection, didAdd stream: RTCMediaStream) {
+        // Compatibilidade com streams legados, opcional
+    }
+
+    func peerConnection(_ peerConnection: RTCPeerConnection, didAdd receiver: RTCRtpReceiver, streams: [RTCMediaStream]) {
+        if let track = receiver.track as? RTCVideoTrack {
+            DispatchQueue.main.async {
+                print("🎥 Track recebida para \(self.participant.userName)")
+                self.participant.videoTrack = track
+
+                // ⚠️ Força a lista de participantes a ser atualizada no ObservableObject
+                if let index = SocketManagerService.shared.participants.firstIndex(where: { $0.connectionId == self.participant.connectionId }) {
+                    // Aqui apenas reatribuímos o array pra forçar notificação
+                    var updated = SocketManagerService.shared.participants
+                    updated[index] = self.participant
+                    SocketManagerService.shared.participants = updated
+                }
+            }
+        }
+    }
+
+
+    // Os outros métodos podem ficar vazios por enquanto:
+    func peerConnection(_ peerConnection: RTCPeerConnection, didChange stateChanged: RTCSignalingState) {}
+    func peerConnection(_ peerConnection: RTCPeerConnection, didGenerate candidate: RTCIceCandidate) {
+        // TODO: Emitir via WebSocket se necessário
+    }
+    func peerConnection(_ peerConnection: RTCPeerConnection, didChange newState: RTCIceConnectionState) {}
+    func peerConnection(_ peerConnection: RTCPeerConnection, didRemove candidates: [RTCIceCandidate]) {}
+    func peerConnectionShouldNegotiate(_ peerConnection: RTCPeerConnection) {}
+    func peerConnection(_ peerConnection: RTCPeerConnection, didOpen dataChannel: RTCDataChannel) {}
+    func peerConnection(_ peerConnection: RTCPeerConnection, didChange newState: RTCIceGatheringState) {}
+    func peerConnection(_ peerConnection: RTCPeerConnection, didRemove stream: RTCMediaStream) {}
 }
