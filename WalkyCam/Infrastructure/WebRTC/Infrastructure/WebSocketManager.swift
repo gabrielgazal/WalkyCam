@@ -37,32 +37,35 @@ class SocketManagerService: ObservableObject {
         }
         
         socket.on("existingParticipants") { data, _ in
-            if let info = data.first as? [String: Any], let users = info["existingParticipants"] as? [[String: Any]] {
-                DispatchQueue.main.async {
-                    for user in users {
-                        let participant = Participant(
-                            connectionId: user["connectionId"] as! String,
-                            userId: user["userId"] as! String,
-                            userName: user["userName"] as! String,
-                            isHandRaised: user["isHandRaised"] as! Bool
-                        )
-                        self.participants.append(participant)
-                        WebRTCManager.shared.createPeerConnection(for: participant)
-                        WebRTCManager.shared.generateOffer(for: participant.connectionId) { offer in
-                            guard let offer = offer else { return }
+            guard let info = data.first as? [String: Any],
+                  let existing = info["existingParticipants"] as? [[String: Any]] else { return }
+            
+            for user in existing {
+                guard let connectionId = user["connectionId"] as? String,
+                      let userId = user["userId"] as? String,
+                      let userName = user["userName"] as? String else { continue }
+                
+                let participant = Participant(
+                    connectionId: connectionId,
+                    userId: userId,
+                    userName: userName
+                )
+                
+                self.participants.append(participant)
 
-                            let data: [String: Any] = [
-                                "connectionId": participant.connectionId,
-                                "sdpOffer": offer.sdp
-                            ]
-
-                            self.socket.emit("receiveVideoFrom", data)
-                        }
-
-                    }
+                WebRTCManager.shared.generateOffer(for: participant.connectionId) { offer in
+                    guard let offer = offer else { return }
+                    
+                    let data: [String: Any] = [
+                        "connectionId": participant.connectionId,
+                        "sdpOffer": offer.sdp
+                    ]
+                    
+                    self.socket.emit("receiveVideoFrom", data)
                 }
             }
         }
+        
         
         socket.on("newParticipantArrived") { data, _ in
             if let info = data.first as? [String: Any] {
@@ -77,15 +80,12 @@ class SocketManagerService: ObservableObject {
                     WebRTCManager.shared.createPeerConnection(for: participant)
                     WebRTCManager.shared.generateOffer(for: participant.connectionId) { offer in
                         guard let offer = offer else { return }
-
                         let data: [String: Any] = [
                             "connectionId": participant.connectionId,
                             "sdpOffer": offer.sdp
                         ]
-
                         self.socket.emit("receiveVideoFrom", data)
                     }
-
                 }
             }
         }
@@ -96,7 +96,6 @@ class SocketManagerService: ObservableObject {
                 let sdpMid = info["sdpMid"] as! String
                 let sdpMLineIndex = info["sdpMLineIndex"] as! Int
                 let sdp = info["sdp"] as! String
-                
                 if let participant = self.participants.first(where: { $0.connectionId == connectionId }) {
                     let candidate = RTCIceCandidate(sdp: sdp, sdpMLineIndex: Int32(sdpMLineIndex), sdpMid: sdpMid)
                     WebRTCManager.shared.handleIceCandidate(candidate, for: participant)
@@ -116,9 +115,51 @@ class SocketManagerService: ObservableObject {
             guard let info = data.first as? [String: Any],
                   let connectionId = info["connectionId"] as? String,
                   let sdpAnswer = info["sdpAnswer"] as? String else { return }
-
+            
             let sessionDescription = RTCSessionDescription(type: .answer, sdp: sdpAnswer)
             WebRTCManager.shared.handleAnswer(sessionDescription, for: connectionId)
+        }
+        
+        socket.on("receiveVideoFrom") { data, _ in
+            guard let info = data.first as? [String: Any],
+                  let connectionId = info["connectionId"] as? String else { return }
+            guard let participant = self.participants.first(where: { $0.connectionId == connectionId }) else {
+                print("❌ Participante \(connectionId) não encontrado para receiveVideoFrom")
+                return
+            }
+            WebRTCManager.shared.generateOffer(for: connectionId) { offer in
+                guard let offer = offer else {
+                    print("❌ Falha ao gerar offer para \(connectionId)")
+                    return
+                }
+                let data: [String: Any] = [
+                    "connectionId": connectionId,
+                    "sdpOffer": offer.sdp
+                ]
+                self.socket.emit("receiveVideoFrom", data)
+            }
+        }
+        
+        socket.on("receiveVideoStatus") { [weak self] data, ack in
+            guard
+                let self = self,
+                let dict = data.first as? [String: Any],
+                let connectionId = dict["connectionId"] as? String,
+                let isEnabled = dict["isVideoEnabled"] as? Bool
+            else {
+                print("❌ Erro ao processar receiveVideoStatus")
+                return
+            }
+
+            print("📺 Video status do usuário \(connectionId): \(isEnabled)")
+
+            DispatchQueue.main.async {
+                if let participant = self.participants.first(where: { $0.connectionId == connectionId }) {
+                    participant.isVideoEnabled = isEnabled
+                } else {
+                    print("⚠️ Participante com id \(connectionId) não encontrado")
+                }
+            }
         }
 
     }

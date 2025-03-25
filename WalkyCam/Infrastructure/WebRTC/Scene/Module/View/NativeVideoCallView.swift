@@ -9,7 +9,8 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
     @ObservedObject private var router: Router
     
     @StateObject private var socketManager = SocketManagerService.shared
-        
+    @State private var localTrack: RTCVideoTrack?
+
     // MARK: - Initialization
     
     init(viewModel: ViewModel,
@@ -23,14 +24,21 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
     var body: some View {
         VStack {
             // Todo - Botar o video local
+            if let localTrack = localTrack {
+                VideoView(videoTrack: localTrack)
+                    .frame(width: 150, height: 200)
+                    .cornerRadius(12)
+                    .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color.white, lineWidth: 1))
+                    .padding()
+            }
             Spacer()
             ScrollView(
                 .horizontal,
                 showsIndicators: false
             ) {
                 HStack(spacing: 0) {
-                    ForEach($socketManager.participants, id: \.connectionId) { $participant in
-                            ParticipantView(participant: $participant)
+                    ForEach(socketManager.participants, id: \.connectionId) { participant in
+                            ParticipantView(participant: participant)
                     }
                 }
             }
@@ -39,6 +47,9 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
         .onAppear {
             socketManager.connect()
             socketManager.updateVideocallId(videocallId: viewModel.videoCallId)
+            WebRTCManager.shared.startLocalVideo { track in
+                self.localTrack = track
+            }
         }
         .onDisappear {
             socketManager.disconnect()

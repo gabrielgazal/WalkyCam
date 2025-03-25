@@ -14,6 +14,8 @@ class WebRTCManager: NSObject, ObservableObject {
     private var peerConnectionFactory: RTCPeerConnectionFactory
     private var peerConnections: [String: RTCPeerConnection] = [:]
     private var peerDelegates: [String: RTCPeerConnectionDelegate] = [:]
+    private var localCapturer: RTCCameraVideoCapturer?
+    private var localVideoTrack: RTCVideoTrack?
 
     override init() {
         self.peerConnectionFactory = RTCPeerConnectionFactory()
@@ -27,16 +29,22 @@ class WebRTCManager: NSObject, ObservableObject {
         let constraints = RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil)
         let delegate = PeerConnectionDelegate(participant: participant)
         peerDelegates[participant.connectionId] = delegate
+
         let connection = peerConnectionFactory.peerConnection(with: config, constraints: constraints, delegate: delegate)
         
         let videoTransceiverInit = RTCRtpTransceiverInit()
         videoTransceiverInit.direction = .recvOnly
         connection?.addTransceiver(of: .video, init: videoTransceiverInit)
 
+        if let track = localVideoTrack {
+            connection?.add(track, streamIds: ["stream0"])
+        }
+
         peerConnections[participant.connectionId] = connection
         participant.peerConnection = connection
         return connection!
     }
+
     
     func generateOffer(for userId: String, completion: @escaping (RTCSessionDescription?) -> Void) {
         guard let peerConnection = peerConnections[userId] else { return }
@@ -63,6 +71,24 @@ class WebRTCManager: NSObject, ObservableObject {
         guard let peerConnection = participant.peerConnection else { return }
         peerConnection.add(candidate)
     }
+    func startLocalVideo(completion: @escaping (RTCVideoTrack?) -> Void) {
+        let videoSource = peerConnectionFactory.videoSource()
+        localCapturer = RTCCameraVideoCapturer(delegate: videoSource)
+
+        // Escolher a câmera e resolução
+        guard let frontCamera = (RTCCameraVideoCapturer.captureDevices().first { $0.position == .front }),
+              let format = RTCCameraVideoCapturer.supportedFormats(for: frontCamera).first,
+              let fps = format.videoSupportedFrameRateRanges.first?.maxFrameRate else {
+            completion(nil)
+            return
+        }
+
+        localCapturer?.startCapture(with: frontCamera, format: format, fps: Int(fps))
+
+        localVideoTrack = peerConnectionFactory.videoTrack(with: videoSource, trackId: "localVideo")
+        completion(localVideoTrack)
+    }
+
 }
 
 class PeerConnectionDelegate: NSObject, RTCPeerConnectionDelegate {
