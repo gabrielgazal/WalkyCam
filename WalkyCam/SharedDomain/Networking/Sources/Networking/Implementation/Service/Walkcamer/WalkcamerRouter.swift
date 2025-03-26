@@ -20,7 +20,7 @@ enum WalkcamerRouter {
                      driveInfo: [String],
                      days: [String])
     case updateAvailability(userId: String)
-    case getNearWalkcammers
+    case getNearWalkcammers(lat: CGFloat, lon: CGFloat)
     case searchWalkcammer(input: String)
     
 }
@@ -36,8 +36,8 @@ extension WalkcamerRouter: TargetType {
             return "walkcamer/convert-user-to-walkcamer"
         case .updateAvailability:
             return "walkcamer/convert-user-to-walkcamer"
-        case .getNearWalkcammers:
-            return "walkcamer/get-near-walkcamers"
+        case let .getNearWalkcammers(lat, lon):
+            return "walkcamer/get-near-walkcamers/\(lat)/\(lon)"
         case let .searchWalkcammer(input):
             return "walkcamer/search/\(input)"
         }

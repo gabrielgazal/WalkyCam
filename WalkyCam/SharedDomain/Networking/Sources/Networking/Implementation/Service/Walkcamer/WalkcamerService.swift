@@ -60,9 +60,9 @@ final class WalkcamerService: WalkcamerServiceProtocol {
                          completion: completion)
     }
     
-    func getNearWalkcammers(completion: @escaping Completion) {
+    func getNearWalkcammers(lat: CGFloat, lon: CGFloat, completion: @escaping Completion) {
         provider.request(
-            .getNearWalkcammers,
+            .getNearWalkcammers(lat: lat, lon: lon),
             completion: completion
         )
     }

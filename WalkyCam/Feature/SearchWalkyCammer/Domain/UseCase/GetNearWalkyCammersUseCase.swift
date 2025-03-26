@@ -10,17 +10,20 @@ import Networking
 import Combine
 import MapKit
 
-typealias GetNearWalkyCammersUseCase = GenericUseCase<String, [CammerData]>
+typealias GetNearWalkyCammersUseCase = GenericUseCase<SearchWalkyCammerModel, [CammerData]>
 
 extension GetNearWalkyCammersUseCase {
     
     static func live(
         repository: WalkcamerRepositoryProtocol
     ) -> Self {
-        Self.init { credentials in
+        Self.init { input in
             Deferred {
                 Future { promise in
-                    repository.getNearWalkcammers { result in
+                    repository.getNearWalkcammers(
+                        lat: input.latitude,
+                        lon: input.longitude
+                    ) { result in
                         switch result {
                         case let .failure(error):
                             promise(.failure(error))

@@ -25,24 +25,4 @@ final class TabBarInteractor: TabBarInteractorProtocol {
     init(useCases: UseCases) {
         self.useCases = useCases
     }
-    
-    func fetchStreetcammers() async throws -> [CammerData] {
-        return try await withCheckedThrowingContinuation { continuation in
-            useCases.getNearWalkyCammers("")
-                .sink(
-                    receiveCompletion: { completion in
-                        switch completion {
-                        case let .failure(error):
-                            continuation.resume(throwing: error)
-                        case .finished:
-                            break
-                        }
-                    },
-                    receiveValue: { cammers in
-                        continuation.resume(returning: cammers)
-                    }
-                )
-                .store(in: &bag)
-        }
-    }
 }

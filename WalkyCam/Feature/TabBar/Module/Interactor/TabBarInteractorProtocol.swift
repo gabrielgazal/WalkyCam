@@ -6,5 +6,5 @@
 //
 
 protocol TabBarInteractorProtocol {
-    func fetchStreetcammers() async throws -> [CammerData]
+//    func fetchStreetcammers() async throws -> [CammerData]
 }

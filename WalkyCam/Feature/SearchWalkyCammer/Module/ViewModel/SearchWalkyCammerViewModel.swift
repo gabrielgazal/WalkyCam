@@ -36,8 +36,11 @@ final class SearchWalkyCammerViewModel: SearchWalkyCammerViewModelProtocol {
         geocoder.geocodeAddressString(locationText) { (placemarks, error) in
             guard let placemarks = placemarks,
                   let location = placemarks.first?.location?.coordinate else { return }
+
             self.coordinates = location
-            self.getWalkyCammersOnLocation(coordinates: location) {
+            self.fetchStreetcammers(location: location)
+
+            Task { @MainActor in
                 self.mapView?.camera.ease(
                     to: CameraOptions(
                         center: location,
@@ -77,29 +80,55 @@ final class SearchWalkyCammerViewModel: SearchWalkyCammerViewModelProtocol {
             }
         }
     }
-
-    private func getWalkyCammersOnLocation(coordinates: CLLocationCoordinate2D, completion: @escaping () -> Void) {
+    
+    func fetchStreetcammers(location: CLLocationCoordinate2D) {
         walkyCammers = .loading
-        let cammers = interactor.getCammersOnLocation(location: coordinates)
-        for index in 0..<cammers.count {
-            let item = cammers[index]
-            let annotation = ViewAnnotation(
-                coordinate: .init(
-                    latitude: item.coordinates.latitude,
-                    longitude: item.coordinates.longitude
-                ),
-                view: assembleAnnotationView(item)
-            )
-            mapView?.viewAnnotations.add(annotation)
+        Task {
+            do {
+                let cammers = try await interactor.getCammersOnLocation(location: location)
+
+                await applyCammersToMap(cammers)
+
+                await MainActor.run {
+                    walkyCammers = .loaded(cammers)
+                    serviceManager.updateLocation(location)
+                }
+                StreetcammerManager.shared.saveStreetCammers(cammers)
+            } catch {
+                await MainActor.run {
+                    walkyCammers = .failed(GenericError())
+                }
+            }
         }
-        completion()
-        walkyCammers = .loaded(cammers)
-        serviceManager.updateLocation(coordinates)
+    }
+
+    @MainActor
+    private func applyCammersToMap(_ cammers: [CammerData]) {
+        mapView?.viewAnnotations.removeAll()
+
+        for cammer in cammers {
+            let view = assembleAnnotationView(cammer)
+
+            let options = ViewAnnotationOptions(
+                geometry: Point(CLLocationCoordinate2D(
+                    latitude: cammer.coordinates.latitude,
+                    longitude: cammer.coordinates.longitude
+                )),
+                allowOverlap: false,
+                visible: true, 
+                anchor: .center
+            )
+
+            try? mapView?.viewAnnotations.add(view, options: options)
+        }
     }
     
     func updateUserRegionGeocoder() {
         guard let location = mapView?.mapboxMap.cameraState.center else { return }
-        getWalkyCammersOnLocation(coordinates: location) {
+        self.coordinates = location
+        self.fetchStreetcammers(location: location)
+
+        Task { @MainActor in
             self.mapView?.camera.ease(
                 to: CameraOptions(
                     center: location,
@@ -112,6 +141,7 @@ final class SearchWalkyCammerViewModel: SearchWalkyCammerViewModelProtocol {
             self.currentTitle = L10n.SearchWalkyCammerViewModel.Title.availableWalkCammers
         }
     }
+
     
     private func assembleAnnotationView(_ item: CammerData) -> UIView {
         let profileImageView = ProfileImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))

@@ -4,5 +4,5 @@ protocol TabBarViewModelProtocol: ViewModelProtocol {
     var tabSelection: WCTabBarItem { get set }
     var tabBarItems: [WCTabBarItem] { get set }
     
-    func fetchStreetcammers() async
+//    func fetchStreetcammers() async
 }

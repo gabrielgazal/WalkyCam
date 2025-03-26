@@ -46,11 +46,11 @@ final class TabBarViewModel: TabBarViewModelProtocol {
     
     // MARK: - Public API
     
-    @MainActor func fetchStreetcammers() async {
-        guard streetcammerManager.streetCammers.isEmpty else { return }
-        do {
-            let cammers = try await interactor.fetchStreetcammers()
-            streetcammerManager.saveStreetCammers(cammers)
-        } catch {}
-    }
+//    @MainActor func fetchStreetcammers() async {
+//        guard streetcammerManager.streetCammers.isEmpty else { return }
+//        do {
+//            let cammers = try await interactor.fetchStreetcammers()
+//            streetcammerManager.saveStreetCammers(cammers)
+//        } catch {}
+//    }
 }

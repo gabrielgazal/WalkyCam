@@ -36,10 +36,10 @@ struct TabBarView<ViewModel: TabBarViewModelProtocol, Router: TabBarRouterProtoc
         .navigationBarBackButtonHidden(true)
         .environmentObject(viewModel)
         .environment(\.locale, LanguageManager.shared.language.locale)
-        .onAppear {
-            Task {
-                await viewModel.fetchStreetcammers()
-            }
-        }
+//        .onAppear {
+//            Task {
+//                await viewModel.fetchStreetcammers()
+//            }
+//        }
     }
 }

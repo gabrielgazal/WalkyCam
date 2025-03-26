@@ -7,6 +7,7 @@
 
 import Combine
 import Moya
+import Foundation
 
 final class WalkcamerRepository: WalkcamerRepositoryProtocol {
     // MARK: - Dependencies
@@ -63,8 +64,8 @@ final class WalkcamerRepository: WalkcamerRepositoryProtocol {
         }
     }
     
-    func getNearWalkcammers(completion: @escaping (GetNearWalkCamersResult) -> Void) {
-        service.getNearWalkcammers { result in
+    func getNearWalkcammers(lat: CGFloat, lon: CGFloat, completion: @escaping (GetNearWalkCamersResult) -> Void) {
+        service.getNearWalkcammers(lat: lat, lon: lon) { result in
             completion(result.mapToRepositoryResult(with: DefaultRequestHandler(at: "walkcamers")))
         }
     }

@@ -125,22 +125,26 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
                 Spacer()
             }
             .padding(Tokens.Size.Spacing.large)
-
             ZStack {
                 Circle()
                     .fill(Color.naranja.opacity(0.3))
                 Circle()
                     .stroke(Color.naranja, lineWidth: 2)
-                Asset.Icons.location.swiftUIImage
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 30, height: 30)
+                if viewModel.walkyCammers.isLoading {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
+                } else {
+                    Asset.Icons.location.swiftUIImage
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30, height: 30)
+                }
             }
             .padding(Tokens.Size.Spacing.huge)
             .onTapGesture {
                 viewModel.updateUserRegionGeocoder()
             }
-            .loading(viewModel.walkyCammers.isLoading)
+            .disabled(viewModel.walkyCammers.isLoading)
         }
         .ignoresSafeArea()
     }
@@ -193,7 +197,11 @@ struct SearchWalkyCammerView_Previews: PreviewProvider {
     static var previews: some View {
         SearchWalkyCammerView(
             viewModel: SearchWalkyCammerViewModel(
-                interactor: SearchWalkyCammerInteractor(useCases: .init()),
+                interactor: SearchWalkyCammerInteractor(
+                    useCases: .init(
+                        getNearWalkyCammers: .empty
+                    )
+                ),
                 router: SearchWalkyCammerRouter(isPresented: .constant(false))
             ),
             router: SearchWalkyCammerRouter(isPresented: .constant(false))

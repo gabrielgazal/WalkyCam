@@ -27,6 +27,6 @@ public protocol WalkcamerRepositoryProtocol {
     
     func updateAvailability(userId: String,
                             completion: @escaping (UpdateUserAvailabilityResult) -> Void)
-    func getNearWalkcammers(completion: @escaping (GetNearWalkCamersResult) -> Void)
+    func getNearWalkcammers(lat: CGFloat, lon: CGFloat, completion: @escaping (GetNearWalkCamersResult) -> Void)
     func searchWalkcammer(input: String, completion: @escaping (SearchWalkCamersResult) -> Void)
 }
