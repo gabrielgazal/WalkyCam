@@ -33,11 +33,14 @@ class WebRTCManager: NSObject, ObservableObject {
         let connection = peerConnectionFactory.peerConnection(with: config, constraints: constraints, delegate: delegate)
         
         let videoTransceiverInit = RTCRtpTransceiverInit()
-        videoTransceiverInit.direction = .recvOnly
+        videoTransceiverInit.direction = .sendRecv
         connection?.addTransceiver(of: .video, init: videoTransceiverInit)
 
         if let track = localVideoTrack {
+            print("✅ Adicionando localVideoTrack ao peerConnection de \(participant.userName)")
             connection?.add(track, streamIds: ["stream0"])
+        } else {
+            print("❌ localVideoTrack ainda é nil ao criar peerConnection de \(participant.userName)")
         }
 
         peerConnections[participant.connectionId] = connection
@@ -50,17 +53,45 @@ class WebRTCManager: NSObject, ObservableObject {
         guard let peerConnection = peerConnections[userId] else { return }
         
         peerConnection.offer(for: RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil)) { offer, error in
-            guard let offer = offer else { return }
+            guard let offer = offer else {
+                print("❌ Falha ao gerar offer: \(error?.localizedDescription ?? "erro desconhecido")")
+                return
+            }
+            print("📡 Offer gerada para \(userId):\n\(offer.sdp)")
             peerConnection.setLocalDescription(offer) { _ in
                 completion(offer)
             }
-        } 
+        }
     }
-    
+
     func handleRemoteOffer(_ offer: RTCSessionDescription, for userId: String) {
         guard let peerConnection = peerConnections[userId] else { return }
-        peerConnection.setRemoteDescription(offer, completionHandler: { _ in })
+        
+        peerConnection.setRemoteDescription(offer) { [weak self] error in
+            guard error == nil else {
+                print("❌ Erro ao setar remote description: \(error!.localizedDescription)")
+                return
+            }
+            
+            let constraints = RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil)
+            peerConnection.answer(for: constraints) {
+                answer,
+                error in
+                guard let answer = answer else {
+                    print("❌ Erro ao criar answer: \(error?.localizedDescription ?? "desconhecido")")
+                    return
+                }
+                
+                peerConnection.setLocalDescription(answer) { _ in }
+                
+                SocketManagerService.shared.receiveVideoAnswer(
+                    userId: userId,
+                    sdpAnswer: answer.sdp
+                )
+            }
+        }
     }
+
     
     func handleAnswer(_ answer: RTCSessionDescription, for userId: String) {
         guard let peerConnection = peerConnections[userId] else { return }

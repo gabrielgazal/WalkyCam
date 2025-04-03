@@ -15,6 +15,7 @@ class SocketManagerService: ObservableObject {
     private let manager: SocketManager
     private let socket: SocketIOClient
     private var callId: String = ""
+    private var localConnectionId: String = ""
     
     @Published var participants: [Participant] = []
     
@@ -33,6 +34,8 @@ class SocketManagerService: ObservableObject {
     func setupSocketEvents() {
         socket.on(clientEvent: .connect) { data, _ in
             print("Conectado ao servidor WebSocket!")
+            self.localConnectionId = self.socket.sid ?? ""
+            print("ConnectionID Local: \(self.localConnectionId)")
             self.joinVideoCall()
         }
         
@@ -183,5 +186,20 @@ class SocketManagerService: ObservableObject {
             "videocallId": callId
         ]
         socket.emit("joinToVideocall", data)
+    }
+    
+    func receiveVideoAnswer(userId: String, sdpAnswer: String) {
+        socket.emit("receiveVideoAnswer", [
+            "connectionId": userId,
+            "sdpAnswer": sdpAnswer
+        ])
+    }
+    
+    func updateVideoStatus(isEnabled: Bool) {
+        socket.emit("sendVideoStatus", [
+            "connectionId": localConnectionId,
+            "isVideoEnabled": isEnabled,
+            "videocallId": callId
+        ])
     }
 }

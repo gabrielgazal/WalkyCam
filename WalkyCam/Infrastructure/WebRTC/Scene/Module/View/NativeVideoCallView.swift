@@ -10,6 +10,8 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
     
     @StateObject private var socketManager = SocketManagerService.shared
     @State private var localTrack: RTCVideoTrack?
+    
+    @State private var isVideoEnabled = false
 
     // MARK: - Initialization
     
@@ -23,13 +25,16 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
     
     var body: some View {
         VStack {
-            // Todo - Botar o video local
             if let localTrack = localTrack {
-                VideoView(videoTrack: localTrack)
-                    .frame(width: 150, height: 200)
-                    .cornerRadius(12)
-                    .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color.white, lineWidth: 1))
-                    .padding()
+                if isVideoEnabled {
+                    VideoView(videoTrack: localTrack)
+                        .frame(width: 150, height: 200)
+                        .cornerRadius(12)
+                        .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color.white, lineWidth: 1))
+                        .padding()
+                } else {
+                    emptyStateView
+                }
             }
             Spacer()
             ScrollView(
@@ -45,10 +50,10 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
             toolbarView
         }
         .onAppear {
-            socketManager.connect()
-            socketManager.updateVideocallId(videocallId: viewModel.videoCallId)
             WebRTCManager.shared.startLocalVideo { track in
                 self.localTrack = track
+                socketManager.connect()
+                socketManager.updateVideocallId(videocallId: viewModel.videoCallId)
             }
         }
         .onDisappear {
@@ -72,11 +77,15 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
                             .foregroundColor(Color.white)
                             .scaledToFit()
                             .frame(width: 25)
-                        Image(systemName: "video.slash")
+                        Image(systemName: isVideoEnabled ? "video" : "video.slash")
                             .resizable()
-                            .foregroundColor(Color.white)
+                            .foregroundColor(isVideoEnabled ? Color.naranja : Color.white)
                             .scaledToFit()
                             .frame(width: 25)
+                            .onTapGesture {
+                                isVideoEnabled.toggle()
+                                socketManager.updateVideoStatus(isEnabled: isVideoEnabled)
+                            }
                         Image(systemName: "hand.raised.fill")
                             .resizable()
                             .foregroundColor(Color.white)
@@ -111,5 +120,35 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
                         router.dismiss()
                     }
             }
+    }
+    
+    private var emptyStateView: some View {
+        VStack(
+            alignment: .center,
+            spacing: 5
+        ) {
+            ZStack(alignment: .center) {
+                Color.black
+                Circle()
+                    .fill(Color.naranja)
+                    .frame(width: 90)
+                Image(systemName: "person.circle")
+                    .resizable()
+                    .renderingMode(.template)
+                    .scaledToFit()
+                    .frame(height: 90)
+                    .foregroundColor(Color.blanco)
+                VStack {
+                    Spacer()
+                    Text("Você")
+                        .foregroundColor(Color.white)
+                        .background {
+                            Capsule()
+                                .fill(Color.negro.opacity(0.2))
+                        }
+                }
+            }
+        }
+        .frame(width: 150, height: 200)
     }
 }
