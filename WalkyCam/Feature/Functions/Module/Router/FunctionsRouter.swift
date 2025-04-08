@@ -318,24 +318,24 @@ final class FunctionsRouter: Router, FunctionsRouterProtocol {
             UnreleasedFeatureRoute(
                 isPresented: isNavigating,
                 banners: [
-                    Asset.Banners.Recording.recording1.name,
-                    Asset.Banners.Recording.recording2.name,
-                    Asset.Banners.Recording.recording3.name,
-                    Asset.Banners.Recording.recording4.name,
-                    Asset.Banners.Recording.recording5.name,
-                    Asset.Banners.Recording.recording6.name,
-                    Asset.Banners.Recording.recording7.name,
-                    Asset.Banners.Recording.recording8.name,
-                    Asset.Banners.Recording.recording9.name,
-                    Asset.Banners.Recording.recording10.name,
-                    Asset.Banners.Recording.recording11.name,
-                    Asset.Banners.Recording.recording12.name,
-                    Asset.Banners.Recording.recording13.name,
-                    Asset.Banners.Recording.recording14.name,
-                    Asset.Banners.Recording.recording15.name,
-                    Asset.Banners.Recording.recording16.name,
-                    Asset.Banners.Recording.recording17.name,
-                    Asset.Banners.Recording.recording18.name
+//                    Asset.Banners.Recording.recording1.name,
+//                    Asset.Banners.Recording.recording2.name,
+//                    Asset.Banners.Recording.recording3.name,
+//                    Asset.Banners.Recording.recording4.name,
+//                    Asset.Banners.Recording.recording5.name,
+//                    Asset.Banners.Recording.recording6.name,
+//                    Asset.Banners.Recording.recording7.name,
+//                    Asset.Banners.Recording.recording8.name,
+//                    Asset.Banners.Recording.recording9.name,
+//                    Asset.Banners.Recording.recording10.name,
+//                    Asset.Banners.Recording.recording11.name,
+//                    Asset.Banners.Recording.recording12.name,
+//                    Asset.Banners.Recording.recording13.name,
+//                    Asset.Banners.Recording.recording14.name,
+//                    Asset.Banners.Recording.recording15.name,
+//                    Asset.Banners.Recording.recording16.name,
+//                    Asset.Banners.Recording.recording17.name,
+//                    Asset.Banners.Recording.recording18.name
                 ]
             )
         )

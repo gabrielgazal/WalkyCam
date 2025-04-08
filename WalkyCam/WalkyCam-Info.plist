@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>We need to access your microphone to enable app functions</string>
+	<key>NSCameraUsageDescription</key>
+	<string>We need to access your camera to enable app functions</string>
 	<key>DJISDKAppKey</key>
 	<string>ad00c5a89d4c90ce50efa501</string>
 	<key>MBXAccessToken</key>

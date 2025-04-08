@@ -1,0 +1,3 @@
+protocol NativeVideoCallInteractorProtocol {
+    func someFunction()
+}
