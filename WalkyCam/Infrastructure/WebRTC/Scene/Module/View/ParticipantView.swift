@@ -1,12 +1,5 @@
-//
-//  ParticipantView.swift
-//  WalkyCam
-//
-//  Created by Gabriel Gazal on 24/03/25.
-//
-
-import Foundation
 import SwiftUI
+import WebRTC
 
 struct ParticipantView: View {
     

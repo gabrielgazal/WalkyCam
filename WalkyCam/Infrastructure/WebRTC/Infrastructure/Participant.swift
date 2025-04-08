@@ -13,6 +13,8 @@ class Participant: ObservableObject, Identifiable {
     let userId: String
     let userName: String
     var peerConnection: RTCPeerConnection?
+    var renderer: RTCVideoRenderer?
+    var webRTCClient: WebRTCClient?
     @Published var videoTrack: RTCVideoTrack?
     @Published var audioTrack: RTCAudioTrack?
     @Published var isVideoEnabled: Bool
@@ -24,8 +26,10 @@ class Participant: ObservableObject, Identifiable {
         userId: String,
         userName: String,
         peerConnection: RTCPeerConnection? = nil,
+        renderer: RTCVideoRenderer? = nil,
         videoTrack: RTCVideoTrack? = nil,
         audioTrack: RTCAudioTrack? = nil,
+        webRTCClient: WebRTCClient? = nil,
         isHandRaised: Bool = false,
         isVideoEnabled: Bool = false,
         isAudioEnabled: Bool = false
@@ -34,6 +38,8 @@ class Participant: ObservableObject, Identifiable {
         self.userId = userId
         self.userName = userName
         self.peerConnection = peerConnection
+        self.renderer = renderer
+        self.webRTCClient = webRTCClient
         self.videoTrack = videoTrack
         self.audioTrack = audioTrack
         self.isHandRaised = isHandRaised

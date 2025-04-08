@@ -32,12 +32,18 @@ class WebRTCManager: NSObject, ObservableObject {
 
         let connection = peerConnectionFactory.peerConnection(with: config, constraints: constraints, delegate: delegate)
         
+        // Configurar o video depois de acabar a configuracao do iceCandidate
         let videoTransceiverInit = RTCRtpTransceiverInit()
         videoTransceiverInit.direction = .sendRecv
         connection?.addTransceiver(of: .video, init: videoTransceiverInit)
 
         if let track = localVideoTrack {
-            print("✅ Adicionando localVideoTrack ao peerConnection de \(participant.userName)")
+            print("✅ Adicionando localVideoTrack ao peerConnection de \(participant.userName): \(track.trackId)")
+            // Verificar qual stream do localStreams tem algo e enviar esse id
+//            for connection in connection?.localStreams {
+//                
+//            }
+            track.isEnabled = true
             connection?.add(track, streamIds: ["stream0"])
         } else {
             print("❌ localVideoTrack ainda é nil ao criar peerConnection de \(participant.userName)")
@@ -102,6 +108,7 @@ class WebRTCManager: NSObject, ObservableObject {
         guard let peerConnection = participant.peerConnection else { return }
         peerConnection.add(candidate)
     }
+    
     func startLocalVideo(completion: @escaping (RTCVideoTrack?) -> Void) {
         let videoSource = peerConnectionFactory.videoSource()
         localCapturer = RTCCameraVideoCapturer(delegate: videoSource)
@@ -140,23 +147,32 @@ class PeerConnectionDelegate: NSObject, RTCPeerConnectionDelegate {
                 print("🎥 Track recebida para \(self.participant.userName)")
                 self.participant.videoTrack = track
 
-                // ⚠️ Força a lista de participantes a ser atualizada no ObservableObject
+                if let renderer = self.participant.renderer {
+                    track.add(renderer)
+                } else {
+                    print("⚠️ Renderer ainda não setado para \(self.participant.userName)")
+                }
+
+                // Forçar atualização do @Published
                 if let index = SocketManagerService.shared.participants.firstIndex(where: { $0.connectionId == self.participant.connectionId }) {
-                    // Aqui apenas reatribuímos o array pra forçar notificação
                     var updated = SocketManagerService.shared.participants
                     updated[index] = self.participant
                     SocketManagerService.shared.participants = updated
                 }
             }
         }
+
     }
 
 
     // Os outros métodos podem ficar vazios por enquanto:
     func peerConnection(_ peerConnection: RTCPeerConnection, didChange stateChanged: RTCSignalingState) {}
+    // Em WebRTCManager.swift (classe PeerConnectionDelegate)
     func peerConnection(_ peerConnection: RTCPeerConnection, didGenerate candidate: RTCIceCandidate) {
-        // TODO: Emitir via WebSocket se necessário
+        // Emite o candidato ICE para o servidor
+        SocketManagerService.shared.sendIceCandidate(candidate, for: participant.connectionId)
     }
+
     func peerConnection(_ peerConnection: RTCPeerConnection, didChange newState: RTCIceConnectionState) {}
     func peerConnection(_ peerConnection: RTCPeerConnection, didRemove candidates: [RTCIceCandidate]) {}
     func peerConnectionShouldNegotiate(_ peerConnection: RTCPeerConnection) {}

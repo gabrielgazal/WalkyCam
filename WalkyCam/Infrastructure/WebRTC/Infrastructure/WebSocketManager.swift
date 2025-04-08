@@ -16,7 +16,8 @@ class SocketManagerService: ObservableObject {
     private let socket: SocketIOClient
     private var callId: String = ""
     private var localConnectionId: String = ""
-    
+    private var localUserId: String = ""
+
     @Published var participants: [Participant] = []
     
     private init() {
@@ -61,6 +62,7 @@ class SocketManagerService: ObservableObject {
                     
                     let data: [String: Any] = [
                         "connectionId": participant.connectionId,
+                        "senderId": self.localUserId,
                         "sdpOffer": offer.sdp
                     ]
                     
@@ -68,7 +70,6 @@ class SocketManagerService: ObservableObject {
                 }
             }
         }
-        
         
         socket.on("newParticipantArrived") { data, _ in
             if let info = data.first as? [String: Any] {
@@ -85,6 +86,7 @@ class SocketManagerService: ObservableObject {
                         guard let offer = offer else { return }
                         let data: [String: Any] = [
                             "connectionId": participant.connectionId,
+                            "senderId": self.localUserId,
                             "sdpOffer": offer.sdp
                         ]
                         self.socket.emit("receiveVideoFrom", data)
@@ -137,6 +139,7 @@ class SocketManagerService: ObservableObject {
                 }
                 let data: [String: Any] = [
                     "connectionId": connectionId,
+                    "senderId": self.localUserId,
                     "sdpOffer": offer.sdp
                 ]
                 self.socket.emit("receiveVideoFrom", data)
@@ -179,6 +182,7 @@ class SocketManagerService: ObservableObject {
     
     func joinVideoCall() {
         guard let user = try? UserSession().user() else { return }
+        localUserId = user.id
         
         let data: [String: Any] = [
             "userName": user.userName,
@@ -191,6 +195,7 @@ class SocketManagerService: ObservableObject {
     func receiveVideoAnswer(userId: String, sdpAnswer: String) {
         socket.emit("receiveVideoAnswer", [
             "connectionId": userId,
+            "senderId": self.localUserId,
             "sdpAnswer": sdpAnswer
         ])
     }
@@ -201,5 +206,17 @@ class SocketManagerService: ObservableObject {
             "isVideoEnabled": isEnabled,
             "videocallId": callId
         ])
+    }
+    
+    func sendIceCandidate(_ candidate: RTCIceCandidate, for connectionId: String) {
+        let candidateData: [String: Any] = [
+            "connectionId": connectionId,
+            "sdpMid": candidate.sdpMid ?? "",
+            // Caso o candidate.sdpMLineIndex seja Int32, convertemos para Int
+            "sdpMLineIndex": Int(candidate.sdpMLineIndex),
+            "sdp": candidate.sdp
+        ]
+        socket.emit("onIceCandidate", candidateData)
+        print("📡 Candidato ICE emitido para \(connectionId): \(candidateData)")
     }
 }

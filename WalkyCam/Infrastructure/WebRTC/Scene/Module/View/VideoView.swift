@@ -1,10 +1,3 @@
-//
-//  VideoView.swift
-//  WalkyCam
-//
-//  Created by Gabriel Gazal on 17/03/25.
-
-
 import SwiftUI
 import WebRTC
 

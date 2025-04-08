@@ -12,7 +12,10 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
     @State private var localTrack: RTCVideoTrack?
     
     @State private var isVideoEnabled = false
-
+    @State private var isAudioEnabled = false
+    @State private var isHandRaised = false
+    @State private var isUserToolbarHidden = false
+    
     // MARK: - Initialization
     
     init(viewModel: ViewModel,
@@ -47,6 +50,7 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
                     }
                 }
             }
+            .isHidden(isUserToolbarHidden)
             toolbarView
         }
         .onAppear {
@@ -63,6 +67,7 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
             Color.negro
                 .ignoresSafeArea()
         }
+        .frame(idealWidth: .infinity)
     }
     
     private var toolbarView: some View {
@@ -72,12 +77,15 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
                 HStack(
                     alignment: .center,
                     spacing: 20) {
-                        Image(systemName: "microphone.slash.fill")
+                        Asset.Icons.microphone.swiftUIImage
                             .resizable()
-                            .foregroundColor(Color.white)
+                            .foregroundColor(isAudioEnabled ? Color.naranja : Color.white)
                             .scaledToFit()
                             .frame(width: 25)
-                        Image(systemName: isVideoEnabled ? "video" : "video.slash")
+                            .onTapGesture {
+                                isAudioEnabled.toggle()
+                            }
+                        Image(systemName: "video")
                             .resizable()
                             .foregroundColor(isVideoEnabled ? Color.naranja : Color.white)
                             .scaledToFit()
@@ -88,14 +96,20 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
                             }
                         Image(systemName: "hand.raised.fill")
                             .resizable()
-                            .foregroundColor(Color.white)
+                            .foregroundColor(isHandRaised ? Color.naranja : Color.white)
                             .scaledToFit()
                             .frame(width: 25)
+                            .onTapGesture {
+                                isHandRaised.toggle()
+                            }
                         Image(systemName: "person")
                             .resizable()
-                            .foregroundColor(Color.white)
+                            .foregroundColor(isUserToolbarHidden ? Color.white : Color.naranja)
                             .scaledToFit()
                             .frame(width: 25)
+                            .onTapGesture {
+                                isUserToolbarHidden.toggle()
+                            }
                         Image(systemName: "ellipsis")
                             .resizable()
                             .foregroundColor(Color.white)
