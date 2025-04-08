@@ -130,7 +130,6 @@
 		5621B70C2C2EF32100BFD923 /* ChatBotClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621B70B2C2EF32100BFD923 /* ChatBotClient.swift */; };
 		5621B70F2C2F478300BFD923 /* CreateVideoCallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621B70E2C2F478200BFD923 /* CreateVideoCallUseCase.swift */; };
 		5626C3962C74D9B600CC8004 /* WalkcamerRegistrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5626C3952C74D9B600CC8004 /* WalkcamerRegistrationManager.swift */; };
-		5627019D2DA4BEE50031DD2E /* WebRTCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627019C2DA4BEE50031DD2E /* WebRTCClient.swift */; };
 		56298DFA2D06312200CF407F /* HomeKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56298DF92D06312200CF407F /* HomeKitManager.swift */; };
 		56298E172D0632BF00CF407F /* BulbPartyLightSelectorAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56298E022D0632BE00CF407F /* BulbPartyLightSelectorAssembler.swift */; };
 		56298E182D0632BF00CF407F /* BulbPartyLightSelectorAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56298E032D0632BE00CF407F /* BulbPartyLightSelectorAssemblerProtocol.swift */; };
@@ -1332,7 +1331,6 @@
 		5621B70B2C2EF32100BFD923 /* ChatBotClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotClient.swift; sourceTree = "<group>"; };
 		5621B70E2C2F478200BFD923 /* CreateVideoCallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateVideoCallUseCase.swift; sourceTree = "<group>"; };
 		5626C3952C74D9B600CC8004 /* WalkcamerRegistrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkcamerRegistrationManager.swift; sourceTree = "<group>"; };
-		5627019C2DA4BEE50031DD2E /* WebRTCClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRTCClient.swift; sourceTree = "<group>"; };
 		56298DF72D062FC100CF407F /* WalkyCam.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WalkyCam.entitlements; sourceTree = "<group>"; };
 		56298DF92D06312200CF407F /* HomeKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeKitManager.swift; sourceTree = "<group>"; };
 		56298E022D0632BE00CF407F /* BulbPartyLightSelectorAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulbPartyLightSelectorAssembler.swift; sourceTree = "<group>"; };
@@ -3665,7 +3663,6 @@
 				564E7A012D88D6BF003100BD /* WebSocketManager.swift */,
 				564E7A032D88D6DF003100BD /* WebRTCManager.swift */,
 				564E7A052D88ECC1003100BD /* Participant.swift */,
-				5627019C2DA4BEE50031DD2E /* WebRTCClient.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -13495,7 +13492,6 @@
 				EA6083672B01981800295069 /* CryptoDetailsInteractorProtocol.swift in Sources */,
 				EA4A1C6D2B87909F00B5FC59 /* ExternalAssistantAssemblerProtocol.swift in Sources */,
 				5604D0D82C1157C60069C0D6 /* DroneConnectionRouter.swift in Sources */,
-				5627019D2DA4BEE50031DD2E /* WebRTCClient.swift in Sources */,
 				561AA6F32BE3A6B500393CEF /* FeatureInformationViewModel.swift in Sources */,
 				56C890322CED0267004B21CD /* Photo3DScannerAssembler.swift in Sources */,
 				EA57A7A32B6C1558006247DD /* CammerDetailsView.swift in Sources */,
