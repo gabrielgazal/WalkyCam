@@ -41,7 +41,7 @@ struct VideoCallView<ViewModel: VideoCallViewModelProtocol, Router: VideoCallRou
                                 callId in
                                 if let userId = try? UserSession().user().id {
                                     router.routeToMeetRoom(
-                                        "https://meet.walkycam.com/videocall/\(callId)/\(userId)"
+                                        callId
                                     )
                                 }
                             },
