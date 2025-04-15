@@ -15,7 +15,7 @@ class SocketManagerService: NSObject, ObservableObject {
     private let manager: SocketManager
     private let socket: SocketIOClient
     private var callId: String = ""
-    private var localConnectionId: String = ""
+    @Published var localConnectionId: String = ""
     private var localUserId: String = ""
 
     @Published var participants: [Participant] = []
@@ -43,16 +43,50 @@ class SocketManagerService: NSObject, ObservableObject {
         callId = ""
     }
 
+    fileprivate func renegotiateConnection() {
+        for participant in self.participants {
+            // Força a adição dos tracks novamente
+            WebRTCManager.shared.ensureLocalTracksAreAdded()
+            
+            // Gera uma nova oferta
+            WebRTCManager.shared.generateOffer(for: participant.connectionId) { offer in
+                guard let offer = offer else { return }
+                
+                let offerPayload: [String: Any] = [
+                    "connectionId": participant.connectionId,
+                    "senderId": self.localUserId,
+                    "sdpOffer": offer.sdp
+                ]
+                
+                print("📡 Emitindo receiveVideoFrom para \(participant.connectionId) (renegociação)")
+                self.socket.emit("receiveVideoFrom", offerPayload)
+            }
+        }
+    }
+    
     func joinVideoCall() {
-        guard let user = try? UserSession().user() else { return }
+        guard let user = try? UserSession().user() else {
+            print("❌ Não foi possível obter o usuário para entrar na videochamada")
+            return
+        }
+        
         localUserId = user.id
-
+        
         let data: [String: Any] = [
             "userName": user.userName,
             "userId": user.id,
-            "videocallId": callId
+            "videocallId": callId,
+            "isVideoEnabled": WebRTCManager.shared.localVideoTrack?.isEnabled ?? true,
+            "idHostUser": "6695d6a939b668e8a20be643"
         ]
+        
+        print("📣 Entrando na videochamada com ID: \(callId), como: \(user.userName)")
         socket.emit("joinToVideocall", data)
+        
+        // Teste forçando renegociação após alguns segundos
+        print("🔄 Forçando renegociação de todas as conexões")
+        renegotiateConnection()
+        
     }
 
     func setupSocketEvents() {
@@ -81,21 +115,19 @@ class SocketManagerService: NSObject, ObservableObject {
                 )
 
                 self.participants.append(participant)
-
                 WebRTCManager.shared.createPeerConnection(for: participant)
 
                 WebRTCManager.shared.generateOffer(for: participant.connectionId) { offer in
                     guard let offer = offer else { return }
-
                     let offerPayload: [String: Any] = [
                         "connectionId": participant.connectionId,
                         "senderId": self.localUserId,
                         "sdpOffer": offer.sdp
                     ]
-
                     print("📡 Emitindo receiveVideoFrom para \(participant.connectionId)")
                     self.socket.emit("receiveVideoFrom", offerPayload)
                 }
+
             }
         }
 
