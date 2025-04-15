@@ -18,20 +18,23 @@ final class VideoCallViewModel: VideoCallViewModelProtocol {
     // MARK: - Public API
     
     func assembleVideoCallLink() -> Result<String, Error> {
-        do {
-            let userId = try UserSession().user().id
-
-            if videoCallLink.starts(with: "https://meet.walkycam.com/") {
-                return .success(videoCallLink)
-            } else if videoCallLink.starts(with: "meet.walkycam.com/") {
-                return .success("https://\(videoCallLink)")
+        let prefixes = [
+            "https://meet.walkycam.com/videocall/",
+            "meet.walkycam.com/videocall/"
+        ]
+        
+        for prefix in prefixes {
+            if videoCallLink.starts(with: prefix) {
+                let components = videoCallLink
+                    .replacingOccurrences(of: prefix, with: "")
+                    .split(separator: "/")
+                
+                if let videoCallId = components.first {
+                    return .success(String(videoCallId))
+                }
             }
-            
-            let videoCallURL = "https://meet.walkycam.com/videocall/\(videoCallLink)/\(userId)"
-            return .success(videoCallURL)
-        } catch {
-            return .failure(error)
         }
+        return videoCallLink.contains("/") ? .failure(GenericError()) : .success(videoCallLink)
     }
 
     
