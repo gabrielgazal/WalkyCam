@@ -6,10 +6,11 @@ final class VideoCallRouter: Router, VideoCallRouterProtocol {
 
     func routeToMeetRoom(_ link: String) {
         navigateTo(
-            WebRoute(
-                isPreseted: isNavigating,
-                webViewURL: link
-            )
+//            WebRoute(
+//                isPreseted: isNavigating,
+//                webViewURL: link
+//            )
+            NativeVideoCallRoute(isPresented: isNavigating)
         )
     }
     

@@ -303,6 +303,22 @@
 		56AF275D2BDAE00800DADC29 /* RegisterWalkcamerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF274F2BDAE00800DADC29 /* RegisterWalkcamerView.swift */; };
 		56AF275E2BDAE00800DADC29 /* RegisterWalkcamerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF27512BDAE00800DADC29 /* RegisterWalkcamerViewModel.swift */; };
 		56AF275F2BDAE00800DADC29 /* RegisterWalkcamerViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF27522BDAE00800DADC29 /* RegisterWalkcamerViewModelProtocol.swift */; };
+		56AF7F262DADEC6800339D2F /* WebRTCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF7F252DADEC6700339D2F /* WebRTCManager.swift */; };
+		56AF7F292DADECA600339D2F /* WebRTC in Frameworks */ = {isa = PBXBuildFile; productRef = 56AF7F282DADECA600339D2F /* WebRTC */; };
+		56AF7F2B2DADECD800339D2F /* SocketManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF7F2A2DADECD800339D2F /* SocketManagerService.swift */; };
+		56AF7F2D2DADED0400339D2F /* RTCVideoRendererView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF7F2C2DADED0400339D2F /* RTCVideoRendererView.swift */; };
+		56AF7F312DADEFE100339D2F /* Participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF7F302DADEFE100339D2F /* Participant.swift */; };
+		56AF7F4E2DADF0B400339D2F /* NativeVideoCallAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF7F392DADF0B300339D2F /* NativeVideoCallAssembler.swift */; };
+		56AF7F4F2DADF0B400339D2F /* NativeVideoCallAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF7F3A2DADF0B300339D2F /* NativeVideoCallAssemblerProtocol.swift */; };
+		56AF7F502DADF0B400339D2F /* NativeVideoCallRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF7F3C2DADF0B300339D2F /* NativeVideoCallRoute.swift */; };
+		56AF7F512DADF0B400339D2F /* NativeVideoCallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF7F3F2DADF0B300339D2F /* NativeVideoCallModel.swift */; };
+		56AF7F522DADF0B400339D2F /* NativeVideoCallInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF7F422DADF0B300339D2F /* NativeVideoCallInteractor.swift */; };
+		56AF7F532DADF0B400339D2F /* NativeVideoCallInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF7F432DADF0B300339D2F /* NativeVideoCallInteractorProtocol.swift */; };
+		56AF7F542DADF0B400339D2F /* NativeVideoCallRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF7F452DADF0B300339D2F /* NativeVideoCallRouter.swift */; };
+		56AF7F552DADF0B400339D2F /* NativeVideoCallRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF7F462DADF0B300339D2F /* NativeVideoCallRouterProtocol.swift */; };
+		56AF7F562DADF0B400339D2F /* NativeVideoCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF7F482DADF0B300339D2F /* NativeVideoCallView.swift */; };
+		56AF7F572DADF0B400339D2F /* NativeVideoCallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF7F4A2DADF0B300339D2F /* NativeVideoCallViewModel.swift */; };
+		56AF7F582DADF0B400339D2F /* NativeVideoCallViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF7F4B2DADF0B300339D2F /* NativeVideoCallViewModelProtocol.swift */; };
 		56B3E46B2C3D8443004A87FA /* ScheduleVideoCallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B3E4562C3D8442004A87FA /* ScheduleVideoCallModel.swift */; };
 		56B3E46C2C3D8443004A87FA /* ScheduleVideoCallAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B3E4592C3D8442004A87FA /* ScheduleVideoCallAssembler.swift */; };
 		56B3E46D2C3D8443004A87FA /* ScheduleVideoCallAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B3E45A2C3D8442004A87FA /* ScheduleVideoCallAssemblerProtocol.swift */; };
@@ -1489,6 +1505,21 @@
 		56AF274F2BDAE00800DADC29 /* RegisterWalkcamerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWalkcamerView.swift; sourceTree = "<group>"; };
 		56AF27512BDAE00800DADC29 /* RegisterWalkcamerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWalkcamerViewModel.swift; sourceTree = "<group>"; };
 		56AF27522BDAE00800DADC29 /* RegisterWalkcamerViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWalkcamerViewModelProtocol.swift; sourceTree = "<group>"; };
+		56AF7F252DADEC6700339D2F /* WebRTCManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRTCManager.swift; sourceTree = "<group>"; };
+		56AF7F2A2DADECD800339D2F /* SocketManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketManagerService.swift; sourceTree = "<group>"; };
+		56AF7F2C2DADED0400339D2F /* RTCVideoRendererView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCVideoRendererView.swift; sourceTree = "<group>"; };
+		56AF7F302DADEFE100339D2F /* Participant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participant.swift; sourceTree = "<group>"; };
+		56AF7F392DADF0B300339D2F /* NativeVideoCallAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeVideoCallAssembler.swift; sourceTree = "<group>"; };
+		56AF7F3A2DADF0B300339D2F /* NativeVideoCallAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeVideoCallAssemblerProtocol.swift; sourceTree = "<group>"; };
+		56AF7F3C2DADF0B300339D2F /* NativeVideoCallRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeVideoCallRoute.swift; sourceTree = "<group>"; };
+		56AF7F3F2DADF0B300339D2F /* NativeVideoCallModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeVideoCallModel.swift; sourceTree = "<group>"; };
+		56AF7F422DADF0B300339D2F /* NativeVideoCallInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeVideoCallInteractor.swift; sourceTree = "<group>"; };
+		56AF7F432DADF0B300339D2F /* NativeVideoCallInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeVideoCallInteractorProtocol.swift; sourceTree = "<group>"; };
+		56AF7F452DADF0B300339D2F /* NativeVideoCallRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeVideoCallRouter.swift; sourceTree = "<group>"; };
+		56AF7F462DADF0B300339D2F /* NativeVideoCallRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeVideoCallRouterProtocol.swift; sourceTree = "<group>"; };
+		56AF7F482DADF0B300339D2F /* NativeVideoCallView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeVideoCallView.swift; sourceTree = "<group>"; };
+		56AF7F4A2DADF0B300339D2F /* NativeVideoCallViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeVideoCallViewModel.swift; sourceTree = "<group>"; };
+		56AF7F4B2DADF0B300339D2F /* NativeVideoCallViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeVideoCallViewModelProtocol.swift; sourceTree = "<group>"; };
 		56B2DC482C9B9F6200396732 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		56B3E4562C3D8442004A87FA /* ScheduleVideoCallModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVideoCallModel.swift; sourceTree = "<group>"; };
 		56B3E4592C3D8442004A87FA /* ScheduleVideoCallAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVideoCallAssembler.swift; sourceTree = "<group>"; };
@@ -2377,6 +2408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA51031E2BA7EA3200A2DE2E /* StripePayments in Frameworks */,
+				56AF7F292DADECA600339D2F /* WebRTC in Frameworks */,
 				EA5103162BA7EA3200A2DE2E /* StripeCardScan in Frameworks */,
 				EA5103142BA7EA3200A2DE2E /* StripeApplePay in Frameworks */,
 				EA5103202BA7EA3200A2DE2E /* StripePaymentsUI in Frameworks */,
@@ -4758,6 +4790,124 @@
 			path = Module;
 			sourceTree = "<group>";
 		};
+		56AF7F232DADEC4100339D2F /* RTCVideoCall */ = {
+			isa = PBXGroup;
+			children = (
+				56AF7F322DADF09100339D2F /* Scene */,
+				56AF7F242DADEC5600339D2F /* Infrastructure */,
+			);
+			path = RTCVideoCall;
+			sourceTree = "<group>";
+		};
+		56AF7F242DADEC5600339D2F /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				56AF7F252DADEC6700339D2F /* WebRTCManager.swift */,
+				56AF7F2A2DADECD800339D2F /* SocketManagerService.swift */,
+				56AF7F2C2DADED0400339D2F /* RTCVideoRendererView.swift */,
+				56AF7F302DADEFE100339D2F /* Participant.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		56AF7F322DADF09100339D2F /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				56AF7F3E2DADF0B300339D2F /* Configuration */,
+				56AF7F412DADF0B300339D2F /* Domain */,
+				56AF7F4D2DADF0B300339D2F /* Module */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		56AF7F3B2DADF0B300339D2F /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				56AF7F392DADF0B300339D2F /* NativeVideoCallAssembler.swift */,
+				56AF7F3A2DADF0B300339D2F /* NativeVideoCallAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		56AF7F3D2DADF0B300339D2F /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				56AF7F3C2DADF0B300339D2F /* NativeVideoCallRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		56AF7F3E2DADF0B300339D2F /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				56AF7F3B2DADF0B300339D2F /* Assembler */,
+				56AF7F3D2DADF0B300339D2F /* Route */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		56AF7F402DADF0B300339D2F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				56AF7F3F2DADF0B300339D2F /* NativeVideoCallModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		56AF7F412DADF0B300339D2F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				56AF7F402DADF0B300339D2F /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		56AF7F442DADF0B300339D2F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				56AF7F422DADF0B300339D2F /* NativeVideoCallInteractor.swift */,
+				56AF7F432DADF0B300339D2F /* NativeVideoCallInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		56AF7F472DADF0B300339D2F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				56AF7F452DADF0B300339D2F /* NativeVideoCallRouter.swift */,
+				56AF7F462DADF0B300339D2F /* NativeVideoCallRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		56AF7F492DADF0B300339D2F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				56AF7F482DADF0B300339D2F /* NativeVideoCallView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		56AF7F4C2DADF0B300339D2F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				56AF7F4A2DADF0B300339D2F /* NativeVideoCallViewModel.swift */,
+				56AF7F4B2DADF0B300339D2F /* NativeVideoCallViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		56AF7F4D2DADF0B300339D2F /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				56AF7F442DADF0B300339D2F /* Interactor */,
+				56AF7F472DADF0B300339D2F /* Router */,
+				56AF7F492DADF0B300339D2F /* View */,
+				56AF7F4C2DADF0B300339D2F /* ViewModel */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
 		56B3E44F2C3D8417004A87FA /* ScheduleVideoCall */ = {
 			isa = PBXGroup;
 			children = (
@@ -6003,6 +6153,7 @@
 		EA15B5A52AD7067400C03407 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				56AF7F232DADEC4100339D2F /* RTCVideoCall */,
 				56A95B762D22F60100D31B43 /* Streetcammers */,
 				56D4DF422D19E040009E4222 /* AudioManager */,
 				56298DF82D06311500CF407F /* HomeKit */,
@@ -12150,6 +12301,7 @@
 				EA51031D2BA7EA3200A2DE2E /* StripePayments */,
 				EA51031F2BA7EA3200A2DE2E /* StripePaymentsUI */,
 				5621B7082C2EF25400BFD923 /* SocketIO */,
+				56AF7F282DADECA600339D2F /* WebRTC */,
 			);
 			productName = WalkyCam;
 			productReference = 5637A8122AD5DD72000586DF /* WalkyCam.app */;
@@ -12182,6 +12334,7 @@
 			packageReferences = (
 				EA5103102BA7EA3200A2DE2E /* XCRemoteSwiftPackageReference "stripe-ios-spm" */,
 				5621B7072C2EF25400BFD923 /* XCRemoteSwiftPackageReference "socket" */,
+				56AF7F272DADECA600339D2F /* XCRemoteSwiftPackageReference "WebRTC" */,
 			);
 			productRefGroup = 5637A8132AD5DD72000586DF /* Products */;
 			projectDirPath = "";
@@ -12303,6 +12456,7 @@
 				EA86532D2B90E9CA00B86A54 /* AIOnboardingRoute.swift in Sources */,
 				56F3D3EB2D42B4BD009F5A6D /* AppleWatchSimulatorInteractor.swift in Sources */,
 				EA8652E02B90DCE900B86A54 /* PrintMenuInteractor.swift in Sources */,
+				56AF7F552DADF0B400339D2F /* NativeVideoCallRouterProtocol.swift in Sources */,
 				EA57A7A22B6C1558006247DD /* CammerDetailsViewModelProtocol.swift in Sources */,
 				5621B7042C2E605100BFD923 /* UnavailableFeatureAssembler.swift in Sources */,
 				56AF275F2BDAE00800DADC29 /* RegisterWalkcamerViewModelProtocol.swift in Sources */,
@@ -12414,6 +12568,7 @@
 				561853AA2C589F5E00CBD687 /* StartScheduleVideocallUseCase.swift in Sources */,
 				EA2F93FA2B62CECD00E1C146 /* LoginInteractorProtocol.swift in Sources */,
 				EAE8EC472B9574840003AE96 /* ChatDetailAssembler.swift in Sources */,
+				56AF7F582DADF0B400339D2F /* NativeVideoCallViewModelProtocol.swift in Sources */,
 				561AA6F02BE3A6B500393CEF /* FeatureInformationRouter.swift in Sources */,
 				EA8652942B90ACC200B86A54 /* IOTOnboardingModel.swift in Sources */,
 				EA94A5312B7160EF00EC3037 /* ServiceDetailsView.swift in Sources */,
@@ -12456,6 +12611,7 @@
 				568B3BCD2D172CA900F28CC1 /* GetNearWalkyCammersUseCase.swift in Sources */,
 				EA910FCF2ADC495700584B98 /* TabBarModel.swift in Sources */,
 				EAF47C432B838D74003F8B86 /* DroneMenuRouter.swift in Sources */,
+				56AF7F572DADF0B400339D2F /* NativeVideoCallViewModel.swift in Sources */,
 				EA910F8B2ADA06F500584B98 /* RegistrationRoute.swift in Sources */,
 				EA172AF72AF06BDE00EB1514 /* ConfirmMailAssemblerProtocol.swift in Sources */,
 				569BA79D2C2DF57E00E4CCF1 /* PlayBusinessViewModelProtocol.swift in Sources */,
@@ -12490,6 +12646,7 @@
 				EAD048692AE22C530096E6AB /* RegistrationPlansViewModelProtocol.swift in Sources */,
 				EA5A87F72B67FD7C00BBB7F9 /* FetchUserDataUseCase.swift in Sources */,
 				569BA79A2C2DF57E00E4CCF1 /* PlayBusinessRouterProtocol.swift in Sources */,
+				56AF7F502DADF0B400339D2F /* NativeVideoCallRoute.swift in Sources */,
 				EAF47B7D2B82FCE8003F8B86 /* BookWalkycamerAssembler.swift in Sources */,
 				EAA1E63B2AFB03FD00A42174 /* CashTabRoute.swift in Sources */,
 				56C890302CED0267004B21CD /* Photo3DScannerViewModel.swift in Sources */,
@@ -12677,6 +12834,7 @@
 				EA72199D2B05612900BE2D93 /* WalkyBotRouterProtocol.swift in Sources */,
 				561D839C2BE90D930045C540 /* CamerAvailabilityInteractor.swift in Sources */,
 				EA20A5652B87D35B006662FA /* ShareSheetInteractorProtocol.swift in Sources */,
+				56AF7F4E2DADF0B400339D2F /* NativeVideoCallAssembler.swift in Sources */,
 				EA172B262AF06EF600EB1514 /* StartupRouter.swift in Sources */,
 				EA8EF8D32B67E14300136D1F /* UserSession.swift in Sources */,
 				EAF47BCD2B8306E9003F8B86 /* TimeTabAssemblerProtocol.swift in Sources */,
@@ -12706,6 +12864,7 @@
 				EA6083902B01CD0A00295069 /* ShopTabView.swift in Sources */,
 				EA06554E2BB5DA5D006148E7 /* RadarMenuInteractor.swift in Sources */,
 				EAE401FB2BBAFB0900B1311E /* RobotMenuView.swift in Sources */,
+				56AF7F4F2DADF0B400339D2F /* NativeVideoCallAssemblerProtocol.swift in Sources */,
 				567CB76F2C51885600112F05 /* ServiceConfirmationModel.swift in Sources */,
 				EA91102B2ADDB05300584B98 /* ImageLoader.swift in Sources */,
 				565909672BF67742002FD2B5 /* TextMask.swift in Sources */,
@@ -12812,6 +12971,7 @@
 				EA57A7A62B6C1558006247DD /* CammerDetailsRouter.swift in Sources */,
 				EA12351A2B9A2B6200443CF8 /* Int64+Extension.swift in Sources */,
 				569889D52C46AE85006D5997 /* ThermalCameraOnboardingView.swift in Sources */,
+				56AF7F312DADEFE100339D2F /* Participant.swift in Sources */,
 				EA8652432B902E4B00B86A54 /* FunctionMenuModel.swift in Sources */,
 				EA6083412AFD58A900295069 /* CryptoTabViewModelProtocol.swift in Sources */,
 				EAD0486D2AE22C530096E6AB /* RegistrationPlansInteractor.swift in Sources */,
@@ -12832,6 +12992,7 @@
 				EA50A0902B0BCC940042B238 /* PlanPageView.swift in Sources */,
 				EA8652B92B90DA9600B86A54 /* 3DPrintOnboardingInteractor.swift in Sources */,
 				EAA1E6422AFB03FD00A42174 /* CashTabInteractor.swift in Sources */,
+				56AF7F542DADF0B400339D2F /* NativeVideoCallRouter.swift in Sources */,
 				EA60838B2B01CD0A00295069 /* ShopTabAssemblerProtocol.swift in Sources */,
 				EAE8EC532B9574840003AE96 /* ChatListViewModelProtocol.swift in Sources */,
 				EA8653572B90EBE800B86A54 /* ConfigureAccessAssembler.swift in Sources */,
@@ -12846,6 +13007,7 @@
 				56459FA72BFFB4D300776F68 /* SnackBarRouterProtocol.swift in Sources */,
 				56F3D3ED2D42B4BD009F5A6D /* AppleWatchSimulatorRouter.swift in Sources */,
 				561FC8C62B5C6854005B6006 /* ExternalURL.swift in Sources */,
+				56AF7F522DADF0B400339D2F /* NativeVideoCallInteractor.swift in Sources */,
 				EA910F962ADA06F500584B98 /* RegistrationInput.swift in Sources */,
 				56B3E49B2C3DA041004A87FA /* VideocallTimeTabAssemblerProtocol.swift in Sources */,
 				56A552592B2F6E3D006B1B17 /* StreetCamMenuViewModelProtocol.swift in Sources */,
@@ -12902,6 +13064,7 @@
 				EA91101A2ADDADE100584B98 /* HomeViewModel.swift in Sources */,
 				56F8AE292C247BE000EC7D4F /* IOTSensorsRouterProtocol.swift in Sources */,
 				569889AA2C462E2D006D5997 /* TimedLoadingScreenAssembler.swift in Sources */,
+				56AF7F2B2DADECD800339D2F /* SocketManagerService.swift in Sources */,
 				56A95B782D22F61200D31B43 /* StreetcammerManager.swift in Sources */,
 				56872CA12D5E752F002FAE9A /* GalleryModelsRouterProtocol.swift in Sources */,
 				EAF47C1C2B830C80003F8B86 /* WalkyCammerListModel.swift in Sources */,
@@ -13074,6 +13237,7 @@
 				56F8AE2A2C247BE000EC7D4F /* IOTSensorsView.swift in Sources */,
 				EAB63BC22B83D63A0017BDA4 /* ARHandsMenuRouterProtocol.swift in Sources */,
 				EAE401D72BBA452900B1311E /* DigitalTwinsMenuView.swift in Sources */,
+				56AF7F262DADEC6800339D2F /* WebRTCManager.swift in Sources */,
 				EAF47B752B82FCE8003F8B86 /* BookWalkycamerViewModelProtocol.swift in Sources */,
 				EA50A08B2B0BC77F0042B238 /* PlansPagesRouter.swift in Sources */,
 				EA8652B42B90DA9600B86A54 /* 3DPrintOnboardingAssemblerProtocol.swift in Sources */,
@@ -13113,6 +13277,7 @@
 				EA4AE48B2B7505D100B5A89F /* TabBarInteractorProtocol.swift in Sources */,
 				EAE401AF2BBA3D6100B1311E /* DigitalTwinsOnboardingInteractorProtocol.swift in Sources */,
 				56F2AF902BEC896000C458DE /* AvailableDayItemView.swift in Sources */,
+				56AF7F2D2DADED0400339D2F /* RTCVideoRendererView.swift in Sources */,
 				EAF47BCE2B8306E9003F8B86 /* TimeTabAssembler.swift in Sources */,
 				EA6083942B01CD0A00295069 /* ShopTabRouter.swift in Sources */,
 				56B3E4962C3DA041004A87FA /* VideocallTimeTabRouterProtocol.swift in Sources */,
@@ -13190,6 +13355,7 @@
 				EA282E522AE952F700B90920 /* ProfileAssemblerProtocol.swift in Sources */,
 				EA8653562B90EBE800B86A54 /* ConfigureAccessAssemblerProtocol.swift in Sources */,
 				EAB63B962B83D2ED0017BDA4 /* ARHandsOnboardingViewModelProtocol.swift in Sources */,
+				56AF7F532DADF0B400339D2F /* NativeVideoCallInteractorProtocol.swift in Sources */,
 				EA910F3A2AD9782000584B98 /* SelectorModel.swift in Sources */,
 				EAD0486F2AE22C530096E6AB /* RegistrationPlansRouterProtocol.swift in Sources */,
 				EA8652DB2B90DCE900B86A54 /* PrintMenuModel.swift in Sources */,
@@ -13293,6 +13459,7 @@
 				5604D0E62C11FA590069C0D6 /* FPUIView.swift in Sources */,
 				EA8EF8E92B67E71B00136D1F /* UserSessionData.swift in Sources */,
 				56B3E4942C3DA041004A87FA /* VideocallTimeTabInteractorProtocol.swift in Sources */,
+				56AF7F562DADF0B400339D2F /* NativeVideoCallView.swift in Sources */,
 				EA57A7CD2B6C2C31006247DD /* AddPeopleTransmissionAssembler.swift in Sources */,
 				EA4165472AE706C6008CE66A /* NotificationsRouterProtocol.swift in Sources */,
 				EA172AFA2AF06BDE00EB1514 /* ConfirmMailViewModel.swift in Sources */,
@@ -13317,6 +13484,7 @@
 				5668BB362BDFD5FB00A6E05D /* ProfitSelectionModel.swift in Sources */,
 				EA94A52E2B7160EF00EC3037 /* ServiceDetailsAssemblerProtocol.swift in Sources */,
 				EADB5CA52B190819005863E1 /* VideoCallAssembler.swift in Sources */,
+				56AF7F512DADF0B400339D2F /* NativeVideoCallModel.swift in Sources */,
 				EA6083672B01981800295069 /* CryptoDetailsInteractorProtocol.swift in Sources */,
 				EA4A1C6D2B87909F00B5FC59 /* ExternalAssistantAssemblerProtocol.swift in Sources */,
 				5604D0D82C1157C60069C0D6 /* DroneConnectionRouter.swift in Sources */,
@@ -13673,6 +13841,14 @@
 				kind = branch;
 			};
 		};
+		56AF7F272DADECA600339D2F /* XCRemoteSwiftPackageReference "WebRTC" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stasel/WebRTC.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 135.0.0;
+			};
+		};
 		EA5103102BA7EA3200A2DE2E /* XCRemoteSwiftPackageReference "stripe-ios-spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/stripe/stripe-ios-spm";
@@ -13688,6 +13864,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5621B7072C2EF25400BFD923 /* XCRemoteSwiftPackageReference "socket" */;
 			productName = SocketIO;
+		};
+		56AF7F282DADECA600339D2F /* WebRTC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 56AF7F272DADECA600339D2F /* XCRemoteSwiftPackageReference "WebRTC" */;
+			productName = WebRTC;
 		};
 		EA5103112BA7EA3200A2DE2E /* Stripe */ = {
 			isa = XCSwiftPackageProductDependency;
