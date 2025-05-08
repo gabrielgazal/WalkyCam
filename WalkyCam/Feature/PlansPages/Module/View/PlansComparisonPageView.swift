@@ -108,9 +108,9 @@ struct PlansComparisonPageView: View {
             Text(monthlyToggle ?
                  L10n.RegistrationPlans.Value.yearly(formatDouble(plan.yearlyPrice)): L10n.RegistrationPlans.Value.monthly(formatDouble(plan.monthlyPrice)))
             .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .bold))
-            WCUIButton(title: "Start \(plan.title)",
+            WCUIButton(title: "Start \(plan.title.uppercased())",
                        style: .standard,
-                       descriptor: getButtonDescriptor(plan.title),
+                       descriptor: PlanButtonStyleDescriptor(planName: plan.title),
                        action: {
                 startPlanAction?(plan.title)
             })
@@ -132,21 +132,6 @@ struct PlansComparisonPageView: View {
                 }
             }
             Spacer()
-        }
-    }
-    
-    private func getButtonDescriptor(_ title: String) -> ButtonStyleDescriptorProtocol {
-        switch title {
-        case "free":
-            return GreyButtonStyleDescriptor()
-        case "basic":
-            return BlueButtonStyleDescriptor()
-        case "standard":
-            return OrangeButtonStyleDescriptor()
-        case "premium":
-            return YellowButtonStyleDescriptor()
-        default:
-            return OrangeButtonStyleDescriptor()
         }
     }
     

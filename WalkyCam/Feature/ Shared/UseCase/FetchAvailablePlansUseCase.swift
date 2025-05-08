@@ -40,7 +40,7 @@ extension FetchAvailablePlansUseCase {
                          name: item.name,
                          monthlyPrice: item.monthlyPrice,
                          yearlyPrice: item.yearlyPrice,
-                         color: Color(item.name),
+                         color: Color(item.name.lowercased()),
                          order: Int(item.order) ?? 0)
         }
     }

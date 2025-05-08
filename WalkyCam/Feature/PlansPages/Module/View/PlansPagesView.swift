@@ -33,9 +33,9 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 100)
                             .foregroundColor(.naranja)
-                            .isHidden(viewModel.currentPage == 4)
+                            .isHidden(viewModel.currentPage == 5)
                         Spacer()
-                        if viewModel.currentPage == 3 {
+                        if viewModel.currentPage == 4 {
                             Image(systemName: "crown.fill")
                                 .renderingMode(.template)
                                 .resizable()
@@ -49,10 +49,10 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
                                    style: .standard,
                                    descriptor: BlackButtonStyleDescriptor(),
                                    action: {
-                            viewModel.currentPage = 4
+                            viewModel.currentPage = 5
                         })
                         .frame(width: 140)
-                        .isHidden(viewModel.currentPage == 4)
+                        .isHidden(viewModel.currentPage == 5)
                     }
                     TabView(selection: $viewModel.currentPage) {
                         ForEach(0..<viewModel.plans.count) { index in
@@ -66,16 +66,16 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
                                 viewModel.currentPage = selectedPlanIndex
                             }
                         })
-                            .tag(4)
+                            .tag(5)
                     }
                     .accentColor(.naranja)
                     .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
 
                     if let title = currentPlan()?.title {
                         WCUIButton(
-                            title: String(format: L10n.PlansPagesView.Button.start(title)),
+                            title: String(format: L10n.PlansPagesView.Button.start(title.uppercased())),
                             style: .standard,
-                            descriptor: getButtonDescriptor(),
+                            descriptor: PlanButtonStyleDescriptor(planName: title),
                             action: {
                                 if viewModel.currentPage > 0 {
                                     isPaymentSheetPresented = true
@@ -126,7 +126,7 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
             await viewModel.preparePaymentSheet()
         }
         .onChange(of: viewModel.currentPage) { newValue in
-            if newValue > 0 && newValue < 4 {
+            if newValue > 0 && newValue < 5 {
                 Task {
                     await viewModel.preparePaymentSheet()
                 }
@@ -161,21 +161,6 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
             return viewModel.plans[viewModel.currentPage]
         } else {
             return nil
-        }
-    }
-
-    private func getButtonDescriptor() -> ButtonStyleDescriptorProtocol {
-        switch viewModel.currentPage {
-        case 0:
-            return GreyButtonStyleDescriptor()
-        case 1:
-            return BlueButtonStyleDescriptor()
-        case 2:
-            return OrangeButtonStyleDescriptor()
-        case 3:
-            return YellowButtonStyleDescriptor()
-        default:
-            return OrangeButtonStyleDescriptor()
         }
     }
 }

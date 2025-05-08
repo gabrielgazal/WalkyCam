@@ -64,7 +64,7 @@ struct RegistrationPlansView<ViewModel:RegistrationPlansViewModelProtocol, Route
                            style: .standard,
                            descriptor: BlackButtonStyleDescriptor(),
                            action: {
-                    handlePlanAction(4)
+                    handlePlanAction(5)
                 })
             }
         }
@@ -83,13 +83,13 @@ struct RegistrationPlansView<ViewModel:RegistrationPlansViewModelProtocol, Route
                 .fill(Color.negro.opacity(0.6))
                 .cornerRadius(Tokens.Size.Border.Radius.large, corners: .allCorners)
             Rectangle()
-                .fill(item.color)
+                .fill(item.color.opacity(0.4))
                 .cornerRadius(Tokens.Size.Border.Radius.large, corners: .allCorners)
             VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.regular) {
                 HStack(alignment: .center,
                        spacing: 0) {
-                    Text(item.name.capitalized)
+                    Text(item.name.uppercased())
                         .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                         .foregroundColor(Color.blanco)
                     Spacer()

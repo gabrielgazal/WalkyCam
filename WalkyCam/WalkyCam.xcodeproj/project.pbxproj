@@ -23,6 +23,7 @@
 		5604D0E42C11FA050069C0D6 /* FPVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5604D0E32C11FA040069C0D6 /* FPVManager.swift */; };
 		5604D0E62C11FA590069C0D6 /* FPUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5604D0E52C11FA590069C0D6 /* FPUIView.swift */; };
 		5612167F2D636D570077A466 /* GalleryModelVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5612167E2D636D570077A466 /* GalleryModelVisualizer.swift */; };
+		56123B642DCCED4C00AB29C1 /* PlansManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56123B632DCCED4C00AB29C1 /* PlansManager.swift */; };
 		5615ECD22C503018002D31FA /* MenuPlanBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615ECD12C503018002D31FA /* MenuPlanBannerView.swift */; };
 		561846C82CE2825E00C53A23 /* Scan3dMenuCammerAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561846C72CE2825E00C53A23 /* Scan3dMenuCammerAssembler.swift */; };
 		561846E52CE2DA7B00C53A23 /* Scanner3dModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561846D02CE2DA7B00C53A23 /* Scanner3dModel.swift */; };
@@ -1208,6 +1209,7 @@
 		5604D0E32C11FA040069C0D6 /* FPVManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPVManager.swift; sourceTree = "<group>"; };
 		5604D0E52C11FA590069C0D6 /* FPUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPUIView.swift; sourceTree = "<group>"; };
 		5612167E2D636D570077A466 /* GalleryModelVisualizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryModelVisualizer.swift; sourceTree = "<group>"; };
+		56123B632DCCED4C00AB29C1 /* PlansManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansManager.swift; sourceTree = "<group>"; };
 		5615ECD12C503018002D31FA /* MenuPlanBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPlanBannerView.swift; sourceTree = "<group>"; };
 		561846C72CE2825E00C53A23 /* Scan3dMenuCammerAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scan3dMenuCammerAssembler.swift; sourceTree = "<group>"; };
 		561846D02CE2DA7B00C53A23 /* Scanner3dModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scanner3dModel.swift; sourceTree = "<group>"; };
@@ -2538,6 +2540,14 @@
 				569BA7652C2DF55100E4CCF1 /* Module */,
 			);
 			path = Games;
+			sourceTree = "<group>";
+		};
+		56123B622DCCED3800AB29C1 /* Plans */ = {
+			isa = PBXGroup;
+			children = (
+				56123B632DCCED4C00AB29C1 /* PlansManager.swift */,
+			);
+			path = Plans;
 			sourceTree = "<group>";
 		};
 		561846C52CE27FE900C53A23 /* UseCase */ = {
@@ -6003,6 +6013,7 @@
 		EA15B5A52AD7067400C03407 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				56123B622DCCED3800AB29C1 /* Plans */,
 				56A95B762D22F60100D31B43 /* Streetcammers */,
 				56D4DF422D19E040009E4222 /* AudioManager */,
 				56298DF82D06311500CF407F /* HomeKit */,
@@ -12477,6 +12488,7 @@
 				EA20A5662B87D35B006662FA /* ShareSheetInteractor.swift in Sources */,
 				EA172AD92AF0335400EB1514 /* AdvertisementCard.swift in Sources */,
 				569BA7752C2DF55200E4CCF1 /* GamesAssemblerProtocol.swift in Sources */,
+				56123B642DCCED4C00AB29C1 /* PlansManager.swift in Sources */,
 				EADB5CAA2B190819005863E1 /* VideoCallInteractor.swift in Sources */,
 				EA20A5692B87D35B006662FA /* ShareSheetModel.swift in Sources */,
 				561D83EA2BE91EDF0045C540 /* LegalDocumentationView.swift in Sources */,

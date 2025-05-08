@@ -74,3 +74,18 @@ struct BlueButtonStyleDescriptor: ButtonStyleDescriptorProtocol {
         return .acentoFondoDark
     }
 }
+struct PlanButtonStyleDescriptor: ButtonStyleDescriptorProtocol {
+    
+    var planName: String
+    
+    public init(planName: String) {
+        self.planName = planName
+    }
+    
+    var mainColor: Color {
+        return Color(planName)
+    }
+    var pressedColor: Color {
+        return Color(planName).opacity(0.5)
+    }
+}

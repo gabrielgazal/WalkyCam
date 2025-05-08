@@ -12,7 +12,7 @@ struct SubscriptionIntentInput: Hashable {
     let planType: PlanType
 
     enum PlanName: String {
-        case basic, standard, premium
+        case free, vip, pro, business, premium
     }
 
     enum PlanType: String {

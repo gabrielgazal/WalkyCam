@@ -24,7 +24,7 @@ final class PlansPagesInteractor: PlansPagesInteractorProtocol {
 
     func createSubscriptionIntent(with plan: String) async throws -> SubscriptionIntentOutput {
         return try await withCheckedThrowingContinuation { continuation in
-            useCases.createSubscriptionIntent(.init(planName: SubscriptionIntentInput.PlanName(rawValue: plan) ?? .basic,
+            useCases.createSubscriptionIntent(.init(planName: SubscriptionIntentInput.PlanName(rawValue: plan) ?? .free,
                                                     planType: .monthly))
             .sink(
                 receiveCompletion: { completion in

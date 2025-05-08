@@ -23,14 +23,14 @@ struct PlanPageView: View {
             VStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.large) {
                 HStack {
-                    Text(planData.title.capitalized)
+                    Text(planData.title.uppercased())
                         .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                     Spacer()
                     Text(monthlyToggle ?
                          L10n.RegistrationPlans.Value.yearly(formatDouble(planData.yearlyPrice)): L10n.RegistrationPlans.Value.monthly(formatDouble(planData.monthlyPrice)))
                     .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
                 }
-                .foregroundColor(planData.accentColor)
+                .foregroundColor(Color(planData.title))
                 HStack(alignment: .center,
                        spacing: Tokens.Size.Spacing.regular) {
                     Toggle(isOn: $monthlyToggle) {
