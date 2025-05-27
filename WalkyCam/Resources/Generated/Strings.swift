@@ -838,6 +838,20 @@ internal enum L10n {
       internal static var videoCall: String { return L10n.tr("Localizable", "FunctionsViewModel.Function.videoCall", fallback: "Video Call") }
     }
   }
+  internal enum GalleryItems {
+    internal enum Image {
+      internal enum Empty {
+        /// No hay imágenes
+        internal static var title: String { return L10n.tr("Localizable", "GalleryItems.image.empty.title", fallback: "No hay imágenes") }
+      }
+    }
+    internal enum Model {
+      internal enum Empty {
+        /// No hay modelos
+        internal static var title: String { return L10n.tr("Localizable", "GalleryItems.model.empty.title", fallback: "No hay modelos") }
+      }
+    }
+  }
   internal enum GalleryView {
     /// Galería
     internal static var title: String { return L10n.tr("Localizable", "GalleryView.title", fallback: "Galería") }

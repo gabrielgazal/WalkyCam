@@ -34,24 +34,30 @@ struct GalleryPhotosView<ViewModel: GalleryPhotosViewModelProtocol, Router: Gall
 
     var body: some View {
         VStack(alignment: .leading) {
-            ScrollView {
-                ForEach(headers, id: \.self) { header in
-                    Section {
-                        LazyVGrid(columns: otherFunctionsColumns,
-                                  spacing: Tokens.Size.Spacing.regular) {
-                            ForEach(notificationsGroupedByDate[header]!, id: \.self) { item in
-                                GalleryItemView(image: item.viewPath)
+            if viewModel.photosData.isEmpty {
+                Spacer()
+                Text(L10n.GalleryItems.Image.Empty.title)
+                Spacer()
+            } else {
+                ScrollView {
+                    ForEach(headers, id: \.self) { header in
+                        Section {
+                            LazyVGrid(columns: otherFunctionsColumns,
+                                      spacing: Tokens.Size.Spacing.regular) {
+                                ForEach(notificationsGroupedByDate[header]!, id: \.self) { item in
+                                    GalleryItemView(image: item.viewPath)
+                                }
                             }
+                                      .padding(.horizontal, Tokens.Size.Spacing.regular)
+                        } header: {
+                            HStack {
+                                Text(formatDateInRelationToToday(header))
+                                    .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                                    .listRowInsets(EdgeInsets())
+                                Spacer()
+                            }
+                            .padding(.horizontal, Tokens.Size.Spacing.regular)
                         }
-                                  .padding(.horizontal, Tokens.Size.Spacing.regular)
-                    } header: {
-                        HStack {
-                            Text(formatDateInRelationToToday(header))
-                                .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
-                                .listRowInsets(EdgeInsets())
-                            Spacer()
-                        }
-                        .padding(.horizontal, Tokens.Size.Spacing.regular)
                     }
                 }
             }

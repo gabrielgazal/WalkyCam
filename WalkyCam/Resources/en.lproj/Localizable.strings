@@ -819,3 +819,6 @@
 "CryptoDetailsView.week" = "WEEK";
 "CryptoDetailsView.day" = "DAY";
 "CryptoDetailsView.hour" = "HOUR";
+
+"GalleryItems.image.empty.title" = "No images were found";
+"GalleryItems.model.empty.title" = "No models were found";

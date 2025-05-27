@@ -34,27 +34,33 @@ struct GalleryModelsView<ViewModel: GalleryModelsViewModelProtocol, Router: Gall
 
     var body: some View {
         VStack(alignment: .leading) {
-            ScrollView {
-                ForEach(headers, id: \.self) { header in
-                    Section {
-                        LazyVGrid(columns: otherFunctionsColumns,
-                                  spacing: Tokens.Size.Spacing.regular) {
-                            ForEach(notificationsGroupedByDate[header]!, id: \.self) { item in
-                                GalleryModelVisualizer(path: item.viewPath)
-                                    .onTapGesture {
-                                        router.routeToEditModel(modelId: item.id)
-                                    }
+            if viewModel.galleryItems.isEmpty {
+                Spacer()
+                Text(L10n.GalleryItems.Model.Empty.title)
+                Spacer()
+            } else {
+                ScrollView {
+                    ForEach(headers, id: \.self) { header in
+                        Section {
+                            LazyVGrid(columns: otherFunctionsColumns,
+                                      spacing: Tokens.Size.Spacing.regular) {
+                                ForEach(notificationsGroupedByDate[header]!, id: \.self) { item in
+                                    GalleryModelVisualizer(path: item.viewPath)
+                                        .onTapGesture {
+                                            router.routeToEditModel(modelId: item.id)
+                                        }
+                                }
                             }
+                                      .padding(.horizontal, Tokens.Size.Spacing.regular)
+                        } header: {
+                            HStack {
+                                Text(formatDateInRelationToToday(header))
+                                    .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                                    .listRowInsets(EdgeInsets())
+                                Spacer()
+                            }
+                            .padding(.horizontal, Tokens.Size.Spacing.regular)
                         }
-                                  .padding(.horizontal, Tokens.Size.Spacing.regular)
-                    } header: {
-                        HStack {
-                            Text(formatDateInRelationToToday(header))
-                                .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
-                                .listRowInsets(EdgeInsets())
-                            Spacer()
-                        }
-                        .padding(.horizontal, Tokens.Size.Spacing.regular)
                     }
                 }
             }

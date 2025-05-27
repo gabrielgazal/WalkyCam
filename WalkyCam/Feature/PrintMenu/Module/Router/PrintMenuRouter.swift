@@ -12,10 +12,7 @@ final class PrintMenuRouter: Router, PrintMenuRouterProtocol {
     
     func routeToGallery(items: [GalleryItemModel]) {
         navigateTo(
-            GalleryPhotosRoute(
-                isPresented: isNavigating,
-                galleryItems: items
-            )
+            GalleryRoute(isPresented: isNavigating)
         )
     }
 }
