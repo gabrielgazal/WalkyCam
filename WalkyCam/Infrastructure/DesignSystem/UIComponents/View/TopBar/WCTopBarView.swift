@@ -25,7 +25,7 @@ struct WCTopBarView: View {
                 }
             }
             .frame(height: 50)
-            .padding(.leading, 4)
+            .padding(.horizontal, 4)
         }
         .frame(height: 24)
         .scrollIndicators(.hidden)
