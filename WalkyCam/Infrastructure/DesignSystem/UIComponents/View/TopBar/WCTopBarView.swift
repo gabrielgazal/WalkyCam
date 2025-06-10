@@ -15,14 +15,20 @@ struct WCTopBarView: View {
     @Binding var selection: WCTopBarItem
     @Namespace private var namespace
     var body: some View {
-        HStack(spacing: Tokens.Size.Spacing.regular) {
-            ForEach(tabs, id: \.self) { tab in
-                tabView(tab: tab)
-                    .onTapGesture {
-                        switchToTab(tab: tab)
-                    }
+        ScrollView(.horizontal) {
+            HStack(spacing: Tokens.Size.Spacing.regular) {
+                ForEach(tabs, id: \.self) { tab in
+                    tabView(tab: tab)
+                        .onTapGesture {
+                            switchToTab(tab: tab)
+                        }
+                }
             }
+            .frame(height: 50)
+            .padding(.leading, 4)
         }
+        .frame(height: 24)
+        .scrollIndicators(.hidden)
         .padding(.horizontal, Tokens.Size.Spacing.large)
         .shadow(
             color: .black.opacity(0.2),

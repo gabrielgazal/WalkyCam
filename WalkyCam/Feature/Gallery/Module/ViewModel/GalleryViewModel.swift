@@ -42,6 +42,14 @@ final class GalleryViewModel: GalleryViewModelProtocol {
                     title: L10n.GalleryViewModel.Tab.files,
                     destination:  GalleryModelsRoute(
                         isPresented: .constant(false),
+                        galleryItems: galleryItems
+                    ).build()
+                ),
+                .init(
+                    iconName: Asset.Icons._3dTab.name,
+                    title: "3D",
+                    destination: GalleryModelsRoute(
+                        isPresented: .constant(false),
                         galleryItems: galleryItems.filter { $0.tag == .model }
                     ).build()
                 )
