@@ -61,7 +61,7 @@ extension LoginUseCase {
                 gender: loginResponse.gender,
                 additionalInfo: loginResponse.additionalInfo,
                 isWalkCammer: loginResponse.isWalkCammer,
-                profileImage: loginResponse.profileImage,
+                profileImage: loginResponse.profileImage ?? "",
                 configurations: .init(
                     streetcamConfiguration: loginResponse.configurations.streetcamConfiguration.onboardingReaded,
                     scan3dConfiguration: loginResponse.configurations.scan3dConfiguration.onboardingReaded,
