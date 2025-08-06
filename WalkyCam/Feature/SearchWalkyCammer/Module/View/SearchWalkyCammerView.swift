@@ -145,6 +145,7 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
                 viewModel.updateUserRegionGeocoder()
             }
             .disabled(viewModel.walkyCammers.isLoading)
+            .isHidden(true)
         }
         .ignoresSafeArea()
     }

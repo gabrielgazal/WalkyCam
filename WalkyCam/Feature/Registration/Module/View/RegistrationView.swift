@@ -38,14 +38,7 @@ struct RegistrationView<ViewModel: RegistrationViewModelProtocol, Router: Regist
                                   placeholder: "Nombre Usuario")
                     SecureTextInputView(text: $viewModel.password,
                                         placeholder: "Contraseña",
-                                        topDescriptionText: "Contraseña",
-                                        bottomDescriptionText: "Fuerza de contraseña: \(getPasswordStrength())")
-                    VStack(alignment: .leading,
-                           spacing: Tokens.Size.Spacing.small) {
-                        ForEach(PasswordConfigurationError.allCases, id: \.self) { item in
-                            passwordRuleItem(item)
-                        }
-                    }
+                                        topDescriptionText: "Contraseña")
                     TextInputView(text: $viewModel.email,
                                   topDescriptionText: "Email",
                                   placeholder: "nombre@email.com")

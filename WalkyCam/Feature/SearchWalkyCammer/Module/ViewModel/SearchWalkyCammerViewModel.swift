@@ -9,7 +9,7 @@ final class SearchWalkyCammerViewModel: SearchWalkyCammerViewModelProtocol {
     private let interactor: SearchWalkyCammerInteractorProtocol
     private var router: SearchWalkyCammerRouterProtocol
 
-    @Published var mapView: MapView?
+    var mapView: MapView?
     @Published var locationText: String = ""
     @Published var currentStep: Int = 1
     @Published var currentTitle: String = L10n.SearchWalkyCammerViewModel.Title.searchZone
@@ -27,9 +27,14 @@ final class SearchWalkyCammerViewModel: SearchWalkyCammerViewModelProtocol {
         self.interactor = interactor
         self.router = router
         self.serviceManager = serviceManager
+        
     }
 
     // MARK: - Public API
+    
+    func configureMapView(_ mapView: MapView) {
+        self.mapView = mapView
+    }
 
     func getUserRegion() {
         let geocoder = CLGeocoder()
@@ -104,23 +109,34 @@ final class SearchWalkyCammerViewModel: SearchWalkyCammerViewModelProtocol {
 
     @MainActor
     private func applyCammersToMap(_ cammers: [CammerData]) {
-        mapView?.viewAnnotations.removeAll()
-
-        for cammer in cammers {
-            let view = assembleAnnotationView(cammer)
-
-            let options = ViewAnnotationOptions(
-                geometry: Point(CLLocationCoordinate2D(
-                    latitude: cammer.coordinates.latitude,
-                    longitude: cammer.coordinates.longitude
-                )),
-                allowOverlap: false,
-                visible: true, 
-                anchor: .center
-            )
-
-            try? mapView?.viewAnnotations.add(view, options: options)
+        guard let mapView = mapView else {
+            print("MapView não está disponível")
+            return
         }
+        
+        // Limpa as anotações existentes
+        mapView.viewAnnotations.removeAll()
+        
+        guard !cammers.isEmpty else {
+            print("Nenhuma câmera encontrada para exibir no mapa")
+            return
+        }
+
+        var successCount = 0
+        var errorCount = 0
+
+        for (index, cammer) in cammers.enumerated() {
+            do {
+                let annotation = try makeViewAnnotation(for: cammer, index: index)
+                try mapView.viewAnnotations.add(annotation)
+                successCount += 1
+            } catch {
+                print("Erro ao adicionar anotação para câmera \(cammer.id ?? "unknown"): \(error.localizedDescription)")
+                errorCount += 1
+            }
+        }
+
+        print("Anotações adicionadas: \(successCount) sucesso, \(errorCount) erros")
     }
     
     func updateUserRegionGeocoder() {
@@ -142,15 +158,39 @@ final class SearchWalkyCammerViewModel: SearchWalkyCammerViewModelProtocol {
         }
     }
 
-    
-    private func assembleAnnotationView(_ item: CammerData) -> UIView {
+    private func assembleAnnotationView(_ item: CammerData, index: Int) -> UIView {
         let profileImageView = ProfileImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        
         profileImageView.profileImageURL = URL(string: item.profileImage)
-        profileImageView.onTap = {
-            self.router.routeToCamerDetail(item)
+        profileImageView.isAccessibilityElement = true
+
+        profileImageView.onTap = { [weak self] in
+            let feedback = UIImpactFeedbackGenerator(style: .light)
+            feedback.impactOccurred()
+            
+            self?.router.routeToCamerDetail(item)
         }
+
         return profileImageView
     }
+    
+    private func makeViewAnnotation(for cammer: CammerData, index: Int) throws -> ViewAnnotation {
+        let view = assembleAnnotationView(cammer, index: index)
+        view.clipsToBounds = true
+        
+        let annotation = ViewAnnotation(
+            coordinate: CLLocationCoordinate2D(
+                latitude: cammer.coordinates.latitude,
+                longitude: cammer.coordinates.longitude
+            ),
+            view: view
+        )
+        
+        annotation.allowOverlap = true
+        annotation.visible = true
+        return annotation
+    }
+
     
     func panCameraToLocation() {
         guard let location = mapView?.mapboxMap.cameraState.center else { return }
@@ -189,6 +229,16 @@ class ProfileImageView: UIView {
         super.init(coder: coder)
         setupView()
     }
+    
+    override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+        // Só responde a toques dentro do círculo da imagem
+        let radius: CGFloat = 20
+        let center = CGPoint(x: bounds.midX, y: bounds.midY)
+        let dx = point.x - center.x
+        let dy = point.y - center.y
+        return dx * dx + dy * dy <= radius * radius
+    }
+
 
     private func setupView() {
         // Configura a imagem e placeholder
@@ -198,6 +248,9 @@ class ProfileImageView: UIView {
         imageView.layer.borderWidth = 2
         imageView.layer.borderColor = UIColor.black.cgColor
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.isUserInteractionEnabled = false
+        placeholderView.isUserInteractionEnabled = false
+        activityIndicator.isUserInteractionEnabled = false
 
         placeholderView.backgroundColor = .gray
         placeholderView.layer.cornerRadius = 20
