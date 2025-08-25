@@ -43,5 +43,6 @@ struct GalleryItemModel: Hashable {
         case jpg
         case png
         case stl
+        case unkwown
     }
 }

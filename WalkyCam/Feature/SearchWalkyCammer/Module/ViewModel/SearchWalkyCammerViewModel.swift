@@ -231,14 +231,12 @@ class ProfileImageView: UIView {
     }
     
     override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
-        // Só responde a toques dentro do círculo da imagem
         let radius: CGFloat = 20
         let center = CGPoint(x: bounds.midX, y: bounds.midY)
         let dx = point.x - center.x
         let dy = point.y - center.y
         return dx * dx + dy * dy <= radius * radius
     }
-
 
     private func setupView() {
         // Configura a imagem e placeholder
@@ -293,9 +291,6 @@ class ProfileImageView: UIView {
         }
 
         activityIndicator.startAnimating()
-
-        // Assumindo que você tem uma função para carregar a imagem de forma assíncrona
-        // Aqui pode ser usando URLSession ou uma biblioteca como SDWebImage ou Kingfisher.
         URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
             DispatchQueue.main.async {
                 self?.activityIndicator.stopAnimating()

@@ -179,6 +179,7 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                             Text(item.title)
                                 .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
                         }
+                               .frame(width: 175)
                                .padding(Tokens.Size.Spacing.large)
                                .background(
                                 Color.blanco

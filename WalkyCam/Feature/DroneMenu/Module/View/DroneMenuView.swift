@@ -60,6 +60,15 @@ struct DroneMenuView<ViewModel: DroneMenuViewModelProtocol, Router: DroneMenuRou
                 Text(title)
                     .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
             }
+            VStack {
+                HStack {
+                    Spacer()
+                    Asset.Icons.crown.swiftUIImage
+                }
+                Spacer()
+            }
+            .padding(Tokens.Size.Spacing.regular)
+            .isHidden(!premium)
         }
         .frame(height: 175)
         .shadow(color: .black.opacity(0.16), radius: 8, x: 0, y: 2)

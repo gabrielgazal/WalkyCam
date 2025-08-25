@@ -73,6 +73,9 @@
 "ProfileView.section.logout" = "Log Out";
 "ProfileView.button.save" = "Save Changes";
 "ProfileView.button.cancel" = "Cancel";
+"ProfileView.earnings.title" = "(earn with us)";
+"ProfileView.username.title" = "Nombre de usuario";
+"ProfileView.email.title" = "Correo electonico";
 
 // MARK: - ConfirmMailView
 "ConfirmMailView.title" = "Your account has been successfully registered.\nWe have sent you an email to confirm your account";
@@ -163,12 +166,6 @@
 "Tooltip.ThermalCamera" = "Detect and visualize the heat emitted by objects and people.\nElectrical and thermal insulation problems.";
 
 // MARK: - MenuViewModel
-
-"MenuViewModel.item.wallet" = "Wallet";
-"MenuViewModel.item.galery" = "Gallery";
-"MenuViewModel.item.settings" = "Settings";
-"MenuViewModel.item.help" = "Help";
-"MenuViewModel.item.bot" = "Bot";
 "MenuViewModel.plans.basic.title" = "Basic";
 "MenuViewModel.plans.basic.text" = "Get more benefits!";
 "MenuViewModel.plans.standard.title" = "Standard";
@@ -715,7 +712,7 @@
 "GamesView.rgbBulbParty" = "RGB Bulb Party";
 
 "PlayBusinessView.title" = "Play & Business";
-"PlayBusinessView.lowDemand" = "Low-demand WalkyCam";
+"PlayBusinessView.lowDemand" = "WalkyCam low demand";
 "PlayBusinessView.scapeRoom" = "Scape Room";
 "PlayBusinessView.mariachis" = "Mariachis";
 "PlayBusinessView.filmMaker" = "Film Maker";

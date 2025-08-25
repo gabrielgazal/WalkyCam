@@ -103,7 +103,7 @@ struct PlayBusinessView<ViewModel: PlayBusinessViewModelProtocol, Router: PlayBu
             }
             VStack {
                 HStack {
-                    Image(systemName: "crown.fill")
+                    Asset.Icons.lock.swiftUIImage
                         .renderingMode(.template)
                         .resizable()
                         .aspectRatio(contentMode: .fit)

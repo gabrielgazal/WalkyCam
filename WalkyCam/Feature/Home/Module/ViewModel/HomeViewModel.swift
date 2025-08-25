@@ -31,7 +31,7 @@ final class HomeViewModel: HomeViewModelProtocol {
     @MainActor private func fetchProfileData() async {
         let user = await interactor.fetchProfileData()
         homeData.profileInfo = .init(name: user.name,
-                                     imageURL: .imageMock)
+                                     imageURL: user.imageURL)
     }
 
     private func fetchRecentFunctions() {

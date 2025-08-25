@@ -234,6 +234,7 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
                         .frame(width: 24)
                     Text(L10n.ServiceDetails.pixeladoActivado)
                         .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
+                    Spacer()
                     Toggle(isOn: $viewModel.pixelationActive, label: {})
                         .toggleStyle(WCNamelessToggleStyle())
                 }

@@ -1216,16 +1216,16 @@ internal enum L10n {
   }
   internal enum MenuViewModel {
     internal enum Item {
-      /// Bot
-      internal static var bot: String { return L10n.tr("Localizable", "MenuViewModel.item.bot", fallback: "Bot") }
-      /// Galery
-      internal static var galery: String { return L10n.tr("Localizable", "MenuViewModel.item.galery", fallback: "Galery") }
-      /// Help
-      internal static var help: String { return L10n.tr("Localizable", "MenuViewModel.item.help", fallback: "Help") }
-      /// Settings
-      internal static var settings: String { return L10n.tr("Localizable", "MenuViewModel.item.settings", fallback: "Settings") }
-      /// Wallet
-      internal static var wallet: String { return L10n.tr("Localizable", "MenuViewModel.item.wallet", fallback: "Wallet") }
+      /// Walky
+      internal static var bot: String { return L10n.tr("Localizable", "MenuViewModel.item.bot", fallback: "Walky") }
+      /// Galería
+      internal static var galery: String { return L10n.tr("Localizable", "MenuViewModel.item.galery", fallback: "Galería") }
+      /// Ayuda
+      internal static var help: String { return L10n.tr("Localizable", "MenuViewModel.item.help", fallback: "Ayuda") }
+      /// Configuración
+      internal static var settings: String { return L10n.tr("Localizable", "MenuViewModel.item.settings", fallback: "Configuración") }
+      /// Cash Wallet
+      internal static var wallet: String { return L10n.tr("Localizable", "MenuViewModel.item.wallet", fallback: "Cash Wallet") }
     }
     internal enum Plans {
       internal enum Basic {
@@ -1403,6 +1403,14 @@ internal enum L10n {
       /// Quiero ser WalkCamer
       internal static var walkycamer: String { return L10n.tr("Localizable", "ProfileView.convert.walkycamer", fallback: "Quiero ser WalkCamer") }
     }
+    internal enum Earnings {
+      /// (genera ganacias con nosotros)
+      internal static var title: String { return L10n.tr("Localizable", "ProfileView.earnings.title", fallback: "(genera ganacias con nosotros)") }
+    }
+    internal enum Email {
+      /// Email
+      internal static var title: String { return L10n.tr("Localizable", "ProfileView.email.title", fallback: "Email") }
+    }
     internal enum Field {
       /// Sobre mi
       internal static var aboutMe: String { return L10n.tr("Localizable", "ProfileView.field.aboutMe", fallback: "Sobre mi") }
@@ -1438,6 +1446,10 @@ internal enum L10n {
     internal enum Toggle {
       /// Soy WalkCamer
       internal static var walkycamer: String { return L10n.tr("Localizable", "ProfileView.toggle.walkycamer", fallback: "Soy WalkCamer") }
+    }
+    internal enum Username {
+      /// Username
+      internal static var title: String { return L10n.tr("Localizable", "ProfileView.username.title", fallback: "Username") }
     }
   }
   internal enum ProfitSelectionView {

@@ -18,7 +18,7 @@ final class MenuRouter: Router, MenuRouterProtocol {
     
     func routeToPremium() {
         navigateTo(
-            PlansPagesRoute(isPresented: isNavigating, currentPage: 3)
+            PlansPagesRoute(isPresented: isNavigating, currentPage: 4)
         )
     }
 }

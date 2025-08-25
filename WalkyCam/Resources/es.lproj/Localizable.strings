@@ -73,6 +73,9 @@
 "ProfileView.section.logout" = "Cerrar Sesión";
 "ProfileView.button.save" = "Guardar cambios";
 "ProfileView.button.cancel" = "Cancelar";
+"ProfileView.earnings.title" = "(genera ganacias con nosotros)";
+"ProfileView.username.title" = "Username";
+"ProfileView.email.title" = "Email";
 
 //MARK: - ConfirmMailView
 "ConfirmMailView.title" = "Tu cuenta se registró con éxito.\nTe hemos enviado un correo para confirmar tu cuenta";
@@ -163,12 +166,6 @@
 "Tooltip.ThermalCamera" = "Detecta y visualiza el calor emitido por objetos y personas\nProblemas eléctricos y de aislamiento térmico";
 
 // MARK: - MenuViewModel
-
-"MenuViewModel.item.wallet" = "Wallet";
-"MenuViewModel.item.galery" = "Galery";
-"MenuViewModel.item.settings" = "Settings";
-"MenuViewModel.item.help" = "Help";
-"MenuViewModel.item.bot" = "Bot";
 "MenuViewModel.plans.basic.title" = "Basic";
 "MenuViewModel.plans.basic.text" = "Consigue mas beneficios!";
 "MenuViewModel.plans.standard.title" = "Standard";

@@ -75,6 +75,16 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
                                 text: viewModel.userData.additionalInfo,
                                 editableText: $viewModel.temporaryAdditionalInfo
                             )
+                            assembleItemView(
+                                title: L10n.ProfileView.Username.title,
+                                text: viewModel.userData.userName,
+                                editableText: nil
+                            )
+                            assembleItemView(
+                                title: L10n.ProfileView.Email.title,
+                                text: viewModel.userData.email,
+                                editableText: nil
+                            )
                         }
                         
                         Group {
@@ -88,7 +98,7 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
                                            spacing: Tokens.Size.Spacing.tiny) {
                                         Text(L10n.ProfileView.Convert.walkycamer)
                                             .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
-                                        Text("(genera ganacias con nosotros)")
+                                        Text(L10n.ProfileView.Earnings.title)
                                             .font(.projectFont(size: Tokens.Size.Font.regular, weight: .regular))
                                     }
                                     Spacer()

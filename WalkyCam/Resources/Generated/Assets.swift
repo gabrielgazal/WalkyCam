@@ -368,6 +368,7 @@ internal enum Asset {
     internal static let building = ImageAsset(name: "Building")
     internal static let camera = ImageAsset(name: "Camera")
     internal static let compare = ImageAsset(name: "Compare")
+    internal static let crown = ImageAsset(name: "Crown")
     internal static let cryptocurrency = ImageAsset(name: "Cryptocurrency")
     internal static let derechosDeAutor = ImageAsset(name: "Derechos de autor")
     internal static let drone = ImageAsset(name: "Drone")

@@ -112,7 +112,7 @@ struct FunctionsView<ViewModel: FunctionsViewModelProtocol, Router: FunctionsRou
                         ForEach(viewModel.premiumFunctions, id: \.self) { item in
                             ZStack(alignment: .topLeading) {
                                 FunctionCell(title: item.title, icon: item.icon, lastItem: false)
-                                Image(systemName: "crown.fill")
+                                Asset.Icons.crown.swiftUIImage
                                     .resizable()
                                     .renderingMode(.template)
                                     .aspectRatio(contentMode: .fit)

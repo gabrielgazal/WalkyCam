@@ -5915,14 +5915,14 @@
 				EA6083BC2B01DBB100295069 /* GalleryPhotos */,
 				EA6083952B01D9C100295069 /* Gallery */,
 				EA6083472B0197FC00295069 /* CryptoDetails */,
-				EA60836E2B01CCEA00295069 /*  ShopTab */,
+				EA60836E2B01CCEA00295069 /* ShopTab */,
 				EA6083202AFD588600295069 /* CryptoTab */,
 				EAA1E61F2AFB03DA00A42174 /* CashTab */,
 				EA0E409F2AF70E67002B7437 /* CashWallet */,
 				EA0E406F2AF6974B002B7437 /* CashWalletOnboarding */,
 				EA172B012AF06ED800EB1514 /* Startup */,
 				EA172ADA2AF06BA500EB1514 /* ConfirmMail */,
-				EA282ED72AEB569D00B90920 /*  Shared */,
+				EA282ED72AEB569D00B90920 /* Shared */,
 				EA282EA62AEB52D800B90920 /* Functions */,
 				EA282E142AE952CF00B90920 /* Profile */,
 				EA4165252AE706AD008CE66A /* Notifications */,
@@ -6784,14 +6784,14 @@
 			path = Assembler;
 			sourceTree = "<group>";
 		};
-		EA282ED72AEB569D00B90920 /*  Shared */ = {
+		EA282ED72AEB569D00B90920 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
 				EA51030A2BA7E0E800A2DE2E /* UseCase */,
 				EA282EDB2AEB571400B90920 /* View */,
 				EA282ED82AEB56A400B90920 /* Model */,
 			);
-			path = " Shared";
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		EA282ED82AEB56A400B90920 /* Model */ = {
@@ -8217,14 +8217,14 @@
 			path = Assembler;
 			sourceTree = "<group>";
 		};
-		EA60836E2B01CCEA00295069 /*  ShopTab */ = {
+		EA60836E2B01CCEA00295069 /* ShopTab */ = {
 			isa = PBXGroup;
 			children = (
 				EA6083752B01CD0A00295069 /* Configuration */,
 				EA60837B2B01CD0A00295069 /* Domain */,
 				EA60837E2B01CD0A00295069 /* Module */,
 			);
-			path = " ShopTab";
+			path = ShopTab;
 			sourceTree = "<group>";
 		};
 		EA6083752B01CD0A00295069 /* Configuration */ = {

@@ -20,7 +20,7 @@ final class ServiceDetailsRouter: Router, ServiceDetailsRouterProtocol {
     
     func routeToPlans() {
         navigateTo(
-         PlansPagesRoute(isPresented: isNavigating, currentPage: 3)
+            PlansPagesRoute(isPresented: isNavigating, currentPage: 4)
         )
     }
 }
