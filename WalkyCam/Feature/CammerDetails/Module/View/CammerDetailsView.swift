@@ -108,7 +108,8 @@ struct CammerDetailsView<ViewModel:CammerDetailsViewModelProtocol, Router: Camme
         VStack(spacing: Tokens.Size.Spacing.regular) {
             WCTopBarView(
                 tabs: viewModel.topBarItems,
-                selection: $viewModel.selection
+                selection: $viewModel.selection,
+                hasScroll: false
             )
             ZStack(alignment: .bottom) {
                 Map(

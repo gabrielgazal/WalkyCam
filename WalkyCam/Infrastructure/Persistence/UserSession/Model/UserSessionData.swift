@@ -21,6 +21,7 @@ struct UserSessionData: Hashable, Codable {
     public var isWalkCamer: Bool
     public var configurations: Configurations
     public var plan: PlanData
+    public var profileImageURL: String?
 
     public struct Configurations: Hashable, Codable {
         public var streetcamConfiguration: Bool

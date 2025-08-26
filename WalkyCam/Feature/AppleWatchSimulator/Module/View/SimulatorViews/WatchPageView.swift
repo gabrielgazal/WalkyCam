@@ -51,7 +51,7 @@ struct WatchPageView: View {
             }
             VStack {
                 HStack {
-                    Image(systemName: "chevron.left")
+                    Image(systemName: "arrow.backward")
                         .onTapGesture {
                             dismiss()
                         }

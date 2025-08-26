@@ -12,15 +12,18 @@ struct WCTopBarContainerView: View {
 
     @Binding var selection: WCTopBarItem
     private var topBarItems: [WCTopBarItem]
+    private var hasScroll: Bool
 
     // MARK: - Initialization
 
     init(
         topBarItems: [WCTopBarItem],
-        selection: Binding<WCTopBarItem>
+        selection: Binding<WCTopBarItem>,
+        hasScroll: Bool = true
     ) {
         self._selection = selection
         self.topBarItems = topBarItems
+        self.hasScroll = hasScroll
     }
 
     // MARK: - View Body
@@ -29,7 +32,8 @@ struct WCTopBarContainerView: View {
         VStack(spacing: 0) {
             WCTopBarView(
                 tabs: topBarItems,
-                selection: $selection
+                selection: $selection,
+                hasScroll: hasScroll
             )
             Spacer()
             ZStack {

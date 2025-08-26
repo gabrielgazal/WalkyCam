@@ -24,7 +24,8 @@ struct ScheduleVideoCallView<ViewModel: ScheduleVideoCallViewModelProtocol, Rout
                 headerView
                 WCTopBarContainerView(
                     topBarItems: viewModel.tabBarItems,
-                    selection: $viewModel.tabSelection
+                    selection: $viewModel.tabSelection,
+                    hasScroll: false
                 )
                 .environmentObject(viewModel)
             }

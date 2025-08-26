@@ -2,25 +2,25 @@ import SwiftUI
 import StripePaymentSheet
 
 struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPagesRouterProtocol>: View {
-
+    
     // MARK: - Dependencies
-
+    
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
     
     @State var isPaymentSheetPresented = false
     @State var clientSecret: String? = nil
-
+    
     // MARK: - Initialization
-
+    
     init(viewModel: ViewModel,
          router: Router) {
         self.viewModel = viewModel
         self.router = router
     }
-
+    
     // MARK: - View Body
-
+    
     var body: some View {
         VStack {
             if let paymentSheet = viewModel.paymentSheet {
@@ -66,11 +66,11 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
                                 viewModel.currentPage = selectedPlanIndex
                             }
                         })
-                            .tag(5)
+                        .tag(5)
                     }
                     .accentColor(.naranja)
                     .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-
+                    
                     if let title = currentPlan()?.title {
                         WCUIButton(
                             title: String(format: L10n.PlansPagesView.Button.start(title.uppercased())),
@@ -91,7 +91,13 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
                     PageControl(numberOfPages: viewModel.plans.count + 1, currentPage: $viewModel.currentPage)
                 }
                        .background(
-                        Image(currentPlan()?.backgroundImage ?? "")
+                        ZStack {
+                            Image(currentPlan()?.backgroundImage ?? "")
+                                .overlay(
+                                    Color.black
+                                        .opacity(0.8)
+                                )
+                        }
                        )
                        .onAppear {
                            setupAppearence()
@@ -102,7 +108,7 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
                        .paymentSheet(isPresented: $isPaymentSheetPresented,
                                      paymentSheet: paymentSheet,
                                      onCompletion: viewModel.onPaymentCompletion)
-
+                
             } else {
                 VStack {
                     Spacer()
@@ -112,7 +118,13 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
                     Spacer()
                 }
                 .background(
-                 Image(currentPlan()?.backgroundImage ?? "")
+                    ZStack {
+                        Image(currentPlan()?.backgroundImage ?? "")
+                            .overlay(
+                                Color.black
+                                    .opacity(0.8)
+                            )
+                    }
                 )
                 .onAppear {
                     setupAppearence()
@@ -150,12 +162,12 @@ struct PlansPagesView<ViewModel: PlansPagesViewModelProtocol, Router: PlansPages
                 }
         )
     }
-
+    
     private func setupAppearence() {
         UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(Color.naranja)
         UIPageControl.appearance().pageIndicatorTintColor = UIColor(Color.blancoGris)
     }
-
+    
     private func currentPlan() -> PlansPagesModel? {
         if viewModel.currentPage < viewModel.plans.count {
             return viewModel.plans[viewModel.currentPage]

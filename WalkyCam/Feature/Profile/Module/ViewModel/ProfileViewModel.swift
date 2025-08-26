@@ -81,7 +81,7 @@ final class ProfileViewModel: ProfileViewModelProtocol {
         
         userData = .init(
             id: user.id,
-            profileImage: .imageMock,
+            profileImage: user.profileImageURL ?? "",
             name: name,
             lastName: lastName,
             phoneNumber: phoneNumber,

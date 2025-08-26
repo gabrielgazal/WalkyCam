@@ -43,35 +43,35 @@ class PlansManager: NSObject, ObservableObject {
             .init(title: "free",
                   monthlyPrice: UserDefaults.standard.string(forKey: "freePlanMonthlyPrice") ?? "0.0",
                   yearlyPrice: UserDefaults.standard.string(forKey: "freePlanYearlyPrice") ?? "0.0",
-                  backgroundImage: Asset.Fondos.planFondo.name,
+                  backgroundImage: Asset.Fondos.freeFondo.name,
                   accentColor: Color("free"),
                   features: assembleFreePlanFeatures()),
             
                 .init(title: "vip",
                       monthlyPrice: UserDefaults.standard.string(forKey: "vipPlanMonthlyPrice") ?? "5.0",
                       yearlyPrice: UserDefaults.standard.string(forKey: "vipPlanYearlyPrice") ?? "5.0",
-                      backgroundImage: Asset.Fondos.planFondo.name,
+                      backgroundImage: Asset.Fondos.freeFondo.name,
                       accentColor: Color("vip"),
                       features: assembleFreePlanFeatures()), //TODO - FIX THIS
             
                 .init(title: "pro",
                       monthlyPrice: UserDefaults.standard.string(forKey: "proPlanMonthlyPrice") ?? "70.0",
                       yearlyPrice: UserDefaults.standard.string(forKey: "proPlanYearlyPrice") ?? "70.0",
-                      backgroundImage: Asset.Fondos.planFondo.name,
+                      backgroundImage: Asset.Fondos.basicFondo.name,
                       accentColor: Color("pro"),
                       features: assembleProPlanFeatures()),
             
                 .init(title: "business",
                       monthlyPrice: UserDefaults.standard.string(forKey: "businessPlanMonthlyPrice") ?? "140.0",
                       yearlyPrice: UserDefaults.standard.string(forKey: "businessPlanYearlyPrice") ?? "140.0",
-                      backgroundImage: Asset.Fondos.planFondo.name,
+                      backgroundImage: Asset.Fondos.standardFondo.name,
                       accentColor: Color(""),
                       features: assembleBusinessPlanFeatures()),
             
                 .init(title: "premium",
                       monthlyPrice: UserDefaults.standard.string(forKey: "premiumPlanMonthlyPrice") ?? "490.0",
                       yearlyPrice: UserDefaults.standard.string(forKey: "premiumPlanYearlyPrice") ?? "490.0",
-                      backgroundImage: Asset.Fondos.planFondo.name,
+                      backgroundImage: Asset.Fondos.droneFondo.name,
                       accentColor: .premium,
                       features: assemblePremiumPlanFeatures())
         ]

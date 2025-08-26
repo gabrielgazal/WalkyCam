@@ -348,11 +348,14 @@ internal enum Asset {
     internal static let video = ImageAsset(name: "video")
   }
   internal enum Fondos {
+    internal static let basicFondo = ImageAsset(name: "basicFondo")
     internal static let digitalTwinsfondo = ImageAsset(name: "digitalTwinsfondo")
     internal static let droneFondo = ImageAsset(name: "drone_fondo")
+    internal static let freeFondo = ImageAsset(name: "freeFondo")
     internal static let loginFondo = ImageAsset(name: "login_fondo")
     internal static let planFondo = ImageAsset(name: "plan_fondo")
-    internal static let videocallFondo = ImageAsset(name: "videocall_fondo")
+    internal static let standardFondo = ImageAsset(name: "standardFondo")
+    internal static let videocallFondo = ImageAsset(name: "videocallFondo")
     internal static let watchBackground = ImageAsset(name: "watchBackground")
     internal static let watchForeground = ImageAsset(name: "watchForeground")
   }

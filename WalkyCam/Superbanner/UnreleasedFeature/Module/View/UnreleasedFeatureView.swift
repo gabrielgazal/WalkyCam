@@ -22,7 +22,7 @@ struct UnreleasedFeatureView<ViewModel:UnreleasedFeatureViewModelProtocol, Route
         NavigationView {
             VStack {
                 HStack {
-                    Image(systemName: "chevron.left")
+                    Image(systemName: "arrow.backward")
                         .resizable()
                         .foregroundColor(.naranja)
                         .scaledToFit()

@@ -47,6 +47,9 @@ struct ChatListView<ViewModel: ChatListViewModelProtocol, Router: ChatListRouter
                         Divider()
                             .padding(.horizontal, Tokens.Size.Spacing.large)
                     }
+                    .onAppear {
+                        print(channels)
+                    }
                 } errorAction: {}
             }
         }
