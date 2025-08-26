@@ -8,8 +8,8 @@ struct FeatureInformationView<ViewModel: FeatureInformationViewModelProtocol, Ro
     @ObservedObject private var router: Router
     @State var rovName: String = ""
     @State var rovSerialNumber: String = ""
-    @State var rovModel: String = ""
-    @State var smartphoneBrand: String = ""
+    @State var rovModel: ListInputItemModel = .init()
+    @State var smartphoneBrand: ListInputItemModel = .init()
     @State var smartphoneModel: String = ""
     @State var smartphoneSerialNumber: String = ""
 
@@ -89,11 +89,16 @@ struct FeatureInformationView<ViewModel: FeatureInformationViewModelProtocol, Ro
                           topDescriptionText: L10n.FeatureInformationView.Rov.name,
                           placeholder: L10n.FeatureInformationView.Rov.name,
                           backgroundColor: .blancoGris)
-            ListInputView(dataList: ["Teste", "Teste2"],
-                          selection: $rovModel,
-                          topDescriptionText: L10n.FeatureInformationView.Rov.model,
-                          placeholder: L10n.FeatureInformationView.Rov.model,
-                          backgroundColor: .blancoGris)
+            ListInputView(
+                dataList: [
+                    .init(value: "Teste"),
+                    .init(value: "Teste2")
+                ],
+                selection: $rovModel,
+                topDescriptionText: L10n.FeatureInformationView.Rov.model,
+                placeholder: L10n.FeatureInformationView.Rov.model,
+                backgroundColor: .blancoGris
+            )
             HStack {
                 Text(L10n.FeatureInformationView.Rov.modelNotSupported)
                     .font(.projectFont(size: Tokens.Size.Font.regular))
@@ -133,15 +138,27 @@ struct FeatureInformationView<ViewModel: FeatureInformationViewModelProtocol, Ro
             Text(L10n.FeatureInformationView.Smartphone.title)
                 .font(.projectFont(size: Tokens.Size.Font.regular,
                                    weight: .bold))
-            TextInputView(text: $smartphoneBrand,
-                          topDescriptionText: L10n.FeatureInformationView.Smartphone.name,
-                          placeholder: L10n.FeatureInformationView.Smartphone.name,
-                          backgroundColor: .blancoGris)
-            ListInputView(dataList: ["Teste", "Teste2"],
-                          selection: $smartphoneBrand,
-                          topDescriptionText: L10n.FeatureInformationView.Smartphone.model,
-                          placeholder: L10n.FeatureInformationView.Smartphone.model,
-                          backgroundColor: .blancoGris)
+            TextInputView(
+                text: Binding(
+                    get: { smartphoneBrand.value },
+                    set: { item in
+                        smartphoneBrand = .init(value: item)
+                    }
+                ),
+                topDescriptionText: L10n.FeatureInformationView.Smartphone.name,
+                placeholder: L10n.FeatureInformationView.Smartphone.name,
+                backgroundColor: .blancoGris
+            )
+            ListInputView(
+                dataList: [
+                    .init(value: "Teste"),
+                    .init(value: "Teste2")
+                ],
+                selection: $smartphoneBrand,
+                topDescriptionText: L10n.FeatureInformationView.Smartphone.model,
+                placeholder: L10n.FeatureInformationView.Smartphone.model,
+                backgroundColor: .blancoGris
+            )
             TextInputView(text: $smartphoneSerialNumber,
                           topDescriptionText: L10n.FeatureInformationView.Smartphone.serialNumber,
                           placeholder: L10n.FeatureInformationView.Smartphone.serialNumber,

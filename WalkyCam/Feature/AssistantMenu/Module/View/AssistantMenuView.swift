@@ -15,7 +15,7 @@ struct AssistantMenuView<ViewModel: AssistantMenuViewModelProtocol, Router: Assi
         self.router = router
     }
 
-    @State var selection: String = ""
+    @State var selection: ListInputItemModel = .init()
 
     // MARK: - View Body
 
@@ -44,11 +44,11 @@ struct AssistantMenuView<ViewModel: AssistantMenuViewModelProtocol, Router: Assi
                         .font(.projectFont(size: Tokens.Size.Font.regular, weight: .bold))
                     ListInputView(
                         dataList: [
-                            "Carpintero",
-                            "Electricista",
-                            "Informático/a",
-                            "Mecánico/a",
-                            "Veterinario"
+                            .init(value: "Carpintero"),
+                            .init(value: "Electricista"),
+                            .init(value: "Informático/a"),
+                            .init(value: "Mecánico/a"),
+                            .init(value: "Veterinario")
                         ],
                         selection: $selection,
                         rightIcon: Image(systemName: "chevron.down"),
@@ -70,7 +70,7 @@ struct AssistantMenuView<ViewModel: AssistantMenuViewModelProtocol, Router: Assi
                     })
                     .frame(width: 170)
                     .padding(Tokens.Size.Spacing.large)
-                    .isHidden(selection == "")
+                    .isHidden(selection == .init())
                 }
             }
         }

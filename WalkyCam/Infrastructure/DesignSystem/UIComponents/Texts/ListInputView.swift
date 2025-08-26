@@ -7,6 +7,19 @@
 
 import SwiftUI
 
+public struct ListInputItemModel: Hashable {
+    let value: String
+    let icon: String?
+    
+    public init(
+        value: String = "",
+        icon: String? = nil
+    ) {
+        self.value = value
+        self.icon = icon
+    }
+}
+
 public struct ListInputView: View {
 
     // MARK: - Dependencies
@@ -19,15 +32,15 @@ public struct ListInputView: View {
     private var actions: TextInputView.Actions
     private var keyboardType: UIKeyboardType
     private var backgroundColor: Color
-    private var dataList: [String]
-    @Binding private var selection: String
+    private var dataList: [ListInputItemModel]
+    @Binding private var selection: ListInputItemModel
     @State private var showDataList = false
 
     // MARK: - Initialization
 
     public init(
-        dataList: [String],
-        selection: Binding<String>,
+        dataList: [ListInputItemModel],
+        selection: Binding<ListInputItemModel>,
         accessory: Image? = nil,
         leftIcon: Image? = nil,
         rightIcon: Image? = nil,
@@ -54,7 +67,12 @@ public struct ListInputView: View {
     public var body: some View {
         VStack(spacing: -Tokens.Size.Spacing.small) {
             TextInputView(
-                text: $selection,
+                text: Binding(
+                    get: { selection.value },
+                    set: { item in
+                        selection = dataList.first(where: { $0.value == item }) ?? .init()
+                    }
+                ),
                 status: .constant(.default),
                 accessory: accessory,
                 topDescriptionText: topDescriptionText,
@@ -71,40 +89,35 @@ public struct ListInputView: View {
                     showDataList = true
                 }
             }
-            VStack(alignment: .leading,
-                   spacing: Tokens.Size.Spacing.regular) {
-                ForEach(dataList, id: \.self) { item in
-                    HStack {
-                        Text(item)
-                            .font(.projectFont(size: Tokens.Size.Font.medium))
-                            .onTapGesture {
-                                selection = item
-                                showDataList = false
+            .overlay {
+                VStack(alignment: .leading,
+                       spacing: Tokens.Size.Spacing.regular) {
+                    ForEach(dataList, id: \.self) { item in
+                        HStack {
+                            Text(item.value)
+                                .font(.projectFont(size: Tokens.Size.Font.medium))
+                            Spacer()
+                            if let image = item.icon {
+                                Image(image)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 24, height: 24)
                             }
-                        Spacer()
+                        }
+                        .onTapGesture {
+                            selection = item
+                            showDataList = false
+                        }
                     }
                 }
+                       .padding(Tokens.Size.Spacing.regular)
+                       .background(
+                           RoundedRectangle(cornerRadius: 12)
+                               .fill(Color.blanco)
+                       )
+                       .isHidden(!showDataList)
             }
-                   .isHidden(!showDataList)
-                   .padding(Tokens.Size.Spacing.regular)
-                   .background(
-                       RoundedRectangle(cornerRadius: 12)
-                           .fill(Color.blanco)
-                   )
         }
         .shadow(color: .black.opacity(0.16), radius: 8, x: 0, y: 2)
-    }
-}
-
-struct ListInputView_Previews: PreviewProvider {
-    static var previews: some View {
-        ListInputView(dataList: ["Teste", "TEste"],
-                      selection: .constant(""),
-                      accessory: nil,
-                      topDescriptionText: nil,
-                      placeholder: "Teste",
-                      keyboardType: .default,
-                      backgroundColor: Color.blanco,
-                      actions: .init())
     }
 }

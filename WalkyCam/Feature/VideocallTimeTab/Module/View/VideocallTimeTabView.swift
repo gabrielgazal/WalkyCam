@@ -8,7 +8,7 @@ struct VideocallTimeTabView<ViewModel: VideocallTimeTabViewModelProtocol, Router
     @ObservedObject private var router: Router
     @State var startTimeSelected = Date.now
     @State var startPickerShowing = false
-    @State var selection: String = ""
+    @State var selection: ListInputItemModel = .init()
 
     // MARK: - Initialization
 
@@ -38,10 +38,10 @@ struct VideocallTimeTabView<ViewModel: VideocallTimeTabViewModelProtocol, Router
                 .padding(.horizontal, Tokens.Size.Spacing.large)
             ListInputView(
                 dataList: [
-                    L10n.VideocallTimeTabView.Duration._40Minutes,
-                    L10n.VideocallTimeTabView.Duration._60Minutes,
-                    L10n.VideocallTimeTabView.Duration._90Minutes,
-                    L10n.VideocallTimeTabView.Duration._120Minutes
+                    .init(value: L10n.VideocallTimeTabView.Duration._40Minutes),
+                    .init(value: L10n.VideocallTimeTabView.Duration._60Minutes),
+                    .init(value: L10n.VideocallTimeTabView.Duration._90Minutes, icon: Asset.Icons.crown.name),
+                    .init(value: L10n.VideocallTimeTabView.Duration._120Minutes, icon: Asset.Icons.crown.name)
                 ],
                 selection: $selection,
                 rightIcon: Image(systemName: "chevron.down"),
@@ -50,7 +50,7 @@ struct VideocallTimeTabView<ViewModel: VideocallTimeTabViewModelProtocol, Router
             .padding(.horizontal, Tokens.Size.Spacing.large)
             .onChange(of: selection) { _, newValue in
                 var interval: TimeInterval = .init()
-                switch newValue {
+                switch newValue.value {
                 case L10n.VideocallTimeTabView.Duration._40Minutes:
                     interval = 2400
                 case L10n.VideocallTimeTabView.Duration._60Minutes:
