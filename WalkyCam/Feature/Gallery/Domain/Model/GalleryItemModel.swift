@@ -2,7 +2,6 @@ import Foundation
 
 struct GalleryItemModel: Hashable {
     let id: String
-    let type: FileType
     let tag: FileTag
     let status: FileStatus
     let basePath: String
@@ -11,7 +10,6 @@ struct GalleryItemModel: Hashable {
     
     public init(
         id: String,
-        type: FileType,
         tag: FileTag,
         status: FileStatus,
         basePath: String,
@@ -19,7 +17,6 @@ struct GalleryItemModel: Hashable {
         creationDate: Date
     ) {
         self.id = id
-        self.type = type
         self.tag = tag
         self.status = status
         self.basePath = basePath
