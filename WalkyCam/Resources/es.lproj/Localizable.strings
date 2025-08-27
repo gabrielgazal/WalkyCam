@@ -549,6 +549,7 @@
 "AIMenuView.Configuracao.title" = "Configuración";
 
 "ChatListView.Title" = "Mensajes";
+"ChatListView.EmptyState" = "Sin mensajes";
 
 "RadarMenuView.Title" = "Radares & Sensores";
 "RadarMenuView.Georadar.title" = "Georadar";

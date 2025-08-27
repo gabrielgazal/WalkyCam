@@ -34,23 +34,31 @@ struct ChatListView<ViewModel: ChatListViewModelProtocol, Router: ChatListRouter
                     Divider()
                 }
                 .padding(.horizontal, Tokens.Size.Spacing.large)
-
-                AsyncDataView(viewModel.channels) { channels in
-                    ForEach(channels, id: \.self) { item in
-                        channelItem(item)
-                            .background(item.chatOpened ? Color.blanco : Color.blancoGris)
-                            .onTapGesture {
-                                if let detailChannel = viewModel.handleChatSelection(item.id) {
-                                    router.routeToChatDetails(detailChannel)
+                if let channels = viewModel.channels.loadedValue,
+                   channels.count != 0 {
+                    AsyncDataView(viewModel.channels) { channels in
+                        ForEach(channels, id: \.self) { item in
+                            channelItem(item)
+                                .background(item.chatOpened ? Color.blanco : Color.blancoGris)
+                                .onTapGesture {
+                                    if let detailChannel = viewModel.handleChatSelection(item.id) {
+                                        router.routeToChatDetails(detailChannel)
+                                    }
                                 }
-                            }
-                        Divider()
-                            .padding(.horizontal, Tokens.Size.Spacing.large)
+                            Divider()
+                                .padding(.horizontal, Tokens.Size.Spacing.large)
+                        }
+                        .onAppear {
+                            print(channels)
+                        }
+                    } errorAction: {}
+                } else {
+                    VStack {
+                        Spacer()
+                            .frame(minHeight: 250)
+                        Text(L10n.ChatListView.emptyState)
                     }
-                    .onAppear {
-                        print(channels)
-                    }
-                } errorAction: {}
+                }
             }
         }
         .navigation(router)

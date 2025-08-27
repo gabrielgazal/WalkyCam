@@ -282,6 +282,8 @@ internal enum L10n {
     }
   }
   internal enum ChatListView {
+    /// Sin mensajes
+    internal static var emptyState: String { return L10n.tr("Localizable", "ChatListView.EmptyState", fallback: "Sin mensajes") }
     /// Mensajes
     internal static var title: String { return L10n.tr("Localizable", "ChatListView.Title", fallback: "Mensajes") }
   }
