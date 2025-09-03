@@ -24,7 +24,8 @@ struct BookWalkycamerView<ViewModel: BookWalkycamerViewModelProtocol, Router: Bo
                 headerView
                 WCTopBarContainerView(
                     topBarItems: viewModel.tabBarItems,
-                    selection: $viewModel.tabSelection
+                    selection: $viewModel.tabSelection,
+                    hasScroll: false
                 )
                 .environmentObject(viewModel)
             }

@@ -92,4 +92,11 @@ final class AuthService: AuthServiceProtocol {
             completion: completion
         )
     }
+    
+    func resetPassword(email: String, completion: @escaping Completion) {
+        provider.request(
+            .resetPassword(email: email),
+            completion: completion
+        )
+    }
 }

@@ -41,7 +41,7 @@ struct LoginView<ViewModel: LoginViewModelProtocol, Router: LoginRouterProtocol>
                 HStack {
                     LinkButton(title: L10n.LoginView.Button.forgotPassword,
                                color: .naranja,
-                               action: {})
+                               action: handleForgotPassword)
                     Spacer()
                 }
                 WCUIButton(title: L10n.LoginView.Button.login,
@@ -87,10 +87,21 @@ struct LoginView<ViewModel: LoginViewModelProtocol, Router: LoginRouterProtocol>
         .navigation(router)
     }
     
-    private func handleForgotPassword() {}
+    private func handleForgotPassword() {
+        viewModel.loginUserAsyncData = .loading
+        Task {
+            await viewModel.resetPassword(
+                onSuccess: {
+                    print("teste")
+                },
+                onFailure: {
+                    print("error")
+                }
+            )
+        }
+    }
 
     private func handleLogin() {
-        viewModel.loginUserAsyncData = .loading
         Task {
             await viewModel.loginUser(
                 onSuccess: {
@@ -112,7 +123,8 @@ struct LoginView_Previews: PreviewProvider {
             viewModel: LoginViewModel(
                 interactor: LoginInteractor(
                     useCases: .init(login: .empty,
-                                    gerUserPlan: .empty)
+                                    gerUserPlan: .empty,
+                                    resetPassword: .empty)
                 )
             ),
             router: LoginRouter(isPresented: .constant(false))

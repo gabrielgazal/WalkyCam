@@ -26,6 +26,9 @@ struct AvailableAssistantsView<ViewModel: AvailableAssistantsViewModelProtocol, 
             }
         }
         .navigation(router)
+        .onAppear {
+            viewModel.getUserRegion()
+        }
     }
     
     private var headerView: some View {
@@ -103,7 +106,13 @@ struct AvailableAssistantsView<ViewModel: AvailableAssistantsViewModelProtocol, 
 struct AvailableAssistantsView_Previews: PreviewProvider {
     static var previews: some View {
         AvailableAssistantsView(
-            viewModel: AvailableAssistantsViewModel(),
+            viewModel: AvailableAssistantsViewModel(
+                interactor: AvailableAssistantsInteractor(
+                    useCases: .init(
+                        getNearWalkyCammers: .empty
+                    )
+                )
+            ),
             router: AvailableAssistantsRouter(isPresented: .constant(false))
         )
     }

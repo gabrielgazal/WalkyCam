@@ -478,11 +478,11 @@
 "Scan3DMenuView.Scan3D.title" = "Scan 3D";
 "Scan3DMenuView.DesdeTuSmartphone.title" = "From your smartphone";
 "Scan3DMenuView.ADistancia.title" = "Remotely";
-"Scan3DMenuView.FAQs.title" = "FAQ's";
+"Scan3DMenuView.FAQs.title" = "Walky";
 "Scan3DMenuView.Scan3D.cellTitle" = "Scan 3D";
 "Scan3DMenuView.Galeria.cellTitle" = "Gallery";
 "Scan3DMenuView.BuscarWalkCamer.cellTitle" = "Search WalkCamer";
-"Scan3DMenuView.BuscarUnContacto.cellTitle" = "Search a Contact";
+"Scan3DMenuView.BuscarUnContacto.cellTitle" = "Share";
 
 "FunctionMenuView.Buscar.title" = "SEARCH";
 "FunctionMenuView.Buscar.description" = "Locate your nearest WalkCamer.";
@@ -594,7 +594,7 @@
 "ProfitSelectionView.title" = "Choose how you want to earn money";
 "ProfitSelectionView.freelanceTitle" = "Freelance: Independent";
 "ProfitSelectionView.freelanceDescription" = "Give us your time and resources, and we'll help you earn money";
-"ProfitSelectionView.employeeTitle" = "Employee: of WalkyCam";
+"ProfitSelectionView.employeeTitle" = "Resell with WalkyCam";
 "ProfitSelectionView.employeeDescription" = "Work with us, join the WalkyCam Staff.";
 "ProfitSelectionView.b2bTitle" = "Partner B2B: Business to Business";
 "ProfitSelectionView.b2bDescription" = "Complete our orders and services and invoice with us.";
@@ -753,8 +753,8 @@
 "ThermalCameraOnboardingView.start" = "Start";
 
 "ServiceConfirmationView.successMessage" = "Video call successfully registered!";
-"ServiceConfirmationView.ok" = "Ok";
-"ServiceConfirmationView.cancel" = "I want to cancel";
+"ServiceConfirmationView.ok" = "Send";
+"ServiceConfirmationView.cancel" = "Cancel";
 "ServiceConfirmationView.assistants" = "Participants";
 "ServiceConfirmationView.invitationMessage" = "The invitation will be sent to the members of this meeting once the process is completed.";
 "ServiceConfirmationView.link" = "Link";

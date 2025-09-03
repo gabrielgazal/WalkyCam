@@ -21,7 +21,7 @@ struct ExternalAssistantView<ViewModel: ExternalAssistantViewModelProtocol, Rout
         VStack(alignment: .leading,
                spacing: Tokens.Size.Spacing.large) {
             headerView
-            Text(L10n.ExternalAssistantView.IngresaElCodigo.title)
+            Text(L10n.ExternalAssistantView.IngresaElCodigo.title.toMarkdown())
                 .font(.projectFont(size: Tokens.Size.Font.regular))
             TextInputView(
                 text: $viewModel.assistantCode,

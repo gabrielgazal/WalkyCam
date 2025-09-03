@@ -304,6 +304,7 @@
 		56AF275D2BDAE00800DADC29 /* RegisterWalkcamerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF274F2BDAE00800DADC29 /* RegisterWalkcamerView.swift */; };
 		56AF275E2BDAE00800DADC29 /* RegisterWalkcamerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF27512BDAE00800DADC29 /* RegisterWalkcamerViewModel.swift */; };
 		56AF275F2BDAE00800DADC29 /* RegisterWalkcamerViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF27522BDAE00800DADC29 /* RegisterWalkcamerViewModelProtocol.swift */; };
+		56B318F72E679F9200B07B66 /* ResetPasswordUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B318F62E679F9200B07B66 /* ResetPasswordUseCase.swift */; };
 		56B3E46B2C3D8443004A87FA /* ScheduleVideoCallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B3E4562C3D8442004A87FA /* ScheduleVideoCallModel.swift */; };
 		56B3E46C2C3D8443004A87FA /* ScheduleVideoCallAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B3E4592C3D8442004A87FA /* ScheduleVideoCallAssembler.swift */; };
 		56B3E46D2C3D8443004A87FA /* ScheduleVideoCallAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B3E45A2C3D8442004A87FA /* ScheduleVideoCallAssemblerProtocol.swift */; };
@@ -1492,6 +1493,7 @@
 		56AF27512BDAE00800DADC29 /* RegisterWalkcamerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWalkcamerViewModel.swift; sourceTree = "<group>"; };
 		56AF27522BDAE00800DADC29 /* RegisterWalkcamerViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWalkcamerViewModelProtocol.swift; sourceTree = "<group>"; };
 		56B2DC482C9B9F6200396732 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		56B318F62E679F9200B07B66 /* ResetPasswordUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordUseCase.swift; sourceTree = "<group>"; };
 		56B3E4562C3D8442004A87FA /* ScheduleVideoCallModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVideoCallModel.swift; sourceTree = "<group>"; };
 		56B3E4592C3D8442004A87FA /* ScheduleVideoCallAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVideoCallAssembler.swift; sourceTree = "<group>"; };
 		56B3E45A2C3D8442004A87FA /* ScheduleVideoCallAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVideoCallAssemblerProtocol.swift; sourceTree = "<group>"; };
@@ -7884,6 +7886,7 @@
 			children = (
 				EA5A88032B68039400BBB7F9 /* LoginUseCase.swift */,
 				56A299992C46116600D437C5 /* GetUserPlanUseCase.swift */,
+				56B318F62E679F9200B07B66 /* ResetPasswordUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -12459,6 +12462,7 @@
 				EA0E40C32AF70E86002B7437 /* CashWalletRoute.swift in Sources */,
 				EA910F602AD9B01300584B98 /* OnboardingViewModel.swift in Sources */,
 				56872C7A2D5E38E8002FAE9A /* SettingsViewModelProtocol.swift in Sources */,
+				56B318F72E679F9200B07B66 /* ResetPasswordUseCase.swift in Sources */,
 				EA282ED32AEB531100B90920 /* FunctionsAssembler.swift in Sources */,
 				EAA1E6432AFB03FD00A42174 /* CashTabRouter.swift in Sources */,
 				EA890A292B61EDE500FC369B /* Dependency.swift in Sources */,

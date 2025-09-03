@@ -5,5 +5,6 @@ protocol Scan3DMenuRouterProtocol: Router {
     func routeToGallery()
     func routeToWalkCammer()
     func routeToContact()
+    func routeToWalkyBot()
 }
 

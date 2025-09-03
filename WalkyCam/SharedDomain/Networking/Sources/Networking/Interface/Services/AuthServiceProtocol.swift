@@ -43,4 +43,8 @@ protocol AuthServiceProtocol {
         userId: String,
         completion: @escaping Completion
     )
+    func resetPassword(
+        email: String,
+        completion: @escaping Completion
+    )
 }

@@ -8,4 +8,5 @@ protocol LoginViewModelProtocol: ViewModelProtocol {
 
     func validateFields() -> Bool
     func loginUser(onSuccess: (() -> Void)?, onFailure: (() -> Void)?) async
+    func resetPassword(onSuccess: (() -> Void)?, onFailure: (() -> Void)?) async
 }

@@ -1,3 +1,5 @@
+import CoreLocation
+
 protocol AvailableAssistantsInteractorProtocol {
-    func someFunction()
+    func getCammersOnLocation(location: CLLocationCoordinate2D) async throws -> [CammerData]
 }

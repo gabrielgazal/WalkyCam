@@ -101,6 +101,6 @@ extension GetNearWalkyCammersUseCase {
     }
     
     static func mapDescription(_ input: WalkyCammersResponse) -> String {
-        return "\(4) min de distancia - Desde $\(10)"
+        return input.aboutMe
     }
 }

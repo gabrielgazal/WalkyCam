@@ -95,4 +95,10 @@ final class AuthRepository: AuthRepositoryProtocol {
             completion(result.mapToRepositoryResult(with: DefaultRequestHandler(at: "chat")))
         }
     }
+    
+    func resetPassword(email: String, completion: @escaping (ResetPasswordResponse) -> Void) {
+        service.resetPassword(email: email) { result in
+            completion(result.mapToRepositoryResult(with: DefaultRequestHandler()))
+        }
+    }
 }

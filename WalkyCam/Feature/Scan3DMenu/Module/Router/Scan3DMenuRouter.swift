@@ -39,4 +39,12 @@ final class Scan3DMenuRouter: Router, Scan3DMenuRouterProtocol {
                             link: "https://www.WalkyCam.app/1234567890")
         )
     }
+    
+    func routeToWalkyBot() {
+        navigateTo(
+            WalkyBotRoute(
+                isPresented: isNavigating
+            )
+        )
+    }
 }

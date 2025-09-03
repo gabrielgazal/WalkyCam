@@ -15,6 +15,7 @@ enum AuthRouter {
     case updateInfo(userId: String, name: String?, lastName: String?, gender: String?, cellphone: String?, address: String?, additionalInfo: String?, birthdate: String?)
     case getUserFiles(userId: String)
     case getUserChatbotId(userId: String)
+    case resetPassword(email: String)
 }
 
 extension AuthRouter: TargetType {
@@ -36,12 +37,14 @@ extension AuthRouter: TargetType {
             return "user/get-files/\(userId)"
         case let .getUserChatbotId(userId):
             return "chat/get-walkybot-user-chat/\(userId)"
+        case .resetPassword:
+            return "v1/user/request-password-change" // Removida a barra inicial
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .login, .register:
+        case .login, .register, .resetPassword:
             return .post
         case .verifyByEmail, .getUserFiles, .getUserChatbotId:
             return .get
@@ -69,6 +72,8 @@ extension AuthRouter: TargetType {
                 additionalInfo: additionalInfo,
                 birthdate: birthdate
             )
+        case let .resetPassword(email):
+            return resetPassword(email: email)
         case .getUserFiles, .getUserChatbotId:
             return .requestPlain
         }
@@ -108,15 +113,42 @@ extension AuthRouter: TargetType {
     }
     
     private func updateInfo(userId: String, name: String?, lastName: String?, gender: String?, cellphone: String?, address: String?, additionalInfo: String?, birthdate: String?) -> Task {
+        var parameters: [String: Any] = [
+            "id_user": userId
+        ]
+        
+        // Adicionando apenas valores que não são nil
+        if let name = name, !name.isEmpty {
+            parameters["name"] = name
+        }
+        if let lastName = lastName, !lastName.isEmpty {
+            parameters["last_name"] = lastName
+        }
+        if let gender = gender, !gender.isEmpty {
+            parameters["gender"] = gender
+        }
+        if let cellphone = cellphone, !cellphone.isEmpty {
+            parameters["cellphone_number"] = cellphone
+        }
+        if let address = address, !address.isEmpty {
+            parameters["address"] = address
+        }
+        if let additionalInfo = additionalInfo, !additionalInfo.isEmpty {
+            parameters["about_me"] = additionalInfo
+        }
+        if let birthdate = birthdate, !birthdate.isEmpty {
+            parameters["birth_date"] = birthdate
+        }
+        
+        return .requestParameters(
+            parameters: parameters,
+            encoding: JSONEncoding.default
+        )
+    }
+    
+    private func resetPassword(email: String) -> Task {
         let parameters = [
-            "id_user": userId,
-            "name": name ?? "",
-            "last_name": lastName ?? "",
-            "gender": gender ?? "",
-            "cellphone_number": cellphone ?? "",
-            "address": address ?? "",
-            "about_me": additionalInfo ?? "",
-            "birth_date": birthdate ?? ""
+            "email": email
         ] as [String:Any]
         
         return .requestParameters(

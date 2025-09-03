@@ -34,4 +34,15 @@ final class LoginViewModel: LoginViewModelProtocol {
             onFailure?()
         }
     }
+    
+    @MainActor func resetPassword(onSuccess: (() -> Void)?, onFailure: (() -> Void)?) async {
+        loginUserAsyncData = .loading
+        do {
+            let result = try await interactor
+            onSuccess?()
+        } catch {
+            loginUserAsyncData = .failed(GenericError())
+            onFailure?()
+        }
+    }
 }

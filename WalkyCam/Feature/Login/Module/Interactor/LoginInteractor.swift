@@ -14,6 +14,7 @@ final class LoginInteractor: LoginInteractorProtocol {
     struct UseCases {
         let login: LoginUseCase
         let gerUserPlan: GetUserPlanUseCase
+        let resetPassword: ResetPasswordUseCase
     }
 
     // MARK: - Dependencies
@@ -31,11 +32,27 @@ final class LoginInteractor: LoginInteractorProtocol {
 
     func login(with input: LoginInput) async throws -> LoginOutput {
         return try await withCheckedThrowingContinuation { continuation in
-//            Publishers.Zip(
-//                useCases.login(input),
-//                useCases.gerUserPlan(input)
-//            )
             useCases.login(input)
+            .sink(
+                receiveCompletion: { completion in
+                    switch completion {
+                    case .finished:
+                        break
+                    case .failure(let failure):
+                        continuation.resume(with: .failure(failure))
+                    }
+                },
+                receiveValue: { user in
+                    continuation.resume(returning: user)
+                }
+            )
+            .store(in: &bag)
+        }
+    }
+    
+    func resetPassword(email: String) async throws {
+        return try await withCheckedThrowingContinuation { continuation in
+            useCases.resetPassword(email)
             .sink(
                 receiveCompletion: { completion in
                     switch completion {

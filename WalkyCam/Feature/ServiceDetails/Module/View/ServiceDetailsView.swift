@@ -34,6 +34,7 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
                         .font(.projectFont(size: Tokens.Size.Font.medium, weight: .bold))
                     Spacer()
                     Asset.Icons.accionesDetalle.swiftUIImage
+                        .isHidden(true)
                 }
                 VStack(spacing: 0) {
                     Divider()
@@ -44,6 +45,7 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
                 devicesView()
                 abilitiesView()
                 assistantView
+                    .isHidden(true)
                 pixelationView
             }
                    .padding(.horizontal, Tokens.Size.Spacing.large)

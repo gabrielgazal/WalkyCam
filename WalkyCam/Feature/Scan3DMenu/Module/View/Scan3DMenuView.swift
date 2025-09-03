@@ -74,6 +74,9 @@ struct Scan3DMenuView<ViewModel: Scan3DMenuViewModelProtocol, Router: Scan3DMenu
                         Text(L10n.Scan3DMenuView.FAQs.title)
                             .font(.projectFont(size: Tokens.Size.Font.medium, weight: .bold))
                     }
+                           .onTapGesture {
+                               router.routeToWalkyBot()
+                           }
                 }
             }
         }

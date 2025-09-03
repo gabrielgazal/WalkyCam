@@ -1463,8 +1463,8 @@ internal enum L10n {
     internal static var cancelButton: String { return L10n.tr("Localizable", "ProfitSelectionView.cancelButton", fallback: "Cancelar") }
     /// Trabaja con nosotros, únete al Staff de WalkyCam.
     internal static var employeeDescription: String { return L10n.tr("Localizable", "ProfitSelectionView.employeeDescription", fallback: "Trabaja con nosotros, únete al Staff de WalkyCam.") }
-    /// Empleado: de WalkyCam
-    internal static var employeeTitle: String { return L10n.tr("Localizable", "ProfitSelectionView.employeeTitle", fallback: "Empleado: de WalkyCam") }
+    /// Revende con WalkyCam
+    internal static var employeeTitle: String { return L10n.tr("Localizable", "ProfitSelectionView.employeeTitle", fallback: "Revende con WalkyCam") }
     /// Danos tu tiempo y tus medios y te haremos ganar dinero
     internal static var freelanceDescription: String { return L10n.tr("Localizable", "ProfitSelectionView.freelanceDescription", fallback: "Danos tu tiempo y tus medios y te haremos ganar dinero") }
     /// Freelance: Independiente
@@ -1621,8 +1621,8 @@ internal enum L10n {
       internal static var title: String { return L10n.tr("Localizable", "Scan3DMenuView.ADistancia.title", fallback: "A distancia") }
     }
     internal enum BuscarUnContacto {
-      /// Buscar un Contacto
-      internal static var cellTitle: String { return L10n.tr("Localizable", "Scan3DMenuView.BuscarUnContacto.cellTitle", fallback: "Buscar un Contacto") }
+      /// Compartir
+      internal static var cellTitle: String { return L10n.tr("Localizable", "Scan3DMenuView.BuscarUnContacto.cellTitle", fallback: "Compartir") }
     }
     internal enum BuscarWalkCamer {
       /// Buscar WalkCamer
@@ -1633,8 +1633,8 @@ internal enum L10n {
       internal static var title: String { return L10n.tr("Localizable", "Scan3DMenuView.DesdeTuSmartphone.title", fallback: "Desde tu smartphone") }
     }
     internal enum FAQs {
-      /// FAQ's
-      internal static var title: String { return L10n.tr("Localizable", "Scan3DMenuView.FAQs.title", fallback: "FAQ's") }
+      /// Walky
+      internal static var title: String { return L10n.tr("Localizable", "Scan3DMenuView.FAQs.title", fallback: "Walky") }
     }
     internal enum Galeria {
       /// Galería
@@ -1706,14 +1706,14 @@ internal enum L10n {
   internal enum ServiceConfirmationView {
     /// Asistentes
     internal static var assistants: String { return L10n.tr("Localizable", "ServiceConfirmationView.assistants", fallback: "Asistentes") }
-    /// Quiero cancelar
-    internal static var cancel: String { return L10n.tr("Localizable", "ServiceConfirmationView.cancel", fallback: "Quiero cancelar") }
+    /// Cancelar
+    internal static var cancel: String { return L10n.tr("Localizable", "ServiceConfirmationView.cancel", fallback: "Cancelar") }
     /// La invitación se enviará a los miembros de esta reunión al finalizar el proceso.
     internal static var invitationMessage: String { return L10n.tr("Localizable", "ServiceConfirmationView.invitationMessage", fallback: "La invitación se enviará a los miembros de esta reunión al finalizar el proceso.") }
     /// Enlace
     internal static var link: String { return L10n.tr("Localizable", "ServiceConfirmationView.link", fallback: "Enlace") }
-    /// Ok
-    internal static var ok: String { return L10n.tr("Localizable", "ServiceConfirmationView.ok", fallback: "Ok") }
+    /// Enviar
+    internal static var ok: String { return L10n.tr("Localizable", "ServiceConfirmationView.ok", fallback: "Enviar") }
     /// Videollamada registrada con éxito!
     internal static var successMessage: String { return L10n.tr("Localizable", "ServiceConfirmationView.successMessage", fallback: "Videollamada registrada con éxito!") }
   }
