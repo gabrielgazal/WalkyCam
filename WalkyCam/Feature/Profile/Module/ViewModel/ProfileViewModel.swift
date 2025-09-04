@@ -13,6 +13,7 @@ final class ProfileViewModel: ProfileViewModelProtocol {
     @Published var temporaryAddress: String = ""
     @Published var temporaryAdditionalInfo: String = ""
     @Published var asyncProfileInfo: AsyncData<String, ErrorProtocol> = .idle
+    @Published var toast: ToastModel? = nil
     
     private let interactor: ProfileInteractorProtocol
     let userSession: UserSessionProtocol
@@ -38,7 +39,7 @@ final class ProfileViewModel: ProfileViewModelProtocol {
         asyncProfileInfo = .loading
         Task {
             do {
-                let output = await interactor.updateUserData(
+                let output = try await interactor.updateUserData(
                     .init(
                         id: userData.id,
                         profileImage: userData.profileImage,
@@ -58,8 +59,11 @@ final class ProfileViewModel: ProfileViewModelProtocol {
                 asyncProfileInfo = .loaded("")
                 userData = output
                 isEditingModeEnabled = false
+                presentSuccessToast()
             } catch {
                 asyncProfileInfo = .failed(GenericError())
+                isEditingModeEnabled = false
+                presentErrorToast()
             }
         }
     }
@@ -101,6 +105,26 @@ final class ProfileViewModel: ProfileViewModelProtocol {
         temporaryGender = gender
         temporaryAddress = address
         temporaryAdditionalInfo = additionalInfo
+    }
+    
+    private func presentSuccessToast() {
+        toast = ToastModel(
+            style: .init(
+                icon: Image(systemName: "checkmark.circle.fill"),
+                background: .premium
+            ),
+            message: L10n.ProfileView.UpdateInfo.Success.Toast.title
+        )
+    }
+    
+    private func presentErrorToast() {
+        toast = ToastModel(
+            style: .init(
+                icon: Image(systemName: "xmark.circle.fill"),
+                background: .rojo
+            ),
+            message: L10n.ProfileView.UpdateInfo.Error.Toast.title
+        )
     }
 }
 // swiftlint:enable line_length

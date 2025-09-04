@@ -305,6 +305,9 @@
 		56AF275E2BDAE00800DADC29 /* RegisterWalkcamerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF27512BDAE00800DADC29 /* RegisterWalkcamerViewModel.swift */; };
 		56AF275F2BDAE00800DADC29 /* RegisterWalkcamerViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF27522BDAE00800DADC29 /* RegisterWalkcamerViewModelProtocol.swift */; };
 		56B318F72E679F9200B07B66 /* ResetPasswordUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B318F62E679F9200B07B66 /* ResetPasswordUseCase.swift */; };
+		56B318FF2E68CFC400B07B66 /* ToastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B318F92E68CFC300B07B66 /* ToastModel.swift */; };
+		56B319002E68CFC400B07B66 /* ToastViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B318FB2E68CFC300B07B66 /* ToastViewModifier.swift */; };
+		56B319012E68CFC400B07B66 /* ToastAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B318FD2E68CFC300B07B66 /* ToastAlertView.swift */; };
 		56B3E46B2C3D8443004A87FA /* ScheduleVideoCallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B3E4562C3D8442004A87FA /* ScheduleVideoCallModel.swift */; };
 		56B3E46C2C3D8443004A87FA /* ScheduleVideoCallAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B3E4592C3D8442004A87FA /* ScheduleVideoCallAssembler.swift */; };
 		56B3E46D2C3D8443004A87FA /* ScheduleVideoCallAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B3E45A2C3D8442004A87FA /* ScheduleVideoCallAssemblerProtocol.swift */; };
@@ -1494,6 +1497,9 @@
 		56AF27522BDAE00800DADC29 /* RegisterWalkcamerViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWalkcamerViewModelProtocol.swift; sourceTree = "<group>"; };
 		56B2DC482C9B9F6200396732 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		56B318F62E679F9200B07B66 /* ResetPasswordUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordUseCase.swift; sourceTree = "<group>"; };
+		56B318F92E68CFC300B07B66 /* ToastModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastModel.swift; sourceTree = "<group>"; };
+		56B318FB2E68CFC300B07B66 /* ToastViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastViewModifier.swift; sourceTree = "<group>"; };
+		56B318FD2E68CFC300B07B66 /* ToastAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastAlertView.swift; sourceTree = "<group>"; };
 		56B3E4562C3D8442004A87FA /* ScheduleVideoCallModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVideoCallModel.swift; sourceTree = "<group>"; };
 		56B3E4592C3D8442004A87FA /* ScheduleVideoCallAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVideoCallAssembler.swift; sourceTree = "<group>"; };
 		56B3E45A2C3D8442004A87FA /* ScheduleVideoCallAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVideoCallAssemblerProtocol.swift; sourceTree = "<group>"; };
@@ -4770,6 +4776,33 @@
 			path = Module;
 			sourceTree = "<group>";
 		};
+		56B318FA2E68CFC300B07B66 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				56B318F92E68CFC300B07B66 /* ToastModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		56B318FC2E68CFC300B07B66 /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				56B318FB2E68CFC300B07B66 /* ToastViewModifier.swift */,
+			);
+			path = ViewModifier;
+			sourceTree = "<group>";
+		};
+		56B318FE2E68CFC300B07B66 /* ToastAlert */ = {
+			isa = PBXGroup;
+			children = (
+				56B318FA2E68CFC300B07B66 /* Model */,
+				56B318FC2E68CFC300B07B66 /* ViewModifier */,
+				56B318FD2E68CFC300B07B66 /* ToastAlertView.swift */,
+			);
+			name = ToastAlert;
+			path = ../../../../../../../Downloads/ToastAlert;
+			sourceTree = "<group>";
+		};
 		56B3E44F2C3D8417004A87FA /* ScheduleVideoCall */ = {
 			isa = PBXGroup;
 			children = (
@@ -7910,6 +7943,7 @@
 		EA5E1D662AD70B9100738A8F /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				56B318FE2E68CFC300B07B66 /* ToastAlert */,
 				EA910F9F2ADC464400584B98 /* View */,
 				EA910F2F2AD8B53000584B98 /* Helpers */,
 				EA5E1D8A2AD719B400738A8F /* Texts */,
@@ -12346,6 +12380,7 @@
 				56A6BE982BE2EFC7007EBF13 /* IdentityUploadRouterProtocol.swift in Sources */,
 				EA15B5B22AD7072400C03407 /* SnackBarModifier.swift in Sources */,
 				EA8652902B90ACC200B86A54 /* IOTOnboardingInteractorProtocol.swift in Sources */,
+				56B319012E68CFC400B07B66 /* ToastAlertView.swift in Sources */,
 				EA20A4EE2B87C3B5006662FA /* Scan3DOnboardingRouterProtocol.swift in Sources */,
 				EAA1E6452AFB03FD00A42174 /* CashTabModel.swift in Sources */,
 				569BA7992C2DF57E00E4CCF1 /* PlayBusinessRouter.swift in Sources */,
@@ -12517,6 +12552,7 @@
 				56298DFA2D06312200CF407F /* HomeKitManager.swift in Sources */,
 				569889D32C46AE85006D5997 /* ThermalCameraOnboardingRouter.swift in Sources */,
 				EAF47BF12B83099F003F8B86 /* MapTabView.swift in Sources */,
+				56B318FF2E68CFC400B07B66 /* ToastModel.swift in Sources */,
 				EA86537D2B90FA8800B86A54 /* AIMenuRouter.swift in Sources */,
 				56C890342CED0267004B21CD /* Photo3DScannerRoute.swift in Sources */,
 				EA6083452AFD58A900295069 /* CryptoTabRouter.swift in Sources */,
@@ -12838,6 +12874,7 @@
 				EA4A1C182B87799100B5FC59 /* AvailableAssistantsInteractorProtocol.swift in Sources */,
 				EACFDF162BA7EF3E00B08990 /* UnreleasedFeatureViewModel.swift in Sources */,
 				567CB7762C51885600112F05 /* ServiceConfirmationRouterProtocol.swift in Sources */,
+				56B319002E68CFC400B07B66 /* ToastViewModifier.swift in Sources */,
 				56459FAD2BFFB5FD00776F68 /* InformationView.swift in Sources */,
 				EA282E7C2AE9F14B00B90920 /* WCToggleStyle.swift in Sources */,
 				EA4A1C412B8788DB00B5FC59 /* SpecialistNotifiedView.swift in Sources */,

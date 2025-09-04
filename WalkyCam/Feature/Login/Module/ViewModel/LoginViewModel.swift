@@ -9,7 +9,8 @@ final class LoginViewModel: LoginViewModelProtocol {
     @Published var password: String = ""
     @Published var rememberPassword: SelectorModel = .init(value: "Recordar contraseña")
     @Published var loginUserAsyncData: AsyncData<LoginOutput, ErrorProtocol> = .idle
-
+    @Published var toast: ToastModel? = nil
+    
     // MARK: - Initialization
 
     init(interactor: LoginInteractorProtocol) {
@@ -35,14 +36,40 @@ final class LoginViewModel: LoginViewModelProtocol {
         }
     }
     
-    @MainActor func resetPassword(onSuccess: (() -> Void)?, onFailure: (() -> Void)?) async {
+    @MainActor func resetPassword() async {
         loginUserAsyncData = .loading
         do {
-            let result = try await interactor
-            onSuccess?()
+            try await interactor.resetPassword(email: userName)
+            presentPasswordSuccessToast()
         } catch {
             loginUserAsyncData = .failed(GenericError())
-            onFailure?()
+            presentPasswordErrorToast()
         }
+    }
+    
+    private func presentPasswordSuccessToast() {
+        toast = ToastModel(
+            style: .init(
+                icon: Image(systemName: "checkmark.circle.fill"),
+                background: .premium
+            ),
+            message: L10n.LoginView.ResetPassword.Success.toast,
+            duration: 5,
+            direction: .top,
+            closable: true
+        )
+    }
+    
+    private func presentPasswordErrorToast() {
+        toast = ToastModel(
+            style: .init(
+                icon: Image(systemName: "xmark.circle.fill"),
+                background: .rojo
+            ),
+            message: L10n.LoginView.ResetPassword.Error.toast,
+            duration: 3,
+            direction: .top,
+            closable: true
+        )
     }
 }

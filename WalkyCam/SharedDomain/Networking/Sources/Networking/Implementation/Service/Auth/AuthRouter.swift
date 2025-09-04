@@ -38,18 +38,16 @@ extension AuthRouter: TargetType {
         case let .getUserChatbotId(userId):
             return "chat/get-walkybot-user-chat/\(userId)"
         case .resetPassword:
-            return "v1/user/request-password-change" // Removida a barra inicial
+            return "user/request-password-change"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .login, .register, .resetPassword:
+        case .login, .register, .resetPassword, .updateInfo:
             return .post
         case .verifyByEmail, .getUserFiles, .getUserChatbotId:
             return .get
-        case .updateInfo:
-            return .put
         }
     }
     
@@ -117,7 +115,6 @@ extension AuthRouter: TargetType {
             "id_user": userId
         ]
         
-        // Adicionando apenas valores que não são nil
         if let name = name, !name.isEmpty {
             parameters["name"] = name
         }

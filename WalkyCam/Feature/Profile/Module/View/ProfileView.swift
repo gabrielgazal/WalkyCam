@@ -146,6 +146,7 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
         }
                .background(Color.blanco)
                .navigation(router)
+               .toastView(toast: $viewModel.toast)
     }
 
     private var headerView: some View {
@@ -212,6 +213,7 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
                     .isHidden(!viewModel.isEditingModeEnabled)
             }
             Divider()
+                .isHidden(viewModel.isEditingModeEnabled && editableText == nil)
         }
                .padding([.top], Tokens.Size.Spacing.large)
     }

@@ -5,8 +5,9 @@ protocol LoginViewModelProtocol: ViewModelProtocol {
     var password: String { get set }
     var rememberPassword: SelectorModel { get set }
     var loginUserAsyncData: AsyncData<LoginOutput, ErrorProtocol> { get set }
+    var toast: ToastModel? { get set }
 
     func validateFields() -> Bool
     func loginUser(onSuccess: (() -> Void)?, onFailure: (() -> Void)?) async
-    func resetPassword(onSuccess: (() -> Void)?, onFailure: (() -> Void)?) async
+    func resetPassword() async
 }

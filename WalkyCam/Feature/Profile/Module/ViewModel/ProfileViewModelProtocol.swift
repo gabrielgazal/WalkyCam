@@ -11,6 +11,7 @@ protocol ProfileViewModelProtocol: ViewModelProtocol {
     var temporaryAddress: String { get set }
     var temporaryAdditionalInfo: String { get set }
     var asyncProfileInfo: AsyncData<String, ErrorProtocol> { get set }
+    var toast: ToastModel? { get set }
     
     func logout()
     func updateInfo() async

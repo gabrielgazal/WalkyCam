@@ -1205,6 +1205,16 @@ internal enum L10n {
         internal static var text: String { return L10n.tr("Localizable", "LoginView.input.user.text", fallback: "Usuario") }
       }
     }
+    internal enum ResetPassword {
+      internal enum Error {
+        /// Hubo un problema al restablecer tu contraseña. Inténtalo de nuevo más tarde.
+        internal static var toast: String { return L10n.tr("Localizable", "LoginView.resetPassword.error.toast", fallback: "Hubo un problema al restablecer tu contraseña. Inténtalo de nuevo más tarde.") }
+      }
+      internal enum Success {
+        /// ¡Contraseña restablecida correctamente! Revisa tu correo electrónico para ver los próximos pasos.
+        internal static var toast: String { return L10n.tr("Localizable", "LoginView.resetPassword.success.toast", fallback: "¡Contraseña restablecida correctamente! Revisa tu correo electrónico para ver los próximos pasos.") }
+      }
+    }
     internal enum Title {
       /// Login
       internal static var text: String { return L10n.tr("Localizable", "LoginView.title.text", fallback: "Login") }
@@ -1448,6 +1458,20 @@ internal enum L10n {
     internal enum Toggle {
       /// Soy WalkCamer
       internal static var walkycamer: String { return L10n.tr("Localizable", "ProfileView.toggle.walkycamer", fallback: "Soy WalkCamer") }
+    }
+    internal enum UpdateInfo {
+      internal enum Error {
+        internal enum Toast {
+          /// Error updating information
+          internal static var title: String { return L10n.tr("Localizable", "ProfileView.updateInfo.error.toast.title", fallback: "Error updating information") }
+        }
+      }
+      internal enum Success {
+        internal enum Toast {
+          /// Information updated successfully
+          internal static var title: String { return L10n.tr("Localizable", "ProfileView.updateInfo.success.toast.title", fallback: "Information updated successfully") }
+        }
+      }
     }
     internal enum Username {
       /// Username

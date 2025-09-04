@@ -35,8 +35,8 @@ final class ProfileInteractor: ProfileInteractorProtocol {
         }
     }
     
-    func updateUserData(_ user: UserData) async -> UserData {
-        return await withCheckedContinuation { continuation in
+    func updateUserData(_ user: UserData) async throws -> UserData {
+        return try await withCheckedThrowingContinuation { continuation in
             useCases.updateInfo(user)
                 .sink(
                     receiveCompletion: { _ in },

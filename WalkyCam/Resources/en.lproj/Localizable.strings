@@ -14,6 +14,8 @@
 "LoginView.button.login" = "Login";
 "LoginView.button.signup" = "Sign up";
 "LoginView.divider.text" = "Or Sign up with";
+"LoginView.resetPassword.success.toast" = "Password reseted successfully! Check your e-mail for the next steps.";
+"LoginView.resetPassword.error.toast" = "There was a problem resetting your password. Try again later.";
 
 // MARK: - OnboardingView
 "OnboardingView.Page1.title" = "What is it?";
@@ -76,6 +78,8 @@
 "ProfileView.earnings.title" = "(earn with us)";
 "ProfileView.username.title" = "Nombre de usuario";
 "ProfileView.email.title" = "Correo electonico";
+"ProfileView.updateInfo.success.toast.title" = "Informaciones actualizadas con éxito";
+"ProfileView.updateInfo.error.toast.title" = "No fue possible actualizar las informaciones.";
 
 // MARK: - ConfirmMailView
 "ConfirmMailView.title" = "Your account has been successfully registered.\nWe have sent you an email to confirm your account";

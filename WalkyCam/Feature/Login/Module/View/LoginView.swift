@@ -6,7 +6,8 @@ struct LoginView<ViewModel: LoginViewModelProtocol, Router: LoginRouterProtocol>
 
     @ObservedObject private var viewModel: ViewModel
     @ObservedObject private var router: Router
-
+    @State var isAlertPresented = false
+    
     // MARK: - Initialization
 
     init(viewModel: ViewModel,
@@ -44,6 +45,7 @@ struct LoginView<ViewModel: LoginViewModelProtocol, Router: LoginRouterProtocol>
                                action: handleForgotPassword)
                     Spacer()
                 }
+                .isHidden(viewModel.userName.isEmpty)
                 WCUIButton(title: L10n.LoginView.Button.login,
                            descriptor: OrangeButtonStyleDescriptor(),
                            action: handleLogin)
@@ -85,19 +87,13 @@ struct LoginView<ViewModel: LoginViewModelProtocol, Router: LoginRouterProtocol>
         .background(Asset.Fondos.loginFondo.swiftUIImage
             .ignoresSafeArea())
         .navigation(router)
+        .toastView(toast: $viewModel.toast)
     }
     
     private func handleForgotPassword() {
         viewModel.loginUserAsyncData = .loading
         Task {
-            await viewModel.resetPassword(
-                onSuccess: {
-                    print("teste")
-                },
-                onFailure: {
-                    print("error")
-                }
-            )
+            await viewModel.resetPassword()
         }
     }
 

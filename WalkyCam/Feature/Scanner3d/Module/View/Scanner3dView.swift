@@ -43,6 +43,7 @@ struct Scanner3dView<ViewModel: Scanner3dViewModelProtocol, Router: Scanner3dRou
                             Video3DScannerRoute(isPresented: router.isNavigating)
                         )
                     }
+                    .isHidden(true)
                     
                     WCUIButton(
                         title: "PHOTO SCAN",

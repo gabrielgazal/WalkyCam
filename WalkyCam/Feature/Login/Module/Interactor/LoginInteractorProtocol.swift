@@ -7,4 +7,5 @@
 
 protocol LoginInteractorProtocol {
     func login(with input: LoginInput) async throws -> LoginOutput
+    func resetPassword(email: String) async throws
 }
