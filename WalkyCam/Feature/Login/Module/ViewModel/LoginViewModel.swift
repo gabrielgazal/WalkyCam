@@ -51,7 +51,7 @@ final class LoginViewModel: LoginViewModelProtocol {
         toast = ToastModel(
             style: .init(
                 icon: Image(systemName: "checkmark.circle.fill"),
-                background: .premium
+                background: .green2
             ),
             message: L10n.LoginView.ResetPassword.Success.toast,
             duration: 5,

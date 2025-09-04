@@ -111,7 +111,7 @@ final class ProfileViewModel: ProfileViewModelProtocol {
         toast = ToastModel(
             style: .init(
                 icon: Image(systemName: "checkmark.circle.fill"),
-                background: .premium
+                background: .green2
             ),
             message: L10n.ProfileView.UpdateInfo.Success.Toast.title
         )
