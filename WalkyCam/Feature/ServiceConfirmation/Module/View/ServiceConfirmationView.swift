@@ -89,7 +89,7 @@ struct ServiceConfirmationView<ViewModel: ServiceConfirmationViewModelProtocol, 
                 if let image = data.image,
                    data.title == L10n.ServiceConfirmationView.link,
                    let userId = try? UserSession().user().id,
-                   let url = URL(string: "https://meet.walkycam.com/videocall/\(ServiceInformationManager.shared.getServiceBasicInformation().callId)/\(userId)"){
+                   let url = URL(string: "https://meet.walkycam.com/join-to-videocall/\(ServiceInformationManager.shared.getServiceBasicInformation().callId)"){
                     ShareLink(item: url){
                         Image(image)
                             .renderingMode(.template)

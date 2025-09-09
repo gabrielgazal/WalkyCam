@@ -336,9 +336,9 @@
 "StreetCamMenuView.search.title" = "SEARCH";
 "StreetCamMenuView.search.description" = "Locate your nearest WalkCamer.";
 "StreetCamMenuView.search.button" = "Search";
-"StreetCamMenuView.schedule.title" = "BOOK";
+"StreetCamMenuView.schedule.title" = "SCHEDULE";
 "StreetCamMenuView.schedule.description" = "Schedule your WalkCamer in advance.";
-"StreetCamMenuView.schedule.button" = "Book";
+"StreetCamMenuView.schedule.button" = "Schedule";
 "StreetCamMenuView.join.title" = "JOIN";
 "StreetCamMenuView.join.description" = "Enter the code you received.";
 "StreetCamMenuView.join.inputPlaceholder" = "Enter code";

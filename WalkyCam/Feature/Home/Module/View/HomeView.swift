@@ -215,25 +215,29 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
     }
     
     private var planView: some View {
-            HStack(alignment: .top,
+        HStack(alignment: .top,
+               spacing: Tokens.Size.Spacing.regular) {
+            Image(systemName: "crown.fill")
+                .resizable()
+                .scaledToFit()
+                .foregroundColor(.blanco)
+                .frame(width: 24, height: 24)
+            VStack(alignment: .leading,
                    spacing: Tokens.Size.Spacing.regular) {
-                Image(systemName: "crown.fill")
-                    .resizable()
-                    .scaledToFit()
+                Text("Compara beneficios")
+                    .font(.projectFont(size: Tokens.Size.Font.medium))
                     .foregroundColor(.blanco)
-                    .frame(width: 24, height: 24)
-                VStack(alignment: .leading,
-                       spacing: Tokens.Size.Spacing.regular) {
-                    Text("Compara beneficios")
-                        .font(.projectFont(size: Tokens.Size.Font.medium))
-                        .foregroundColor(.blanco)
-                    Text("Ver todos los planes")
-                        .underline()
-                        .font(.projectFont(size: Tokens.Size.Font.medium, weight: .black))
-                        .foregroundColor(Color.naranja)
-                }
-                Spacer()
+                Text("Ver todos los planes")
+                    .underline()
+                    .font(.projectFont(size: Tokens.Size.Font.medium, weight: .black))
+                    .foregroundColor(Color.naranja)
             }
+            Spacer()
+        }
+               .clipped()
+               .onTapGesture {
+                   router.routeToRegistrationPlans()
+               }
                .padding()
                .background(
                 ZStack {
@@ -245,10 +249,6 @@ struct HomeView<ViewModel: HomeViewModelProtocol, Router: HomeRouterProtocol>: V
                     Color.negro.opacity(0.5)
                 }
                )
-               .clipped()
-               .onTapGesture {
-                   router.routeToRegistrationPlans()
-               }
     }
 }
 

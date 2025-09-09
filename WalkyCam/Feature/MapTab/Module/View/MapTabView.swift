@@ -24,13 +24,15 @@ struct MapTabView<ViewModel: MapTabViewModelProtocol, Router: MapTabRouterProtoc
             VStack {
                 TextInputView(
                     text: $viewModel.locationText,
-                    accessory: Asset.Icons.filter.swiftUIImage,
+                    accessory: Image(systemName: "magnifyingglass"),
                     placeholder: L10n.SearchWalkyCammerView.Search.placeholder,
                     leftIcon: Asset.Icons.location.swiftUIImage,
-                    rightIcon: Image(systemName: "magnifyingglass"),
                     backgroundColor: .blanco,
                     actions: .init(
                         onCommitAction: {
+                            viewModel.getUserRegion()
+                        },
+                        accessoryAction: {
                             viewModel.getUserRegion()
                         })
                 )

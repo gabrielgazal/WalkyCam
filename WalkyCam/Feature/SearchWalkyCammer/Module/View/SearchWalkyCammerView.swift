@@ -112,13 +112,15 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
             VStack {
                 TextInputView(
                     text: $viewModel.locationText,
-                    accessory: Asset.Icons.filter.swiftUIImage,
-                    placeholder: L10n.SearchWalkyCammerView.Search.placeholder,
+                    accessory: Image(systemName: "magnifyingglass"),
+                    placeholder: L10n.SearchWalkyCammerViewModel.Title.searchZone,
                     leftIcon: Asset.Icons.location.swiftUIImage,
-                    rightIcon: Image(systemName: "magnifyingglass"),
                     backgroundColor: .blanco,
                     actions: .init(
                         onCommitAction: {
+                            viewModel.getUserRegion()
+                        },
+                        accessoryAction: {
                             viewModel.getUserRegion()
                         })
                 )
@@ -145,7 +147,6 @@ struct SearchWalkyCammerView<ViewModel: SearchWalkyCammerViewModelProtocol, Rout
                 viewModel.updateUserRegionGeocoder()
             }
             .disabled(viewModel.walkyCammers.isLoading)
-            .isHidden(true)
         }
         .ignoresSafeArea()
     }

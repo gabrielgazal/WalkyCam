@@ -20,7 +20,7 @@ struct BookWalkycamerView<ViewModel: BookWalkycamerViewModelProtocol, Router: Bo
     var body: some View {
         ZStack {
             VStack(alignment: .leading,
-                   spacing: 8) {
+                   spacing: 16) {
                 headerView
                 WCTopBarContainerView(
                     topBarItems: viewModel.tabBarItems,

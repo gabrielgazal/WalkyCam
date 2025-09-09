@@ -78,6 +78,7 @@ struct LoginView<ViewModel: LoginViewModelProtocol, Router: LoginRouterProtocol>
                                action: {})
                 }
                 .frame(height: 70)
+                .isHidden(true)
             }
             Text(L10n.Copyright.text)
                 .font(.projectFont(size: Tokens.Size.Font.xsmall))
