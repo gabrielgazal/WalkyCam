@@ -6,7 +6,7 @@ final class Photo3DScannerViewModel: Photo3DScannerViewModelProtocol {
 
     private let interactor: Scanner3dInteractorProtocol
     
-    @Published var capturedImages: [UIImage] = []
+    @Published var capturedImages: [String: UIImage] = [:]
     @Published var showImagePicker: Bool = true
     @Published var scanState: AsyncData<Data, ErrorProtocol> = .idle
     
@@ -22,8 +22,22 @@ final class Photo3DScannerViewModel: Photo3DScannerViewModelProtocol {
         scanState = .loading
         do {
             guard !capturedImages.isEmpty else { return }
-            let convertedImages = capturedImages.compactMap { $0.jpegData(compressionQuality: 0.8) }
-            _ = try await interactor.generateModelFromPhotos(input: convertedImages)
+            let convertedImages = capturedImages.compactMap { $0.value.jpegData(compressionQuality: 0.8) }
+            var mappedImages = [String: Data]()
+            for (index, image) in convertedImages.enumerated() {
+                switch index {
+                case 0:
+                    mappedImages.updateValue(image, forKey: "front")
+                case 1:
+                    mappedImages.updateValue(image, forKey: "back")
+                case 2:
+                    mappedImages.updateValue(image, forKey: "left")
+                case 3:
+                    mappedImages.updateValue(image, forKey: "right")
+                default: break
+                }
+            }
+            _ = try await interactor.generateModelFromPhotos(input: mappedImages)
             scanState = .loaded(Data())
             onSuccess?()
         } catch {
@@ -32,11 +46,15 @@ final class Photo3DScannerViewModel: Photo3DScannerViewModelProtocol {
         }
     }
     
-    func addImage(_ image: UIImage) {
-        capturedImages.append(image)
+    func addImage(_ image: UIImage, for position: String) {
+        capturedImages[position] = image
     }
     
-    func clearImages() {
+    func imageForPosition(_ position: String) -> UIImage? {
+        return capturedImages[position]
+    }
+
+    func clearAllImages() {
         capturedImages.removeAll()
     }
 }

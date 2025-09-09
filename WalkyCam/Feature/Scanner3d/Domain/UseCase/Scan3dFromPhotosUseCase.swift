@@ -9,7 +9,7 @@ import Foundation
 import Networking
 import Combine
 
-typealias Scan3dFromPhotosUseCase = GenericUseCase<[Data], Void>
+typealias Scan3dFromPhotosUseCase = GenericUseCase<[String: Data], Void>
 
 extension Scan3dFromPhotosUseCase {
 

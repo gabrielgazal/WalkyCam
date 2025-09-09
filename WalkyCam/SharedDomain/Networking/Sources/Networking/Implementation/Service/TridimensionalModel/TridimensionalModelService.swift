@@ -26,7 +26,7 @@ final class TridimensionalModelService: TridimensionalModelServiceProtocol {
 
     // MARK: - Public API
     
-    func generateModelFromImages(userId: String, images: [Data], completion: @escaping Completion) {
+    func generateModelFromImages(userId: String, images: [String: Data], completion: @escaping Completion) {
         provider.request(
             .generateModelFromImages(
                 userId: userId,

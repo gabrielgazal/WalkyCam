@@ -14,7 +14,7 @@ public protocol TridimensionalModelRepositoryProtocol {
 
     func generateModelFromImages(
         userId: String,
-        images: [Data],
+        images: [String: Data],
         completion: @escaping (GenerateModelFromImagesResult) -> Void
     )
     func generateModelFromVideo(

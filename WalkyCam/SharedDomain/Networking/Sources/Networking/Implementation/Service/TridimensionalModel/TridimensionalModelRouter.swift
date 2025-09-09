@@ -9,7 +9,7 @@ import Foundation
 import Moya
 
 enum TridimensionalModelRouter {
-    case generateModelFromImages(userId: String, images: [Data])
+    case generateModelFromImages(userId: String, images: [String: Data])
     case generateModelFromVideo(userId: String, video: Data)
 }
 
@@ -21,7 +21,7 @@ extension TridimensionalModelRouter: TargetType {
     var path: String {
         switch self {
         case .generateModelFromImages:
-            return "user/3d/generate-obj-model-from-images"
+            return "/v1/user/3d/generate-glb-model-from-images"
         case .generateModelFromVideo:
             return "user/3d/generate-obj-model-from-video"
         }
@@ -43,22 +43,27 @@ extension TridimensionalModelRouter: TargetType {
         }
     }
     
-    private func generateModelFromImages(_ userId: String, _ images: [Data]) -> Task {
+    private func generateModelFromImages(_ userId: String, _ images: [String: Data]) -> Task {
         var formData: [MultipartFormData] = []
 
         // Adiciona o userId como parte do formulário
         let userIdPart = MultipartFormData(provider: .data(userId.data(using: .utf8)!), name: "id_user")
         formData.append(userIdPart)
 
-        // Adiciona cada imagem como uma parte do formulário
-        for (index, imageData) in images.enumerated() {
-            let imagePart = MultipartFormData(
-                provider: .data(imageData),
-                name: "images[\(index)]", // Nome da chave no formato de array
-                fileName: "image\(index).jpg", // Nome do arquivo
-                mimeType: "image/jpeg" // Tipo MIME adequado
-            )
-            formData.append(imagePart)
+        // Define as chaves esperadas para as imagens
+        let imageKeys = ["front", "back", "left", "right"]
+        
+        // Adiciona cada imagem usando sua chave específica
+        for key in imageKeys {
+            if let imageData = images[key] {
+                let imagePart = MultipartFormData(
+                    provider: .data(imageData),
+                    name: "images[\(key)]", // Nome da chave específica (front, back, left, right)
+                    fileName: "image_\(key).jpg", // Nome do arquivo com a posição
+                    mimeType: "image/jpeg" // Tipo MIME adequado
+                )
+                formData.append(imagePart)
+            }
         }
 
         return .uploadMultipart(formData)

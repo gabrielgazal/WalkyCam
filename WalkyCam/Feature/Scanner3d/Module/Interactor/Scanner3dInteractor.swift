@@ -43,7 +43,7 @@ final class Scanner3dInteractor: Scanner3dInteractorProtocol {
         }
     }
     
-    func generateModelFromPhotos(input: [Data]) async throws {
+    func generateModelFromPhotos(input: [String: Data]) async throws {
         return try await withCheckedThrowingContinuation { continuation in
             useCases.scan3dFromPhotos(input)
             .sink(

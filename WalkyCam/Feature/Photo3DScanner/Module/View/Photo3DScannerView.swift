@@ -8,8 +8,17 @@ struct Photo3DScannerView<ViewModel: Photo3DScannerViewModelProtocol, Router: Ph
     @ObservedObject private var router: Router
     private let columns = [
         GridItem(.flexible(), spacing: Tokens.Size.Spacing.large),
-        GridItem(.flexible(), spacing: Tokens.Size.Spacing.large),
         GridItem(.flexible(), spacing: Tokens.Size.Spacing.large)
+    ]
+    
+    // MARK: - State para controlar qual posição está sendo capturada
+    @State private var currentPosition: String = "front"
+    private let positions = ["front", "back", "left", "right"]
+    private let positionLabels = [
+        "front": "Frente",
+        "back": "Traseira",
+        "left": "Esquerda",
+        "right": "Direita"
     ]
     
     // MARK: - Initialization
@@ -29,20 +38,60 @@ struct Photo3DScannerView<ViewModel: Photo3DScannerViewModelProtocol, Router: Ph
                 spacing: Tokens.Size.Spacing.regular) {
                     Text("Modelado 3D")
                         .font(.projectFont(size: Tokens.Size.Font.huge, weight: .bold))
-                    if viewModel.capturedImages.isEmpty {
-                        Text("Nenhuma foto capturada")
+                    
+                    // Status das fotos capturadas
+                    VStack(alignment: .leading, spacing: Tokens.Size.Spacing.small) {
+                        Text("Progresso: \(viewModel.capturedImages.count)/4 fotos")
                             .font(.headline)
-                            .foregroundColor(.gray)
+                        
+                        if viewModel.capturedImages.count < 4 {
+                            Text("Próxima foto: \(positionLabels[currentPosition] ?? currentPosition)")
+                                .font(.subheadline)
+                                .foregroundColor(.orange)
+                        }
+                    }
+                    
+                    if viewModel.capturedImages.isEmpty {
+                        VStack {
+                            Image(systemName: "camera")
+                                .font(.system(size: 50))
+                                .foregroundColor(.gray)
+                            Text("Nenhuma foto capturada")
+                                .font(.headline)
+                                .foregroundColor(.gray)
+                        }
+                        .frame(maxWidth: .infinity, minHeight: 200)
                     } else {
+                        // Grid mostrando as fotos por posição
                         LazyVGrid(columns: columns,
                                   spacing: Tokens.Size.Spacing.large) {
-                            ForEach(viewModel.capturedImages, id: \.self) { image in
-                                Image(uiImage: image)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 100, height: 100)
-                                    .cornerRadius(8)
-                                    .clipped()
+                            ForEach(positions, id: \.self) { position in
+                                VStack {
+                                    if let image = viewModel.imageForPosition(position) {
+                                        Image(uiImage: image)
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 100, height: 100)
+                                            .cornerRadius(8)
+                                            .clipped()
+                                    } else {
+                                        RoundedRectangle(cornerRadius: 8)
+                                            .fill(Color.gray.opacity(0.3))
+                                            .frame(width: 100, height: 100)
+                                            .overlay(
+                                                VStack {
+                                                    Image(systemName: "camera")
+                                                        .foregroundColor(.gray)
+                                                    Text("Pendente")
+                                                        .font(.caption)
+                                                        .foregroundColor(.gray)
+                                                }
+                                            )
+                                    }
+                                    Text(positionLabels[position] ?? position)
+                                        .font(.caption)
+                                        .foregroundColor(.primary)
+                                }
                             }
                         }
                     }
@@ -54,35 +103,54 @@ struct Photo3DScannerView<ViewModel: Photo3DScannerViewModelProtocol, Router: Ph
             VStack(
                 alignment: .center,
                 spacing: Tokens.Size.Spacing.regular) {
-                    WCUIButton(
-                        title: "Tirar foto",
-                        style: .standard,
-                        descriptor: OrangeButtonStyleDescriptor()) {
-                            viewModel.showImagePicker = true
-                        }
-                    WCUIButton(
-                        title: "Enviar fotos",
-                        style: .standard,
-                        descriptor: BlackButtonStyleDescriptor()) {
-                            Task {
-                                await viewModel.generateModelFromPhotos(
-                                    onSuccess: {
-                                        print("AA SUCCESS")
-                                    },
-                                    onFailure: {
-                                        print("AA FAILURE")
-                                    }
-                                )
+                    
+                    // Botão para tirar foto - só aparece se ainda não tem 4 fotos
+                    if viewModel.capturedImages.count < 4 {
+                        WCUIButton(
+                            title: "Tirar foto \(positionLabels[currentPosition] ?? currentPosition)",
+                            style: .standard,
+                            descriptor: OrangeButtonStyleDescriptor()) {
+                                viewModel.showImagePicker = true
                             }
-                        }
-                        .loading(viewModel.scanState.isLoading)
+                    }
+                    
+                    // Botão para enviar - só aparece se tem 4 fotos
+                    if viewModel.capturedImages.count == 4 {
+                        WCUIButton(
+                            title: "Enviar fotos",
+                            style: .standard,
+                            descriptor: BlackButtonStyleDescriptor()) {
+                                Task {
+                                    await viewModel.generateModelFromPhotos(
+                                        onSuccess: {
+                                            print("AA SUCCESS")
+                                        },
+                                        onFailure: {
+                                            print("AA FAILURE")
+                                        }
+                                    )
+                                }
+                            }
+                            .loading(viewModel.scanState.isLoading)
+                    }
+                    
+                    if viewModel.capturedImages.count > 0 {
+                        WCUIButton(
+                            title: "Reiniciar",
+                            style: .standard,
+                            descriptor: BlackButtonStyleDescriptor()) {
+                                viewModel.clearAllImages()
+                                currentPosition = "front"
+                            }
+                    }
                 }
                 .padding()
         }
         .fullScreenCover(isPresented: $viewModel.showImagePicker) {
-            ImagePicker(sourceType: .camera) { image in
-                if let image = image {
-                    viewModel.addImage(image)
+            ImagePicker(sourceType: .camera) { images in
+                if let image = images.first {
+                    viewModel.addImage(image, for: currentPosition)
+                    updateCurrentPosition()
                 }
             }
         }
@@ -94,6 +162,16 @@ struct Photo3DScannerView<ViewModel: Photo3DScannerViewModelProtocol, Router: Ph
                 presentSuccessSnackbar()
             default: break
             }
+        }
+    }
+    
+    // MARK: - Helper Methods
+    
+    private func updateCurrentPosition() {
+        guard let currentIndex = positions.firstIndex(of: currentPosition) else { return }
+        let nextIndex = currentIndex + 1
+        if nextIndex < positions.count {
+            currentPosition = positions[nextIndex]
         }
     }
     
