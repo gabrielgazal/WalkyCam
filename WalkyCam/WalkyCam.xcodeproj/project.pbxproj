@@ -143,6 +143,9 @@
 		56298E1F2D0632BF00CF407F /* BulbPartyLightSelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56298E102D0632BE00CF407F /* BulbPartyLightSelectorViewModel.swift */; };
 		56298E202D0632BF00CF407F /* BulbPartyLightSelectorViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56298E112D0632BE00CF407F /* BulbPartyLightSelectorViewModelProtocol.swift */; };
 		56298E212D0632BF00CF407F /* BulbPartyLightSelectorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56298E142D0632BF00CF407F /* BulbPartyLightSelectorModel.swift */; };
+		562BE4232E71034E002A7ABC /* ToastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562BE4222E71034E002A7ABC /* ToastModel.swift */; };
+		562BE4252E71036E002A7ABC /* ToastViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562BE4242E71036E002A7ABC /* ToastViewModifier.swift */; };
+		562BE4272E71037E002A7ABC /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562BE4262E71037E002A7ABC /* ToastView.swift */; };
 		5637A8162AD5DD72000586DF /* WalkyCamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5637A8152AD5DD72000586DF /* WalkyCamApp.swift */; };
 		5637A81A2AD5DD73000586DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5637A8192AD5DD73000586DF /* Assets.xcassets */; };
 		56459FA32BFFB4D300776F68 /* SnackBarAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56459F982BFFB4D300776F68 /* SnackBarAssembler.swift */; };
@@ -1330,6 +1333,9 @@
 		56298E102D0632BE00CF407F /* BulbPartyLightSelectorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulbPartyLightSelectorViewModel.swift; sourceTree = "<group>"; };
 		56298E112D0632BE00CF407F /* BulbPartyLightSelectorViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulbPartyLightSelectorViewModelProtocol.swift; sourceTree = "<group>"; };
 		56298E142D0632BF00CF407F /* BulbPartyLightSelectorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulbPartyLightSelectorModel.swift; sourceTree = "<group>"; };
+		562BE4222E71034E002A7ABC /* ToastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastModel.swift; sourceTree = "<group>"; };
+		562BE4242E71036E002A7ABC /* ToastViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewModifier.swift; sourceTree = "<group>"; };
+		562BE4262E71037E002A7ABC /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		5637A8122AD5DD72000586DF /* WalkyCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkyCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5637A8152AD5DD72000586DF /* WalkyCamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkyCamApp.swift; sourceTree = "<group>"; };
 		5637A8192AD5DD73000586DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -3457,6 +3463,32 @@
 				562BE41C2E70B1FA002A7ABC /* ViewModifier */,
 			);
 			path = ToastAlert;
+			sourceTree = "<group>";
+		};
+		562BE41E2E7102D5002A7ABC /* ToastView */ = {
+			isa = PBXGroup;
+			children = (
+				562BE4202E7102DE002A7ABC /* Model */,
+				562BE41F2E7102DE002A7ABC /* ViewModifier */,
+			);
+			path = ToastView;
+			sourceTree = "<group>";
+		};
+		562BE41F2E7102DE002A7ABC /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				562BE4242E71036E002A7ABC /* ToastViewModifier.swift */,
+				562BE4262E71037E002A7ABC /* ToastView.swift */,
+			);
+			path = ViewModifier;
+			sourceTree = "<group>";
+		};
+		562BE4202E7102DE002A7ABC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				562BE4222E71034E002A7ABC /* ToastModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		5637A8092AD5DD71000586DF = {
@@ -7988,6 +8020,7 @@
 		EA5E1D812AD7182800738A8F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				562BE41E2E7102D5002A7ABC /* ToastView */,
 				56459FA22BFFB4D300776F68 /* SnackBarAlert */,
 				EA57A7AC2B6C1C9B006247DD /* FooterView */,
 				561FC8C32B5C6854005B6006 /* Error */,
@@ -12541,6 +12574,7 @@
 				56298DFA2D06312200CF407F /* HomeKitManager.swift in Sources */,
 				569889D32C46AE85006D5997 /* ThermalCameraOnboardingRouter.swift in Sources */,
 				EAF47BF12B83099F003F8B86 /* MapTabView.swift in Sources */,
+				562BE4232E71034E002A7ABC /* ToastModel.swift in Sources */,
 				EA86537D2B90FA8800B86A54 /* AIMenuRouter.swift in Sources */,
 				56C890342CED0267004B21CD /* Photo3DScannerRoute.swift in Sources */,
 				EA6083452AFD58A900295069 /* CryptoTabRouter.swift in Sources */,
@@ -12759,6 +12793,7 @@
 				EA910FC82ADC495700584B98 /* TabBarViewModelProtocol.swift in Sources */,
 				EAE401D82BBA452900B1311E /* DigitalTwinsMenuInteractorProtocol.swift in Sources */,
 				EA8653022B90E0FB00B86A54 /* LidarOnboardingView.swift in Sources */,
+				562BE4272E71037E002A7ABC /* ToastView.swift in Sources */,
 				EA20A4EA2B87C3B4006662FA /* Scan3DOnboardingView.swift in Sources */,
 				EAE8EC542B9574840003AE96 /* ChatListViewModel.swift in Sources */,
 				EA910F8E2ADA06F500584B98 /* RegistrationViewModel.swift in Sources */,
@@ -12862,6 +12897,7 @@
 				EA4A1C182B87799100B5FC59 /* AvailableAssistantsInteractorProtocol.swift in Sources */,
 				EACFDF162BA7EF3E00B08990 /* UnreleasedFeatureViewModel.swift in Sources */,
 				567CB7762C51885600112F05 /* ServiceConfirmationRouterProtocol.swift in Sources */,
+				562BE4252E71036E002A7ABC /* ToastViewModifier.swift in Sources */,
 				56459FAD2BFFB5FD00776F68 /* InformationView.swift in Sources */,
 				EA282E7C2AE9F14B00B90920 /* WCToggleStyle.swift in Sources */,
 				EA4A1C412B8788DB00B5FC59 /* SpecialistNotifiedView.swift in Sources */,
