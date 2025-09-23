@@ -35,7 +35,7 @@ final class Scan3DMenuRouter: Router, Scan3DMenuRouterProtocol {
     func routeToContact() {
         presentBottomSheet(
             ShareSheetRoute(isPresented: isPresentingBottomSheet,
-                            title: "Buscar Contacto",
+                            title: "Compartir",
                             link: "https://www.WalkyCam.app/1234567890")
         )
     }

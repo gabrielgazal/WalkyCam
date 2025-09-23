@@ -88,7 +88,8 @@ struct AssistantMenuView<ViewModel: AssistantMenuViewModelProtocol, Router: Assi
             HStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.regular) {
                 Text(L10n.AssistantMenuView.EnQueNecesitasSerAsistido.title)
-                    .font(.projectFont(size: Tokens.Size.Font.big, weight: .bold))
+                    .font(.projectFont(size: Tokens.Size.Font.larger, weight: .bold))
+                    .lineLimit(2)
                 Spacer()
             }
         }

@@ -15,10 +15,10 @@ struct Photo3DScannerView<ViewModel: Photo3DScannerViewModelProtocol, Router: Ph
     @State private var currentPosition: String = "front"
     private let positions = ["front", "back", "left", "right"]
     private let positionLabels = [
-        "front": "Frente",
-        "back": "Traseira",
-        "left": "Esquerda",
-        "right": "Direita"
+        "front": "Delantera",
+        "back": "Trasera",
+        "left": "Izquierda",
+        "right": "Derecha"
     ]
     
     // MARK: - Initialization
@@ -41,7 +41,7 @@ struct Photo3DScannerView<ViewModel: Photo3DScannerViewModelProtocol, Router: Ph
                     
                     // Status das fotos capturadas
                     VStack(alignment: .leading, spacing: Tokens.Size.Spacing.small) {
-                        Text("Progresso: \(viewModel.capturedImages.count)/4 fotos")
+                        Text("Progreso: \(viewModel.capturedImages.count)/4 fotos")
                             .font(.headline)
                         
                         if viewModel.capturedImages.count < 4 {
@@ -56,7 +56,7 @@ struct Photo3DScannerView<ViewModel: Photo3DScannerViewModelProtocol, Router: Ph
                             Image(systemName: "camera")
                                 .font(.system(size: 50))
                                 .foregroundColor(.gray)
-                            Text("Nenhuma foto capturada")
+                            Text("Ninguna foto seleccionada")
                                 .font(.headline)
                                 .foregroundColor(.gray)
                         }
@@ -82,7 +82,7 @@ struct Photo3DScannerView<ViewModel: Photo3DScannerViewModelProtocol, Router: Ph
                                                 VStack {
                                                     Image(systemName: "camera")
                                                         .foregroundColor(.gray)
-                                                    Text("Pendente")
+                                                    Text("Pendiente")
                                                         .font(.caption)
                                                         .foregroundColor(.gray)
                                                 }
@@ -107,7 +107,7 @@ struct Photo3DScannerView<ViewModel: Photo3DScannerViewModelProtocol, Router: Ph
                     // Botão para tirar foto - só aparece se ainda não tem 4 fotos
                     if viewModel.capturedImages.count < 4 {
                         WCUIButton(
-                            title: "Tirar foto \(positionLabels[currentPosition] ?? currentPosition)",
+                            title: "Tomar foto \(positionLabels[currentPosition] ?? currentPosition)",
                             style: .standard,
                             descriptor: OrangeButtonStyleDescriptor()) {
                                 viewModel.showImagePicker = true
@@ -136,7 +136,7 @@ struct Photo3DScannerView<ViewModel: Photo3DScannerViewModelProtocol, Router: Ph
                     
                     if viewModel.capturedImages.count > 0 {
                         WCUIButton(
-                            title: "Reiniciar",
+                            title: "Empezar de nuevo",
                             style: .standard,
                             descriptor: BlackButtonStyleDescriptor()) {
                                 viewModel.clearAllImages()

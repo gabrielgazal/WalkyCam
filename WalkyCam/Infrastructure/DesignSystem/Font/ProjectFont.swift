@@ -35,7 +35,7 @@ extension Font {
         case .thin:
             fontNameToReturn = "Mulish-ExtraLight"
         }
-        return Font.custom(fontNameToReturn, size: size)
+        return Font.custom(fontNameToReturn, fixedSize: size)
     }
 }
 // swiftlint:enable cyclomatic_complexity

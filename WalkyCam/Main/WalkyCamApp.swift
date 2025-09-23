@@ -38,6 +38,7 @@ struct WalkyCamApp: App {
                 locationManager.requestLocationPermission()
             }
             .preferredColorScheme(.light)
+            .environment(\.sizeCategory, .medium)
         }
         .onChange(of: scenePhase) { newPhase in
             isPresented = (newPhase == .active ? true : false)
