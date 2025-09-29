@@ -8,6 +8,7 @@ HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/DJIWidget/DJ
 LD_RUNPATH_SEARCH_PATHS = $(inherited) /usr/lib/swift '@executable_path/Frameworks' '@loader_path/Frameworks'
 LIBRARY_SEARCH_PATHS = $(inherited) "${TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}" /usr/lib/swift
 OTHER_LDFLAGS = $(inherited) -l"z" -framework "CoreLocation" -framework "DJISDK" -framework "DJIUXSDK" -framework "DJIWidget" -framework "FFmpeg" -framework "MapboxCommon" -framework "MapboxCoreMaps" -framework "MapboxMaps" -framework "Turf"
+OTHER_MODULE_VERIFIER_FLAGS = $(inherited) "-F${PODS_CONFIGURATION_BUILD_DIR}/DJI-SDK-iOS" "-F${PODS_CONFIGURATION_BUILD_DIR}/DJI-UXSDK-iOS" "-F${PODS_CONFIGURATION_BUILD_DIR}/DJIWidget" "-F${PODS_CONFIGURATION_BUILD_DIR}/MapboxCommon" "-F${PODS_CONFIGURATION_BUILD_DIR}/MapboxCoreMaps" "-F${PODS_CONFIGURATION_BUILD_DIR}/MapboxMaps" "-F${PODS_CONFIGURATION_BUILD_DIR}/Turf"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
