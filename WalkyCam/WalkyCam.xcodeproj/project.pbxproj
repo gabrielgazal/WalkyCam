@@ -363,6 +363,7 @@
 		56DADB222AD5EAA400710618 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB212AD5EAA400710618 /* AppNavigator.swift */; };
 		56DADB242AD5EB3800710618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB232AD5EB3800710618 /* AppDelegate.swift */; };
 		56DADB272AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DADB262AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift */; };
+		56DDFE2B2E8D9DB3008E16DF /* ServiceActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DDFE2A2E8D9DB3008E16DF /* ServiceActionsView.swift */; };
 		56F2AF8E2BEC7A2F00C458DE /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F2AF8D2BEC7A2F00C458DE /* TimePicker.swift */; };
 		56F2AF902BEC896000C458DE /* AvailableDayItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F2AF8F2BEC896000C458DE /* AvailableDayItemView.swift */; };
 		56F3D3C72D42B2E6009F5A6D /* WatchLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3D3C62D42B2E6009F5A6D /* WatchLocationView.swift */; };
@@ -1555,6 +1556,7 @@
 		56DADB212AD5EAA400710618 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		56DADB232AD5EB3800710618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56DADB262AD5ECE200710618 /* AppDelegate+DependencyRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+DependencyRegistration.swift"; sourceTree = "<group>"; };
+		56DDFE2A2E8D9DB3008E16DF /* ServiceActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceActionsView.swift; sourceTree = "<group>"; };
 		56F2AF8D2BEC7A2F00C458DE /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
 		56F2AF8F2BEC896000C458DE /* AvailableDayItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableDayItemView.swift; sourceTree = "<group>"; };
 		56F3D3C62D42B2E6009F5A6D /* WatchLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchLocationView.swift; sourceTree = "<group>"; };
@@ -5262,6 +5264,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		56DDFE292E8D9DA2008E16DF /* ServiceActionsView */ = {
+			isa = PBXGroup;
+			children = (
+				56DDFE2A2E8D9DB3008E16DF /* ServiceActionsView.swift */,
+			);
+			path = ServiceActionsView;
+			sourceTree = "<group>";
+		};
 		56F2AF8C2BEC7A1800C458DE /* TimePicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -8020,6 +8030,7 @@
 		EA5E1D812AD7182800738A8F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				56DDFE292E8D9DA2008E16DF /* ServiceActionsView */,
 				562BE41E2E7102D5002A7ABC /* ToastView */,
 				56459FA22BFFB4D300776F68 /* SnackBarAlert */,
 				EA57A7AC2B6C1C9B006247DD /* FooterView */,
@@ -12293,9 +12304,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-WalkyCam/Pods-WalkyCam-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-WalkyCam/Pods-WalkyCam-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -13415,6 +13430,7 @@
 				56F8AE232C247BE000EC7D4F /* IOTSensorsAssembler.swift in Sources */,
 				EA8652B52B90DA9600B86A54 /* 3DPrintOnboardingViewModelProtocol.swift in Sources */,
 				567CB7522C51564C00112F05 /* ServiceInformationManager.swift in Sources */,
+				56DDFE2B2E8D9DB3008E16DF /* ServiceActionsView.swift in Sources */,
 				EA910F6B2AD9CCF500584B98 /* PageControl.swift in Sources */,
 				EA2C4C2B2B7E5C9500F1EE26 /* DroneOnboardingPageView.swift in Sources */,
 				EAE8EC4D2B9574840003AE96 /* ChatDetailRouterProtocol.swift in Sources */,

@@ -57,9 +57,9 @@ final class ServiceConfirmationViewModel: ServiceConfirmationViewModelProtocol {
         detailItems.append(
             .init(title: L10n.ServiceConfirmationViewModel.time, value: formatDateToTime(basicInfo.date))
         )
-        detailItems.append(
-            .init(title: L10n.ServiceConfirmationViewModel.assistants, value: "3", image: Asset.Icons.eyeIcon.name)
-        )
+//        detailItems.append(
+//            .init(title: L10n.ServiceConfirmationViewModel.assistants, value: "3", image: Asset.Icons.eyeIcon.name)
+//        )
         if let userId = try? UserSession().user().id {
             detailItems.append(
                 .init(

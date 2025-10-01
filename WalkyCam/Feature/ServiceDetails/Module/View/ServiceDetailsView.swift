@@ -33,8 +33,19 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
                     Text(viewModel.service.title)
                         .font(.projectFont(size: Tokens.Size.Font.medium, weight: .bold))
                     Spacer()
-                    Asset.Icons.accionesDetalle.swiftUIImage
-                        .isHidden(true)
+                    ServiceActionsView(
+                        actions: .init(
+                            downloadAction: {
+                                viewModel.generatePDF()
+                            },
+                            printAction: {
+                                viewModel.printPDF()
+                            },
+                            shareAction: {
+                                viewModel.sharePDF()
+                            }
+                        )
+                    )
                 }
                 VStack(spacing: 0) {
                     Divider()
@@ -92,6 +103,16 @@ struct ServiceDetailsView<ViewModel:ServiceDetailsViewModelProtocol, Router: Ser
             .padding(Tokens.Size.Spacing.large)
         }
         .navigation(router)
+        .sheet(isPresented: $viewModel.showDocumentPicker) {
+            if let url = viewModel.pdfURL {
+                DocumentPicker(pdfURL: url) { success in
+                    print("Success saving")
+                }
+            }
+        }
+        .sheet(isPresented: $viewModel.showShareSheet) {
+            ShareSheet(items: viewModel.shareItems)
+        }
     }
 
     private var headerView: some View {
