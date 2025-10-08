@@ -51,6 +51,7 @@ struct PlanPageView: View {
                     }
                     Spacer()
                 }
+                       .hidden()
                 if let lastPlan = lastPlan {
                     HStack(spacing: Tokens.Size.Spacing.regular) {
                         Image(systemName: "checkmark")

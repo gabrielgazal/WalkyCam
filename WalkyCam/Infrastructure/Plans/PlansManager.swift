@@ -65,7 +65,7 @@ class PlansManager: NSObject, ObservableObject {
                       monthlyPrice: UserDefaults.standard.string(forKey: "businessPlanMonthlyPrice") ?? "140.0",
                       yearlyPrice: UserDefaults.standard.string(forKey: "businessPlanYearlyPrice") ?? "140.0",
                       backgroundImage: Asset.Fondos.standardFondo.name,
-                      accentColor: Color(""),
+                      accentColor: Color("business"),
                       features: assembleBusinessPlanFeatures()),
             
                 .init(title: "premium",

@@ -36,6 +36,7 @@ struct PlansComparisonPageView: View {
                         .foregroundColor(monthlyToggle ? .naranja : .negro)
                 }
             }
+                   .hidden()
             HStack(alignment: .center,
                    spacing: Tokens.Size.Spacing.small) {
                 VStack(alignment: .leading,

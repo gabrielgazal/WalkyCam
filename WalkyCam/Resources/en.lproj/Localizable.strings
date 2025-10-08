@@ -170,11 +170,11 @@
 "Tooltip.ThermalCamera" = "Detect and visualize the heat emitted by objects and people.\nElectrical and thermal insulation problems.";
 
 // MARK: - MenuViewModel
-"MenuViewModel.plans.basic.title" = "Basic";
+"MenuViewModel.plans.basic.title" = "PRO";
 "MenuViewModel.plans.basic.text" = "Get more benefits!";
-"MenuViewModel.plans.standard.title" = "Standard";
+"MenuViewModel.plans.standard.title" = "BUSINESS";
 "MenuViewModel.plans.standard.text" = "Get more benefits. Fly a Drone remotely!";
-"MenuViewModel.plans.premium.title" = "Premium";
+"MenuViewModel.plans.premium.title" = "PREMIUM";
 "MenuViewModel.plans.premium.text" = "Get ALL the benefits WalkyCam offers";
 "MenuViewModel.pricing.title" = "Plans and Pricing";
 
