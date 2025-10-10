@@ -6,8 +6,8 @@ struct UserData: Hashable {
     public var name: String
     public var lastName: String
     public var phoneNumber: String
-    public var birthDate: String
-    public var gender: String
+    public var birthDate: String?
+    public var gender: String?
     public var address: String
     public var additionalInfo: String
     public var email: String
@@ -21,8 +21,8 @@ struct UserData: Hashable {
         name: String = "",
         lastName: String = "",
         phoneNumber: String = "",
-        birthDate: String = "",
-        gender: String = "",
+        birthDate: String? = "",
+        gender: String? = "",
         address: String = "",
         additionalInfo: String = "",
         email: String = "",

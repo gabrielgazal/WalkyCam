@@ -61,11 +61,11 @@ struct ProfileView<ViewModel: ProfileViewModelProtocol, Router: ProfileRouterPro
                             )
                             assembleItemView(
                                 title: L10n.ProfileView.Field.gender,
-                                text: viewModel.userData.gender,
+                                text: viewModel.userData.gender ?? "",
                                 editableText: $viewModel.temporaryGender
                             )
                             assembleItemView(title: L10n.ProfileView.Field.birthDate,
-                                             text: viewModel.userData.birthDate,
+                                             text: viewModel.userData.birthDate ?? "",
                                              editableText: $viewModel.temporaryBirthDate)
                             assembleItemView(title: L10n.ProfileView.Field.address,
                                              text: viewModel.userData.address,

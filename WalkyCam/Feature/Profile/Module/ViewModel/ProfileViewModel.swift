@@ -100,9 +100,9 @@ final class ProfileViewModel: ProfileViewModelProtocol {
         )
         temporaryName = name
         temporaryLastname = lastName
-        temporaryBirthDate = birthDate
+        temporaryBirthDate = birthDate ?? ""
         temporaryPhoneNumber = phoneNumber
-        temporaryGender = gender
+        temporaryGender = gender ?? ""
         temporaryAddress = address
         temporaryAdditionalInfo = additionalInfo
     }

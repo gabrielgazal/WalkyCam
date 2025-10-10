@@ -15,8 +15,8 @@ struct LoginOutput: Hashable {
     public let email: String
     public let address: String
     public let phone: String
-    public let birthDate: String
-    public let gender: String
+    public let birthDate: String?
+    public let gender: String?
     public let additionalInfo: String?
     public let isWalkCammer: Bool
     public let profileImage: String
