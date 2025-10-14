@@ -23,16 +23,30 @@ final class AvailabilityTabViewModel: AvailabilityTabViewModelProtocol {
     }
     
     // MARK: - Public API
-    
-#warning("Example function. Rename or remove it")
-    func someAction() {
+    func saveData() {
+        var data = WalkcamerRegistrationManager.shared.getData()
         
-    }
-    
-    // MARK: - Private Methods
-    
-#warning("Example function. Rename or remove it")
-    private func somePrivateMethod() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
         
+        let dataToReturn: [AvailableDayInfo] = availableOptions
+            .filter { $0.active }
+            .map { model in
+                let primaryStart = dateFormatter.string(from: model.firstTime.initialTime)
+                let primaryEnd = dateFormatter.string(from: model.firstTime.finalTime)
+                
+                let secondaryStart = model.secondTime.map { dateFormatter.string(from: $0.initialTime) } ?? ""
+                let secondaryEnd = model.secondTime.map { dateFormatter.string(from: $0.finalTime) } ?? ""
+                
+                return AvailableDayInfo(
+                    name: model.title,
+                    primaryStartTime: primaryStart,
+                    primaryEndTime: primaryEnd,
+                    secondaryStartTime: secondaryStart,
+                    secondaryEndTime: secondaryEnd
+                )
+            }
+        data.days = dataToReturn
+        WalkcamerRegistrationManager.shared.updateCammerData(data)
     }
 }

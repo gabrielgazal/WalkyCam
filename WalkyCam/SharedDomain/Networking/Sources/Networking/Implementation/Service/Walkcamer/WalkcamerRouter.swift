@@ -9,16 +9,7 @@ import Foundation
 import Moya
 
 enum WalkcamerRouter {
-    case convertUser(userId: String,
-                     phoneNumber: String,
-                     earningType: String,
-                     preferredLatitude: String,
-                     preferredLongitude: String,
-                     rovsInfo: [String],
-                     smartphonesInfo: [String],
-                     diveInfo: [String],
-                     driveInfo: [String],
-                     days: [String])
+    case convertUser(WalkcamerConvertUserRequest)
     case updateAvailability(userId: String)
     case getNearWalkcammers(lat: CGFloat, lon: CGFloat)
     case searchWalkcammer(input: String)
@@ -54,62 +45,13 @@ extension WalkcamerRouter: TargetType {
     
     var task: Task {
         switch self {
-        case let .convertUser(userId,
-                              phoneNumber,
-                              earningType,
-                              preferredLatitude,
-                              preferredLongitude,
-                              rovsInfo,
-                              smartphonesInfo,
-                              diveInfo,
-                              driveInfo,
-                              days):
-            return convertUser(
-                userId: userId,
-                phoneNumber: phoneNumber,
-                earningType: earningType,
-                preferredLatitude: preferredLatitude,
-                preferredLongitude: preferredLongitude,
-                rovsInfo: rovsInfo,
-                smartphonesInfo: smartphonesInfo,
-                diveInfo: diveInfo,
-                driveInfo: driveInfo,
-                days: days
-            )
+        case let .convertUser(requestModel):
+            return .requestJSONEncodable(requestModel)
         case let .updateAvailability(userId):
             return updateAvailability(userId: userId)
         case .getNearWalkcammers, .searchWalkcammer:
             return .requestPlain
         }
-    }
-    
-    private func convertUser(userId: String,
-                             phoneNumber: String,
-                             earningType: String,
-                             preferredLatitude: String,
-                             preferredLongitude: String,
-                             rovsInfo: [String],
-                             smartphonesInfo: [String],
-                             diveInfo: [String],
-                             driveInfo: [String],
-                             days: [String]) -> Task {
-        let parameters = [
-            "id_user": userId,
-            "cellphone_number": phoneNumber,
-            "earning_type": earningType,
-            "preferred_location_latitude": preferredLatitude,
-            "preferred_location_longitude": preferredLongitude,
-            "rovs_info": rovsInfo,
-            "smartphones_info": smartphonesInfo,
-            "dive_info": diveInfo,
-            "drive_info": driveInfo,
-            "days": days
-        ] as [String:Any]
-        
-        return .requestParameters(
-            parameters: parameters,
-            encoding: JSONEncoding.default
-        )
     }
     
     private func updateAvailability(userId: String) -> Task {

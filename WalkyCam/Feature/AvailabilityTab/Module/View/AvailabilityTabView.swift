@@ -35,6 +35,7 @@ struct AvailabilityTabView<ViewModel: AvailabilityTabViewModelProtocol, Router: 
                     viewModel.availableOptions[index].active = true
                 }
             }
+            viewModel.saveData()
         }
     }
 }

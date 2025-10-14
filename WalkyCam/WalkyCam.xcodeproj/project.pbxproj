@@ -116,6 +116,7 @@
 		561FC8C62B5C6854005B6006 /* ExternalURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FC8C22B5C6853005B6006 /* ExternalURL.swift */; };
 		561FC8C72B5C6854005B6006 /* ErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FC8C42B5C6854005B6006 /* ErrorProtocol.swift */; };
 		561FC8C82B5C6854005B6006 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FC8C52B5C6854005B6006 /* ErrorView.swift */; };
+		5620F0BE2E9EA3EB00AEB9EB /* ConvertWalkcamerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5620F0BD2E9EA3EB00AEB9EB /* ConvertWalkcamerUseCase.swift */; };
 		5621B6FC2C2E605100BFD923 /* UnavailableFeatureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621B6E72C2E605000BFD923 /* UnavailableFeatureModel.swift */; };
 		5621B6FD2C2E605100BFD923 /* UnavailableFeatureInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621B6EA2C2E605000BFD923 /* UnavailableFeatureInteractor.swift */; };
 		5621B6FE2C2E605100BFD923 /* UnavailableFeatureInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621B6EB2C2E605000BFD923 /* UnavailableFeatureInteractorProtocol.swift */; };
@@ -1307,6 +1308,7 @@
 		561FC8C22B5C6853005B6006 /* ExternalURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalURL.swift; sourceTree = "<group>"; };
 		561FC8C42B5C6854005B6006 /* ErrorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorProtocol.swift; sourceTree = "<group>"; };
 		561FC8C52B5C6854005B6006 /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		5620F0BD2E9EA3EB00AEB9EB /* ConvertWalkcamerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertWalkcamerUseCase.swift; sourceTree = "<group>"; };
 		5621B6E72C2E605000BFD923 /* UnavailableFeatureModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnavailableFeatureModel.swift; sourceTree = "<group>"; };
 		5621B6EA2C2E605000BFD923 /* UnavailableFeatureInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnavailableFeatureInteractor.swift; sourceTree = "<group>"; };
 		5621B6EB2C2E605000BFD923 /* UnavailableFeatureInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnavailableFeatureInteractorProtocol.swift; sourceTree = "<group>"; };
@@ -3169,6 +3171,7 @@
 		561D83E52BE91EDF0045C540 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				5620F0BC2E9EA3DD00AEB9EB /* UseCase */,
 				561D83E42BE91EDF0045C540 /* Model */,
 			);
 			path = Domain;
@@ -3213,6 +3216,14 @@
 				561FC8C52B5C6854005B6006 /* ErrorView.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		5620F0BC2E9EA3DD00AEB9EB /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				5620F0BD2E9EA3EB00AEB9EB /* ConvertWalkcamerUseCase.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 		5621B6E02C2E603200BFD923 /* UnavailableFeature */ = {
@@ -13207,6 +13218,7 @@
 				EAF47BCE2B8306E9003F8B86 /* TimeTabAssembler.swift in Sources */,
 				EA6083942B01CD0A00295069 /* ShopTabRouter.swift in Sources */,
 				56B3E4962C3DA041004A87FA /* VideocallTimeTabRouterProtocol.swift in Sources */,
+				5620F0BE2E9EA3EB00AEB9EB /* ConvertWalkcamerUseCase.swift in Sources */,
 				56FEECF72B5C802C003FA686 /* SearchWalkyCammerInteractor.swift in Sources */,
 				EA4A1C1D2B87799100B5FC59 /* AvailableAssistantsRoute.swift in Sources */,
 				EA4A1C452B8788DB00B5FC59 /* SpecialistNotifiedRouter.swift in Sources */,

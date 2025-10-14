@@ -36,7 +36,9 @@ struct FeatureInformationView<ViewModel: FeatureInformationViewModelProtocol, Ro
                     LinkButton(title: L10n.FeatureInformationView.Rov.addAnother,
                                icon: Asset.Icons.add.name,
                                color: .naranja,
-                               action: {})
+                               action: {
+                        
+                    })
                 }
                 VStack(alignment: .center,
                        spacing: Tokens.Size.Spacing.regular) {
@@ -58,13 +60,16 @@ struct FeatureInformationView<ViewModel: FeatureInformationViewModelProtocol, Ro
                     title: L10n.FeatureInformationView.cancel,
                     style: .outline,
                     descriptor: OrangeButtonStyleDescriptor(),
-                    action: {}
+                    action: {
+                        router.dismiss()
+                    }
                 )
                 WCUIButton(
                     title: L10n.FeatureInformationView.next,
                     style: .standard,
                     descriptor: BlackButtonStyleDescriptor(),
                     action: {
+                        
                         router.routeToAvailability()
                     }
                 )

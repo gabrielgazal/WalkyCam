@@ -11,16 +11,7 @@ import Foundation
 
 protocol WalkcamerServiceProtocol {
     
-    func convertUser(userId: String,
-                     phoneNumber: String,
-                     earningType: String,
-                     preferredLatitude: String,
-                     preferredLongitude: String,
-                     rovsInfo: [String],
-                     smartphonesInfo: [String],
-                     diveInfo: [String],
-                     driveInfo: [String],
-                     days: [String],
+    func convertUser(data: WalkcamerConvertUserRequest,
                      completion: @escaping Completion)
     
     func updateAvailability(userId: String,

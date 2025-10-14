@@ -28,29 +28,10 @@ final class WalkcamerRepository: WalkcamerRepositoryProtocol {
     // MARK: - Public API
     
     func convertUser(
-        userId: String,
-        phoneNumber: String,
-        earningType: String,
-        preferredLatitude: String,
-        preferredLongitude: String,
-        rovsInfo: [String],
-        smartphonesInfo: [String],
-        diveInfo: [String],
-        driveInfo: [String],
-        days: [String],
+        data: WalkcamerConvertUserRequest,
         completion: @escaping (ConvertUserResult) -> Void
     ) {
-        service.convertUser(
-            userId: userId,
-            phoneNumber: phoneNumber,
-            earningType: earningType,
-            preferredLatitude: preferredLatitude,
-            preferredLongitude: preferredLongitude,
-            rovsInfo: rovsInfo,
-            smartphonesInfo: smartphonesInfo,
-            diveInfo: diveInfo,
-            driveInfo: driveInfo,
-            days: days) { result in
+        service.convertUser(data: data) { result in
                 completion(result.mapToRepositoryResult(with: self.requestHandler))
             }
     }

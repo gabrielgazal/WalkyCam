@@ -43,15 +43,15 @@ struct ProfitSelectionView<ViewModel: ProfitSelectionViewModelProtocol, Router: 
                     var type: CamerContractType?
                     switch selectedIndex {
                     case 1:
-                        type = .freelance
+                        viewModel.registrationData.earningType = CamerContractType.freelance.rawValue
                     case 2:
-                        type = .employee
+                        viewModel.registrationData.earningType = CamerContractType.employee.rawValue
                     case 3:
-                        type = .b2b
+                        viewModel.registrationData.earningType = CamerContractType.b2b.rawValue
                     default:
                         viewModel.registrationData.earningType = ""
                     }
-                    WalkcamerRegistrationManager.shared.updateContractType(type ?? .freelance)
+                    WalkcamerRegistrationManager.shared.updateCammerData(viewModel.registrationData)
                     router.routeToIdentityUpload(data: viewModel.registrationData)
                 })
                 .isHidden(selectedIndex == 0)

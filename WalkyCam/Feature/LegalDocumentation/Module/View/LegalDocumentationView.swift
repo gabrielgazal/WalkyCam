@@ -39,16 +39,26 @@ struct LegalDocumentationView<ViewModel: LegalDocumentationViewModelProtocol, Ro
                 title: L10n.LegalDocumentationView.start,
                 style: .standard,
                 descriptor: OrangeButtonStyleDescriptor(),
-                action: {}
+                action: {
+                    Task {
+                        await viewModel.updateInfo()
+                    }
+                }
             )
             .disabled(!uploadedContract || !uploadedDeclaration)
             WCUIButton(
                 title: L10n.LegalDocumentationView.cancel,
                 style: .standard,
                 descriptor: BlackButtonStyleDescriptor(),
-                action: {})
+                action: {
+                    router.dismiss()
+                })
         }
                .padding()
+               .fullScreen(isPresented: $viewModel.showCompletionScreen) {
+                   completionScreen
+                       .eraseToAnyView()
+               }
     }
     
     private func uploadItem(title: String, uploaded: Bool) -> some View {
@@ -72,13 +82,35 @@ struct LegalDocumentationView<ViewModel: LegalDocumentationViewModelProtocol, Ro
                               .shadow(color: .black.opacity(0.16), radius: 8, x: 0, y: 2)
                       }
     }
-}
-
-struct LegalDocumentationView_Previews: PreviewProvider {
-    static var previews: some View {
-        LegalDocumentationView(
-            viewModel: LegalDocumentationViewModel(),
-            router: LegalDocumentationRouter(isPresented: .constant(false))
-        )
+    
+    private var completionScreen: any View {
+            VStack(alignment: .center,
+                   spacing: Tokens.Size.Spacing.big) {
+                Spacer()
+                    .frame(height: 15)
+                Asset.logo.swiftUIImage
+                    .renderingMode(.template)
+                    .foregroundColor(Color.naranja)
+                    .frame(height: Tokens.Size.Spacing.huge)
+                Text("Felicidades")
+                    .font(.projectFont(size: Tokens.Size.Font.big, weight: .black))
+                    .foregroundColor(Color.blanco)
+                Text("Ya eres WalkCamer")
+                    .font(.projectFont(size: Tokens.Size.Font.xlarge, weight: .semibold))
+                    .foregroundColor(Color.blanco)
+                Spacer()
+                WCUIButton(
+                    title: "Ir a WalkyCam",
+                    style: .standard,
+                    descriptor: OrangeButtonStyleDescriptor()
+                ) {
+                    router.routeToCammerConfirmation()
+                }
+            }
+        
+        .padding(.horizontal, Tokens.Size.Spacing.regular)
+        .background(Asset.Fondos.loginFondo.swiftUIImage
+            .ignoresSafeArea())
+        .navigation(router)
     }
 }

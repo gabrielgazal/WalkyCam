@@ -21,4 +21,8 @@ final class FeatureInformationViewModel: FeatureInformationViewModelProtocol {
     init(interactor: FeatureInformationInteractorProtocol = FeatureInformationInteractor()) {
         self.interactor = interactor
     }
+    
+    func saveData() {
+        
+    }
 }

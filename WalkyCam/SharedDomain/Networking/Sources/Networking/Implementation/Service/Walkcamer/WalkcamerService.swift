@@ -26,32 +26,10 @@ final class WalkcamerService: WalkcamerServiceProtocol {
 
     // MARK: - Public API
     
-    func convertUser(userId: String,
-                     phoneNumber: String,
-                     earningType: String,
-                     preferredLatitude: String,
-                     preferredLongitude: String,
-                     rovsInfo: [String],
-                     smartphonesInfo: [String],
-                     diveInfo: [String],
-                     driveInfo: [String],
-                     days: [String],
+    func convertUser(data: WalkcamerConvertUserRequest,
                      completion: @escaping (Result<Response, MoyaError>) -> Void) {
-        provider.request(
-            .convertUser(
-                userId: userId,
-                phoneNumber: phoneNumber,
-                earningType: earningType,
-                preferredLatitude: preferredLatitude,
-                preferredLongitude: preferredLongitude,
-                rovsInfo: rovsInfo,
-                smartphonesInfo: smartphonesInfo,
-                diveInfo: diveInfo,
-                driveInfo: driveInfo,
-                days: days
-            ),
-            completion: completion
-        )
+        provider.request(.convertUser(data), completion: completion)
+
     }
     
     func updateAvailability(userId: String, 

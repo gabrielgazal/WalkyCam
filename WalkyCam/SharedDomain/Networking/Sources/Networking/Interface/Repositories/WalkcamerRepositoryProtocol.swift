@@ -13,17 +13,10 @@ public protocol WalkcamerRepositoryProtocol {
     typealias GetNearWalkCamersResult = Result<[WalkyCammersResponse], RepositoryError>
     typealias SearchWalkCamersResult = Result<[WalkyCammersResponse], RepositoryError>
     
-    func convertUser(userId: String,
-                     phoneNumber: String,
-                     earningType: String,
-                     preferredLatitude: String,
-                     preferredLongitude: String,
-                     rovsInfo: [String],
-                     smartphonesInfo: [String],
-                     diveInfo: [String],
-                     driveInfo: [String],
-                     days: [String],
-                     completion: @escaping (ConvertUserResult) -> Void)
+    func convertUser(
+        data: WalkcamerConvertUserRequest,
+        completion: @escaping (ConvertUserResult) -> Void
+    )
     
     func updateAvailability(userId: String,
                             completion: @escaping (UpdateUserAvailabilityResult) -> Void)

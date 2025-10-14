@@ -1,3 +1,3 @@
 protocol LegalDocumentationInteractorProtocol {
-    func someFunction()
+    func updateUserData(_ user: CamerRegistrationData) async throws
 }

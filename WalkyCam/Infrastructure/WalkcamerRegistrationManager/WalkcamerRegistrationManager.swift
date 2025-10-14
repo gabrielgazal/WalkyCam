@@ -9,7 +9,8 @@ import Foundation
 
 protocol WalkcamerRegistrationManagerProtocol {
     func updateUserInfo(id: String, name: String, lastName: String, phoneNumber: String, email: String)
-    func updateContractType(_ type: CamerContractType)
+    func updateCammerData(_ data: CamerRegistrationData)
+    func getData() -> CamerRegistrationData
 }
 
 class WalkcamerRegistrationManager: WalkcamerRegistrationManagerProtocol {
@@ -29,9 +30,13 @@ class WalkcamerRegistrationManager: WalkcamerRegistrationManagerProtocol {
         cammerData.phoneNumber = phoneNumber
         cammerData.email = email
     }
+
+    func updateCammerData(_ data: CamerRegistrationData) {
+        cammerData = data
+    }
     
-    func updateContractType(_ type: CamerContractType) {
-        cammerData.earningType = type.rawValue
+    func getData() -> CamerRegistrationData {
+        return cammerData
     }
 }
 
