@@ -60,10 +60,25 @@ struct RegisterWalkcamerView<ViewModel: RegisterWalkcamerViewModelProtocol, Rout
                           topDescriptionText: L10n.RegisterWalkcamerView.lastName,
                           placeholder: L10n.RegisterWalkcamerView.lastNamePlaceholder,
                           textColor: .negro)
-            TextInputView(text: $viewModel.registrationData.phoneNumber,
-                          topDescriptionText: L10n.RegisterWalkcamerView.phone,
-                          placeholder: L10n.RegisterWalkcamerView.phonePlaceholder,
-                          textColor: .negro)
+            TextInputView(
+                text: $viewModel.registrationData.phoneNumber,
+                status: $viewModel.phoneNumberStatus,
+                topDescriptionText: L10n.RegisterWalkcamerView.phone,
+                placeholder: L10n.RegisterWalkcamerView.phonePlaceholder,
+                textColor: .negro,
+                actions: .init(
+                    onCommitAction: {
+                        viewModel.phoneIsValid()
+                    },
+                    isFocusChanging: { focused in
+                        if !focused {
+                            viewModel.phoneIsValid()
+                        } else {
+                            viewModel.phoneNumberStatus = .default
+                        }
+                    }
+                )
+            )
         
             CheckBoxToggle(model: viewModel.acceptedTerms,
                            foregroundColor: .negro)

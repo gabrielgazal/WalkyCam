@@ -33,6 +33,7 @@ final class LoginViewModel: LoginViewModelProtocol {
         } catch {
             loginUserAsyncData = .failed(GenericError())
             onFailure?()
+            presentPasswordErrorToast(message: error.localizedDescription)
         }
     }
     
@@ -40,33 +41,33 @@ final class LoginViewModel: LoginViewModelProtocol {
         loginUserAsyncData = .loading
         do {
             try await interactor.resetPassword(email: userName)
-            presentPasswordSuccessToast()
+            presentPasswordSuccessToast(message: L10n.LoginView.ResetPassword.Success.toast)
         } catch {
             loginUserAsyncData = .failed(GenericError())
-            presentPasswordErrorToast()
+            presentPasswordErrorToast(message: L10n.LoginView.ResetPassword.Error.toast)
         }
     }
     
-    private func presentPasswordSuccessToast() {
+    private func presentPasswordSuccessToast(message: String) {
         toast = ToastModel(
             style: .init(
                 icon: Image(systemName: "checkmark.circle.fill"),
                 background: .green2
             ),
-            message: L10n.LoginView.ResetPassword.Success.toast,
+            message: message,
             duration: 5,
             direction: .top,
             closable: true
         )
     }
     
-    private func presentPasswordErrorToast() {
+    private func presentPasswordErrorToast(message: String) {
         toast = ToastModel(
             style: .init(
                 icon: Image(systemName: "xmark.circle.fill"),
                 background: .rojo
             ),
-            message: L10n.LoginView.ResetPassword.Error.toast,
+            message: message,
             duration: 3,
             direction: .top,
             closable: true

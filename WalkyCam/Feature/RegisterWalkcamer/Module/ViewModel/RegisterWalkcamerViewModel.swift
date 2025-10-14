@@ -7,6 +7,7 @@ final class RegisterWalkcamerViewModel: RegisterWalkcamerViewModelProtocol {
     private let interactor: RegisterWalkcamerInteractorProtocol
     @Published var registrationData: CamerRegistrationData = .init()
     @Published var acceptedTerms: SelectorModel = .init(value: L10n.RegisterWalkcamerView.acceptedTerms)
+    @Published var phoneNumberStatus: TextInputView.Status = .default
     
     // MARK: - Initialization
     
@@ -19,6 +20,14 @@ final class RegisterWalkcamerViewModel: RegisterWalkcamerViewModelProtocol {
     
     func isRegisterButtonDisabled() -> Bool {
         return registrationData.name.isEmpty || registrationData.lastName.isEmpty || registrationData.phoneNumber.isEmpty || registrationData.email.isEmpty || !acceptedTerms.isSelected
+    }
+    
+    func phoneIsValid() {
+        if registrationData.phoneNumber.isEmpty {
+            phoneNumberStatus = .error
+        } else {
+            phoneNumberStatus = .default
+        }
     }
     
     func saveUserDataToRegistration() {
