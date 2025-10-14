@@ -1,0 +1,3 @@
+protocol UploadImageToPrintInteractorProtocol {
+    func someFunction()
+}

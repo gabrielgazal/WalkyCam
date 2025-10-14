@@ -37,6 +37,9 @@ struct PrintMenuView<ViewModel: PrintMenuViewModelProtocol, Router: PrintMenuRou
                         }
                     }
                 itemCell(title: L10n.PrintMenuView.SubirImagen.title, icon: Asset.Icons.uploadFolder.name)
+                    .onTapGesture {
+                        router.routeToUploadImage()
+                    }
             }
             .padding(Tokens.Size.Spacing.large)
             .shadow(

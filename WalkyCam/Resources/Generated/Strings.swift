@@ -1243,20 +1243,20 @@ internal enum L10n {
       internal enum Basic {
         /// Consigue mas beneficios!
         internal static var text: String { return L10n.tr("Localizable", "MenuViewModel.plans.basic.text", fallback: "Consigue mas beneficios!") }
-        /// Basic
-        internal static var title: String { return L10n.tr("Localizable", "MenuViewModel.plans.basic.title", fallback: "Basic") }
+        /// PRO
+        internal static var title: String { return L10n.tr("Localizable", "MenuViewModel.plans.basic.title", fallback: "PRO") }
       }
       internal enum Premium {
         /// Consigue TODOS los beneficios que WalkyCam ofrece
         internal static var text: String { return L10n.tr("Localizable", "MenuViewModel.plans.premium.text", fallback: "Consigue TODOS los beneficios que WalkyCam ofrece") }
-        /// Premium
-        internal static var title: String { return L10n.tr("Localizable", "MenuViewModel.plans.premium.title", fallback: "Premium") }
+        /// PREMIUM
+        internal static var title: String { return L10n.tr("Localizable", "MenuViewModel.plans.premium.title", fallback: "PREMIUM") }
       }
       internal enum Standard {
         /// Consigue mas beneficios. Vuela un Drone a distancia!
         internal static var text: String { return L10n.tr("Localizable", "MenuViewModel.plans.standard.text", fallback: "Consigue mas beneficios. Vuela un Drone a distancia!") }
-        /// Standard
-        internal static var title: String { return L10n.tr("Localizable", "MenuViewModel.plans.standard.title", fallback: "Standard") }
+        /// BUSINESS
+        internal static var title: String { return L10n.tr("Localizable", "MenuViewModel.plans.standard.title", fallback: "BUSINESS") }
       }
     }
     internal enum Pricing {

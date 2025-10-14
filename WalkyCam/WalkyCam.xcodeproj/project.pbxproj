@@ -367,6 +367,17 @@
 		56DDFE2B2E8D9DB3008E16DF /* ServiceActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DDFE2A2E8D9DB3008E16DF /* ServiceActionsView.swift */; };
 		56F2AF8E2BEC7A2F00C458DE /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F2AF8D2BEC7A2F00C458DE /* TimePicker.swift */; };
 		56F2AF902BEC896000C458DE /* AvailableDayItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F2AF8F2BEC896000C458DE /* AvailableDayItemView.swift */; };
+		56F377F52E9F0DD5004C3506 /* UploadImageToPrintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F377EF2E9F0DD5004C3506 /* UploadImageToPrintView.swift */; };
+		56F377F62E9F0DD5004C3506 /* UploadImageToPrintInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F377E92E9F0DD5004C3506 /* UploadImageToPrintInteractor.swift */; };
+		56F377F72E9F0DD5004C3506 /* UploadImageToPrintAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F377E02E9F0DD5004C3506 /* UploadImageToPrintAssembler.swift */; };
+		56F377F82E9F0DD5004C3506 /* UploadImageToPrintAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F377E12E9F0DD5004C3506 /* UploadImageToPrintAssemblerProtocol.swift */; };
+		56F377F92E9F0DD5004C3506 /* UploadImageToPrintRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F377ED2E9F0DD5004C3506 /* UploadImageToPrintRouterProtocol.swift */; };
+		56F377FA2E9F0DD5004C3506 /* UploadImageToPrintViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F377F12E9F0DD5004C3506 /* UploadImageToPrintViewModel.swift */; };
+		56F377FB2E9F0DD5004C3506 /* UploadImageToPrintRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F377E32E9F0DD5004C3506 /* UploadImageToPrintRoute.swift */; };
+		56F377FC2E9F0DD5004C3506 /* UploadImageToPrintViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F377F22E9F0DD5004C3506 /* UploadImageToPrintViewModelProtocol.swift */; };
+		56F377FD2E9F0DD5004C3506 /* UploadImageToPrintModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F377E62E9F0DD5004C3506 /* UploadImageToPrintModel.swift */; };
+		56F377FE2E9F0DD5004C3506 /* UploadImageToPrintInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F377EA2E9F0DD5004C3506 /* UploadImageToPrintInteractorProtocol.swift */; };
+		56F377FF2E9F0DD5004C3506 /* UploadImageToPrintRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F377EC2E9F0DD5004C3506 /* UploadImageToPrintRouter.swift */; };
 		56F3D3C72D42B2E6009F5A6D /* WatchLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3D3C62D42B2E6009F5A6D /* WatchLocationView.swift */; };
 		56F3D3C92D42B32B009F5A6D /* WatchMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3D3C82D42B32B009F5A6D /* WatchMenuView.swift */; };
 		56F3D3CC2D42B398009F5A6D /* WatchPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3D3CB2D42B398009F5A6D /* WatchPageView.swift */; };
@@ -1561,6 +1572,17 @@
 		56DDFE2A2E8D9DB3008E16DF /* ServiceActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceActionsView.swift; sourceTree = "<group>"; };
 		56F2AF8D2BEC7A2F00C458DE /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
 		56F2AF8F2BEC896000C458DE /* AvailableDayItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableDayItemView.swift; sourceTree = "<group>"; };
+		56F377E02E9F0DD5004C3506 /* UploadImageToPrintAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageToPrintAssembler.swift; sourceTree = "<group>"; };
+		56F377E12E9F0DD5004C3506 /* UploadImageToPrintAssemblerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageToPrintAssemblerProtocol.swift; sourceTree = "<group>"; };
+		56F377E32E9F0DD5004C3506 /* UploadImageToPrintRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageToPrintRoute.swift; sourceTree = "<group>"; };
+		56F377E62E9F0DD5004C3506 /* UploadImageToPrintModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageToPrintModel.swift; sourceTree = "<group>"; };
+		56F377E92E9F0DD5004C3506 /* UploadImageToPrintInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageToPrintInteractor.swift; sourceTree = "<group>"; };
+		56F377EA2E9F0DD5004C3506 /* UploadImageToPrintInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageToPrintInteractorProtocol.swift; sourceTree = "<group>"; };
+		56F377EC2E9F0DD5004C3506 /* UploadImageToPrintRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageToPrintRouter.swift; sourceTree = "<group>"; };
+		56F377ED2E9F0DD5004C3506 /* UploadImageToPrintRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageToPrintRouterProtocol.swift; sourceTree = "<group>"; };
+		56F377EF2E9F0DD5004C3506 /* UploadImageToPrintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageToPrintView.swift; sourceTree = "<group>"; };
+		56F377F12E9F0DD5004C3506 /* UploadImageToPrintViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageToPrintViewModel.swift; sourceTree = "<group>"; };
+		56F377F22E9F0DD5004C3506 /* UploadImageToPrintViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageToPrintViewModelProtocol.swift; sourceTree = "<group>"; };
 		56F3D3C62D42B2E6009F5A6D /* WatchLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchLocationView.swift; sourceTree = "<group>"; };
 		56F3D3C82D42B32B009F5A6D /* WatchMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchMenuView.swift; sourceTree = "<group>"; };
 		56F3D3CB2D42B398009F5A6D /* WatchPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPageView.swift; sourceTree = "<group>"; };
@@ -3610,6 +3632,16 @@
 			path = UseCase;
 			sourceTree = "<group>";
 		};
+		5656F1432E9F0CF400A7B919 /* UploadImageToPrint */ = {
+			isa = PBXGroup;
+			children = (
+				56F377E52E9F0DD5004C3506 /* Configuration */,
+				56F377E82E9F0DD5004C3506 /* Domain */,
+				56F377F42E9F0DD5004C3506 /* Module */,
+			);
+			path = UploadImageToPrint;
+			sourceTree = "<group>";
+		};
 		565909652BF67734002FD2B5 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -5291,6 +5323,94 @@
 			path = TimePicker;
 			sourceTree = "<group>";
 		};
+		56F377E22E9F0DD5004C3506 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				56F377E02E9F0DD5004C3506 /* UploadImageToPrintAssembler.swift */,
+				56F377E12E9F0DD5004C3506 /* UploadImageToPrintAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		56F377E42E9F0DD5004C3506 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				56F377E32E9F0DD5004C3506 /* UploadImageToPrintRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		56F377E52E9F0DD5004C3506 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				56F377E22E9F0DD5004C3506 /* Assembler */,
+				56F377E42E9F0DD5004C3506 /* Route */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		56F377E72E9F0DD5004C3506 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				56F377E62E9F0DD5004C3506 /* UploadImageToPrintModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		56F377E82E9F0DD5004C3506 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				56F377E72E9F0DD5004C3506 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		56F377EB2E9F0DD5004C3506 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				56F377E92E9F0DD5004C3506 /* UploadImageToPrintInteractor.swift */,
+				56F377EA2E9F0DD5004C3506 /* UploadImageToPrintInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		56F377EE2E9F0DD5004C3506 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				56F377EC2E9F0DD5004C3506 /* UploadImageToPrintRouter.swift */,
+				56F377ED2E9F0DD5004C3506 /* UploadImageToPrintRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		56F377F02E9F0DD5004C3506 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				56F377EF2E9F0DD5004C3506 /* UploadImageToPrintView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		56F377F32E9F0DD5004C3506 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				56F377F12E9F0DD5004C3506 /* UploadImageToPrintViewModel.swift */,
+				56F377F22E9F0DD5004C3506 /* UploadImageToPrintViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		56F377F42E9F0DD5004C3506 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				56F377EB2E9F0DD5004C3506 /* Interactor */,
+				56F377EE2E9F0DD5004C3506 /* Router */,
+				56F377F02E9F0DD5004C3506 /* View */,
+				56F377F32E9F0DD5004C3506 /* ViewModel */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
 		56F3D3C52D42B2CB009F5A6D /* AppleWatchSimulator */ = {
 			isa = PBXGroup;
 			children = (
@@ -5923,6 +6043,7 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				5656F1432E9F0CF400A7B919 /* UploadImageToPrint */,
 				56872C7E2D5E74F9002FAE9A /* GalleryModels */,
 				56872C572D5E38C5002FAE9A /* Settings */,
 				56F3D3C52D42B2CB009F5A6D /* AppleWatchSimulator */,
@@ -12391,6 +12512,17 @@
 				EAF47BA32B82FFF2003F8B86 /* CalendarTabRoute.swift in Sources */,
 				EA9110212ADDADE100584B98 /* HomeModel.swift in Sources */,
 				5668BB3C2BDFD5FB00A6E05D /* ProfitSelectionViewModel.swift in Sources */,
+				56F377F52E9F0DD5004C3506 /* UploadImageToPrintView.swift in Sources */,
+				56F377F62E9F0DD5004C3506 /* UploadImageToPrintInteractor.swift in Sources */,
+				56F377F72E9F0DD5004C3506 /* UploadImageToPrintAssembler.swift in Sources */,
+				56F377F82E9F0DD5004C3506 /* UploadImageToPrintAssemblerProtocol.swift in Sources */,
+				56F377F92E9F0DD5004C3506 /* UploadImageToPrintRouterProtocol.swift in Sources */,
+				56F377FA2E9F0DD5004C3506 /* UploadImageToPrintViewModel.swift in Sources */,
+				56F377FB2E9F0DD5004C3506 /* UploadImageToPrintRoute.swift in Sources */,
+				56F377FC2E9F0DD5004C3506 /* UploadImageToPrintViewModelProtocol.swift in Sources */,
+				56F377FD2E9F0DD5004C3506 /* UploadImageToPrintModel.swift in Sources */,
+				56F377FE2E9F0DD5004C3506 /* UploadImageToPrintInteractorProtocol.swift in Sources */,
+				56F377FF2E9F0DD5004C3506 /* UploadImageToPrintRouter.swift in Sources */,
 				56B3E4992C3DA041004A87FA /* VideocallTimeTabViewModelProtocol.swift in Sources */,
 				EA6083922B01CD0A00295069 /* ShopTabInteractorProtocol.swift in Sources */,
 				EA72199A2B05612900BE2D93 /* WalkyBotView.swift in Sources */,

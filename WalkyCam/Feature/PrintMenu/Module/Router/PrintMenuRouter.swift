@@ -15,5 +15,11 @@ final class PrintMenuRouter: Router, PrintMenuRouterProtocol {
             GalleryRoute(isPresented: isNavigating)
         )
     }
+    
+    func routeToUploadImage() {
+        navigateTo(
+            UploadImageToPrintRoute(isPresented: isNavigating)
+        )
+    }
 }
 
