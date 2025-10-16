@@ -262,6 +262,17 @@
 		56A2999A2C46116600D437C5 /* GetUserPlanUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A299992C46116600D437C5 /* GetUserPlanUseCase.swift */; };
 		56A2999C2C4611BA00D437C5 /* UserPlanOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A2999B2C4611BA00D437C5 /* UserPlanOutput.swift */; };
 		56A2999E2C46265900D437C5 /* IconModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A2999D2C46265900D437C5 /* IconModifier.swift */; };
+		56A400E32EA01C3900788FF6 /* PrintConfirmationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A400DF2EA01C3900788FF6 /* PrintConfirmationViewModel.swift */; };
+		56A400E42EA01C3900788FF6 /* PrintConfirmationAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A400CE2EA01C3900788FF6 /* PrintConfirmationAssembler.swift */; };
+		56A400E52EA01C3900788FF6 /* PrintConfirmationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A400D42EA01C3900788FF6 /* PrintConfirmationModel.swift */; };
+		56A400E62EA01C3900788FF6 /* PrintConfirmationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A400DA2EA01C3900788FF6 /* PrintConfirmationRouter.swift */; };
+		56A400E72EA01C3900788FF6 /* PrintConfirmationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A400D72EA01C3900788FF6 /* PrintConfirmationInteractor.swift */; };
+		56A400E82EA01C3900788FF6 /* PrintConfirmationAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A400CF2EA01C3900788FF6 /* PrintConfirmationAssemblerProtocol.swift */; };
+		56A400E92EA01C3900788FF6 /* PrintConfirmationRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A400D12EA01C3900788FF6 /* PrintConfirmationRoute.swift */; };
+		56A400EA2EA01C3900788FF6 /* PrintConfirmationInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A400D82EA01C3900788FF6 /* PrintConfirmationInteractorProtocol.swift */; };
+		56A400EB2EA01C3900788FF6 /* PrintConfirmationViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A400E02EA01C3900788FF6 /* PrintConfirmationViewModelProtocol.swift */; };
+		56A400EC2EA01C3900788FF6 /* PrintConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A400DD2EA01C3900788FF6 /* PrintConfirmationView.swift */; };
+		56A400ED2EA01C3900788FF6 /* PrintConfirmationRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A400DB2EA01C3900788FF6 /* PrintConfirmationRouterProtocol.swift */; };
 		56A5522C2B2F6135006B1B17 /* WalkyCamerOnboardingRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A552192B2F6134006B1B17 /* WalkyCamerOnboardingRoute.swift */; };
 		56A5522D2B2F6135006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5521B2B2F6134006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift */; };
 		56A5522E2B2F6135006B1B17 /* WalkyCamerOnboardingAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5521C2B2F6134006B1B17 /* WalkyCamerOnboardingAssembler.swift */; };
@@ -1466,6 +1477,17 @@
 		56A299992C46116600D437C5 /* GetUserPlanUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserPlanUseCase.swift; sourceTree = "<group>"; };
 		56A2999B2C4611BA00D437C5 /* UserPlanOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPlanOutput.swift; sourceTree = "<group>"; };
 		56A2999D2C46265900D437C5 /* IconModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconModifier.swift; sourceTree = "<group>"; };
+		56A400CE2EA01C3900788FF6 /* PrintConfirmationAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintConfirmationAssembler.swift; sourceTree = "<group>"; };
+		56A400CF2EA01C3900788FF6 /* PrintConfirmationAssemblerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintConfirmationAssemblerProtocol.swift; sourceTree = "<group>"; };
+		56A400D12EA01C3900788FF6 /* PrintConfirmationRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintConfirmationRoute.swift; sourceTree = "<group>"; };
+		56A400D42EA01C3900788FF6 /* PrintConfirmationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintConfirmationModel.swift; sourceTree = "<group>"; };
+		56A400D72EA01C3900788FF6 /* PrintConfirmationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintConfirmationInteractor.swift; sourceTree = "<group>"; };
+		56A400D82EA01C3900788FF6 /* PrintConfirmationInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintConfirmationInteractorProtocol.swift; sourceTree = "<group>"; };
+		56A400DA2EA01C3900788FF6 /* PrintConfirmationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintConfirmationRouter.swift; sourceTree = "<group>"; };
+		56A400DB2EA01C3900788FF6 /* PrintConfirmationRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintConfirmationRouterProtocol.swift; sourceTree = "<group>"; };
+		56A400DD2EA01C3900788FF6 /* PrintConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintConfirmationView.swift; sourceTree = "<group>"; };
+		56A400DF2EA01C3900788FF6 /* PrintConfirmationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintConfirmationViewModel.swift; sourceTree = "<group>"; };
+		56A400E02EA01C3900788FF6 /* PrintConfirmationViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintConfirmationViewModelProtocol.swift; sourceTree = "<group>"; };
 		56A552192B2F6134006B1B17 /* WalkyCamerOnboardingRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingRoute.swift; sourceTree = "<group>"; };
 		56A5521B2B2F6134006B1B17 /* WalkyCamerOnboardingAssemblerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingAssemblerProtocol.swift; sourceTree = "<group>"; };
 		56A5521C2B2F6134006B1B17 /* WalkyCamerOnboardingAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkyCamerOnboardingAssembler.swift; sourceTree = "<group>"; };
@@ -4477,6 +4499,104 @@
 			path = Module;
 			sourceTree = "<group>";
 		};
+		56A400CD2EA01C2800788FF6 /* PrintConfirmation */ = {
+			isa = PBXGroup;
+			children = (
+				56A400D32EA01C3900788FF6 /* Configuration */,
+				56A400D62EA01C3900788FF6 /* Domain */,
+				56A400E22EA01C3900788FF6 /* Module */,
+			);
+			path = PrintConfirmation;
+			sourceTree = "<group>";
+		};
+		56A400D02EA01C3900788FF6 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				56A400CE2EA01C3900788FF6 /* PrintConfirmationAssembler.swift */,
+				56A400CF2EA01C3900788FF6 /* PrintConfirmationAssemblerProtocol.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		56A400D22EA01C3900788FF6 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				56A400D12EA01C3900788FF6 /* PrintConfirmationRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		56A400D32EA01C3900788FF6 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				56A400D02EA01C3900788FF6 /* Assembler */,
+				56A400D22EA01C3900788FF6 /* Route */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		56A400D52EA01C3900788FF6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				56A400D42EA01C3900788FF6 /* PrintConfirmationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		56A400D62EA01C3900788FF6 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				56A400D52EA01C3900788FF6 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		56A400D92EA01C3900788FF6 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				56A400D72EA01C3900788FF6 /* PrintConfirmationInteractor.swift */,
+				56A400D82EA01C3900788FF6 /* PrintConfirmationInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		56A400DC2EA01C3900788FF6 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				56A400DA2EA01C3900788FF6 /* PrintConfirmationRouter.swift */,
+				56A400DB2EA01C3900788FF6 /* PrintConfirmationRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		56A400DE2EA01C3900788FF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				56A400DD2EA01C3900788FF6 /* PrintConfirmationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		56A400E12EA01C3900788FF6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				56A400DF2EA01C3900788FF6 /* PrintConfirmationViewModel.swift */,
+				56A400E02EA01C3900788FF6 /* PrintConfirmationViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		56A400E22EA01C3900788FF6 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				56A400D92EA01C3900788FF6 /* Interactor */,
+				56A400DC2EA01C3900788FF6 /* Router */,
+				56A400DE2EA01C3900788FF6 /* View */,
+				56A400E12EA01C3900788FF6 /* ViewModel */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
 		56A552102B2F5FE7006B1B17 /* WalkyCamerOnboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -6043,6 +6163,7 @@
 		EA15B57A2AD6E41400C03407 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				56A400CD2EA01C2800788FF6 /* PrintConfirmation */,
 				5656F1432E9F0CF400A7B919 /* UploadImageToPrint */,
 				56872C7E2D5E74F9002FAE9A /* GalleryModels */,
 				56872C572D5E38C5002FAE9A /* Settings */,
@@ -13361,6 +13482,17 @@
 				EA6083632B01981800295069 /* CryptoDetailsViewModelProtocol.swift in Sources */,
 				EA7219952B05612900BE2D93 /* WalkyBotAssemblerProtocol.swift in Sources */,
 				EA4A1C8C2B8799B400B5FC59 /* RuralDroneOnboardingInteractor.swift in Sources */,
+				56A400E32EA01C3900788FF6 /* PrintConfirmationViewModel.swift in Sources */,
+				56A400E42EA01C3900788FF6 /* PrintConfirmationAssembler.swift in Sources */,
+				56A400E52EA01C3900788FF6 /* PrintConfirmationModel.swift in Sources */,
+				56A400E62EA01C3900788FF6 /* PrintConfirmationRouter.swift in Sources */,
+				56A400E72EA01C3900788FF6 /* PrintConfirmationInteractor.swift in Sources */,
+				56A400E82EA01C3900788FF6 /* PrintConfirmationAssemblerProtocol.swift in Sources */,
+				56A400E92EA01C3900788FF6 /* PrintConfirmationRoute.swift in Sources */,
+				56A400EA2EA01C3900788FF6 /* PrintConfirmationInteractorProtocol.swift in Sources */,
+				56A400EB2EA01C3900788FF6 /* PrintConfirmationViewModelProtocol.swift in Sources */,
+				56A400EC2EA01C3900788FF6 /* PrintConfirmationView.swift in Sources */,
+				56A400ED2EA01C3900788FF6 /* PrintConfirmationRouterProtocol.swift in Sources */,
 				EA8652422B902E4B00B86A54 /* FunctionMenuRouterProtocol.swift in Sources */,
 				EA06554D2BB5DA5D006148E7 /* RadarMenuView.swift in Sources */,
 				EAF47BC92B8306E9003F8B86 /* TimeTabInteractorProtocol.swift in Sources */,

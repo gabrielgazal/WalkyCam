@@ -1,0 +1,3 @@
+protocol PrintConfirmationInteractorProtocol {
+    func someFunction()
+}
