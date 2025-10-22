@@ -37,7 +37,7 @@ final class PlansPagesViewModel: PlansPagesViewModelProtocol {
     @MainActor func preparePaymentSheet() async {
         isPaymentSheetLoading = true
         do {
-            let index = currentPage < plans.count ? currentPage : 0
+            let index = currentPage < plans.count ? currentPage : 1
             let intent = try await interactor.createSubscriptionIntent(with: plans[index].title)
             STPAPIClient.shared.publishableKey = intent.publishableKey
 

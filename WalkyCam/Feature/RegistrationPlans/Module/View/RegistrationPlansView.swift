@@ -50,7 +50,7 @@ struct RegistrationPlansView<ViewModel:RegistrationPlansViewModelProtocol, Route
                             .foregroundColor(monthlyToggle ? .naranja : .blanco)
                     }
                 }
-                
+                       .isHidden(true)
                 AsyncDataView(viewModel.availablePlans) { plans in
                     ForEach(plans, id: \.self) { item in
                         assemblePlanCard(item) {

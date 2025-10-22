@@ -31,34 +31,21 @@ struct PrintConfirmationView<ViewModel: PrintConfirmationViewModelProtocol, Rout
                         .padding(.top, Tokens.Size.Spacing.regular)
                 
                     Divider()
-                    HStack {
-                        Asset.Icons.colors.swiftUIImage
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: Tokens.Size.Font.huge, height: Tokens.Size.Font.huge)
-                        Text("Color")
-                            .font(.projectFont(size: Tokens.Size.Font.regular, weight: .medium))
-                        Spacer()
-                        ColorPicker(selection: $selectedColor) {
-                            HStack {
-                                Asset.Icons.colors.swiftUIImage
-                                    .renderingMode(.template)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: Tokens.Size.Font.xlarge, height: Tokens.Size.Font.xlarge)
-                                    .foregroundStyle(selectedColor)
-                                Text(selectedColor.toHex())
-                                    .font(.projectFont(size: Tokens.Size.Font.regular, weight: .medium))
-                            }
-                            .padding()
-                            .background(
-                                Capsule()
-                                    .fill(Color.blanco)
-                                    .applyShadow()
-                            )
+                    ColorPicker(selection: $selectedColor) {
+                        HStack {
+                            Asset.Icons.colors.swiftUIImage
+                                .renderingMode(.template)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: Tokens.Size.Font.xlarge, height: Tokens.Size.Font.xlarge)
+                                .foregroundStyle(selectedColor)
+                            Text("Color")
+                                .font(.projectFont(size: Tokens.Size.Font.regular, weight: .medium))
+                            Text(selectedColor.toHex())
+                                .font(.projectFont(size: Tokens.Size.Font.regular, weight: .medium))
                         }
+                        .padding()
                     }
-                    .padding(.horizontal, Tokens.Size.Spacing.small)
                     Divider()
                     // Medidas
                     VStack(alignment: .leading, spacing: Tokens.Size.Spacing.small) {
@@ -153,6 +140,7 @@ struct PrintConfirmationView<ViewModel: PrintConfirmationViewModelProtocol, Rout
                     action: { }
                 )
             }
+            .padding()
         }
     }
 }
