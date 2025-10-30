@@ -113,6 +113,7 @@ enum FunctionType: String {
     case iot = "iot"
     case print = "print"
     case thermalCamera = "thermalCamera"
+    case scan3dCammer = "scan3dCammer"
     
     var convertedValue: FunctionData {
         switch self {
@@ -138,6 +139,8 @@ enum FunctionType: String {
             return .init(title: "LIDAR", icon: Asset.Icons.lidar.name)
         case .thermalCamera:
             return .init(title: "Thermal Camera", icon: Asset.Icons.thermalCamera.name)
+        case .scan3dCammer:
+            return .init(title: "Scan 3D", icon: Asset.Icons.camerScan.name)
         }
     }
 }

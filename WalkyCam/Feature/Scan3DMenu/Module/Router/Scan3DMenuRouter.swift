@@ -24,9 +24,9 @@ final class Scan3DMenuRouter: Router, Scan3DMenuRouterProtocol {
                 isPresented: isNavigating,
                 assembler: Scan3dMenuAssembler(),
                 model: .init(
-                    type: .scan3d,
-                    title: "Scan 3D",
-                    icon: Asset.Icons.camerScan.name,
+                    type: .scan3dCammer,
+                    title: FunctionType.scan3dCammer.convertedValue.title,
+                    icon: FunctionType.scan3dCammer.convertedValue.icon,
                     background: Asset.Fondos.videocallFondo.name)
             )
         )

@@ -37,12 +37,17 @@ struct Scan3DMenuView<ViewModel: Scan3DMenuViewModelProtocol, Router: Scan3DMenu
                                 router.routeToGallery()
                             }
                     }
-                    .isHidden(UserDefaults.standard.string(forKey: "currentService") == FunctionType.print.rawValue)
+                    .isHidden(
+                        UserDefaults.standard.string(forKey: "currentService") == (FunctionType.print.rawValue) || UserDefaults.standard.string(forKey: "currentService") == FunctionType.scan3dCammer.rawValue
+                    )
                     rectangleCell(icon: Asset.Icons.scan3D.name, title: L10n.Scan3DMenuView.Scan3D.cellTitle)
                         .onTapGesture {
                             router.routeTo3DScanner()
                         }
-                        .isHidden(UserDefaults.standard.string(forKey: "currentService") != FunctionType.print.rawValue)
+                        .isHidden(
+                            UserDefaults.standard.string(forKey: "currentService") != FunctionType.print.rawValue &&
+                            UserDefaults.standard.string(forKey: "currentService") != FunctionType.scan3dCammer.rawValue
+                        )
                 }
                 VStack(alignment: .leading,
                        spacing: Tokens.Size.Spacing.regular) {
