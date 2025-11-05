@@ -21,7 +21,7 @@ class SocketManagerService: ObservableObject {
     @Published var participants: [Participant] = []
     
     private init() {
-        let serverURL = URL(string: "https://signalign.walkycam.com:2096")!
+        let serverURL = URL(string: "https://signalign.walkycam.com")!
         manager = SocketManager(socketURL: serverURL, config: [.log(true), .compress, .forceWebsockets(true)])
         socket = manager.defaultSocket
         
