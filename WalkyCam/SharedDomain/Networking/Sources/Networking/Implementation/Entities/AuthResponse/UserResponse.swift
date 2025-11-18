@@ -13,13 +13,13 @@ public struct UserResponse: Codable, Hashable {
     public let name: String
     public let lastName: String
     public let email: String
-    public let address: String
-    public let phone: String
-    public let birthDate: String
-    public let gender: String
+    public let address: String?          // Changed to optional (empty string in JSON)
+    public let phone: String?            // Changed to optional (empty string in JSON)
+    public let birthDate: String?        // Changed to optional (empty string in JSON)
+    public let gender: String?           // Changed to optional (empty string in JSON)
     public let additionalInfo: String?
     public let isWalkCammer: Bool
-    public let profileImage: String
+    public let profileImage: String?     // Already optional - correct!
     public let configurations: ConfigurationsResponse
 
     private enum CodingKeys: String, CodingKey {

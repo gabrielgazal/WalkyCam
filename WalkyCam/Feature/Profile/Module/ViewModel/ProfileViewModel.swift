@@ -84,11 +84,11 @@ final class ProfileViewModel: ProfileViewModelProtocol {
             profileImage: .imageMock,
             name: name,
             lastName: lastName,
-            phoneNumber: phoneNumber,
-            birthDate: birthDate,
-            gender: gender,
-            address: address,
-            additionalInfo: additionalInfo,
+            phoneNumber: phoneNumber ?? "",
+            birthDate: birthDate ?? "",
+            gender: gender ?? "",
+            address: address ?? "",
+            additionalInfo: additionalInfo ?? "",
             email: user.email,
             userName: user.userName,
             isWalkCamer: user.isWalkCamer,
@@ -96,11 +96,11 @@ final class ProfileViewModel: ProfileViewModelProtocol {
         )
         temporaryName = name
         temporaryLastname = lastName
-        temporaryBirthDate = birthDate
-        temporaryPhoneNumber = phoneNumber
-        temporaryGender = gender
-        temporaryAddress = address
-        temporaryAdditionalInfo = additionalInfo
+        temporaryBirthDate = birthDate ?? ""
+        temporaryPhoneNumber = phoneNumber ?? ""
+        temporaryGender = gender ?? ""
+        temporaryAddress = address ?? ""
+        temporaryAdditionalInfo = additionalInfo ?? ""
     }
 }
 // swiftlint:enable line_length

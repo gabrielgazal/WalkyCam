@@ -31,10 +31,11 @@ final class LoginInteractor: LoginInteractorProtocol {
 
     func login(with input: LoginInput) async throws -> LoginOutput {
         return try await withCheckedThrowingContinuation { continuation in
-            Publishers.Zip(
-                useCases.login(input),
-                useCases.gerUserPlan(input)
-            )
+//            Publishers.Zip(
+//                useCases.login(input),
+//                useCases.gerUserPlan(input)
+//            )
+            useCases.login(input)
             .sink(
                 receiveCompletion: { completion in
                     switch completion {
@@ -44,9 +45,8 @@ final class LoginInteractor: LoginInteractorProtocol {
                         continuation.resume(with: .failure(failure))
                     }
                 },
-                receiveValue: { user, _ in
-                    continuation.resume(returning: user
-                    )
+                receiveValue: { user in
+                    continuation.resume(returning: user)
                 }
             )
             .store(in: &bag)

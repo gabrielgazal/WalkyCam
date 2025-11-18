@@ -173,18 +173,41 @@ class WebRTCManager: NSObject, ObservableObject {
         localVideoTrack = peerConnectionFactory.videoTrack(with: videoSource, trackId: "localVideo")
         localVideoTrack?.isEnabled = true
 
-        // Também criamos uma audio track para enviar áudio junto com o vídeo
-        let audioConstraints = RTCMediaConstraints(mandatoryConstraints: [
-            "googEchoCancellation": "true",
-            "googAutoGainControl": "true",
-            "googNoiseSuppression": "true",
-            "googHighpassFilter": "true"
-        ], optionalConstraints: nil)
-        let audioSource = peerConnectionFactory.audioSource(with: audioConstraints)
-        localAudioTrack = peerConnectionFactory.audioTrack(with: audioSource, trackId: "localAudio")
-        localAudioTrack?.isEnabled = true
+        // Request microphone permission before creating audio track
+        AVAudioSession.sharedInstance().requestRecordPermission { [weak self] granted in
+            guard let self = self else { return }
+            
+            if granted {
+                // Também criamos uma audio track para enviar áudio junto com o vídeo
+                let audioConstraints = RTCMediaConstraints(mandatoryConstraints: [
+                    "googEchoCancellation": "true",
+                    "googAutoGainControl": "true",
+                    "googNoiseSuppression": "true",
+                    "googHighpassFilter": "true"
+                ], optionalConstraints: nil)
+                let audioSource = self.peerConnectionFactory.audioSource(with: audioConstraints)
+                self.localAudioTrack = self.peerConnectionFactory.audioTrack(with: audioSource, trackId: "localAudio")
+                self.localAudioTrack?.isEnabled = true
+                
+                print("🎬 Local audio track created: \(self.localAudioTrack?.trackId ?? "nil")")
+                
+                // Add audio track to existing peer connections
+                DispatchQueue.main.async {
+                    for (connectionId, connection) in self.peerConnections {
+                        if let localAudio = self.localAudioTrack {
+                            if connection.senders.first(where: { $0.track?.trackId == localAudio.trackId }) == nil {
+                                print("🔗 Anexando localAudioTrack ao peerConnection de \(connectionId)")
+                                connection.add(localAudio, streamIds: ["stream0"])
+                            }
+                        }
+                    }
+                }
+            } else {
+                print("⚠️ Permissão de microfone negada pelo usuário")
+            }
+        }
 
-        print("🎬 Local video track created: \(localVideoTrack?.trackId ?? "nil") and audio track: \(localAudioTrack?.trackId ?? "nil")")
+        print("🎬 Local video track created: \(localVideoTrack?.trackId ?? "nil")")
 
         // Attach newly created local tracks to any existing peer connections that were created earlier
         DispatchQueue.main.async {
@@ -202,16 +225,6 @@ class WebRTCManager: NSObject, ObservableObject {
                 } else {
                     print("ℹ️ localVideoTrack já anexada ao peerConnection de \(connectionId)")
                 }
-
-                // Audio
-                if let localAudio = self.localAudioTrack {
-                    if connection.senders.first(where: { $0.track?.trackId == localAudio.trackId }) == nil {
-                        print("🔗 Anexando localAudioTrack ao peerConnection de \(connectionId)")
-                        connection.add(localAudio, streamIds: ["stream0"])
-                    } else {
-                        print("ℹ️ localAudioTrack já anexada ao peerConnection de \(connectionId)")
-                    }
-                }
             }
 
             completion(self.localVideoTrack)
@@ -227,7 +240,6 @@ class WebRTCManager: NSObject, ObservableObject {
         localVideoTrack?.isEnabled = enabled
         print("🎥 Video \(enabled ? "habilitado" : "desabilitado")")
     }
-
 }
 
 class PeerConnectionDelegate: NSObject, RTCPeerConnectionDelegate {

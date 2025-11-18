@@ -57,7 +57,7 @@ extension RegisterUserUseCase {
                                           name: loginResponse.name,
                                           lastName: loginResponse.lastName,
                                           email: loginResponse.email,
-                                          address: loginResponse.address)
+                                          address: loginResponse.address ?? "")
 
             try session.save(user: registrationOutput.asUserSessionData())
 

@@ -13,11 +13,11 @@ struct UserSessionData: Hashable, Codable {
     public var name: String
     public var lastName: String
     public var email: String
-    public var address: String
-    public var phone: String
-    public var birthDate: String
-    public var gender: String
-    public var additionalInfo: String
+    public var address: String?          // Changed to optional
+    public var phone: String?            // Changed to optional
+    public var birthDate: String?        // Changed to optional
+    public var gender: String?           // Changed to optional
+    public var additionalInfo: String?   // Changed to optional
     public var isWalkCamer: Bool
     public var configurations: Configurations
     public var plan: PlanData
