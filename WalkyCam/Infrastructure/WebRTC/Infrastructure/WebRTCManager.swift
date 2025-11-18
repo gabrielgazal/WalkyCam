@@ -28,8 +28,7 @@ class WebRTCManager: NSObject, ObservableObject {
         audioSession.lockForConfiguration()
         do {
             try audioSession.setCategory(AVAudioSession.Category.playAndRecord)
-            try audioSession.setMode(AVAudioSession.Mode.voiceChat)
-            try audioSession.overrideOutputAudioPort(.speaker)
+            try audioSession.setMode(AVAudioSession.Mode.videoChat)
             try audioSession.setActive(true)
         } catch {
             print("❌ Error configuring audio session: \(error.localizedDescription)")

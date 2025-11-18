@@ -11,8 +11,8 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
     @StateObject private var socketManager = SocketManagerService.shared
     @State private var localTrack: RTCVideoTrack?
     
-    @State private var isVideoEnabled = true
-    @State private var isAudioEnabled = true
+    @State private var isVideoEnabled = false
+    @State private var isAudioEnabled = false
     @State private var isHandRaised = false
     @State private var isUserToolbarHidden = false
     
@@ -28,17 +28,17 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
     
     var body: some View {
         VStack {
-            if let localTrack = localTrack {
-                if isVideoEnabled {
-                    VideoView(videoTrack: localTrack)
-                        .frame(width: 150, height: 200)
-                        .cornerRadius(12)
-                        .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color.white, lineWidth: 1))
-                        .padding()
-                } else {
-                    emptyStateView
-                }
-            }
+//             if let localTrack = localTrack {
+//                 if isVideoEnabled {
+//                     VideoView(videoTrack: localTrack)
+//                         .frame(width: 150, height: 200)
+//                         .cornerRadius(12)
+//                         .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color.white, lineWidth: 1))
+//                         .padding()
+//                 } else {
+//                     emptyStateView
+//                 }
+//            }
             Spacer()
             ScrollView(
                 .horizontal,
@@ -56,6 +56,9 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
         .onAppear {
             WebRTCManager.shared.startLocalVideo { track in
                 self.localTrack = track
+                // Start with video and audio disabled
+                WebRTCManager.shared.toggleVideo(enabled: false)
+                WebRTCManager.shared.toggleAudio(enabled: false)
                 socketManager.connect()
                 socketManager.updateVideocallId(videocallId: viewModel.videoCallId)
             }
@@ -77,7 +80,8 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
                 HStack(
                     alignment: .center,
                     spacing: 20) {
-                        Asset.Icons.microphone.swiftUIImage
+                        Image(isAudioEnabled ? Asset.Icons.microphone.name : Asset.Icons.noMicrophone.name)
+                            .renderingMode(.template)
                             .resizable()
                             .foregroundColor(isAudioEnabled ? Color.naranja : Color.white)
                             .scaledToFit()
@@ -86,7 +90,8 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
                                 isAudioEnabled.toggle()
                                 WebRTCManager.shared.toggleAudio(enabled: isAudioEnabled)
                             }
-                        Image(systemName: "video")
+                        Image(isVideoEnabled ? Asset.Icons.video.name : Asset.Icons.noVideo.name)
+                            .renderingMode(.template)
                             .resizable()
                             .foregroundColor(isVideoEnabled ? Color.naranja : Color.white)
                             .scaledToFit()
