@@ -27,25 +27,20 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
     // MARK: - View Body
     
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
+            // Dynamic participants layout
+            dynamicParticipantsLayout
+                .isHidden(isUserToolbarHidden)
+            
             Spacer()
-            ScrollView(
-                .horizontal,
-                showsIndicators: false
-            ) {
-                HStack(spacing: 0) {
-                    ForEach(socketManager.participants, id: \.connectionId) { participant in
-                            ParticipantView(participant: participant)
-                    }
-                }
-            }
-            .isHidden(isUserToolbarHidden)
+            
+            // Toolbar at bottom
             toolbarView
+                .padding(.bottom, 20)
         }
         .onAppear {
             WebRTCManager.shared.startLocalVideo { track in
                 self.localTrack = track
-                // Start with video and audio disabled
                 WebRTCManager.shared.toggleVideo(enabled: false)
                 WebRTCManager.shared.toggleAudio(enabled: false)
                 socketManager.connect()
@@ -59,7 +54,133 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
             Color.negro
                 .ignoresSafeArea()
         }
-        .frame(idealWidth: .infinity)
+    }
+    
+    @ViewBuilder
+    private var dynamicParticipantsLayout: some View {
+        let participantCount = socketManager.participants.count
+        
+        switch participantCount {
+        case 0:
+            emptyCallView
+        case 1:
+            singleParticipantView
+        case 2:
+            twoParticipantsView
+        default:
+            googleMeetStyleGrid
+        }
+    }
+    
+    // Single participant - full screen
+    private var singleParticipantView: some View {
+        GeometryReader { geometry in
+            if let participant = socketManager.participants.first {
+                ParticipantView(participant: participant)
+                    .frame(width: geometry.size.width, height: geometry.size.height)
+            }
+        }
+    }
+    
+    // Two participants - vertical stack
+    private var twoParticipantsView: some View {
+        GeometryReader { geometry in
+            VStack(spacing: 12) {
+                ForEach(socketManager.participants, id: \.connectionId) { participant in
+                    ParticipantView(participant: participant)
+                        .frame(height: (geometry.size.height - 12) / 2)
+                        .cornerRadius(12)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 12)
+                                .stroke(Color.white.opacity(0.3), lineWidth: 2)
+                        )
+                }
+            }
+            .padding(.horizontal, 12)
+        }
+    }
+    
+    // 3+ participants - Google Meet style grid
+    private var googleMeetStyleGrid: some View {
+        GeometryReader { geometry in
+            let participantCount = socketManager.participants.count
+            let layout = calculateGoogleMeetLayout(for: participantCount, size: geometry.size)
+            
+            ScrollView {
+                LazyVGrid(
+                    columns: Array(repeating: GridItem(.flexible(), spacing: 8), count: layout.columns),
+                    spacing: 8
+                ) {
+                    ForEach(socketManager.participants, id: \.connectionId) { participant in
+                        ParticipantView(participant: participant)
+                            .frame(height: layout.itemHeight)
+                            .cornerRadius(12)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .stroke(Color.white.opacity(0.3), lineWidth: 2)
+                            )
+                    }
+                }
+                .padding(8)
+            }
+        }
+    }
+    
+    private var emptyCallView: some View {
+        VStack {
+            Spacer()
+            Image(systemName: "video.slash")
+                .font(.system(size: 60))
+                .foregroundColor(.gray)
+            Text("Aguardando participantes...")
+                .font(.title3)
+                .foregroundColor(.gray)
+                .padding(.top, 16)
+            Spacer()
+        }
+    }
+    
+    // Calculate Google Meet-style layout
+    private func calculateGoogleMeetLayout(for count: Int, size: CGSize) -> (columns: Int, itemHeight: CGFloat) {
+        let spacing: CGFloat = 8
+        let padding: CGFloat = 16
+        let availableWidth = size.width - padding
+        let availableHeight = size.height - padding
+        
+        // Determine optimal columns based on participant count
+        let columns: Int
+        let rows: Int
+        
+        switch count {
+        case 3:
+            columns = 2
+            rows = 2
+        case 4:
+            columns = 2
+            rows = 2
+        case 5...6:
+            columns = 3
+            rows = 2
+        case 7...9:
+            columns = 3
+            rows = 3
+        case 10...12:
+            columns = 4
+            rows = 3
+        default:
+            columns = 4
+            rows = Int(ceil(Double(count) / 4.0))
+        }
+        
+        // Calculate item height maintaining 16:9 aspect ratio
+        let itemWidth = (availableWidth - CGFloat(columns - 1) * spacing) / CGFloat(columns)
+        let idealHeight = itemWidth * 9 / 16
+        
+        // Make sure items fit in available height
+        let maxHeight = (availableHeight - CGFloat(rows - 1) * spacing) / CGFloat(min(rows, Int(ceil(Double(count) / Double(columns)))))
+        let itemHeight = min(idealHeight, maxHeight)
+        
+        return (columns, itemHeight)
     }
     
     private var toolbarView: some View {
