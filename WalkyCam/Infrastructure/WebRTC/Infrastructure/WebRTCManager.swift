@@ -16,12 +16,14 @@ class WebRTCManager: NSObject, ObservableObject {
     private var peerDelegates: [String: RTCPeerConnectionDelegate] = [:]
     private var localCapturer: RTCCameraVideoCapturer?
     private var localVideoTrack: RTCVideoTrack?
+    private var localAudioTrack: RTCAudioTrack?
 
     override init() {
         self.peerConnectionFactory = RTCPeerConnectionFactory()
         super.init()
     }
     
+    @discardableResult
     func createPeerConnection(for participant: Participant) -> RTCPeerConnection {
         let config = RTCConfiguration()
         config.iceServers = [RTCIceServer(urlStrings: ["stun:stun.l.google.com:19302"])]
@@ -30,28 +32,38 @@ class WebRTCManager: NSObject, ObservableObject {
         let delegate = PeerConnectionDelegate(participant: participant)
         peerDelegates[participant.connectionId] = delegate
 
-        let connection = peerConnectionFactory.peerConnection(with: config, constraints: constraints, delegate: delegate)
-        
-        // Configurar o video depois de acabar a configuracao do iceCandidate
+        guard let connection = peerConnectionFactory.peerConnection(with: config, constraints: constraints, delegate: delegate) else {
+            fatalError("❌ Não foi possível criar RTCPeerConnection")
+        }
+
+        print("🔧 Criando peerConnection para: \(participant.userName) (\(participant.connectionId))")
+
+        // Configurar o video transceiver para enviar/receber
         let videoTransceiverInit = RTCRtpTransceiverInit()
         videoTransceiverInit.direction = .sendRecv
-        connection?.addTransceiver(of: .video, init: videoTransceiverInit)
+        let _ = connection.addTransceiver(of: .video, init: videoTransceiverInit)
+        print("🔁 Video transceiver configurado para \(participant.userName)")
 
+        // Anexa a local video track ao peerConnection se já existir
         if let track = localVideoTrack {
             print("✅ Adicionando localVideoTrack ao peerConnection de \(participant.userName): \(track.trackId)")
-            // Verificar qual stream do localStreams tem algo e enviar esse id
-//            for connection in connection?.localStreams {
-//                
-//            }
             track.isEnabled = true
-            connection?.add(track, streamIds: ["stream0"])
+            connection.add(track, streamIds: ["stream0"])
         } else {
             print("❌ localVideoTrack ainda é nil ao criar peerConnection de \(participant.userName)")
         }
 
+        // Anexa a local audio track ao peerConnection se já existir
+        if let audio = localAudioTrack {
+            print("✅ Adicionando localAudioTrack ao peerConnection de \(participant.userName): \(audio.trackId)")
+            connection.add(audio, streamIds: ["stream0"])
+        } else {
+            print("⚠️ localAudioTrack ainda é nil ao criar peerConnection de \(participant.userName)")
+        }
+
         peerConnections[participant.connectionId] = connection
         participant.peerConnection = connection
-        return connection!
+        return connection
     }
 
     
@@ -73,7 +85,7 @@ class WebRTCManager: NSObject, ObservableObject {
     func handleRemoteOffer(_ offer: RTCSessionDescription, for userId: String) {
         guard let peerConnection = peerConnections[userId] else { return }
         
-        peerConnection.setRemoteDescription(offer) { [weak self] error in
+        peerConnection.setRemoteDescription(offer) { error in
             guard error == nil else {
                 print("❌ Erro ao setar remote description: \(error!.localizedDescription)")
                 return
@@ -106,7 +118,14 @@ class WebRTCManager: NSObject, ObservableObject {
     
     func handleIceCandidate(_ candidate: RTCIceCandidate, for participant: Participant) {
         guard let peerConnection = participant.peerConnection else { return }
-        peerConnection.add(candidate)
+        // Use the completionHandler-based API (non-deprecated)
+        peerConnection.add(candidate) { error in
+            if let error = error {
+                print("❌ Falha ao adicionar ICE candidate: \(error.localizedDescription)")
+            } else {
+                print("✅ ICE candidate adicionado para \(participant.connectionId)")
+            }
+        }
     }
     
     func startLocalVideo(completion: @escaping (RTCVideoTrack?) -> Void) {
@@ -124,7 +143,43 @@ class WebRTCManager: NSObject, ObservableObject {
         localCapturer?.startCapture(with: frontCamera, format: format, fps: Int(fps))
 
         localVideoTrack = peerConnectionFactory.videoTrack(with: videoSource, trackId: "localVideo")
-        completion(localVideoTrack)
+
+        // Também criamos uma audio track para enviar áudio junto com o vídeo
+        let audioSource = peerConnectionFactory.audioSource(with: nil)
+        localAudioTrack = peerConnectionFactory.audioTrack(with: audioSource, trackId: "localAudio")
+
+        print("🎬 Local video track created: \(localVideoTrack?.trackId ?? "nil") and audio track: \(localAudioTrack?.trackId ?? "nil")")
+
+        // Attach newly created local tracks to any existing peer connections that were created earlier
+        DispatchQueue.main.async {
+            guard let localVideo = self.localVideoTrack else {
+                print("⚠️ startLocalVideo: localVideoTrack unexpectedly nil when attaching to existing peer connections")
+                completion(self.localVideoTrack)
+                return
+            }
+
+            for (connectionId, connection) in self.peerConnections {
+                // Video
+                if connection.senders.first(where: { $0.track?.trackId == localVideo.trackId }) == nil {
+                    print("🔗 Anexando localVideoTrack ao peerConnection de \(connectionId)")
+                    connection.add(localVideo, streamIds: ["stream0"])
+                } else {
+                    print("ℹ️ localVideoTrack já anexada ao peerConnection de \(connectionId)")
+                }
+
+                // Audio
+                if let localAudio = self.localAudioTrack {
+                    if connection.senders.first(where: { $0.track?.trackId == localAudio.trackId }) == nil {
+                        print("🔗 Anexando localAudioTrack ao peerConnection de \(connectionId)")
+                        connection.add(localAudio, streamIds: ["stream0"])
+                    } else {
+                        print("ℹ️ localAudioTrack já anexada ao peerConnection de \(connectionId)")
+                    }
+                }
+            }
+
+            completion(self.localVideoTrack)
+        }
     }
 
 }

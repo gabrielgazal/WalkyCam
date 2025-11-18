@@ -57,6 +57,10 @@ class SocketManagerService: ObservableObject {
                 
                 self.participants.append(participant)
 
+                // IMPORTANT: Create a peer connection for this existing participant before trying to generate an offer.
+                // Otherwise generateOffer will not find a peer connection and will return early.
+                WebRTCManager.shared.createPeerConnection(for: participant)
+
                 WebRTCManager.shared.generateOffer(for: participant.connectionId) { offer in
                     guard let offer = offer else { return }
                     
@@ -126,23 +130,35 @@ class SocketManagerService: ObservableObject {
         }
         
         socket.on("receiveVideoFrom") { data, _ in
+            // This event can carry an SDP offer from a remote participant.
+            // Instead of generating another offer here, set the remote offer and create an answer.
             guard let info = data.first as? [String: Any],
                   let connectionId = info["connectionId"] as? String else { return }
-            guard let participant = self.participants.first(where: { $0.connectionId == connectionId }) else {
-                print("❌ Participante \(connectionId) não encontrado para receiveVideoFrom")
-                return
-            }
-            WebRTCManager.shared.generateOffer(for: connectionId) { offer in
-                guard let offer = offer else {
-                    print("❌ Falha ao gerar offer para \(connectionId)")
-                    return
+
+            // If there's an SDP offer from the remote, handle it and create an answer.
+            if let sdpOffer = info["sdpOffer"] as? String {
+                let sessionDescription = RTCSessionDescription(type: .offer, sdp: sdpOffer)
+
+                // Ensure we have a Participant and a peer connection for this connectionId
+                if self.participants.first(where: { $0.connectionId == connectionId }) == nil {
+                    // If the participant isn't known yet, create a lightweight participant entry so we can attach the peerConnection.
+                    let newParticipant = Participant(connectionId: connectionId, userId: "", userName: "Unknown")
+                    DispatchQueue.main.async {
+                        self.participants.append(newParticipant)
+                    }
+                    WebRTCManager.shared.createPeerConnection(for: newParticipant)
+                } else {
+                    if let participant = self.participants.first(where: { $0.connectionId == connectionId }) {
+                        if participant.peerConnection == nil {
+                            WebRTCManager.shared.createPeerConnection(for: participant)
+                        }
+                    }
                 }
-                let data: [String: Any] = [
-                    "connectionId": connectionId,
-                    "senderId": self.localUserId,
-                    "sdpOffer": offer.sdp
-                ]
-                self.socket.emit("receiveVideoFrom", data)
+
+                WebRTCManager.shared.handleRemoteOffer(sessionDescription, for: connectionId)
+            } else {
+                // No sdpOffer present: log or ignore.
+                print("receiveVideoFrom received without sdpOffer for \(connectionId)")
             }
         }
         
@@ -183,15 +199,20 @@ class SocketManagerService: ObservableObject {
     func joinVideoCall() {
         guard let user = try? UserSession().user() else { return }
         localUserId = user.id
-        
-        let data: [String: Any] = [
-            "userName": user.userName,
-            "userId": user.id,
-            "videocallId": callId
-        ]
-        socket.emit("joinToVideocall", data)
+
+        // Start local video capture before joining so the local track is available when peerConnections are created.
+        WebRTCManager.shared.startLocalVideo { _ in
+            print("Local video started for user \(user.userName)")
+
+            let data: [String: Any] = [
+                "userName": user.userName,
+                "userId": user.id,
+                "videocallId": self.callId
+            ]
+            self.socket.emit("joinToVideocall", data)
+        }
     }
-    
+
     func receiveVideoAnswer(userId: String, sdpAnswer: String) {
         socket.emit("receiveVideoAnswer", [
             "connectionId": userId,
@@ -199,7 +220,7 @@ class SocketManagerService: ObservableObject {
             "sdpAnswer": sdpAnswer
         ])
     }
-    
+
     func updateVideoStatus(isEnabled: Bool) {
         socket.emit("sendVideoStatus", [
             "connectionId": localConnectionId,
@@ -207,7 +228,7 @@ class SocketManagerService: ObservableObject {
             "videocallId": callId
         ])
     }
-    
+
     func sendIceCandidate(_ candidate: RTCIceCandidate, for connectionId: String) {
         let candidateData: [String: Any] = [
             "connectionId": connectionId,
@@ -216,7 +237,8 @@ class SocketManagerService: ObservableObject {
             "sdpMLineIndex": Int(candidate.sdpMLineIndex),
             "sdp": candidate.sdp
         ]
-        socket.emit("onIceCandidate", candidateData)
+        // Emit using the event name the server sends back to us (iceCandidate)
+        socket.emit("iceCandidate", candidateData)
         print("📡 Candidato ICE emitido para \(connectionId): \(candidateData)")
     }
 }

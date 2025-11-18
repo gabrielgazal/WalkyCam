@@ -13,8 +13,30 @@ class Participant: ObservableObject, Identifiable {
     let userId: String
     let userName: String
     var peerConnection: RTCPeerConnection?
-    var renderer: RTCVideoRenderer?
-    @Published var videoTrack: RTCVideoTrack?
+    var renderer: RTCVideoRenderer? {
+        didSet {
+            // If a renderer is set after a track already arrived, attach it
+            if let old = oldValue, let track = videoTrack {
+                track.remove(old)
+            }
+            if let renderer = renderer, let track = videoTrack {
+                print("✅ Renderer set for \(userName), attaching existing track")
+                track.add(renderer)
+            }
+        }
+    }
+    @Published var videoTrack: RTCVideoTrack? {
+        didSet {
+            // If a track arrives after the renderer was set, attach it
+            if let old = oldValue, let renderer = renderer {
+                old.remove(renderer)
+            }
+            if let track = videoTrack, let renderer = renderer {
+                print("🎬 VideoTrack set for \(userName), attaching to renderer")
+                track.add(renderer)
+            }
+        }
+    }
     @Published var audioTrack: RTCAudioTrack?
     @Published var isVideoEnabled: Bool
     @Published var isAudioEnabled: Bool
