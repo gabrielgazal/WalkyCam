@@ -189,6 +189,28 @@ class SocketManagerService: ObservableObject {
             }
         }
 
+        socket.on("receiveAudioStatus") { [weak self] data, ack in
+            guard
+                let self = self,
+                let dict = data.first as? [String: Any],
+                let connectionId = dict["connectionId"] as? String,
+                let isEnabled = dict["isAudioEnabled"] as? Bool
+            else {
+                print("❌ Erro ao processar receiveAudioStatus")
+                return
+            }
+
+            print("🔊 Audio status do usuário \(connectionId): \(isEnabled)")
+
+            DispatchQueue.main.async {
+                if let participant = self.participants.first(where: { $0.connectionId == connectionId }) {
+                    participant.isAudioEnabled = isEnabled
+                } else {
+                    print("⚠️ Participante com id \(connectionId) não encontrado")
+                }
+            }
+        }
+
     }
     
     func connect() {
