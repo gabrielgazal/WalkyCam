@@ -23,17 +23,22 @@ class WebRTCManager: NSObject, ObservableObject {
         // Initialize peer connection factory
         RTCInitializeSSL()
         
-        // Configure audio session for WebRTC
+        // Configure audio session for WebRTC with optimal settings for volume
         let audioSession = RTCAudioSession.sharedInstance()
         audioSession.lockForConfiguration()
         do {
-            try audioSession.setCategory(AVAudioSession.Category.playAndRecord)
+            try audioSession.setCategory(AVAudioSession.Category.playAndRecord, with: .defaultToSpeaker)
             try audioSession.setMode(AVAudioSession.Mode.videoChat)
+            // Override to force speaker output
             try audioSession.setActive(true)
         } catch {
             print("❌ Error configuring audio session: \(error.localizedDescription)")
         }
         audioSession.unlockForConfiguration()
+        
+        // Configure WebRTC audio processing for better volume
+        RTCAudioSession.sharedInstance().useManualAudio = false
+        RTCAudioSession.sharedInstance().isAudioEnabled = true
         
         self.peerConnectionFactory = RTCPeerConnectionFactory()
         super.init()
@@ -258,7 +263,26 @@ class PeerConnectionDelegate: NSObject, RTCPeerConnectionDelegate {
             }
         } else if let track = receiver.track as? RTCAudioTrack {
             print("🔊 Audio track recebida para \(self.participant.userName)")
+
+            // If this remote track belongs to our own connection id, it is likely a loopback
+            // from the server; disable it to avoid hearing our own microphone.
+            let localId = SocketManagerService.shared.currentConnectionId
+            if self.participant.connectionId == localId {
+                print("🔇 Ignorando audio local recebido (loopback) para \(self.participant.userName) id=\(self.participant.connectionId)")
+                track.isEnabled = false
+                return
+            }
+
+            // For remote participants: enable playback and force loudspeaker output
             track.isEnabled = true
+            DispatchQueue.main.async {
+                do {
+                    try AVAudioSession.sharedInstance().overrideOutputAudioPort(.speaker)
+                    print("🔊 Audio route set to speaker for participant \(self.participant.userName)")
+                } catch {
+                    print("❌ Failed to override audio port to speaker: \(error.localizedDescription)")
+                }
+            }
         }
     }
 

@@ -28,17 +28,6 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
     
     var body: some View {
         VStack {
-//             if let localTrack = localTrack {
-//                 if isVideoEnabled {
-//                     VideoView(videoTrack: localTrack)
-//                         .frame(width: 150, height: 200)
-//                         .cornerRadius(12)
-//                         .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color.white, lineWidth: 1))
-//                         .padding()
-//                 } else {
-//                     emptyStateView
-//                 }
-//            }
             Spacer()
             ScrollView(
                 .horizontal,
@@ -89,6 +78,7 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
                             .onTapGesture {
                                 isAudioEnabled.toggle()
                                 WebRTCManager.shared.toggleAudio(enabled: isAudioEnabled)
+                                socketManager.updateAudioStatus(isEnabled: isAudioEnabled)
                             }
                         Image(isVideoEnabled ? Asset.Icons.video.name : Asset.Icons.noVideo.name)
                             .renderingMode(.template)

@@ -18,6 +18,11 @@ class SocketManagerService: ObservableObject {
     private var localConnectionId: String = ""
     private var localUserId: String = ""
 
+    // Expose the local connection id for local checks (read-only)
+    var currentConnectionId: String {
+        return localConnectionId
+    }
+
     @Published var participants: [Participant] = []
     
     private init() {
@@ -225,6 +230,14 @@ class SocketManagerService: ObservableObject {
         socket.emit("sendVideoStatus", [
             "connectionId": localConnectionId,
             "isVideoEnabled": isEnabled,
+            "videocallId": callId
+        ])
+    }
+    
+    func updateAudioStatus(isEnabled: Bool) {
+        socket.emit("sendAudioStatus", [
+            "connectionId": localConnectionId,
+            "isAudioEnabled": isEnabled,
             "videocallId": callId
         ])
     }
