@@ -7,6 +7,7 @@
 
 import Foundation
 import WebRTC
+import AVFoundation
 
 class WebRTCManager: NSObject, ObservableObject {
     static let shared = WebRTCManager()
@@ -19,6 +20,22 @@ class WebRTCManager: NSObject, ObservableObject {
     private var localAudioTrack: RTCAudioTrack?
 
     override init() {
+        // Initialize peer connection factory
+        RTCInitializeSSL()
+        
+        // Configure audio session for WebRTC
+        let audioSession = RTCAudioSession.sharedInstance()
+        audioSession.lockForConfiguration()
+        do {
+            try audioSession.setCategory(AVAudioSession.Category.playAndRecord)
+            try audioSession.setMode(AVAudioSession.Mode.voiceChat)
+            try audioSession.overrideOutputAudioPort(.speaker)
+            try audioSession.setActive(true)
+        } catch {
+            print("❌ Error configuring audio session: \(error.localizedDescription)")
+        }
+        audioSession.unlockForConfiguration()
+        
         self.peerConnectionFactory = RTCPeerConnectionFactory()
         super.init()
     }
@@ -44,6 +61,12 @@ class WebRTCManager: NSObject, ObservableObject {
         let _ = connection.addTransceiver(of: .video, init: videoTransceiverInit)
         print("🔁 Video transceiver configurado para \(participant.userName)")
 
+        // Configurar o audio transceiver para enviar/receber
+        let audioTransceiverInit = RTCRtpTransceiverInit()
+        audioTransceiverInit.direction = .sendRecv
+        let _ = connection.addTransceiver(of: .audio, init: audioTransceiverInit)
+        print("🔁 Audio transceiver configurado para \(participant.userName)")
+
         // Anexa a local video track ao peerConnection se já existir
         if let track = localVideoTrack {
             print("✅ Adicionando localVideoTrack ao peerConnection de \(participant.userName): \(track.trackId)")
@@ -56,6 +79,7 @@ class WebRTCManager: NSObject, ObservableObject {
         // Anexa a local audio track ao peerConnection se já existir
         if let audio = localAudioTrack {
             print("✅ Adicionando localAudioTrack ao peerConnection de \(participant.userName): \(audio.trackId)")
+            audio.isEnabled = true
             connection.add(audio, streamIds: ["stream0"])
         } else {
             print("⚠️ localAudioTrack ainda é nil ao criar peerConnection de \(participant.userName)")
@@ -143,10 +167,18 @@ class WebRTCManager: NSObject, ObservableObject {
         localCapturer?.startCapture(with: frontCamera, format: format, fps: Int(fps))
 
         localVideoTrack = peerConnectionFactory.videoTrack(with: videoSource, trackId: "localVideo")
+        localVideoTrack?.isEnabled = true
 
         // Também criamos uma audio track para enviar áudio junto com o vídeo
-        let audioSource = peerConnectionFactory.audioSource(with: nil)
+        let audioConstraints = RTCMediaConstraints(mandatoryConstraints: [
+            "googEchoCancellation": "true",
+            "googAutoGainControl": "true",
+            "googNoiseSuppression": "true",
+            "googHighpassFilter": "true"
+        ], optionalConstraints: nil)
+        let audioSource = peerConnectionFactory.audioSource(with: audioConstraints)
         localAudioTrack = peerConnectionFactory.audioTrack(with: audioSource, trackId: "localAudio")
+        localAudioTrack?.isEnabled = true
 
         print("🎬 Local video track created: \(localVideoTrack?.trackId ?? "nil") and audio track: \(localAudioTrack?.trackId ?? "nil")")
 
@@ -181,6 +213,16 @@ class WebRTCManager: NSObject, ObservableObject {
             completion(self.localVideoTrack)
         }
     }
+    
+    func toggleAudio(enabled: Bool) {
+        localAudioTrack?.isEnabled = enabled
+        print("🔊 Audio \(enabled ? "habilitado" : "desabilitado")")
+    }
+    
+    func toggleVideo(enabled: Bool) {
+        localVideoTrack?.isEnabled = enabled
+        print("🎥 Video \(enabled ? "habilitado" : "desabilitado")")
+    }
 
 }
 
@@ -199,7 +241,7 @@ class PeerConnectionDelegate: NSObject, RTCPeerConnectionDelegate {
     func peerConnection(_ peerConnection: RTCPeerConnection, didAdd receiver: RTCRtpReceiver, streams: [RTCMediaStream]) {
         if let track = receiver.track as? RTCVideoTrack {
             DispatchQueue.main.async {
-                print("🎥 Track recebida para \(self.participant.userName)")
+                print("🎥 Video track recebida para \(self.participant.userName)")
                 self.participant.videoTrack = track
 
                 if let renderer = self.participant.renderer {
@@ -215,8 +257,10 @@ class PeerConnectionDelegate: NSObject, RTCPeerConnectionDelegate {
                     SocketManagerService.shared.participants = updated
                 }
             }
+        } else if let track = receiver.track as? RTCAudioTrack {
+            print("🔊 Audio track recebida para \(self.participant.userName)")
+            track.isEnabled = true
         }
-
     }
 
 

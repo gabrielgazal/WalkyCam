@@ -11,8 +11,8 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
     @StateObject private var socketManager = SocketManagerService.shared
     @State private var localTrack: RTCVideoTrack?
     
-    @State private var isVideoEnabled = false
-    @State private var isAudioEnabled = false
+    @State private var isVideoEnabled = true
+    @State private var isAudioEnabled = true
     @State private var isHandRaised = false
     @State private var isUserToolbarHidden = false
     
@@ -84,6 +84,7 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
                             .frame(width: 25)
                             .onTapGesture {
                                 isAudioEnabled.toggle()
+                                WebRTCManager.shared.toggleAudio(enabled: isAudioEnabled)
                             }
                         Image(systemName: "video")
                             .resizable()
@@ -92,6 +93,7 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
                             .frame(width: 25)
                             .onTapGesture {
                                 isVideoEnabled.toggle()
+                                WebRTCManager.shared.toggleVideo(enabled: isVideoEnabled)
                                 socketManager.updateVideoStatus(isEnabled: isVideoEnabled)
                             }
                         Image(systemName: "hand.raised.fill")
