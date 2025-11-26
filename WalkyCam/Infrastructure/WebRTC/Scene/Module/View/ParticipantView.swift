@@ -31,7 +31,23 @@ struct ParticipantView: View {
             
             // Name label overlay at bottom
             VStack {
+                // Raised hand indicator at top
+                if participant.isHandRaised {
+                    HStack {
+                        Spacer()
+                        Image(systemName: "hand.raised.fill")
+                            .font(.title2)
+                            .foregroundColor(.white)
+                            .padding(8)
+                            .background(Circle().fill(Color.naranja.opacity(0.9)))
+                            .shadow(color: .black.opacity(0.3), radius: 4, x: 0, y: 2)
+                    }
+                    .padding(.top, 8)
+                    .padding(.trailing, 8)
+                }
+                
                 Spacer()
+                
                 HStack {
                     Text(participant.userName)
                         .font(.caption)

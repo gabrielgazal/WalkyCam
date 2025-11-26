@@ -205,6 +205,34 @@ class SocketManagerService: ObservableObject {
             DispatchQueue.main.async {
                 if let participant = self.participants.first(where: { $0.connectionId == connectionId }) {
                     participant.isAudioEnabled = isEnabled
+                    // If we already have a received audio track for this participant, toggle playback immediately
+                    if let audioTrack = participant.audioTrack {
+                        audioTrack.isEnabled = isEnabled
+                        print("🔊 Aplicando isAudioEnabled=\(isEnabled) para participante \(connectionId)")
+                    }
+                } else {
+                    print("⚠️ Participante com id \(connectionId) não encontrado")
+                }
+            }
+        }
+        
+        socket.on("participantRaiseHand") { [weak self] data, ack in
+            guard
+                let self = self,
+                let dict = data.first as? [String: Any],
+                let connectionId = dict["connectionId"] as? String,
+                let isHandRaised = dict["isHandRaised"] as? Bool
+            else {
+                print("❌ Erro ao processar participantRaiseHand")
+                return
+            }
+
+            print("✋ Hand raise status do usuário \(connectionId): \(isHandRaised)")
+
+            DispatchQueue.main.async {
+                if let participant = self.participants.first(where: { $0.connectionId == connectionId }) {
+                    participant.isHandRaised = isHandRaised
+                    print("✋ Aplicando isHandRaised=\(isHandRaised) para participante \(connectionId)")
                 } else {
                     print("⚠️ Participante com id \(connectionId) não encontrado")
                 }
@@ -262,6 +290,14 @@ class SocketManagerService: ObservableObject {
             "isAudioEnabled": isEnabled,
             "videocallId": callId
         ])
+    }
+    
+    func updateHandRaiseStatus(isHandRaised: Bool) {
+        socket.emit("sendHandRaise", [
+            "isHandRaised": isHandRaised,
+            "videocallId": callId
+        ])
+        print("✋ Hand raise status enviado: \(isHandRaised)")
     }
 
     func sendIceCandidate(_ candidate: RTCIceCandidate, for connectionId: String) {

@@ -53,6 +53,7 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
         .background {
             Color.negro
                 .ignoresSafeArea()
+                .frame(idealWidth: .infinity)
         }
     }
     
@@ -219,6 +220,15 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
                             .frame(width: 25)
                             .onTapGesture {
                                 isHandRaised.toggle()
+                                socketManager.updateHandRaiseStatus(isHandRaised: isHandRaised)
+                            }
+                        Image(systemName: "arrow.triangle.2.circlepath.camera")
+                            .resizable()
+                            .foregroundColor(Color.white)
+                            .scaledToFit()
+                            .frame(width: 25)
+                            .onTapGesture {
+                                WebRTCManager.shared.switchCamera()
                             }
                         Image(systemName: "person")
                             .resizable()

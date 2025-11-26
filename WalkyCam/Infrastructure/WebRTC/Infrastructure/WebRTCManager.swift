@@ -240,6 +240,36 @@ class WebRTCManager: NSObject, ObservableObject {
         localVideoTrack?.isEnabled = enabled
         print("🎥 Video \(enabled ? "habilitado" : "desabilitado")")
     }
+    
+    func switchCamera() {
+        guard let capturer = localCapturer else {
+            print("⚠️ Camera capturer não disponível")
+            return
+        }
+        
+        let devices = RTCCameraVideoCapturer.captureDevices()
+        
+        // Find current camera position
+        var currentPosition: AVCaptureDevice.Position = .front
+        if let currentInput = capturer.captureSession.inputs.first as? AVCaptureDeviceInput {
+            currentPosition = currentInput.device.position
+        }
+        
+        // Switch to opposite camera
+        let targetPosition: AVCaptureDevice.Position = (currentPosition == .front) ? .back : .front
+        
+        guard let targetCamera = devices.first(where: { $0.position == targetPosition }),
+              let format = RTCCameraVideoCapturer.supportedFormats(for: targetCamera).first,
+              let fps = format.videoSupportedFrameRateRanges.first?.maxFrameRate else {
+            print("⚠️ Câmera alvo não encontrada")
+            return
+        }
+        
+        capturer.stopCapture {
+            capturer.startCapture(with: targetCamera, format: format, fps: Int(fps))
+            print("📷 Câmera alternada para: \(targetPosition == .front ? "frontal" : "traseira")")
+        }
+    }
 }
 
 class PeerConnectionDelegate: NSObject, RTCPeerConnectionDelegate {
