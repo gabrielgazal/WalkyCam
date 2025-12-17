@@ -15,7 +15,9 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
     @State private var isAudioEnabled = false
     @State private var isHandRaised = false
     @State private var isUserToolbarHidden = false
-    
+    @State private var isFeatureToolbarHidden = false
+    @State private var isDirectionsViewHidden = false
+
     // MARK: - Initialization
     
     init(viewModel: ViewModel,
@@ -27,16 +29,25 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
     // MARK: - View Body
     
     var body: some View {
-        VStack(spacing: 0) {
-            // Dynamic participants layout
-            dynamicParticipantsLayout
-                .isHidden(isUserToolbarHidden)
-            
-            Spacer()
-            
-            // Toolbar at bottom
-            toolbarView
-                .padding(.bottom, 20)
+        ZStack(alignment: .topLeading) {
+            VStack(spacing: 0) {
+                // Dynamic participants layout
+                dynamicParticipantsLayout
+                    .isHidden(isUserToolbarHidden)
+                
+                Spacer()
+                
+                // Toolbar at bottom
+                toolbarView
+                    .padding(.bottom, 20)
+            }
+            VStack {
+                HStack {
+                    featureView
+                    Spacer()
+                }
+                Spacer()
+            }
         }
         .onAppear {
             WebRTCManager.shared.startLocalVideo { track in
@@ -55,6 +66,101 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
                 .ignoresSafeArea()
                 .frame(idealWidth: .infinity)
         }
+        .navigationBarBackButtonHidden()
+    }
+    
+    private var featureView: some View {
+        VStack(
+            alignment: .center,
+            spacing: 20) {
+                Image(systemName: isFeatureToolbarHidden ? "chevron.right" : "chevron.left")
+                    .renderingMode(.template)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 25, height: 25)
+                    .foregroundStyle(Color.naranja)
+                    .onTapGesture {
+                        withAnimation {
+                            isFeatureToolbarHidden.toggle()
+                        }
+                    }
+                Group {
+                    Image(Asset.Icons.directions.name)
+                        .renderingMode(.template)
+                        .resizable()
+                        .foregroundColor(isDirectionsViewHidden ? Color.white : Color.naranja)
+                        .scaledToFit()
+                        .frame(width: 25, height: 25)
+                        .clipped()
+                        .onTapGesture {
+                            isDirectionsViewHidden.toggle()
+                        }
+                    
+                    Image(Asset.Icons.location.name)
+                        .renderingMode(.template)
+                        .resizable()
+                        .foregroundColor(Color.white)
+                        .scaledToFit()
+                        .frame(width: 25, height: 25)
+                        .clipped()
+                    
+                    Image(Asset.Icons.ar.name)
+                        .renderingMode(.template)
+                        .resizable()
+                        .foregroundColor(Color.white)
+                        .scaledToFit()
+                        .frame(width: 25, height: 25)
+                        .clipped()
+                    
+                    Image(Asset.Icons.pixelation.name)
+                        .renderingMode(.template)
+                        .resizable()
+                        .foregroundColor(Color.white)
+                        .scaledToFit()
+                        .frame(width: 25, height: 25)
+                        .clipped()
+                    
+                    Image(Asset.Icons.drone.name)
+                        .renderingMode(.template)
+                        .resizable()
+                        .foregroundColor(Color.white)
+                        .scaledToFit()
+                        .frame(width: 25, height: 25)
+                        .clipped()
+                    
+                    Image(Asset.Icons.scan3D.name)
+                        .renderingMode(.template)
+                        .resizable()
+                        .foregroundColor(Color.white)
+                        .scaledToFit()
+                        .frame(width: 25, height: 25)
+                        .clipped()
+                    
+                    Image(Asset.Icons.iot.name)
+                        .renderingMode(.template)
+                        .resizable()
+                        .foregroundColor(Color.white)
+                        .scaledToFit()
+                        .frame(width: 25, height: 25)
+                        .clipped()
+                    
+                    Image(Asset.Icons.aiAnalysis.name)
+                        .renderingMode(.template)
+                        .resizable()
+                        .foregroundColor(Color.white)
+                        .scaledToFit()
+                        .frame(width: 25, height: 25)
+                        .clipped()
+                }
+                .isHidden(isFeatureToolbarHidden)
+            }
+            .padding(15)
+            .background {
+                Rectangle()
+                    .fill(Color.negro.opacity(0.8))
+                    .frame(width: 50)
+                    .cornerRadius(12, corners: [.bottomLeft, .bottomRight])
+            }
     }
     
     @ViewBuilder
@@ -230,14 +336,14 @@ struct NativeVideoCallView<ViewModel: NativeVideoCallViewModelProtocol, Router: 
                             .onTapGesture {
                                 WebRTCManager.shared.switchCamera()
                             }
-                        Image(systemName: "person")
-                            .resizable()
-                            .foregroundColor(isUserToolbarHidden ? Color.white : Color.naranja)
-                            .scaledToFit()
-                            .frame(width: 25)
-                            .onTapGesture {
-                                isUserToolbarHidden.toggle()
-                            }
+//                        Image(systemName: "person")
+//                            .resizable()
+//                            .foregroundColor(isUserToolbarHidden ? Color.white : Color.naranja)
+//                            .scaledToFit()
+//                            .frame(width: 25)
+//                            .onTapGesture {
+//                                isUserToolbarHidden.toggle()
+//                            }
                         Image(systemName: "ellipsis")
                             .resizable()
                             .foregroundColor(Color.white)

@@ -428,6 +428,7 @@ internal enum Asset {
     internal static let danger = ImageAsset(name: "danger")
     internal static let detectorMetales = ImageAsset(name: "detectorMetales")
     internal static let digitalTwins = ImageAsset(name: "digitalTwins")
+    internal static let directions = ImageAsset(name: "directions")
     internal static let ecografia = ImageAsset(name: "ecografia")
     internal static let edit = ImageAsset(name: "edit")
     internal static let engineering = ImageAsset(name: "engineering")
